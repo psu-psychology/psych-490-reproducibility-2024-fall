@@ -1,0 +1,133 @@
+---
+title: "Materials, code, & protocol sharing"
+subtitle: "2023-11-13 Mon"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-11-13 Mon"
+---
+
+# Overview
+
+## Announcements
+
+- [Friday, November 17]{.orange_due}
+    - [Final project survey](https://forms.gle/L92wWFSpcdyLT4MR9) 
+- [Due Friday, November 17]{.orange_due}
+    - [Exercise 07: Data and materials sharing](../exercises/ex07-sharing.qmd)
+
+## Today
+
+*Materials, code, & protocol sharing*
+
+- Discuss
+    - [@Soska2021-mh]
+    - (optional) [@Gilroy2019-bf]
+- Explore
+    - [protocols.io](https://www.protocols.io/)
+    - [Journal of Visualized Experiments (JOVE)](https://www.jove.com/)
+    
+# Quest: Sharing materials and protocols
+
+## Your mission:
+
+- Visit [protocols.io](https://www.protocols.io/) or [Journal of Visualized Experiments (JOVE)](https://www.jove.com/)
+    - Find a protocol that interests you
+    - Review it and be ready to report back on the contents, how easy it might be for someone else to follow, etc.
+    
+# What to share
+
+## Materials
+
+- Survey instruments
+- Displays
+
+## Code
+
+- Stimulus generation (e.g., computer task)
+- Data analysis code
+- SPSS syntax, R/Python/SAS/MATLAB, etc.
+- Computational environments (e.g., containers)
+
+## Protocols
+
+- Supplemental methods associate with research articles
+- Examples examples:
+  - [PLAY Project](https://play-project.org)
+    - Especially video, see [@Gilmore2017-wd].
+    - Survey [workflow](https://PLAY-behaviorome.github.io/KoBoToolbox)
+  - Penn State Open Science Survey [@Gilmore_undated-gj]
+- <https://protocols.io>
+- [Journal of Visualized Experiments (JOVE)](https://www.jove.com/)
+   
+# Where to share
+
+## Data repositories
+
+- [Open Science Framework (OSF)](https://osf.io)
+- [Inter-university Consortium for Political and Social Research (ICSPSR)](https://icpsr.umich.edu)
+- [Dataverse](https://dataverse.org)
+- [Qualitative Data Repository](https://qdr.syr.edu)
+- [TalkBank](https://talkbank.org)
+- [OpenNeuro](https://openneuro.org)
+    
+## Databrary
+
+- <https://databrary.org>
+- Open (not public) sharing, but restricted to authorized researchers
+- Specialized for storing and sharing video
+- [@GilmoreAdolph2017](https://doi.org/10.1038/s41562-017-0128)
+
+---
+
+![Growth in Databrary investigators and Institutions from <https://databrary.github.io/analytics>](https://databrary.github.io/analytics/include/img/fig-databrary-inst-invest-timeseries-1.png)
+# When/how to share
+
+## Play & Learning Across a Year (PLAY) Project
+
+- PLAY Project: <https://play-project.org>
+- Survey data via [KoBoToolbox](https://kobotoolbox.org): <https://PLAY-behaviorome.github.io/KoBoToolbox>
+
+## [@Soska2021-mh](http://dx.doi.org/10.7191/jeslib.2021.1208)
+
+```{r, out.width="100%", fig.cap="Figure 2 from [@Soska2021-mh](http://dx.doi.org/10.7191/jeslib.2021.1208)"}
+knitr::include_graphics("../include/img/soska-etal-fig-02.png")
+```
+
+---
+
+```{r, out.width="100%", fig.cap="Figure 1 from [@Soska2021-mh](http://dx.doi.org/10.7191/jeslib.2021.1208)"}
+knitr::include_graphics("../include/img/soska-etal-fig-01.png")
+```
+
+---
+
+```{r, out.width="100%", fig.cap="Table 1 from [@Soska2021-mh](http://dx.doi.org/10.7191/jeslib.2021.1208)"}
+knitr::include_graphics("../include/img/soska-etal-table-01.png")
+```
+
+---
+
+::: {.callout-note title="Your turn"}
+
+- What do students want researchers to share?
+- What are the pros and cons of active vs. *post hoc* data curation?
+
+:::
+
+# Next time
+
+*Open science tools*
+
+- Read
+    - [@Kathawalla2021-tk]
+    - [@Cruwell2019-nz]
+- Explore
+    - [@FORRT_undated-pl]
+- [Class notes](wk13-2023-11-15.qmd)
+
+# Resources
+
+## References

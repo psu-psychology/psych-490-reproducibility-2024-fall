@@ -1,0 +1,248 @@
+---
+title: "2023-08-28 Mon"
+subtitle: "How science works (or should)"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+---
+
+# Overview
+
+## Prelude 
+
+<p style="text-align:center;">
+<!-- Thomas Dolby, She Blinded Me With Science 3:47 -->
+<iframe width="800" height="600" src="https://www.youtube.com/embed/V83JR2IoI8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+## [Survey 01](../survey-01.qmd)
+
+- Thanks to those of you who responded
+
+## Today
+
+*How science works (or should)*
+
+- Read
+    - [@Ritchie2020-fm], Chapter 1. [Alternate link to PDF on Canvas](https://psu.instructure.com/files/144654645/download?download_frd=1).
+    - [@Nosek2012-al]. [Alternate link to PDF on Canvas](https://psu.instructure.com/files/144654434/download?download_frd=1)
+    
+# How science works (or should)
+
+## Discuss [@Ritchie2020-fm, Chapter 1] 
+
+### Author 
+
+- [Stuart J. Ritchie](https://www.kcl.ac.uk/people/stuart-ritchie)
+    - Scottish psychologist, Lecturer at King's College London
+    
+![Stuart J. Ritchie](https://jacobsfoundation.org/wp-content/uploads/2020/01/Ritchie_Stuart_300x300px.jpg"){fig-align="center"}
+
+## Chapter 1: How Science Works 
+
+- "Science is a social construct." [@Oreskes2017]
+    - How so?
+    - What are the consequences?
+    
+## What is the "process" of science?
+
+![Figure 1 from [@munafo_manifesto_2017]](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-016-0021/MediaObjects/41562_2016_Article_BFs415620160021_Fig1_HTML.jpg?as=webp)
+
+## Telling (facts/findings) AND *showing*
+
+>...and it has to be shown why that other theory can cannot be the true one: And until this is shown, and until we know how it is shown, we do not understand the grounds of our opinion.
+
+<p style="text-align:center;">
+John Stuart Mill quoted in [@Ritchie2020-fm, p. 14]
+</p>
+
+
+## From replication to trust
+
+>...Only when certain events recur in accordance with rules or regularities, as is the case with repeatable experiments, can our observations be tested--in principle--by anyone. We do not take even our own observations quite seriously, or accept them as scientific observations, until we have repeated and test them...
+
+<p style="text-align:center;">
+Karl Popper quoted in [@Ritchie2020-fm, p. 23]
+</p>
+
+## From replication to trust
+
+>...Only by such repetitions can we convince ourselves that we are not dealing with a mere isolated 'coincidence'...
+
+<p style="text-align:center;">
+Karl Popper quoted in [@Ritchie2020-fm, p. 23]
+</p>
+
+---
+
+- In what *other* realm(s) do we *not* require someone stating an idea or finding to show us *how* they came to that idea or finding?
+- Are scientific experiments *really* repeatable by anyone?
+- In what *other* realm(s) do we not expect repetition or replication before trusting an idea?
+
+---
+
+> Science's social nature does come with weaknesses, however. Because scientists focus so much on trying to persuade their peers, which is the way they get those studies through peer review and oward to publication, it's all too easy for them to disregard the real object of science: getting us closer to the truth.
+
+<p style="text-align:center;"> 
+[@Ritchie2020-fm, Chapter 1, pp. 14-15]
+</p>
+
+## Questions about Ritchie
+
+- Do you agree that a focus on "persuading their peers" can lead researchers to lose sight of the "real object of science"?
+    - Are there other examples (outside of science), where a focus on persuading others can change a person's focus from more important goals?
+- What's the alternative for scientists to trying to persuade their peers?
+- What if scientific research serves multiple goals?
+
+## Discuss [@Nosek2012-al]
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+Brian Nosek
+
+![Brian Nosek](https://www.cos.io/hubfs/Staff/staff-nosek-brian.png){fig-align="center" width=30%}
+
+:::
+
+::: {.column width=50%}
+- Social Psychologist, Professor at University of Virginia
+- Co-Founder, [Center for Open Science (COS)](https://cos.io)
+- Founder, [Project Implicit](https://implicit.harvard.edu/implicit/)
+:::
+
+::::
+
+---
+
+:::: {.columns}
+
+::: {.column width=50%}
+[Yoav Bar-Anon](https://en-social-sciences.tau.ac.il/profile/baranan)
+
+![](https://en-social-sciences.tau.ac.il/sites/socsci-english.tau.ac.il/files/styles/research_teaser_image_180_x_180/public/Yoav%20Bar-anan.webp){fig-align="center" width=30%}
+:::
+
+::: {.column width=50%}
+- Social Psychology, Professor at Tel Aviv University
+:::
+
+::::
+
+---
+    
+## Scientific Utopia: I. Opening Scientific Communication
+
+- What's [Utopia](https://en.wikipedia.org/wiki/Utopia?)
+- Where's Part II?
+    - [@Nosek2012-fm].
+
+## Aims & Claims 
+
+> Existing norms for scientific communication are rooted in anachronistic practices of bygone eras making them needlessly inefficient. We outline a path that moves away from the existing model of scientific communication to improve the efficiency in meeting the purpose of public science—knowledge accumulation.
+
+<p style="text-align:center;"> 
+[@Nosek2012-al]
+</p>
+
+---
+
+>We call for six changes: (a) full embrace of digital communication; (b) open access to all published research; (c) disentangling publication from evaluation; (d) breaking the “one article, one journal” model with a grading system for evaluation and diversified dissemination outlets; (e) publishing peer review; and (f) allowing open, continuous peer review. 
+
+<p style="text-align:center;"> 
+[@Nosek2012-al]
+</p>
+
+---
+
+>We address conceptual and practical barriers to change and provide examples showing how the suggested practices are being used already. The critical barriers to change are not technical or financial; they are social. Although scientists guard the status quo, they also have the power to change it.
+
+<p style="text-align:center;"> 
+[@Nosek2012-al]
+</p>
+
+
+## Inefficiencies in scientific communication
+
+::: {.incremental}
+- No communication
+- Slow communication
+- Incomplete communication
+- Inaccurate communication
+- Unmodifiable communication
+:::
+
+<p style="text-align:center;"> 
+[@Nosek2012-al, , pp. 25-26]
+</p>
+
+## Questions about [@Nosek2012-al]
+
+:::{.incremental}
+- What are the impacts of these factors?
+- Do you agree that scientific communication should be made more efficient? Why or why not?
+:::
+
+## Questions about [@Nosek2012-al]
+
+:::{.incremental}
+- Do you think all research scholarship should be open access?
+    - Who should pay for the costs of publication, maintaining the data?
+    - What's wrong with enterprising people making a living by providing these services?
+:::
+
+## Questions about [@Nosek2012-al]
+
+:::{.incremental}    
+- What about the idea of separating publication from evaluation?
+    - How can scientists discern good science from bad?
+    - How can the general public?
+- What do you think reviewers would say about publishing peer review?
+    - Some journals do this already, e.g. *Frontiers*
+:::
+
+---
+
+## Common themes across [@Ritchie2020-fm and @Nosek2012-al]
+
+- Goals and purposes of science
+- Utopian, idealistic aims
+- Efficiency in achieving those goals
+- High quality versus low quality science
+
+---
+
+- Ethics, scientific integrity
+- Means of scientific communication
+- Who has access, who should
+- How are findings, articles, individuals evaluated
+
+# Next time
+
+*Scientific norms and counter-norms*
+
+- Read
+    - [@Merton1973-vf]. [PDF on Canvas](https://psu.instructure.com/files/144517091/download?download_frd=1).
+    - [@Mitroff1974-pp]. [PDF on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=151876801).
+- [Assignment]{.green_assigned}
+    - Complete (anonymous) [survey](https://forms.gle/nXmghuctPGUmV1AU7) on scientific norms and counter-norms. **No write-up**.
+- [Class notes](wk02-2023-08-30.qmd)
+
+# Resources
+
+### Talk by Brian Nosek, [@University_of_California_Television_UCTV2018-sf] 
+
+:::{.callout-info}
+
+Watching the talk by Nosek is not required. But he's a very good speaker and an inspiring person.
+
+:::
+
+<p style="text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YEwqohAjfZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+
+## References

@@ -1,0 +1,65 @@
+---
+title: "Exercise 01"
+subtitle: Reading a scientific paper
+---
+
+## Dates {-}
+
+Due: [Friday, September 6](../schedule.qmd#friday-september-06){.orange_due}.
+
+## Goals {-}
+
+This exercise gives you an opportunity to apply some of the ideas we discussed in class about how to read a scientific paper.
+
+## Assignment {-}
+
+You may work with one other person if you wish. Choose a paper you find interesting.
+
+Use the rubric described in [@Carey2020-ut] to read the paper.
+
+Answer the following specific questions in "Rule 3" of [@Carey2020-ut]:
+
+>(1) What do the author(s) want to know (motivation)? 
+>(2) What did they do (approach/methods)?
+>(3) Why was it done that way (context within the field)?
+>(4) What do the results show (figures and data tables)? 
+>(5) How did the author(s) interpret the results (interpretation/discussion)? 
+>(6) What should be done next? (Regarding this last question, the author(s) may provide some suggestions in the discussion, but the key is to ask yourself what you think should come next.)
+
+<p style="text-align:center;">
+[@Carey2020-ut]
+</p>
+
+If it's an empirical paper, pay particular attention to what *evidence*, usually a pattern of data, the author(s) use to argue for a particular *finding* or *conclusion*.
+Is there a figure that demonstrates this well?
+If so, how?
+If not, why not?
+
+Comment on the characteristics of the *sample*: What are the characteristics of the population sampled? What broader population would the results apply to? When would the results generalize and when are they unlikely to generalize?
+
+:::{.callout-tip}
+
+If you're struggling to decide how to start your paper, that is how to write the introduction, imagine that you are giving your paper to a friend or colleague.
+What would they want to know about what your write-up is about and why they should read it?
+
+When I was in high school, my English teacher, Ms. Sinard advised us to start every essay with "When", "If", or "Although".
+It's not bad advice, especially if you're stuck.
+
+:::
+
+## Submit {-}
+
+A 2-3 page (double-spaced) paper describing your findings in Microsoft Word format using the following file-naming convention:
+
+`<lastname>-<firstname>-PSYCH490.009-ex01.docx`, where you substitute your last name for <lastname> and your first name for <firstname>.
+If there are two authors, use both of your last names.
+If Dr. Gilmore was submitting a paper, it would look like this: `gilmore-rick-PSYCH490.009-ex01.docx`.
+
+Here is the Canvas dropbox for the assignment:
+
+<https://psu.instructure.com/courses/2280122/assignments/15452006>
+
+Please use the APA format for your paper.
+I found the following template document that would be a very good start:
+
+<https://docs.google.com/document/d/1IIKwtH7eVXIkQMz4FwMuKol6hMDT3ra9/copy>

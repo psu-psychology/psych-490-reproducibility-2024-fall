@@ -1,0 +1,40 @@
+---
+title: "Exercise 07"
+subtitle: "Replication"
+---
+
+## Dates
+
+Due: [Friday, October 27](../schedule.qmd#friday-october-27){.orange_due}.
+
+## Goals
+
+Replication is one standard among many that can be used to evaluate scientific findings.
+In this exercise, you will evaluate a published scientific finding on the basis of whether it 1) replicates prior work and 2) could be replicated by someone else.
+
+## Assignment
+
+Choose a published scientific paper on a topic you find interesting and important.
+
+If you are stuck, you might find some of the topics suggested here [@FORRT_undated-pl] a good place to start: <https://forrt.org/reversals/>.
+
+Does the paper:
+
+- Report on whether data reported replicate a prior finding?
+- Does the paper embrace any of the recommendations by [@Begley2013-vm](http://dx.doi.org/10.1038/497433a) (e.g., blinding, replication or repetition of key effects, etc.).
+- Does the paper implement any of the recommendations from the [@munafo_manifesto_2017](https://doi.org/10.1038/s41562-016-0021) paper?
+- Does the paper report effect sizes, sample sizes, and statistical power?
+- Was the paper pre-registered?
+- What is the [TOP Factor](https://topfactor.org/journals) for the journal? If none, report 0. 
+- Does the paper share data? If so, where? Could you get access to the data?
+- Does the paper share any statistical or computer code used to analyze the data or make figures? If so, where? Could you access the code?
+- Does the paper share sufficient information about the measures used (e.g., a protocol, computer code to generate computer tasks, specific survey questions, or other information needed to replicate the tasks or measures) so that an independent third party like yourself could replicate the study?
+
+If you had to give the author(s) of your paper a grade for *replicability* (A, B, C, D, F), what grade would you give it and why?
+
+## Submit
+
+In a short (2-3 pp double-spaced report) discuss the paper's finding and why you think it is interesting and important.
+Then, evaluate the paper from the perspective of "replicability" by answering the questions in the previous section.
+Conclude with your "grade" and an explanation for it.
+

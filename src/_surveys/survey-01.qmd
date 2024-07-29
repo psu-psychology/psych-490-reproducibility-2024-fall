@@ -1,0 +1,338 @@
+---
+title: "Survey 01"
+params:
+  update_data: FALSE
+---
+
+## Purpose
+
+This page documents the data processing steps involved with Survey-01 in PSYCH 490.009 Fall 2023.
+
+The survey questions were adapted from those discussed in [@Krumrei-Mancuso2016-qm; @Nadelson2014-ym; @Plohl2023-yf].
+
+## Survey
+
+Direct link: <https://forms.gle/Szk1pLEu4ZLWtFjX7>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScp2GG_2TZ3_T6Yl1okn-sHJF93n9RZu_EmLWQtHP0rJcGM3w/viewform?embedded=true" width="640" height="6003" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+## Preparation
+
+First, we load the external packages (groups of R commands) that we will be using.
+
+```{r}
+library('tidyverse')
+library('ggplot2')
+library('dplyr')
+library('tidyr')
+library('stringr')
+library('lubridate')
+library('GGally')
+```
+
+## Gathering
+
+Next, we download the data from the Google Sheet where it is collected.
+Dr. Gilmore has stored his Google account credentials in a special environment file that can be accessed by the R command `Sys.getenv("GMAIL_SURVEY")`.
+
+```{r, message=FALSE, echo=TRUE, eval=FALSE}
+if (!dir.exists('csv')) {
+  message("Creating missing `csv/`.")
+  dir.create("csv")
+}
+
+if (params$update_data) {
+  options(gargle_oauth_email = Sys.getenv("GMAIL_SURVEY"))
+  googledrive::drive_auth()
+  
+  googledrive::drive_download(
+    "Openness and Trust in Science (Responses)",
+    path = "csv/survey-01-openness-trust.csv",
+    type = "csv",
+    overwrite = TRUE
+    
+  )
+  messsage("Data updated.")
+} else {
+  message("Using stored data.")
+}
+```
+
+The data file has been saved as a comma-separated value (CSV) format data file in a special directory called `csv/`.
+
+<!-- Note that there are five types of callouts, including note, tip, warning, caution, and important. -->
+::: {.callout-note}
+Because these data *might* contain sensitive or identifiable information, we only keep a local copy and do not share it publicly via GitHub.
+This is achieved by adding the name of the data directory to a special `.gitignore` file.
+:::
+
+## Cleaning
+
+Next we load the data file and clean it.
+
+```{r, message=FALSE, echo=TRUE}
+survey_01 <-
+  readr::read_csv("csv/survey-01-openness-trust.csv", show_col_types = FALSE)
+
+# Google Forms puts the full question in the top row of the data file.
+# We use the names() function to extract and print the original questions.
+survey_01_qs <- names(survey_01)
+survey_01_qs
+```
+
+For plotting and analyses, it's usually easier to shorten the questions by creating a short name that reflects the underlying idea or construct.
+We'll use the `rename()` function from the `dplyr` package for this. 
+
+We first rename the variables from the "Openness to Revising One’s Viewpoint" [subscale](https://seaver.pepperdine.edu/social-science/content/comprehensive-intellectual-humility.pdf) from the Comprehensive Intellectual Humility Scale [@Krumrei-Mancuso2016-qm].
+
+```{r}
+survey_01_clean <- survey_01 |>
+  dplyr::rename(
+    timestamp = "Timestamp",
+    when_shown_wrong = "I have at times changed opinions that were important to me, when someone showed me I was wrong.",
+    good_reason = "I am willing to change my position on an important issue in the face of good reasons." ,
+    new_info = "I am open to revising my important beliefs in the face of new information.",
+    compelling_reason = "I am willing to change my opinions on the basis of compelling reason.",
+    mind_made_up = "I’m willing to change my mind once it’s made up about an important topic.",
+    comments = "If you wish to comment about the questions in this survey, you may do so here. You are not required to comment. Your comments might be seen by others."
+  )
+```
+
+Now, we rename the variables from the [@Nadelson2014-ym] trust in science and scientists survey.
+
+```{r}
+survey_01_clean <- survey_01_clean |>
+  dplyr::rename(
+    ignore_contradictory_evidence = "Scientists ignore evidence that contradicts their work.",
+    theories_are_weak = "Scientific theories are weak explanations.",
+    keep_work_secret = "Scientists intentionally keep their work secret.",
+    dont_value_others_ideas = "Scientists don't value the ideas of others.",
+    dont_care_laypeople_understand = "Scientists don't care if laypersons understand their work.",
+    should_trust_work = "We should trust the work of scientists.",
+    should_trust_honesty = "We should trust that scientists are being honest in their work.",
+    should_trust_ethical = "We should trust that scientists are being ethical in their work.",
+    more_understanding_more_trust = "People who understand science more have more trust in science.",
+    trust_explain_natural_world = "We can trust science to find the answers that explain the natural world.",
+    cant_trust_biased = "We cannot trust scientists because they are biased in their perspectives.",
+    protect_each_other_when_wrong = "Scientists will protect each other even when they are wrong.",
+    wont_consider_contradictory_ideas = "We cannot trust scientists to consider ideas that contradict their own.",
+    sacrifice_others_to_advance = "Today's scientists will sacrifice the well being of others to advance their research.",
+    cant_trust_moves_slowly = "We cannot trust science because it moves too slowly.",
+    change_minds_undermines_trust = "When scientists change their mind about a scientific idea it diminishes my trust in their work.",
+    share_findings_dont_like = "We can trust scientists to share their discoveries even if they don't like their findings.",
+    make_life_better = "I trust that the work of scientists is to make life better for people.",
+    theories_trustworthy = "Scientific theories are trustworthy.",
+    hypotheses_just_guesses = "When scientists form a hypothesis they are just guessing.",
+    trust_find_tech_solutions = "I trust scientists can find solutions to our major technological problems."
+  )
+```
+
+Now, let's look at the names to confirm they all got changed.
+
+```{r}
+names(survey_01_clean)
+```
+
+### Data dictionary
+
+We'll pause here to start building a [data dictionary](https://en.wikipedia.org/wiki/Data_dictionary), a file that explains the origin, format, and usage of our dataset.
+
+```{r}
+survey_01_data_dictionary <-
+  tibble::tibble(
+    question = survey_01_qs,
+    short_name = names(survey_01_clean),
+    reference = c(
+      NA,
+      rep("krumrei-mancuso-2016", 5),
+      rep("nadelson-2014", 21),
+      NA
+    )
+  )
+```
+
+We'll add other items to the data dictionary later.
+
+### Filtering out irrelevant responses
+
+We should omit the first response in the dataset.
+That was the one Dr. Gilmore used to generate a Google Sheet, and isn't real data.
+
+```{r}
+n_responses <- dim(survey_01_clean)[1]
+
+if (n_responses > 1) {
+  survey_01_clean <- survey_01_clean[2:n_responses,]  
+} else {
+  message("No 'non-test' responses yet. Leaving data file unchanged.")
+}
+```
+
+## Visualizations
+
+### Openness questions
+
+Remember:
+
+![Survey 01 response options](../include/img/survey-01-resp-options.png){fig-align="center"}
+
+```{r fig-openness-dotplot, message=FALSE, fig.cap="Reponses to Openness to Revising One’s Viewpoint subscale questions from [@Krumrei-Mancuso2016-qm]"}
+# survey_01_clean[,2:6] |>
+#   ggpairs()
+# 
+survey_01_data_dictionary[2:6,1:2] |>
+  knitr::kable(format = "html") |>
+  kableExtra::kable_classic()
+
+survey_01_clean[, 1:6] |>
+  tidyr::pivot_longer(cols=2:6, names_to = "question", values_to = "rating") |>
+  ggplot()+
+  aes(rating) +
+  geom_dotplot(dotsize = .4) +
+  xlim(1, 5) +
+  theme(axis.title.y = element_blank()) +
+  theme(axis.text.y = element_blank()) +
+  theme(axis.ticks = element_blank()) +
+  facet_wrap(facets = vars(question), ncol = 1) 
+```
+
+### Trust in science questions
+
+:::{.callout-note}
+
+It would be even better to create a function that generates the plot and shows the long and short question names.
+Any time I repeat myself, I should remember this acronym:
+
+**D**on't **R**epeat **Y**ourself 
+
+**W**rite **I**t **D**own
+
+:::
+
+There are a number of these, so we break them into smaller groups for visualization.
+
+![Survey 01 response options](../include/img/survey-01-resp-options.png){fig-align="center"}
+
+```{r fig-trust-dotplot, message=FALSE, fig.cap="Responses to trust in science questions from [@Nadelson2014-ym]"}
+# survey_01_clean[, 7:11] |>
+#   ggpairs()
+# 
+survey_01_data_dictionary[7:27, 1:2] |>
+  knitr::kable(format = "html") |>
+  kableExtra::kable_classic()
+
+survey_01_clean |>
+  tidyr::pivot_longer(cols=7:27, names_to = "question", values_to = "rating") |>
+  ggplot()+
+  aes(rating) +
+  geom_dotplot(dotsize = .4) +
+  xlim(1, 5) +
+  theme(axis.title.y = element_blank()) +
+  theme(axis.text.y = element_blank()) +
+  theme(axis.ticks = element_blank()) +
+  facet_wrap(facets = vars(question), ncol = 3) 
+```
+
+<!-- # ```{r fig-scatterpairs-trust-q22-27, message=FALSE, fig.cap="Responses to trust in science questions from [@Nadelson2014-ym]"} -->
+<!-- # q_range <- c(22:27) -->
+<!-- #  -->
+<!-- # survey_01_clean[, q_range] |> -->
+<!-- #   ggpairs() -->
+<!-- #  -->
+<!-- # survey_01_data_dictionary[q_range,1:2] |> -->
+<!-- #   knitr::kable(format = "html") |> -->
+<!-- #   kableExtra::kable_classic() -->
+<!-- # ``` -->
+
+### Comments
+
+```{r}
+survey_01_clean |>
+  dplyr::select(comments) |>
+  dplyr::filter(!is.na(comments)) |>
+  knitr::kable(format="html") |>
+  kableExtra::kable_classic()
+```
+
+### Aggregate openness and trust questions
+
+Next, we calculate aggregate "openness" and "trust" scores to look at the relationship between these variables.
+
+```{r}
+survey_01_clean <- survey_01_clean |>
+  dplyr::mutate(openness_comp = sum(survey_01_clean[, 2:6]))
+```
+
+Some of the "trust" variables are reverse-coded, so we have to address that.
+We'll start by adding a variable to our data dictionary that indicates the "sign" of the weight we should apply to that variable.
+If the sign is negative then $1\rightarrow5$, $2\rightarrow4$, $3\rightarrow3$, $4\rightarrow5$, and $5\rightarrow1$.
+
+```{r}
+survey_01_data_dictionary <- survey_01_data_dictionary |>
+  dplyr::mutate(sign_wt = c(0, rep(1, 5),
+                            rep(-1, 5), rep(1, 5), rep(-1, 6), rep(1, 3), -1, 1, 0))
+
+survey_01_data_dictionary[,c(1,4)] |>
+  knitr::kable(format = "html") |>
+  kableExtra::kable_classic()
+```
+
+```{r}
+# Recode variables with "reverse" indicator (sign_x == -1)
+recode_reverse_vars <- function(x, sign_x) {
+  if (sign_x == -1) {
+    switch(x,
+           5,
+           4,
+           3,
+           2,
+           1)
+  } else {
+    x
+  }
+}
+
+# Recode a specific variable based on its column index
+recode_var <- function(var_i, df_vars = survey_01_clean, df_dict = survey_01_data_dictionary) {
+  vals <- unname(unlist(df_vars[, var_i]))
+  wts <- unname(unlist(rep(df_dict[var_i, 4], length(vals))))
+  
+  purrr::map2(vals, wts, recode_reverse_vars) |>
+    unlist()
+}
+
+# Recode the entire dataset and create a new data frame/tibble
+recode_survey_01 <- function() {
+  x <- purrr::map(1:28, recode_var)
+  var_names <- survey_01_data_dictionary[,2] |> 
+    unlist() |> 
+    unname()
+  names(x) <- var_names
+  as_tibble(x)
+}
+
+# Run the recode_survey_01() function
+survey_01_recoded <- recode_survey_01()
+
+# Calculate the composite scores as mean values across rows (within participants)
+survey_01_recoded <- survey_01_recoded |>
+  dplyr::mutate(openness_comp = rowMeans(survey_01_recoded[, 2:6]),
+                trust_comp = rowMeans(survey_01_recoded[, 7:27]))
+```
+
+```{r fig-openness-trust-composite, fig.cap="Composite 'openness' and 'trust' scores"}
+survey_01_recoded |>
+  dplyr::select(openness_comp, trust_comp) |>
+  ggplot() +
+  aes(openness_comp, trust_comp) +
+  geom_point() +
+  geom_smooth(method = "lm",
+              formula = y ~ x) +
+  xlim(1,5) +
+  ylim(1,5) +
+  coord_fixed()
+```
+
+```{r}
+with(survey_01_recoded, stats::cor.test(openness_comp, trust_comp))
+```

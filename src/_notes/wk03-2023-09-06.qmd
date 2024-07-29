@@ -1,0 +1,293 @@
+---
+title: "2023-09-06 Wed"
+subtitle: "Adherence to norms and counter-norms"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+---
+
+# Overview
+
+## Prelude
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VXED2AVlbR0?si=lA0AcDhsFcMpyG72" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Announcements
+
+- [Due this Friday]{.orange_due}
+    - [Exercise 02: Norms and counter-norms write-up](../ex02-norms-counternorms.qmd)
+    
+## Idea
+
+- Question for the author(s)
+- Question for your classmates
+
+## Today
+
+*Adherence to norms and counter-norms*
+
+- Read & Discuss
+    - [@Kardash2012-kq]
+    - [@Macfarlane2008-tc]
+    
+# Adherence to norms and counter-norms
+
+## What are we trying to understand?
+   
+---
+
+Kardash, C. M. & Edwards, O. V. (2012). Thinking and behaving like scientists: Perceptions of undergraduate science interns and their faculty mentors. *Instructional Science*, 40(6), 875–899. https://doi.org/10.1007/s11251-011-9195-0
+
+---
+
+> We examined undergraduate research experiences (UREs) participants’ and their faculty mentors’ beliefs about the professional practices and dispositions of research scientists. In Study 1, 63 science interns and their mentors rated Merton’s (1942) norms and Mitroff’s (1974) counter-norms of scientific practice...  
+
+<p style="text-align:center;">
+[@Kardash2012-kq]
+</p>
+
+---
+
+>Specifically, we investigated what practices they believed research scientists should subscribe to (or not), and what practices they believed actually characterized research scientists’ behavior in the real world. Regarding idealized practice, mentors rated the norms significantly higher than did interns; mentors and interns generally did not differ in subscription to the counter-norms... 
+
+<p style="text-align:center;">
+[@Kardash2012-kq]
+</p>
+
+---
+
+>Regarding actual practice, mentors believed scientists’ behaviors reflected counter-norms more than norms. Mentors further noted discrepancies between practices that should represent and actually did represent scientists’ work... 
+
+<p style="text-align:center;">
+[@Kardash2012-kq]
+</p>
+
+---
+
+>In Study 2, interns and mentors listed characteristics associated with “thinking” and “behaving” like scientists. Personal and professional dispositions were mentioned more than intellectual and research skills...
+
+
+<p style="text-align:center;">
+[@Kardash2012-kq]
+</p>
+
+---
+
+>Although there was considerable consensus between faculty and intern perceptions, findings also revealed discrepancies that could be addressed in UREs, thereby aiding undergraduates’ socialization into the culture of scientific practice. Suggestions are provided for broadening interns’ conceptions of both scientists and science...
+
+
+<p style="text-align:center;">
+[@Kardash2012-kq]
+</p>
+
+---
+
+> ...uncovering science majors’ conceptions of one aspect of academic life in the sciences—namely, what it means to think and behave like a research scientist. Specifically, we compared science undergraduates’ and faculty mentors’ perceptions of the practices and personal characteristics of research scientists. 
+
+<p style="text-align:center;">
+[@Kardash2012-kq]
+</p>
+
+---
+
+> As students find themselves immersed in the day to day practices of researchers, what values, practices, and dispositions capture their attention, become most salient to them and provide the foundation for their beliefs about what constitutes the professional identity of research scientists?
+
+<p style="text-align:center;">
+[@Kardash2012-kq]
+</p>
+
+---
+
+>As important, to what extent are students’ perceptions of these values, practices, and dispositions congruent with the perceptions of the faculty mentors?
+
+<p style="text-align:center;">
+[@Kardash2012-kq]
+</p>
+
+---
+
+> Constantinides (2001) provides the following descriptions of the norms (p. 63):
+>
+> **Universalism** requires that knowledge claims be subjected to pre-established, impersonal criteria.
+>
+> **Communality** dictates that research belongs to the community of scientists rather than the individual researcher.
+
+<p style="text-align:center;">
+[@Kardash2012-kq]
+</p>
+
+---
+
+> **Disinterestedness** prescribes disinterested scientific activity, which is enforced by the accountability of scientists to their peers.
+> 
+> **Organized skepticism** requires that claims be critically scrutinized in terms of empirical and logical criteria.
+
+<p style="text-align:center;">
+[@Kardash2012-kq]
+</p>
+
+---
+
+```{r fig-kardash-2012-fig-1, out.width="100%", fig.cap="Figure 1 from [@Kardash2012-kq](https://doi.org/10.1007/s11251-011-9195-0)"}
+knitr::include_graphics("https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11251-011-9195-0/MediaObjects/11251_2011_9195_Fig1_HTML.gif?as=webp")
+``` 
+
+## How do our [results](../survey-02.html) compare?
+
+::: {.callout-note}
+
+A student could extend this analysis or do additional analyses as a final project.
+
+:::
+
+## Study 2
+
+[Link to Table 1](https://link.springer.com/article/10.1007/s11251-011-9195-0/tables/1)
+
+::: {.callout-note}
+
+This study could be replicated in some form as a final project.
+
+:::
+
+
+## Discuss [@Macfarlane2008-tc](https://doi.org/10.1007/s10805-008-9055-y)
+
+Macfarlane, B. & Cheng, M. (2008). Communism, universalism and disinterestedness: Re-examining contemporary support among academics for Merton’s scientific norms. *Journal of Academic Ethics*, *6*(1), 67–78. https://doi.org/10.1007/s10805-008-9055-y
+
+---
+
+> This paper re-examines the relevance of three academic norms to contemporary academic life – communism, universalism and disinterestedness – based on the work of Robert Merton. The results of a web-based survey elicited responses to a series of value statements and were analysed using the weighted average method and through cross-tabulation... 
+
+<p style="text-align:center;">
+[@Macfarlane2008-tc]
+</p>
+
+---
+
+>Results indicate strong support for communism as an academic norm defined in relation to sharing research results and teaching materials as opposed to protecting intellectual copyright and withholding access. There is more limited support for universalism based on the belief that academic knowledge should transcend national, political, or religious boundaries. 
+
+<p style="text-align:center;">
+[@Macfarlane2008-tc]
+</p>
+
+---
+
+>Disinterestedness, defined in terms of personal detachment from truth claims, is the least popular contemporary academic norm. Here, the impact of a performative culture is linked to the need for a large number of academics to align their research interests with funding opportunities. The paper concludes by considering the claims of an alternate set of contemporary academic norms including capitalism, particularism and interestedness.
+
+<p style="text-align:center;">
+[@Macfarlane2008-tc]
+</p>
+
+---
+
+```{r fig-macfarlane-fig-1, fig.cap="Respondents in favor of sharing teaching materials with peers and results of their research in progress (n=671)"}
+knitr::include_graphics("https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10805-008-9055-y/MediaObjects/10805_2008_9055_Fig1_HTML.gif?as=webp")
+```
+
+---
+
+```{r fig-macfarlane-fig-2, fig.cap="I tend to be secretive about my research in progress as I am concerned that someone else may beat me to publication (n=57)"}
+knitr::include_graphics("https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10805-008-9055-y/MediaObjects/10805_2008_9055_Fig2_HTML.gif?as=webp")
+```
+
+---
+
+```{r fig-macfarlane-fig-3, fig.cap="As far as possible, I try to ensure that my intellectual work is not influenced by my personal beliefs and values (n=60)"}
+knitr::include_graphics("https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10805-008-9055-y/MediaObjects/10805_2008_9055_Fig3_HTML.gif?as=webp")
+```
+
+---
+
+```{r fig-macfarlane-fig-4, fig.cap="I think the extent to which research maybe generalisable or valid beyond its immediate context is important"}
+knitr::include_graphics("https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10805-008-9055-y/MediaObjects/10805_2008_9055_Fig4_HTML.gif?as=webp")
+```
+
+---
+
+```{r fig-macfarlane-fig-5, fig.cap="Weighted average of three norms (Agree=1, Disagree=−1)"}
+knitr::include_graphics("https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10805-008-9055-y/MediaObjects/10805_2008_9055_Fig5_HTML.gif?as=webp")
+```
+
+---
+
+```{r fig-macfarlane-fig-6, fig.cap="I align my research interests with funding opportunities (n=57)"}
+knitr::include_graphics("https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10805-008-9055-y/MediaObjects/10805_2008_9055_Fig6_HTML.gif?as=webp")
+```
+
+---
+
+```{r fig-macfarlane-fig-7, fig.cap="I only pursue research that is of personal interest to me (n=61)"}
+knitr::include_graphics("https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10805-008-9055-y/MediaObjects/10805_2008_9055_Fig7_HTML.gif?as=webp")
+```
+
+---
+
+```{r fig-macfarlane-fig-8, fig.cap="Merton’s norms and their alternates"}
+knitr::include_graphics("https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10805-008-9055-y/MediaObjects/10805_2008_9055_Fig8_HTML.gif?as=webp")
+```
+
+---
+
+> The results of the survey do not necessarily represent a ‘shift’ in values as Merton’s norms were not based on empirical data. While this research sample was broadly representative of academic staff by gender, this does not necessarily imply that it is representative of the academic profession in all respects... 
+
+<p style="text-align:center;">
+[@Macfarlane2008-tc]
+</p>
+
+---
+
+>However, contemporary performative pressures on academic life may be having an impact in shaping, or perhaps re-shaping, some Mertonian norms. This is particularly apparent in respect to the norm of disinterestedness where large numbers of academics pragmatically align their research interests with funding opportunities... 
+
+<p style="text-align:center;">
+[@Macfarlane2008-tc]
+</p>
+
+---
+
+>This finding may be related to a more competitive market-based university environment apparent in the UK and elsewhere internationally where it has been argued that the canons of scientific inquiry have been compromised by commercial pressures (Bok 2003)... 
+
+<p style="text-align:center;">
+[@Macfarlane2008-tc]
+</p>
+
+---
+
+>Despite these pressures, the norm of communism, in particular, still attracts strong popular espoused support which crosses disciplinary fields. The balance of evidence from this survey, though, suggests that market-based and commercial pressures might be beginning to subvert the Mertonian ideal... 
+
+<p style="text-align:center;">
+[@Macfarlane2008-tc]
+</p>
+
+---
+
+>However, respondents’ support of universalism and disinterestedness varies with their subjects. In general, respondents from applied sciences showed stronger support for these two norms than respondents from the other subject fields.
+
+<p style="text-align:center;">
+[@Macfarlane2008-tc]
+</p>
+
+---
+
+::: {.callout-note}
+
+This paper would be slightly harder to reproduce as a final project, but something similar is possible.
+
+:::
+
+# Next time
+
+*A replication crisis (or not)*
+
+- Read
+    - [@Ritchie2020-fm], Chapter 2. [PDF on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=151876802)
+    - [@Begley2012-cr]
+- [Due]{.orange_due}
+    - [Exercise 02: Norms and counter-norms write-up](../ex02-norms-counternorms.qmd)
+
+# Resources
+
+## References
+

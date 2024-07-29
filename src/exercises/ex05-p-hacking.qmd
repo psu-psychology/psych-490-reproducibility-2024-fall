@@ -1,0 +1,85 @@
+---
+title: "Exercise 05"
+subtitle: "*P*-hacking: The road to scientific glory"
+---
+
+## Dates
+
+Due: [Friday, October 6](../schedule.qmd#friday-october-06){.orange_due}.
+
+## Acknowledgment
+
+This exercise builds heavily on [@Pownall2021-aa](https://doi.org/10.17605/OSF.IO/TH254).
+
+## Goals
+
+This exercise aims to build your understanding about [*p-hacking*](https://forrt.org/glossary/p-hacking/), what it is, how it can occur, and its impact on research.
+
+## Materials
+
+- a computer, tablet, or smartphone with access to the internet.
+- a means of keeping brief notes (notebook or text/word processing document).
+
+## Background
+
+You are a policy analyst with a not-for-profit, or as our resource says, "You’re a social scientist with a hunch: The U.S. economy is affected by whether Republicans or Democrats are in office."
+Your task is to publish a short report about whether the U.S. economy does better under Republican control or Democratic control.
+You probably have prior ideas about this question, but your goal is to provide *data* that answer it.
+
+You will make use of a [dataset](https://projects.fivethirtyeight.com/p-hacking/) with information about how well the U.S. economy performs and about the degree of Republican or Democratic political power.
+The dataset goes back to 1948.
+
+## Your analysis
+
+1. Choose a party as the focus of your report (Republican or Democratic).
+2. Write down your prior hypothesis about whether the economy does better or worse under Republican or Democratic control. Do this before you visit the web site[^1].
+
+[ ] Republican</br>
+[ ] Democratic
+
+[ ] Economy does better</br>
+[ ] Economy does worse
+
+3. Visit the [dataset](https://projects.fivethirtyeight.com/p-hacking/) site.
+4. Select the party you have chosen to focus on by pressing the button in panel 1. of the site.
+5. Write down the variables that are selected in "2. Define Terms" on the site.
+    - Politicians included
+        - [ ] Presidents
+        - [ ] Governors
+        - [ ] Senators
+        - [ ] Representatives
+    - Measure(s) of economic performance
+        - [ ] Employment
+        - [ ] Inflation
+        - [ ] GDP
+        - [ ] Stock prices
+    - Other options
+        - [ ] Factor in power
+        - [ ] Exclude recessions
+
+6. If you know how, take a screenshot of the plot in "3. Is there a relationship" Include the screenshot in your report. In a sentence or two, describe what the plot shows.
+7. Report the result indicated in "4. Is your result significant?". What is the p-value? What does that p-value mean in practical terms--what question was tested[^2]? Is your result "publishable"?
+8. You may stop here and report your findings, or you may choose to explore the question further by selecting other variables (politicians included, measures of economic performance, or other options).
+9. If you explore further, for each set of variables you select, write down the variables you selected and the p-value you found:
+
+| Politicians Included | Economic Measures | Other factors | p-value |
+|----------------------|-------------------|---------------|---------|
+| <your data>          | <your data>       |   <your data> |   <your data>  |
+
+10. Create a report that captures the information you collected during the exercise. 
+
+## Submit
+
+Please use the APA manuscript format for your document. 
+Include a very short Introduction section; a slightly longer Methods section, and then a combined Results and Discussion section with your answers to Questions 6-9.
+
+Please save a copy of your report as a docx using the preferred file naming convention for this class: `<lastname>-<firstname>-PSYCH490.009-ex04.docx`, where you substitute your last name for <lastname> and your first name for <firstname>.
+
+Submit your report on Canvas in the dropbox for this assignment.
+
+Please also bring a copy to class with you on **Friday, October 6, 2023** for discussion.
+
+---
+
+[^1]: Think about why we want you to write down your prediction before you look at the dataset.
+[^2]: **Hint**: The question tested has to do with the slope of the plot in 3. 

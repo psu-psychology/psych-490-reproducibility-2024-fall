@@ -1,0 +1,26 @@
+---
+title: "2023-xx-xx Day"
+subtitle: "Subtitle"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-xx-xx Day"
+---
+
+# Overview
+
+## Announcements
+
+## Today
+
+## Last time...
+
+# Topic
+
+# Next time
+
+# Resources
+
+## References

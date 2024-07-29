@@ -1,0 +1,37 @@
+---
+title: "about"
+---
+
+## Instructor {-}
+
+Rick O. Gilmore, Ph.D.</br>
+Professor of Psychology</br>
+rog1 AT-SIGN psu PERIOD edu</br>
+
+Schedule an appointment: <https://doodle.com/mm/rickgilmore/book-a-time></br>
+Lab web site: <https://gilmore-lab.github.io>
+
+## Teaching Assistant {-}
+
+<!-- Jie Yan</br> -->
+<!-- Graduate Student in Cognitive Psychology</br> -->
+<!-- jzy5486 AT-SIGN psu PERIOD edu</br> -->
+<!-- Office hours: Friday 3-4 pm, via [Zoom](https://psu.zoom.us/j/94414923783). -->
+
+## Meeting time & location {-}
+
+Monday, Wednesday, & Friday, 3:35 PM - 4:20 PM</br>
+[Cedar Building](https://map.psu.edu/?id=1134#!ct/59509,33177,25403,26748,26749,26750,27255?m/357035?s/cedar) 134
+
+## Course structure
+
+This is a discussion-focused course.
+On most days we will discuss readings assigned prior to class.
+On many Fridays and a few Mondays, we will work together or individually on the assigned [exercises](index.qmd#exercises), the final project, or another assignment.
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'include/bib/packages.bib')
+```

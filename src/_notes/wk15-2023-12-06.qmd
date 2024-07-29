@@ -1,0 +1,30 @@
+---
+title: "Final project presentations"
+subtitle: "2023-12-06"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-12-06 Wed"
+---
+
+# Overview
+
+## Announcement
+
+- Final project write-ups [due next Wednesday, December 13, 2023]{.orange_due}.
+  - Write-up [details](../exercises/final-project.html#project-write-up)
+  
+## Today
+
+- Felipe Senna, "Sleep Quality as Quantitative Data in Modern Society"
+
+# Next time
+
+- Alyssa Williamson & Maria Piccolino on transparency in plotting research data
+- Our open science future
+
+# Resources
+
+## References

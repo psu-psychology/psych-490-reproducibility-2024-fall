@@ -1,0 +1,120 @@
+---
+title: "Changing journal policies"
+subtitle: "2023-10-25 Wed"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-10-25 Wed"
+---
+
+# Overview
+
+## Announcements
+
+- [Due Friday]{.orange_due}
+    - [Exercise 06: Replication](exercises/ex06-replication.qmd)
+
+## Today
+
+*Solutions*
+
+- Finish discussion of [@munafo_manifesto_2017]
+
+---
+
+*Changing journal policies*
+
+- Discuss
+    - [@nosek_promoting_2015]
+    - [@Gilmore2020-sl] and [@Srcd2019-hg]
+    
+# [@munafo_manifesto_2017]
+
+## Table 1
+
+Link: <https://www.nature.com/articles/s41562-016-0021/tables/1>
+
+---
+
+::: {.callout-note}
+
+Which of the practices recommended in [Table 1 from @munafo_manifesto_2017](https://www.nature.com/articles/s41562-016-0021/tables/1) recommended practices would be at the *top* of your to-do list if you were a journal editor/publisher, funder, institution (college or university), or regulator (e.g., government entity)? Why?
+
+Which would be at the *bottom* of your list? Why?
+
+What's missing from the list?
+
+What can students, who aren't yet editors, funders, institutions, or regulators do?
+
+:::
+
+# [@nosek_promoting_2015]
+    
+---
+
+Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., Buck, S., Chambers, C. D., Chin, G., Christensen, G., Contestabile, M., Dafoe, A., Eich, E., Freese, J., Glennerster, R., Goroff, D., Green, D. P., Hesse, B., Humphreys, M., … Yarkoni, T. (2015). Promoting an open research culture. *Science*, 348(6242), 1422–1425. <https://doi.org/10.1126/science.aab2374>
+
+## Transparency and Openness Promotion (TOP) [guidelines](https://cos.io/top)
+
+![Figure from @nosek_promoting_2015](https://www.science.org/cms/10.1126/science.aab2374/asset/2679c1cf-6388-48d7-9268-ca28a95a4d5c/assets/graphic/348_1422_f2.jpeg){fig-align="center"}
+
+## [TOP Factor](https://topfactor.org/journals) database
+
+---
+
+```{r fig.cap="TOP Factors for journals Rick Gilmore has published in recently"}
+journal <- c("Scientific Reports", "Symmetry", "Journal of Speech, Language, and Hearing Research", "Journal of eScience Librarianship", "Infant and Child Development", "Developmental Psychology", "Computers in Electronics and Agriculture", "Journal of Motor Behavior", "Journal of Experimental Child Psychology", "Child Development Perspectives", "Advances in Intelligent Systems and Computing", "Neuropsychologia", "Advances in Methods and Practices in Psychological Science", "Nature Human Behavior", "Annals of the New York Academy of Sciences")
+top_factor <-c(10, 0, 8, 0, 13, 12, 0, 0, 1, 0, 0, 1, 25, 18, 0)
+
+gilmore_top <- tibble::tibble(journal, top_factor)
+
+gilmore_top |>
+  ggplot2::ggplot() +
+  ggplot2::aes(top_factor) +
+  ggplot2::geom_histogram(bins = 5)
+  #ggtitle("TOP Factors for Journals Rick Gilmore has published in recently")
+```
+
+- There are many factors that influence where an author publishes a paper.
+
+## Notes
+
+- [@nosek_promoting_2015]  was behind a paywall.
+- I was able to access the article via authenticated access to libraries.psu.edu.
+- There were two files of supplementary materials
+  - <https://www-science-org.ezaccess.libraries.psu.edu/doi/suppl/10.1126/science.aab2374/suppl_file/aab2374-nosek-sm.pdf>
+  - <https://www-science-org.ezaccess.libraries.psu.edu/doi/suppl/10.1126/science.aab2374/suppl_file/top_guidelines_summary-google_sheets_files.zip>
+- There was an Open Access (OA) [version of the article available on OSF](https://osf.io/vj54c/).
+
+## Changing society & journal policies
+
+- [@Gilmore2020-sl](https://doi.org/10.1111/cdep.12360)
+- [@Srcd2019-hg](https://www.srcd.org/policy-scientific-integrity-transparency-and-openness)
+
+::: {.callout-note}
+
+Do you think that explaining *why* data and materials sharing is important will help persuade researchers to do more?
+
+N.B. -- SRCD's *Child Development* has a TOP Factor score of 7.
+
+:::
+
+## Notes
+
+- The article abstract was publicly available, but the full article was behind a paywall.
+- I was able to access the article via authenticated access to libraries.psu.edu.
+
+# Next time
+
+*Final project work day*
+
+- [Due]{.orange_due}
+    - [Exercise 06: Replication](exercises/ex06-replication.qmd)
+- [Optional Extra Credit Assignment]{.green_assigned}
+      - For 5 extra credit points, write a paragraph that summarizes the main findings of [@Camerer2018-tr]. [Due Friday, November 3]{.due_orange}.
+
+# Resources
+
+## References

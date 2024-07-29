@@ -1,0 +1,241 @@
+---
+title: "2023-09-15 Fri"
+subtitle: "Work session: Replication with R, R Markdown, & Quarto"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+execute:
+  echo: true
+footer: "[PSYCH 490.009](../index.html): 2023-09-15 Friday"
+---
+
+# Overview
+
+## Announcement
+
+- Retraction Watch [database](https://retractionwatch.com/retraction-watch-database-user-guide/) now [available to anyone](https://retractionwatch.com/2023/09/12/the-retraction-watch-database-becomes-completely-open-and-rw-becomes-far-more-sustainable/) via [CrossRef](https://www.crossref.org/blog/news-crossref-and-retraction-watch/)
+
+## Last time...
+
+- Wrap-up on replication attempt of [@Zhong2006-nf] by [@Earp2014-ek]
+- Discuss replication attempt of [@Bargh1996-yv] by [@Doyen2012-ib]
+
+## Today
+
+- Wrap-up discussion of [@Bargh1996-yv] and [@Doyen2012-ib]; [Slides from Wed 9/13](wk04-2023-09-13.html)
+
+---
+
+*Work session: Reproducible workflows with R, R Markdown, & Quarto*
+
+- Review
+  - [Survey 01 report](../survey-01.html)
+  - [Survey 02 report](../survey-02.html)
+  
+# Reproducible workflows with R, R Markdown, & Quarto
+
+## Goals
+
+::: {.incremental}
+- Capture details of the research workflow
+  - Not usually contained in journal articles, remember [@Artner2021-qg] comment from [last week](wk03-2023-09-08.html#artner-et-al-2021)?
+- Make research notebooks that actually do work
+  - Not just capture info passively
+- Do so efficiently, flexibly
+:::
+
+## More goals
+
+::: {.incremental}
+- Make *computer* work harder
+- Reduce manual work
+  - More error-prone
+- Save history of changes (e.g., version control)
+- Make use of HTML and the web
+- Keep track of (& cite) resources
+:::
+
+## Research workflow
+
+```{mermaid}
+flowchart LR
+  A{Idea/Question} -->|Develop|B{Plan}
+  B -->|Create measures|C{Collect Info}
+  C -->|Gather collected|D{Analyze Info}
+  D -->|Visualize|E{Share findings}
+  E -->|Evaluate|A
+```
+
+Graph made using [Mermaid.js](http://mermaid.js.org)
+
+## Survey-01
+
+- [Report](../survey-01.html)
+- Goals
+  - Measure trust in science and scientists
+  - Measure individual characteristics that predict that trust
+  - Do PSYCH 490.009 students follow patterns found by others [@Krumrei-Mancuso2016-qm; @Nadelson2014-ym; @Plohl2023-yf]?
+  
+## Survey questions
+
+- Use [@Krumrei-Mancuso2016-qm; @Nadelson2014-ym; @Plohl2023-yf] questions.
+- Shared [Google Form](https://forms.gle/Szk1pLEu4ZLWtFjX7)
+
+---
+
+::: {.callout-important}
+
+**Q**: Why Google Form?
+
+**A**: Easier than Qualtrics to generate, extract information from. 
+
+Also, more broadly available (Google Forms is free to people with a Google account).
+
+:::
+  
+## Gather & Clean Data
+
+- Use [Quarto](https://quarto.org); [@quarto-site-gw].
+- Successor to RStudio's R Markdown
+
+## {background-iframe="https://quarto.org"}
+
+## Quarto project
+
+- Set of text files that combine
+  - Notes
+  - Code (in the R programming language)
+  - Web links
+  - Figures
+  
+---
+
+::: {.callout-important}
+
+Q: Why not MS Word or Google Doc?
+
+Q: Why not MS Excel or MS PowerPoint?
+
+:::
+
+---
+
+```{mermaid}
+flowchart TD
+  A{Quarto File 1} --> B[HTML]
+  C{Quarto File 2} --> B
+  D{Quarto File 3} --> B
+  A --> E(.docx)
+  C --> E
+  D --> E
+  A --> F((.ppt))
+  C --> F
+  D --> F
+```
+
+## Anatomy of a Quarto [document](https://github.com/psu-psychology/psych-490-reproducibility-2023-fall/blob/main/survey-01.qmd)
+
+````
+---
+title: "Survey 01"
+params:
+  update_data: FALSE
+---
+````
+
+:::{.incremental}
+- Document title
+- A parameter that determines whether the document should update the data or not.
+:::
+
+---
+
+````
+## Purpose
+
+This page documents the data processing steps involved with Survey-01 in PSYCH 490.009 Fall 2023.
+
+The survey questions were adapted from those discussed in [@Krumrei-Mancuso2016-qm; @Nadelson2014-ym; @Plohl2023-yf].
+````
+
+::: {.incremental}
+- First section with header title ("Purpose")
+    - *Note*: the double hash/pound symbols "##" mean this is a level 2 header
+    - You do use MS Word's styles, don't you?
+- Short-hand names for the references with the "@" symbol
+    - Quarto generates in-text citations and a bibliography for us!
+:::
+
+---
+
+````
+## Survey
+
+Direct link: <https://forms.gle/Szk1pLEu4ZLWtFjX7>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScp2GG_2TZ3_T6Yl1okn-sHJF93n9RZu_EmLWQtHP0rJcGM3w/viewform?embedded=true" width="640" height="6003" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+````
+
+::: {.incremental}
+- HTML links surrounded by "<>" become clickable in our output.
+- the "<iframe..." comes from the Google Forms site. It embeds the actual survey in our document. 
+    - No cutting and pasting!
+:::
+
+---
+
+````
+## Preparation
+
+First, we load the external packages (groups of R commands) that we will be using.
+
+```{{r}}
+library('tidyverse')
+library('ggplot2')
+library('dplyr')
+library('tidyr')
+library('stringr')
+library('lubridate')
+library('GGally')
+```
+
+````
+
+::: {.incremental}
+- Another level 2 header
+- And some R code in a "code chunk".
+  - The brackets "{r}" tell the computer that we're speaking R to it.
+  - We could also speak other languages like "{python}", etc.
+:::
+
+## Enough anatomy
+
+- [Gathering](../survey-01.html/#gathering) (downloading data from Google)
+- Cleaning
+- Visualizing
+- Making a [data dictionary](https://en.wikipedia.org/wiki/Data_dictionary)
+
+## Comparing this to other approaches...
+
+## Let's look at [Survey-02](../survey-02.html)
+
+![Summary figure from [Survey-02](../survey-02.html)](https://psu-psychology.github.io/psych-490-reproducibility-2023-fall/survey-02_files/figure-html/fig-boxplot-norm-counternorm-1.png){fig-align="center"}
+
+## What data picture(s) would you like to make?
+
+## What analyses would you like to try?
+
+# Next time
+
+*Replication in cancer biology*
+
+- Read
+    - [@Errington2021-dp]
+    - (skim) [@Errington2021-sy]
+- [Class notes](../notes/wk05-2023-09-18.qmd)
+
+# Resources
+
+## References

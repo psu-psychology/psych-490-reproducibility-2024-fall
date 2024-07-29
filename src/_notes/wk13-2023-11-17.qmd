@@ -1,0 +1,52 @@
+---
+title: "Work Day"
+subtitle: "2023-11-17 Fri"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-11-17 Fri"
+---
+
+# Overview
+
+## Announcements
+
+- No class next week. Thanksgiving Holiday.
+
+## In the news {background-iframe="https://www.pewresearch.org/science/2023/11/14/americans-trust-in-scientists-positive-views-of-science-continue-to-decline/"}
+
+---
+
+![Image from [@Kennedy2023-nb]](../include/img/pew-survey-trust-in-science-2023-11-17.png)
+
+## Today
+
+- Revisiting [Exercise 05](../exercises/05-apes.qmd)
+
+*Final project work day*
+
+- [[Final project survey](https://forms.gle/L92wWFSpcdyLT4MR9)]{.orange_due}
+- [Assignment Due]{.orange_due}
+    - [Exercise 07: Data and materials sharing](../exercises/ex07-sharing.qmd)
+
+# Revisiting Exercise 05
+
+## Key ideas
+
+- Two samples, A, B
+- We determine *sample size* ($n_A$, $n_B$), *effect size* ($d$), *mean* ($mu_A$, $mu_B=mu_A+d$), *standard deviation* ($\sigma_A$, $\sigma_B$), and the criterion value for our $t$ test, ($\alpha$).
+- Research question: Is A == B?
+- If $d \neq 0$, then there **is** an effect: $A \neq B$
+  - But can our $t$ test detect it?
+
+# Next time
+
+Monday, November 27, 2023
+
+*In-class final project work day*
+
+# Resources
+
+## References

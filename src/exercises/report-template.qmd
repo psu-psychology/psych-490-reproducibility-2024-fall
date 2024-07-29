@@ -1,0 +1,37 @@
+---
+title: "Report Template"
+---
+
+## Title
+
+> Put a title for your report here. Delete these instructions before you submit your report.
+
+## Author(s)
+
+> List the author(s) of your report. Delete these instructions before you submit your report.
+
+## Date
+
+> Add the date for your report. The following R code will add the date automatically: `r Sys.Date()`. If you are not using R, then enter the date manually. Delete these instructions before you submit your report.
+
+## Purpose
+
+> Describe the purpose or aims of this report. Delete these instructions before you submit your report.
+
+## Methods
+
+> Describe the methods or steps used to address the aims of the report. Delete these instructions before you submit your report.
+
+## Results
+
+> Describe the findings or results. Delete these instructions before you submit your report.
+
+## Conclusions
+
+> Summarize your conclusions. Delete these instructions before you submit your report.
+
+## Resources/References
+
+> List any references you cited or resources you used. Delete these instructions before you submit your report.
+
+> It's a good idea to save your report using a structured file name, e.g., `psych-490-gilmore-rick-exercise-2022-11-14.pdf`.

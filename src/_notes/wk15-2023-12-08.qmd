@@ -1,0 +1,201 @@
+---
+title: "Our open science future"
+subtitle: "2023-12-08"
+author: "Rick Gilmore"
+format: 
+  revealjs:
+    mermaid-format: png
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-12-08 Fri"
+---
+
+# Overview
+
+## Announcement
+
+- Final project write-ups [due next Wednesday, December 13, 2023]{.orange_due}.
+  - Write-up [details](../exercises/final-project.html#project-write-up)
+  
+## Today
+
+- Alyssa Williamson & Maria Piccolino: "Scientific Integrity and Deception"
+- Our open science future
+
+# Our open science future
+
+---
+
+![](https://miro.medium.com/v2/resize:fit:640/1*Nv4oqbfv5IwRSMdLGtFZuA.gif){fig-align="center"}
+
+---
+
+![Three Little Pigs](https://www.carloscamara.es/en/blog/2019/09/05/the-three-little-pigs-is-a-fairy-tale/featured.jpg){fig-align="center"}
+
+---
+
+![Pantheon](https://theromanguy.com/wp-content/uploads/pantheon-feature-real-900x420.jpeg){fig-align="center"}
+
+## What is science, really? 
+
+::: {.incremental}
+- a **stock of accumulated knowledge** (facts & findings)
+- a set of **characteristic methods** 
+
+- a **set of cultural values** [@Merton1973-vf, p. 268]
+:::
+
+---
+
+![Source: https://penn-state-open-science.github.io/bootcamp-2023-open-sci-what-why](https://penn-state-open-science.github.io/bootcamp-2023-open-sci-what-why/img/Image_of_silos.png){fig-align="center"}
+
+---
+
+![<https://149365049.v2.pressablecdn.com/wp-content/uploads/2014/07/6-blind-men-hans-1024x654.jpg>](https://149365049.v2.pressablecdn.com/wp-content/uploads/2014/07/6-blind-men-hans-1024x654.jpg){fig-align="center"}
+
+---
+
+![<https://www.theatlantic.com/photo/2015/08/world-elephant-day/401117/>](https://cdn.theatlantic.com/thumbor/p5S2K0rgrq_3Af-8_VnUUqaxs3M=/1200x729/media/img/photo/2015/08/world-elephant-day/e01_96540399/original.jpg)
+
+## Psychological science is hard...
+
+```{mermaid fig-wbt}
+%%| fig-height: 100%
+
+flowchart LR
+  W(World) --> B(Body)
+  B --> N(Nervous System)
+  B --> B
+  N --> N
+  W --> W
+  B --> W
+  N --> B
+```
+
+---
+
+![https://www.sciencedirect.com/topics/social-sciences/learning-and-memory](https://ars.els-cdn.com/content/image/3-s2.0-B9780120885664500155-f09-01-9780120885664.jpg)
+
+## But lawful...
+
+- [Fitts law](https://en.wikipedia.org/wiki/Fitts%27s_law)
+- [Stevens' power law](https://en.wikipedia.org/wiki/Stevens%27s_power_law)
+
+## And sometimes full of (f)laws
+
+- Cognition is often [systematically biased](https://en.wikipedia.org/wiki/List_of_cognitive_biases).
+- Most current data are from WEIRD people [@Henrich2010-gf]
+- Knowing what is and or is not a robust finding is *harder than it should be*
+
+# Science matters...
+
+---
+
+<iframe src="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-01..latest&uniformYAxis=0&country=USA~GBR~CAN~DEU~ITA~IND&pickerSort=asc&pickerMetric=location&Metric=Cases+and+deaths&Interval=Cumulative&Relative+to+Population=true&Color+by+test+positivity=false&hideControls=true" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+<https://ourworldindata.org>
+
+---
+
+<iframe src="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-01..latest&facet=none&uniformYAxis=0&country=USA~GBR~CAN~DEU~ITA~IND&pickerSort=asc&pickerMetric=location&Metric=Excess+mortality+%28%25%29&Interval=Cumulative&Relative+to+Population=true&Color+by+test+positivity=false&hideControls=true" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+<https://ourworldindata.org>
+
+## {background-video="../include/img/2021GISStempF-5yrAvg.webm"}
+
+## Rigorous, robust, reproducible science...
+
+::: {.incremental}
+- Has been essential to the improvement of human health and well-being in the past
+- Will be increasingly important to these improvements in the 21st century and beyond
+- Can be strengthened
+- And must be
+:::
+
+# What you can do...
+
+## Science is a *human* activity
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+::: {.incremental}
+- Humans are...
+    - flawed
+    - often illogical
+    - emotional AND intellectual
+    - biased
+    - have blind spots
+    - sometimes able to learn from mistakes
+:::
+  
+:::
+
+::: {.column width="40%"}
+
+![](https://media.tenor.com/bnK8AbXH7k8AAAAC/fascinating-mr-spock.gif){fig-align="center"}
+
+:::
+
+::::
+
+## Advocate for science as
+
+::: {.incremental}
+- a **stock of accumulated knowledge** (facts & findings)
+- a set of **characteristic methods** 
+- a **set of cultural values** [@Merton1973-vf, p. 268]
+- an **essential** tool for solving problems
+
+- that can and should be strengthened 
+- through rigorous, thoughtful criticism
+:::
+
+## As a producer...
+
+- Commit to openly sharing your
+  - data, protocols, code
+  - from the very beginning
+- Carry through on your commitment
+- Encourage, help others
+- Strive to get better
+
+## As a consumer...
+
+- Keep your skepticism sharp
+- Ask how do we know that? Why do they think that?
+- Data + reasoning
+- Support policies, outlets, leaders who encourage openness, transparency
+
+---
+
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*hn9nGSNnalnFrSDlGHNctQ.png){fig-align="center"}
+
+---
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Richard Feynmann
+
+![](https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Richard_Feynman_Nobel.jpg/220px-Richard_Feynman_Nobel.jpg)
+
+:::
+
+::: {.column width="60%"}
+
+> The first principle is that **you must not fool yourself—and you are the easiest person to fool**.
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+:::
+
+::::
+
+# Good luck!
+
+# Resources
+
+## References

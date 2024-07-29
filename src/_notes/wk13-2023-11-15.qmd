@@ -1,0 +1,123 @@
+---
+title: "Open science tools"
+subtitle: "2023-11-15 Wed"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-11-15 Wed"
+---
+
+# Overview
+
+## Announcements
+
+- [Friday, November 17]{.orange_due}
+    - [Final project survey](https://forms.gle/L92wWFSpcdyLT4MR9) 
+- [Due Friday, November 17]{.orange_due}
+    - [Exercise 07: Data and materials sharing](../exercises/ex07-sharing.qmd)
+    
+## Last time...
+
+::: {.callout-note title="Your turn"}
+
+- What do students want researchers to share?
+- What are the pros and cons of active vs. *post hoc* data curation?
+
+:::
+
+
+## Today
+
+*Open science tools*
+
+- Discuss
+    - [@Kathawalla2021-tk]
+    - [Chopik2018-wx]
+    - (Optional) [@Cruwell2019-nz]
+- Explore
+    - [@FORRT_undated-pl]
+
+## Survey: Questions from [Chopik2018-wx]
+
+```{r survey}
+survey_03_qr <- qrcode::qr_code("https://docs.google.com/forms/d/e/1FAIpQLSf9w7CHjZD7jon1-_BsR_ZZHlIEVdKY0x4nJwh7v8AyXlpUmg/viewform?usp=sf_link")
+plot(survey_03_qr)
+```
+
+---
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9w7CHjZD7jon1-_BsR_ZZHlIEVdKY0x4nJwh7v8AyXlpUmg/viewform?embedded=true" width="640" height="3972" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+# [@Kathawalla2021-tk]
+
+---
+
+>This article provides a roadmap to assist graduate students and their advisors to engage in open science practices. We suggest eight open science practices that novice graduate students could begin adopting today. The topics we cover include journal clubs, project workflow, preprints, reproducible code, data sharing, transparent writing, preregistration, and registered reports. 
+
+---
+
+>To address concerns about not knowing how to engage in open science practices, we provide a difficulty rating of each behavior (easy, medium, difficult), present them in order of suggested adoption, and follow the format of what, why, how, and worries. 
+
+---
+
+>We give graduate students ideas on how to approach conversations with their advisors/collaborators, ideas on how to integrate open science practices within the graduate school framework, and specific resources on how to engage with each behavior. 
+
+---
+
+>We emphasize that engaging in open science behaviors need not be an all or nothing approach, but rather graduate students can engage with any number of the behaviors outlined.
+
+<p style="text-align:center;">
+[@Kathawalla2021-tk]
+</p>
+
+---
+
+- Open Science Framework (OSF) project: <https://osf.io/w5mbp/>
+- Wiki: <https://osf.io/w5mbp/wiki/home/>
+
+---
+
+![Figure 1 from [@Kathawalla2021-tk]](https://ucp.silverchair-cdn.com/ucp/content_public/journal/collabra/7/1/10.1525_collabra.18684/2/m_collabra_2021_7_1_18684_49218.jpeg?Expires=1683620528&Signature=dlqxuXl9GGSMcmMA7Bje2z9f6UwaIgeDt5Ryd-FydjA78M70uG~xprbTsrrnjWb~SYujcbWcvXvH-V9FL-w~GeFX8OPC4mmPTVUCDqoXMEC8kKcpfUUP44gst-FEyBST1ujDYghrphWPyQ84Pg50pArBpKIzBiBmT26WZJD1Grfw6y3I8EY10u9zqcqytRy6fw9tNyhA90oXd5v5rGS6Ekcmiz5wv5kUVh4b8WzriNmNjj0roQLK7BfKyKStog4CYrA5DXyvLa5t02dxwuBPejek9PQobrWzc7BLpnnaJi8DgGVCHrbkPE0n9RWWlnsx2yxS3ppIb7eHLWsJUaMJvA__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA)
+
+# [@Chopik2018-wx]
+
+---
+
+>Over the past 10 years, crises surrounding replication, fraud, and best practices in research methods have dominated discussions in the field of psychology. However, no research exists examining how to communicate these issues to undergraduates and what effect this has on their attitudes toward the field. 
+
+---
+
+>We developed and validated a 1-hr lecture communicating issues surrounding the replication crisis and current recommendations to increase reproducibility. Pre- and post-lecture surveys suggest that the lecture serves as an excellent pedagogical tool. 
+
+---
+
+>Following the lecture, students trusted psychological studies slightly less but saw greater similarities between psychology and natural science fields. We discuss challenges for instructors taking the initiative to communicate these issues to undergraduates in an evenhanded way.
+
+<p style="text-align:center;">
+[@Chopik2018-wx]
+</p>
+
+---
+
+- Table 1 from [@Chopik2018-wx]: <https://journals.sagepub.com/doi/10.1177/0098628318762900#table1-0098628318762900>
+- Table 2 from [@Chopik2018-wx]: <https://journals.sagepub.com/doi/10.1177/0098628318762900#table2-0098628318762900>
+
+## Reproducibility notes
+
+- Survey questions in article
+- OSF project for materials [@Defever2016-ki]
+- Data shared, but not in an easily reproducible form
+
+# Next time
+
+*Final project work day*
+
+- [[Final project survey](https://forms.gle/L92wWFSpcdyLT4MR9)]{.orange_due}
+- [Assignment Due]{.orange_due}
+    - [Exercise 07: Data and materials sharing](../exercises/ex07-sharing.qmd)
+
+# Resources
+
+## References

@@ -1,0 +1,57 @@
+---
+title: "Work session"
+subtitle: "2023-11-10 Fri"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-11-10 Fri"
+---
+
+# Overview
+
+## Announcements
+
+- Optional survey for [11/15 class]{.orange_due}:
+
+```{r survey}
+survey_03_qr <- qrcode::qr_code("https://docs.google.com/forms/d/e/1FAIpQLSf9w7CHjZD7jon1-_BsR_ZZHlIEVdKY0x4nJwh7v8AyXlpUmg/viewform?usp=sf_link")
+plot(survey_03_qr)
+```
+
+## Today
+
+*Work session: Data sharing*
+
+- Work on either
+  -   Quest for shared Clery Act data (below)
+  - [Assignment distributed]{.green_assigned}
+      - [Exercise 07: Data and materials sharing](exercises/ex07-sharing.qmd)
+- [Final project survey]{.green_assigned}
+    - Please complete the [final project survey](https://forms.gle/L92wWFSpcdyLT4MR9).
+    
+# Quest: In search of Clery Act crime data
+
+## Your mission
+
+- Find Clery Act crime data for Penn State University Park
+- Find Clery Act crime data for another institution, not Penn State
+- Compare the process for finding these data
+- What format are the data in? What would you have to do to visualize or analyze them?
+
+# Next time
+
+*Materials, code, & protocol sharing*
+
+- Read
+    - [@Soska2021-mh]
+    - [@Gilroy2019-bf]
+- Explore
+    - [protocols.io](https://www.protocols.io/)
+    - [Journal of Visualized Experiments (JOVE)](https://www.jove.com/)
+- [Class notes](wk13-2023-11-13.qmd)
+
+# Resources
+
+## References

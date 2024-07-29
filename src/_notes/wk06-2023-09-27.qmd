@@ -1,0 +1,235 @@
+---
+title: "2023-09-27 Wed"
+subtitle: "Scientific integrity"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-09-27 Wednesday"
+---
+
+# Overview
+
+## Announcements
+
+- [Due Friday]{.orange_due}
+    - [Exercise 03: Violations of scientific integrity](../exercises/ex03-scientific-integrity.qmd)
+
+## Today
+
+*Fraud & misconduct*
+
+- Read
+    - [@Ritchie2020-fm], Chapter 3
+    - [@Bhattacharjee2013-rw]
+    - (Skim) [@Levelt2012-ap]
+    - (Skim) [@Carpenter2012-qy]
+    
+# Diedrik Stapel {-}
+
+---
+
+```{r, fig.cap="Diedrik Stapel from [@Bhattacharjee2013-rw](https://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html)"}
+knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28stapel1/28stapel1-jumbo-v5.jpg?quality=75&auto=webp")
+```
+
+---
+
+>Stapel did not deny that his deceit was driven by ambition. But it was more complicated than that, he told me. He insisted that he loved social psychology but had been frustrated by the messiness of experimental data, which rarely led to clear conclusions.  
+
+<p style="text-align:center;">
+[@Bhattacharjee2013-rw]
+</p>
+
+---
+
+>His lifelong obsession with elegance and order, he said, led him to concoct sexy results that journals found attractive. “It was a quest for aesthetics, for beauty — instead of the truth,” he said. He described his behavior as an addiction that drove him to carry out acts of increasingly daring fraud, like a junkie seeking a bigger and better high.
+
+<p style="text-align:center;">
+[@Bhattacharjee2013-rw]
+</p>
+
+---
+
+>In his early years of research — when he supposedly collected real experimental data — Stapel wrote papers laying out complicated and messy relationships between multiple variables. He soon realized that journal editors preferred simplicity. “They are actually telling you: ‘Leave out this stuff. Make it simpler,’ ” Stapel told me. 
+
+<p style="text-align:center;">
+[@Bhattacharjee2013-rw]
+</p>
+
+---
+
+>Before long, he was striving to write elegant articles.
+
+<p style="text-align:center;">
+[@Bhattacharjee2013-rw]
+</p>
+
+---
+
+>On a Sunday morning, as we drove to a village near Maastricht to see his parents, Stapel reflected on why his behavior had sparked such outrage in the Netherlands. “People think of scientists as monks in a monastery looking out for the truth,” he said. 
+
+<p style="text-align:center;">
+[@Bhattacharjee2013-rw]
+</p>
+
+---
+
+>“People have lost faith in the church, but they haven’t lost faith in science. My behavior shows that science is not holy.”
+
+<p style="text-align:center;">
+[@Bhattacharjee2013-rw]
+</p>
+
+---
+
+>What the public didn’t realize, he said, was that academic science, too, was becoming a business. “There are scarce resources, you need grants, you need money, there is competition,” he said. “Normal people go to the edge to get that money. Science is of course about discovery, about digging to discover the truth. 
+
+<p style="text-align:center;">
+[@Bhattacharjee2013-rw]
+</p>
+
+---
+
+>But it is also communication, persuasion, marketing. I am a salesman. I am on the road. People are on the road with their talk. With the same talk. It’s like a circus.” 
+
+<p style="text-align:center;">
+[@Bhattacharjee2013-rw]
+</p>
+
+---
+
+>He named two psychologists he admired — John Cacioppo and Daniel Gilbert — neither of whom has been accused of fraud. “They give a talk in Berlin, two days later they give the same talk in Amsterdam, then they go to London. They are traveling salesmen selling their story.”
+
+<p style="text-align:center;">
+[@Bhattacharjee2013-rw]
+</p>
+
+---
+
+>Fraud like Stapel’s — brazen and careless in hindsight — might represent a lesser threat to the integrity of science than the massaging of data and selective reporting of experiments. The young professor who backed the two student whistle-blowers told me that tweaking results — like stopping data collection once the results confirm a hypothesis — is a common practice. 
+
+<p style="text-align:center;">
+[@Bhattacharjee2013-rw]
+</p>
+
+---
+
+>“I could certainly see that if you do it in more subtle ways, it’s more difficult to detect,” Ap Dijksterhuis, one of the Netherlands’ best known psychologists, told me. He added that the field was making a sustained effort to remedy the problems that have been brought to light by Stapel’s fraud.
+
+<p style="text-align:center;">
+[@Bhattacharjee2013-rw]
+</p>
+
+---
+
+>If Stapel was solely to blame for making stuff up, the report stated, his peers, journal editors and reviewers of the field’s top journals were to blame for letting him get away with it. The committees identified several practices as “sloppy science” — misuse of statistics, ignoring of data that do not conform to a desired hypothesis and the pursuit of a compelling story no matter how scientifically unsupported it may be.
+
+---
+
+>The adjective “sloppy” seems charitable. Several psychologists I spoke to admitted that each of these more common practices was as deliberate as any of Stapel’s wholesale fabrications. 
+
+<p style="text-align:center;">
+[@Bhattacharjee2013-rw]
+</p>
+
+---
+
+>Each was a choice made by the scientist every time he or she came to a fork in the road of experimental research — one way pointing to the truth, however dull and unsatisfying, and the other beckoning the researcher toward a rosier and more notable result that could be patently false or only partly true. 
+
+---
+
+>What may be most troubling about the research culture the committees describe in their report [@Levelt2012-ap] are the plentiful opportunities and incentives for fraud. “The cookie jar was on the table without a lid” is how Stapel put it to me once. Those who suspect a colleague of fraud may be inclined to keep mum because of the potential costs of whistle-blowing.
+
+<p style="text-align:center;">
+[@Bhattacharjee2013-rw]
+</p>
+
+# Hauser {-}
+
+---
+
+>Former Harvard University psychologist Marc Hauser fabricated and falsified data and made false statements about experimental methods in six federally funded studies, according to a report released yesterday by the U.S. Department of Health and Human Services's Office of Research Integrity (ORI). 
+
+<p style="text-align:center;">
+[@Carpenter2012-qy]
+</p>
+
+---
+
+>Hauser, who resigned from his Harvard faculty position in 2011 after an internal investigation found him responsible for research misconduct, wrote in a statement that although he has "fundamental differences" with some of the new report's findings, "I acknowledge that I made mistakes." 
+
+---
+
+>He did not admit deliberate misconduct, however, and implied that his mistake was that he "tried to do too much" and "let important details get away from my control."
+
+<p style="text-align:center;">
+[@Carpenter2012-qy]
+</p>
+
+---
+
+>In the report released yesterday, ORI identified six instances in which Hauser engaged in research misconduct in research funded by the National Institutes of Health. Specifically:
+
+<p style="text-align:center;">
+[@Carpenter2012-qy]
+</p>
+
+---
+
+>In a study of learning in cotton-top tamarins that was published in the journal *Cognition* in 2002 (and retracted in 2010, amid allegations of misconduct), Hauser published fabricated data in a bar graph that ostensibly compared the monkeys' responses before and after they habituated to sound patterns.
+
+---
+
+>In two unpublished experiments testing cotton-top tamarins' responses to strings of consonants and vowels, Hauser recorded false values for some of the monkeys' responses, creating the appearance of statistically significant results. This research was never written up for publication.
+
+---
+
+>In versions of a manuscript for a study that was eventually published in *Cognition* (but first submitted to and rejected by other journals), Hauser provided false descriptions of the methods used to code monkey behavior and falsified results in a way that supported his theoretical predictions. Hauser and his collaborators corrected these problems before the study was published, so the published study accurately describes the research.
+
+---
+
+>In a study of how well rhesus monkeys comprehend human gestures, which was published in the *Proceedings of the Royal Society B* in 2007, Hauser falsely reported methods and results of one of seven experiments. Hauser and one of his colleagues published a replication of this experiment in 2011.
+
+---
+
+>A study published in *Science* in 2007 contained a false statement about distinctive markings on some cotton-top tamarins in the experiment, masking the possibility that some monkeys could have been tested more than once. Hauser accepted responsibility for this statement. He and a co-author replicated these findings and published them in *Science* in 2011.
+
+---
+
+>In an experiment involving rhesus monkeys that was never written up for publication, Hauser falsely changed coding results such that the altered results fit the theoretical prediction.
+
+<p style="text-align:center;">
+[@Carpenter2012-qy]
+</p>
+
+---
+
+- Note: link to report in article: http://www.ofr.gov/OFRUpload/OFRData/2012-21992_PI.pdf is broken.
+- I went to <https://ori.hhs.gov> and searched for "Hauser". I found this <https://ori.hhs.gov/sites/default/files/september_vol20_no4.pdf>.
+
+# Your turn
+
+## Discuss
+
+- Do you sympathize with Stapel? Why or why not?
+- Have you been in situations like Stapel describes where you have been asked to make a messy and complicated problem simpler?
+- Do you think that academic science is becoming a business? Why or why not?
+- Why is "massaging of data" or selective reporting of experiments a problem?
+- Were the punishments in these cases fair and just or unfair and unjust? Why or why not?
+
+# Next time
+
+*P-hacking*
+
+- [Due]{.orange_due}
+    - [Exercise 03: Violations of scientific integrity](../exercises/ex03-scientific-integrity.html)
+- [Assignment]{.green_assigned}
+    - [Exercise 04: P-hack your way to scientific glory](../exercises/ex04-p-hacking.html) write-up.
+- Work session
+    - [Final project proposals](../exercises/final-project.html), [due Friday, October 13]{.orange_due}
+
+# Resources
+
+## References

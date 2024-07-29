@@ -1,0 +1,160 @@
+---
+title: "Preregistration"
+subtitle: "2023-11-06 Mon"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-11-06 Mon"
+---
+
+# Overview
+
+## Announcement
+
+- Clarification of "opinion piece"
+  - [@Goldin-Meadow2016-mc]
+  - [@Mischel2011-br]
+  - [@Adolph2016-pg]
+
+## Last time...
+
+- [Many visualizations](../surveys/many-viz.html)
+
+## Today
+
+*Preregistration*
+
+- Read
+    - [@Nosek2018-jk]
+    - [@Ledgerwood2018-sn] or [@Goldin-Meadow2016-mc]
+    - (Optional) [@Claesen2021-ae]
+- Explore
+    - [clinicaltrials.gov](https://clinicaltrials.gov/)
+
+# Preregistration
+
+---
+
+Nosek, B. A., Ebersole, C. R., DeHaven, A. C. & Mellor, D. T. (2018). The preregistration revolution. Proceedings of the National Academy of Sciences of the United States of America, 115(11), 2600–2606. <https://doi.org/10.1073/pnas.1708274114>
+
+---
+
+>*Abstract*
+>
+>Progress in science relies in part on generating hypotheses with existing observations and testing hypotheses with new observations. This distinction between postdiction and prediction is appreciated conceptually but is not respected in practice. Mistaking generation of postdictions with testing of predictions reduces the credibility of research findings... 
+
+<p style="text-align:center;">
+[@Nosek2018-jk]
+</p>
+
+---
+
+>
+However, ordinary biases in human reasoning, such as hindsight bias, make it hard to avoid this mistake. An effective solution is to define the research questions and analysis plan before observing the research outcomes—a process called preregistration...
+
+<p style="text-align:center;">
+[@Nosek2018-jk]
+</p>
+
+---
+
+>Preregistration distinguishes analyses and outcomes that result from predictions from those that result from postdictions. A variety of practical strategies are available to make the best possible use of preregistration in circumstances that fall short of the ideal application, such as when the data are preexisting.
+
+<p style="text-align:center;">
+[@Nosek2018-jk]
+</p>
+
+---
+
+>Services are now available for preregistration across all disciplines, facilitating a rapid increase in the practice. Widespread adoption of preregistration will increase distinctiveness between hypothesis generation and hypothesis testing and will improve the credibility of research findings.
+
+<p style="text-align:center;">
+[@Nosek2018-jk]
+</p>
+
+## Types
+
+- Preregistration (of analysis plans)
+- Registered reports, [@Chambers_undated-ax](https://royalsociety.org/blog/2016/11/registered-reports-what-are-they-and-why-are-they-important/); [@Center_for_Open_Science_undated-yg](https://www.cos.io/initiatives/registered-reports)
+
+![Illustration about registered reports from [@Center_for_Open_Science_undated-yg]](https://cdn.cos.io/media/images/registered_reports.width-800.png)
+
+## Commentary about
+
+- [@Ledgerwood2018-sn]
+    - Preregistering theoretical predictions $\neq$ preregistering analysis plans
+- [@Goldin-Meadow2016-mc]
+    - Could stifle discovery
+    - Not applicable to all kinds of research
+
+# Is it working [@Claesen2021-ae]
+
+---
+
+![Figure 1 from [@Claesen2021-ae]. Flowchart of assessment of preregistered studies.](https://royalsocietypublishing.org/cms/asset/1157ecd0-f1e7-4dbe-a0d2-986d65d0e44a/rsos211037f01.jpg)
+
+---
+
+![Figure 2 from [@Claesen2021-ae]. Tile plot of the assessment of each methodological aspect per preregistration plan. Only the 27 studies that were accessible and included the minimal number of methodological details required for our adherence assessment are shown.](https://royalsocietypublishing.org/cms/asset/59614a09-5481-49c2-bba0-5aad6fd85439/rsos211037f02.jpg)
+
+---
+
+![Figure 3 from [@Claesen2021-ae]. An overview of adherence per methodological aspect.](https://royalsocietypublishing.org/cms/asset/24ad7980-7d06-4335-9a07-d62bbb8d907e/rsos211037f03.jpg)
+
+## Author-reported reasons for deviations
+
+- Suggestions from reviewers 
+- Did not preregister or report details because they were thought redundant or irrelevant
+- Lack of consensus about what should be disclosed
+- Small discrepancy with the preregistered sample size was small and not really a *deviation*.
+
+## Conclusions
+
+>Our work suggests that it is not obvious for preregistration to live up to its promise of making research results more transparent and more interpretable in the manuscript. This insight calls for better standards in preregistering and reporting preregistered research...
+
+---
+
+>It should, however, not be misinterpreted as a plea against the practice of preregistration. Neither does our work suggest that the results of the preregistered studies we assessed should not be trusted. We do not, and cannot, claim that the observed deviations have been deliberately unreported or constitute evidence of the exploitation of researcher degrees of freedom...
+
+---
+
+>The process of preregistering and reporting in accordance with the preregistration is tricky, and we realize that, given its relatively young status in psychology, the field collectively needs to go through a learning phase.
+
+<p style="text-align:center;">
+[@Claesen2021-ae]
+</p>
+
+---
+
+::: {.callout-note title="Your thoughts?"}
+
+- Are you surprised that studies differ from their preregistered plans? Why or why not?
+- Does preregistration make you nervous?
+- How do thesis/dissertation/grant proposals differ from preregistration?
+- What practice(s) would reduce *deviations* or alleviate skeptics' concerns?
+
+:::
+
+## My experience
+
+- Paper: [@Qian2022-yp]; preregistration [@Qian_2021_prereg].
+- Published R Markdown document (in HTML) with entire workflow [@Qian_undated-cl].
+    - Separate sections for [preregistered](https://gilmore-lab.github.io/sex-differences-project/analysis/qian-berenbaum-gilmore.html#Preregistered_analyses) and [exploratory](https://gilmore-lab.github.io/sex-differences-project/analysis/qian-berenbaum-gilmore.html#Non-pregistered_analyses) ones.
+
+# Next time
+
+*Data sharing*
+
+- Read
+    - [@Houtkoop2018-tl]
+    - [@Tenopir2020-mq]
+    - (Optional) [@GilmoreAdolph2017]
+    - (Optional) [@Meyer2018-vk]
+    - (Optional) [@National_Institutes_of_Health_undated-it](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html)
+- [Class notes](wk12-2023-11-08.qmd)
+
+# Resources
+
+## References

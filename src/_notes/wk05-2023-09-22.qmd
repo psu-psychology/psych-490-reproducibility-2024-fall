@@ -1,0 +1,40 @@
+---
+title: "2023-09-22 Fri"
+subtitle: "Scientific integrity"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-09-22 Friday"
+---
+
+# Overview
+
+## Announcements
+
+- **NO CLASS** on Monday, September 25, 2023
+- Next class is Wednesday, September 27, 2023
+
+## Today
+
+*Work session: Scientific integrity*
+
+- [Assignment]{.green_assigned}
+    - [Exercise 03: Violations of scientific integrity](../exercises/ex03-scientific-integrity.qmd)
+
+# Next time
+
+**NO CLASS** on Monday, September 25, 2023
+
+*Fraud & misconduct* (Wednesday, September 27, 2023)
+
+- Read
+    - [@Ritchie2020-fm], Chapter 3
+    - [@Bhattacharjee2013-rw]
+    - (Skim) [@Levelt2012-ap]
+    - (Skim) [@Carpenter2012-ot]
+
+# Resources
+
+## References

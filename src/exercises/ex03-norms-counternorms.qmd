@@ -1,0 +1,41 @@
+---
+title: "Exercise 03"
+subtitle: Norms and Counter-norms
+---
+
+## Dates {-}
+
+Due: [Friday, September 20](../schedule.qmd#friday-september-20){.orange_due}.
+
+## Goals {-}
+
+This exercise gives you an opportunity to consider how the norms (and counter-norms) that appear common in scientific research compare with other human activities.
+
+## Assignment {-}
+
+Choose a realm of human activity that you are familiar with and preferably engage in yourself that is *not* scientific research--e.g., a sport or game, religious activity, club or social activity, political activity, or something else.
+Choose two norms or counter-norms in your chosen activity and in a short essay (2-3 double-spaced pages in length) describe the norms or counter-norms in your chosen activity and discuss how they compare with the norms and counter-norms common in scientific research.
+
+You may work with one other person if you so choose.
+
+## Submit {-}
+
+A 2-3 page paper in Microsoft Word format using the following file-naming convention:
+
+`<lastname>-<firstname>-PSYCH490.009-ex02.docx`, where you substitute your last name for <lastname> and your first name for <firstname>.
+If there are two authors, use both of your last names.
+If Dr. Gilmore was submitting a paper, it would look like this: `gilmore-rick-PSYCH490.009-ex02.docx`.
+Jie will create a dropbox on Canvas for submissions.
+When that is ready, we will let you know via email.
+
+Please use the APA format for your paper.
+I found the following template document that would be a very good start:
+
+<https://docs.google.com/document/d/1IIKwtH7eVXIkQMz4FwMuKol6hMDT3ra9/copy>
+
+## Tips {-}
+
+- Give your essay a title.
+- Write an introductory paragraph with a clear thesis statement. Here's an example: "In this essay, I describe a norm common among ham radio operators, a counter-norm implicit in the behavior of most operators, and then compare them to comparable norms and counter-norms in science."
+- Write two or more paragraphs in the body of your essay. Each paragraph should describe a separate topic. For example: In one paragraph, you might discuss a norm. In a second paragraph, you discuss a counter-norm, and in a third paragraph, you compare the norm and counter-norm to norms and counter-norms in scientific research.
+- Write a short concluding paragraph where you summarize your key points.

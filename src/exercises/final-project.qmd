@@ -1,0 +1,66 @@
+---
+title: "Final Project"
+---
+
+## Background {-}
+
+Your final project is an opportunity for you to produce a product that shows-off some of what you have learned in the course.
+
+You may work alone or with up to two other students in the class.
+If you work with others, you will need to complete a statement about who did what, and all of the members of your team will get the same grade.
+
+## Topics {-}
+
+You may choose any of a wide range of topics for your final project:
+
+- A tool or resource you find especially useful.
+- A paper or papers that do or do not replicate.
+- Independent research on some topic related to open science.
+
+Here are some topics students chose in Spring 2023:
+
+<https://psu-psychology.github.io/psych-490-reproducibility-2023-spring-notes/presentations.html#presentations-day-1>
+
+And here are some topics students chose in Fall 2023:
+
+<https://psu-psychology.github.io/psych-490-reproducibility-2023-fall/surveys/presentation-schedule.html#day-1-friday-december-1-2023>
+
+## Formats {-}
+
+There are multiple formats for your final project.
+
+- Short (5-10 min) in-class talk
+- Poster
+- Lesson plan/exercise
+- Tutorial
+- Research project (& write-up)
+- Opinion piece
+
+## Components {-}
+
+### Project proposal
+
+- Every student or team must submit a one-page project proposal. Your proposal should state the aim or objective of your project, the format, and a include a brief description of how you intend to go about achieving your objectives.
+- If the proposal is submitted on-time ([by Friday, October 13]{.orange_due}), the student or team gets 5 extra credit points. If the proposal is submitted late, there is no penalty, but also no extra points. If a student or team does not submit a proposal by [**Friday, October 18**](../schedule.qmd#friday-october-18), there will be a five point penalty.
+
+### Project presentation
+
+- Every student or team may make an *optional* presentation to the class about their project. Please indicate whether you are willing to make a presentation when you complete the survey below.
+- **Note**: Giving a presentation is worth 5 extra credit points.
+- The presentations will occur during class on December 9, 11, and 13.
+- If you wish to have your presentation made available publicly on the course website, please let me know. This is also completely optional.
+
+### Project write-up
+    
+- Every student or team must submit a write-up, [due on Wednesday, December 18, 2024]{.orange_due}.
+- Depending on the format of the project (talk, poster, paper), different written materials may be submitted (slides, poster, etc.).
+- For an in-class talk, submit a separate document with your talk text or notes and your slides or your slides that include presenter notes embedded within them.
+- For a poster, submit a PowerPoint or PDF of your poster.
+- For research paper, please submit an APA-formatted manuscript 1,500-2,000 words in length.
+- For an opinion piece, please submit a document up to 1,500 words in length.
+- For an interactive website or presentation, please submit a complete set of files needed to evaluate your website or presentation.
+- For a lesson plan, please submit a document up up to 1,500 words in length.
+
+## Survey
+
+- Please provide information about your project via this Google Form: <https://forms.gle/L92wWFSpcdyLT4MR9>

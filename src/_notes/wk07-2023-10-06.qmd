@@ -1,0 +1,179 @@
+---
+title: "Work session"
+subtitle: "2023-10-06 Fri"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-10-06 Friday"
+---
+
+# Overview
+
+## Datasaurus
+
+![The Datasaurus dataset from @Matejka2017-kp](https://damassets.autodesk.net/content/dam/autodesk/research/publications-assets/gifs/same-stats-different-graphs/DinoSequentialSmaller.gif)
+See also this [supplementary page](../survey/plotting-degrees-of-freedom.qmd) on plotting and degrees of freedom.
+
+## Announcements
+
+- [Due]{.orange_due}
+    - [Exercise 04: P-hack your way to scientific glory](exercises/ex04-p-hacking.qmd) write-up.
+- [due next Friday, October 13]{.orange_due}, [Final project proposals](exercises/final-project.qmd)
+
+## Today
+
+- More on questionable research practices (QRPs)
+  - Discuss [@simmons_false-positive_2011]
+- (Brief) Work session
+  - Set-up for discussion of [*p*-hacking exercise](exercises/ex04-p-hacking.qmd) on [Monday](wk08-2023-10-09.qmd).
+- (Optional) Work session
+  - [Final project proposals](exercises/final-project.qmd), [due Friday, October 13]{.orange_due}.
+    
+# More on QRPs
+
+## Study 1 [@simmons_false-positive_2011]
+
+>we investigated whether listening to a children’s song induces an age contrast, making people feel older.
+
+- Kalimba: <https://youtu.be/tCO4i2t-Aso?si=OgGGCSc775qVNGbi>
+- Hot Potato: <https://youtu.be/0v4-eAefurY?si=BZYzd42ti5sOKqca>
+
+---
+
+>In exchange for payment, 30 University of Pennsylvania undergraduates sat at computer terminals, donned headphones, and were randomly assigned to listen to either a control song (“Kalimba,” an instrumental song by Mr. Scruff that comes free with the Windows 7 operating system) or a children’s song (“Hot Potato,” performed by The Wiggles).
+
+---
+
+>After listening to part of the song, participants completed an ostensibly unrelated survey: They answered the question “How old do you feel right now?” by choosing among five options (very young, young, neither young nor old, old, and very old). They also reported their father’s age, allowing us to control for variation in baseline age across participants.
+
+---
+
+>An analysis of covariance (ANCOVA) revealed the predicted effect: People felt older after listening to “Hot Potato” (adjusted M = 2.54 years) than after listening to the control song (adjusted M = 2.06 years), F(1, 27) = 5.06, p = .033.
+
+---
+
+::: {.callout-note}
+
+An analysis of covariance (ANCOVA) is a tool for asking whether there is some difference between groups (here the song listened to) when we account for a third variable, like their father's age.
+
+:::
+
+Link to supplemental [illustration of ANCOVA](../surveys/simmons-etal-2011-suppl.html) 
+
+## Study 2
+
+>we sought to conceptually replicate and extend Study 1. Having demonstrated that listening to a children’s song makes people feel older, Study 2 investigated whether listening to a song about older age makes people actually younger.
+
+- Kalimba: <https://youtu.be/tCO4i2t-Aso?si=OgGGCSc775qVNGbi>
+- When I'm 64: <https://youtu.be/HCTunqv1Xt4?si=urAP87RrwUCfjJNC>
+
+---
+
+>...we asked 20 University of Pennsylvania undergraduates to listen to either “When I’m Sixty-Four” by The Beatles or “Kalimba.” Then, in an ostensibly unrelated task, they indicated their birth date (mm/dd/yyyy) and their father’s age. We used father’s age to control for variation in baseline age across participants.
+
+---
+
+>...An ANCOVA revealed the predicted effect: According to their birth dates, people were nearly a year-and-a-half younger after listening to “When I’m Sixty-Four” (adjusted M = 20.1 years) rather than to “Kalimba” (adjusted M = 21.5 years), F(1, 17) = 4.92, p = .040.
+
+## Wait a minute...
+
+- What did they say?
+- How is that even possible?
+
+## Illustration {.scrollable}
+
+```{r, fig.cap="Table 3 from [@simmons_false-positive_2011](http://dx.doi.org/10.1177/0956797611417632)", out.width="100%"}
+knitr::include_graphics("../include/img/simmons-etal-2011-table-03.png")
+```
+
+>First, notice that in our original report, we redacted the many measures other than father’s age that we collected (including the dependent variable from Study 1: feelings of oldness). A reviewer would hence have been unable to assess the flexibility involved in selecting father’s age as a control. Second, by reporting only results that included the covariate, we made it impossible for readers to discover its critical role in achieving a significant result. Seeing the full list of variables now disclosed, reviewers would have an easy time asking for robustness checks, such as “Are the results from Study 1 replicated in Study 2?” They are not: People felt older rather than younger after listening to “When I’m Sixty-Four,” though not significantly so, F(1, 17) = 2.07, p = .168. Finally, notice that we did not determine the study’s termination rule in advance; instead, we monitored statistical significance approximately every 10 observations. Moreover, our sample size did not reach the 20-observation threshold set by our requirements.
+>
+>The redacted version of the study we reported in this article fully adheres to currently acceptable reporting standards and is, not coincidentally, deceptively persuasive. The requirement-compliant version reported in Table 3 would be—appropriately—all but impossible to publish.
+
+<p style="text-align: center;">
+[@simmons_false-positive_2011]
+</p>
+
+## Simulations
+
+>These simulations assessed the impact of four common degrees of freedom: flexibility in (a) choosing among dependent variables, (b) choosing sample size, (c) using covariates, and (d) reporting subsets of experimental conditions. We also investigated various combinations of these degrees of freedom.
+
+---
+
+>We generated random samples with each observation independently drawn from a normal distribution, performed sets of analyses on each sample, and observed how often at least one of the resulting p values in each sample was below standard significance levels. For example, imagine a researcher who collects two dependent variables, say liking and willingness to pay. The researcher can test whether the manipulation affected liking, whether the manipulation affected willingness to pay, and whether the manipulation affected a combination of these two variables. The likelihood that one of these tests produces a significant result is at least somewhat higher than .05. We conducted 15,000 simulations of this scenario (and other scenarios) to estimate the size of “somewhat".
+
+<p style="text-align: center;">
+[@simmons_false-positive_2011]
+</p>
+
+## Findings
+
+```{r, fig.cap="Table 1 from [@simmons_false-positive_2011](http://dx.doi.org/10.1177/0956797611417632)", out.width="80%"}
+knitr::include_graphics("../include/img/simmons-etal-2011-table-01.png")
+```
+
+- Researcher choices inflate false positive rates.
+
+---
+
+```{r, out.width="80%", fig.cap="Figure 1 from [@simmons_false-positive_2011](http://dx.doi.org/10.1177/0956797611417632)"}
+knitr::include_graphics("../include/img/simmons-etal-2011-fig-01.png")
+```
+
+- Collecting more data after analyzing a small initial sample inflates the false positive rate.
+
+---
+
+```{r, out.width="80%", fig.cap="Figure 2 from [@simmons_false-positive_2011](http://dx.doi.org/10.1177/0956797611417632)"}
+knitr::include_graphics("../include/img/simmons-etal-2011-fig-02.png")
+```
+
+- Just because a statistical test met the criterion threshold with a small sample doesn't mean it will do so with larger samples.
+
+## Recommendations
+
+![Table 2 from @simmons_false-positive_2011](../include/img/simmons-etal-2011-table-02.png){fig-align="center"}
+
+<p style="text-align:center;">
+[@simmons_false-positive_2011]
+</p>
+
+## Your thoughts?
+
+- Are these recommendations reasonable? 
+- Are they feasible?
+- Do you think authors and reviewers will comply? Why or why not?
+
+## Reproducibility notes for [@simmons_false-positive_2011]
+
+- does not appear to have shared data or any supplementary materials along with the article.
+
+# Work session on *p*-hacking
+
+## *p*-hacking exercise
+
+- Enter (anonymized) data into a spreadsheet
+
+<https://docs.google.com/spreadsheets/d/1JI_Qih4wCzUrYTQYE3dpvVx2C7GdzfUZq0a3QhqQyeE/edit?usp=sharing>
+
+- Choose a student_id (integer) for yourself (not your PSU ID or phone number)
+
+## Questions to discuss Monday
+
+- Who got a "significant" result?
+- How many different analyses did you try?
+- Who changed their analysis after finding a significant result?
+- Did anyone try another analysis--after you got a significant result--and *keep* the non-significant result?
+
+# Next time
+
+*Prevalence of QRPs*
+- Read
+    - [@John2012-tk]
+- [Class notes](wk08-2023-10-09.qmd)
+
+# Resources
+
+## References

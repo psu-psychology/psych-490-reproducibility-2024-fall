@@ -1,0 +1,57 @@
+---
+title: "2023-11-03 Fri"
+subtitle: "Work Day"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-11-03 Fri"
+---
+
+# Overview
+
+## Announcements
+
+- [Optional Extra Credit Assignment]{.orange_due}
+    - For 5 extra credit points, write a paragraph that summarizes the main findings of [@Camerer2018-tr].
+    
+## Last time...
+
+- More on [@Silberzahn2018-st]
+- How could we visualize an effect of player skin-tone on the number of red cards given?
+- [My first attempt](../surveys/many-viz.html)
+
+---
+
+::: {.callout-note title="Your thoughts?"}
+
+- So, what do you think now?
+- What other visualizations would you like to see?
+- Is 'seeing' believing?
+- Where in the curriculum do we focus on interpreting data figures? Where should we?
+
+:::
+
+## Today
+
+*Final project work day*
+
+# Next time
+
+*Preregistration*
+
+- Read
+    - [@Nosek2018-jk]
+    - [@Ledgerwood2018-sn] or [@Goldin-Meadow2016-mc]
+    - (Optional) [@Claesen2021-ae]
+    
+---
+
+- Explore
+    - [clinicaltrials.gov](https://clinicaltrials.gov/)
+- [Class notes](wk12-2023-11-06.qmd)
+
+# Resources
+
+## References

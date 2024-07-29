@@ -1,0 +1,51 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "exercises/*.qmd"
+  output-dir: "../docs"
+
+website:
+  title: "PSYCH 490 • Fall 2023"
+  comments: 
+    hypothesis:
+      theme: clean
+  navbar:
+    left:
+      - href: index.qmd
+        text: home
+      - href: about.qmd
+        text: about
+      - href: schedule.qmd
+        text: schedule
+      - href: evaluation.qmd
+        text: evaluation
+      - href: deadlines.qmd
+        text: deadlines
+      - href: policies.qmd
+        text: policies
+      - text: exercises
+        menu: 
+          - href: "exercises/ex01-read-a-scientific-paper.qmd"
+          - href: "exercises/ex02-textbook-findings.qmd"
+          - href: "exercises/ex03-norms-counternorms.qmd"
+          - href: "exercises/ex04-scientific-integrity.qmd"
+          - href: "exercises/ex05-p-hacking.qmd"
+          - href: "exercises/ex06-apes.qmd"
+          - href: "exercises/ex07-replication.qmd"
+          - href: "exercises/ex08-sharing.qmd"
+          - href: "exercises/final-project.qmd"
+format:
+  html:
+    theme: yeti
+    css: include/css/styles.css
+    toc: true
+    number-sections: false
+    citations-hover: true
+    footnotes-hover: true
+    date-modified: last-modified
+    bibliography: [include/bib/packages.bib, include/bib/psu-repro.bib]
+    csl: include/bib/apa.csl
+
+editor: source
+    

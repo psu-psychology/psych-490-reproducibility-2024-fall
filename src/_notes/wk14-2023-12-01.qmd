@@ -1,0 +1,32 @@
+---
+title: "Our open science future"
+subtitle: "2023-12-08"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-12-08 Fri"
+---
+
+# Overview
+
+## 
+
+## Announcement
+
+- Choice(s) for Monday:
+  - Final project work day
+  - Discuss [@Protzko2023-ci]
+  - Gilmore presentation on open science
+
+## Today
+
+- Joshua Martino, "The Purpose and Effectiveness of The Office of Research Integrity"
+- Yinghe Liu, "Practice on reproducing electrodermal activity"
+
+# Next time
+
+# Resources
+
+## References

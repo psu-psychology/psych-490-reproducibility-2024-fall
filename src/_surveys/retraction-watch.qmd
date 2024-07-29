@@ -1,0 +1,143 @@
+---
+title: "Retraction Watch"
+params: 
+  cache_rw: FALSE
+  use_cached: TRUE
+---
+
+## Purpose
+
+This document downloads and summarizes some of the data from the newly public Retraction Watch database.
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+```
+
+
+## Gather
+
+This site: <https://www.crossref.org/blog/news-crossref-and-retraction-watch/> describes some information about how to access the Retraction Watch database.
+
+```{r}
+if (params$use_cached == FALSE) {
+  url <- "https://api.labs.crossref.org/data/retractionwatch?rog1@psu.edu"
+  rw <- readr::read_csv(url)
+  
+  if (params$cache_rw) readr::write_csv(rw, "csv/retraction-watch.csv")
+} else {
+  rw <- readr::read_csv("csv/retraction-watch.csv", show_col_types = FALSE)
+}
+
+str(rw)
+```
+
+## Clean
+
+```{r}
+rw_l <- rw |>
+  separate_longer_delim(Subject, delim=";") |>
+  mutate(field_type = stringr::str_extract(Subject, "\\([A-Z/]+\\)")) |>
+  mutate(field_type = stringr::str_remove(field_type, "\\(")) |>
+  mutate(field_type = stringr::str_remove(field_type, "\\)")) |>
+  mutate(retraction_year = stringr::str_extract(RetractionDate, "[0-9]{4}")) |>
+  mutate(field = stringr::str_remove(Subject, "^\\([A-Z/]+\\) "))
+```
+
+## Visualize
+
+```{r}
+xtabs(~ field_type, rw_l)
+```
+
+```{r}
+rw_l_2000 <- rw_l |>
+  filter(as.numeric(retraction_year) > 2000)
+xtabs(~ field_type + retraction_year, rw_l_2000)
+```
+
+```{r}
+rw_l_2000 |>
+  group_by(retraction_year, field_type) |>
+  mutate(n_retractions = n()) |>
+  ggplot() +
+  aes(retraction_year, n_retractions) +
+  facet_wrap(facets = vars(field_type), ncol = 3) +
+  geom_point() +
+  theme(axis.text.x = element_text(angle=90), axis.title.x = element_blank())  
+```
+
+```{r}
+rw_l_2000 |>
+  filter(field_type == "B/T") |>
+  group_by(retraction_year, field) |>
+  mutate(n_retractions = n()) |>
+  ggplot() +
+  aes(retraction_year, n_retractions) +
+  facet_wrap(facets = vars(field), ncol = 3) +
+  geom_point() +
+  theme(axis.text.x = element_text(angle=90), axis.title.x = element_blank())  
+```
+
+```{r}
+plot_by_subfield <- function(ft = "B/T", df = rw_l) {
+  df |>
+  filter(!is.na(field_type)) |>
+  filter(field_type == {{ft}}) |>
+  group_by(retraction_year, field) |>
+  mutate(n_retractions = n()) |>
+  ggplot() +
+  aes(retraction_year, n_retractions) +
+  facet_wrap(facets = vars(field), ncol = 3) +
+  geom_point() +
+  theme(axis.text.x = element_text(angle=90), axis.title.x = element_blank()) +
+  ggtitle("Retractions 2000-present")
+} 
+```
+
+```{r}
+plot_by_subfield("B/T")
+
+plot_by_subfield("SOC")
+
+plot_by_subfield("BLS")
+
+plot_by_subfield("PHY")
+
+plot_by_subfield("HSC")
+
+plot_by_subfield("HUM")
+
+plot_by_subfield("ENV")
+```
+
+### Reasons
+
+```{r}
+rw_r <- rw |>
+  separate_longer_delim(Reason, delim=";") |>
+  mutate(reason = stringr::str_remove(Reason, "\\+")) |>
+  separate_longer_delim(Subject, delim=";") |>
+  mutate(field_type = stringr::str_extract(Subject, "\\([A-Z/]+\\)")) |>
+  mutate(field_type = stringr::str_remove(field_type, "\\(")) |>
+  mutate(field_type = stringr::str_remove(field_type, "\\)"))
+
+reasons_sum <- rw_r |>
+  filter(!is.na(field_type)) |>
+  group_by(field_type, reason) |>
+  summarize(n = n()) |>
+  arrange(desc(n))
+```
+
+Top retraction reasons by `field_type`. 
+
+```{r}
+#| label: tbl-top-retraction-reasons
+#| tbl-cap: "Top retraction reasons by `field_type`."
+
+reasons_sum |>
+  knitr::kable(format = "html") |>
+  kableExtra::kable_classic()
+```
+

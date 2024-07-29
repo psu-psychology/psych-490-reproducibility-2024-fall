@@ -1,0 +1,29 @@
+---
+title: "Work session"
+subtitle: "2023-10-13 Fri"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-10-13 Fri"
+---
+
+# Overview
+
+## Announcements
+
+## Today
+
+# Topic
+
+# Next time
+
+- [Due]{.orange_due}
+    - [Final project](exercises/final-project.qmd) proposal
+- [Assignment]{.green_assigned}
+    - [Exercise 05: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex05-apes.qmd)
+
+# Resources
+
+## References

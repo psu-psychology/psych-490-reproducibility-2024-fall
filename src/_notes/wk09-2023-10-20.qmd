@@ -1,0 +1,44 @@
+---
+title: "Work session"
+subtitle: "2023-10-20 Fri"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-10-20 Fri"
+---
+
+# Overview
+
+## Announcements
+
+## In the news 
+
+- <https://www.nytimes.com/interactive/2023/10/16/us/census-race-ethnicity.html>
+
+## Today
+
+*Work session*
+
+- Watch & discuss
+    - [@Cuddy2012-zx](https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are)
+- [Discuss draft]{.orange_due}
+    - [Exercise 05: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex05-apes.qmd) write-up
+- [Assignment]{.green_assigned}
+    - [Exercise 06: Replication](exercises/ex06-replication.qmd)
+
+# Next time
+
+*Solutions*
+
+- [Final due]{.orange_due}
+    - [Exercise 05: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex05-apes.qmd) write-up
+- Discuss
+    - [@munafo_manifesto_2017]
+    - [@Begley2013-vm]
+- [Class notes](wk10-2023-10-23.qmd)
+
+# Resources
+
+## References

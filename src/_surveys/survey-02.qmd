@@ -1,0 +1,246 @@
+---
+title: "Survey 02"
+params:
+  update_data: TRUE
+---
+
+## Purpose {-}
+
+This page documents the data processing steps involved with Survey 02 in PSYCH 490.009.
+
+The survey questions were adapted from those discussed in [@Kardash2012-kq].
+
+## Survey {-}
+
+Link: <https://forms.gle/nXmghuctPGUmV1AU7>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJhA9Qla7qjDehr43q0HwlMhHiQ-DKGerOQ4b8Jywvev5faw/viewform?embedded=true" width="640" height="2193" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+## Preparation {-}
+
+First, we load the external packages (groups of R commands) that we will be using.
+
+```{r include=FALSE}
+library('tidyverse')
+library('ggplot2')
+library('dplyr')
+library('tidyr')
+library('stringr')
+library('lubridate')
+library('GGally')
+```
+
+## Gathering {-}
+
+Next, we download the data from the Google Sheet where it is collected.
+Dr. Gilmore has stored his Google account credentials in a special environment file that can be accessed by the R command `Sys.getenv("GMAIL_SURVEY")`.
+
+```{r, message=FALSE, echo=TRUE, eval=FALSE}
+if (!dir.exists('csv')) {
+  message("Creating missing `csv/`.")
+  dir.create("csv")
+}
+
+if (params$update_data) {
+  options(gargle_oauth_email = Sys.getenv("GMAIL_SURVEY"))
+  googledrive::drive_auth()
+  
+  googledrive::drive_download(
+    "Scientific Values Survey (Responses)",
+    path = "csv/survey-02-sci-values.csv",
+    type = "csv",
+    overwrite = TRUE
+  )
+  
+  message("Data updated.")
+} else {
+  message("Using stored data.")
+}
+```
+
+The data file has been saved as a comma-separated value (CSV) format data file in a special directory called `csv/`.
+
+<!-- Note that there are five types of callouts, including note, tip, warning, caution, and important. -->
+::: {.callout-note}
+Because these data *might* contain sensitive or identifiable information, we only keep a local copy and do not share it publicly via GitHub.
+This is achieved by adding the name of the data directory to a special `.gitignore` file.
+:::
+
+## Cleaning {-}
+
+Next we load the data file and clean it.
+
+```{r, message=FALSE, echo=TRUE}
+survey_02_norms <-
+  readr::read_csv("csv/survey-02-sci-values.csv", show_col_types = FALSE)
+
+# Google Forms puts the full question in the top row of the data file.
+# We use the names() function to extract and print the original questions.
+survey_02_norms_qs <- names(survey_02_norms)
+survey_02_norms_qs
+```
+
+### Filtering out irrelevant responses {-}
+
+We should omit the first two response in the dataset.
+These were used by Dr. Gilmore used to generate a Google Sheet, and aren't real data.
+
+```{r}
+n_responses <- dim(survey_02_norms)[1]
+survey_02_norms <- survey_02_norms[3:n_responses,]
+```
+
+### Clean/shorten names
+
+For plotting and analyses, it's usually easier to shorten the questions by creating a short name that reflects the underlying idea or construct.
+We'll use the `rename()` function from the `dplyr` package for this. 
+
+```{r}
+new_names <-
+  c(
+    "timestamp",
+    "Disinterestedness_should",
+    "Organized Skepticism_should",
+    "Particularism_should",
+    "Communality_should",
+    "Organized Dogmatism_should",
+    "Self-interestedness_should",
+    "Universalism_should",
+    "Solitariness_should",
+    "Disinterestedness_actually",
+    "Organized Skepticism_actually",
+    "Particularism_actually",
+    "Communality_actually",
+    "Organized Dogmatism_actually",
+    "Self-interestedness_actually",
+    "Universalism_actually",
+    "Solitariness_actually",
+    "comments"
+  )
+
+# These data are ‘wide’, meaning that there are multiple variables for each respondent. The data will be easier to visualize and analyze if we make the data ‘longer’.
+
+# Swap out old (long) names for new (short) names
+long_names <- names(survey_02_norms)
+names(survey_02_norms) <- new_names
+
+survey_02_norms_long <- survey_02_norms |>
+  tidyr::pivot_longer(!c('timestamp', 'comments'),
+                      names_to = "norm_counternorm",
+                      values_to = "rating")
+
+# We move the '_should' and '_actually' to a separate variable called 'resp_frame'
+survey_02_norms_long <- survey_02_norms_long |>
+  dplyr::mutate(resp_frame = stringr::str_extract(norm_counternorm, "should|actually")) |>
+  dplyr::mutate(norm_counternorm = stringr::str_remove_all(norm_counternorm, "_[a-z]+"))
+
+# We should indicate whether these are norms or counternorms.
+survey_02_norms_long <- survey_02_norms_long |>
+  dplyr::mutate(type = if_else(
+    norm_counternorm %in% c(
+      "Disinterestedness",
+      "Organized Skepticism",
+      "Communality",
+      "Universalism"
+    ),
+    "norm",
+    "counternorm"
+  )) 
+```
+
+Now, let's look at the names to confirm that they all got changed.
+
+```{r}
+names(survey_02_norms_long)
+```
+
+### Data dictionary {-}
+
+We'll pause here to start building a [data dictionary](https://en.wikipedia.org/wiki/Data_dictionary), a file that explains the origin, format, and usage of our dataset.
+
+```{r}
+# Make new data frame with long and short names for reference
+survey_02_norms_data_dictionary <-
+  tibble::tibble(q_long = long_names, q_short = new_names)
+
+survey_02_norms_data_dictionary <- survey_02_norms_data_dictionary |>
+  dplyr::mutate(norm_type = if_else(
+    stringr::str_detect(
+      q_short,
+      "Disinterestedness|Skepticism|Communality|Universalism"),
+      "norm",
+      "counternorm"
+  )) |>
+  dplyr::mutate(resp_frame = if_else(
+    stringr::str_detect(
+      q_short,
+      "should"),
+      "should_do",
+      "actually_do"
+  ))
+
+# The `norm_type` and `resp_frame` variables have no meaning for the timestamp or comments.
+survey_02_norms_data_dictionary$norm_type[1] <- NA
+survey_02_norms_data_dictionary$norm_type[18] <- NA
+survey_02_norms_data_dictionary$resp_frame [1] <- NA
+survey_02_norms_data_dictionary$resp_frame [18] <- NA
+```
+
+We'll add other items to the data dictionary later.
+
+## Visualizations {-}
+
+```{r fig-survey-02-timeseries, fig.cap="Time series of responses to Survey 02"}
+n_responses <- dim(survey_02_norms)[1] # number of rows in original
+
+if (n_responses < 1) {
+  message("Insufficient responses to plot.")
+} else {
+  survey_02_norms |>
+    dplyr::mutate(resp_index = 1:n_responses) |>
+    ggplot() +
+    aes(x = timestamp, resp_index) +
+    geom_point() +
+    theme(axis.text.x = element_text(angle=90), axis.title.x = element_blank())
+}
+```
+
+![Survey 02 response options](../include/img/survey-02-resp-options.png)
+
+```{r fig-norms-counternorms}
+survey_02_norms_long |>
+  ggplot() +
+  aes(rating, color = type, fill = type) +
+  geom_dotplot(dotsize = .4) +
+  xlim(1, 5) +
+  theme(axis.title.y = element_blank()) +
+  theme(axis.text.y = element_blank()) +
+  theme(axis.ticks = element_blank()) +
+  facet_grid(rows = vars(norm_counternorm), cols = vars(resp_frame)) +
+  theme(legend.position = "bottom", legend.title = element_blank(),
+        strip.text.y = element_text(angle = 0))
+```
+```{r}
+survey_02_norms_data_dictionary |>
+  dplyr::filter(q_short != "timestamp", q_short != "comments") |>
+  dplyr::mutate(q_short = stringr::str_remove_all(q_short, "_should|_actually")) |>
+  dplyr::mutate(q_long = stringr::str_remove_all(q_long, "....[0-9]+")) |>
+  dplyr::select(q_short, q_long, norm_type) |>
+  dplyr::arrange(desc(norm_type)) |>
+  knitr::kable(format = "html") |>
+  kableExtra::kable_classic()
+```
+
+```{r fig-boxplot-norm-counternorm, fig.cap="Adherence to norms and counternorms by what scientists should do vs. actually do PSYCH 490.009 Fall 2023"}
+survey_02_norms_long |>
+  ggplot() +
+  aes(norm_counternorm, rating) +
+  geom_violin() +
+  geom_dotplot(binaxis = 'y', stackdir = 'center', dotsize = .7, aes(fill = type)) +
+  #ylab(c("not at all", "2", "3", "4", "a great deal")) +
+  facet_grid(cols = vars(resp_frame)) +
+  scale_y_continuous(labels=c("1" = "not at all", "2", "3", "4", "5" = "a great deal")) +
+  theme(axis.text.x = element_text(angle = 90), axis.title.x = element_blank(),
+        legend.title = element_blank(), legend.position = "top")
+```
+

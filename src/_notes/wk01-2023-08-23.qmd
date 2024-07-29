@@ -1,0 +1,275 @@
+---
+title: "2023-08-23 Wed"
+subtitle: "Don't Fool Yourself"
+author: "Rick Gilmore"
+format: 
+  revealjs:
+    footer: PSYCH 490.009
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+---
+
+# Overview
+
+## Announcements
+
+```{r fig-trust-in-sci-survey, fig.cap="Optional anonymous survey: <https://forms.gle/DEvDGc3boXQuMkg7A>"}
+plot(qrcode::qr_code("https://forms.gle/DEvDGc3boXQuMkg7A"))
+```
+
+<p style="text-align:center;">
+[Results so far](../survey-01.html)
+</p>
+
+## Penn State Amateur Radio Club (PSARC)
+
+<p style="text-align:center;">
+Recruiting new members.
+</p>
+
+![<https://www.psucollegian.com/culture_lifestyle/it-s-old-school-but-new-cool-penn-state-s-ham-radio-club-brings-hobbyists/article_e6442f88-49c1-11ed-a4cc-9bdbde330806.html>](https://bloximages.newyork1.vip.townnews.com/psucollegian.com/content/tncms/assets/v3/editorial/a/0f/a0f9441a-49c9-11ed-b089-5be189407960/6346126bdb6e0.image.jpg?resize=990%2C743){fig-align="center" width=60%}
+
+<p style="text-align:center;">
+Email Ruth KM4LAO at raw5930 AT psu DOT edu
+</p>
+
+## Last time...
+
+- Why should we care who trusts science & why they do or don't?
+
+:::{.incremental}
+- What does greater trust in science enable or entail?
+- What does reduced trust in science enable or entail?
+:::
+
+---
+
+## Today
+
+**Don't Fool Yourself**
+
+- Read
+    - [@Feynman1974-ld].
+    - (optional) [@sagan-1996-baloney], Chapter 12, The Fine Art of Baloney Detection. [PDF on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=151876796)
+
+# Don't Fool Yourself
+
+---
+
+{{< video hhttps://www.youtube.com/embed/66oNv_DJuPc width="800" height="600">}}
+
+[@NYU_Health_Sciences_Library2013-gp]
+
+## Richard Feynmann
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Richard_Feynman_Nobel.jpg/220px-Richard_Feynman_Nobel.jpg)
+
+:::
+
+::: {.column width="60%"}
+
+- [Nobel Prize-winning physicist](https://en.wikipedia.org/wiki/Richard_Feynman)
+- Member of Rogers Commission that determined why the [Challenger Space Shuttle blew up](https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster)
+
+:::
+
+::::
+
+---
+
+## Feynmann on "Cargo Cult" science
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Richard Feynmann
+
+![](https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Richard_Feynman_Nobel.jpg/220px-Richard_Feynman_Nobel.jpg)
+
+:::
+
+::: {.column width="60%"}
+
+>In the South Seas there is a Cargo Cult of people. During the war they saw airplanes land with lots of good materials, and they want the same thing to happen now...
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+:::
+
+::::
+
+---
+
+>...So they’ve arranged to make things like runways, to put fires along the sides of the runways, to make a wooden hut for a man to sit in with two wooden pieces on his head like headphones and bars of bamboo sticking out like antennas—he’s the controller—and they wait for the airplanes to land...
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+---
+
+>They’re doing everything right. The form is perfect. It looks exactly the way it looked before. But it doesn’t work. No airplanes land. So I call these things Cargo Cult Science, because they follow all the apparent precepts and forms of scientific investigation, but they’re missing something essential, because the planes don’t land...
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+## What's the point?
+
+- Why does Feynmann call this sort of behavior a "cult"
+
+---
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Richard Feynmann
+
+![](https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Richard_Feynman_Nobel.jpg/220px-Richard_Feynman_Nobel.jpg)
+
+:::
+
+::: {.column width="60%"}
+
+>...the idea that we all hope you have learned in studying science in school...It’s a kind of scientific integrity, a **principle of scientific thought that corresponds to a kind of utter honesty**... 
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+:::
+
+::::
+
+---
+
+## Have you learned about this principle by studying science in school? How?
+
+---
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Richard Feynmann
+
+![](https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Richard_Feynman_Nobel.jpg/220px-Richard_Feynman_Nobel.jpg)
+
+:::
+
+::: {.column width="60%"}
+
+> The first principle is that **you must not fool yourself—and you are the easiest person to fool**. So you have to be very careful about that. After you’ve not fooled yourself, it’s easy not to fool other scientists...
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+:::
+
+::::
+
+---
+
+> ...a specific, extra type of integrity that is not lying, but **bending over backwards to show how you’re maybe wrong**, that you ought to do when acting as a scientist. And this is our responsibility as scientists, certainly to other scientists, and I think to laymen. 
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+---
+
+> ...If you’ve made up your mind to test a theory, or you want to explain some idea, you should **always decide to publish it whichever way it comes out**. If we only publish results of a certain kind, we can make the argument look good. We must publish both kinds of result. 
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+---
+
+> ...if you’re doing an experiment, you should **report everything that you think might make it invalid--not only what you think is right about it**: other causes that could possibly explain your results; and things you thought of that you’ve eliminated by some other experiment...
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+---
+
+>Other kinds of errors are more characteristic of poor science. When I was at Cornell. I often talked to the people in the psychology department. One of the students told me she wanted to do an experiment that went something like this—I don’t remember it in detail, but it had been found by others that under certain circumstances, X, rats did something, A...
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+---
+
+>...She was curious as to whether, if she changed the circumstances to Y, they would still do, A. So her proposal was to do the experiment under circumstances Y and see if they still did A. I explained to her that it was necessary first to repeat in her laboratory the experiment of the other person—to do it under condition X to see if she could also get result A...
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+---
+
+>...and then change to Y and see if A changed. Then she would know that the real difference was the thing she thought she had under control. She was very delighted with this new idea, and went to her professor. And his reply was, no, you cannot do that, because the experiment has already been done and you would be wasting time...
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+---
+
+>...This was in about 1935 or so, and it seems to have been the general policy then to not try to repeat psychological experiments, but only to change the conditions and see what happens.
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+## Do psychologists routinely repeat psychological experiments *today*?
+
+- Why or why not?
+
+---
+
+>…So I have just one wish for you—the good luck to be somewhere where you are free to maintain the kind of integrity I have described, and where you do not feel forced by a need to maintain your position in the organization...or financial support, or so on, to lose your integrity. May you have that freedom.
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+---
+
+### Questions about Feynmann's speech
+
+- What pressures can act on scientists to push them away from Feynmann's ideas about 'integrity'?
+- Do you agree or disagree with Feynman’s characterizations of poor science? Why or why not?
+- Are Feynman’s ‘rules’ or principles about science taught explicitly? Where and how?
+If not, why not?
+
+---
+
+- Do you agree or disagree that these rules are essential for scientific integrity?
+- Why does Feynman suggest that you, the scientist or student, are the easiest one to fool?
+- How do Feynmann's ideas relate to the earlier video [@NYU_Health_Sciences_Library2013-gp]?
+- How do Feynmann's ideas relate to our [discussion on Monday](wk01-2023-08-23.qmd) about trust in science?
+
+# Next time
+
+**How to read a scientific paper**
+
+- Read
+    - [@Ruben2016-om].
+    - [@Carey2020-ut] (for fun).
+- [Assignment]{.green_assigned}
+    - [Exercise 01: Reading a scientific paper](../ex01-read-a-scientific-paper.html)
+
+# Resources
+
+## References
+

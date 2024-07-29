@@ -1,0 +1,71 @@
+---
+title: "2023-08-25 Fri"
+subtitle: "How to read a scientific paper"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+---
+
+# Overview
+
+## Announcements
+
+```{r fig-trust-in-sci-survey, fig.cap="Optional anonymous survey: <https://forms.gle/DEvDGc3boXQuMkg7A>"}
+plot(qrcode::qr_code("https://forms.gle/DEvDGc3boXQuMkg7A"))
+```
+
+<p style="text-align:center;">
+[Results so far](../survey-01.html)
+</p>
+
+## Today
+
+- Brief discussion of Survey 01
+
+*How to read a scientific paper*
+
+- Read
+    - [@Carey2020-ut]
+    - [@Ruben2016-om] (for fun)
+- [Assignment]{.green_assigned}
+    - [Exercise 01: Reading a scientific paper](../ex01-read-a-scientific-paper.html)
+    
+# Survey 01
+
+## Aims
+
+- Replicate data from [@Krumrei-Mancuso2016-qm; @Nadelson2014-ym; @Plohl2023-yf]
+- Create open, transparent, reproducible work flow for cleaning and visualizing these data
+- Provoke thought about the relationship between the questions and the constructs
+- Learn more about your views on these topics
+- Demonstrate a possible [final project](final-project.qmd) topic
+- [Survey 01 link](https://forms.gle/WW7aDAMb99zy9tzv5)
+
+---
+
+[Survey 01 results](../survey-01.html)
+
+# How to read a scientific paper
+
+## Gilmore's "inside-out" suggestions
+
+- Abstract
+- Then methods
+- Then results, especially figures
+- Highlight/look up jargon
+- Conclusion, then introduction
+
+# Next time
+
+*How science works (or should)*
+
+- Read
+    - [@Ritchie2020-fm], Chapter 1. [Alternate link to PDF on Canvas](https://psu.instructure.com/files/144654645/download?download_frd=1).
+    - [@Nosek2012-al]. [Alternate link to PDF on Canvas](https://psu.instructure.com/files/144654434/download?download_frd=1)
+- [Class notes](notes/wk01-2023-08-23.qmd)
+
+# Resources
+
+## References

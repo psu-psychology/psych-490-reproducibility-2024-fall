@@ -1,0 +1,183 @@
+---
+title: "Data sharing"
+subtitle: "2023-11-08 Wed"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-11-08 Wed"
+---
+
+# In the news...
+
+## [@Massey2023-ts]
+
+Massey, W. (2023, 6. November). Penn State denied students access to campus crime data. A student wants a federal investigation. *Centre Daily Times*. <https://www.centredaily.com/news/local/education/penn-state/article281487803.html>
+
+---
+
+![Wikipedia: <https://en.wikipedia.org/wiki/Data_sharing>](https://upload.wikimedia.org/wikipedia/commons/6/65/To_deposit_or_not_to_deposit%2C_that_is_the_question_-_journal.pbio.1001779.g001.png)
+## Today
+
+*Data sharing*
+
+- Read
+    - [@Houtkoop2018-tl]
+    - [@Tenopir2020-mq]
+    - (Optional) [@GilmoreAdolph2017]
+    - (Optional) [@Meyer2018-vk]
+    
+# Barriers to data sharing
+
+---
+
+Houtkoop, B. L., Chambers, C., Macleod, M., Bishop, D. V. M., Nichols, T. E. & Wagenmakers, E.-J. (2018). Data sharing in psychology: A survey on barriers and preconditions. *Advances in Methods and Practices in Psychological Science*, *1*(1), 70–85. <https://doi.org/10.1177/2515245917751886>
+
+---
+
+```{r, fig.cap="Figure 1 from [@Houtkoop2018-tl]."}
+knitr::include_graphics("../include/img/houktoop-2018-fig-01.png")
+```
+
+---
+
+![Figure 2 from [@Houtkoop2018-tl]](../include/img/houtkoop-2018-fig-02.png)
+
+---
+
+![Figure 3 from [@Houtkoop2018-tl]](../include/img/houtkoop-2018-fig.03.png)
+
+---
+
+![Figure 4 from [@Houtkoop2018-tl]](../include/img/houtkoop-2018-fig-04.png)
+
+## Conclusions
+
+>•	Public data sharing is not a common practice among research psychologists.
+>
+>•	Respondents considered data sharing to be both desirable and profitable for their particular research fields, but somewhat less desirable and profitable in the case of their own current research projects.
+
+---
+
+>•	The non-fear-related barriers to data sharing most frequently reported by respondents were that (a) sharing is not a common practice in their field, (b) they prefer to share their data only upon request, (c) they consider preparing data for sharing to be excessively time-consuming, and (d) they have never learned to share data online.
+
+---
+
+>•	Respondents believed that the largest fear-related obstacles preventing other researchers from sharing their data are the fear that alternative analyses might expose invalid conclusions and the fear of loss of control.
+
+---
+
+>•	Respondents reported that their greatest fears about sharing their own data are that the data might be misinterpreted and they might be scooped.
+>
+>•	In general, respondents felt that fear-related barriers affected other researchers more strongly than themselves.
+
+---
+
+>
+>•	Mandatory data sharing (enforced by institutions, journals, or funders) and financial encouragement (i.e., increased grant amounts) are measures that would apparently be highly effective in increasing researchers’ willingness to share their data.
+
+<p style="text-align:center;">
+[@Houtkoop2018-tl]
+</p>
+
+## Transparency & reproducibility notes
+
+- Study preregistered
+- Data shared
+
+## Your turn
+
+::: {.callout-note title="Your turn"}
+
+- How would you characterize the "climate" around data sharing within the psychology community sampled by [@Houtkoop2018-tl]
+- Do the "fear-related barriers" make sense to you? Why or why not?
+- How might these be addressed or overcome?
+- Are mandates the best or only solution?
+
+:::
+
+# Data sharing at Penn State
+
+---
+
+Gilmore, R. O., Hillary, F., Lazar, N. & Wham, B. (2023). Penn State Open Science Survey. Retrieved August 1, 2023, from <https://penn-state-open-science.github.io/survey-fall-2022/>
+
+## Penn State researchers
+
+- Survey of faculty, staff, students and administrators ($n=100$) in late 2022, early 2023
+- GitHub repo: <https://github.com/penn-state-open-science/survey-fall-2022>
+- HTML protocol (IRB & data analysis): [@Gilmore_undated-gj]
+
+## Sharing with collaborators
+
+![Figure 22.10 from [@Gilmore_undated-gj]](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-import-share-collab-1.png)
+
+## [Barriers to sharing](https://penn-state-open-science.github.io/survey-fall-2022/data-visualization.html#barriers-to-sharing-with-research-collaborators) {background-iframe="https://penn-state-open-science.github.io/survey-fall-2022/data-visualization.html#barriers-to-sharing-with-research-collaborators"}
+
+## Where store data
+
+![Figure 22.9 from [@Gilmore_undated-gj]](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-data-storage-places-1.png)
+
+---
+
+## Where shared
+
+![Figure 22.15 from [@Gilmore_undated-gj]](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-where-data-shared-1.png)
+
+## Importance of sharing
+
+![Figure 22.11 from [@Gilmore_undated-gj]](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-import-share-community-1.png)
+
+## Obstacles to sharing
+
+![Figure 22.12 from [@Gilmore_undated-gj]](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-obstacles-to-sharing-w-comm-1.png)
+
+## Where data are shared
+
+![Figure 22.15 from [@Gilmore_undated-gj]](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-where-data-shared-1.png)
+
+## Your turn
+
+::: {.callout-note title="Your turn"}
+
+- How would you characterize the "climate" around data sharing at Penn State?
+- What advice would you give faculty, staff, and students interested in fostering open science here?
+
+:::
+
+# A global perspective
+
+---
+
+Tenopir, C., Rice, N. M., Allard, S., Baird, L., Borycz, J., Christian, L., Grant, B., Olendorf, R. & Sandusky, R. J. (2020). Data sharing, management, use, and reuse: Practices and perceptions of scientists worldwide. *PloS One*, *15*(3), e0229003. <https://doi.org/10.1371/journal.pone.0229003>.
+
+## Fields
+
+![Table 1 from [@Tenopir2020-mq]](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229003.t001&type=large)
+
+## Where data are stored
+
+![Table 2 from [@Tenopir2020-mq]](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229003.t002&type=large)
+
+## Practices, perceptions, & barriers
+
+![Table 7 from [@Tenopir2020-mq]](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229003.t007&type=large)
+
+---
+
+![Table 8 from [@Tenopir2020-mq]](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229003.t008&type=large)
+
+# Next time
+
+*Work session: Data sharing*
+
+- Wrap-up on data sharing
+- [Assignment distributed]{.green_assigned}
+    - [Exercise 07: Data and materials sharing](exercises/ex07-sharing.qmd)
+- [Final project survey]{.green_assigned}
+    - Please complete the [final project survey](https://forms.gle/L92wWFSpcdyLT4MR9).
+
+# Resources
+
+## References

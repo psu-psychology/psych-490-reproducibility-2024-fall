@@ -1,0 +1,205 @@
+---
+title: "Retraction and scientific integrity"
+subtitle: "2023-10-02 Mon"
+author: "Rick Gilmore"
+format: revealjs
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+footer: "[PSYCH 490.009](../index.html): 2023-10-02 Mon"
+---
+
+# Overview
+
+## Announcements
+
+- [Due Friday]{.orange_due}
+    - [Exercise 04: P-hack your way to scientific glory](../exercises/ex04-p-hacking.qmd) write-up.
+- Discuss Friday [Exercise 04: P-hack your way to scientific glory](../exercises/ex04-p-hacking.qmd).
+
+## In the news {.scrollable}
+
+![Retraction Watch 2023-10-02](../include/img/retraction-watch-2023-10-02-v2.png){fig-align="center" height="50%"}
+
+## Today
+
+*Retraction and scientific integrity*
+
+- Read & Discuss
+    - [@Brainerd2018-iy]
+
+---
+
+Brainerd, J. & You, J. (2018, 25. October). What a massive database of retracted papers reveals about science publishing’s “death penalty.” *Science*. <https://doi.org/10.1126/science.aav8384>
+
+## [@Brainerd2018-iy](https://doi.org/10.1126/science.aav8384)
+
+- Study [methodology](https://www.science.org/content/article/about-these-data?adobe_mc=MCMID%3D47656180226673402683555563101738189823%7CMCORGID%3D242B6472541199F70A4C98A6%2540AdobeOrg%7CTS%3D1676298737&_ga=2.2514611.247686987.1676298736-1493408718.1676298736).
+
+```{r, fig.cap="[@Brainerd2018-iy](https://doi.org/10.1126/science.aav8384)", out.width="80%"}
+knitr::include_graphics("../include/img/brainerd-2018-fig.png")
+```
+
+---
+
+> Then, in 2009, the Committee on Publication Ethics (COPE), a nonprofit group in Eastleigh, U.K., that now advises more than 12,000 journal editors and publishers, released [a model policy](https://publicationethics.org/files/retraction%20guidelines_0.pdf) for how journals should handle retractions.
+
+<p style="text-align:center;">
+[@Brainerd2018-iy]
+</p>
+
+---
+
+- Link to policy is broken
+- In searching on COPE page, I found this: <https://publicationethics.org/retraction-guidelines> and a DOI to this <https://doi.org/10.24318/cope.2019.1.4>
+
+---
+
+```{r, fig.cap="[@Brainerd2018-iy](https://doi.org/10.1126/science.aav8384)", out.width="80%"}
+knitr::include_graphics("../include/img/brainerd-2018-fig-b.png")
+```
+
+---
+
+```{r, fig.cap="[@Brainerd2018-iy](https://doi.org/10.1126/science.aav8384)", out.width="80%"}
+knitr::include_graphics("../include/img/brainerd-2018-fig-c.png")
+```
+
+---
+
+```{r, fig.cap="[@Brainerd2018-iy](https://doi.org/10.1126/science.aav8384)", out.width="80%"}
+knitr::include_graphics("../include/img/brainerd-2018-fig-d.png")
+```
+
+---
+
+```{r, fig.cap="[@Brainerd2018-iy](https://doi.org/10.1126/science.aav8384)", out.width="80%"}
+knitr::include_graphics("../include/img/brainerd-2018-fig-e.png")
+```
+
+---
+
+>Behaviors widely understood within science to be dishonest and unethical, but which fall outside the U.S. misconduct definition, seem to account for another 10%. Those behaviors include forged authorship, fake peer reviews, and failure to obtain approval from institutional review boards for research on human subjects or animals. 
+
+<p style="text-align:center;">
+[@Brainerd2018-iy]
+</p>
+
+---
+
+>(Such retractions have increased as a share of all retractions, and some experts argue the United States should expand its definition of scientific misconduct to cover those behaviors.)
+
+<p style="text-align:center;">
+[@Brainerd2018-iy]
+</p>
+
+---
+
+:::  {.callout-note}
+
+PubPeer <https://pubpeer.com/static/faq> might make an interesting subject for a final project.
+
+:::
+
+# Discussion of [Retraction Watch](https://retractionwatch.com/)
+
+## Retraction Watch
+
+- Database of paper retractions
+- Public data restricted until recently
+    - See <https://www.crossref.org/blog/news-crossref-and-retraction-watch/>
+
+## Journal hijacking
+
+- Journals can get hijacked! <https://retractionwatch.com/the-retraction-watch-hijacked-journal-checker/>
+
+<https://docs.google.com/spreadsheets/d/1ak985WGOgGbJRJbZFanoktAN_UFeExpE/edit#gid=5255084>
+
+---
+
+```{r, echo=TRUE}
+library(googledrive)
+googledrive::drive_download(
+    as_id("https://docs.google.com/spreadsheets/d/1ak985WGOgGbJRJbZFanoktAN_UFeExpE/edit#gid=5255084"),
+    path = "../surveys/xlsx/rw-hijacked-journals.xlsx",
+    overwrite = TRUE
+  )
+hijacked <- readxl::read_xlsx("../surveys/xlsx/rw-hijacked-journals.xlsx")
+```
+
+There are $n=$ `r dim(hijacked)[1]` journals that have been hijacked!
+
+## Citation counts can be misleading
+
+- Retracted papers can garner large numbers of citations
+
+<https://retractionwatch.com/the-retraction-watch-leaderboard/top-10-most-highly-cited-retracted-papers/>
+
+## Exploring the database
+
+- [Here](../surveys/retraction-watch.qmd) are the beginnings of an attempt to visualize the dataset
+
+---
+
+::: {.callout-note}
+
+Expanding on this data analysis and visualization could be a final project.
+
+You could be (PSYCH 490) famous!
+
+:::
+
+---
+
+::: {.callout-note}
+
+Students could consider updating the story of a retracted paper as a final project. For example, what happened to the author(s)?
+
+This would involve extending and elaborating on [Exercise 03](../exercises/ex04-p-hacking.qmd)
+
+:::
+
+## Discussion of Office of Research Integrity (ORI) <https://ori.hhs.gov/> {.scrollable}
+
+- Grant at Penn State:
+
+>Project Title: Education and Assessment to Improve Research Misconduct Proceedings
+>
+>Grantee: The Pennsylvania State University - University Park
+>
+>Principal Investigator: Courtney Karmelita, BS, M.Ed., D.Ed. 
+>
+>Institution (PI): The Pennsylvania State University - University Park
+>
+>Co-Principal Investigator: Bridget Carruthers, Ph.D., RBP 
+>
+>Institution (Co-PI): The Ohio State University
+>
+>Abstract:
+>
+>The focus area of this proposal is “Handling allegations of research misconduct under 42 C.F.R. Part 93”. the proposed research will address the need for education and resource development for individuals assisting with the handling of research misconduct allegations at the inquiry or investigation phases. To date, there has been no published research on this topic as most Responsible Conduct of Research (RCR) training emphasizes the prevention of research misconduct rather than the policy and processes that govern the handling of research misconduct allegations. The study team will conduct a needs assessment through benchmarking with other institutions to identify and prioritize the creation of educational materials and trainings. The study team will then use the needs assessment to create online modules to provide foundational knowledge of research misconduct processes, definitions, and procedures for inquiry officials and investigation committee members. The study team will then implement the newly created resources and seek feedback from the appropriate stakeholders. In addition, the study team will explore to what extent, if any, standing committees develop a deeper understanding of the research misconduct process. This will help to inform which, if either, committee type is more efficacious. Research on standing versus ad hoc committees is also lacking in the literature. This proposed research has the potential to positively impact the research integrity community at large with much needed tools, resources, training and research on the management of research misconduct allegations.
+>
+> <https://ori.hhs.gov/blog/ori-awards-three-research-integrity-grants>
+
+---
+
+::: {.callout-note}
+
+A final project could involve a description and update about this Penn State project.
+
+:::
+
+# Next time
+
+*Questionable research practices*
+
+- Read
+    - [@simmons_false-positive_2011]
+    - (Skim) [@John2012-tk]
+- Watch
+    - [@Ngiam2020-ln]
+- [Class notes](wk07-2023-10-04.qmd)
+
+# Resources
+
+## References
