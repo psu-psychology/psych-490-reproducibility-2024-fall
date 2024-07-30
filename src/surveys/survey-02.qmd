@@ -1,20 +1,23 @@
 ---
 title: "Survey 02"
+subtitle: "Scientific norms and counternorms"
 params:
   update_data: TRUE
+  fn: "survey-02-sci-values-2024-fall.csv"
+  make_plots: FALSE
 ---
 
 ## Purpose {-}
 
-This page documents the data processing steps involved with Survey 02 in PSYCH 490.009.
+This page documents the data processing steps involved with Survey 02 in PSYCH 490.012.
 
 The survey questions were adapted from those discussed in [@Kardash2012-kq].
 
 ## Survey {-}
 
-Link: <https://forms.gle/nXmghuctPGUmV1AU7>
+Link: <https://forms.gle/ZuVcUXu6z3uWLb3f9>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJhA9Qla7qjDehr43q0HwlMhHiQ-DKGerOQ4b8Jywvev5faw/viewform?embedded=true" width="640" height="2193" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc6Al9qWb7BVslRjIpOrz9uytNAcyqjkKg47gXwZ2yyVthqPg/viewform?embedded=true" width="640" height="2217" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 ## Preparation {-}
 
@@ -35,7 +38,13 @@ library('GGally')
 Next, we download the data from the Google Sheet where it is collected.
 Dr. Gilmore has stored his Google account credentials in a special environment file that can be accessed by the R command `Sys.getenv("GMAIL_SURVEY")`.
 
-```{r, message=FALSE, echo=TRUE, eval=FALSE}
+::: {.callout-tip}
+
+It's vital to be *very* careful when creating and sharing code like this that involves sensitive information like login credentials.
+
+:::
+
+```{r, message=FALSE, echo=TRUE, eval=params$update_data}
 if (!dir.exists('csv')) {
   message("Creating missing `csv/`.")
   dir.create("csv")
@@ -46,8 +55,8 @@ if (params$update_data) {
   googledrive::drive_auth()
   
   googledrive::drive_download(
-    "Scientific Values Survey (Responses)",
-    path = "csv/survey-02-sci-values.csv",
+    "PSYCH 490.012: Survey 02: Scientific Values Survey (Responses)",
+    path = file.path("csv", params$fn),
     type = "csv",
     overwrite = TRUE
   )
@@ -72,7 +81,7 @@ Next we load the data file and clean it.
 
 ```{r, message=FALSE, echo=TRUE}
 survey_02_norms <-
-  readr::read_csv("csv/survey-02-sci-values.csv", show_col_types = FALSE)
+  readr::read_csv(file.path("csv", params$fn), show_col_types = FALSE)
 
 # Google Forms puts the full question in the top row of the data file.
 # We use the names() function to extract and print the original questions.
@@ -80,15 +89,6 @@ survey_02_norms_qs <- names(survey_02_norms)
 survey_02_norms_qs
 ```
 
-### Filtering out irrelevant responses {-}
-
-We should omit the first two response in the dataset.
-These were used by Dr. Gilmore used to generate a Google Sheet, and aren't real data.
-
-```{r}
-n_responses <- dim(survey_02_norms)[1]
-survey_02_norms <- survey_02_norms[3:n_responses,]
-```
 
 ### Clean/shorten names
 
@@ -188,9 +188,30 @@ survey_02_norms_data_dictionary$resp_frame [18] <- NA
 
 We'll add other items to the data dictionary later.
 
+### Filtering out irrelevant responses {-}
+
+We should omit the first response in the dataset.
+That was the one Dr. Gilmore used to generate a Google Sheet, and isn't real data.
+He put "test" in the `comments` field to make it easy to detect.
+
+```{r filter-test-resp}
+survey_02_norms <- survey_02_norms |>
+  dplyr::filter(!stringr::str_detect(comments, "test"))
+
+n_responses <- dim(survey_02_norms)[1]
+
+if (n_responses > 1) {
+  survey_02_norms <- survey_02_norms[1:n_responses,]  
+  test_phase_no_print <- FALSE
+} else {
+  message("No 'non-test' responses yet. Leaving data file unchanged.")
+  test_phase_no_print <- TRUE
+}
+```
+
 ## Visualizations {-}
 
-```{r fig-survey-02-timeseries, fig.cap="Time series of responses to Survey 02"}
+```{r fig-survey-02-timeseries, fig.cap="Time series of responses to Survey 02", eval=params$make_plots}
 n_responses <- dim(survey_02_norms)[1] # number of rows in original
 
 if (n_responses < 1) {
@@ -207,7 +228,7 @@ if (n_responses < 1) {
 
 ![Survey 02 response options](../include/img/survey-02-resp-options.png)
 
-```{r fig-norms-counternorms}
+```{r fig-norms-counternorms, eval=params$make_plots}
 survey_02_norms_long |>
   ggplot() +
   aes(rating, color = type, fill = type) +
@@ -220,7 +241,8 @@ survey_02_norms_long |>
   theme(legend.position = "bottom", legend.title = element_blank(),
         strip.text.y = element_text(angle = 0))
 ```
-```{r}
+
+```{r, eval=params$make_plots}
 survey_02_norms_data_dictionary |>
   dplyr::filter(q_short != "timestamp", q_short != "comments") |>
   dplyr::mutate(q_short = stringr::str_remove_all(q_short, "_should|_actually")) |>
@@ -231,7 +253,7 @@ survey_02_norms_data_dictionary |>
   kableExtra::kable_classic()
 ```
 
-```{r fig-boxplot-norm-counternorm, fig.cap="Adherence to norms and counternorms by what scientists should do vs. actually do PSYCH 490.009 Fall 2023"}
+```{r fig-boxplot-norm-counternorm, fig.cap="Adherence to norms and counternorms by what scientists should do vs. actually do PSYCH 490.012 Fall 2024", eval=params$make_plots}
 survey_02_norms_long |>
   ggplot() +
   aes(norm_counternorm, rating) +
@@ -243,4 +265,3 @@ survey_02_norms_long |>
   theme(axis.text.x = element_text(angle = 90), axis.title.x = element_blank(),
         legend.title = element_blank(), legend.position = "top")
 ```
-

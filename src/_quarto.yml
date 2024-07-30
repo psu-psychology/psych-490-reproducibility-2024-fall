@@ -3,6 +3,7 @@ project:
   render:
     - "*.qmd"
     - "exercises/*.qmd"
+    - "surveys/*.qmd"
   output-dir: "../docs"
 
 website:
@@ -35,9 +36,13 @@ website:
           - href: "exercises/ex07-replication.qmd"
           - href: "exercises/ex08-sharing.qmd"
           - href: "exercises/final-project.qmd"
+      - text: surveys
+        menu:
+          - href: "surveys/survey-01.qmd"
+          - href: "surveys/survey-02.qmd"
 format:
   html:
-    theme: yeti
+    theme: default
     css: include/css/styles.css
     toc: true
     number-sections: false

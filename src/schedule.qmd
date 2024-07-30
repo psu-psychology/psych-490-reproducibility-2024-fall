@@ -10,6 +10,15 @@ title: ""
 
 - Read
   - (Recommended) [@Oreskes2017, Chapter 1, pp. 55-68] | [PDF on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=152167033).
+- (Extra credit) Complete [Survey 01 on Trust in science and scientists](https://forms.gle/471gpq6XXXq9iG9C8)
+
+::: {.callout-tip}
+
+To earn 3 extra credit points for completing the survey, send the TA the date and time you completed the survey in the following format:
+
+"7/30/2024 12:20:23"
+
+:::
 
 ### Wednesday, August 28 {-}
 
@@ -125,15 +134,9 @@ title: ""
     - [@Bargh1996-yv]; [PDF on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=151876806)
     - [@Doyen2012-ib]
 
-<!-- *Work session: Replication with R, R Markdown, & Quarto* -->
-
-<!-- - Review -->
-<!--   - [Survey 01 report](surveys/survey-01.qmd) -->
-<!--   - [Survey 02 report](surveys/survey-02.qmd) -->
-
 ### Wednesday, September 25 {-}
 
-*What R we talking about?*
+*What R are we talking about?*
 
 - Read
     - [@Fidler2021-xn], especially sections 1, 2, and 3.1-3.2.
@@ -145,6 +148,8 @@ title: ""
 
 - [Assignment]{.green_assigned}
     - [Exercise 04: Violations of scientific integrity](exercises/ex04-scientific-integrity.qmd)
+- [Assignment]{.green_assigned}
+    - [Final project proposals](exercises/final-project.qmd), [due Friday, October 13]{.orange_due}.
 
 ## September 30 - October 4 {- #week-06}
 
@@ -164,7 +169,7 @@ title: ""
 
 ### Friday, October 04 {-}
 
-<!-- Rosh Hashana Day 2 -->
+*Work session: P-hacking & Final Project Proposals*
 
 *P-hacking*
 
@@ -208,7 +213,7 @@ title: ""
 *Work Session: P-hacking and Final Project Proposals*
 
 - [Due]{.orange_due}
-    - [Exercise 05: P-hack your way to scientific glory](exercises/ex04-p-hacking.qmd) write-up.
+    - [Exercise 05: P-hack your way to scientific glory](exercises/ex05-p-hacking.qmd) write-up.
 - Work session
     - [Final project proposals](exercises/final-project.qmd), [due Friday, October 18]{.orange_due}.
  
@@ -255,38 +260,32 @@ title: ""
  
 ### Wednesday, October 23 {-}
 
+*Hype, continued*
+
 - Watch & discuss
     - [@Cuddy2012-zx](https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are)
 
 ### Friday, October 25 {-}
 
-*Hype*
-
-- Read
-    - [@Ritchie2020-fm], Chapter 6
-    - [@Carney2010-gq], [file on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=155192209)
-    - (Optional) [@Ranehill2015-dj], [file on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=155192230)
-
-## October 28 - November 1 {- #week-10}
-
-### Monday, October 28 {-}
-
-*Work session: Exercise 05, Replication*
+*Work session: Alpha, Power, Effect Sizes, & Sample Size & Replication*
 
 - [Discuss draft]{.orange_due}
     - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd) write-up
 - [Assignment]{.green_assigned}
     - [Exercise 07: Replication](exercises/ex07-replication.qmd)
+- (Extra credit) Complete [Survey 03]()
 
-### Wednesday, October 30 {-}
+## October 28 - November 1 {- #week-10}
+
+### Monday, October 28 {-}
 
 *Solutions*
 
 - Read
     - [@munafo_manifesto_2017]
     - [@Begley2013-vm]
-
-### Friday, November 01 {-}
+    
+### Wednesday, October 30 {-}
 
 *Changing journal policies*
 
@@ -297,6 +296,10 @@ title: ""
 - [Final due]{.orange_due}
     - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd) write-up
 
+### Friday, November 01 {-}
+
+- [Due]{.orange_due}
+    - [Exercise 07: Replication](exercises/ex07-replication.qmd)
 
 ## November 4-8 {- #week-11}
 
@@ -317,10 +320,7 @@ title: ""
 
 ### Friday, November 08 {-}
 
-*Work Session: Replication and Final Projects*
-
-- [Due]{.orange_due}
-    - [Exercise 07: Replication](exercises/ex07-replication.qmd)
+*Work Session: Final Projects*
 
 ## November 11-15 {- #week-12}
 
@@ -348,6 +348,8 @@ title: ""
 
 ### Friday, November 15 {-}
 
+*Work Session: Final Projects*
+
 - [Final project survey]{.green_assigned}
     - Please complete the [final project survey](https://forms.gle/L92wWFSpcdyLT4MR9) by [Friday, November 15]{.orange_due}
 
@@ -363,7 +365,7 @@ title: ""
 - Explore
     - [protocols.io](https://www.protocols.io/)
     - [Journal of Visualized Experiments (JOVE)](https://www.jove.com/)
-- [Class notes](notes/wk13-2023-11-13.qmd)
+- [Class notes]()
 
 ### Wednesday, November 20 {-}
 
@@ -382,7 +384,6 @@ title: ""
 
 - [Assignment distributed]{.green_assigned}
     - [Exercise 08: Data and materials sharing](exercises/ex08-sharing.qmd)
-
 - [[Final project survey](https://forms.gle/L92wWFSpcdyLT4MR9)]{.orange_due}
 
 ## November 25-29 *Thanksgiving Break*
@@ -414,14 +415,14 @@ title: ""
 *Project presentations*
 
 - [Schedule](surveys/presentation-schedule.html#day-3-wednesday-december-6-2023)
-- [Class notes](notes/wk15-2023-12-06.qmd)
+- [Class notes]()
 
 ### Friday, December 13 {-}
 
 *Project presentations*
 
 - [Schedule](surveys/presentation-schedule.html#day-4-friday-december-8-2023)
-- [Class notes](notes/wk15-2023-12-08.qmd)
+- [Class notes]()
   
 ## December 16-20 {- #finals-week}
 
