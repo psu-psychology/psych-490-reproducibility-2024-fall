@@ -30,7 +30,7 @@ Answer the following specific questions in "Rule 3" of [@Carey2020-ut]:
 [@Carey2020-ut]
 </p>
 
-If it's an empirical paper, pay particular attention to what *evidence*, usually a pattern of data, the author(s) use to argue for a particular *finding* or *conclusion*.
+If it's an empirical paper, pay particular attention to what *evidence*, usually a pattern of data, the author(s) use to argue for a particular *claim*, *finding* or *conclusion*.
 Is there a figure that demonstrates this well?
 If so, how?
 If not, why not?

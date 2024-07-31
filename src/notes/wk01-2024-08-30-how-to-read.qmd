@@ -1,0 +1,125 @@
+---
+title: "How to read a scientific paper"
+subtitle: "2024-08-30 Fri"
+author: "Rick Gilmore"
+format: 
+  revealjs:
+    footer: "[PSYCH 490.012 • Fall 2024](../index.html)"
+    slide-number: true
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+---
+
+# Overview
+
+## Announcements
+
+```{r}
+#| label: fig-trust-in-sci-survey
+#| fig-cap: "Optional anonymous survey: <https://forms.gle/DEvDGc3boXQuMkg7A>"
+plot(qrcode::qr_code("https://forms.gle/DEvDGc3boXQuMkg7A"))
+```
+
+<p style="text-align:center;">
+[Results so far](../surveys/survey-01.qmd)
+</p>
+
+## Announcements
+
+- No class Monday: Labor Day
+
+## Last time...
+
+- What does Feynmann [-@Feynman1974-ld] say is the most important principle scientists should follow?
+  - Don't ___________ ____________!
+- Why?
+- What should scientists bend over backward to do?
+
+## Today
+
+- Brief discussion of Survey 01
+
+*How to read a scientific paper*
+
+- Read
+    - [@Carey2020-ut]
+    - [@Ruben2016-om] (for fun)
+- [Assignment]{.green_assigned}
+    - [Exercise 01: Reading a scientific paper](../ex01-read-a-scientific-paper.html)
+    
+# Survey 01
+
+## Aims
+
+- Replicate data from [@Krumrei-Mancuso2016-qm; @Nadelson2014-ym; @Plohl2023-yf]
+- Create open, transparent, reproducible work flow for cleaning and visualizing these data
+- Provoke thought about the relationship between the questions and the constructs
+- Learn more about your views on these topics
+- Demonstrate a possible [final project](../exercises/final-project.qmd) topic
+- [Survey 01 link](https://forms.gle/WW7aDAMb99zy9tzv5)
+
+---
+
+[Survey 01 results](../survey-01.html)
+
+# How to read a scientific paper
+
+## Suggestions from [@Carey2020-ut]
+
+- Pick your reading goal
+- Understand the author(s) goal
+
+## Suggestions from [@Carey2020-ut]
+
+- Ask six questions:
+  (1) What do the author(s) want to know? 
+  (2) What did they do? 
+  (3) Why was it done that way? 
+  (4) What do the results show? 
+  (5) How did the author(s) interpret the results? 
+  (6) What should be done next?
+
+## Suggestions from [@Carey2020-ut]
+
+- Unpack each figure and table
+- Understand the formatting intentions
+- Be critical
+- Be kind
+- Be ready to go the extra mile
+- Talk about it
+- Build on it
+
+## Gilmore's "inside-out" suggestions
+
+- Abstract
+- Then methods
+- Then results, especially figures
+- Highlight/look up jargon
+- Conclusion, then introduction
+
+## Other thoughts
+
+- Claims
+  - Causal or descriptive
+- Evidence for
+  - Argument/logic
+  - Statistical tests
+  - Figures or tables
+- Read more than once
+
+# Next time
+
+- Wednesday not Monday!
+
+*How science works (or should)*
+
+- Read
+    - [@Ritchie2020-fm], Chapter 1. [Alternate link to PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170709).
+    - [@Nosek2012-al]. [Alternate link to PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170711)
+- [Assignment]{.green_assigned}
+    - Complete (anonymous, extra credit) [survey](https://forms.gle/zGm5vZsPrTxwRDVR7) on scientific norms and counter-norms. **No write-up**.
+
+# Resources
+
+## References
