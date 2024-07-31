@@ -2,9 +2,9 @@
 title: "Survey 01"
 subtitle: "Trust in science and scientists"
 params:
-  update_data: TRUE
+  update_data: false
   fn: "survey-01-openness-trust-2024-fall.csv"
-  make_plots: FALSE
+  make_plots: false
 ---
 
 ## Purpose
@@ -24,13 +24,7 @@ Direct link: <https://forms.gle/kpwGFo2qpsKmNLya9>
 First, we load the external packages (groups of R commands) that we will be using.
 
 ```{r}
-library('tidyverse')
 library('ggplot2')
-library('dplyr')
-library('tidyr')
-library('stringr')
-library('lubridate')
-library('GGally')
 ```
 
 ## Gathering
@@ -38,7 +32,10 @@ library('GGally')
 Next, we download the data from the Google Sheet where it is collected.
 Dr. Gilmore has stored his Google account credentials in a special environment file that can be accessed by the R command `Sys.getenv("GMAIL_SURVEY")`.
 
-```{r, message=FALSE, echo=TRUE, eval=TRUE}
+```{r, eval=params$update_data}
+#| label: gather-data-from-google
+#| message: false
+#| echo: true
 if (!dir.exists('csv')) {
   message("Creating missing `csv/`.")
   dir.create("csv")
@@ -47,13 +44,13 @@ if (!dir.exists('csv')) {
 if (params$update_data) {
   options(gargle_oauth_email = Sys.getenv("GMAIL_SURVEY"))
   googledrive::drive_auth()
-  
+
   googledrive::drive_download(
     "PSYCH 490.012: Survey 01: Openness and Trust in Science (Responses)",
     path = file.path("csv", params$fn),
     type = "csv",
     overwrite = TRUE
-    
+
   )
   message("Data updated.")
 } else {
@@ -74,7 +71,10 @@ This is achieved by adding the name of the data directory to a special `.gitigno
 
 Next we load the data file and clean it.
 
-```{r, message=FALSE, echo=TRUE}
+```{r, eval=params$update_data}
+#| label: load-saved-data
+#| message: false
+#| echo: true
 survey_01 <-
   readr::read_csv(file.path("csv", params$fn), show_col_types = FALSE)
 
@@ -85,11 +85,12 @@ survey_01_qs
 ```
 
 For plotting and analyses, it's usually easier to shorten the questions by creating a short name that reflects the underlying idea or construct.
-We'll use the `rename()` function from the `dplyr` package for this. 
+We'll use the `rename()` function from the `dplyr` package for this.
 
 We first rename the variables from the "Openness to Revising One’s Viewpoint" [subscale](https://seaver.pepperdine.edu/social-science/content/comprehensive-intellectual-humility.pdf) from the Comprehensive Intellectual Humility Scale [@Krumrei-Mancuso2016-qm].
 
-```{r}
+```{r, eval=params$update_data}
+#| label: clean-variable-names-1
 survey_01_clean <- survey_01 |>
   dplyr::rename(
     timestamp = "Timestamp",
@@ -104,7 +105,8 @@ survey_01_clean <- survey_01 |>
 
 Now, we rename the variables from the [@Nadelson2014-ym] trust in science and scientists survey.
 
-```{r}
+```{r, eval=params$update_data}
+#| label: clean-variable-names-2
 survey_01_clean <- survey_01_clean |>
   dplyr::rename(
     ignore_contradictory_evidence = "Scientists ignore evidence that contradicts their work.",
@@ -133,7 +135,7 @@ survey_01_clean <- survey_01_clean |>
 
 Now, let's look at the names to confirm they all got changed.
 
-```{r}
+```{r, eval=params$update_data}
 names(survey_01_clean)
 ```
 
@@ -141,7 +143,8 @@ names(survey_01_clean)
 
 We'll pause here to start building a [data dictionary](https://en.wikipedia.org/wiki/Data_dictionary), a file that explains the origin, format, and usage of our dataset.
 
-```{r}
+```{r, eval=params$update_data}
+#| label: make-data-dictionary-data-frame
 survey_01_data_dictionary <-
   tibble::tibble(
     question = survey_01_qs,
@@ -163,14 +166,15 @@ We should omit the first response in the dataset.
 That was the one Dr. Gilmore used to generate a Google Sheet, and isn't real data.
 He put "test" in the `comments` field to make it easy to detect.
 
-```{r}
+```{r, eval=params$update_data}
+#| label: filter-test-responses
 survey_01_clean <- survey_01_clean |>
   dplyr::filter(!stringr::str_detect(comments, "test"))
 
 n_responses <- dim(survey_01_clean)[1]
 
 if (n_responses > 1) {
-  survey_01_clean <- survey_01_clean[1:n_responses,]  
+  survey_01_clean <- survey_01_clean[1:n_responses,]
   test_phase_no_print <- FALSE
 } else {
   message("No 'non-test' responses yet. Leaving data file unchanged.")
@@ -186,10 +190,13 @@ Remember:
 
 ![Survey 01 response options](../include/img/survey-01-resp-options.png){fig-align="center"}
 
-```{r fig-openness-dotplot, message=FALSE, fig.cap="Reponses to Openness to Revising One’s Viewpoint subscale questions from [@Krumrei-Mancuso2016-qm]", eval = params$make_plots}
+```{r, eval = params$make_plots}
+#| label: fig-openness-dotplot
+#| fig-cap: "Reponses to Openness to Revising One’s Viewpoint subscale questions from [@Krumrei-Mancuso2016-qm]"
+#| message: false
 # survey_01_clean[,2:6] |>
 #   ggpairs()
-# 
+#
 survey_01_data_dictionary[2:6,1:2] |>
   knitr::kable(format = "html") |>
   kableExtra::kable_classic()
@@ -203,7 +210,7 @@ survey_01_clean[, 1:6] |>
   theme(axis.title.y = element_blank()) +
   theme(axis.text.y = element_blank()) +
   theme(axis.ticks = element_blank()) +
-  facet_wrap(facets = vars(question), ncol = 1) 
+  facet_wrap(facets = vars(question), ncol = 1)
 ```
 
 ### Trust in science questions
@@ -213,7 +220,7 @@ survey_01_clean[, 1:6] |>
 It would be even better to create a function that generates the plot and shows the long and short question names.
 Any time I repeat myself, I should remember this acronym:
 
-**D**on't **R**epeat **Y**ourself 
+**D**on't **R**epeat **Y**ourself
 
 **W**rite **I**t **D**own
 
@@ -223,10 +230,13 @@ There are a number of these, so we break them into smaller groups for visualizat
 
 ![Survey 01 response options](../include/img/survey-01-resp-options.png){fig-align="center"}
 
-```{r fig-trust-dotplot, message=FALSE, fig.cap="Responses to trust in science questions from [@Nadelson2014-ym]", eval = params$make_plots}
+```{r, eval = params$make_plots}
+#| label: fig-trust-dotplot
+#| message: false
+#| fig-cap: "Responses to trust in science questions from [@Nadelson2014-ym]"
 # survey_01_clean[, 7:11] |>
 #   ggpairs()
-# 
+#
 survey_01_data_dictionary[7:27, 1:2] |>
   knitr::kable(format = "html") |>
   kableExtra::kable_classic()
@@ -240,23 +250,27 @@ survey_01_clean |>
   theme(axis.title.y = element_blank()) +
   theme(axis.text.y = element_blank()) +
   theme(axis.ticks = element_blank()) +
-  facet_wrap(facets = vars(question), ncol = 3) 
+  facet_wrap(facets = vars(question), ncol = 3)
 ```
 
-<!-- # ```{r fig-scatterpairs-trust-q22-27, message=FALSE, fig.cap="Responses to trust in science questions from [@Nadelson2014-ym]"} -->
-<!-- # q_range <- c(22:27) -->
-<!-- #  -->
-<!-- # survey_01_clean[, q_range] |> -->
-<!-- #   ggpairs() -->
-<!-- #  -->
-<!-- # survey_01_data_dictionary[q_range,1:2] |> -->
-<!-- #   knitr::kable(format = "html") |> -->
-<!-- #   kableExtra::kable_classic() -->
-<!-- # ``` -->
+```{r, eval=params$make_plots}
+#| label: fig-scatterpairs-trust-q22-27
+#| message: false
+#| fig-cap: "Responses to trust in science questions from [@Nadelson2014-ym]"
+# q_range <- c(22:27)
+# 
+# survey_01_clean[, q_range] |>
+#   GGally::ggpairs()
+# 
+# survey_01_data_dictionary[q_range,1:2] |>
+#   knitr::kable(format = "html") |>
+#   kableExtra::kable_classic()
+```
 
 ### Comments
 
 ```{r, eval = params$make_plots}
+#| label: table-comments
 survey_01_clean |>
   dplyr::select(comments) |>
   dplyr::filter(!is.na(comments)) |>
@@ -269,13 +283,15 @@ survey_01_clean |>
 Next, we calculate aggregate "openness" and "trust" scores to look at the relationship between these variables.
 
 ```{r, eval = params$make_plots}
+#| label: create-openness-trust-composite
 survey_01_clean <- survey_01_clean |>
   dplyr::mutate(openness_comp = sum(survey_01_clean[, 2:6]))
 ```
 
 Some of the "trust" variables are reverse-coded, so we have to address that.
 We'll start by adding a variable to our data dictionary that indicates the "sign" of the weight we should apply to that variable.
-If the sign is negative then $1\rightarrow5$, $2\rightarrow4$, $3\rightarrow3$, $4\rightarrow5$, and $5\rightarrow1$.
+
+If the sign is reversed, then we must assign 1 to 5, 2 to 4, 3 to 3, 4 to 2, and 5 to 1.
 
 ```{r, eval = params$make_plots}
 survey_01_data_dictionary <- survey_01_data_dictionary |>
@@ -306,7 +322,7 @@ recode_reverse_vars <- function(x, sign_x) {
 recode_var <- function(var_i, df_vars = survey_01_clean, df_dict = survey_01_data_dictionary) {
   vals <- unname(unlist(df_vars[, var_i]))
   wts <- unname(unlist(rep(df_dict[var_i, 4], length(vals))))
-  
+
   purrr::map2(vals, wts, recode_reverse_vars) |>
     unlist()
 }
@@ -314,8 +330,8 @@ recode_var <- function(var_i, df_vars = survey_01_clean, df_dict = survey_01_dat
 # Recode the entire dataset and create a new data frame/tibble
 recode_survey_01 <- function() {
   x <- purrr::map(1:28, recode_var)
-  var_names <- survey_01_data_dictionary[,2] |> 
-    unlist() |> 
+  var_names <- survey_01_data_dictionary[,2] |>
+    unlist() |>
     unname()
   names(x) <- var_names
   as_tibble(x)
@@ -330,7 +346,9 @@ survey_01_recoded <- survey_01_recoded |>
                 trust_comp = rowMeans(survey_01_recoded[, 7:27]))
 ```
 
-```{r fig-openness-trust-composite, fig.cap="Composite 'openness' and 'trust' scores", eval = params$make_plots}
+```{r, eval = params$make_plots}
+#| label: fig-openness-trust-composite
+#| fig-cap: "Composite 'openness' and 'trust' scores"
 survey_01_recoded |>
   dplyr::select(openness_comp, trust_comp) |>
   ggplot() +
