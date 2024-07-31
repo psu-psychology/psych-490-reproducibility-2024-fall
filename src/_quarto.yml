@@ -7,7 +7,7 @@ project:
   output-dir: "../docs"
 
 website:
-  title: "PSYCH 490 • Fall 2023"
+  title: "PSYCH 490 • Fall 2024"
   comments: 
     hypothesis:
       theme: clean
@@ -25,6 +25,8 @@ website:
         text: deadlines
       - href: policies.qmd
         text: policies
+      - href: values.qmd
+        text: values
       - text: exercises
         menu: 
           - href: "exercises/ex01-read-a-scientific-paper.qmd"

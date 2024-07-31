@@ -1,5 +1,5 @@
 ---
-title: "policies"
+title: "Course Policies"
 ---
 
 ```{r, include=FALSE}

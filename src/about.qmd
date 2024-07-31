@@ -1,5 +1,5 @@
 ---
-title: "about"
+title: "About the course"
 ---
 
 ## Instructor {-}
@@ -13,6 +13,8 @@ Lab web site: <https://gilmore-lab.github.io>
 
 ## Teaching Assistant {-}
 
+TBD
+
 <!-- Jie Yan</br> -->
 <!-- Graduate Student in Cognitive Psychology</br> -->
 <!-- jzy5486 AT-SIGN psu PERIOD edu</br> -->
@@ -22,6 +24,13 @@ Lab web site: <https://gilmore-lab.github.io>
 
 Monday, Wednesday, & Friday, 3:35 PM - 4:20 PM</br>
 [Cedar Building](https://map.psu.edu/?id=1134#!ct/59509,33177,25403,26748,26749,26750,27255?m/357035?s/cedar) 134
+
+## Canvas site
+
+We will use Canvas to submit assignments and grade them.
+The Canvas site may be found here: <https://psu.instructure.com/courses/2350148>.
+
+Most of the course content will be found on this site.
 
 ## Course structure
 
