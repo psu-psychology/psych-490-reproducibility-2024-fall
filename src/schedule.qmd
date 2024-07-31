@@ -11,6 +11,7 @@ title: ""
 - Read
   - (Recommended) [@Oreskes2017, Chapter 1, pp. 55-68] | [PDF on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=152167033).
 - (Extra credit) Complete [Survey 01 on Trust in science and scientists](https://forms.gle/471gpq6XXXq9iG9C8)
+- Course [notes](notes/wk01-2024-08-26-intro.qmd)
 
 ::: {.callout-tip}
 

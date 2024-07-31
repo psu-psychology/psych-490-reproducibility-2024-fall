@@ -1,6 +1,6 @@
 ---
-title: "2023-xx-xx Day"
-subtitle: "Subtitle"
+title: "Topic"
+subtitle: "2023-xx-xx Day"
 author: "Rick Gilmore"
 format: revealjs
 bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
