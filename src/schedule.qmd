@@ -39,7 +39,7 @@ To earn 3 extra credit points for completing the survey, send the TA the date an
     - [@Ruben2016-om] (for fun)
 - [Assignment]{.green_assigned}
     - [Exercise 01: Reading a scientific paper](exercises/ex01-read-a-scientific-paper.qmd)
-- [Class notes](wk01-2024-08-30-how-to-read.qmd)
+- [Class notes](notes/wk01-2024-08-30-how-to-read.qmd)
 
 ## September 2-6 {- #week-02}
 
