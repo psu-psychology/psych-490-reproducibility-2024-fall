@@ -10,7 +10,7 @@ title: "Course Schedule"
 
 - Read
   - (Recommended) [@Oreskes2017, Chapter 1, pp. 55-68] | [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170717).
-- (Extra credit) Complete [Survey 01 on Trust in science and scientists](https://forms.gle/471gpq6XXXq9iG9C8)
+- (Extra credit) Complete [Survey 01 on Trust in Science and Scientists](https://forms.gle/471gpq6XXXq9iG9C8)
 - [Class notes](notes/wk01-2024-08-26-intro.qmd)
 
 ::: {.callout-tip}

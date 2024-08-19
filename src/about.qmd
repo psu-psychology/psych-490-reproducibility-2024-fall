@@ -13,11 +13,9 @@ Lab web site: <https://gilmore-lab.github.io>
 
 ## Teaching Assistant {-}
 
-TBD
-
-<!-- Jie Yan</br> -->
-<!-- Graduate Student in Cognitive Psychology</br> -->
-<!-- jzy5486 AT-SIGN psu PERIOD edu</br> -->
+Adam Calderon</br>
+Graduate Student in Clinical Psychology</br>
+afc6160 AT-SIGN psu PERIOD edu
 <!-- Office hours: Friday 3-4 pm, via [Zoom](https://psu.zoom.us/j/94414923783). -->
 
 ## Meeting time & location {-}

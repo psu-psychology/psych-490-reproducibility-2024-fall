@@ -149,7 +149,9 @@ Robert Merton
 
 ::::
 
-## Why trust science?
+## Why trust or (mis)trust science?
+
+>"To say that a theory or hypothesis was accepted on the basis of objective methods does not entitle us to say it is true but rather that it reflects the critically achieved consensus of the scientific community. [And] it's not clear we should hope for anything better."
 
 ## [@Oreskes2017]
 
@@ -157,6 +159,11 @@ Robert Merton
 - "Sustained engagement with the world"
 - "Social character"
 :::
+
+## Digging deeper
+
+- Why is "sustained engagement" important?
+- What does the "social character" of science contribute?
 
 ## Trust in science
 
