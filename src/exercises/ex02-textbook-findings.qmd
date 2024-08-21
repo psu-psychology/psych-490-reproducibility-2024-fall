@@ -5,7 +5,7 @@ subtitle: Evidence for "textbook" findings
 
 ## Dates {-}
 
-Due: [Friday, September 13](../schedule.qmd#friday-september-13{.orange_due}.
+Due: [Friday, September 13](../schedule.qmd#friday-september-13){.orange_due}.
 
 ## Goals {-}
 

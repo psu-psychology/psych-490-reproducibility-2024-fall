@@ -73,11 +73,11 @@ The dataset goes back to 1948.
 Please use the APA manuscript format for your document. 
 Include a very short Introduction section; a slightly longer Methods section, and then a combined Results and Discussion section with your answers to Questions 6-9.
 
-Please save a copy of your report as a docx using the preferred file naming convention for this class: `<lastname>-<firstname>-PSYCH490.009-ex04.docx`, where you substitute your last name for <lastname> and your first name for <firstname>.
+Please save a copy of your report as a docx using the preferred file naming convention for this class: `<lastname>-<firstname>-PSYCH490.012-ex05.docx`, where you substitute your last name for <lastname> and your first name for <firstname>.
 
 Submit your report on Canvas in the dropbox for this assignment.
 
-Please also bring a copy to class with you on **Friday, October 6, 2023** for discussion.
+Please also bring a copy to class with you on **Friday, October 11, 2024** for discussion.
 
 ---
 

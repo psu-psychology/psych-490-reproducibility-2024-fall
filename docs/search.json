@@ -242,7 +242,7 @@
     "href": "surveys/survey-01.html#gathering",
     "title": "Survey 01",
     "section": "Gathering",
-    "text": "Gathering\nNext, we download the data from the Google Sheet where it is collected. Dr. Gilmore has stored his Google account credentials in a special environment file that can be accessed by the R command Sys.getenv(\"GMAIL_SURVEY\").\n\nif (!dir.exists('csv')) {\n  message(\"Creating missing `csv/`.\")\n  dir.create(\"csv\")\n}\n\nif (params$update_data) {\n  options(gargle_oauth_email = Sys.getenv(\"GMAIL_SURVEY\"))\n  googledrive::drive_auth()\n\n  googledrive::drive_download(\n    \"PSYCH 490.012: Survey 01: Openness and Trust in Science (Responses)\",\n    path = file.path(\"csv\", params$fn),\n    type = \"csv\",\n    overwrite = TRUE\n\n  )\n  message(\"Data updated.\")\n} else {\n  message(\"Using stored data.\")\n}\n\nThe data file has been saved as a comma-separated value (CSV) format data file in a special directory called csv/.\n\n\n\n\n\n\n\nNote\n\n\n\nBecause these data might contain sensitive or identifiable information, we only keep a local copy and do not share it publicly via GitHub. This is achieved by adding the name of the data directory to a special .gitignore file."
+    "text": "Gathering\nNext, we download the data from the Google Sheet where it is collected. Dr. Gilmore has stored his Google account credentials in a special environment file that can be accessed by the R command Sys.getenv(\"GMAIL_SURVEY\").\n\n\n\n\n\n\nTip\n\n\n\nIt’s vital to be very careful when creating and sharing code like this that involves sensitive information like login credentials.\nGilmore likes to put credentials in an .Renviron file that lives in his home directory. This is a recommended practice. On Mac OS and Linux, that’s ~/.Renviron. You can use the usethis::edit_r_profile() command at the R console (not the Terminal) to open your own .Renviron file. In Gilmore’s case, he has added the following line to that file:\nGMAIL_SURVEY=\"&lt;my-google-account&gt;\"\nHere, he has substituted his Google account with credentials/access to the required files for &lt;my-google-account&gt;. Then, when the R code below calls Sys.getenv(\"GMAIL_SURVEY\"), the value of those credentials is returned as a text string.\nMake sure to close and save the .Renviron file and restart your R session before testing this yourself.\n\n\n\nif (!dir.exists('csv')) {\n  message(\"Creating missing `csv/`.\")\n  dir.create(\"csv\")\n}\n\nif (params$update_data) {\n  options(gargle_oauth_email = Sys.getenv(\"GMAIL_SURVEY\"))\n  googledrive::drive_auth()\n\n  googledrive::drive_download(\n    \"PSYCH 490.012: Survey 01: Openness and Trust in Science (Responses)\",\n    path = file.path(\"csv\", params$fn),\n    type = \"csv\",\n    overwrite = TRUE\n\n  )\n  message(\"Data updated.\")\n} else {\n  message(\"Using stored data.\")\n}\n\nThe data file has been saved as a comma-separated value (CSV) format data file in a special directory called csv/.\n\n\n\n\n\n\n\nNote\n\n\n\nBecause these data might contain sensitive or identifiable information, we only keep a local copy and do not share it publicly via GitHub. This is achieved by adding the name of the data directory to a special .gitignore file."
   },
   {
     "objectID": "surveys/survey-01.html#cleaning",
@@ -389,7 +389,7 @@
     "href": "exercises/ex05-p-hacking.html#submit",
     "title": "Exercise 05",
     "section": "Submit",
-    "text": "Submit\nPlease use the APA manuscript format for your document. Include a very short Introduction section; a slightly longer Methods section, and then a combined Results and Discussion section with your answers to Questions 6-9.\nPlease save a copy of your report as a docx using the preferred file naming convention for this class: &lt;lastname&gt;-&lt;firstname&gt;-PSYCH490.009-ex04.docx, where you substitute your last name for  and your first name for .\nSubmit your report on Canvas in the dropbox for this assignment.\nPlease also bring a copy to class with you on Friday, October 6, 2023 for discussion."
+    "text": "Submit\nPlease use the APA manuscript format for your document. Include a very short Introduction section; a slightly longer Methods section, and then a combined Results and Discussion section with your answers to Questions 6-9.\nPlease save a copy of your report as a docx using the preferred file naming convention for this class: &lt;lastname&gt;-&lt;firstname&gt;-PSYCH490.012-ex05.docx, where you substitute your last name for  and your first name for .\nSubmit your report on Canvas in the dropbox for this assignment.\nPlease also bring a copy to class with you on Friday, October 11, 2024 for discussion."
   },
   {
     "objectID": "exercises/ex05-p-hacking.html#footnotes",
@@ -431,7 +431,7 @@
     "href": "exercises/ex03-norms-counternorms.html#submit",
     "title": "Exercise 03",
     "section": "Submit",
-    "text": "Submit\nA 2-3 page paper in Microsoft Word format using the following file-naming convention:\n&lt;lastname&gt;-&lt;firstname&gt;-PSYCH490.009-ex02.docx, where you substitute your last name for  and your first name for . If there are two authors, use both of your last names. If Dr. Gilmore was submitting a paper, it would look like this: gilmore-rick-PSYCH490.009-ex02.docx. Jie will create a dropbox on Canvas for submissions. When that is ready, we will let you know via email.\nPlease use the APA format for your paper. I found the following template document that would be a very good start:\nhttps://docs.google.com/document/d/1IIKwtH7eVXIkQMz4FwMuKol6hMDT3ra9/copy"
+    "text": "Submit\nA 2-3 page paper in Microsoft Word format using the following file-naming convention:\n&lt;lastname&gt;-&lt;firstname&gt;-PSYCH490.012-ex02.docx, where you substitute your last name for  and your first name for . If there are two authors, use both of your last names. If Dr. Gilmore was submitting a paper, it would look like this: gilmore-rick-PSYCH490.012-ex02.docx. Jie will create a dropbox on Canvas for submissions. When that is ready, we will let you know via email.\nPlease use the APA format for your paper. I found the following template document that would be a very good start:\nhttps://docs.google.com/document/d/1IIKwtH7eVXIkQMz4FwMuKol6hMDT3ra9/copy"
   },
   {
     "objectID": "exercises/ex03-norms-counternorms.html#tips",
@@ -473,7 +473,7 @@
     "href": "exercises/ex01-read-a-scientific-paper.html#submit",
     "title": "Exercise 01",
     "section": "Submit",
-    "text": "Submit\nA 2-3 page (double-spaced) paper describing your findings in Microsoft Word format using the following file-naming convention:\n&lt;lastname&gt;-&lt;firstname&gt;-PSYCH490.009-ex01.docx, where you substitute your last name for  and your first name for . If there are two authors, use both of your last names. If Dr. Gilmore was submitting a paper, it would look like this: gilmore-rick-PSYCH490.009-ex01.docx.\nHere is the Canvas dropbox for the assignment:\nhttps://psu.instructure.com/courses/2280122/assignments/15452006\nPlease use the APA format for your paper. I found the following template document that would be a very good start:\nhttps://docs.google.com/document/d/1IIKwtH7eVXIkQMz4FwMuKol6hMDT3ra9/copy"
+    "text": "Submit\nA 2-3 page (double-spaced) paper describing your findings in Microsoft Word format using the following file-naming convention:\n&lt;lastname&gt;-&lt;firstname&gt;-PSYCH490.012-ex01.docx, where you substitute your last name for  and your first name for . If there are two authors, use both of your last names. If Dr. Gilmore was submitting a paper, it would look like this: gilmore-rick-PSYCH490.012-ex01.docx.\nHere is the Canvas dropbox for the assignment:\nhttps://psu.instructure.com/courses/2280122/assignments/15452006\nPlease use the APA format for your paper. I found the following template document that would be a very good start:\nhttps://docs.google.com/document/d/1IIKwtH7eVXIkQMz4FwMuKol6hMDT3ra9/copy"
   },
   {
     "objectID": "schedule.html",
@@ -529,7 +529,7 @@
     "href": "schedule.html#week-07",
     "title": "Course Schedule",
     "section": "October 7-11",
-    "text": "October 7-11\n\nMonday, October 07\n\nRetraction and scientific integrity\nOn Zoom: https://psu.zoom.us/my/rogilmore. Check-in for attendance. Join from anywhere convenient to you.\n\nRead\n\n(Brainerd & You, 2018)\n\n\n\n\nWednesday, October 09\nNO CLASS\n\n\nFriday, October 11\nQuestionable research practices\n\nRead\n\n(Simmons, Nelson, & Simonsohn, 2011)\n\nWatch\n\n(Ngiam, 2020)"
+    "text": "October 7-11\n\nMonday, October 07\n\nRetraction and scientific integrity\nOn Zoom: https://psu.zoom.us/my/rogilmore. Check-in for attendance. Join from anywhere convenient to you.\n\nRead\n\n(Brainerd & You, 2018)\n\n\n\n\nWednesday, October 09\nNO CLASS\n\n\nFriday, October 11\nQuestionable research practices\n\nRead\n\n(Simmons, Nelson, & Simonsohn, 2011)\n\nWatch\n\n(Ngiam, 2020)\n\nBring\n\nDraft Exercise 05: P-hack your way to scientific glory for discussion."
   },
   {
     "objectID": "schedule.html#week-08",
@@ -760,14 +760,14 @@
     "href": "exercises/ex02-textbook-findings.html",
     "title": "Exercise 02",
     "section": "",
-    "text": "Due: [Friday, September 13](../schedule.qmd#friday-september-13{.orange_due}."
+    "text": "Due: Friday, September 13."
   },
   {
     "objectID": "exercises/ex02-textbook-findings.html#dates",
     "href": "exercises/ex02-textbook-findings.html#dates",
     "title": "Exercise 02",
     "section": "",
-    "text": "Due: [Friday, September 13](../schedule.qmd#friday-september-13{.orange_due}."
+    "text": "Due: Friday, September 13."
   },
   {
     "objectID": "exercises/ex02-textbook-findings.html#goals",
@@ -1026,7 +1026,7 @@
     "href": "surveys/survey-02.html#gathering",
     "title": "Survey 02",
     "section": "Gathering",
-    "text": "Gathering\nNext, we download the data from the Google Sheet where it is collected. Dr. Gilmore has stored his Google account credentials in a special environment file that can be accessed by the R command Sys.getenv(\"GMAIL_SURVEY\").\n\n\n\n\n\n\nTip\n\n\n\nIt’s vital to be very careful when creating and sharing code like this that involves sensitive information like login credentials.\n\n\n\nif (!dir.exists('csv')) {\n  message(\"Creating missing `csv/`.\")\n  dir.create(\"csv\")\n}\n\nif (params$update_data) {\n  options(gargle_oauth_email = Sys.getenv(\"GMAIL_SURVEY\"))\n  googledrive::drive_auth()\n  \n  googledrive::drive_download(\n    \"PSYCH 490.012: Survey 02: Scientific Values Survey (Responses)\",\n    path = file.path(\"csv\", params$fn),\n    type = \"csv\",\n    overwrite = TRUE\n  )\n  \n  message(\"Data updated.\")\n} else {\n  message(\"Using stored data.\")\n}\n\nThe data file has been saved as a comma-separated value (CSV) format data file in a special directory called csv/.\n\n\n\n\n\n\n\nNote\n\n\n\nBecause these data might contain sensitive or identifiable information, we only keep a local copy and do not share it publicly via GitHub. This is achieved by adding the name of the data directory to a special .gitignore file."
+    "text": "Gathering\nNext, we download the data from the Google Sheet where it is collected. Dr. Gilmore has stored his Google account credentials in a special environment file that can be accessed by the R command Sys.getenv(\"GMAIL_SURVEY\").\n\n\n\n\n\n\nTip\n\n\n\nIt’s vital to be very careful when creating and sharing code like this that involves sensitive information like login credentials.\nGilmore likes to put credentials in an .Renviron file that lives in his home directory. This is a recommended practice. On Mac OS and Linux, that’s ~/.Renviron. You can use the usethis::edit_r_profile() command at the R console (not the Terminal) to open your own .Renviron file. In Gilmore’s case, he has added the following line to that file:\nGMAIL_SURVEY=\"&lt;my-google-account&gt;\"\nWhere he has substituted his Google account with credentials/access to the required files for &lt;my-google-account&gt;. Then, when the R code below calls `Sys.getenv(“GMAIL_SURVEY”), the value of those credentials is returned.\nMake sure to close and save the .Renviron file and restart your R session before testing this yourself.\n\n\n\nif (!dir.exists('csv')) {\n  message(\"Creating missing `csv/`.\")\n  dir.create(\"csv\")\n}\n\nif (params$update_data) {\n  options(gargle_oauth_email = Sys.getenv(\"GMAIL_SURVEY\"))\n  googledrive::drive_auth()\n  \n  googledrive::drive_download(\n    \"PSYCH 490.012: Survey 02: Scientific Values Survey (Responses)\",\n    path = file.path(\"csv\", params$fn),\n    type = \"csv\",\n    overwrite = TRUE\n  )\n  \n  message(\"Data updated.\")\n} else {\n  message(\"Using stored data.\")\n}\n\nThe data file has been saved as a comma-separated value (CSV) format data file in a special directory called csv/.\n\n\n\n\n\n\n\nNote\n\n\n\nBecause these data might contain sensitive or identifiable information, we only keep a local copy and do not share it publicly via GitHub. This is achieved by adding the name of the data directory to a special .gitignore file."
   },
   {
     "objectID": "surveys/survey-02.html#cleaning",

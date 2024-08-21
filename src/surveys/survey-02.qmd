@@ -42,6 +42,21 @@ Dr. Gilmore has stored his Google account credentials in a special environment f
 
 It's vital to be *very* careful when creating and sharing code like this that involves sensitive information like login credentials.
 
+Gilmore likes to put credentials in an `.Renviron` file that lives in his home directory. 
+This is a [recommended practice](https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf).
+On Mac OS and Linux, that's `~/.Renviron`. 
+You can use the `usethis::edit_r_profile()` command *at the R console* (not the Terminal) to open your own `.Renviron` file.
+In Gilmore's case, he has added the following line to that file:
+
+```
+GMAIL_SURVEY="<my-google-account>"
+```
+
+Where he has substituted his Google account with credentials/access to the required files for `<my-google-account>`.
+Then, when the R code below calls `Sys.getenv("GMAIL_SURVEY"), the value of those credentials is returned.
+
+Make sure to close and save the `.Renviron` file and restart your R session before testing this yourself.
+
 :::
 
 ```{r, message=FALSE, echo=TRUE, eval=params$update_data}

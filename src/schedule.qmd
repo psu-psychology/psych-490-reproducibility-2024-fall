@@ -208,6 +208,8 @@ To earn 3 extra credit points for completing the survey, send the TA the date an
     - [@simmons_false-positive_2011]
 - Watch
     - [@Ngiam2020-ln]
+- Bring
+    - Draft [Exercise 05: P-hack your way to scientific glory](exercises/ex05-p-hacking.qmd) for discussion.
 
 ## October 14-18 {- #week-08}
 
