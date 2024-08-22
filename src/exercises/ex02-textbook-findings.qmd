@@ -29,7 +29,7 @@ That base of evidence involves several components: the number, quantity, and qua
 | "Cheetos are the best thing since sliced bread." (pp. 24, para 3) | Descriptive | 1) Figure 1 shows that snack fans rate Cheetos higher than sliced bread. 2) "Mean ratings for Cheetos are higher than those for sliced bread, t(56)=3.58, p<.05" (pp. 15, para 1) |
 | "Eating Cheetos before bedtime causes cancer." | Causal | Table 1 shows cancer rates for bedtime Cheetos- vs. non-Cheetos-eating people |
 
-6. Look up your paper on Google Scholar. How many citations does the original paper have? Do any of the citations to the original paper appear to be replication studies?
+6. Look up your paper on Google Scholar. How many citations does the original paper have? How many of the citations to the original paper appear to be replication studies?
 
 ::: {.callout-tip}
 
@@ -37,7 +37,7 @@ You might filter your original search to see if "replication" is in the title or
 
 :::
 
-7. Does the paper include shared data?
+7. Does the original paper include shared data?
 9. What is your opinion about the strength of the accumulated evidence for the finding(s). Make sure to justify your arguments.
 
 ## Submit {-}
