@@ -15,9 +15,10 @@ title: "Course Schedule"
 
 ::: {.callout-tip}
 
-To earn 3 extra credit points for completing the survey, send the TA the date and time you completed the survey in the following format:
+To earn 3 extra credit points for completing the survey, send the TA one of the following:
 
-"7/30/2024 12:20:23"
+1. The date and time you completed the survey in the following format: "7/30/2024 12:20:23"
+2. A special code or phrase that is likely to be unique to you but doesn't contain identifiable information.
 
 :::
 

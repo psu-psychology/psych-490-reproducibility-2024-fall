@@ -282,7 +282,7 @@ Russian Proverb, [Wikipedia](https://en.wikipedia.org/wiki/Trust,_but_verify)
 ---
 
 This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
-Integrated Development Environment (IDE), version 2024.4.2.764.
+Integrated Development Environment (IDE) version 2024.4.2.764.
 
 The source files are in R and R Markdown, then rendered to HTML using the
 [revealJS](https://revealjs.com) framework. 

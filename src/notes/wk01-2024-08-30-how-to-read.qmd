@@ -110,6 +110,8 @@ plot(qrcode::qr_code("https://forms.gle/DEvDGc3boXQuMkg7A"))
 
 # Next time
 
+## Wednesday, September 04
+
 - Wednesday not Monday!
 
 *How science works (or should)*
