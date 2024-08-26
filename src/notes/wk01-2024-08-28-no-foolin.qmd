@@ -34,6 +34,9 @@ plot(qrcode::qr_code("https://forms.gle/DEvDGc3boXQuMkg7A"))
 - What does *reduced* trust in science enable or entail?
 :::
 
+- What did the Russian proverb President Ronald Reagan quoted advise? ______, but _______.
+- How does the proverb apply to science?
+
 ## Today
 
 *Don't Fool Yourself*

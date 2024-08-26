@@ -6,6 +6,8 @@ format:
   revealjs:
     footer: "[PSYCH 490.012 • Fall 2024](../index.html)"
     slide-number: true
+    fig-align: center
+    logo: https://brand.psu.edu/images/backgrounds/penn-state-shield.jpg
 bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
 csl: ../include/bib/apa.csl
 css: ../include/css/styles.css
@@ -26,6 +28,11 @@ css: ../include/css/styles.css
 
 - Thanks to those of you who responded
 
+## Last time...
+
+- Are the [tips](wk01-2024-08-30-how-to-read.qmd) for reading a scientific paper helpful?
+- What about acronyms and jargon?
+
 ## Today
 
 *How science works (or should)*
@@ -38,12 +45,16 @@ css: ../include/css/styles.css
 
 ## Discuss [@Ritchie2020-fm, Chapter 1]
 
-### Author
-
-- [Stuart J. Ritchie](https://www.kcl.ac.uk/people/stuart-ritchie)
+:::: {.columns}
+::: {.column width="50%"}
+- [Stuart J. Ritchie](https://en.wikipedia.org/wiki/Stuart_J._Ritchie)
     - Scottish psychologist, Lecturer at King's College London
-
-![Stuart J. Ritchie](https://jacobsfoundation.org/wp-content/uploads/2020/01/Ritchie_Stuart_300x300px.jpg"){fig-align="center"}
+    - Works at [Anthropic](https://en.wikipedia.org/wiki/Anthropic), an A.I. company
+:::
+::: {.column width="50%"}
+![](https://jacobsfoundation.org/wp-content/uploads/2020/01/Ritchie_Stuart_300x300px.jpg"){fig-align="center"}
+:::
+::::
 
 ## Chapter 1: How Science Works
 
@@ -103,37 +114,28 @@ Karl Popper quoted in [@Ritchie2020-fm, p. 23]
 ## Discuss [@Nosek2012-al]
 
 :::: {.columns}
-
 ::: {.column width=50%}
-
-Brian Nosek
-
-![Brian Nosek](https://www.cos.io/hubfs/Staff/staff-nosek-brian.png){fig-align="center" width=30%}
-
+- Brian Nosek
+  - Social Psychologist, Professor at University of Virginia
+  - Co-Founder, [Center for Open Science (COS)](https://cos.io)
+  - Founder, [Project Implicit](https://implicit.harvard.edu/implicit/)
 :::
-
 ::: {.column width=50%}
-- Social Psychologist, Professor at University of Virginia
-- Co-Founder, [Center for Open Science (COS)](https://cos.io)
-- Founder, [Project Implicit](https://implicit.harvard.edu/implicit/)
+![](https://www.cos.io/hubfs/Staff/staff-nosek-brian.png){fig-align="center"}
 :::
-
 ::::
 
 ---
 
 :::: {.columns}
-
 ::: {.column width=50%}
-[Yoav Bar-Anon](https://en-social-sciences.tau.ac.il/profile/baranan)
-
+- [Yoav Bar-Anon](https://en-social-sciences.tau.ac.il/profile/baranan)
+  - Social Psychologist
+  - Professor at Tel Aviv University
+:::
+::: {.column width=50%}
 ![](https://en-social-sciences.tau.ac.il/sites/socsci-english.tau.ac.il/files/styles/research_teaser_image_180_x_180/public/Yoav%20Bar-anan.webp){fig-align="center" width=30%}
 :::
-
-::: {.column width=50%}
-- Social Psychology, Professor at Tel Aviv University
-:::
-
 ::::
 
 ---

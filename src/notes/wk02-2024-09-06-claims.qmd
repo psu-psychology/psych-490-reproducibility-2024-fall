@@ -1,0 +1,49 @@
+---
+title: "How to read a scientific paper"
+subtitle: "2024-08-30 Fri"
+author: "Rick Gilmore"
+format: 
+  revealjs:
+    footer: "[PSYCH 490.012 • Fall 2024](../index.html)"
+    slide-number: true
+    fig-align: center
+    logo: https://brand.psu.edu/images/backgrounds/penn-state-shield.jpg
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+css: ../include/css/styles.css
+---
+
+# Overview
+
+## Announcements
+
+## Last time...
+
+## Today
+
+**Work Session: Reading a paper; Evaluating its claims**
+
+- [Due]{.orange_due}
+    - [Exercise 01: Reading a scientific paper](../exercises/ex01-read-a-scientific-paper.qmd)
+- [Assignment]{.green_assigned}
+    - [Exercise 02: Textbook Findings](../exercises/ex02-textbook-findings.qmd)
+    
+# Survey 01
+
+# Evaluating textbook claims
+
+# Next time
+
+## Monday, September 09
+
+*Scientific norms and counter-norms*
+
+- Read
+    - [@Merton1973-vf]. [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170713).
+    - [@Mitroff1974-pp]. [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170712).
+- [Assignment]{.green_assigned}
+    - Complete (anonymous) [survey](https://forms.gle/reRw9sYUzsYHUsqz9) on scientific norms and counter-norms. **No write-up**.
+
+# Resources
+
+## References
