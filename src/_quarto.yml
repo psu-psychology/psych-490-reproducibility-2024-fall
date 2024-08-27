@@ -58,6 +58,7 @@ format:
     date-modified: last-modified
     bibliography: [include/bib/packages.bib, include/bib/psu-repro.bib]
     csl: include/bib/apa.csl
+    html-math-method: mathjax
 
 editor: source
     

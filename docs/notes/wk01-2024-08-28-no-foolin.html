@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.549">
+  <meta name="generator" content="quarto-1.5.56">
 
   <meta name="author" content="Rick Gilmore">
-  <title>PSYCH 490 • Fall 2024 - Don’t Fool Yourself</title>
+  <title>PSYCH 490 • Fall 2024 – Don’t Fool Yourself</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -431,8 +431,7 @@ Figure&nbsp;1: Optional anonymous survey: <a href="https://forms.gle/DEvDGc3boXQ
 <li><a href="https://en.wikipedia.org/wiki/Richard_Feynman">Nobel Prize-winning physicist</a></li>
 <li>Member of Rogers Commission that determined why the <a href="https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster">Challenger Space Shuttle blew up</a></li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="feynmann-on-cargo-cult-science" class="slide level2">
 <h2>Feynmann on “Cargo Cult” science</h2>
@@ -447,8 +446,7 @@ Figure&nbsp;1: Optional anonymous survey: <a href="https://forms.gle/DEvDGc3boXQ
 <p style="text-align:center;">
 <span class="citation" data-cites="Feynman1974-ld">(<a href="#/references" role="doc-biblioref" onclick="">Feynman, 1974</a>)</span>
 </p>
-</div>
-</div>
+</div></div>
 </section>
 <section class="slide level2">
 
@@ -487,8 +485,7 @@ Figure&nbsp;1: Optional anonymous survey: <a href="https://forms.gle/DEvDGc3boXQ
 <p style="text-align:center;">
 <span class="citation" data-cites="Feynman1974-ld">(<a href="#/references" role="doc-biblioref" onclick="">Feynman, 1974</a>)</span>
 </p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="have-you-learned-about-this-principle-of-utter-honesty-by-studying-science-in-school-if-so-how" class="slide level2">
 <h2>Have you learned about this principle of ‘utter honesty’ by studying science in school? If so, how?</h2>
@@ -506,8 +503,7 @@ Figure&nbsp;1: Optional anonymous survey: <a href="https://forms.gle/DEvDGc3boXQ
 <p style="text-align:center;">
 <span class="citation" data-cites="Feynman1974-ld">(<a href="#/references" role="doc-biblioref" onclick="">Feynman, 1974</a>)</span>
 </p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="why-does-feynmann-warn-us-about-fooling-ourselves" class="slide level2">
 <h2>Why does Feynmann warn us about fooling ourselves?</h2>
@@ -937,18 +933,7 @@ Sagan, C. (1996). <em>The <span>D</span>emon-haunted <span>W</span>orld: <span>S
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -980,7 +965,47 @@ Sagan, C. (1996). <em>The <span>D</span>emon-haunted <span>W</span>orld: <span>S
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1017,7 +1042,11 @@ Sagan, C. (1996). <em>The <span>D</span>emon-haunted <span>W</span>orld: <span>S
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

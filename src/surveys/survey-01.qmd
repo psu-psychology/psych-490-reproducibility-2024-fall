@@ -2,9 +2,9 @@
 title: "Survey 01"
 subtitle: "Trust in science and scientists"
 params:
-  update_data: false
+  update_data: true
   fn: "survey-01-openness-trust-2024-fall.csv"
-  make_plots: false
+  make_plots: true
 ---
 
 ## Purpose
@@ -25,6 +25,7 @@ First, we load the external packages (groups of R commands) that we will be usin
 
 ```{r}
 library('ggplot2')
+library('dplyr')
 ```
 
 ## Gathering
@@ -189,13 +190,10 @@ He put "test" in the `comments` field to make it easy to detect.
 
 ```{r, eval=params$update_data}
 #| label: filter-test-responses
-survey_01_clean <- survey_01_clean |>
-  dplyr::filter(!stringr::str_detect(comments, "test"))
-
 n_responses <- dim(survey_01_clean)[1]
 
 if (n_responses > 1) {
-  survey_01_clean <- survey_01_clean[1:n_responses,]
+  survey_01_clean <- survey_01_clean[2:n_responses,]
   test_phase_no_print <- FALSE
 } else {
   message("No 'non-test' responses yet. Leaving data file unchanged.")
@@ -274,19 +272,20 @@ survey_01_clean |>
   facet_wrap(facets = vars(question), ncol = 3)
 ```
 
-```{r, eval=params$make_plots}
-#| label: fig-scatterpairs-trust-q22-27
-#| message: false
-#| fig-cap: "Responses to trust in science questions from [@Nadelson2014-ym]"
-# q_range <- c(22:27)
-# 
-# survey_01_clean[, q_range] |>
-#   GGally::ggpairs()
-# 
-# survey_01_data_dictionary[q_range,1:2] |>
-#   knitr::kable(format = "html") |>
-#   kableExtra::kable_classic()
-```
+
+<!-- ```{r, eval=params$make_plots} -->
+<!-- #| label: fig-scatterpairs-trust-q22-27 -->
+<!-- #| message: false -->
+<!-- #| fig-cap: "Responses to trust in science questions from [@Nadelson2014-ym]" -->
+<!-- q_range <- c(22:27) -->
+
+<!-- survey_01_clean[, q_range] |>  -->
+<!--   GGally::ggpairs() -->
+
+<!-- survey_01_data_dictionary[q_range,1:2] |> -->
+<!--  knitr::kable(format = "html") |> -->
+<!--  kableExtra::kable_classic() -->
+<!-- ``` -->
 
 ### Comments
 
@@ -385,3 +384,6 @@ survey_01_recoded |>
 ```{r, eval = params$make_plots}
 with(survey_01_recoded, stats::cor.test(openness_comp, trust_comp))
 ```
+
+## Compare with prior semesters
+

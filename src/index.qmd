@@ -4,6 +4,8 @@ subtitle: "Fall 2024 • MWF 3:35-4:20 PM"
 author: "Rick Gilmore"
 ---
 
+Here is some temporary math: $E=MC^2$
+
 ## The reproducibility crisis in science {-}
 
 ::: {#fig-repro-books layout-ncol=3 layout-nrow=2}
