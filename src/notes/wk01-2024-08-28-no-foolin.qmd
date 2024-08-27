@@ -13,31 +13,14 @@ css: ../include/css/styles.css
 
 # Overview
 
-## Announcements
-
-```{r fig-trust-in-sci-survey, fig.cap="Optional anonymous survey: <https://forms.gle/DEvDGc3boXQuMkg7A>"}
-#| label: fig-trust-in-sci-survey
-#| fig-cap: "Optional anonymous survey: <https://forms.gle/DEvDGc3boXQuMkg7A>"
-plot(qrcode::qr_code("https://forms.gle/DEvDGc3boXQuMkg7A"))
-```
-
-<p style="text-align:center;">
-[Results so far](../surveys/survey-01.qmd)
-</p>
-
 ## Last time...
 
-- Why should we care who trusts science & why they do or don't?
-
-:::{.incremental}
-- What does *greater* trust in science enable or entail?
-- What does *reduced* trust in science enable or entail?
-:::
-
-- What did the Russian proverb President Ronald Reagan quoted advise? ______, but _______.
-- How does the proverb apply to science?
+- Course intro
+- [Trust in science](wk01-2024-08-26-intro.qmd#trust-in-science)
 
 ## Today
+
+- Wrap up on [trust in science](wk01-2024-08-26-intro.qmd#trust-in-science)
 
 *Don't Fool Yourself*
 

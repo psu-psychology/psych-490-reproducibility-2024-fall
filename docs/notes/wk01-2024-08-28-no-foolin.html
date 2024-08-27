@@ -375,33 +375,18 @@ Rick Gilmore
 <h1>Overview</h1>
 
 </section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
-
-<img data-src="wk01-2024-08-28-no-foolin_files/figure-revealjs/fig-trust-in-sci-survey-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;1: Optional anonymous survey: <a href="https://forms.gle/DEvDGc3boXQuMkg7A" class="uri">https://forms.gle/DEvDGc3boXQuMkg7A</a>
-</p><p style="text-align:center;">
-<a href="../surveys/survey-01.html">Results so far</a>
-</p>
-</section>
 <section id="last-time" class="slide level2">
 <h2>Last time…</h2>
 <ul>
-<li>Why should we care who trusts science &amp; why they do or don’t?</li>
-</ul>
-<div>
-<ul>
-<li class="fragment">What does <em>greater</em> trust in science enable or entail?</li>
-<li class="fragment">What does <em>reduced</em> trust in science enable or entail?</li>
-</ul>
-</div>
-<ul>
-<li>What did the Russian proverb President Ronald Reagan quoted advise? ______, but _______.</li>
-<li>How does the proverb apply to science?</li>
+<li>Course intro</li>
+<li><a href="../notes/wk01-2024-08-26-intro.html#trust-in-science">Trust in science</a></li>
 </ul>
 </section>
 <section id="today" class="slide level2">
 <h2>Today</h2>
+<ul>
+<li>Wrap up on <a href="../notes/wk01-2024-08-26-intro.html#trust-in-science">trust in science</a></li>
+</ul>
 <p><em>Don’t Fool Yourself</em></p>
 <ul>
 <li>Read
@@ -863,44 +848,6 @@ Sagan, C. (1996). <em>The <span>D</span>emon-haunted <span>W</span>orld: <span>S
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

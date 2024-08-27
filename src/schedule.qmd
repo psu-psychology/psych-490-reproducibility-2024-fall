@@ -24,6 +24,8 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 ### Wednesday, August 28 {-}
 
+- Wrap up on ["Why trust science"](notes/wk01-2024-08-26-intro.qmd#trust-in-science)
+
 *Don't Fool Yourself*
 
 - Read

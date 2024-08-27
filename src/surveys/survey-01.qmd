@@ -205,20 +205,23 @@ if (n_responses > 1) {
 
 ### Openness questions
 
-Remember:
+Remember, this is the relationship between the numbers and the verbal ratings:
 
 ![Survey 01 response options](../include/img/survey-01-resp-options.png){fig-align="center"}
 
-```{r, eval = params$make_plots}
-#| label: fig-openness-dotplot
-#| fig-cap: "Reponses to Openness to Revising One’s Viewpoint subscale questions from [@Krumrei-Mancuso2016-qm]"
-#| message: false
-# survey_01_clean[,2:6] |>
-#   ggpairs()
-#
+Here are the questions:
+
+```{r}
 survey_01_data_dictionary[2:6,1:2] |>
   knitr::kable(format = "html") |>
   kableExtra::kable_classic()
+```
+
+Here is a dotplot of the data:
+
+```{r, eval = params$make_plots}
+#| fig-cap: "Reponses to Openness to Revising One’s Viewpoint subscale questions from [@Krumrei-Mancuso2016-qm]"
+#| message: false
 
 survey_01_clean[, 1:6] |>
   tidyr::pivot_longer(cols=2:6, names_to = "question", values_to = "rating") |>
@@ -231,6 +234,8 @@ survey_01_clean[, 1:6] |>
   theme(axis.ticks = element_blank()) +
   facet_wrap(facets = vars(question), ncol = 1)
 ```
+
+See the Fall 2023 results: @fig-fall-2023-openness-dotplot.
 
 ### Trust in science questions
 
@@ -249,16 +254,23 @@ There are a number of these, so we break them into smaller groups for visualizat
 
 ![Survey 01 response options](../include/img/survey-01-resp-options.png){fig-align="center"}
 
+Here are the questions:
+
+```{r}
+#| label: tab-trust-in-science-qs
+#| message: false
+#| fig-cap: "Trust in science questions from [@Nadelson2014-ym]"
+survey_01_data_dictionary[7:27, 1:2] |>
+  knitr::kable(format = "html") |>
+  kableExtra::kable_classic()
+```
+
+Here is are plots of your ratings:
+
 ```{r, eval = params$make_plots}
 #| label: fig-trust-dotplot
 #| message: false
 #| fig-cap: "Responses to trust in science questions from [@Nadelson2014-ym]"
-# survey_01_clean[, 7:11] |>
-#   ggpairs()
-#
-survey_01_data_dictionary[7:27, 1:2] |>
-  knitr::kable(format = "html") |>
-  kableExtra::kable_classic()
 
 survey_01_clean |>
   tidyr::pivot_longer(cols=7:27, names_to = "question", values_to = "rating") |>
@@ -272,20 +284,7 @@ survey_01_clean |>
   facet_wrap(facets = vars(question), ncol = 3)
 ```
 
-
-<!-- ```{r, eval=params$make_plots} -->
-<!-- #| label: fig-scatterpairs-trust-q22-27 -->
-<!-- #| message: false -->
-<!-- #| fig-cap: "Responses to trust in science questions from [@Nadelson2014-ym]" -->
-<!-- q_range <- c(22:27) -->
-
-<!-- survey_01_clean[, q_range] |>  -->
-<!--   GGally::ggpairs() -->
-
-<!-- survey_01_data_dictionary[q_range,1:2] |> -->
-<!--  knitr::kable(format = "html") |> -->
-<!--  kableExtra::kable_classic() -->
-<!-- ``` -->
+See the Fall 2023 results: @fig-fall-2023-trust-dotplot.
 
 ### Comments
 
@@ -313,15 +312,39 @@ We'll start by adding a variable to our data dictionary that indicates the "sign
 
 If the sign is reversed, then we must assign 1 to 5, 2 to 4, 3 to 3, 4 to 2, and 5 to 1.
 
+Here is a table of the weights to apply to the questions:
+
 ```{r, eval = params$make_plots}
 survey_01_data_dictionary <- survey_01_data_dictionary |>
-  dplyr::mutate(sign_wt = c(0, rep(1, 5),
-                            rep(-1, 5), rep(1, 5), rep(-1, 6), rep(1, 3), -1, 1, 0))
+  dplyr::mutate(sign_wt = c(0, 
+                            rep(1, 5),
+                            rep(-1, 4), 
+                            1, 
+                            -1, 
+                            1, -1, 
+                            rep(1, 3), 
+                            1,
+                            -1,
+                            rep(1, 3), 
+                            rep(-1, 5),
+                            0))
 
-survey_01_data_dictionary[,c(1,4)] |>
+survey_01_data_dictionary[,c(1,2,4)] |>
   knitr::kable(format = "html") |>
   kableExtra::kable_classic()
 ```
+
+::: {.callout-warning}
+I found some mistakes in the code I used last year to reverse-code variables when I revisted it this year.
+Only when I went through each question one-by-one, did I find the errors.
+I'm very glad I'd shown the variables in a table.
+:::
+
+::: {.callout-note}
+I'm on the fence about whether "People who understand science more have more trust in science." should be in the composite.
+What do you think?
+What did [@Plohl2023-yf] do?
+:::
 
 ```{r, eval = params$make_plots}
 # Recode variables with "reverse" indicator (sign_x == -1)
@@ -366,6 +389,25 @@ survey_01_recoded <- survey_01_recoded |>
                 trust_comp = rowMeans(survey_01_recoded[, 7:27]))
 ```
 
+Here's a plot to ensure our recoded data about trust in science make sense.
+
+```{r}
+#| label: fig-recoded-trust-scores
+#| fig-cap: "Recoded 'trust' scores"
+survey_01_recoded |>
+  tidyr::pivot_longer(cols=7:27, names_to = "question", values_to = "rating") |>
+  ggplot()+
+  aes(rating) +
+  geom_dotplot(dotsize = .4) +
+  xlim(1, 5) +
+  theme(axis.title.y = element_blank()) +
+  theme(axis.text.y = element_blank()) +
+  theme(axis.ticks = element_blank()) +
+  facet_wrap(facets = vars(question), ncol = 3)
+```
+
+Here we evaluate the relationship between a person's openness and their trust in science.
+
 ```{r, eval = params$make_plots}
 #| label: fig-openness-trust-composite
 #| fig-cap: "Composite 'openness' and 'trust' scores"
@@ -385,5 +427,12 @@ survey_01_recoded |>
 with(survey_01_recoded, stats::cor.test(openness_comp, trust_comp))
 ```
 
-## Compare with prior semesters
+Here are the Fall 2023 results: @fig-fall-2023-openness-trust-composite.
 
+## Fall 2023 results
+
+![](https://raw.githubusercontent.com/psu-psychology/psych-490-reproducibility-2023-fall/main/docs/surveys/survey-01_files/figure-html/fig-openness-dotplot-1.png){#fig-fall-2023-openness-dotplot}
+
+![](https://raw.githubusercontent.com/psu-psychology/psych-490-reproducibility-2023-fall/main/docs/surveys/survey-01_files/figure-html/fig-trust-dotplot-1.png){#fig-fall-2023-trust-dotplot}
+
+![](https://raw.githubusercontent.com/psu-psychology/psych-490-reproducibility-2023-fall/main/docs/surveys/survey-01_files/figure-html/fig-openness-trust-composite-1.png){#fig-fall-2023-openness-trust-composite}

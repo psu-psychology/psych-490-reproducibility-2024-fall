@@ -273,7 +273,7 @@ div.csl-indent {
   <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
   <li><a href="#aggregate-openness-and-trust-questions" id="toc-aggregate-openness-and-trust-questions" class="nav-link" data-scroll-target="#aggregate-openness-and-trust-questions">Aggregate openness and trust questions</a></li>
   </ul></li>
-  <li><a href="#compare-with-prior-semesters" id="toc-compare-with-prior-semesters" class="nav-link" data-scroll-target="#compare-with-prior-semesters">Compare with prior semesters</a></li>
+  <li><a href="#fall-2023-results" id="toc-fall-2023-results" class="nav-link" data-scroll-target="#fall-2023-results">Fall 2023 results</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/edit/main/src/surveys/survey-01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -539,83 +539,55 @@ Note
 <h2 class="anchored" data-anchor-id="visualizations">Visualizations</h2>
 <section id="openness-questions" class="level3">
 <h3 class="anchored" data-anchor-id="openness-questions">Openness questions</h3>
-<p>Remember:</p>
+<p>Remember, this is the relationship between the numbers and the verbal ratings:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../include/img/survey-01-resp-options.png" class="img-fluid figure-img"></p>
 <figcaption>Survey 01 response options</figcaption>
 </figure>
 </div>
+<p>Here are the questions:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># survey_01_clean[,2:6] |&gt;</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   ggpairs()</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>survey_01_data_dictionary[<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="sc">|&gt;</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">"html"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="fig-openness-dotplot-1" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-openness-dotplot-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>survey_01_data_dictionary[<span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">"html"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="lightable-classic caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
-<tr>
-<th style="text-align:left;">
-question
-</th>
-<th style="text-align:left;">
-short_name
-</th>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">question</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">short_name</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-I have at times changed opinions that were important to me, when someone showed me I was wrong.
-</td>
-<td style="text-align:left;">
-when_shown_wrong
-</td>
+<tr class="odd">
+<td style="text-align: left;">I have at times changed opinions that were important to me, when someone showed me I was wrong.</td>
+<td style="text-align: left;">when_shown_wrong</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-I am willing to change my position on an important issue in the face of good reasons.
-</td>
-<td style="text-align:left;">
-good_reason
-</td>
+<tr class="even">
+<td style="text-align: left;">I am willing to change my position on an important issue in the face of good reasons.</td>
+<td style="text-align: left;">good_reason</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-I am open to revising my important beliefs in the face of new information.
-</td>
-<td style="text-align:left;">
-new_info
-</td>
+<tr class="odd">
+<td style="text-align: left;">I am open to revising my important beliefs in the face of new information.</td>
+<td style="text-align: left;">new_info</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-I am willing to change my opinions on the basis of compelling reason.
-</td>
-<td style="text-align:left;">
-compelling_reason
-</td>
+<tr class="even">
+<td style="text-align: left;">I am willing to change my opinions on the basis of compelling reason.</td>
+<td style="text-align: left;">compelling_reason</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-I’m willing to change my mind once it’s made up about an important topic.
-</td>
-<td style="text-align:left;">
-mind_made_up
-</td>
+<tr class="odd">
+<td style="text-align: left;">I’m willing to change my mind once it’s made up about an important topic.</td>
+<td style="text-align: left;">mind_made_up</td>
 </tr>
 </tbody>
 </table>
+
+
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-openness-dotplot-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Reponses to Openness to Revising One’s Viewpoint subscale questions from <span class="citation" data-cites="Krumrei-Mancuso2016-qm">(<a href="#ref-Krumrei-Mancuso2016-qm" role="doc-biblioref">Krumrei-Mancuso &amp; Rouse, 2016</a>)</span>
-</figcaption>
-</figure>
 </div>
+<p>Here is a dotplot of the data:</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>survey_01_clean[, <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>] <span class="sc">|&gt;</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="at">cols=</span><span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">names_to =</span> <span class="st">"question"</span>, <span class="at">values_to =</span> <span class="st">"rating"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
@@ -627,18 +599,15 @@ Figure&nbsp;1: Reponses to Openness to Revising One’s Viewpoint subscale quest
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
 <span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="at">facets =</span> <span class="fu">vars</span>(question), <span class="at">ncol =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-openness-dotplot-2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-openness-dotplot-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="survey-01_files/figure-html/fig-openness-dotplot-1.png" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-openness-dotplot-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Reponses to Openness to Revising One’s Viewpoint subscale questions from <span class="citation" data-cites="Krumrei-Mancuso2016-qm">(<a href="#ref-Krumrei-Mancuso2016-qm" role="doc-biblioref">Krumrei-Mancuso &amp; Rouse, 2016</a>)</span>
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="survey-01_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Reponses to Openness to Revising One’s Viewpoint subscale questions from <span class="citation" data-cites="Krumrei-Mancuso2016-qm">(<a href="#ref-Krumrei-Mancuso2016-qm" role="doc-biblioref">Krumrei-Mancuso &amp; Rouse, 2016</a>)</span></figcaption>
 </figure>
 </div>
 </div>
 </div>
+<p>See the Fall 2023 results: <a href="#fig-fall-2023-openness-dotplot" class="quarto-xref">Figure&nbsp;4</a>.</p>
 </section>
 <section id="trust-in-science-questions" class="level3">
 <h3 class="anchored" data-anchor-id="trust-in-science-questions">Trust in science questions</h3>
@@ -664,16 +633,12 @@ Note
 <figcaption>Survey 01 response options</figcaption>
 </figure>
 </div>
+<p>Here are the questions:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># survey_01_clean[, 7:11] |&gt;</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   ggpairs()</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>survey_01_data_dictionary[<span class="dv">7</span><span class="sc">:</span><span class="dv">27</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="sc">|&gt;</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">"html"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="fig-trust-dotplot-1" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-trust-dotplot-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>survey_01_data_dictionary[<span class="dv">7</span><span class="sc">:</span><span class="dv">27</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">"html"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
 <table class=" lightable-classic" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -856,12 +821,11 @@ cant_trust_moves_slowly
 </tr>
 </tbody>
 </table>
+<p>Trust in science questions from <span class="citation" data-cites="Nadelson2014-ym">(<a href="#ref-Nadelson2014-ym" role="doc-biblioref">Nadelson et al., 2014</a>)</span></p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-trust-dotplot-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Responses to trust in science questions from <span class="citation" data-cites="Nadelson2014-ym">(<a href="#ref-Nadelson2014-ym" role="doc-biblioref">Nadelson et al., 2014</a>)</span>
-</figcaption>
-</figure>
 </div>
+<p>Here is are plots of your ratings:</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>survey_01_clean <span class="sc">|&gt;</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="at">cols=</span><span class="dv">7</span><span class="sc">:</span><span class="dv">27</span>, <span class="at">names_to =</span> <span class="st">"question"</span>, <span class="at">values_to =</span> <span class="st">"rating"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
@@ -873,29 +837,19 @@ Figure&nbsp;3: Responses to trust in science questions from <span class="citatio
 <span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
 <span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="at">facets =</span> <span class="fu">vars</span>(question), <span class="at">ncol =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-trust-dotplot-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-trust-dotplot" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-trust-dotplot-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-trust-dotplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="survey-01_files/figure-html/fig-trust-dotplot-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-trust-dotplot-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Responses to trust in science questions from <span class="citation" data-cites="Nadelson2014-ym">(<a href="#ref-Nadelson2014-ym" role="doc-biblioref">Nadelson et al., 2014</a>)</span>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-trust-dotplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Responses to trust in science questions from <span class="citation" data-cites="Nadelson2014-ym">(<a href="#ref-Nadelson2014-ym" role="doc-biblioref">Nadelson et al., 2014</a>)</span>
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<!-- ```{r, eval=params$make_plots} -->
-<!-- #| label: fig-scatterpairs-trust-q22-27 -->
-<!-- #| message: false -->
-<!-- #| fig-cap: "Responses to trust in science questions from [@Nadelson2014-ym]" -->
-<!-- q_range <- c(22:27) -->
-<!-- survey_01_clean[, q_range] |>  -->
-<!--   GGally::ggpairs() -->
-<!-- survey_01_data_dictionary[q_range,1:2] |> -->
-<!--  knitr::kable(format = "html") |> -->
-<!--  kableExtra::kable_classic() -->
-<!-- ``` -->
+<p>See the Fall 2023 results: <a href="#fig-fall-2023-trust-dotplot" class="quarto-xref">Figure&nbsp;5</a>.</p>
 </section>
 <section id="comments" class="level3">
 <h3 class="anchored" data-anchor-id="comments">Comments</h3>
@@ -933,139 +887,205 @@ Figure&nbsp;4: Responses to trust in science questions from <span class="citatio
 </div>
 <p>Some of the “trust” variables are reverse-coded, so we have to address that. We’ll start by adding a variable to our data dictionary that indicates the “sign” of the weight we should apply to that variable.</p>
 <p>If the sign is reversed, then we must assign 1 to 5, 2 to 4, 3 to 3, 4 to 2, and 5 to 1.</p>
+<p>Here is a table of the weights to apply to the questions:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>survey_01_data_dictionary <span class="ot">&lt;-</span> survey_01_data_dictionary <span class="sc">|&gt;</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">sign_wt =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">5</span>),</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">rep</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">5</span>), <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">5</span>), <span class="fu">rep</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">6</span>), <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">3</span>), <span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>))</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>survey_01_data_dictionary[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>)] <span class="sc">|&gt;</span></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">"html"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">sign_wt =</span> <span class="fu">c</span>(<span class="dv">0</span>, </span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">5</span>),</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">rep</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">4</span>), </span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">1</span>, </span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>                            <span class="sc">-</span><span class="dv">1</span>, </span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, </span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">3</span>), </span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">1</span>,</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>                            <span class="sc">-</span><span class="dv">1</span>,</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">3</span>), </span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>                            <span class="fu">rep</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">5</span>),</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>                            <span class="dv">0</span>))</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>survey_01_data_dictionary[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>)] <span class="sc">|&gt;</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">"html"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="lightable-classic caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">question</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">short_name</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">sign_wt</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Timestamp</td>
+<td style="text-align: left;">timestamp</td>
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">I have at times changed opinions that were important to me, when someone showed me I was wrong.</td>
+<td style="text-align: left;">when_shown_wrong</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">I am willing to change my position on an important issue in the face of good reasons.</td>
+<td style="text-align: left;">good_reason</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">I am open to revising my important beliefs in the face of new information.</td>
+<td style="text-align: left;">new_info</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">I am willing to change my opinions on the basis of compelling reason.</td>
+<td style="text-align: left;">compelling_reason</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">I’m willing to change my mind once it’s made up about an important topic.</td>
+<td style="text-align: left;">mind_made_up</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">When scientists change their mind about a scientific idea it diminishes my trust in their work.</td>
+<td style="text-align: left;">change_minds_undermines_trust</td>
 <td style="text-align: right;">-1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Scientists ignore evidence that contradicts their work.</td>
+<td style="text-align: left;">ignore_contradictory_evidence</td>
 <td style="text-align: right;">-1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Scientific theories are weak explanations.</td>
+<td style="text-align: left;">theories_are_weak</td>
 <td style="text-align: right;">-1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Scientists intentionally keep their work secret.</td>
+<td style="text-align: left;">keep_work_secret</td>
 <td style="text-align: right;">-1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">We can trust scientists to share their discoveries even if they don't like their findings.</td>
-<td style="text-align: right;">-1</td>
+<td style="text-align: left;">share_findings_dont_like</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Scientists don't value the ideas of others.</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: left;">dont_value_others_ideas</td>
+<td style="text-align: right;">-1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">I trust that the work of scientists is to make life better for people.</td>
+<td style="text-align: left;">make_life_better</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Scientists don't care if laypersons understand their work.</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: left;">dont_care_laypeople_understand</td>
+<td style="text-align: right;">-1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">We should trust the work of scientists.</td>
+<td style="text-align: left;">should_trust_work</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">We should trust that scientists are being honest in their work.</td>
+<td style="text-align: left;">should_trust_honesty</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">We should trust that scientists are being ethical in their work.</td>
-<td style="text-align: right;">-1</td>
+<td style="text-align: left;">should_trust_ethical</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Scientific theories are trustworthy.</td>
-<td style="text-align: right;">-1</td>
+<td style="text-align: left;">theories_trustworthy</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">When scientists form a hypothesis they are just guessing.</td>
+<td style="text-align: left;">hypotheses_just_guesses</td>
 <td style="text-align: right;">-1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">People who understand science more have more trust in science.</td>
-<td style="text-align: right;">-1</td>
+<td style="text-align: left;">more_understanding_more_trust</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">We can trust science to find the answers that explain the natural world.</td>
-<td style="text-align: right;">-1</td>
+<td style="text-align: left;">trust_explain_natural_world</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">I trust scientists can find solutions to our major technological problems.</td>
-<td style="text-align: right;">-1</td>
+<td style="text-align: left;">trust_find_tech_solutions</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">We cannot trust scientists because they are biased in their perspectives.</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: left;">cant_trust_biased</td>
+<td style="text-align: right;">-1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Scientists will protect each other even when they are wrong.</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: left;">protect_each_other_when_wrong</td>
+<td style="text-align: right;">-1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">We cannot trust scientists to consider ideas that contradict their own.</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: left;">wont_consider_contradictory_ideas</td>
+<td style="text-align: right;">-1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Today's scientists will sacrifice the well being of others to advance their research.</td>
+<td style="text-align: left;">sacrifice_others_to_advance</td>
 <td style="text-align: right;">-1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">We cannot trust science because it moves too slowly.</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: left;">cant_trust_moves_slowly</td>
+<td style="text-align: right;">-1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">If you wish to comment about the questions in this survey, you may do so here. You are not required to comment. Your comments might be seen by others.</td>
+<td style="text-align: left;">comments</td>
 <td style="text-align: right;">0</td>
 </tr>
 </tbody>
 </table>
 
 
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I found some mistakes in the code I used last year to reverse-code variables when I revisted it this year. Only when I went through each question one-by-one, did I find the errors. I’m very glad I’d shown the variables in a table.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I’m on the fence about whether “People who understand science more have more trust in science.” should be in the composite. What do you think? What did <span class="citation" data-cites="Plohl2023-yf">(<a href="#ref-Plohl2023-yf" role="doc-biblioref">Plohl &amp; Musil, 2023</a>)</span> do?</p>
 </div>
 </div>
 <div class="cell">
@@ -1110,17 +1130,47 @@ Figure&nbsp;4: Responses to trust in science questions from <span class="citatio
 <span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">openness_comp =</span> <span class="fu">rowMeans</span>(survey_01_recoded[, <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]),</span>
 <span id="cb22-40"><a href="#cb22-40" aria-hidden="true" tabindex="-1"></a>                <span class="at">trust_comp =</span> <span class="fu">rowMeans</span>(survey_01_recoded[, <span class="dv">7</span><span class="sc">:</span><span class="dv">27</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Here’s a plot to ensure our recoded data about trust in science make sense.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>survey_01_recoded <span class="sc">|&gt;</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(openness_comp, trust_comp) <span class="sc">|&gt;</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(openness_comp, trust_comp) <span class="sc">+</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">formula =</span> y <span class="sc">~</span> x) <span class="sc">+</span></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">1</span>,<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">1</span>,<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="at">cols=</span><span class="dv">7</span><span class="sc">:</span><span class="dv">27</span>, <span class="at">names_to =</span> <span class="st">"question"</span>, <span class="at">values_to =</span> <span class="st">"rating"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(rating) <span class="sc">+</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_dotplot</span>(<span class="at">dotsize =</span> .<span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">1</span>, <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.y =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.y =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="at">facets =</span> <span class="fu">vars</span>(question), <span class="at">ncol =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Bin width defaults to 1/30 of the range of the data. Pick better value with
+`binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-recoded-trust-scores" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-recoded-trust-scores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="survey-01_files/figure-html/fig-recoded-trust-scores-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-recoded-trust-scores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Recoded ‘trust’ scores
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Here we evaluate the relationship between a person’s openness and their trust in science.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>survey_01_recoded <span class="sc">|&gt;</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(openness_comp, trust_comp) <span class="sc">|&gt;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(openness_comp, trust_comp) <span class="sc">+</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">formula =</span> y <span class="sc">~</span> x) <span class="sc">+</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">1</span>,<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">1</span>,<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-openness-trust-composite" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1128,38 +1178,69 @@ Figure&nbsp;4: Responses to trust in science questions from <span class="citatio
 <img src="survey-01_files/figure-html/fig-openness-trust-composite-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-openness-trust-composite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Composite ‘openness’ and ‘trust’ scores
+Figure&nbsp;3: Composite ‘openness’ and ‘trust’ scores
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(survey_01_recoded, stats<span class="sc">::</span><span class="fu">cor.test</span>(openness_comp, trust_comp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(survey_01_recoded, stats<span class="sc">::</span><span class="fu">cor.test</span>(openness_comp, trust_comp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's product-moment correlation
 
 data:  openness_comp and trust_comp
-t = -1.1798, df = 5, p-value = 0.2912
+t = 0.82983, df = 5, p-value = 0.4444
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- -0.9025413  0.4415910
+ -0.5489669  0.8724059
 sample estimates:
-       cor 
--0.4666479 </code></pre>
+      cor 
+0.3479246 </code></pre>
 </div>
 </div>
+<p>Here are the Fall 2023 results: <a href="#fig-fall-2023-openness-trust-composite" class="quarto-xref">Figure&nbsp;6</a>.</p>
 </section>
 </section>
-<section id="compare-with-prior-semesters" class="level2">
-
+<section id="fall-2023-results" class="level2">
+<h2 class="anchored" data-anchor-id="fall-2023-results">Fall 2023 results</h2>
+<div id="fig-fall-2023-openness-dotplot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fall-2023-openness-dotplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://raw.githubusercontent.com/psu-psychology/psych-490-reproducibility-2023-fall/main/docs/surveys/survey-01_files/figure-html/fig-openness-dotplot-1.png" id="fig-fall-2023-openness-dotplot" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-fall-2023-openness-dotplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4
+</figcaption>
+</figure>
+</div>
+<div id="fig-fall-2023-trust-dotplot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fall-2023-trust-dotplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://raw.githubusercontent.com/psu-psychology/psych-490-reproducibility-2023-fall/main/docs/surveys/survey-01_files/figure-html/fig-trust-dotplot-1.png" id="fig-fall-2023-trust-dotplot" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-fall-2023-trust-dotplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5
+</figcaption>
+</figure>
+</div>
+<div id="fig-fall-2023-openness-trust-composite" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fall-2023-openness-trust-composite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://raw.githubusercontent.com/psu-psychology/psych-490-reproducibility-2023-fall/main/docs/surveys/survey-01_files/figure-html/fig-openness-trust-composite-1.png" id="fig-fall-2023-openness-trust-composite" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-fall-2023-openness-trust-composite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6
+</figcaption>
+</figure>
+</div>
 
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Compare with prior semesters</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-Krumrei-Mancuso2016-qm" class="csl-entry" role="listitem">
 Krumrei-Mancuso, E. J., &amp; Rouse, S. V. (2016). The development and validation of the comprehensive intellectual humility scale. <em>Journal of Personality Assessment</em>, <em>98</em>(2), 209–221. <a href="https://doi.org/10.1080/00223891.2015.1068174">https://doi.org/10.1080/00223891.2015.1068174</a>
 </div>
