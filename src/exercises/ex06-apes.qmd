@@ -9,7 +9,7 @@ Due: [Friday, October 20](../schedule.qmd#friday-october-20){.orange_due}.
 
 ## Goals
 
-This exercise aims to to build your understanding about the relationship between alpha $\alpha$ and its close cousin [statistical significance](https://forrt.org/glossary/statistical-significance/), [statistical power](https://forrt.org/glossary/statistical-power/) (1-$\beta$), effect size ($d$), and sample sizes ($n$).
+This exercise aims to to build your understanding about the relationship between alpha $\alpha$ and its close cousin [statistical significance](https://forrt.org/glossary/english/statistical_significance/), [statistical power](https://forrt.org/glossary/english/statistical_power/) (1-$\beta$), effect size ($d$), and sample sizes ($n$).
 
 ## Materials
 

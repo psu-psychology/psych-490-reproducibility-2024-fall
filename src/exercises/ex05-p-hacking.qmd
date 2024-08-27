@@ -13,7 +13,7 @@ This exercise builds heavily on [@Pownall2021-aa](https://doi.org/10.17605/OSF.I
 
 ## Goals
 
-This exercise aims to build your understanding about [*p-hacking*](https://forrt.org/glossary/p-hacking/), what it is, how it can occur, and its impact on research.
+This exercise aims to build your understanding about [*p-hacking*](https://forrt.org/glossary/english/p_hacking/), what it is, how it can occur, and its impact on research.
 
 ## Materials
 

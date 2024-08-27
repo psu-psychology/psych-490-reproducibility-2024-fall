@@ -360,7 +360,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 *Work Session: Final Projects*
 
 - [Final project survey]{.green_assigned}
-    - Please complete the [final project survey](https://forms.gle/d4izA6vm3A1v5bqb6) by [Friday, November 15]{.orange_due}
+    - Please complete the [final project survey](https://forms.gle/vtdJ82Y7AjgU15VA9) by [Friday, November 15]{.orange_due}
 
 ## November 18-22 {- #week-13}
 
@@ -393,7 +393,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 - [Assignment distributed]{.green_assigned}
     - [Exercise 08: Data and materials sharing](exercises/ex08-sharing.qmd)
-- [[Final project survey](https://forms.gle/d4izA6vm3A1v5bqb6)]{.orange_due}
+- [[Final project survey](https://forms.gle/vtdJ82Y7AjgU15VA9)]{.orange_due}
 
 ## November 25-29 *Thanksgiving Break*
 
@@ -404,6 +404,8 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 *In-class final project work day*
 
 ### Wednesday, December 4 {-}
+
+*In-class final project work day*
 
 ### Friday, December 6 {-}
 
@@ -417,21 +419,19 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 ### Monday, December 9 {-}
 
-*Final project workday*
+*Project presentations*
+
+- [Schedule]()
 
 ### Wednesday, December 11 {-}
 
 *Project presentations*
 
 - [Schedule]()
-- [Class notes]()
 
 ### Friday, December 13 {-}
 
-*Project presentations*
-
-- [Schedule]()
-- [Class notes]()
+*The future of open, transparent, and reproducible scholarship*
   
 ## December 16-20 {- #finals-week}
 
