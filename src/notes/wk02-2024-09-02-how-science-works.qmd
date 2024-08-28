@@ -1,16 +1,6 @@
 ---
 title: "How science works (or should)"
 subtitle: "2024-09-02 Mon"
-author: "Rick Gilmore"
-format: 
-  revealjs:
-    footer: "[PSYCH 490.012 • Fall 2024](../index.html)"
-    slide-number: true
-    fig-align: center
-    logo: https://brand.psu.edu/images/backgrounds/penn-state-shield.jpg
-bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
-csl: ../include/bib/apa.csl
-css: ../include/css/styles.css
 ---
 
 ## Prelude 

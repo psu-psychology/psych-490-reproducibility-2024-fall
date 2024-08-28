@@ -1,14 +1,6 @@
 ---
 title: "Don't Fool Yourself"
 subtitle: "2024-08-28 Wed"
-author: "Rick Gilmore"
-format: 
-  revealjs:
-    footer: "[PSYCH 490.012 • Fall 2024](../index.html)"
-    slide-number: true
-bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
-csl: ../include/bib/apa.csl
-css: ../include/css/styles.css
 ---
 
 # Prelude
