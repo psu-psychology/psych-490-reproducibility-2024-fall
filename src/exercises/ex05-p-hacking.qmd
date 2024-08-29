@@ -75,7 +75,9 @@ Include a very short Introduction section; a slightly longer Methods section, an
 
 Please save a copy of your report as a docx using the preferred file naming convention for this class: `<lastname>-<firstname>-PSYCH490.012-ex05.docx`, where you substitute your last name for <lastname> and your first name for <firstname>.
 
-Submit your report on Canvas in the dropbox for this assignment.
+### Canvas dropbox
+
+<https://psu.instructure.com/courses/2350148/assignments/16528489>
 
 Please also bring a copy to class with you on **Friday, October 11, 2024** for discussion.
 

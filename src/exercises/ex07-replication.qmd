@@ -5,7 +5,7 @@ subtitle: "Replication"
 
 ## Dates
 
-Due: [Friday, October 27](../schedule.qmd#friday-october-27){.orange_due}.
+Due: [Friday, November 8](../schedule.qmd#friday-november-08){.orange_due}.
 
 ## Goals
 
@@ -37,4 +37,9 @@ If you had to give the author(s) of your paper a grade for *replicability* (A, B
 In a short (2-3 pp double-spaced report) discuss the paper's finding and why you think it is interesting and important.
 Then, evaluate the paper from the perspective of "replicability" by answering the questions in the previous section.
 Conclude with your "grade" and an explanation for it.
+
+### Canvas dropbox
+
+<https://psu.instructure.com/courses/2350148/assignments/16528494>
+
 

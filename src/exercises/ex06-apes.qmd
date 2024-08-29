@@ -94,6 +94,15 @@ In your own words, explain what the confidence interval means.
 
 ## Submit
 
-Bring your *draft* report  to class with you on Friday, October 20, 2023. We'll discuss the assignment. The final submission is due Monday, October 23, 2023 at midnight.
+Bring your *draft* report  to class with you on **Friday, October 25, 2024**. We'll discuss the assignment.
+
+### Canvas dropbox
+
+<https://psu.instructure.com/courses/2350148/assignments/16528492>
+
+### Canvas dropbox
+
+<https://psu.instructure.com/courses/2350148/assignments/16528489>
+
 
 [^3]: Remember that probabilities are always between 0 and 1 and always sum to 1.
