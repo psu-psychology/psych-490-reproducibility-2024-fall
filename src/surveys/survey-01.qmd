@@ -53,7 +53,6 @@ Make sure to close and save the `.Renviron` file and restart your R session befo
 
 :::
 
-
 ```{r, eval=params$update_data}
 #| label: gather-data-from-google
 #| message: false
@@ -352,6 +351,52 @@ I found some mistakes in the code I used last year to reverse-code variables whe
 Only when I went through each question one-by-one did I find the errors.
 I'm very glad I'd shown the variables in a table.
 :::
+
+::: {.callout-note}
+This next section of code reflects my attempt to make a function that categorizes the weights that should be applied to the variables.
+I think this is more reliable and more transparent.
+What do you think?
+:::
+
+```{r}
+assign_trust_wt <- function(var_name) {
+  wt <- if_else(var_name %in% c('when_shown_wrong',
+                                'good_reason',
+                                'new_info',
+                                'mind_made_up',
+                                'compelling_reason',
+                                'should_trust_work',
+                          'should_trust_honesty',
+                          'should_trust_ethical',
+                          'more_understanding_more_trust',
+                          'trust_explain_natural_world',
+                          'share_findings_dont_like',
+                          'make_life_better',
+                          'theories_trustworthy',
+                          'trust_find_tech_solutions'), 1,
+                if_else(var_name %in% c('ignore_contradictory_evidence',
+                                        'theories_are_weak',
+                                        'keep_work_secret',
+                                        'dont_value_others_ideas',
+                                        'dont_care_laypeople_understand',
+                                        'cant_trust_biased',
+                                        'protect_each_other_when_wrong',
+                                        'wont_consider_contradictory_ideas',
+                                        'sacrifice_others_to_advance',
+                                        'cant_trust_moves_slowly',
+                                        'change_minds_undermines_trust',
+                                        'hypotheses_just_guesses'
+                                        ), -1, 0))
+  wt
+}
+
+survey_01_data_dictionary <- survey_01_data_dictionary |>
+  dplyr::mutate(sign_wt_new = assign_trust_wt(short_name))
+                
+survey_01_data_dictionary[,c(1,2,4,5)] |>
+  knitr::kable(format = "html") |>
+  kableExtra::kable_classic()
+```
 
 ::: {.callout-note}
 I'm on the fence about whether "People who understand science more have more trust in science." should be in the composite.

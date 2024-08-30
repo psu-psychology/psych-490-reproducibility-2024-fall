@@ -1106,63 +1106,299 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>This next section of code reflects my attempt to make a function that categorizes the weights that should be applied to the variables. I think this is more reliable and more transparent. What do you think?</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>assign_trust_wt <span class="ot">&lt;-</span> <span class="cf">function</span>(var_name) {</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  wt <span class="ot">&lt;-</span> <span class="fu">if_else</span>(var_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'when_shown_wrong'</span>,</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>                                <span class="st">'good_reason'</span>,</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>                                <span class="st">'new_info'</span>,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>                                <span class="st">'mind_made_up'</span>,</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>                                <span class="st">'compelling_reason'</span>,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>                                <span class="st">'should_trust_work'</span>,</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>                          <span class="st">'should_trust_honesty'</span>,</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>                          <span class="st">'should_trust_ethical'</span>,</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>                          <span class="st">'more_understanding_more_trust'</span>,</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>                          <span class="st">'trust_explain_natural_world'</span>,</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>                          <span class="st">'share_findings_dont_like'</span>,</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>                          <span class="st">'make_life_better'</span>,</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>                          <span class="st">'theories_trustworthy'</span>,</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>                          <span class="st">'trust_find_tech_solutions'</span>), <span class="dv">1</span>,</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>                <span class="fu">if_else</span>(var_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'ignore_contradictory_evidence'</span>,</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">'theories_are_weak'</span>,</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">'keep_work_secret'</span>,</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">'dont_value_others_ideas'</span>,</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">'dont_care_laypeople_understand'</span>,</span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">'cant_trust_biased'</span>,</span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">'protect_each_other_when_wrong'</span>,</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">'wont_consider_contradictory_ideas'</span>,</span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">'sacrifice_others_to_advance'</span>,</span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">'cant_trust_moves_slowly'</span>,</span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">'change_minds_undermines_trust'</span>,</span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>                                        <span class="st">'hypotheses_just_guesses'</span></span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a>                                        ), <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>))</span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>  wt</span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a>survey_01_data_dictionary <span class="ot">&lt;-</span> survey_01_data_dictionary <span class="sc">|&gt;</span></span>
+<span id="cb23-33"><a href="#cb23-33" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">sign_wt_new =</span> <span class="fu">assign_trust_wt</span>(short_name))</span>
+<span id="cb23-34"><a href="#cb23-34" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb23-35"><a href="#cb23-35" aria-hidden="true" tabindex="-1"></a>survey_01_data_dictionary[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>)] <span class="sc">|&gt;</span></span>
+<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">"html"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-37"><a href="#cb23-37" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="lightable-classic caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">question</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">short_name</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sign_wt</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sign_wt_new</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Timestamp</td>
+<td style="text-align: left;">timestamp</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I have at times changed opinions that were important to me, when someone showed me I was wrong.</td>
+<td style="text-align: left;">when_shown_wrong</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I am willing to change my position on an important issue in the face of good reasons.</td>
+<td style="text-align: left;">good_reason</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I am open to revising my important beliefs in the face of new information.</td>
+<td style="text-align: left;">new_info</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I am willing to change my opinions on the basis of compelling reason.</td>
+<td style="text-align: left;">compelling_reason</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I’m willing to change my mind once it’s made up about an important topic.</td>
+<td style="text-align: left;">mind_made_up</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">When scientists change their mind about a scientific idea it diminishes my trust in their work.</td>
+<td style="text-align: left;">change_minds_undermines_trust</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Scientists ignore evidence that contradicts their work.</td>
+<td style="text-align: left;">ignore_contradictory_evidence</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Scientific theories are weak explanations.</td>
+<td style="text-align: left;">theories_are_weak</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Scientists intentionally keep their work secret.</td>
+<td style="text-align: left;">keep_work_secret</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">We can trust scientists to share their discoveries even if they don't like their findings.</td>
+<td style="text-align: left;">share_findings_dont_like</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Scientists don't value the ideas of others.</td>
+<td style="text-align: left;">dont_value_others_ideas</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">I trust that the work of scientists is to make life better for people.</td>
+<td style="text-align: left;">make_life_better</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Scientists don't care if laypersons understand their work.</td>
+<td style="text-align: left;">dont_care_laypeople_understand</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">We should trust the work of scientists.</td>
+<td style="text-align: left;">should_trust_work</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">We should trust that scientists are being honest in their work.</td>
+<td style="text-align: left;">should_trust_honesty</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">We should trust that scientists are being ethical in their work.</td>
+<td style="text-align: left;">should_trust_ethical</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Scientific theories are trustworthy.</td>
+<td style="text-align: left;">theories_trustworthy</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">When scientists form a hypothesis they are just guessing.</td>
+<td style="text-align: left;">hypotheses_just_guesses</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">People who understand science more have more trust in science.</td>
+<td style="text-align: left;">more_understanding_more_trust</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">We can trust science to find the answers that explain the natural world.</td>
+<td style="text-align: left;">trust_explain_natural_world</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I trust scientists can find solutions to our major technological problems.</td>
+<td style="text-align: left;">trust_find_tech_solutions</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">We cannot trust scientists because they are biased in their perspectives.</td>
+<td style="text-align: left;">cant_trust_biased</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Scientists will protect each other even when they are wrong.</td>
+<td style="text-align: left;">protect_each_other_when_wrong</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">We cannot trust scientists to consider ideas that contradict their own.</td>
+<td style="text-align: left;">wont_consider_contradictory_ideas</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Today's scientists will sacrifice the well being of others to advance their research.</td>
+<td style="text-align: left;">sacrifice_others_to_advance</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">We cannot trust science because it moves too slowly.</td>
+<td style="text-align: left;">cant_trust_moves_slowly</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">If you wish to comment about the questions in this survey, you may do so here. You are not required to comment. Your comments might be seen by others.</td>
+<td style="text-align: left;">comments</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>I’m on the fence about whether “People who understand science more have more trust in science.” should be in the composite. What do you think? What did <span class="citation" data-cites="Plohl2023-yf">(<a href="#ref-Plohl2023-yf" role="doc-biblioref">Plohl &amp; Musil, 2023</a>)</span> do?</p>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Recode variables with "reverse" indicator (sign_x == -1)</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>recode_reverse_vars <span class="ot">&lt;-</span> <span class="cf">function</span>(x, sign_x) {</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (sign_x <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span>) {</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">switch</span>(x,</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>           <span class="dv">5</span>,</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>           <span class="dv">4</span>,</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>           <span class="dv">3</span>,</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>           <span class="dv">2</span>,</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>           <span class="dv">1</span>)</span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    x</span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Recode a specific variable based on its column index</span></span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>recode_var <span class="ot">&lt;-</span> <span class="cf">function</span>(var_i, <span class="at">df_vars =</span> survey_01_clean, <span class="at">df_dict =</span> survey_01_data_dictionary) {</span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>  vals <span class="ot">&lt;-</span> <span class="fu">unname</span>(<span class="fu">unlist</span>(df_vars[, var_i]))</span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>  wts <span class="ot">&lt;-</span> <span class="fu">unname</span>(<span class="fu">unlist</span>(<span class="fu">rep</span>(df_dict[var_i, <span class="dv">4</span>], <span class="fu">length</span>(vals))))</span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map2</span>(vals, wts, recode_reverse_vars) <span class="sc">|&gt;</span></span>
-<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unlist</span>()</span>
-<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Recode the entire dataset and create a new data frame/tibble</span></span>
-<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>recode_survey_01 <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
-<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">28</span>, recode_var)</span>
-<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a>  var_names <span class="ot">&lt;-</span> survey_01_data_dictionary[,<span class="dv">2</span>] <span class="sc">|&gt;</span></span>
-<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unlist</span>() <span class="sc">|&gt;</span></span>
-<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unname</span>()</span>
-<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">names</span>(x) <span class="ot">&lt;-</span> var_names</span>
-<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>(x)</span>
-<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb23-33"><a href="#cb23-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-34"><a href="#cb23-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the recode_survey_01() function</span></span>
-<span id="cb23-35"><a href="#cb23-35" aria-hidden="true" tabindex="-1"></a>survey_01_recoded <span class="ot">&lt;-</span> <span class="fu">recode_survey_01</span>()</span>
-<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-37"><a href="#cb23-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the composite scores as mean values across rows (within participants)</span></span>
-<span id="cb23-38"><a href="#cb23-38" aria-hidden="true" tabindex="-1"></a>survey_01_recoded <span class="ot">&lt;-</span> survey_01_recoded <span class="sc">|&gt;</span></span>
-<span id="cb23-39"><a href="#cb23-39" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">openness_comp =</span> <span class="fu">rowMeans</span>(survey_01_recoded[, <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]),</span>
-<span id="cb23-40"><a href="#cb23-40" aria-hidden="true" tabindex="-1"></a>                <span class="at">trust_comp =</span> <span class="fu">rowMeans</span>(survey_01_recoded[, <span class="dv">7</span><span class="sc">:</span><span class="dv">27</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Recode variables with "reverse" indicator (sign_x == -1)</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>recode_reverse_vars <span class="ot">&lt;-</span> <span class="cf">function</span>(x, sign_x) {</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (sign_x <span class="sc">==</span> <span class="sc">-</span><span class="dv">1</span>) {</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">switch</span>(x,</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>           <span class="dv">5</span>,</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>           <span class="dv">4</span>,</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>           <span class="dv">3</span>,</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>           <span class="dv">2</span>,</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>           <span class="dv">1</span>)</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>    x</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Recode a specific variable based on its column index</span></span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>recode_var <span class="ot">&lt;-</span> <span class="cf">function</span>(var_i, <span class="at">df_vars =</span> survey_01_clean, <span class="at">df_dict =</span> survey_01_data_dictionary) {</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>  vals <span class="ot">&lt;-</span> <span class="fu">unname</span>(<span class="fu">unlist</span>(df_vars[, var_i]))</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>  wts <span class="ot">&lt;-</span> <span class="fu">unname</span>(<span class="fu">unlist</span>(<span class="fu">rep</span>(df_dict[var_i, <span class="dv">4</span>], <span class="fu">length</span>(vals))))</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map2</span>(vals, wts, recode_reverse_vars) <span class="sc">|&gt;</span></span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unlist</span>()</span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Recode the entire dataset and create a new data frame/tibble</span></span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a>recode_survey_01 <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">28</span>, recode_var)</span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>  var_names <span class="ot">&lt;-</span> survey_01_data_dictionary[,<span class="dv">2</span>] <span class="sc">|&gt;</span></span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unlist</span>() <span class="sc">|&gt;</span></span>
+<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unname</span>()</span>
+<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">names</span>(x) <span class="ot">&lt;-</span> var_names</span>
+<span id="cb24-31"><a href="#cb24-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>(x)</span>
+<span id="cb24-32"><a href="#cb24-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb24-33"><a href="#cb24-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-34"><a href="#cb24-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the recode_survey_01() function</span></span>
+<span id="cb24-35"><a href="#cb24-35" aria-hidden="true" tabindex="-1"></a>survey_01_recoded <span class="ot">&lt;-</span> <span class="fu">recode_survey_01</span>()</span>
+<span id="cb24-36"><a href="#cb24-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-37"><a href="#cb24-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the composite scores as mean values across rows (within participants)</span></span>
+<span id="cb24-38"><a href="#cb24-38" aria-hidden="true" tabindex="-1"></a>survey_01_recoded <span class="ot">&lt;-</span> survey_01_recoded <span class="sc">|&gt;</span></span>
+<span id="cb24-39"><a href="#cb24-39" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">openness_comp =</span> <span class="fu">rowMeans</span>(survey_01_recoded[, <span class="dv">2</span><span class="sc">:</span><span class="dv">6</span>]),</span>
+<span id="cb24-40"><a href="#cb24-40" aria-hidden="true" tabindex="-1"></a>                <span class="at">trust_comp =</span> <span class="fu">rowMeans</span>(survey_01_recoded[, <span class="dv">7</span><span class="sc">:</span><span class="dv">27</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Here’s a plot to ensure our recoded data about trust in science make sense.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>survey_01_recoded <span class="sc">|&gt;</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="at">cols=</span><span class="dv">7</span><span class="sc">:</span><span class="dv">27</span>, <span class="at">names_to =</span> <span class="st">"question"</span>, <span class="at">values_to =</span> <span class="st">"rating"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(rating) <span class="sc">+</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_dotplot</span>(<span class="at">dotsize =</span> .<span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">1</span>, <span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.y =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.y =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="at">facets =</span> <span class="fu">vars</span>(question), <span class="at">ncol =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>survey_01_recoded <span class="sc">|&gt;</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="at">cols=</span><span class="dv">7</span><span class="sc">:</span><span class="dv">27</span>, <span class="at">names_to =</span> <span class="st">"question"</span>, <span class="at">values_to =</span> <span class="st">"rating"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>()<span class="sc">+</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(rating) <span class="sc">+</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_dotplot</span>(<span class="at">dotsize =</span> .<span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">1</span>, <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.y =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.y =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="at">facets =</span> <span class="fu">vars</span>(question), <span class="at">ncol =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Bin width defaults to 1/30 of the range of the data. Pick better value with
 `binwidth`.</code></pre>
@@ -1182,16 +1418,16 @@ Figure&nbsp;3: Recoded ‘trust’ scores
 </div>
 <p>Here we evaluate the relationship between a person’s openness and their trust in science.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>survey_01_recoded <span class="sc">|&gt;</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(openness_comp, trust_comp) <span class="sc">|&gt;</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(openness_comp, trust_comp) <span class="sc">+</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,</span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">formula =</span> y <span class="sc">~</span> x) <span class="sc">+</span></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">1</span>,<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">1</span>,<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>survey_01_recoded <span class="sc">|&gt;</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(openness_comp, trust_comp) <span class="sc">|&gt;</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(openness_comp, trust_comp) <span class="sc">+</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">formula =</span> y <span class="sc">~</span> x) <span class="sc">+</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">1</span>,<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">1</span>,<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-openness-trust-composite" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1206,7 +1442,7 @@ Figure&nbsp;4: Composite ‘openness’ and ‘trust’ scores
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(survey_01_recoded, stats<span class="sc">::</span><span class="fu">cor.test</span>(openness_comp, trust_comp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(survey_01_recoded, stats<span class="sc">::</span><span class="fu">cor.test</span>(openness_comp, trust_comp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's product-moment correlation
