@@ -218,36 +218,51 @@ if (n_responses > 1) {
 
 Remember, this is the relationship between the numbers and the verbal ratings:
 
-![Survey 01 response options](../include/img/survey-01-resp-options.png){fig-align="center"}
+![Survey 01 response options](../include/img/survey-01-resp-options.png){#fig-response-options fig-align="center"}
 
 Here are the questions:
 
 ```{r}
+#| label: tbl-openness-questions-long-and-short
 survey_01_data_dictionary[2:6,1:2] |>
   knitr::kable(format = "html") |>
   kableExtra::kable_classic()
 ```
 
+#### Plot
+
 Here is a dotplot of the data:
 
-```{r, eval = params$make_plots}
+```{r}
 #| label: fig-openness-to-revising-viewpoint
 #| fig-cap: "Reponses to Openness to Revising One’s Viewpoint subscale questions from [@Krumrei-Mancuso2016-qm]"
 #| message: false
 
-survey_01_clean[, 1:6] |>
-  tidyr::pivot_longer(cols=2:6, names_to = "question", values_to = "rating") |>
-  ggplot()+
-  aes(rating) +
-  geom_dotplot(dotsize = .4) +
-  xlim(1, 5) +
-  theme(axis.title.y = element_blank()) +
+survey_01_openness <- survey_01_clean[, 1:6] |>
+  tidyr::pivot_longer(cols=2:6, names_to = "question", values_to = "rating")
+
+survey_01_openness |>
+  ggplot() +
+  aes(x = rating) +
+  geom_dotplot(dotsize = .2) +
+  xlim(1,5) +
+  xlab("strongly disagree <-----> strongly agree   ") +
+  theme(axis.title.y = element_blank()) +                    
   theme(axis.text.y = element_blank()) +
   theme(axis.ticks = element_blank()) +
   facet_wrap(facets = vars(question), ncol = 1)
 ```
 
-See the Fall 2023 results: @fig-fall-2023-openness-dotplot.
+See the Fall 2023 results here: @fig-fall-2023-openness-dotplot.
+
+#### Statistical summary
+
+```{r}
+#| label: tbl-openness-ratings
+survey_01_openness |>
+  dplyr::group_by(question) |>
+  dplyr::summarise(mean_rating = mean(rating), sd_rating = sd(rating))
+```
 
 ### Trust in science questions
 
@@ -264,7 +279,9 @@ Any time I repeat myself, I should remember this acronym:
 
 There are a number of these, so we break them into smaller groups for visualization.
 
-![Survey 01 response options](../include/img/survey-01-resp-options.png){fig-align="center"}
+Remember, we use the same response options as for the 'openness' questions, see @fig-response-options.
+
+<!-- ![Survey 01 response options](../include/img/survey-01-resp-options.png){fig-align="center"} -->
 
 Here are the questions:
 
@@ -277,16 +294,20 @@ survey_01_data_dictionary[7:27, 1:2] |>
   kableExtra::kable_classic()
 ```
 
+#### Plot
+
 Here is are plots of your ratings:
 
-```{r, eval = params$make_plots}
+```{r}
 #| label: fig-trust-dotplot
 #| message: false
 #| fig-cap: "Responses to trust in science questions from [@Nadelson2014-ym]"
 
-survey_01_clean |>
-  tidyr::pivot_longer(cols=7:27, names_to = "question", values_to = "rating") |>
-  ggplot()+
+survey_01_trust <- survey_01_clean |>
+  tidyr::pivot_longer(cols=7:27, names_to = "question", values_to = "rating")
+
+survey_01_trust |>
+  ggplot() +
   aes(rating) +
   geom_dotplot(dotsize = .4) +
   xlim(1, 5) +
@@ -296,11 +317,25 @@ survey_01_clean |>
   facet_wrap(facets = vars(question), ncol = 3)
 ```
 
-See the Fall 2023 results: @fig-fall-2023-trust-dotplot.
+See the Fall 2023 results here: @fig-fall-2023-trust-dotplot.
+
+#### Summary statistics
+
+Here are summary statistics about the ratings sorted in descending order:
+
+```{r}
+#| label: tbl-trust-ratings
+survey_01_trust |>
+  dplyr::group_by(question) |>
+  dplyr::summarise(mean_rating = mean(rating), sd_rating = sd(rating)) |>
+  dplyr::arrange(desc(mean_rating)) |>
+  kableExtra::kable(format = 'html') |>
+    kableExtra::kable_classic()
+```
 
 ### Comments
 
-```{r, eval = params$make_plots}
+```{r}
 #| label: table-comments
 survey_01_clean |>
   dplyr::select(comments) |>
@@ -309,11 +344,13 @@ survey_01_clean |>
   kableExtra::kable_classic()
 ```
 
+No one seemed to have had any comments.
+
 ### Aggregate openness and trust questions
 
 Next, we calculate aggregate "openness" and "trust" scores to look at the relationship between these variables.
 
-```{r, eval = params$make_plots}
+```{r}
 #| label: create-openness-trust-composite
 survey_01_clean <- survey_01_clean |>
   dplyr::mutate(openness_comp = sum(survey_01_clean[, 2:6]))
@@ -326,7 +363,8 @@ If the sign is reversed, then we must assign 1 to 5, 2 to 4, 3 to 3, 4 to 2, and
 
 Here is a table of the weights to apply to the questions:
 
-```{r, eval = params$make_plots}
+```{r}
+#| label: assign-composite-wts
 survey_01_data_dictionary <- survey_01_data_dictionary |>
   dplyr::mutate(sign_wt = c(0, 
                             rep(1, 5),
@@ -347,7 +385,7 @@ survey_01_data_dictionary[,c(1,2,4)] |>
 ```
 
 ::: {.callout-warning}
-I found some mistakes in the code I used last year to reverse-code variables when I revisted it this year.
+I found some mistakes in the code I used last year to reverse-code variables when I revisited it this year.
 Only when I went through each question one-by-one did I find the errors.
 I'm very glad I'd shown the variables in a table.
 :::
@@ -355,10 +393,16 @@ I'm very glad I'd shown the variables in a table.
 ::: {.callout-note}
 This next section of code reflects my attempt to make a function that categorizes the weights that should be applied to the variables.
 I think this is more reliable and more transparent.
+In other words, I think it's easier to see what's actually going on.
+
 What do you think?
 :::
 
 ```{r}
+#| label: function-to-assign-composite-wts
+
+# Note: this function seems to be equivalent to the manual coding above.
+# So, I did not change the rest of the code to make use of it.
 assign_trust_wt <- function(var_name) {
   wt <- if_else(var_name %in% c('when_shown_wrong',
                                 'good_reason',
@@ -404,7 +448,7 @@ What do you think?
 What did [@Plohl2023-yf] do?
 :::
 
-```{r, eval = params$make_plots}
+```{r}
 # Recode variables with "reverse" indicator (sign_x == -1)
 recode_reverse_vars <- function(x, sign_x) {
   if (sign_x == -1) {
@@ -447,6 +491,8 @@ survey_01_recoded <- survey_01_recoded |>
                 trust_comp = rowMeans(survey_01_recoded[, 7:27]))
 ```
 
+#### Plots
+
 Here's a plot to ensure our recoded data about trust in science make sense.
 
 ```{r}
@@ -466,7 +512,7 @@ survey_01_recoded |>
 
 Here we evaluate the relationship between a person's openness and their trust in science.
 
-```{r, eval = params$make_plots}
+```{r}
 #| label: fig-openness-trust-composite
 #| fig-cap: "Composite 'openness' and 'trust' scores"
 survey_01_recoded |>
@@ -481,7 +527,7 @@ survey_01_recoded |>
   coord_fixed()
 ```
 
-```{r, eval = params$make_plots}
+```{r}
 with(survey_01_recoded, stats::cor.test(openness_comp, trust_comp))
 ```
 
