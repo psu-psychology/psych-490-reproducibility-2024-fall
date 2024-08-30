@@ -9,18 +9,30 @@ subtitle: "2024-08-30 Fri"
 
 - If plan to vote by mail or absentee in Pennsylvania, make sure that you sign and date the envelope that contains your ballot.
 - Don't wait too late to vote.
-
-## Announcements
-
 - No class Monday: Labor Day
+- Fascinating site with interesting data: <https://ourworldindata.org>
+
+---
+
+<iframe src="https://ourworldindata.org/grapher/homelessness-rate-point-in-time-count?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
 
 ## Recap...
 
-- Among other things, @Merton1973-vf says science is a set of _______ values.
-- @Oreskes2017 argues that scientists earn trust about their expertise in a given area by their _______ _______ with the world.
-- @Feynman1974-ld] say is the most important principle scientists should follow?
-  - Don't _______ _______!
+- Among other things, @Merton1973-vf says science is a set of ______ values.
+- @Oreskes2017 argues that scientists earn trust about their expertise in a given area by their _________ _________ with the world.
+- @Feynman1974-ld says the most important principle scientists should follow is...
+  - Don't ____ ______!
   - What else should scientists bend over backward to do?
+
+## Recap...
+
+- Among other things, @Merton1973-vf says science is a set of *cultural* values.
+- @Oreskes2017 argues that scientists earn trust about their expertise in a given area by their *sustained* *engagement* with the world.
+- @Feynman1974-ld] say is the most important principle scientists should follow?
+  - Don't *fool* *yourself*!
+  - What else should scientists bend over backward to do?
+  
+
 
 ## Today
 
