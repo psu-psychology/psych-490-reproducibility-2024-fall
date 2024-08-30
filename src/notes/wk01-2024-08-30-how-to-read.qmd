@@ -7,26 +7,20 @@ subtitle: "2024-08-30 Fri"
 
 ## Announcements
 
-```{r}
-#| label: fig-trust-in-sci-survey
-#| fig-cap: "Optional anonymous survey: <https://forms.gle/DEvDGc3boXQuMkg7A>"
-plot(qrcode::qr_code("https://forms.gle/DEvDGc3boXQuMkg7A"))
-```
-
-<p style="text-align:center;">
-[Results so far](../surveys/survey-01.qmd)
-</p>
+- If plan to vote by mail or absentee in Pennsylvania, make sure that you sign and date the envelope that contains your ballot.
+- Don't wait too late to vote.
 
 ## Announcements
 
 - No class Monday: Labor Day
 
-## Last time...
+## Recap...
 
-- What does Feynmann [-@Feynman1974-ld] say is the most important principle scientists should follow?
-  - Don't ___________ ____________!
-- Why?
-- What should scientists bend over backward to do?
+- Among other things, @Merton1973-vf says science is a set of _______ values.
+- @Oreskes2017 argues that scientists earn trust about their expertise in a given area by their _______ _______ with the world.
+- @Feynman1974-ld] say is the most important principle scientists should follow?
+  - Don't _______ _______!
+  - What else should scientists bend over backward to do?
 
 ## Today
 

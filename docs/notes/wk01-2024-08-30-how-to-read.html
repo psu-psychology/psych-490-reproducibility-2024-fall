@@ -377,12 +377,10 @@ Rick Gilmore
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
-
-<img data-src="img/fig-trust-in-sci-survey-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;1: Optional anonymous survey: <a href="https://forms.gle/DEvDGc3boXQuMkg7A" class="uri">https://forms.gle/DEvDGc3boXQuMkg7A</a>
-</p><p style="text-align:center;">
-<a href="../surveys/survey-01.html">Results so far</a>
-</p>
+<ul>
+<li>If plan to vote by mail or absentee in Pennsylvania, make sure that you sign and date the envelope that contains your ballot.</li>
+<li>Don’t wait too late to vote.</li>
+</ul>
 </section>
 <section id="announcements-1" class="slide level2">
 <h2>Announcements</h2>
@@ -390,15 +388,16 @@ Figure&nbsp;1: Optional anonymous survey: <a href="https://forms.gle/DEvDGc3boXQ
 <li>No class Monday: Labor Day</li>
 </ul>
 </section>
-<section id="last-time" class="slide level2">
-<h2>Last time…</h2>
+<section id="recap" class="slide level2">
+<h2>Recap…</h2>
 <ul>
-<li>What does Feynmann <span class="citation" data-cites="Feynman1974-ld">(<a href="#/references" role="doc-biblioref" onclick="">1974</a>)</span> say is the most important principle scientists should follow?
+<li>Among other things, <span class="citation" data-cites="Merton1973-vf">Merton (<a href="#/references" role="doc-biblioref" onclick="">1973</a>)</span> says science is a set of _______ values.</li>
+<li><span class="citation" data-cites="Oreskes2017">Oreskes (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> argues that scientists earn trust about their expertise in a given area by their _______ _______ with the world.</li>
+<li><span class="citation" data-cites="Feynman1974-ld">Feynman (<a href="#/references" role="doc-biblioref" onclick="">1974</a>)</span>] say is the most important principle scientists should follow?
 <ul>
-<li>Don’t ___________ ____________!</li>
+<li>Don’t _______ _______!</li>
+<li>What else should scientists bend over backward to do?</li>
 </ul></li>
-<li>Why?</li>
-<li>What should scientists bend over backward to do?</li>
 </ul>
 </section>
 <section id="today" class="slide level2">
@@ -550,11 +549,17 @@ Feynman, R. P. (1974). Cargo cult science. <a href="https://calteches.library.ca
 <div id="ref-Krumrei-Mancuso2016-qm" class="csl-entry" role="listitem">
 Krumrei-Mancuso, E. J., &amp; Rouse, S. V. (2016). The development and validation of the comprehensive intellectual humility scale. <em>Journal of Personality Assessment</em>, <em>98</em>(2), 209–221. <a href="https://doi.org/10.1080/00223891.2015.1068174">https://doi.org/10.1080/00223891.2015.1068174</a>
 </div>
+<div id="ref-Merton1973-vf" class="csl-entry" role="listitem">
+Merton, R. W. (1973). The normative structure of science. In R. K. Merton &amp; N. W. Storer (Eds.), <em>The <span>S</span>ociology of <span>S</span>cience: <span>T</span>heoretical and <span>E</span>mpirical <span>I</span>nvestigations</em> (pp. 267–278). The University of Chicago Press.
+</div>
 <div id="ref-Nadelson2014-ym" class="csl-entry" role="listitem">
 Nadelson, L., Jorcyk, C., Yang, D., Jarratt Smith, M., Matson, S., Cornell, K., &amp; Husting, V. (2014). <span>I</span> just don’t trust them: The development and validation of an assessment instrument to measure trust in science and scientists. <em>School Science and Mathematics</em>, <em>114</em>(2), 76–86. <a href="https://doi.org/10.1111/ssm.12051">https://doi.org/10.1111/ssm.12051</a>
 </div>
 <div id="ref-Nosek2012-al" class="csl-entry" role="listitem">
 Nosek, B. A., &amp; Bar-Anan, Y. (2012). Scientific utopia i: Opening scientific communication. <em>Psychological <span>I</span>nquiry</em>, <em>23</em>(3), 217–243. <a href="https://doi.org/10.1080/1047840X.2012.692215">https://doi.org/10.1080/1047840X.2012.692215</a>
+</div>
+<div id="ref-Oreskes2017" class="csl-entry" role="listitem">
+Oreskes, N. (2019). <em><span>W</span>hy <span>T</span>rust <span>S</span>cience</em>. Princeton University Press.
 </div>
 <div id="ref-Plohl2023-yf" class="csl-entry" role="listitem">
 Plohl, N., &amp; Musil, B. (2023). Assessing the incremental value of intellectual humility and cognitive reflection in predicting trust in science. <em>Personality and Individual Differences</em>, <em>214</em>, 112340. <a href="https://doi.org/10.1016/j.paid.2023.112340">https://doi.org/10.1016/j.paid.2023.112340</a>
@@ -777,44 +782,6 @@ Ruben, A. (2016). How to read a scientific paper. <em>Science| AAAS [Internet]</
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

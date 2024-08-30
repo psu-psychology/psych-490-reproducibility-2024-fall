@@ -91,7 +91,7 @@ This is achieved by adding the name of the data directory to a special `.gitigno
 
 ## Cleaning
 
-Next we load the data file and clean it.
+Next we load the saved data file and then proceed to clean it.
 
 ```{r, eval=params$update_data}
 #| label: load-saved-data
@@ -99,7 +99,13 @@ Next we load the data file and clean it.
 #| echo: true
 survey_01 <-
   readr::read_csv(file.path("csv", params$fn), show_col_types = FALSE)
+```
 
+There are `{r} dim(survey_01)[1]-1` responses. That's great for a small class!
+
+These are the column/variable names.
+
+```{r}
 # Google Forms puts the full question in the top row of the data file.
 # We use the names() function to extract and print the original questions.
 survey_01_qs <- names(survey_01)
@@ -124,6 +130,12 @@ survey_01_clean <- survey_01 |>
     comments = "If you wish to comment about the questions in this survey, you may do so here. You are not required to comment. Your comments might be seen by others."
   )
 ```
+
+:::{.callout-note}
+Notice how the `rename()` function puts the 'new' name on the left and the 'old' name on the right.
+
+Keep in mind that the shorter names involve non-arbitrary choices. It's good to keep the original questions close at-hand if you really want to understand what question people were asked.
+:::
 
 Now, we rename the variables from the [@Nadelson2014-ym] trust in science and scientists survey.
 
@@ -220,6 +232,7 @@ survey_01_data_dictionary[2:6,1:2] |>
 Here is a dotplot of the data:
 
 ```{r, eval = params$make_plots}
+#| label: fig-openness-to-revising-viewpoint
 #| fig-cap: "Reponses to Openness to Revising One’s Viewpoint subscale questions from [@Krumrei-Mancuso2016-qm]"
 #| message: false
 
@@ -336,7 +349,7 @@ survey_01_data_dictionary[,c(1,2,4)] |>
 
 ::: {.callout-warning}
 I found some mistakes in the code I used last year to reverse-code variables when I revisted it this year.
-Only when I went through each question one-by-one, did I find the errors.
+Only when I went through each question one-by-one did I find the errors.
 I'm very glad I'd shown the variables in a table.
 :::
 
@@ -429,9 +442,9 @@ with(survey_01_recoded, stats::cor.test(openness_comp, trust_comp))
 
 Here are the Fall 2023 results: @fig-fall-2023-openness-trust-composite.
 
-## Fall 2023 results
+## Comparison with Fall 2023 results
 
-![](https://raw.githubusercontent.com/psu-psychology/psych-490-reproducibility-2023-fall/main/docs/surveys/survey-01_files/figure-html/fig-openness-dotplot-1.png){#fig-fall-2023-openness-dotplot}
+![Fall 2023](https://raw.githubusercontent.com/psu-psychology/psych-490-reproducibility-2023-fall/main/docs/surveys/survey-01_files/figure-html/fig-openness-dotplot-1.png){#fig-fall-2023-openness-dotplot}
 
 ![](https://raw.githubusercontent.com/psu-psychology/psych-490-reproducibility-2023-fall/main/docs/surveys/survey-01_files/figure-html/fig-trust-dotplot-1.png){#fig-fall-2023-trust-dotplot}
 
