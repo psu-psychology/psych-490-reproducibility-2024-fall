@@ -1,6 +1,6 @@
 ---
 title: "How science works (or should)"
-subtitle: "2024-09-02 Mon"
+subtitle: "2024-09-04 Wed"
 ---
 
 ## Prelude 
@@ -12,16 +12,58 @@ subtitle: "2024-09-02 Mon"
 
 # Overview
 
-## Announcements
-
-## [Survey 01](../surveys/survey-01.qmd)
-
-- Thanks to those of you who responded
-
 ## Last time...
 
 - Are the [tips](wk01-2024-08-30-how-to-read.qmd) for reading a scientific paper helpful?
 - What about acronyms and jargon?
+
+---
+
+>The effect of television violence on boys' aggression was investigated with consideration of teacher-rated characteristic aggressiveness, timing of frustration, and violence-related cues as moderators. Boys in Grades 2 and 3 (N=396) watched violent or nonviolent TV in groups of 6, and half the groups were later exposed to a cue associated with the violent TV program...
+
+---
+
+>...They were frustrated either before or after TV viewing. Aggression was measured by naturalistic observation during a game of floor hockey. Groups containing more characteristically high-aggressive boys showed higher aggression following violent TV plus the cue than following violent TV alone, which in turn produced more aggression than did the nonviolent TV condition...
+
+---
+
+>...There was evidence that both the violent content and the cue may have suppressed aggression among groups composed primarily of boys low in characteristic aggressiveness. Results were interpreted in terms of current information-processing theories of media effects on aggression. (PsycINFO Database Record (c) 2016 APA, all rights reserved)
+
+[@Josephson1987-fr]
+
+## What participants did
+
+```{mermaid}
+flowchart LR
+  A[Watch TV segments] --> C[Exposed to cue] --> B[Play Hockey]
+  D[Watch TV segments] --> B
+```
+
+## What experimenters manipulated
+
+- **I** control the *independent* variables
+  - Boys (whose parents consented)
+  - Groups of boys
+  - Order of TV segments: violent_first/last
+  - Timing of "frustration"--cartoons with tech problems: before/after violent segment
+  - Pre-game presentation of violence "cue": present/absent
+  - Boys' "characteristic aggressiveness" via teacher ratings
+  - Boys' "observed aggression" (in hockey game)
+  
+## What would *you* predict?
+
+- "characteristic aggressiveness" $\rightarrow$ "observed aggression"
+- $aggrChar + violent + frustr + cue \rightarrow aggrObs$.
+
+$b_1*charAggr + b_2*violent +...  = aggrObs + err$
+
+- where the $b_i$ weight different variables to different extents
+  
+---
+
+>...Groups containing more characteristically high-aggressive boys showed higher aggression following violent TV plus the cue than following violent TV alone...
+
+$$aggrChar + violent + cue > aggrChar + violent + noCue$$
 
 ## Today
 

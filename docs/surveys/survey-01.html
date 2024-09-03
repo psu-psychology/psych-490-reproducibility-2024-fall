@@ -405,7 +405,7 @@ Note
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>survey_01 <span class="ot">&lt;-</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(<span class="st">"csv"</span>, params<span class="sc">$</span>fn), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>There are 15 responses. That’s great for a small class!</p>
+<p>There are 16 responses. That’s great for a small class!</p>
 <p>These are the column/variable names.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Google Forms puts the full question in the top row of the data file.</span></span>
@@ -654,11 +654,11 @@ Table&nbsp;1
 <pre><code># A tibble: 5 × 3
   question          mean_rating sd_rating
   &lt;chr&gt;                   &lt;dbl&gt;     &lt;dbl&gt;
-1 compelling_reason        4.13     0.743
-2 good_reason              4.53     0.640
-3 mind_made_up             3.53     0.915
-4 new_info                 4.2      0.414
-5 when_shown_wrong         4.27     0.458</code></pre>
+1 compelling_reason        4.06     0.772
+2 good_reason              4.56     0.629
+3 mind_made_up             3.5      0.894
+4 new_info                 4.19     0.403
+5 when_shown_wrong         4.25     0.447</code></pre>
 </div>
 </div>
 </figure>
@@ -929,108 +929,108 @@ Figure&nbsp;3: Responses to trust in science questions from <span class="citatio
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">more_understanding_more_trust</td>
-<td style="text-align: right;">4.000000</td>
-<td style="text-align: right;">0.6546537</td>
+<td style="text-align: right;">4.0000</td>
+<td style="text-align: right;">0.6324555</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">make_life_better</td>
-<td style="text-align: right;">3.866667</td>
-<td style="text-align: right;">0.8338094</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">trust_explain_natural_world</td>
-<td style="text-align: right;">3.866667</td>
-<td style="text-align: right;">0.5163978</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">theories_trustworthy</td>
-<td style="text-align: right;">3.600000</td>
-<td style="text-align: right;">0.9102590</td>
+<td style="text-align: right;">3.8750</td>
+<td style="text-align: right;">0.5000000</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">should_trust_work</td>
-<td style="text-align: right;">3.533333</td>
-<td style="text-align: right;">0.9154754</td>
+<td style="text-align: left;">make_life_better</td>
+<td style="text-align: right;">3.8125</td>
+<td style="text-align: right;">0.8341663</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">trust_find_tech_solutions</td>
-<td style="text-align: right;">3.533333</td>
-<td style="text-align: right;">0.8338094</td>
+<td style="text-align: right;">3.5625</td>
+<td style="text-align: right;">0.8139410</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">theories_trustworthy</td>
+<td style="text-align: right;">3.5000</td>
+<td style="text-align: right;">0.9660918</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">should_trust_work</td>
+<td style="text-align: right;">3.4375</td>
+<td style="text-align: right;">0.9639329</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">should_trust_honesty</td>
-<td style="text-align: right;">3.266667</td>
-<td style="text-align: right;">0.9611501</td>
+<td style="text-align: right;">3.1875</td>
+<td style="text-align: right;">0.9810708</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">should_trust_ethical</td>
-<td style="text-align: right;">3.200000</td>
-<td style="text-align: right;">0.9411239</td>
+<td style="text-align: right;">3.1250</td>
+<td style="text-align: right;">0.9574271</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">share_findings_dont_like</td>
-<td style="text-align: right;">3.133333</td>
-<td style="text-align: right;">0.9154754</td>
+<td style="text-align: left;">dont_care_laypeople_understand</td>
+<td style="text-align: right;">3.0625</td>
+<td style="text-align: right;">0.7719024</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">dont_care_laypeople_understand</td>
-<td style="text-align: right;">3.000000</td>
-<td style="text-align: right;">0.7559289</td>
+<td style="text-align: left;">share_findings_dont_like</td>
+<td style="text-align: right;">3.0625</td>
+<td style="text-align: right;">0.9287088</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">ignore_contradictory_evidence</td>
-<td style="text-align: right;">2.733333</td>
-<td style="text-align: right;">0.8837151</td>
+<td style="text-align: right;">2.8125</td>
+<td style="text-align: right;">0.9105859</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">protect_each_other_when_wrong</td>
-<td style="text-align: right;">2.533333</td>
-<td style="text-align: right;">0.9154754</td>
+<td style="text-align: right;">2.6250</td>
+<td style="text-align: right;">0.9574271</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">change_minds_undermines_trust</td>
-<td style="text-align: right;">2.466667</td>
-<td style="text-align: right;">0.9154754</td>
+<td style="text-align: right;">2.5000</td>
+<td style="text-align: right;">0.8944272</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">keep_work_secret</td>
-<td style="text-align: right;">2.266667</td>
-<td style="text-align: right;">1.0327956</td>
+<td style="text-align: right;">2.3750</td>
+<td style="text-align: right;">1.0878113</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">hypotheses_just_guesses</td>
-<td style="text-align: right;">2.200000</td>
-<td style="text-align: right;">0.8618916</td>
+<td style="text-align: right;">2.1875</td>
+<td style="text-align: right;">0.8341663</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">sacrifice_others_to_advance</td>
-<td style="text-align: right;">2.200000</td>
-<td style="text-align: right;">1.0141851</td>
+<td style="text-align: right;">2.1250</td>
+<td style="text-align: right;">1.0246951</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">wont_consider_contradictory_ideas</td>
-<td style="text-align: right;">2.133333</td>
-<td style="text-align: right;">0.6399405</td>
+<td style="text-align: right;">2.1250</td>
+<td style="text-align: right;">0.6191392</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">cant_trust_biased</td>
-<td style="text-align: right;">2.000000</td>
-<td style="text-align: right;">0.5345225</td>
+<td style="text-align: right;">2.0625</td>
+<td style="text-align: right;">0.5737305</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">theories_are_weak</td>
-<td style="text-align: right;">1.800000</td>
-<td style="text-align: right;">0.8618916</td>
+<td style="text-align: right;">1.8125</td>
+<td style="text-align: right;">0.8341663</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">dont_value_others_ideas</td>
-<td style="text-align: right;">1.666667</td>
-<td style="text-align: right;">0.6172134</td>
+<td style="text-align: left;">cant_trust_moves_slowly</td>
+<td style="text-align: right;">1.6875</td>
+<td style="text-align: right;">1.0144785</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">cant_trust_moves_slowly</td>
-<td style="text-align: right;">1.666667</td>
-<td style="text-align: right;">1.0465362</td>
+<td style="text-align: left;">dont_value_others_ideas</td>
+<td style="text-align: right;">1.6875</td>
+<td style="text-align: right;">0.6020797</td>
 </tr>
 </tbody>
 </table>
@@ -1057,9 +1057,8 @@ Figure&nbsp;3: Responses to trust in science questions from <span class="citatio
 </thead>
 <tbody>
 <tr class="odd">
-<th></th>
+<td style="text-align: left;">Emily Acosta PSYCH 490 SEC 012</td>
 </tr>
-
 </tbody>
 </table>
 
@@ -1622,13 +1621,13 @@ Figure&nbsp;5: Composite ‘openness’ and ‘trust’ scores
     Pearson's product-moment correlation
 
 data:  openness_comp and trust_comp
-t = 2.121, df = 13, p-value = 0.05372
+t = 2.3249, df = 14, p-value = 0.03563
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- -0.007051247  0.809140353
+ 0.04342875 0.81124109
 sample estimates:
       cor 
-0.5070431 </code></pre>
+0.5277723 </code></pre>
 </div>
 </div>
 <p>Here are the Fall 2023 results: <a href="#fig-fall-2023-openness-trust-composite" class="quarto-xref">Figure&nbsp;8</a>.</p>

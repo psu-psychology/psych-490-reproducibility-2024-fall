@@ -59,9 +59,11 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - [@Nosek2012-al]. [Alternate link to PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170711)
 - [Assignment]{.green_assigned}
     - Complete (anonymous, extra credit) [survey](https://forms.gle/zGm5vZsPrTxwRDVR7) on scientific norms and counter-norms. **No write-up**.
-- [Class notes](notes/wk02-2024-09-02-how-science-works.qmd)
+- [Class notes](notes/wk02-2024-09-04-how-science-works.qmd)
 
 ### Friday, September 06 {-}
+
+<!-- Adam not in class! -->
 
 **Work Session: Reading a paper; Evaluating its claims**
 
