@@ -71,6 +71,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - [Exercise 01: Reading a scientific paper](exercises/ex01-read-a-scientific-paper.qmd)
 - [Assignment]{.green_assigned}
     - [Exercise 02: Textbook Findings](exercises/ex02-textbook-findings.qmd)
+- [Class notes](notes/wk02-2024-09-06-claims.qmd)
 
 ## September 9-13 {- #week-03}
 
@@ -83,6 +84,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - [@Mitroff1974-pp]. [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170712).
 - [Assignment]{.green_assigned}
     - Complete (anonymous) [survey](https://forms.gle/reRw9sYUzsYHUsqz9) on scientific norms and counter-norms. **No write-up**.
+- [Class notes](notes/wk03-2024-09-09-norms-counternorms.qmd)
 
 ### Wednesday, September 11 {-}
 
@@ -94,6 +96,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 <!-- - Skim -->
 <!--     - [@Anderson2010-rl](http://dx.doi.org/10.1353/jhe.0.0095). -->
 <!--     - [@Kim2018-tr](https://doi.org/10.1177/0971721817744438). -->
+- [Class notes](notes/wk03-2024-09-11-adherence-to-norms.qmd)
 
 ### Friday, September 13 {-}
 
@@ -104,6 +107,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - [Exercise 02: Textbook Findings](exercises/ex02-textbook-findings.qmd)
 - [Assignment]{.green-assigned}
     - [Exercise 03: Norms and counter-norms write-up](exercises/ex03-norms-counternorms.qmd)
+- [Class notes](notes/wk03-2024-09-13-work-session-norms.qmd)
 
 ## September 16-20 {- #week-04}
 

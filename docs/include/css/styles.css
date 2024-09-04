@@ -28,3 +28,7 @@ pre code {
 p {
   font-size: 1.2em;
 }
+
+p.citation {
+  text-align:center;
+}

@@ -16,8 +16,10 @@ subtitle: "2024-09-04 Wed"
 
 - Are the [tips](wk01-2024-08-30-how-to-read.qmd) for reading a scientific paper helpful?
 - What about acronyms and jargon?
+- What to do if you're really stuck?
+  - Try making a diagram
 
----
+## Example
 
 >The effect of television violence on boys' aggression was investigated with consideration of teacher-rated characteristic aggressiveness, timing of frustration, and violence-related cues as moderators. Boys in Grades 2 and 3 (N=396) watched violent or nonviolent TV in groups of 6, and half the groups were later exposed to a cue associated with the violent TV program...
 
@@ -27,9 +29,11 @@ subtitle: "2024-09-04 Wed"
 
 ---
 
->...There was evidence that both the violent content and the cue may have suppressed aggression among groups composed primarily of boys low in characteristic aggressiveness. Results were interpreted in terms of current information-processing theories of media effects on aggression. (PsycINFO Database Record (c) 2016 APA, all rights reserved)
+>...There was evidence that both the violent content and the cue may have suppressed aggression among groups composed primarily of boys low in characteristic aggressiveness. Results were interpreted in terms of current information-processing theories of media effects on aggression. 
 
+<p style="text-align:center;">
 [@Josephson1987-fr]
+</p>
 
 ## What participants did
 
@@ -47,24 +51,30 @@ flowchart LR
   - Order of TV segments: violent_first/last
   - Timing of "frustration"--cartoons with tech problems: before/after violent segment
   - Pre-game presentation of violence "cue": present/absent
+
+## What experimenters measured
+  
+- The *dependent* (outcome) variables
   - Boys' "characteristic aggressiveness" via teacher ratings
   - Boys' "observed aggression" (in hockey game)
   
 ## What would *you* predict?
+  
+## What would *you* predict?
 
 - "characteristic aggressiveness" $\rightarrow$ "observed aggression"
+- Turning predictions into statistical/quantitative tests
 - $aggrChar + violent + frustr + cue \rightarrow aggrObs$.
 
 $b_1*charAggr + b_2*violent +...  = aggrObs + err$
 
-- where the $b_i$ weight different variables to different extents
-  
+- where the $b_i$ "weight" the predictors based on how well they predict $aggrObs$
+
 ---
 
 >...Groups containing more characteristically high-aggressive boys showed higher aggression following violent TV plus the cue than following violent TV alone...
 
 $$aggrChar + violent + cue > aggrChar + violent + noCue$$
-
 ## Today
 
 *How science works (or should)*

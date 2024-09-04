@@ -2,9 +2,9 @@
 title: "Survey 02"
 subtitle: "Scientific norms and counternorms"
 params:
-  update_data: TRUE
+  update_data: true
   fn: "survey-02-sci-values-2024-fall.csv"
-  make_plots: FALSE
+  make_plots: true
 ---
 
 ## Purpose {-}
@@ -104,11 +104,12 @@ survey_02_norms_qs <- names(survey_02_norms)
 survey_02_norms_qs
 ```
 
-
 ### Clean/shorten names
 
 For plotting and analyses, it's usually easier to shorten the questions by creating a short name that reflects the underlying idea or construct.
 We'll use the `rename()` function from the `dplyr` package for this. 
+
+
 
 ```{r}
 new_names <-
@@ -138,13 +139,28 @@ new_names <-
 # Swap out old (long) names for new (short) names
 long_names <- names(survey_02_norms)
 names(survey_02_norms) <- new_names
+```
 
+Next, let's drop Dr. Gilmore's "test" responses.
+
+```{r}
+survey_02_norms <- survey_02_norms %>%
+  dplyr::filter(!stringr::str_detect(comments, "test"))
+```
+
+Create a "longer" table with each row representing a single question rating from a single respondent.
+
+```{r}
 survey_02_norms_long <- survey_02_norms |>
   tidyr::pivot_longer(!c('timestamp', 'comments'),
                       names_to = "norm_counternorm",
                       values_to = "rating")
+```
 
-# We move the '_should' and '_actually' to a separate variable called 'resp_frame'
+We move the '_should' and '_actually' from the question to a separate variable called 'resp_frame' for response frame. 
+Then we create a variable that indicates whether the statements are norms or counternorms.
+
+```{r}
 survey_02_norms_long <- survey_02_norms_long |>
   dplyr::mutate(resp_frame = stringr::str_extract(norm_counternorm, "should|actually")) |>
   dplyr::mutate(norm_counternorm = stringr::str_remove_all(norm_counternorm, "_[a-z]+"))
@@ -268,7 +284,7 @@ survey_02_norms_data_dictionary |>
   kableExtra::kable_classic()
 ```
 
-```{r fig-boxplot-norm-counternorm, fig.cap="Adherence to norms and counternorms by what scientists should do vs. actually do PSYCH 490.012 Fall 2024", eval=params$make_plots}
+```{r fig-boxplot-norm-counternorm, fig.cap="Adherence to norms and counternorms by what scientists should do vs. actually do. PSYCH 490.012 Fall 2024", eval=params$make_plots}
 survey_02_norms_long |>
   ggplot() +
   aes(norm_counternorm, rating) +
@@ -276,7 +292,8 @@ survey_02_norms_long |>
   geom_dotplot(binaxis = 'y', stackdir = 'center', dotsize = .7, aes(fill = type)) +
   #ylab(c("not at all", "2", "3", "4", "a great deal")) +
   facet_grid(cols = vars(resp_frame)) +
-  scale_y_continuous(labels=c("1" = "not at all", "2", "3", "4", "5" = "a great deal")) +
+  scale_y_continuous(breaks = c(1, 2, 3, 4, 5), labels=c("1" = "not at all", "2", "3", "4", "5" = "a great deal")) +
+  # ylim(1,5) +
   theme(axis.text.x = element_text(angle = 90), axis.title.x = element_blank(),
         legend.title = element_blank(), legend.position = "top")
 ```

@@ -7,11 +7,14 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.56">
 
   <meta name="author" content="Rick Gilmore">
-  <title>PSYCH 490 • Fall 2024 – How science works (or should)</title>
+  <title>PSYCH 490 • Fall 2024 – Scientific norms and counter-norms</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -352,17 +355,14 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">How science works (or should)</h1>
-  <p class="subtitle">2024-09-04 Wed</p>
+  <h1 class="title">Scientific norms and counter-norms</h1>
+  <p class="subtitle">2023-09-09 Mon</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -373,393 +373,438 @@ Rick Gilmore
 </div>
 
 </section>
-<section id="prelude" class="slide level2">
-<h2>Prelude</h2>
-<p style="text-align:center;">
-<!-- Thomas Dolby, She Blinded Me With Science 3:47 -->
-<iframe width="800" height="600" src="https://www.youtube.com/embed/V83JR2IoI8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</p>
-</section>
 <section>
 <section id="overview" class="title-slide slide level1 center">
 <h1>Overview</h1>
 
 </section>
-<section id="last-time" class="slide level2">
-<h2>Last time…</h2>
+<section id="announcements" class="slide level2">
+<h2>Announcements</h2>
 <ul>
-<li>Are the <a href="../notes/wk01-2024-08-30-how-to-read.html">tips</a> for reading a scientific paper helpful?</li>
-<li>What about acronyms and jargon?</li>
-<li>What to do if you’re really stuck?
-<ul>
-<li>Try making a diagram</li>
-</ul></li>
-</ul>
-</section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<blockquote>
-<p>The effect of television violence on boys’ aggression was investigated with consideration of teacher-rated characteristic aggressiveness, timing of frustration, and violence-related cues as moderators. Boys in Grades 2 and 3 (N=396) watched violent or nonviolent TV in groups of 6, and half the groups were later exposed to a cue associated with the violent TV program…</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>…They were frustrated either before or after TV viewing. Aggression was measured by naturalistic observation during a game of floor hockey. Groups containing more characteristically high-aggressive boys showed higher aggression following violent TV plus the cue than following violent TV alone, which in turn produced more aggression than did the nonviolent TV condition…</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>…There was evidence that both the violent content and the cue may have suppressed aggression among groups composed primarily of boys low in characteristic aggressiveness. Results were interpreted in terms of current information-processing theories of media effects on aggression.</p>
-</blockquote>
-<p style="text-align:center;">
-<span class="citation" data-cites="Josephson1987-fr">(<a href="#/references" role="doc-biblioref" onclick="">Josephson, 1987</a>)</span>
-</p>
-</section>
-<section id="what-participants-did" class="slide level2">
-<h2>What participants did</h2>
-<div class="cell" data-reveal="true" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  A[Watch TV segments] --&gt; C[Exposed to cue] --&gt; B[Play Hockey]
-  D[Watch TV segments] --&gt; B
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="what-experimenters-manipulated" class="slide level2">
-<h2>What experimenters manipulated</h2>
-<ul>
-<li><strong>I</strong> control the <em>independent</em> variables
-<ul>
-<li>Boys (whose parents consented)</li>
-<li>Groups of boys</li>
-<li>Order of TV segments: violent_first/last</li>
-<li>Timing of “frustration”–cartoons with tech problems: before/after violent segment</li>
-<li>Pre-game presentation of violence “cue”: present/absent</li>
-</ul></li>
-</ul>
-</section>
-<section id="what-experimenters-measured" class="slide level2">
-<h2>What experimenters measured</h2>
-<ul>
-<li>The <em>dependent</em> (outcome) variables
-<ul>
-<li>Boys’ “characteristic aggressiveness” via teacher ratings</li>
-<li>Boys’ “observed aggression” (in hockey game)</li>
-</ul></li>
-</ul>
-</section>
-<section id="what-would-you-predict" class="slide level2">
-<h2>What would <em>you</em> predict?</h2>
-</section>
-<section id="what-would-you-predict-1" class="slide level2">
-<h2>What would <em>you</em> predict?</h2>
-<ul>
-<li>“characteristic aggressiveness” <span class="math inline">\(\rightarrow\)</span> “observed aggression”</li>
-<li>Turning predictions into statistical/quantitative tests</li>
-<li><span class="math inline">\(aggrChar + violent + frustr + cue \rightarrow aggrObs\)</span>.</li>
-</ul>
-<p><span class="math inline">\(b_1*charAggr + b_2*violent +...  = aggrObs + err\)</span></p>
-<ul>
-<li>where the <span class="math inline">\(b_i\)</span> “weight” the predictors based on how well they predict <span class="math inline">\(aggrObs\)</span></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>…Groups containing more characteristically high-aggressive boys showed higher aggression following violent TV plus the cue than following violent TV alone…</p>
-</blockquote>
-<p><span class="math display">\[aggrChar + violent + cue &gt; aggrChar + violent + noCue\]</span> ## Today</p>
-<p><em>How science works (or should)</em></p>
-<ul>
-<li>Read
-<ul>
-<li><span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020</a>)</span>, Chapter 1. <a href="https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170709">Alternate link to PDF on Canvas</a>.</li>
-<li><span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span>. <a href="https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170711">Alternate link to PDF on Canvas</a></li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="how-science-works-or-should" class="title-slide slide level1 center">
-<h1>How science works (or should)</h1>
-
-</section>
-<section id="discuss-ritchie2020-fm-chapter-1" class="slide level2">
-<h2>Discuss <span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020, Chapter 1</a>)</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Stuart_J._Ritchie">Stuart J. Ritchie</a>
-<ul>
-<li>Scottish psychologist, Lecturer at King’s College London</li>
-<li>Works at <a href="https://en.wikipedia.org/wiki/Anthropic">Anthropic</a>, an A.I. company</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://jacobsfoundation.org/wp-content/uploads/2020/01/Ritchie_Stuart_300x300px.jpg%22" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="chapter-1-how-science-works" class="slide level2">
-<h2>Chapter 1: How Science Works</h2>
-<ul>
-<li>“Science is a social construct.” <span class="citation" data-cites="Oreskes2017">(<a href="#/references" role="doc-biblioref" onclick="">Oreskes, 2019</a>)</span>
-<ul>
-<li>How so?</li>
-<li>What are the consequences?</li>
-</ul></li>
-</ul>
-</section>
-<section id="what-is-the-process-of-science" class="slide level2">
-<h2>What is the “process” of science?</h2>
-
-<img data-src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-016-0021/MediaObjects/41562_2016_Article_BFs415620160021_Fig1_HTML.jpg?as=webp" class="r-stretch quarto-figure-center"><p class="caption">Figure 1 from <span class="citation" data-cites="munafo_manifesto_2017">(<a href="#/references" role="doc-biblioref" onclick="">Munafò et al., 2017</a>)</span></p></section>
-<section id="telling-factsfindings-and-showing" class="slide level2">
-<h2>Telling (facts/findings) AND <em>showing</em></h2>
-<blockquote>
-<p>…and it has to be shown why that other theory can or cannot be the true one: And until this is shown, and until we know how it is shown, we do not understand the grounds of our opinion.</p>
-</blockquote>
-<p style="text-align:center;">
-John Stuart Mill quoted in <span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020, p. 14</a>)</span>
-</p>
-</section>
-<section id="from-replication-to-trust" class="slide level2">
-<h2>From replication to trust</h2>
-<blockquote>
-<p>…Only when certain events recur in accordance with rules or regularities, as is the case with repeatable experiments, can our observations be tested–in principle–by anyone. We do not take even our own observations quite seriously, or accept them as scientific observations, until we have repeated and test them…</p>
-</blockquote>
-<p style="text-align:center;">
-Karl Popper quoted in <span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020, p. 23</a>)</span>
-</p>
-</section>
-<section id="from-replication-to-trust-1" class="slide level2">
-<h2>From replication to trust</h2>
-<blockquote>
-<p>…Only by such repetitions can we convince ourselves that we are not dealing with a mere isolated ‘coincidence’…</p>
-</blockquote>
-<p style="text-align:center;">
-Karl Popper quoted in <span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020, p. 23</a>)</span>
-</p>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>In what <em>other</em> realm(s) do we <em>not</em> require someone stating an idea or finding to show us <em>how</em> they came to that idea or finding?</li>
-<li>Are scientific experiments <em>really</em> repeatable by anyone?</li>
-<li>In what <em>other</em> realm(s) do we not expect repetition or replication before trusting an idea?</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>Science’s social nature does come with weaknesses, however. Because scientists focus so much on trying to persuade their peers, which is the way they get those studies through peer review and oward to publication, it’s all too easy for them to disregard the real object of science: getting us closer to the truth.</p>
-</blockquote>
-<p style="text-align:center;">
-<span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020, Chapter 1</a>, pp.&nbsp;14-15)</span>
-</p>
-</section>
-<section id="questions-about-ritchie" class="slide level2">
-<h2>Questions about Ritchie</h2>
-<ul>
-<li>Do you agree that a focus on “persuading their peers” can lead researchers to lose sight of the “real object of science”?
-<ul>
-<li>Are there other examples (outside of science), where a focus on persuading others can change a person’s focus from more important goals?</li>
-</ul></li>
-<li>What’s the alternative for scientists to trying to persuade their peers?</li>
-<li>What if scientific research serves multiple goals?</li>
-</ul>
-</section>
-<section id="discuss-nosek2012-al" class="slide level2">
-<h2>Discuss <span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>Brian Nosek
-<ul>
-<li>Social Psychologist, Professor at University of Virginia</li>
-<li>Co-Founder, <a href="https://cos.io">Center for Open Science (COS)</a></li>
-<li>Founder, <a href="https://implicit.harvard.edu/implicit/">Project Implicit</a></li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://www.cos.io/hubfs/Staff/staff-nosek-brian.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div></div>
-</section>
-<section class="slide level2">
-
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><a href="https://en-social-sciences.tau.ac.il/profile/baranan">Yoav Bar-Anon</a>
-<ul>
-<li>Social Psychologist</li>
-<li>Professor at Tel Aviv University</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://en-social-sciences.tau.ac.il/sites/socsci-english.tau.ac.il/files/styles/research_teaser_image_180_x_180/public/Yoav%20Bar-anan.webp" class="quarto-figure quarto-figure-center" style="width:30.0%"></p>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="scientific-utopia-i.-opening-scientific-communication" class="slide level2">
-<h2>Scientific Utopia: I. Opening Scientific Communication</h2>
-<ul>
-<li>What’s <a href="https://en.wikipedia.org/wiki/Utopia?">Utopia</a></li>
-<li>Where’s Part II?
-<ul>
-<li><span class="citation" data-cites="Nosek2012-fm">(<a href="#/references" role="doc-biblioref" onclick="">Nosek, Spies, &amp; Motyl, 2012</a>)</span>.</li>
-</ul></li>
-</ul>
-</section>
-<section id="aims-claims" class="slide level2">
-<h2>Aims &amp; Claims</h2>
-<blockquote>
-<p>Existing norms for scientific communication are rooted in anachronistic practices of bygone eras making them needlessly inefficient. We outline a path that moves away from the existing model of scientific communication to improve the efficiency in meeting the purpose of public science—knowledge accumulation.</p>
-</blockquote>
-<p style="text-align:center;">
-<span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span>
-</p>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>We call for six changes: (a) full embrace of digital communication; (b) open access to all published research; (c) disentangling publication from evaluation; (d) breaking the “one article, one journal” model with a grading system for evaluation and diversified dissemination outlets; (e) publishing peer review; and (f) allowing open, continuous peer review.</p>
-</blockquote>
-<p style="text-align:center;">
-<span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span>
-</p>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>We address conceptual and practical barriers to change and provide examples showing how the suggested practices are being used already. The critical barriers to change are not technical or financial; they are social. Although scientists guard the status quo, they also have the power to change it.</p>
-</blockquote>
-<p style="text-align:center;">
-<span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span>
-</p>
-</section>
-<section id="inefficiencies-in-scientific-communication" class="slide level2">
-<h2>Inefficiencies in scientific communication</h2>
-<div>
-<ul>
-<li class="fragment">No communication</li>
-<li class="fragment">Slow communication</li>
-<li class="fragment">Incomplete communication</li>
-<li class="fragment">Inaccurate communication</li>
-<li class="fragment">Unmodifiable communication</li>
-</ul>
-</div>
-<p style="text-align:center;">
-<span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>, , pp.&nbsp;25-26)</span>
-</p>
-</section>
-<section id="questions-about-nosek2012-al" class="slide level2">
-<h2>Questions about <span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span></h2>
-<div>
-<ul>
-<li class="fragment">What are the impacts of these factors?</li>
-<li class="fragment">Do you agree that scientific communication should be made more efficient? Why or why not?</li>
-</ul>
-</div>
-</section>
-<section id="questions-about-nosek2012-al-1" class="slide level2">
-<h2>Questions about <span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span></h2>
-<div>
-<ul>
-<li class="fragment">Do you think all research scholarship should be open access?
-<ul>
-<li class="fragment">Who should pay for the costs of publication, maintaining the data?</li>
-<li class="fragment">What’s wrong with enterprising people making a living by providing these services?</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="questions-about-nosek2012-al-2" class="slide level2">
-<h2>Questions about <span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span></h2>
-<div>
-<ul>
-<li class="fragment">What about the idea of separating publication from evaluation?
-<ul>
-<li class="fragment">How can scientists discern good science from bad?</li>
-<li class="fragment">How can the general public?</li>
-</ul></li>
-<li class="fragment">What do you think reviewers would say about publishing peer review?
-<ul>
-<li class="fragment">Some journals do this already, e.g.&nbsp;<em>Frontiers</em></li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="common-themes-across-ritchie2020-fm-and-nosek2012-al" class="slide level2">
-<h2>Common themes across <span class="citation" data-cites="Ritchie2020-fm">Nosek &amp; Bar-Anan (<a href="#/references" role="doc-biblioref" onclick="">2012</a>)</span></h2>
-<ul>
-<li>Goals and purposes of science</li>
-<li>Utopian, idealistic aims</li>
-<li>Efficiency in achieving those goals</li>
-<li>High quality versus low quality science</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>Ethics, scientific integrity</li>
-<li>Means of scientific communication</li>
-<li>Who has access, who should</li>
-<li>How are findings, articles, individuals evaluated</li>
-</ul>
-</section></section>
-<section>
-<section id="next-time" class="title-slide slide level1 center">
-<h1>Next time</h1>
-
-</section>
-<section id="friday-september-06" class="slide level2">
-<h2>Friday, September 06</h2>
-<p><strong>Work Session: Reading a paper; Evaluating its claims</strong></p>
-<ul>
-<li><span class="orange_due">Due</span>
-<ul>
-<li><a href="../exercises/ex01-read-a-scientific-paper.html">Exercise 01: Reading a scientific paper</a></li>
-</ul></li>
-<li><span class="green_assigned">Assignment</span>
+<li><span class="orange_due">Due Friday</span>
 <ul>
 <li><a href="../exercises/ex02-textbook-findings.html">Exercise 02: Textbook Findings</a></li>
 </ul></li>
 </ul>
+</section>
+<section id="today" class="slide level2">
+<h2>Today</h2>
+<p><em>Scientific norms and counter-norms</em></p>
+<ul>
+<li>Read
+<ul>
+<li><span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973</a>)</span>. <a href="https://psu.instructure.com/files/144517091/download?download_frd=1">PDF on Canvas</a>.</li>
+<li><span class="citation" data-cites="Mitroff1974-pp">(<a href="#/references" role="doc-biblioref" onclick="">Mitroff, 1974</a>)</span>. <a href="https://psu.instructure.com/courses/2280122/files/folder/readings?preview=151876801">PDF on Canvas</a>.</li>
+</ul></li>
+<li><span class="green_assigned">Assignment</span>
+<ul>
+<li>Complete (anonymous) <a href="https://forms.gle/reRw9sYUzsYHUsqz9">survey</a> on scientific norms and counter-norms. <strong>No write-up</strong>.</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="scientific-norms-and-counter-norms" class="title-slide slide level1 center">
+<h1>Scientific norms and counter-norms</h1>
+
+</section>
+<section id="what-is-science-really" class="slide level2">
+<h2>What is science, really?</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>Robert Merton</p>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/en/0/08/Robert_K_Merton.jpg"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li>a <strong>stock of accumulated knowledge</strong> (facts &amp; findings)</li>
+<li>a set of <strong>characteristic methods</strong></li>
+<li>a <strong>set of cultural values</strong></li>
+</ul>
+<p style="text-align:center;">
+<span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973, p. 268</a>)</span>
+</p>
+</div></div>
+</section>
+<section id="questions" class="slide level2">
+<h2>Questions</h2>
+<ul>
+<li>Why is it important to talk about and illuminate the cultural values that are part of scientific research?</li>
+<li>How important are these values relative to facts and findings or methods?</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>Difficult as the notion may appear to those reared in a culture that grants science a prominent if not a commanding place in the scheme of things, it is evident that science is not immune from attack, restraint, and repression. Writing a little while ago, Veblen could observe that the faith of western culture in science was unbounded, unquestioned, unrivaled.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973, p. 267</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>…The revolt from science which then appeared so improbable as to concern only the timid academician who would ponder all contingencies, however remote, has now been forced upon the attention of scientist and layman alike. Local contagions of anti-intellectualism threaten to become epidemic.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973, p. 267</a>)</span>
+</p>
+</section>
+<section id="questions-1" class="slide level2">
+<h2>Questions</h2>
+<ul>
+<li>What’s the difference between principled skepticism about specific scientific claims and “anti-intellectualism”?</li>
+<li>Do you agree with Merton that “Local contagions of anti-intellectualism threaten to become epidemic.”?</li>
+</ul>
+</section>
+<section id="the-ethos-of-science" class="slide level2 unnumbered">
+<h2>The <a href="https://www.dictionary.com/browse/ethos">ethos</a> of science</h2>
+<blockquote>
+<p>The mores of science possess a methodologic rationale but they are binding, not only because they are procedurally efficient, but because they are believed right and good.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973, p. 270</a>)</span>
+</p>
+</section>
+<section id="question" class="slide level2">
+<h2>Question</h2>
+<ul>
+<li><em>How</em> are scientific methods efficient?</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>Robert Merton</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/en/0/08/Robert_K_Merton.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../include/img/mertonian-norms.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="https://www.facebook.com/circleofwillispodcast/photos/a.126877167976211/393134391350486/?type=3"><img data-src="../include/img/mertonian-norms.jpg" class="quarto-figure quarto-figure-center" style="width:70.0%" alt="https://www.facebook.com/circleofwillispodcast/photos/a.126877167976211/393134391350486/?type=3"></a></p>
+</figure>
+</div>
+<figcaption>https://www.facebook.com/circleofwillispodcast/photos/a.126877167976211/393134391350486/?type=3</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="communism" class="slide level2">
+<h2>“Communism”</h2>
+<ul>
+<li>Often called “communalism” today</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>“Communism” in the nontechnical and extended sense of common ownership of goods…The substantive findings of science are a product of a social collaboration and are assigned to the community…Property rights in sciences are whittled down to a bare minimum by the rationale of the scientific ethic.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973, p. 273</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>The institutional conception of science as part of the public domain is linked with the imperative for communication of scientific findings. Secrecy is the antithesis of this norm; full and open communication is its enactment.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973, p. 274</a>)</span>
+</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Henry_Cavendish">Henry Cavendish</a> was known for <em>not</em> publishing much of his work.</li>
+</ul>
+</section>
+<section id="universalism" class="slide level2">
+<h2>Universalism</h2>
+<blockquote>
+<p>To restrict scientific careers on grounds other than lack of competence is to prejudice the furtherance of knowledge.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973, p. 272</a>)</span>
+</p>
+</section>
+<section id="disinterestedness" class="slide level2">
+<h2><a href="https://www.dictionary.com/browse/disinterested">Disinterestedness</a></h2>
+<blockquote>
+<p>The virtual absence of fraud in the annals of science, which appears exceptional when compared with the record of other spheres of activity, has at times been attributed to the personal qualities of scientists…There is, in fact, no satisfactory evidence that such is the case…</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973, p. 274</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>…a more plausible explanation may be found in certain characteristcs of science itself…the activities of scientists are subject to rigorous policing, to a degree perhaps unparalleled in any other field of activity.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973, p. 274</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>…It is probable that the reputability of science and its lofty ethical status in the estimate of the layman is in no small measure due to technological achievements…the laity is often in no position to distinguish spurious from genuine claims…</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973, p. 277</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>…The presumably scientific pronouncements of totalitarian spokesmen are for the uninstructed laity of the same order as newspaper reports on an expanding universe or wave mechanics.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973, p. 277</a>)</span>
+</p>
+</section>
+<section id="organized-skepticism" class="slide level2">
+<h2>Organized Skepticism</h2>
+<blockquote>
+<p>…is variously interrelated with other elements of the scientific ethos. It is both a methodological and institutional mandate.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973, p. 274</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>The scientific investigator does not preserve the cleavage between the sacred and the profane, between that which requires uncritical respect and that which can be objectively analyzed.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Merton1973-vf">(<a href="#/references" role="doc-biblioref" onclick="">Merton, 1973, pp. 277–278</a>)</span>
+</p>
+</section>
+<section id="mnemonic-c-u-d-os" class="slide level2 unnumbered">
+<h2>Mnemonic: C-U-D-OS</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><em>ku•dos</em>: praise and honor received for achievement. From Greek meaning ‘glory.’</p>
+</div>
+</div>
+</div>
+</section>
+<section id="hogwash" class="slide level2">
+<h2>Hogwash!</h2>
+
+<img data-src="https://www.nkch.org/blog/_assets/images/blog-features/2016/02/hog-in-a-washer_feature.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://m.media-amazon.com/images/I/61xe0j7UtKL.jpg"></p>
+<figcaption>Ian I. Mitroff</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<img data-src="../include/img/mitroff-norms-counternorms.png" class="quarto-figure quarto-figure-center">
+<p style="text-align:center;">
+<span class="citation" data-cites="Mitroff1974-pp">(<a href="#/references" role="doc-biblioref" onclick="">Mitroff, 1974, p. 580</a>)</span>
+</p>
+</div></div>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>…the personal character of science infuses its entire structure. The testing and validating of scientific ideas is as governed by the deep personal character of science as the initial discovery of the ideas…Polyani (1958) argues that not only is this the case, but it ought to be the case. That is, science outght to be personal to its core.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Mitroff1974-pp">(<a href="#/references" role="doc-biblioref" onclick="">Mitroff, 1974, p. 580</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>…what the body of scientists thought about their fellow scientists. Who were perceived as most committed to their pet hypotheses? What did they think of such behavior? What did the scientists think of the abstract idea of commitment [to a pet hypothesis] itself…</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Mitroff1974-pp">(<a href="#/references" role="doc-biblioref" onclick="">Mitroff, 1974, p. 582</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>All the interviews exhibit high affective content. They document the often fierce, sometimes bitter, competitive races for discovery and the intense emotions which permeate the doing of science.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Mitroff1974-pp">(<a href="#/references" role="doc-biblioref" onclick="">Mitroff, 1974, p. 585</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>The term “commitment” was used in three distinct (but related) senses. The first expresssed the notion of intellectual commitment, that is that scientific observerations were theory-laden…The second sense expressed the notion of affective commitment…The third sense expressed the notion that the entire process of science demanded deep personal commitment.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Mitroff1974-pp">(<a href="#/references" role="doc-biblioref" onclick="">Mitroff, 1974, p. 586</a>)</span>
+</p>
+</section>
+<section id="norms-vs.-counter-norms" class="slide level2">
+<h2>Norms vs.&nbsp;Counter-norms</h2>
+</section>
+<section class="slide level2">
+
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Norm</th>
+<th>Counternorm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Faith in the <em>moral virtue of rationality</em> (Barber, 1952).</td>
+<td>Faith in the <em>moral virtue of rationality and nonrationality</em> (cf., Tart, 1972).</td>
+</tr>
+<tr class="even">
+<td><em>Emotional neutrality</em> as an instrumental condition for the achievement of rationality (Barber, 1952).</td>
+<td><em>Emotional commitment</em> as an instrumental condition for the achievement of rationality.</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align:center;">
+<span class="citation" data-cites="Mitroff1974-pp">(<a href="#/references" role="doc-biblioref" onclick="">Mitroff, 1974, p. 592</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Norm</th>
+<th>Counternorm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Universalism</em>: The acceptance or rejection of claims entering the list of science is not to depend on the personal or social attributes of their protagonist; his race, nationality, religion, class and personal qualities are as such irrelevant.</td>
+<td><em>Particularism</em>: “The acceptance or rejection of claims entering the list of science is to a large extent a function of who makes the claim” (Boguslaw, 1968:59)</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align:center;">
+<span class="citation" data-cites="Mitroff1974-pp">(<a href="#/references" role="doc-biblioref" onclick="">Mitroff, 1974, p. 592</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<table class="caption-top">
+<colgroup>
+<col style="width: 48%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Norm</th>
+<th>Counternorm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Communism</em>: “Property rights are reduced to the absolute minimum of credit for priority of discovery” (Barber, 1952:130). “Secrecy is the antithesis’ of this norm; full and open communication [of scientific results] its enactment” (Merton, 1949:611).</td>
+<td><em>Solitariness</em> (or, “Miserism” [Boguslaw, 1968:59]): Property rights are expanded to include protective control over the disposition of one’s discoveries; secrecy thus becomes a necessary moral act.</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align:center;">
+<span class="citation" data-cites="Mitroff1974-pp">(<a href="#/references" role="doc-biblioref" onclick="">Mitroff, 1974, p. 592</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Norm</th>
+<th>Counternorm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Disinterestedness</em>: “Scientists are expected by their peers to achieve the self-interest they have in work–satisfaction and in prestige through serving the [scientific] community interest directly” (Barber, 1952:132).</td>
+<td><em>Interestedness</em>: Scientists are expected by their close colleagues to achieve the self-interest they have in work-satisfaction and in prestige through serving their special communities of interest, e.g., their invisible college (Boguslaw, 1968:59; Mitroff, 1974b)</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align:center;">
+<span class="citation" data-cites="Mitroff1974-pp">(<a href="#/references" role="doc-biblioref" onclick="">Mitroff, 1974, p. 592</a>)</span>
+</p>
+</section>
+<section id="science-as-a-human-activity" class="slide level2">
+<h2>Science as a <em>human</em> activity</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Humans are…
+<ul>
+<li>flawed</li>
+<li>often illogical</li>
+<li>emotional AND intellectual</li>
+<li>biased</li>
+<li>have blind spots</li>
+</ul></li>
+<li>By what means can we mitigate or overcome these?</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://media.tenor.com/bnK8AbXH7k8AAAAC/fascinating-mr-spock.gif"></p>
+<figcaption>Mr.&nbsp;Spock</figcaption>
+</figure>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="next-time" class="title-slide slide level1 center">
+<h1>Next time</h1>
+<p><em>Adherence to norms and counter-norms</em></p>
+<ul>
+<li>Read
+<ul>
+<li><a href="https://doi.org/10.1007/s11251-011-9195-0"><span class="citation" data-cites="Kardash2012-kq">Kardash &amp; Edwards (<span>2012</span>)</span></a>.</li>
+<li><a href="https://doi.org/10.1007/s10805-008-9055-y"><span class="citation" data-cites="Macfarlane2008-tc">Macfarlane &amp; Cheng (<span>2008</span>)</span></a>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="show-recommendation" class="slide level2">
+<h2>Show recommendation</h2>
+
+<img data-src="https://cdn.mos.cms.futurecdn.net/9TgRDXu6BLFhYPAyWdSRUj-650-80.jpg.webp" class="quarto-figure quarto-figure-center r-stretch"><p>Alternative history depicting what might have happened had the Soviets beaten the United States to the Moon in the summer of 1969.</p>
 </section></section>
 <section>
 <section id="resources" class="title-slide slide level1 center">
 <h1>Resources</h1>
 
-</section>
-<section id="talk-by-brian-nosek-university_of_california_television_uctv2018-sf" class="slide level2">
-<h2>Talk by Brian Nosek, <span class="citation" data-cites="University_of_California_Television_UCTV2018-sf">(<a href="#/references" role="doc-biblioref" onclick="">University of California Television (UCTV), 2018</a>)</span></h2>
-<div class="callout-info">
-<p>Watching the talk by Nosek is not required. But he’s a very good speaker and an inspiring person.</p>
-</div>
-<p style="text-align:center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YEwqohAjfZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-</p>
 </section>
 <section class="slide level2">
 
@@ -776,26 +821,17 @@ Karl Popper quoted in <span class="citation" data-cites="Ritchie2020-fm">(<a hre
 </div>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-Josephson1987-fr" class="csl-entry" role="listitem">
-Josephson, W. L. (1987). Television violence and children’s aggression: Testing the priming, social script, and disinhibition predictions. <em>Journal of Personality and Social Psychology</em>, <em>53</em>(5), 882–890. <a href="https://doi.org/10.1037/0022-3514.53.5.882">https://doi.org/10.1037/0022-3514.53.5.882</a>
+<div id="ref-Kardash2012-kq" class="csl-entry" role="listitem">
+Kardash, C. M., &amp; Edwards, O. V. (2012). Thinking and behaving like scientists: Perceptions of undergraduate science interns and their faculty mentors. <em>Instructional Science</em>, <em>40</em>(6), 875–899. <a href="https://doi.org/10.1007/s11251-011-9195-0">https://doi.org/10.1007/s11251-011-9195-0</a>
 </div>
-<div id="ref-munafo_manifesto_2017" class="csl-entry" role="listitem">
-Munafò, M. R., Nosek, B. A., Bishop, D. V. M., Button, K. S., Chambers, C. D., Sert, N. P. du, … Ioannidis, J. P. A. (2017). A manifesto for reproducible science. <em>Nature Human Behaviour</em>, <em>1</em>, 0021. <a href="https://doi.org/10.1038/s41562-016-0021">https://doi.org/10.1038/s41562-016-0021</a>
+<div id="ref-Macfarlane2008-tc" class="csl-entry" role="listitem">
+Macfarlane, B., &amp; Cheng, M. (2008). Communism, universalism and disinterestedness: Re-examining contemporary support among academics for merton’s scientific norms. <em>Journal of Academic Ethics</em>, <em>6</em>(1), 67–78. <a href="https://doi.org/10.1007/s10805-008-9055-y">https://doi.org/10.1007/s10805-008-9055-y</a>
 </div>
-<div id="ref-Nosek2012-al" class="csl-entry" role="listitem">
-Nosek, B. A., &amp; Bar-Anan, Y. (2012). Scientific utopia i: Opening scientific communication. <em>Psychological <span>I</span>nquiry</em>, <em>23</em>(3), 217–243. <a href="https://doi.org/10.1080/1047840X.2012.692215">https://doi.org/10.1080/1047840X.2012.692215</a>
+<div id="ref-Merton1973-vf" class="csl-entry" role="listitem">
+Merton, R. W. (1973). The normative structure of science. In R. K. Merton &amp; N. W. Storer (Eds.), <em>The <span>S</span>ociology of <span>S</span>cience: <span>T</span>heoretical and <span>E</span>mpirical <span>I</span>nvestigations</em> (pp. 267–278). The University of Chicago Press.
 </div>
-<div id="ref-Nosek2012-fm" class="csl-entry" role="listitem">
-Nosek, B. A., Spies, J. R., &amp; Motyl, M. (2012). Scientific utopia <span>II</span>: Restructuring incentives and practices to promote truth over publishability. <em>Perspectives on Psychological Science: A Journal of the Association for Psychological Science</em>, <em>7</em>(6), 615–631. <a href="https://doi.org/10.1177/1745691612459058">https://doi.org/10.1177/1745691612459058</a>
-</div>
-<div id="ref-Oreskes2017" class="csl-entry" role="listitem">
-Oreskes, N. (2019). <em><span>W</span>hy <span>T</span>rust <span>S</span>cience</em>. Princeton University Press.
-</div>
-<div id="ref-Ritchie2020-fm" class="csl-entry" role="listitem">
-Ritchie, S. (2020). <em>Science fictions: Exposing fraud, bias, negligence and hype in science</em> (1st ed.). Penguin Random House. Retrieved from <a href="https://www.amazon.com/Science-Fictions/dp/1847925669">https://www.amazon.com/Science-Fictions/dp/1847925669</a>
-</div>
-<div id="ref-University_of_California_Television_UCTV2018-sf" class="csl-entry" role="listitem">
-University of California Television (UCTV). (2018, May). Improving openness and innovation in scholarly communication with brian nosek. Youtube. Retrieved from <a href="https://www.youtube.com/watch?v=YEwqohAjfZc">https://www.youtube.com/watch?v=YEwqohAjfZc</a>
+<div id="ref-Mitroff1974-pp" class="csl-entry" role="listitem">
+Mitroff, I. I. (1974). Norms and counter-norms in a select group of the <span>A</span>pollo moon scientists: A case study of the ambivalence of scientists. <em>American Sociological Review</em>, <em>39</em>(4), 579–595. <a href="https://doi.org/10.2307/2094423">https://doi.org/10.2307/2094423</a>
 </div>
 </div>
 </section></section>
@@ -1196,6 +1232,38 @@ University of California Television (UCTV). (2018, May). Improving openness and 
       }
     });
     </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>
