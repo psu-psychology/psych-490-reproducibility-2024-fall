@@ -1,32 +1,25 @@
 ---
-title: "2023-09-01 Fri"
-subtitle: "Work session: Norms and counternorms"
-author: "Rick Gilmore"
-format: revealjs
-bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
-csl: ../include/bib/apa.csl
-css: ../include/css/styles.css
+subtitle: "2023-09-01 Fri"
+title: "Work session: Norms and counternorms"
 ---
 
 # Overview
 
 ## Announcements
 
-- [Due today]{.orange_due}
-    - [Exercise 01: Reading a scientific paper](../ex01-read-a-scientific-paper.qmd)
-- **No class on Monday, September 4**.
-
 ## Today
-
-- Wrap-up on norms and counter-norms
-- Survey 02: [From raw data to results](survey-02.qmd)
 
 *Work session: Norms and counter-norms*
 
-- [Assignment]{.green_assigned}
-    - [Exercise 02: Norms and counter-norms write-up](../ex02-norms-counternorms.qmd)
+- Survey 02: [From raw data to results](../surveys/survey-02.qmd)
+- [Due]{.orange_due}
+    - [Exercise 02: Textbook Findings](../exercises/ex02-textbook-findings.qmd)
+- [Assignment]{.green-assigned}
+    - [Exercise 03: Norms and counter-norms write-up](../exercises/ex03-norms-counternorms.qmd)
 
 # Next time
+
+[@Ritchie2020-fm]
 
 *A replication crisis (or not)*
 
