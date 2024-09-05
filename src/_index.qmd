@@ -1,0 +1,5 @@
+## The reproducibility crisis in science {-}
+
+Much attention has focused on the reproducibility of research in psychology, but the challenges of producing robust and reliable knowledge extend to all disciplines, not just in science. 
+In this seminar, we will discuss whether there is or is not a reproducibility crisis in psychology and in science more broadly.
+We will discuss how initiatives to make scientific research more open and transparent can also make it more reproducible and robust.

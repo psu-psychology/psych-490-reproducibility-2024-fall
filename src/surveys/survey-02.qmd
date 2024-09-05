@@ -109,8 +109,6 @@ survey_02_norms_qs
 For plotting and analyses, it's usually easier to shorten the questions by creating a short name that reflects the underlying idea or construct.
 We'll use the `rename()` function from the `dplyr` package for this. 
 
-
-
 ```{r}
 new_names <-
   c(
@@ -148,11 +146,18 @@ survey_02_norms <- survey_02_norms %>%
   dplyr::filter(!stringr::str_detect(comments, "test"))
 ```
 
+Assign a unique code to each respondent's responses:
+
+```{r}
+survey_02_norms <- survey_02_norms |>
+  dplyr::mutate(sub_id = paste0("s_", seq_along(comments)))
+```
+
 Create a "longer" table with each row representing a single question rating from a single respondent.
 
 ```{r}
 survey_02_norms_long <- survey_02_norms |>
-  tidyr::pivot_longer(!c('timestamp', 'comments'),
+  tidyr::pivot_longer(!c('timestamp', 'comments', 'sub_id'),
                       names_to = "norm_counternorm",
                       values_to = "rating")
 ```
@@ -242,7 +247,10 @@ if (n_responses > 1) {
 
 ## Visualizations {-}
 
-```{r fig-survey-02-timeseries, fig.cap="Time series of responses to Survey 02", eval=params$make_plots}
+```{r, eval=params$make_plots}
+#| label: fig-survey-02-timeseries
+#| fig-cap: "Time series of responses to Survey-02"
+
 n_responses <- dim(survey_02_norms)[1] # number of rows in original
 
 if (n_responses < 1) {
@@ -259,7 +267,11 @@ if (n_responses < 1) {
 
 ![Survey 02 response options](../include/img/survey-02-resp-options.png)
 
-```{r fig-norms-counternorms, eval=params$make_plots}
+### Summary dotplot
+
+```{r eval=params$make_plots}
+# label: fig-norms-counternorms
+# fig-cap: "Dotplot showing ratings of what scientists *should* do vs. *actually* do by norm type. PSYCH 490.012 Fall 2024."
 survey_02_norms_long |>
   ggplot() +
   aes(rating, color = type, fill = type) +
@@ -273,6 +285,8 @@ survey_02_norms_long |>
         strip.text.y = element_text(angle = 0))
 ```
 
+### Data dictionary
+
 ```{r, eval=params$make_plots}
 survey_02_norms_data_dictionary |>
   dplyr::filter(q_short != "timestamp", q_short != "comments") |>
@@ -284,7 +298,10 @@ survey_02_norms_data_dictionary |>
   kableExtra::kable_classic()
 ```
 
-```{r fig-boxplot-norm-counternorm, fig.cap="Adherence to norms and counternorms by what scientists should do vs. actually do. PSYCH 490.012 Fall 2024", eval=params$make_plots}
+```{r eval=params$make_plots}
+#| label: fig-boxplot-norm-counternorm
+#| fig-cap: "Adherence to norms and counternorms by what scientists *should* do vs. *actually* do. PSYCH 490.012 Fall 2024."
+
 survey_02_norms_long |>
   ggplot() +
   aes(norm_counternorm, rating) +
@@ -296,4 +313,40 @@ survey_02_norms_long |>
   # ylim(1,5) +
   theme(axis.text.x = element_text(angle = 90), axis.title.x = element_blank(),
         legend.title = element_blank(), legend.position = "top")
+```
+
+### Norms
+
+```{r}
+#| label: fig-indiv-ratings-by-norm
+#| fig-cap: "Individual ratings of each norm based on what respondents think scientists *actually* do (red) vs. *should* do (aqua)"
+survey_02_norms_long |>
+  dplyr::filter(type == "norm") |>
+  ggplot() +
+  aes(x = rating, y = sub_id, color = resp_frame, fill = resp_frame, shape = resp_frame) +
+  geom_jitter(height = 0, width = .12) +
+  xlim(1,5) +
+  ggtitle("Individual ratings of norms") +
+  facet_wrap(vars(norm_counternorm)) +
+  theme(legend.title = element_blank(), 
+        legend.position = "bottom",
+        plot.title = element_text(hjust = 0.5))
+```
+
+### Counter-norms
+
+```{r}
+#| label: fig-indiv-ratings-by-counternorm
+#| fig-cap: "Individual ratings of each counter-norm based on what respondents think scientists *actually* do (red) vs. *should* do (aqua)"
+survey_02_norms_long |>
+  dplyr::filter(type == "counternorm") |>
+  ggplot() +
+  aes(x = rating, y = sub_id, color = resp_frame, fill = resp_frame, shape = resp_frame) +
+  geom_jitter(height = 0, width = .15) +
+  xlim(1,5) +
+  ggtitle("Individual ratings of counter-norms") +
+  facet_wrap(vars(norm_counternorm)) +
+  theme(legend.title = element_blank(), 
+        legend.position = "bottom",
+        plot.title = element_text(hjust = 0.5))
 ```

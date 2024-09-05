@@ -1,0 +1,447 @@
+## Schedule
+
+### August 26-30 {- #week-01}
+
+#### Monday, August 26 {-}
+
+*Introduction to the course: Why trust science?*
+
+- Read
+  - (Recommended) [@Oreskes2017, Chapter 1, pp. 55-68] | [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170717).
+- (Extra credit) Complete [Survey 01 on Trust in Science and Scientists](https://forms.gle/471gpq6XXXq9iG9C8)
+- [Class notes](notes/wk01-2024-08-26-intro.qmd)
+
+::: {.callout-tip}
+
+To earn 3 extra credit points for completing the survey, send the TA one of the following:
+
+1. The date and time you completed the survey in the following format: "7/30/2024 12:20:23"
+2. A special code or phrase that is likely to be unique to you but doesn't contain identifiable information.
+
+:::
+
+#### Wednesday, August 28 {-}
+
+- Wrap up on ["Why trust science"](notes/wk01-2024-08-26-intro.qmd#trust-in-science)
+
+*Don't Fool Yourself*
+
+- Read
+    - [@Feynman1974-ld].
+    - (Recommended) [@sagan-1996-baloney], Chapter 12, The Fine Art of Baloney Detection. [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170710)
+- [Class notes](notes/wk01-2024-08-28-no-foolin.qmd)
+
+#### Friday, August 30 {-}
+
+*Work Session: How to read a scientific paper*
+
+- Read
+    - [@Carey2020-ut]
+    - [@Ruben2016-om] (for fun)
+- [Assignment]{.green_assigned}
+    - [Exercise 01: Reading a scientific paper](exercises/ex01-read-a-scientific-paper.qmd)
+- [Class notes](notes/wk01-2024-08-30-how-to-read.qmd)
+
+### September 2-6 {- #week-02}
+
+#### Monday, September 02 {-}
+
+**NO CLASS, LABOR DAY**
+
+#### Wednesday, September 04 {-}
+
+*How science works (or should)*
+
+- Read
+    - [@Ritchie2020-fm], Chapter 1. [Alternate link to PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170709).
+    - [@Nosek2012-al]. [Alternate link to PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170711)
+- [Assignment]{.green_assigned}
+    - Complete (anonymous, extra credit) [survey](https://forms.gle/zGm5vZsPrTxwRDVR7) on scientific norms and counter-norms. **No write-up**.
+- [Class notes](notes/wk02-2024-09-04-how-science-works.qmd)
+
+#### Friday, September 06 {-}
+
+<!-- Adam not in class! -->
+
+**Work Session: Reading a paper; Evaluating its claims**
+
+- [Due]{.orange_due}
+    - [Exercise 01: Reading a scientific paper](exercises/ex01-read-a-scientific-paper.qmd)
+- [Assignment]{.green_assigned}
+    - [Exercise 02: Textbook Findings](exercises/ex02-textbook-findings.qmd)
+- [Class notes](notes/wk02-2024-09-06-claims.qmd)
+
+### September 9-13 {- #week-03}
+
+#### Monday, September 09
+
+*Scientific norms and counter-norms*
+
+- Read
+    - [@Merton1973-vf]. [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170713).
+    - [@Mitroff1974-pp]. [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170712).
+- [Assignment]{.green_assigned}
+    - Complete (anonymous) [survey](https://forms.gle/reRw9sYUzsYHUsqz9) on scientific norms and counter-norms. **No write-up**.
+- [Class notes](notes/wk03-2024-09-09-norms-counternorms.qmd)
+
+#### Wednesday, September 11 {-}
+
+*Adherence to norms and counter-norms*
+
+- Read
+    - [@Kardash2012-kq](https://doi.org/10.1007/s11251-011-9195-0).
+    - [@Macfarlane2008-tc](https://doi.org/10.1007/s10805-008-9055-y).
+<!-- - Skim -->
+<!--     - [@Anderson2010-rl](http://dx.doi.org/10.1353/jhe.0.0095). -->
+<!--     - [@Kim2018-tr](https://doi.org/10.1177/0971721817744438). -->
+- [Class notes](notes/wk03-2024-09-11-adherence-to-norms.qmd)
+
+#### Friday, September 13 {-}
+
+*Work session: Norms and counter-norms*
+
+- Survey 02: [From raw data to results](surveys/survey-02.qmd)
+- [Due]{.orange_due}
+    - [Exercise 02: Textbook Findings](exercises/ex02-textbook-findings.qmd)
+- [Assignment]{.green-assigned}
+    - [Exercise 03: Norms and counter-norms write-up](exercises/ex03-norms-counternorms.qmd)
+- [Class notes](notes/wk03-2024-09-13-work-session-norms.qmd)
+
+### September 16-20 {- #week-04}
+
+#### Monday, September 16 {-}
+
+*A replication crisis (or not)*
+
+- Read
+    - [@Ritchie2020-fm], Chapter 2. [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170706).
+    - [@Begley2012-cr].
+
+#### Wednesday, September 18 {-}
+
+*Replication attempt: The "Lady Macbeth Effect"*
+
+- Read
+    - [@Zhong2006-nf].
+    - [@Earp2014-ek].
+
+#### Friday, September 20 {-}
+
+*Work session: Replication with R, R Markdown, & Quarto*
+
+- Review
+  - [Survey 01 report](surveys/survey-01.qmd)
+  - [Survey 02 report](surveys/survey-02.qmd)
+- [Due]{.orange_due}
+    - [Exercise 03: Norms and counter-norms write-up](exercises/ex03-norms-counternorms.qmd)
+
+### September 23-27 {- #week-05}
+
+#### Monday, September 23 {-}
+
+*Replication attempt: Priming effect*
+
+- Read
+    - [@Bargh1996-yv]; [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170715)
+    - [@Doyen2012-ib]
+
+#### Wednesday, September 25 {-}
+
+*What R are we talking about?*
+
+- Read
+    - [@Fidler2021-xn], especially sections 1, 2, and 3.1-3.2.
+    - (Skim) [@Nosek2022-hv] or [@goodman_what_2016]
+
+#### Friday, September 27 {-}
+
+*Work session: Scientific integrity & Final Project Proposals*
+
+- [Assignment]{.green_assigned}
+    - [Exercise 04: Violations of scientific integrity](exercises/ex04-scientific-integrity.qmd)
+- [Assignment]{.green_assigned}
+    - [Final project proposals](exercises/final-project.qmd), [due Friday, October 13]{.orange_due}.
+
+### September 30 - October 4 {- #week-06}
+
+#### Monday, September 30
+
+*Students' Choice*
+
+#### Wednesday, October 02 {-}
+
+*Fraud & misconduct*
+
+- Read
+    - [@Ritchie2020-fm], Chapter 3
+    - [@Bhattacharjee2013-rw], [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170718)
+    - (Skim) [@Levelt2012-ap]
+    - (Skim) [@Carpenter2012-qy]
+
+#### Friday, October 04 {-}
+
+*Work session: P-hacking & Final Project Proposals*
+
+*P-hacking*
+
+- [Due]{.orange_due}
+    - [Exercise 04: Violations of scientific integrity](exercises/ex04-scientific-integrity.qmd)
+- [Assignment]{.green_assigned}
+    - [Exercise 05: P-hack your way to scientific glory](exercises/ex05-p-hacking.qmd) write-up.
+- Work session
+    - [Final project proposals](exercises/final-project.qmd), [due Friday, October 13]{.orange_due}.
+
+### October 7-11 {- #week-07}
+
+#### Monday, October 07 {-}
+
+<!-- Gilmore in Chicago. -->
+
+*Retraction and scientific integrity*
+
+*On Zoom*: <https://psu.zoom.us/my/rogilmore>. Check-in for attendance. Join from anywhere convenient to you.
+
+- Read
+    - [@Brainerd2018-iy]
+    
+#### Wednesday, October 09 {-}
+
+**NO CLASS**
+
+#### Friday, October 11 {-}
+
+*Questionable research practices*
+
+- Read
+    - [@simmons_false-positive_2011]
+- Watch
+    - [@Ngiam2020-ln]
+- Bring
+    - Draft [Exercise 05: P-hack your way to scientific glory](exercises/ex05-p-hacking.qmd) for discussion.
+
+### October 14-18 {- #week-08}
+
+#### Monday, October 14 {-}
+
+*Work Session: P-hacking and Final Project Proposals*
+
+- [Due]{.orange_due}
+    - [Exercise 05: P-hack your way to scientific glory](exercises/ex05-p-hacking.qmd) write-up.
+- Work session
+    - [Final project proposals](exercises/final-project.qmd), [due Friday, October 18]{.orange_due}.
+ 
+#### Wednesday, October 16 {-}
+
+*Prevalence of QRPs*
+
+- Read
+    - [@John2012-tk]
+- (Optional) Enter your [Exercise 05](exercises/ex05-p-hacking.qmd) data into [this](https://docs.google.com/spreadsheets/d/1JI_Qih4wCzUrYTQYE3dpvVx2C7GdzfUZq0a3QhqQyeE/edit?usp=sharing) anonymous spreadsheet.
+- Discuss [Exercise 05: P-hack your way to scientific glory](exercises/ex05-p-hacking.qmd).
+
+#### Friday, October 18 {-}
+
+*File drawer effect & Work Session: Alpha, Power, Effect Sizes, & Sample Size*
+
+- Read
+    - (Skim) [@Rosenthal1979-zi]. [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170719)
+    - (Optional) [@Franco2014-yu]
+- [Assignment]{.green_assigned}
+    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd)
+- [Due]{.orange_due}
+    - [Final project](exercises/final-project.qmd) proposal
+
+### October 21-25 {- #week-09}
+
+#### Monday, October 21 {-}
+
+*Negligence*
+
+- Read
+    - [@Ritchie2020-fm], Chapter 5
+    - [@Nuijten2015-ul]
+    - [@Szucs2017-fc]
+
+#### Wednesday, October 23 {-}
+
+*Hype*
+
+- Read
+    - [@Ritchie2020-fm], Chapter 6
+    - [@Carney2010-gq], [file on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170721)
+    - (Optional) [@Ranehill2015-dj], [file on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170720)
+ 
+#### Wednesday, October 23 {-}
+
+*Hype, continued*
+
+- Watch & discuss
+    - [@Cuddy2012-zx](https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are)
+
+### # Friday, October 25 {-}
+
+*Work session: Alpha, Power, Effect Sizes, & Sample Size & Replication*
+
+- [Discuss draft]{.orange_due}
+    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd) write-up
+- [Assignment]{.green_assigned}
+    - [Exercise 07: Replication](exercises/ex07-replication.qmd)
+- (Extra credit) Complete [Survey 03]()
+
+###October 28 - November 1 {- #week-10}
+
+#### Monday, October 28 {-}
+
+*Solutions*
+
+- Read
+    - [@munafo_manifesto_2017]
+    - [@Begley2013-vm]
+    
+#### Wednesday, October 30 {-}
+
+*Changing journal policies*
+
+- Read
+    - [@nosek_promoting_2015]
+    - [@Gilmore2020-sl]
+    - [@Srcd2019-hg]
+- [Final due]{.orange_due}
+    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd) write-up
+
+#### Friday, November 01 {-}
+
+*Catch-up day*
+
+### November 4-8 {- #week-11}
+
+#### Monday, November 04 {-}
+
+*Large-scale replication studies*
+
+- Read
+    - [@collaboration_estimating_2015]
+
+#### Wednesday, November 06 {-}
+
+*Meta-analysis & many analysts*
+
+- Read
+    - [@Wilson2014-ol]
+    - [@Silberzahn2018-st]
+
+#### Friday, November 08 {-}
+
+*Work Session: Final Projects*
+
+- [Due]{.orange_due}
+    - [Exercise 07: Replication](exercises/ex07-replication.qmd)
+
+### November 11-15 {- #week-12}
+
+#### Monday, November 11 {-}
+
+*Preregistration*
+
+- Read
+    - [@Nosek2018-jk]
+    - [@Ledgerwood2018-sn] or [@Goldin-Meadow2016-mc]
+    - (Optional) [@Claesen2021-ae]
+- Explore
+    - [clinicaltrials.gov](https://clinicaltrials.gov/)
+
+#### Wednesday, November 13 {-}
+
+*Data sharing*
+
+- Read
+    - [@Houtkoop2018-tl]
+    - [@Tenopir2020-mq]
+    - (Optional) [@GilmoreAdolph2017]
+    - (Optional) [@Meyer2018-vk]
+    - (Optional) [@National_Institutes_of_Health_undated-it](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html)
+
+#### Friday, November 15 {-}
+
+*Work Session: Final Projects*
+
+- [Final project survey]{.green_assigned}
+    - Please complete the [final project survey](https://forms.gle/vtdJ82Y7AjgU15VA9) by [Friday, November 15]{.orange_due}
+
+### November 18-22 {- #week-13}
+
+#### Monday, November 18 {-}
+
+*Materials, code, & protocol sharing*
+
+- Read
+    - [@Soska2021-mh]
+    - [@Gilroy2019-bf]
+- Explore
+    - [protocols.io](https://www.protocols.io/)
+    - [Journal of Visualized Experiments (JOVE)](https://www.jove.com/)
+- [Class notes]()
+
+#### Wednesday, November 20 {-}
+
+*Open science tools*
+
+- Read
+    - [@Kathawalla2021-tk]
+    - [Chopik2018-wx]
+    - (Optional) [@Cruwell2019-nz]
+- Explore
+    - [@FORRT_undated-pl]
+
+#### Friday, November 22 {-}
+
+*Work session: Data sharing*
+
+- [Assignment distributed]{.green_assigned}
+    - [Exercise 08: Data and materials sharing](exercises/ex08-sharing.qmd)
+- [[Final project survey](https://forms.gle/vtdJ82Y7AjgU15VA9)]{.orange_due}
+
+### November 25-29 *Thanksgiving Break*
+
+### December 2-6 {- #week-14}
+
+#### Monday, December 2 {-}
+
+*In-class final project work day*
+
+#### Wednesday, December 4 {-}
+
+*In-class final project work day*
+
+#### Friday, December 6 {-}
+
+*Project presentations*
+
+- [Schedule]()
+- [Assignment Due]{.orange_due}
+    - [Exercise 08: Data and materials sharing](exercises/ex08-sharing.qmd)
+
+### December 9-13 {- #week-15}
+
+#### Monday, December 9 {-}
+
+*Project presentations*
+
+- [Schedule]()
+
+#### Wednesday, December 11 {-}
+
+*Project presentations*
+
+- [Schedule]()
+
+#### Friday, December 13 {-}
+
+*The future of open, transparent, and reproducible scholarship*
+  
+### December 16-20 {- #finals-week}
+
+#### Wednesday, December 18 {-}
+
+- [Due]{.orange_due}
+  - [Final project](exercises/final-project.qmd) write-ups due 5:00 PM.

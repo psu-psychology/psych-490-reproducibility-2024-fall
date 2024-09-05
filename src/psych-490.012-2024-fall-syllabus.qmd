@@ -1,0 +1,26 @@
+---
+title: "The reproducibility crisis in science"
+subtitle: "PSYCH 490.012"
+date: last-modified
+format: pdf
+bibliography: include/bib/psu-repro.bib
+---
+
+## Fall 2024 • MWF 3:35-4:20 PM
+
+{{< include _index.qmd >}}
+
+{{< include _about.qmd >}}
+
+{{< include _schedule.qmd >}}
+
+{{< include _evaluation.qmd >}}
+
+{{< include _deadlines.qmd >}}
+
+{{< include _policies.qmd >}}
+
+{{< include _values.qmd >}}
+
+## References
+

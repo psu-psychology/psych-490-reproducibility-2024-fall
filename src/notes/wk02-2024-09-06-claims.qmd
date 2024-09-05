@@ -7,14 +7,28 @@ subtitle: "2024-08-30 Fri"
 
 ## Announcements
 
+- [Due]{.orange_due}
+    - [Exercise 01: Reading a scientific paper](../exercises/ex01-read-a-scientific-paper.qmd)
+
 ## Last time...
+
+- Repetition/replication $\rightarrow$ trust
+- Social character of science can lead researchers astray (Ritchie)
+  - As Feymann would say "Fool ______s"
+- Scientific communication is "anachronistic" [@Nosek2012-al]
+
+---
+
+:::{.incremental}
+- Do you think all research scholarship should be open access (free to anyone)?
+    - Who should pay for the costs of publication, maintaining the data?
+    - What's wrong with enterprising people making a living by providing these services?
+:::
 
 ## Today
 
 **Work Session: Reading a paper; Evaluating its claims**
 
-- [Due]{.orange_due}
-    - [Exercise 01: Reading a scientific paper](../exercises/ex01-read-a-scientific-paper.qmd)
 - [Assignment]{.green_assigned}
     - [Exercise 02: Textbook Findings](../exercises/ex02-textbook-findings.qmd)
     

@@ -64,9 +64,9 @@ flowchart LR
 
 - "characteristic aggressiveness" $\rightarrow$ "observed aggression"
 - Turning predictions into statistical/quantitative tests
-- $aggrChar + violent + frustr + cue \rightarrow aggrObs$.
+- $aggrChar + vioTV + frustr + cue \rightarrow aggrObs$.
 
-$b_1*charAggr + b_2*violent +...  = aggrObs + err$
+$b_1*charAggr + b_2*vioTV +...  = aggrObs + err$
 
 - where the $b_i$ "weight" the predictors based on how well they predict $aggrObs$
 
@@ -74,7 +74,10 @@ $b_1*charAggr + b_2*violent +...  = aggrObs + err$
 
 >...Groups containing more characteristically high-aggressive boys showed higher aggression following violent TV plus the cue than following violent TV alone...
 
-$$aggrChar + violent + cue > aggrChar + violent + noCue$$
+$$aggrChar + vioTV + cue >$$
+
+$$aggrChar + vioTV + noCue$$
+
 ## Today
 
 *How science works (or should)*
@@ -82,7 +85,7 @@ $$aggrChar + violent + cue > aggrChar + violent + noCue$$
 - Read
     - [@Ritchie2020-fm], Chapter 1. [Alternate link to PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170709).
     - [@Nosek2012-al]. [Alternate link to PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170711)
-    
+  
 # How science works (or should)
 
 ## Discuss [@Ritchie2020-fm, Chapter 1]
