@@ -1,6 +1,6 @@
 ---
-title: "How to read a scientific paper"
-subtitle: "2024-08-30 Fri"
+title: "Reading a paper; evaluating its claims"
+subtitle: "2024-09-06 Fri"
 ---
 
 # Overview
