@@ -16,8 +16,6 @@ website:
     left:
       - href: index.qmd
         text: home
-      - href: about.qmd
-        text: about
       - href: schedule.qmd
         text: schedule
       - href: evaluation.qmd

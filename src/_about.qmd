@@ -1,10 +1,8 @@
 ## Instructor {-}
 
-Rick O. Gilmore, Ph.D.</br>
-
-Professor of Psychology</br>
-
-rog1 AT-SIGN psu PERIOD edu</br>
+Rick O. Gilmore, Ph.D. \
+Professor of Psychology \
+rog1 AT-SIGN psu PERIOD edu \
 
 Schedule an appointment: <https://doodle.com/mm/rickgilmore/book-a-time></br>
 
@@ -12,16 +10,14 @@ Lab web site: <https://gilmore-lab.github.io>
 
 ## Teaching Assistant {-}
 
-Adam Calderon</br>
-
-Graduate Student in Clinical Psychology</br>
-
+Adam Calderon \
+Graduate Student in Clinical Psychology \
 afc6160 AT-SIGN psu PERIOD edu
 <!-- Office hours: Friday 3-4 pm, via [Zoom](https://psu.zoom.us/j/94414923783). -->
 
 ## Meeting time & location {-}
 
-Monday, Wednesday, & Friday, 3:35 PM - 4:20 PM</br>
+Monday, Wednesday, & Friday, 3:35 PM - 4:20 PM \
 [Cedar Building](https://map.psu.edu/?id=1134#!ct/59509,33177,25403,26748,26749,26750,27255?m/357035?s/cedar) 134
 
 ## Canvas site

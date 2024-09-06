@@ -92,17 +92,26 @@ This is achieved by adding the name of the data directory to a special `.gitigno
 
 ## Cleaning {-}
 
-Next we load the data file and clean it.
+Next we load the data file.
 
 ```{r, message=FALSE, echo=TRUE}
 survey_02_norms <-
   readr::read_csv(file.path("csv", params$fn), show_col_types = FALSE)
+```
 
+We have *n=*`{r} dim(survey_02_norms)[1]` responses as of `{r} Sys.time()`.
+**Note**: Two of these are "test" responses by Dr. Gilmore.
+
+Here are the column "names":
+
+```{r}
 # Google Forms puts the full question in the top row of the data file.
 # We use the names() function to extract and print the original questions.
 survey_02_norms_qs <- names(survey_02_norms)
 survey_02_norms_qs
 ```
+
+We see that these are the full text of the questions asked.
 
 ### Clean/shorten names
 
@@ -149,8 +158,13 @@ survey_02_norms <- survey_02_norms %>%
 Assign a unique code to each respondent's responses:
 
 ```{r}
+# Use stringr::str_pad() to 'pad' numbers so that all of them are 2 characters
+# wide.
+
 survey_02_norms <- survey_02_norms |>
-  dplyr::mutate(sub_id = paste0("s_", seq_along(comments)))
+  dplyr::mutate(sub_id = paste0("s_", stringr::str_pad(seq_along(comments), 
+                                                       width = 2,
+                                                       pad = 0)))
 ```
 
 Create a "longer" table with each row representing a single question rating from a single respondent.
@@ -224,27 +238,6 @@ survey_02_norms_data_dictionary$resp_frame [18] <- NA
 
 We'll add other items to the data dictionary later.
 
-### Filtering out irrelevant responses {-}
-
-We should omit the first response in the dataset.
-That was the one Dr. Gilmore used to generate a Google Sheet, and isn't real data.
-He put "test" in the `comments` field to make it easy to detect.
-
-```{r filter-test-resp}
-survey_02_norms <- survey_02_norms |>
-  dplyr::filter(!stringr::str_detect(comments, "test"))
-
-n_responses <- dim(survey_02_norms)[1]
-
-if (n_responses > 1) {
-  survey_02_norms <- survey_02_norms[1:n_responses,]  
-  test_phase_no_print <- FALSE
-} else {
-  message("No 'non-test' responses yet. Leaving data file unchanged.")
-  test_phase_no_print <- TRUE
-}
-```
-
 ## Visualizations {-}
 
 ```{r, eval=params$make_plots}
@@ -258,10 +251,16 @@ if (n_responses < 1) {
 } else {
   survey_02_norms |>
     dplyr::mutate(resp_index = 1:n_responses) |>
+    dplyr::mutate(timestamp = lubridate::mdy_hms(timestamp)) |>
     ggplot() +
     aes(x = timestamp, resp_index) +
     geom_point() +
-    theme(axis.text.x = element_text(angle=90), axis.title.x = element_blank())
+    geom_line() +
+    ggtitle("Time series of responses to Survey-02") +
+    scale_y_continuous(breaks = 1:12) +
+    theme(axis.text.x = element_text(angle=90), 
+          axis.title.x = element_blank(),
+          plot.title = element_text(hjust = 0.5))
 }
 ```
 
@@ -281,7 +280,8 @@ survey_02_norms_long |>
   theme(axis.text.y = element_blank()) +
   theme(axis.ticks = element_blank()) +
   facet_grid(rows = vars(norm_counternorm), cols = vars(resp_frame)) +
-  theme(legend.position = "bottom", legend.title = element_blank(),
+  theme(legend.position = "bottom", 
+        legend.title = element_blank(),
         strip.text.y = element_text(angle = 0))
 ```
 
@@ -307,12 +307,14 @@ survey_02_norms_long |>
   aes(norm_counternorm, rating) +
   geom_violin() +
   geom_dotplot(binaxis = 'y', stackdir = 'center', dotsize = .7, aes(fill = type)) +
-  #ylab(c("not at all", "2", "3", "4", "a great deal")) +
   facet_grid(cols = vars(resp_frame)) +
-  scale_y_continuous(breaks = c(1, 2, 3, 4, 5), labels=c("1" = "not at all", "2", "3", "4", "5" = "a great deal")) +
-  # ylim(1,5) +
-  theme(axis.text.x = element_text(angle = 90), axis.title.x = element_blank(),
-        legend.title = element_blank(), legend.position = "top")
+  scale_y_continuous(breaks = c(1, 2, 3, 4, 5), 
+                     labels=c("1" = "not at all", "2", "3", "4", 
+                              "5" = "a great deal")) +
+  theme(axis.text.x = element_text(angle = 90), 
+        axis.title.x = element_blank(),
+        legend.title = element_blank(), 
+        legend.position = "top")
 ```
 
 ### Norms

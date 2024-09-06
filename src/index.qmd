@@ -1,27 +1,8 @@
 ---
 title: "PSYCH 490.012"
 subtitle: "Fall 2024 • MWF 3:35-4:20 PM"
-author: "Rick Gilmore"
 ---
 
-## The reproducibility crisis in science {-}
+{{< include _index.qmd >}}
 
-::: {#fig-repro-books layout-ncol=3 layout-nrow=2}
-
-![](include/img/chambers-seven-deadly-sins.jpg){#fig-chambers-seven}
-
-![](include/img/ritchie-science-fictions.jpg){#fig-ritchie-fiction}
-
-![](include/img/bausell-problem-with-science.jpg){#fig-bausell-problem}
-
-![](include/img/harris-rigor-mortis.jpg){#fig-harris-rigor}
-
-![](include/img/oreskes-why-trust-science.jpg){#fig-oreskes-trust}
-
-Some recent books on reproducibility in science.
-:::
-
-
-Much attention has focused on the reproducibility of research in psychology, but the challenges of producing robust and reliable knowledge extend to all disciplines, not just in science. 
-In this seminar, we will discuss whether there is or is not a reproducibility crisis in psychology and in science more broadly.
-We will discuss how initiatives to make scientific research more open and transparent can also make it more reproducible and robust.
+{{< include _about.qmd >}}
