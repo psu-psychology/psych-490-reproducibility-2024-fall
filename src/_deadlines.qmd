@@ -5,8 +5,8 @@ This page summarizes some of the key deadlines in the course.
 | Date      | What's [due]{.orange_due}/happening |
 |-----------|----------------------|
 | [2024-09-06](schedule.qmd#friday-september-06)   | [Exercise 01](exercises/ex01-read-a-scientific-paper.qmd) |
-| [2024-09-13](schedule.qmd#friday-september-13) | [Exercise 02](exercises/ex02-textbook-findings.qmd) |
-| [2024-09-20](schedule.qmd#friday-september-20) | [Exercise 03](exercises/ex03-norms-counternorms.qmd) |
+| [2024-09-20](schedule.qmd#friday-september-20) | [Exercise 02](exercises/ex02-textbook-findings.qmd) |
+| [2024-09-20](schedule.qmd#friday-september-27) | [Exercise 03](exercises/ex03-norms-counternorms.qmd) |
 | [2024-10-04](schedule.qmd#friday-october-04)  | [Exercise 04](exercises/ex04-scientific-integrity.qmd) |
 | [2024-10-14](schedule.qmd#monday-october-14)  | [Exercise 05](exercises/ex05-p-hacking.qmd") |
 | [2024-10-18](schedule.qmd#friday-october-18) | [Final project proposal](exercises/final-project.qmd) due |

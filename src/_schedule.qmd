@@ -68,8 +68,8 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 - [Due]{.orange_due}
     - [Exercise 01: Reading a scientific paper](exercises/ex01-read-a-scientific-paper.qmd)
 - [Assignment]{.green_assigned}
-    - [Exercise 02: Textbook Findings](exercises/ex02-textbook-findings.qmd)
-- [Class notes](notes/wk02-2024-09-06-claims.qmd)
+    - [Exercise 02: Textbook Findings](exercises/ex02-textbook-findings.qmd), [due Friday, September 20]{.orange_due}
+- [Class notes](notes/wk02-2024-09-06-claims.qmd), due 
 
 ### September 9-13 {- #week-03}
 
@@ -101,10 +101,8 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 *Work session: Norms and counter-norms*
 
 - Survey 02: [From raw data to results](surveys/survey-02.qmd)
-- [Due]{.orange_due}
-    - [Exercise 02: Textbook Findings](exercises/ex02-textbook-findings.qmd)
-- [Assignment]{.green-assigned}
-    - [Exercise 03: Norms and counter-norms write-up](exercises/ex03-norms-counternorms.qmd)
+- [Assignment]{.green_assigned}
+    - [Exercise 03: Norms and counter-norms write-up](exercises/ex03-norms-counternorms.qmd), [due Friday, September 27]{.orange_due}
 - [Class notes](notes/wk03-2024-09-13-work-session-norms.qmd)
 
 ### September 16-20 {- #week-04}
@@ -133,7 +131,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
   - [Survey 01 report](surveys/survey-01.qmd)
   - [Survey 02 report](surveys/survey-02.qmd)
 - [Due]{.orange_due}
-    - [Exercise 03: Norms and counter-norms write-up](exercises/ex03-norms-counternorms.qmd)
+    - [Exercise 02: Textbook Findings](exercises/ex02-textbook-findings.qmd)
 
 ### September 23-27 {- #week-05}
 
@@ -158,9 +156,10 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 *Work session: Scientific integrity & Final Project Proposals*
 
 - [Assignment]{.green_assigned}
-    - [Exercise 04: Violations of scientific integrity](exercises/ex04-scientific-integrity.qmd)
-- [Assignment]{.green_assigned}
-    - [Final project proposals](exercises/final-project.qmd), [due Friday, October 13]{.orange_due}.
+    - [Exercise 04: Violations of scientific integrity](exercises/ex04-scientific-integrity.qmd), [due Friday, October 4]{.orange_due}
+    - [Final project proposals](exercises/final-project.qmd), [due Friday, October 18]{.orange_due}.
+- [Due]{.orange_due}
+    - [Exercise 03: Norms and counter-norms write-up](exercises/ex03-norms-counternorms.qmd)
 
 ### September 30 - October 4 {- #week-06}
 
@@ -247,7 +246,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - (Skim) [@Rosenthal1979-zi]. [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170719)
     - (Optional) [@Franco2014-yu]
 - [Assignment]{.green_assigned}
-    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd)
+    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd), [final version due Wednesday, October 30]{.orange_due}
 - [Due]{.orange_due}
     - [Final project](exercises/final-project.qmd) proposal
 
@@ -278,17 +277,17 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 - Watch & discuss
     - [@Cuddy2012-zx](https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are)
 
-### # Friday, October 25 {-}
+### Friday, October 25 {-}
 
 *Work session: Alpha, Power, Effect Sizes, & Sample Size & Replication*
 
 - [Discuss draft]{.orange_due}
     - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd) write-up
 - [Assignment]{.green_assigned}
-    - [Exercise 07: Replication](exercises/ex07-replication.qmd)
+    - [Exercise 07: Replication](exercises/ex07-replication.qmd), [due Friday, November 8]{.orange_due}
 - (Extra credit) Complete [Survey 03]()
 
-###October 28 - November 1 {- #week-10}
+### October 28 - November 1 {- #week-10}
 
 #### Monday, October 28 {-}
 
@@ -306,7 +305,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - [@nosek_promoting_2015]
     - [@Gilmore2020-sl]
     - [@Srcd2019-hg]
-- [Final due]{.orange_due}
+- [Final version due]{.orange_due}
     - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd) write-up
 
 #### Friday, November 01 {-}

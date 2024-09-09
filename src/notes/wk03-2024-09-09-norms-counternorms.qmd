@@ -3,12 +3,22 @@ title: "Scientific norms and counter-norms"
 subtitle: "2023-09-09 Mon"
 ---
 
+# Prelude
+
+---
+
+{{< video https://www.youtube.com/watch?v=GwTvIlXnKxo width="100%" height="75%">}}
+
+[@McCutcheon-Topic2019-id]
+
 # Overview
 
 ## Announcements
 
-- [Due Friday]{.orange_due}
+- [Due **NEXT** Friday]{.orange_due}
     - [Exercise 02: Textbook Findings](../exercises/ex02-textbook-findings.qmd)
+      - Find a textbook in the library OR use your paper from [Exercise 01](../exercises/ex01-read-a-scientific-paper.qmd).
+- Moved [Exercise 03](../exercises/ex03-norms-counternorms.qmd) back a week, also.
 
 ## Today
 

@@ -5,7 +5,7 @@ subtitle: Evidence for "textbook" findings
 
 ## Dates {-}
 
-Due: [Friday, September 13](../schedule.qmd#friday-september-13){.orange_due}.
+Due: [Friday, September 20](../schedule.qmd#friday-september-20){.orange_due}.
 
 ## Goals {-}
 
@@ -18,11 +18,10 @@ You may work with one other person if you wish.
 Your goal is to evaluate whether the base of evidence that supports a finding in one of your textbooks.
 That base of evidence involves several components: the number, quantity, and quality of studies that replicated the original finding; the clarity of the methods description; the availability of shared data; and so on.
 
-1. Choose a finding from one of your psychology textbooks.
-2. Find the primary citation or citation(s) that support the claim. If there is more than one, pick the earliest citation for a finding.
-3. Use the rubric described in [@Carey2020-ut] to read the paper you chose.
-4. Extract from the paper the main *claims*, statements in the text that describe the results, and the *display items*, the tables or figures that support the author(s) arguments for their claims.
-5. Create a table summarizing the main claim(s)^[1], your evaluation about whether they are causal or descriptive^[2], and the evidence that supports them.
+1. Choose a finding from one of your psychology textbooks OR the paper you analyzed for [Exercise 01](ex01-read-a-scientific-paper.qmd).
+2. If your source is a textbook, identify the primary citation or source for the claim. Find the cited paper, and use the rubric described in [@Carey2020-ut] to read the paper you chose.
+3. Extract from the paper the main *claims*, statements in the text that describe the results, and the *display items*, the tables or figures that support the author(s) arguments for their claim(s)^[1].
+5. Create a table summarizing the main claim(s), your evaluation about whether they are causal or descriptive^[2], and the evidence that supports them.
 
 | Claim | Causal or Descriptive | Evidence |
 |-------|-----------------------|----------|
