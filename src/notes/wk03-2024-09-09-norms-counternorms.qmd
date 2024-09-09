@@ -61,7 +61,7 @@ Robert Merton
 
 ---
 
-> Difficult as the notion may appear to those reared in a culture that grants science a prominent if not a commanding place in the scheme of things, it is evident that science is not immune from attack, restraint, and repression. Writing a little while ago, Veblen could observe that the faith of western culture in science was unbounded, unquestioned, unrivaled.
+>Difficult as the notion may appear to those reared in a culture that grants science a prominent if not a commanding place in the scheme of things, it is evident that science is not immune from attack, restraint, and repression. Writing a little while ago, Veblen could observe that the faith of western culture in science was unbounded, unquestioned, unrivaled.
 
 <p style="text-align:center;">
 [@Merton1973-vf, p. 267]
@@ -69,8 +69,7 @@ Robert Merton
 
 ---
 
->...The revolt from science which then appeared so improbable as to concern only the timid academician who would ponder all contingencies, however remote, has now been forced upon the attention of scientist and layman alike. Local contagions of anti-intellectualism threaten to become
-epidemic.
+>...The revolt from science which then appeared so improbable as to concern only the timid academician who would ponder all contingencies, however remote, has now been forced upon the attention of scientist and layman alike. Local contagions of anti-intellectualism threaten to become epidemic.
 
 <p style="text-align:center;">
 [@Merton1973-vf, p. 267]
@@ -79,8 +78,7 @@ epidemic.
 ## Questions
 
 - What's the difference between principled skepticism about specific scientific claims and "anti-intellectualism"?
-- Do you agree with Merton that "Local contagions of anti-intellectualism threaten to become
-epidemic."?
+- Do you agree with Merton that "Local contagions of anti-intellectualism threaten to become epidemic"?
 
 ---
 
@@ -92,9 +90,17 @@ epidemic."?
 [@Merton1973-vf, p. 270]
 </p>
 
-## Question
+## Questions
 
+- What does Merton mean when he says "the mores of science possess a methodologic rationale..."?
+- What is that rationale?
+
+---
+
+- What does it mean to imply that scientific methods are "procedurally efficient"?
 - *How* are scientific methods efficient?
+- What are they efficient in doing?
+- Is [efficiency](wk03-2024-09-09-norms-counternorms.qmd#/the-ethos-of-science) enough (for Merton)?
 
 ---
 

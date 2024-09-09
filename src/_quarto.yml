@@ -44,6 +44,13 @@ website:
   repo-url: https://github.com/psu-psychology/psych-490-reproducibility-2024-fall
   repo-actions: [edit, issue]
   repo-subdir: src
+  page-footer:
+    left: "Copyright 2024, Rick Gilmore" 
+    right:
+      - icon: github
+        href: https://github.com/rogilmore
+    background: light
+  page-navigation: true
   
 format:
   html:
