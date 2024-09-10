@@ -1334,7 +1334,7 @@
     "href": "notes/wk03-2024-09-11-adherence-to-norms.html#announcements",
     "title": "Adherence to norms and counter-norms",
     "section": "Announcements",
-    "text": "Announcements\n\nDue this Friday\n\nExercise 02: Evidence for ‘textbook’ findings"
+    "text": "Announcements\n\nDue next Friday, September 20\n\nExercise 02: Evidence for ‘textbook’ findings"
   },
   {
     "objectID": "notes/wk03-2024-09-11-adherence-to-norms.html#last-time",
@@ -1440,5 +1440,54 @@
     "title": "Survey 02",
     "section": "Visualizations",
     "text": "Visualizations\n\nn_responses &lt;- dim(survey_02_norms)[1] # number of rows in original\n\nif (n_responses &lt; 1) {\n  message(\"Insufficient responses to plot.\")\n} else {\n  survey_02_norms |&gt;\n    dplyr::mutate(resp_index = 1:n_responses) |&gt;\n    dplyr::mutate(timestamp = lubridate::mdy_hms(timestamp)) |&gt;\n    ggplot() +\n    aes(x = timestamp, resp_index) +\n    geom_point() +\n    geom_line() +\n    ggtitle(\"Time series of responses to Survey-02\") +\n    scale_y_continuous(breaks = 1:12) +\n    theme(axis.text.x = element_text(angle=90), \n          axis.title.x = element_blank(),\n          plot.title = element_text(hjust = 0.5))\n}\n\n\n\n\n\n\n\nFigure 1: Time series of responses to Survey-02\n\n\n\n\n\n\n\n\nSurvey 02 response options\n\n\n\nSummary dotplot\n\n# label: fig-norms-counternorms\n# fig-cap: \"Dotplot showing ratings of what scientists *should* do vs. *actually* do by norm type. PSYCH 490.012 Fall 2024.\"\nsurvey_02_norms_long |&gt;\n  ggplot() +\n  aes(rating, color = type, fill = type) +\n  geom_dotplot(dotsize = .4) +\n  xlim(1, 5) +\n  theme(axis.title.y = element_blank()) +\n  theme(axis.text.y = element_blank()) +\n  theme(axis.ticks = element_blank()) +\n  facet_grid(rows = vars(norm_counternorm), cols = vars(resp_frame)) +\n  theme(legend.position = \"bottom\", \n        legend.title = element_blank(),\n        strip.text.y = element_text(angle = 0))\n\nBin width defaults to 1/30 of the range of the data. Pick better value with\n`binwidth`.\n\n\n\n\n\n\n\n\n\n\n\nData dictionary\n\nsurvey_02_norms_data_dictionary |&gt;\n  dplyr::filter(q_short != \"timestamp\", q_short != \"comments\") |&gt;\n  dplyr::mutate(q_short = stringr::str_remove_all(q_short, \"_should|_actually\")) |&gt;\n  dplyr::mutate(q_long = stringr::str_remove_all(q_long, \"....[0-9]+\")) |&gt;\n  dplyr::select(q_short, q_long, norm_type) |&gt;\n  dplyr::arrange(desc(norm_type)) |&gt;\n  knitr::kable(format = \"html\") |&gt;\n  kableExtra::kable_classic()\n\n\n\n\nq_short\nq_long\nnorm_type\n\n\n\n\nDisinterestedness\nScientists are generally motivated by the desire for knowledge and discovery, and not by the possibility of personal gain\nnorm\n\n\nOrganized Skepticism\nScientists make an attempt to consider all new evidence, hypotheses, theories, and innovations, even those that challenge or contradict their own work\nnorm\n\n\nCommunality\nScientists openly share new findings with all colleagues\nnorm\n\n\nUniversalism\nScientists generally evaluate research only on its merit (i.e., according to accepted standards of the field)\nnorm\n\n\nDisinterestedness\nScientists are generally motivated by the desire for knowledge and discovery, and not by the possibility of personal gain\nnorm\n\n\nOrganized Skepticism\nScientists make an attempt to consider all new evidence, hypotheses, theories, and innovations, even those that challenge or contradict their own work\nnorm\n\n\nCommunality\nScientists openly share new findings with all colleagues\nnorm\n\n\nUniversalism\nScientists generally evaluate research only on its merit (i.e., according to accepted standards of the field)\nnorm\n\n\nParticularism\nScientists generally assess new knowledge and its applications based on the reputation and past productivity of the individual or research group\ncounternorm\n\n\nOrganized Dogmatism\nScientists generally invest their careers in promoting their own most important findings, theories, or innovations\ncounternorm\n\n\nSelf-interestedness\nScientists compete with others in the same field for funding and recognition of their achievements\ncounternorm\n\n\nSolitariness\nScientists emphasize the protection of their newest findings to ensure priority in publishing, patenting, or applications\ncounternorm\n\n\nParticularism\nScientists generally assess new knowledge and its applications based on the reputation and past productivity of the individual or research group\ncounternorm\n\n\nOrganized Dogmatism\nScientists generally invest their careers in promoting their own most important findings, theories, or innovations\ncounternorm\n\n\nSelf-interestedness\nScientists compete with others in the same field for funding and recognition of their achievements\ncounternorm\n\n\nSolitariness\nScientists emphasize the protection of their newest findings to ensure priority in publishing, patenting, or applications\ncounternorm\n\n\n\n\n\n\n\n\nsurvey_02_norms_long |&gt;\n  ggplot() +\n  aes(norm_counternorm, rating) +\n  geom_violin() +\n  geom_dotplot(binaxis = 'y', stackdir = 'center', dotsize = .7, aes(fill = type)) +\n  facet_grid(cols = vars(resp_frame)) +\n  scale_y_continuous(breaks = c(1, 2, 3, 4, 5), \n                     labels=c(\"1\" = \"not at all\", \"2\", \"3\", \"4\", \n                              \"5\" = \"a great deal\")) +\n  theme(axis.text.x = element_text(angle = 90), \n        axis.title.x = element_blank(),\n        legend.title = element_blank(), \n        legend.position = \"top\")\n\nBin width defaults to 1/30 of the range of the data. Pick better value with\n`binwidth`.\n\n\n\n\n\n\n\n\nFigure 2: Adherence to norms and counternorms by what scientists should do vs. actually do. PSYCH 490.012 Fall 2024.\n\n\n\n\n\n\n\nNorms\n\nsurvey_02_norms_long |&gt;\n  dplyr::filter(type == \"norm\") |&gt;\n  ggplot() +\n  aes(x = rating, y = sub_id, color = resp_frame, fill = resp_frame, shape = resp_frame) +\n  geom_jitter(height = 0, width = .12) +\n  xlim(1,5) +\n  ggtitle(\"Individual ratings of norms\") +\n  facet_wrap(vars(norm_counternorm)) +\n  theme(legend.title = element_blank(), \n        legend.position = \"bottom\",\n        plot.title = element_text(hjust = 0.5))\n\nWarning: Removed 5 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\nFigure 3: Individual ratings of each norm based on what respondents think scientists actually do (red) vs. should do (aqua)\n\n\n\n\n\n\n\nCounter-norms\n\nsurvey_02_norms_long |&gt;\n  dplyr::filter(type == \"counternorm\") |&gt;\n  ggplot() +\n  aes(x = rating, y = sub_id, color = resp_frame, fill = resp_frame, shape = resp_frame) +\n  geom_jitter(height = 0, width = .15) +\n  xlim(1,5) +\n  ggtitle(\"Individual ratings of counter-norms\") +\n  facet_wrap(vars(norm_counternorm)) +\n  theme(legend.title = element_blank(), \n        legend.position = \"bottom\",\n        plot.title = element_text(hjust = 0.5))\n\nWarning: Removed 5 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\nFigure 4: Individual ratings of each counter-norm based on what respondents think scientists actually do (red) vs. should do (aqua)"
+  },
+  {
+    "objectID": "notes/wk03-2024-09-11-adherence-to-norms.html#show-recommendation",
+    "href": "notes/wk03-2024-09-11-adherence-to-norms.html#show-recommendation",
+    "title": "Adherence to norms and counter-norms",
+    "section": "Show recommendation",
+    "text": "Show recommendation\n\nAlternative history depicting what might have happened had the Soviets beaten the United States to the Moon in the summer of 1969."
+  },
+  {
+    "objectID": "notes/wk03-2024-09-11-adherence-to-norms.html#what-the-f",
+    "href": "notes/wk03-2024-09-11-adherence-to-norms.html#what-the-f",
+    "title": "Adherence to norms and counter-norms",
+    "section": "What the F?",
+    "text": "What the F?\n\n…A 2 Rater (mentor vs. intern) × 8 Item × 2 Type (should vs. does) within-subjects ANOVA.\n\n\\(Rater_{intern|mentor} + Item_{1...8} + Type_{should|actually} \\\\ = Rating\\)\n\nANalysis Of Variance"
+  },
+  {
+    "objectID": "notes/wk03-2024-09-11-adherence-to-norms.html#what-the-f-test",
+    "href": "notes/wk03-2024-09-11-adherence-to-norms.html#what-the-f-test",
+    "title": "Adherence to norms and counter-norms",
+    "section": "What the F-test?",
+    "text": "What the F-test?\n\n…A 2 Rater (mentor vs. intern) × 8 Item × 2 Type (should vs. does) within-subjects ANOVA.\n\n\\(Rater_{intern|mentor} + Item_{1...8} + Type_{should|actually} \\\\ = Rating\\)"
+  },
+  {
+    "objectID": "notes/wk03-2024-09-11-adherence-to-norms.html#claims-evidence",
+    "href": "notes/wk03-2024-09-11-adherence-to-norms.html#claims-evidence",
+    "title": "Adherence to norms and counter-norms",
+    "section": "Claims & evidence",
+    "text": "Claims & evidence\n\n…Regarding idealized practice, mentors rated the norms significantly higher than did interns; mentors and interns generally did not differ in subscription to the counter-norms…\n\n\n(Kardash & Edwards, 2012)"
+  },
+  {
+    "objectID": "notes/wk03-2024-09-11-adherence-to-norms.html#survey-02-results",
+    "href": "notes/wk03-2024-09-11-adherence-to-norms.html#survey-02-results",
+    "title": "Adherence to norms and counter-norms",
+    "section": "Survey 02 results",
+    "text": "Survey 02 results\n\nYour predictions\n\nNorms vs. Counternorms?\nShould do vs. Actually do?\nWhat sort of data picture do you expect to see?\n\nCompare with our results\n\nWhat specific evidence supports your prediction/claim"
+  },
+  {
+    "objectID": "notes/wk03-2024-09-11-adherence-to-norms.html#analysis-of-variance",
+    "href": "notes/wk03-2024-09-11-adherence-to-norms.html#analysis-of-variance",
+    "title": "Adherence to norms and counter-norms",
+    "section": "ANalysis Of Variance",
+    "text": "ANalysis Of Variance\n\nHow well does this “model” (equation) fit the data?\nF-test: ~ How strongly does the predictor variable relate to the response?\n“within-subjects”: Assume each person has their own mean response (& we don’t care about it very much)1\n\nWe’re interested in generalizing across people."
+  },
+  {
+    "objectID": "notes/wk03-2024-09-11-adherence-to-norms.html#main-effects-and-interactions",
+    "href": "notes/wk03-2024-09-11-adherence-to-norms.html#main-effects-and-interactions",
+    "title": "Adherence to norms and counter-norms",
+    "section": "Main effects and interactions",
+    "text": "Main effects and interactions\n\nMain effects: Effect of single predictors (Rater, Item, Type)\nInteractions: Combinations of main effects.\n\n\n\n\n\n\n\n\nStatistic\nInterpretation\n\n\n\n\n“Rater × Item, F(5.27,326.61) = 9.17”\nMean ratings for individual items differ for mentors vs. interns"
   }
 ]
