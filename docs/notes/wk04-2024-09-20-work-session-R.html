@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.56">
 
   <meta name="author" content="Rick Gilmore">
-  <title>PSYCH 490 • Fall 2024 – Work session: Norms and counternorms</title>
+  <title>PSYCH 490 • Fall 2024 – 2023-09-15 Fri</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -352,14 +417,17 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Work session: Norms and counternorms</h1>
-  <p class="subtitle">2024-09-13 Fri</p>
+  <h1 class="title">2023-09-15 Fri</h1>
+  <p class="subtitle">Work session: Replication with R, R Markdown, &amp; Quarto</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -370,71 +438,324 @@ Rick Gilmore
 </div>
 
 </section>
-<section id="prelude" class="title-slide slide level1 center">
-<h1>Prelude</h1>
-
-</section>
-
 <section>
 <section id="overview" class="title-slide slide level1 center">
 <h1>Overview</h1>
 
 </section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
+<section id="announcement" class="slide level2">
+<h2>Announcement</h2>
 <ul>
-<li><span class="orange_due">Due</span>
+<li>Retraction Watch <a href="https://retractionwatch.com/retraction-watch-database-user-guide/">database</a> now <a href="https://retractionwatch.com/2023/09/12/the-retraction-watch-database-becomes-completely-open-and-rw-becomes-far-more-sustainable/">available to anyone</a> via <a href="https://www.crossref.org/blog/news-crossref-and-retraction-watch/">CrossRef</a></li>
+</ul>
+</section>
+<section id="last-time" class="slide level2">
+<h2>Last time…</h2>
 <ul>
-<li><a href="exercises/ex02-textbook-findings.qmd">Exercise 02: Textbook Findings</a></li>
-</ul></li>
+<li>Wrap-up on replication attempt of <span class="citation" data-cites="Zhong2006-nf">(<a href="#/references" role="doc-biblioref" onclick="">Zhong &amp; Liljenquist, 2006</a>)</span> by <span class="citation" data-cites="Earp2014-ek">(<a href="#/references" role="doc-biblioref" onclick="">Earp, Everett, Madva, &amp; Hamlin, 2014</a>)</span></li>
+<li>Discuss replication attempt of <span class="citation" data-cites="Bargh1996-yv">(<a href="#/references" role="doc-biblioref" onclick="">Bargh, Chen, &amp; Burrows, 1996</a>)</span> by <span class="citation" data-cites="Doyen2012-ib">(<a href="#/references" role="doc-biblioref" onclick="">Doyen, Klein, Pichon, &amp; Cleeremans, 2012</a>)</span></li>
 </ul>
 </section>
 <section id="today" class="slide level2">
 <h2>Today</h2>
-<p><em>Work session: Norms and counter-norms</em></p>
 <ul>
-<li>Survey 02: <a href="../surveys/survey-02.html">From raw data to results</a></li>
-<li><span class="green-assigned">Assignment</span>
+<li>Wrap-up discussion of <span class="citation" data-cites="Bargh1996-yv">(<a href="#/references" role="doc-biblioref" onclick="">Bargh et al., 1996</a>)</span> and <span class="citation" data-cites="Doyen2012-ib">(<a href="#/references" role="doc-biblioref" onclick="">Doyen et al., 2012</a>)</span>; <a href="wk04-2023-09-13.html">Slides from Wed 9/13</a></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><em>Work session: Reproducible workflows with R, R Markdown, &amp; Quarto</em></p>
 <ul>
-<li><a href="../exercises/ex03-norms-counternorms.html">Exercise 03: Norms and counter-norms write-up</a></li>
+<li>Review
+<ul>
+<li><a href="../survey-01.html">Survey 01 report</a></li>
+<li><a href="../survey-02.html">Survey 02 report</a></li>
 </ul></li>
 </ul>
 </section></section>
 <section>
-<section id="survey-02" class="title-slide slide level1 center">
-<h1>Survey 02</h1>
+<section id="reproducible-workflows-with-r-r-markdown-quarto" class="title-slide slide level1 center">
+<h1>Reproducible workflows with R, R Markdown, &amp; Quarto</h1>
 
 </section>
-<section id="your-predictions" class="slide level2">
-<h2>Your predictions</h2>
+<section id="goals" class="slide level2">
+<h2>Goals</h2>
+<div>
 <ul>
-<li>Your predictions
+<li class="fragment">Capture details of the research workflow
 <ul>
-<li>Norms vs.&nbsp;Counter-norms?</li>
-<li>Should do vs.&nbsp;Actually do?</li>
+<li class="fragment">Not usually contained in journal articles, remember <span class="citation" data-cites="Artner2021-qg">(<a href="#/references" role="doc-biblioref" onclick="">Artner et al., 2021</a>)</span> comment from <a href="wk03-2023-09-08.html#artner-et-al-2021">last week</a>?</li>
+</ul></li>
+<li class="fragment">Make research notebooks that actually do work
+<ul>
+<li class="fragment">Not just capture info passively</li>
+</ul></li>
+<li class="fragment">Do so efficiently, flexibly</li>
+</ul>
+</div>
+</section>
+<section id="more-goals" class="slide level2">
+<h2>More goals</h2>
+<div>
+<ul>
+<li class="fragment">Make <em>computer</em> work harder</li>
+<li class="fragment">Reduce manual work
+<ul>
+<li class="fragment">More error-prone</li>
+</ul></li>
+<li class="fragment">Save history of changes (e.g., version control)</li>
+<li class="fragment">Make use of HTML and the web</li>
+<li class="fragment">Keep track of (&amp; cite) resources</li>
+</ul>
+</div>
+</section>
+<section id="research-workflow" class="slide level2">
+<h2>Research workflow</h2>
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a></a>flowchart LR</span>
+<span id="cb1-2"><a></a>  A{Idea/Question} --&gt;|Develop|B{Plan}</span>
+<span id="cb1-3"><a></a>  B --&gt;|Create measures|C{Collect Info}</span>
+<span id="cb1-4"><a></a>  C --&gt;|Gather collected|D{Analyze Info}</span>
+<span id="cb1-5"><a></a>  D --&gt;|Visualize|E{Share findings}</span>
+<span id="cb1-6"><a></a>  E --&gt;|Evaluate|A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A{Idea/Question} --&gt;|Develop|B{Plan}
+  B --&gt;|Create measures|C{Collect Info}
+  C --&gt;|Gather collected|D{Analyze Info}
+  D --&gt;|Visualize|E{Share findings}
+  E --&gt;|Evaluate|A
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Graph made using <a href="http://mermaid.js.org">Mermaid.js</a></p>
+</section>
+<section id="survey-01" class="slide level2">
+<h2>Survey-01</h2>
+<ul>
+<li><a href="../survey-01.html">Report</a></li>
+<li>Goals
+<ul>
+<li>Measure trust in science and scientists</li>
+<li>Measure individual characteristics that predict that trust</li>
+<li>Do PSYCH 490.009 students follow patterns found by others <span class="citation" data-cites="Krumrei-Mancuso2016-qm Nadelson2014-ym Plohl2023-yf">(<a href="#/references" role="doc-biblioref" onclick="">Krumrei-Mancuso &amp; Rouse, 2016</a>; <a href="#/references" role="doc-biblioref" onclick="">Nadelson et al., 2014</a>; <a href="#/references" role="doc-biblioref" onclick="">Plohl &amp; Musil, 2023</a>)</span>?</li>
 </ul></li>
 </ul>
 </section>
-<section id="data-pictures" class="slide level2">
-<h2>Data pictures</h2>
+<section id="survey-questions" class="slide level2">
+<h2>Survey questions</h2>
+<ul>
+<li>Use <span class="citation" data-cites="Krumrei-Mancuso2016-qm Nadelson2014-ym Plohl2023-yf">(<a href="#/references" role="doc-biblioref" onclick="">Krumrei-Mancuso &amp; Rouse, 2016</a>; <a href="#/references" role="doc-biblioref" onclick="">Nadelson et al., 2014</a>; <a href="#/references" role="doc-biblioref" onclick="">Plohl &amp; Musil, 2023</a>)</span> questions.</li>
+<li>Shared <a href="https://forms.gle/Szk1pLEu4ZLWtFjX7">Google Form</a></li>
+</ul>
 </section>
-<section id="our-results" class="slide level2">
-<h2>Our results</h2>
+<section class="slide level2">
+
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Q</strong>: Why Google Form?</p>
+<p><strong>A</strong>: Easier than Qualtrics to generate, extract information from.</p>
+<p>Also, more broadly available (Google Forms is free to people with a Google account).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="gather-clean-data" class="slide level2">
+<h2>Gather &amp; Clean Data</h2>
+<ul>
+<li>Use <a href="https://quarto.org">Quarto</a>; <span class="citation" data-cites="quarto-site-gw">(<a href="#/references" role="doc-biblioref" onclick=""><span>“Quarto,”</span> n.d.</a>)</span>.</li>
+<li>Successor to RStudio’s R Markdown</li>
+</ul>
+</section>
+<section id="section" class="slide level2" data-background-iframe="https://quarto.org">
+<h2></h2>
+</section>
+<section id="quarto-project" class="slide level2">
+<h2>Quarto project</h2>
+<ul>
+<li>Set of text files that combine
+<ul>
+<li>Notes</li>
+<li>Code (in the R programming language)</li>
+<li>Web links</li>
+<li>Figures</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Q: Why not MS Word or Google Doc?</p>
+<p>Q: Why not MS Excel or MS PowerPoint?</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a></a>flowchart TD</span>
+<span id="cb2-2"><a></a>  A{Quarto File 1} --&gt; B[HTML]</span>
+<span id="cb2-3"><a></a>  C{Quarto File 2} --&gt; B</span>
+<span id="cb2-4"><a></a>  D{Quarto File 3} --&gt; B</span>
+<span id="cb2-5"><a></a>  A --&gt; E(.docx)</span>
+<span id="cb2-6"><a></a>  C --&gt; E</span>
+<span id="cb2-7"><a></a>  D --&gt; E</span>
+<span id="cb2-8"><a></a>  A --&gt; F((.ppt))</span>
+<span id="cb2-9"><a></a>  C --&gt; F</span>
+<span id="cb2-10"><a></a>  D --&gt; F</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+  A{Quarto File 1} --&gt; B[HTML]
+  C{Quarto File 2} --&gt; B
+  D{Quarto File 3} --&gt; B
+  A --&gt; E(.docx)
+  C --&gt; E
+  D --&gt; E
+  A --&gt; F((.ppt))
+  C --&gt; F
+  D --&gt; F
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="anatomy-of-a-quarto-document" class="slide level2">
+<h2>Anatomy of a Quarto <a href="https://github.com/psu-psychology/psych-490-reproducibility-2023-fall/blob/main/survey-01.qmd">document</a></h2>
+<pre><code>---
+title: "Survey 01"
+params:
+  update_data: FALSE
+---</code></pre>
+<div>
+<ul>
+<li class="fragment">Document title</li>
+<li class="fragment">A parameter that determines whether the document should update the data or not.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<pre><code>## Purpose
+
+This page documents the data processing steps involved with Survey-01 in PSYCH 490.009 Fall 2023.
+
+The survey questions were adapted from those discussed in [@Krumrei-Mancuso2016-qm; @Nadelson2014-ym; @Plohl2023-yf].</code></pre>
+<div>
+<ul>
+<li class="fragment">First section with header title (“Purpose”)
+<ul>
+<li class="fragment"><em>Note</em>: the double hash/pound symbols “##” mean this is a level 2 header</li>
+<li class="fragment">You do use MS Word’s styles, don’t you?</li>
+</ul></li>
+<li class="fragment">Short-hand names for the references with the “@” symbol
+<ul>
+<li class="fragment">Quarto generates in-text citations and a bibliography for us!</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<pre><code>## Survey
+
+Direct link: &lt;https://forms.gle/Szk1pLEu4ZLWtFjX7&gt;
+
+&lt;iframe src="https://docs.google.com/forms/d/e/1FAIpQLScp2GG_2TZ3_T6Yl1okn-sHJF93n9RZu_EmLWQtHP0rJcGM3w/viewform?embedded=true" width="640" height="6003" frameborder="0" marginheight="0" marginwidth="0"&gt;Loading…&lt;/iframe&gt;</code></pre>
+<div>
+<ul>
+<li class="fragment">HTML links surrounded by “&lt;&gt;” become clickable in our output.</li>
+<li class="fragment">the “&lt;iframe…” comes from the Google Forms site. It embeds the actual survey in our document.
+<ul>
+<li class="fragment">No cutting and pasting!</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="fu">## Preparation</span></span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a>First, we load the external packages (groups of R commands) that we will be using.</span>
+<span id="cb6-4"><a></a></span>
+<span id="cb6-5"><a></a><span class="in">```{r}</span></span>
+<span id="cb6-6"><a></a><span class="in">library('tidyverse')</span></span>
+<span id="cb6-7"><a></a><span class="in">library('ggplot2')</span></span>
+<span id="cb6-8"><a></a><span class="in">library('dplyr')</span></span>
+<span id="cb6-9"><a></a><span class="in">library('tidyr')</span></span>
+<span id="cb6-10"><a></a><span class="in">library('stringr')</span></span>
+<span id="cb6-11"><a></a><span class="in">library('lubridate')</span></span>
+<span id="cb6-12"><a></a><span class="in">library('GGally')</span></span>
+<span id="cb6-13"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<ul>
+<li class="fragment">Another level 2 header</li>
+<li class="fragment">And some R code in a “code chunk”.
+<ul>
+<li class="fragment">The brackets “{r}” tell the computer that we’re speaking R to it.</li>
+<li class="fragment">We could also speak other languages like “{python}”, etc.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="enough-anatomy" class="slide level2">
+<h2>Enough anatomy</h2>
+<ul>
+<li><a href="../survey-01.html/#gathering">Gathering</a> (downloading data from Google)</li>
+<li>Cleaning</li>
+<li>Visualizing</li>
+<li>Making a <a href="https://en.wikipedia.org/wiki/Data_dictionary">data dictionary</a></li>
+</ul>
+</section>
+<section id="comparing-this-to-other-approaches" class="slide level2">
+<h2>Comparing this to other approaches…</h2>
+</section>
+<section id="lets-look-at-survey-02" class="slide level2">
+<h2>Let’s look at <a href="../survey-02.html">Survey-02</a></h2>
+
+<img data-src="https://psu-psychology.github.io/psych-490-reproducibility-2023-fall/survey-02_files/figure-html/fig-boxplot-norm-counternorm-1.png" class="r-stretch quarto-figure-center"><p class="caption">Summary figure from <a href="../survey-02.html">Survey-02</a></p></section>
+<section id="what-data-pictures-would-you-like-to-make" class="slide level2">
+<h2>What data picture(s) would you like to make?</h2>
+</section>
+<section id="what-analyses-would-you-like-to-try" class="slide level2">
+<h2>What analyses would you like to try?</h2>
 </section></section>
-<section id="exercise-03" class="title-slide slide level1 center">
-<h1>Exercise 03</h1>
-
-</section>
-
 <section id="next-time" class="title-slide slide level1 center">
 <h1>Next time</h1>
-<p><em>A replication crisis (or not)</em></p>
+<p><em>Replication in cancer biology</em></p>
 <ul>
 <li>Read
 <ul>
-<li><span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020</a>)</span>, Chapter 2. <a href="https://psu.instructure.com/courses/2280122/files/folder/readings?preview=151876802">PDF on Canvas</a></li>
-<li><span class="citation" data-cites="Begley2012-cr">(<a href="#/references" role="doc-biblioref" onclick="">Begley &amp; Ellis, 2012</a>)</span></li>
+<li><span class="citation" data-cites="Errington2021-dp">(<a href="#/references" role="doc-biblioref" onclick="">Errington, Denis, Perfito, Iorns, &amp; Nosek, 2021</a>)</span></li>
+<li>(skim) <span class="citation" data-cites="Errington2021-sy">(<a href="#/references" role="doc-biblioref" onclick="">Errington, Mathur, et al., 2021</a>)</span></li>
 </ul></li>
+<li><a href="../notes/wk05-2023-09-18.qmd">Class notes</a></li>
 </ul>
 </section>
 
@@ -449,15 +770,42 @@ Rick Gilmore
 <div class="quarto-auto-generated-content">
 <p><img src="https://brand.psu.edu/images/backgrounds/penn-state-shield.jpg" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="../index.html">PSYCH 490.012 • Fall 2024</a></p>
+<p><a href="../index.html">PSYCH 490.009</a>: 2023-09-15 Friday</p>
 </div>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-Begley2012-cr" class="csl-entry" role="listitem">
-Begley, C. G., &amp; Ellis, L. M. (2012). Drug development: Raise standards for preclinical cancer research. <em>Nature</em>, <em>483</em>(7391), 531–533. <a href="https://doi.org/10.1038/483531a">https://doi.org/10.1038/483531a</a>
+<div id="ref-Artner2021-qg" class="csl-entry" role="listitem">
+Artner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., &amp; Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. <em>Psychological Methods</em>, <em>26</em>(5), 527–546. <a href="https://doi.org/10.1037/met0000365">https://doi.org/10.1037/met0000365</a>
 </div>
-<div id="ref-Ritchie2020-fm" class="csl-entry" role="listitem">
-Ritchie, S. (2020). <em>Science fictions: Exposing fraud, bias, negligence and hype in science</em> (1st ed.). Penguin Random House. Retrieved from <a href="https://www.amazon.com/Science-Fictions/dp/1847925669">https://www.amazon.com/Science-Fictions/dp/1847925669</a>
+<div id="ref-Bargh1996-yv" class="csl-entry" role="listitem">
+Bargh, J. A., Chen, M., &amp; Burrows, L. (1996). Automaticity of social behavior: Direct effects of trait construct and stereotype-activation on action. <em>Journal of Personality and Social Psychology</em>, <em>71</em>(2), 230–244. <a href="https://doi.org/10.1037//0022-3514.71.2.230">https://doi.org/10.1037//0022-3514.71.2.230</a>
+</div>
+<div id="ref-Doyen2012-ib" class="csl-entry" role="listitem">
+Doyen, S., Klein, O., Pichon, C.-L., &amp; Cleeremans, A. (2012). Behavioral priming: It’s all in the mind, but whose mind? <em>PloS One</em>, <em>7</em>(1), e29081. <a href="https://doi.org/10.1371/journal.pone.0029081">https://doi.org/10.1371/journal.pone.0029081</a>
+</div>
+<div id="ref-Earp2014-ek" class="csl-entry" role="listitem">
+Earp, B. D., Everett, J. A. C., Madva, E. N., &amp; Hamlin, J. K. (2014). Out, damned spot: Can the <span>“<span>M</span>acbeth effect”</span> be replicated? <em>Basic and Applied Social Psychology</em>, <em>36</em>(1), 91–98. <a href="https://doi.org/10.1080/01973533.2013.856792">https://doi.org/10.1080/01973533.2013.856792</a>
+</div>
+<div id="ref-Errington2021-dp" class="csl-entry" role="listitem">
+Errington, T. M., Denis, A., Perfito, N., Iorns, E., &amp; Nosek, B. A. (2021). Challenges for assessing replicability in preclinical cancer biology. <em>eLife</em>, <em>10</em>, e67995. <a href="https://doi.org/10.7554/eLife.67995">https://doi.org/10.7554/eLife.67995</a>
+</div>
+<div id="ref-Errington2021-sy" class="csl-entry" role="listitem">
+Errington, T. M., Mathur, M., Soderberg, C. K., Denis, A., Perfito, N., Iorns, E., &amp; Nosek, B. A. (2021). Investigating the replicability of preclinical cancer biology. <em>eLife</em>, <em>10</em>, e71601. <a href="https://doi.org/10.7554/eLife.71601">https://doi.org/10.7554/eLife.71601</a>
+</div>
+<div id="ref-Krumrei-Mancuso2016-qm" class="csl-entry" role="listitem">
+Krumrei-Mancuso, E. J., &amp; Rouse, S. V. (2016). The development and validation of the comprehensive intellectual humility scale. <em>Journal of Personality Assessment</em>, <em>98</em>(2), 209–221. <a href="https://doi.org/10.1080/00223891.2015.1068174">https://doi.org/10.1080/00223891.2015.1068174</a>
+</div>
+<div id="ref-Nadelson2014-ym" class="csl-entry" role="listitem">
+Nadelson, L., Jorcyk, C., Yang, D., Jarratt Smith, M., Matson, S., Cornell, K., &amp; Husting, V. (2014). <span>I</span> just don’t trust them: The development and validation of an assessment instrument to measure trust in science and scientists. <em>School Science and Mathematics</em>, <em>114</em>(2), 76–86. <a href="https://doi.org/10.1111/ssm.12051">https://doi.org/10.1111/ssm.12051</a>
+</div>
+<div id="ref-Plohl2023-yf" class="csl-entry" role="listitem">
+Plohl, N., &amp; Musil, B. (2023). Assessing the incremental value of intellectual humility and cognitive reflection in predicting trust in science. <em>Personality and Individual Differences</em>, <em>214</em>, 112340. <a href="https://doi.org/10.1016/j.paid.2023.112340">https://doi.org/10.1016/j.paid.2023.112340</a>
+</div>
+<div id="ref-quarto-site-gw" class="csl-entry" role="listitem">
+Quarto. (n.d.). <a href="https://quarto.org/" class="uri">https://quarto.org/</a>. Retrieved from <a href="https://quarto.org/">https://quarto.org/</a>
+</div>
+<div id="ref-Zhong2006-nf" class="csl-entry" role="listitem">
+Zhong, C.-B., &amp; Liljenquist, K. (2006). Washing away your sins: <span>T</span>hreatened morality and physical cleansing. <em>Science</em>, <em>313</em>(5792), 1451–1452. <a href="https://doi.org/10.1126/science.1130726">https://doi.org/10.1126/science.1130726</a>
 </div>
 </div>
 </section></section>

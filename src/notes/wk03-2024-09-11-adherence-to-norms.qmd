@@ -10,7 +10,7 @@ subtitle: "2024-09-11 Wed"
 {{< video https://www.youtube.com/embed/VXED2AVlbR0?si=lA0AcDhsFcMpyG72 width="100%" height="70%">}}
 
 <p style="text-align:center;">
-([@Peacock2020-ya]){.citation}
+[@Peacock2020-ya]
 </p>
 
 ## Show recommendation
@@ -152,7 +152,7 @@ Kardash, C. M. & Edwards, O. V. (2012). Thinking and behaving like scientists: P
 
 $Rater_{intern|mentor} + Item_{1...8} + Type_{should|actually} \\ = Rating$
 
-## *AN*alysis *O*f *V*ariance
+## *AN*alysis *O*f *VA*riance
 
 - How well does this "model" (equation) fit the data?
 - *F*-test: ~ How strongly does the predictor variable relate to the response?

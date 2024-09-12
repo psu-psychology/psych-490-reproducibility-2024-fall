@@ -114,6 +114,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 - Read
     - [@Ritchie2020-fm], Chapter 2. [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170706).
     - [@Begley2012-cr].
+- [Class notes](notes/wk04-2024-09-16-replication-crisis.qmd)
 
 #### Wednesday, September 18 {-}
 
@@ -122,6 +123,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 - Read
     - [@Zhong2006-nf].
     - [@Earp2014-ek].
+- [Class notes](notes/wk04-2024-09-18-replication-lady-macbeth.qmd)
 
 #### Friday, September 20 {-}
 
@@ -132,6 +134,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
   - [Survey 02 report](surveys/survey-02.qmd)
 - [Due]{.orange_due}
     - [Exercise 02: Textbook Findings](exercises/ex02-textbook-findings.qmd)
+- [Class notes](notes/wk04-2024-09-20-work-session-R.qmd)
 
 ### September 23-27 {- #week-05}
 

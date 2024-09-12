@@ -258,9 +258,11 @@ if (n_responses < 1) {
     geom_line() +
     ggtitle("Time series of responses to Survey-02") +
     scale_y_continuous(breaks = 1:12) +
-    theme(axis.text.x = element_text(angle=90), 
-          axis.title.x = element_blank(),
-          plot.title = element_text(hjust = 0.5))
+    theme(
+      axis.text.x = element_text(angle = 90),
+      axis.title.x = element_blank(),
+      plot.title = element_text(hjust = 0.5)
+    )
 }
 ```
 
@@ -279,10 +281,13 @@ survey_02_norms_long |>
   theme(axis.title.y = element_blank()) +
   theme(axis.text.y = element_blank()) +
   theme(axis.ticks = element_blank()) +
-  facet_grid(rows = vars(norm_counternorm), cols = vars(resp_frame)) +
-  theme(legend.position = "bottom", 
-        legend.title = element_blank(),
-        strip.text.y = element_text(angle = 0))
+  facet_grid(rows = vars(norm_counternorm),
+             cols = vars(resp_frame)) +
+  theme(
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    strip.text.y = element_text(angle = 0)
+  )
 ```
 
 ### Data dictionary
@@ -306,15 +311,23 @@ survey_02_norms_long |>
   ggplot() +
   aes(norm_counternorm, rating) +
   geom_violin() +
-  geom_dotplot(binaxis = 'y', stackdir = 'center', dotsize = .7, aes(fill = type)) +
+  geom_dotplot(
+    binaxis = 'y',
+    stackdir = 'center',
+    dotsize = .7,
+    aes(fill = type)
+  ) +
   facet_grid(cols = vars(resp_frame)) +
-  scale_y_continuous(breaks = c(1, 2, 3, 4, 5), 
-                     labels=c("1" = "not at all", "2", "3", "4", 
-                              "5" = "a great deal")) +
-  theme(axis.text.x = element_text(angle = 90), 
-        axis.title.x = element_blank(),
-        legend.title = element_blank(), 
-        legend.position = "top")
+  scale_y_continuous(
+    breaks = c(1, 2, 3, 4, 5),
+    labels = c("1" = "not at all", "2", "3", "4", "5" = "a great deal")
+  ) +
+  theme(
+    axis.text.x = element_text(angle = 90),
+    axis.title.x = element_blank(),
+    legend.title = element_blank(),
+    legend.position = "top"
+  )
 ```
 
 ### Norms
@@ -322,17 +335,26 @@ survey_02_norms_long |>
 ```{r}
 #| label: fig-indiv-ratings-by-norm
 #| fig-cap: "Individual ratings of each norm based on what respondents think scientists *actually* do (red) vs. *should* do (aqua)"
+
 survey_02_norms_long |>
   dplyr::filter(type == "norm") |>
   ggplot() +
-  aes(x = rating, y = sub_id, color = resp_frame, fill = resp_frame, shape = resp_frame) +
+  aes(
+    x = rating,
+    y = sub_id,
+    color = resp_frame,
+    fill = resp_frame,
+    shape = resp_frame
+  ) +
   geom_jitter(height = 0, width = .12) +
-  xlim(1,5) +
+  xlim(1, 5) +
   ggtitle("Individual ratings of norms") +
   facet_wrap(vars(norm_counternorm)) +
-  theme(legend.title = element_blank(), 
-        legend.position = "bottom",
-        plot.title = element_text(hjust = 0.5))
+  theme(
+    legend.title = element_blank(),
+    legend.position = "bottom",
+    plot.title = element_text(hjust = 0.5)
+  )
 ```
 
 ### Counter-norms
@@ -340,15 +362,120 @@ survey_02_norms_long |>
 ```{r}
 #| label: fig-indiv-ratings-by-counternorm
 #| fig-cap: "Individual ratings of each counter-norm based on what respondents think scientists *actually* do (red) vs. *should* do (aqua)"
+
 survey_02_norms_long |>
   dplyr::filter(type == "counternorm") |>
   ggplot() +
-  aes(x = rating, y = sub_id, color = resp_frame, fill = resp_frame, shape = resp_frame) +
+  aes(
+    x = rating,
+    y = sub_id,
+    color = resp_frame,
+    fill = resp_frame,
+    shape = resp_frame
+  ) +
   geom_jitter(height = 0, width = .15) +
-  xlim(1,5) +
+  xlim(1, 5) +
   ggtitle("Individual ratings of counter-norms") +
   facet_wrap(vars(norm_counternorm)) +
-  theme(legend.title = element_blank(), 
-        legend.position = "bottom",
-        plot.title = element_text(hjust = 0.5))
+  theme(
+    legend.title = element_blank(),
+    legend.position = "bottom",
+    plot.title = element_text(hjust = 0.5)
+  )
 ```
+
+### Student predictions
+
+See assignment from [2024-09-11 notes](../notes/wk03-2024-09-11-adherence-to-norms.qmd) and discussion on [2024-09-13](../notes/wk03-2024-09-13-work-session-norms.qmd).
+
+#### Norms vs. counter-norms aggregated
+
+```{r, eval=FALSE}
+ratings_by_type <- survey_02_norms_long |>
+  dplyr::group_by(type) |>
+  dplyr::summarise(mean_rating = mean(rating, na.rm = TRUE),
+                   sd_rating = sd(rating, na.rm = TRUE)) |>
+  dplyr::select(mean_rating, type, sd_rating)
+
+ratings_by_type |>
+  ggplot() +
+  aes(
+    x = type,
+    y = mean_rating
+  ) +
+  geom_col() +
+  geom_errorbar(
+    aes(ymin = mean_rating - sd_rating, ymax = mean_rating + sd_rating),
+    width = .2,
+    position = position_dodge(.9)
+  ) +
+  ylim(NA, 5)
+```
+
+#### Norm/counter-norm by should/actually
+
+```{r, eval=FALSE}
+ratings_by_type_by_resp_frame <- survey_02_norms_long |>
+  dplyr::group_by(type, resp_frame) |>
+  dplyr::summarise(
+    mean_rating = mean(rating, na.rm = TRUE),
+    sd_rating = sd(rating, na.rm = TRUE)
+  ) |>
+  dplyr::select(type, resp_frame, mean_rating, sd_rating) 
+
+ratings_by_type_by_resp_frame |>
+  ggplot() +
+  aes(
+    x = type,
+    y = mean_rating,
+    color = resp_frame,
+    fill = resp_frame,
+  ) +
+  geom_col() +
+  geom_errorbar(
+    aes(ymin = mean_rating - sd_rating, ymax = mean_rating + sd_rating),
+    width = .2,
+    position = position_dodge(.9)
+  ) +
+facet_grid(cols = vars(resp_frame)) +
+  ylim(NA, 5)
+
+type_by_resp_frame |>
+  kableExtra::kable(format='html') |>
+  kableExtra::kable_classic()
+```
+
+#### Norms by should/actually
+
+```{r, eval=FALSE}
+ratings_by_norm_by_resp_frame <- survey_02_norms_long |>
+  dplyr::group_by(norm_counternorm, resp_frame) |>
+  dplyr::summarise(
+    mean_rating = mean(rating, na.rm = TRUE),
+    sd_rating = sd(rating, na.rm = TRUE)
+  ) |>
+  dplyr::select(norm_counternorm, resp_frame, mean_rating, sd_rating) 
+
+ratings_by_norm_by_resp_frame |>
+  ggplot() +
+  aes(
+    x = norm_counternorm,
+    y = mean_rating,
+    color = resp_frame,
+    fill = resp_frame,
+  ) +
+  geom_col() +
+  geom_errorbar(
+    aes(ymin = mean_rating - sd_rating, ymax = mean_rating + sd_rating),
+    width = .2,
+    position = position_dodge(.9)
+  ) +
+  theme(axis.text.x = element_text(angle = 90)) +
+facet_grid(cols = vars(resp_frame)) +
+  ylim(NA, 5)
+
+ratings_by_norm_by_resp_frame |>
+  kableExtra::kable(format='html') |>
+  kableExtra::kable_classic()
+```
+
