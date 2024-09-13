@@ -9,8 +9,12 @@ title: "Work session: Norms and counternorms"
 
 ## Announcements
 
-- [Due]{.orange_due}
-    - [Exercise 02: Textbook Findings](exercises/ex02-textbook-findings.qmd)
+- [Due next Friday, September 20]{.orange_due}
+    - [Exercise 02: Textbook Findings](../exercises/ex02-textbook-findings.qmd)
+    
+## Last time...
+
+- Take-home findings from [@Kardash2012-kq]?
 
 ## Today
 
@@ -30,11 +34,13 @@ title: "Work session: Norms and counternorms"
 
 ## Data pictures
 
-- Continuous vs. discrete/categorical variables
+- Continuous vs. ordinal vs. discrete/categorical variables
 
 ## Our results
 
 # Exercise 03
+
+- [Norms and counternorms](../exercises/ex03-norms-counternorms.qmd) in other realms.
 
 # Next time
 
@@ -47,4 +53,3 @@ title: "Work session: Norms and counternorms"
 # Resources
 
 ## References
-

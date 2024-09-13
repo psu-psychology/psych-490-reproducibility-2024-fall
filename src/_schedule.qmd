@@ -102,7 +102,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 - Survey 02: [From raw data to results](surveys/survey-02.qmd)
 - [Assignment]{.green_assigned}
-    - [Exercise 03: Norms and counter-norms write-up](exercises/ex03-norms-counternorms.qmd), [due Friday, September 27]{.orange_due}
+    - [Exercise 03: Norms and counter-norms](exercises/ex03-norms-counternorms.qmd), [due Friday, September 27]{.orange_due}
 - [Class notes](notes/wk03-2024-09-13-work-session-norms.qmd)
 
 ### September 16-20 {- #week-04}
