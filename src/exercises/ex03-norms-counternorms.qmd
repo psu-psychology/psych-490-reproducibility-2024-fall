@@ -5,7 +5,7 @@ subtitle: Norms and Counter-norms
 
 ## Dates {-}
 
-Due: [Friday, September 20](../schedule.qmd#friday-september-27){.orange_due}.
+Due: [Friday, September 27](../schedule.qmd#friday-september-27){.orange_due}.
 
 ## Goals {-}
 
