@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.56">
 
   <meta name="author" content="Rick Gilmore">
-  <title>PSYCH 490 • Fall 2024 – 2023-09-15 Fri</title>
+  <title>PSYCH 490 • Fall 2024 – Work session: Replication with R, R Markdown, &amp; Quarto</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -426,8 +426,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">2023-09-15 Fri</h1>
-  <p class="subtitle">Work session: Replication with R, R Markdown, &amp; Quarto</p>
+  <h1 class="title">Work session: Replication with R, R Markdown, &amp; Quarto</h1>
+  <p class="subtitle">2024-09-20 Fri</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -464,18 +464,23 @@ Rick Gilmore
 </section>
 <section class="slide level2">
 
-<p><em>Work session: Reproducible workflows with R, R Markdown, &amp; Quarto</em></p>
+<p><em>Work session: Replication with R, R Markdown, &amp; Quarto</em></p>
 <ul>
 <li>Review
 <ul>
-<li><a href="../survey-01.html">Survey 01 report</a></li>
-<li><a href="../survey-02.html">Survey 02 report</a></li>
+<li><a href="../surveys/survey-01.html">Survey 01 report</a></li>
+<li><a href="../surveys/survey-02.html">Survey 02 report</a></li>
 </ul></li>
+<li><span class="orange_due">Due</span>
+<ul>
+<li><a href="exercises/ex02-textbook-findings.qmd">Exercise 02: Textbook Findings</a></li>
+</ul></li>
+<li><a href="../notes/wk04-2024-09-20-work-session-R.html">Class notes</a></li>
 </ul>
 </section></section>
 <section>
-<section id="reproducible-workflows-with-r-r-markdown-quarto" class="title-slide slide level1 center">
-<h1>Reproducible workflows with R, R Markdown, &amp; Quarto</h1>
+<section id="replication-with-r-r-markdown-quarto" class="title-slide slide level1 center">
+<h1>Replication with R, R Markdown, &amp; Quarto</h1>
 
 </section>
 <section id="goals" class="slide level2">
@@ -484,7 +489,7 @@ Rick Gilmore
 <ul>
 <li class="fragment">Capture details of the research workflow
 <ul>
-<li class="fragment">Not usually contained in journal articles, remember <span class="citation" data-cites="Artner2021-qg">(<a href="#/references" role="doc-biblioref" onclick="">Artner et al., 2021</a>)</span> comment from <a href="wk03-2023-09-08.html#artner-et-al-2021">last week</a>?</li>
+<li class="fragment">Not usually contained in journal articles, remember <span class="citation" data-cites="Artner2021-qg">(<a href="#/references" role="doc-biblioref" onclick="">Artner et al., 2021</a>)</span> comment discussed <a href="../noteswk04-2024-09-16-replication-crisis.qmd">earlier</a>?</li>
 </ul></li>
 <li class="fragment">Make research notebooks that actually do work
 <ul>
@@ -512,12 +517,6 @@ Rick Gilmore
 <section id="research-workflow" class="slide level2">
 <h2>Research workflow</h2>
 <div class="cell" data-reveal="true" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a></a>flowchart LR</span>
-<span id="cb1-2"><a></a>  A{Idea/Question} --&gt;|Develop|B{Plan}</span>
-<span id="cb1-3"><a></a>  B --&gt;|Create measures|C{Collect Info}</span>
-<span id="cb1-4"><a></a>  C --&gt;|Gather collected|D{Analyze Info}</span>
-<span id="cb1-5"><a></a>  D --&gt;|Visualize|E{Share findings}</span>
-<span id="cb1-6"><a></a>  E --&gt;|Evaluate|A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <p></p><figure class=""><p></p>
@@ -539,12 +538,12 @@ Rick Gilmore
 <section id="survey-01" class="slide level2">
 <h2>Survey-01</h2>
 <ul>
-<li><a href="../survey-01.html">Report</a></li>
+<li><a href="../surveys/survey-01.html">Report</a></li>
 <li>Goals
 <ul>
 <li>Measure trust in science and scientists</li>
 <li>Measure individual characteristics that predict that trust</li>
-<li>Do PSYCH 490.009 students follow patterns found by others <span class="citation" data-cites="Krumrei-Mancuso2016-qm Nadelson2014-ym Plohl2023-yf">(<a href="#/references" role="doc-biblioref" onclick="">Krumrei-Mancuso &amp; Rouse, 2016</a>; <a href="#/references" role="doc-biblioref" onclick="">Nadelson et al., 2014</a>; <a href="#/references" role="doc-biblioref" onclick="">Plohl &amp; Musil, 2023</a>)</span>?</li>
+<li>Do PSYCH 490.012 students follow patterns found by others <span class="citation" data-cites="Krumrei-Mancuso2016-qm Nadelson2014-ym Plohl2023-yf">(<a href="#/references" role="doc-biblioref" onclick="">Krumrei-Mancuso &amp; Rouse, 2016</a>; <a href="#/references" role="doc-biblioref" onclick="">Nadelson et al., 2014</a>; <a href="#/references" role="doc-biblioref" onclick="">Plohl &amp; Musil, 2023</a>)</span>?</li>
 </ul></li>
 </ul>
 </section>
@@ -552,7 +551,7 @@ Rick Gilmore
 <h2>Survey questions</h2>
 <ul>
 <li>Use <span class="citation" data-cites="Krumrei-Mancuso2016-qm Nadelson2014-ym Plohl2023-yf">(<a href="#/references" role="doc-biblioref" onclick="">Krumrei-Mancuso &amp; Rouse, 2016</a>; <a href="#/references" role="doc-biblioref" onclick="">Nadelson et al., 2014</a>; <a href="#/references" role="doc-biblioref" onclick="">Plohl &amp; Musil, 2023</a>)</span> questions.</li>
-<li>Shared <a href="https://forms.gle/Szk1pLEu4ZLWtFjX7">Google Form</a></li>
+<li>Shared <a href="https://forms.gle/471gpq6XXXq9iG9C8">Google Form</a></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -615,16 +614,6 @@ Rick Gilmore
 <section class="slide level2">
 
 <div class="cell" data-reveal="true" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a></a>flowchart TD</span>
-<span id="cb2-2"><a></a>  A{Quarto File 1} --&gt; B[HTML]</span>
-<span id="cb2-3"><a></a>  C{Quarto File 2} --&gt; B</span>
-<span id="cb2-4"><a></a>  D{Quarto File 3} --&gt; B</span>
-<span id="cb2-5"><a></a>  A --&gt; E(.docx)</span>
-<span id="cb2-6"><a></a>  C --&gt; E</span>
-<span id="cb2-7"><a></a>  D --&gt; E</span>
-<span id="cb2-8"><a></a>  A --&gt; F((.ppt))</span>
-<span id="cb2-9"><a></a>  C --&gt; F</span>
-<span id="cb2-10"><a></a>  D --&gt; F</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <p></p><figure class=""><p></p>
@@ -647,16 +636,21 @@ Rick Gilmore
 </div>
 </section>
 <section id="anatomy-of-a-quarto-document" class="slide level2">
-<h2>Anatomy of a Quarto <a href="https://github.com/psu-psychology/psych-490-reproducibility-2023-fall/blob/main/survey-01.qmd">document</a></h2>
+<h2>Anatomy of a Quarto <a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/blob/main/src/surveys/survey-01.qmd">document</a></h2>
 <pre><code>---
 title: "Survey 01"
+subtitle: "Trust in science and scientists"
 params:
-  update_data: FALSE
+  update_data: true
+  fn: "survey-01-openness-trust-2024-fall.csv"
+  make_plots: true
 ---</code></pre>
 <div>
 <ul>
-<li class="fragment">Document title</li>
+<li class="fragment">Document title &amp; subtitle</li>
 <li class="fragment">A parameter that determines whether the document should update the data or not.</li>
+<li class="fragment">A parameter for the file name</li>
+<li class="fragment">A parameter to control whether to make the plots or not.</li>
 </ul>
 </div>
 </section>
@@ -664,7 +658,7 @@ params:
 
 <pre><code>## Purpose
 
-This page documents the data processing steps involved with Survey-01 in PSYCH 490.009 Fall 2023.
+This page documents the data processing steps involved with Survey-01 in PSYCH 490.012 Fall 2024.
 
 The survey questions were adapted from those discussed in [@Krumrei-Mancuso2016-qm; @Nadelson2014-ym; @Plohl2023-yf].</code></pre>
 <div>
@@ -672,7 +666,7 @@ The survey questions were adapted from those discussed in [@Krumrei-Mancuso2016-
 <li class="fragment">First section with header title (“Purpose”)
 <ul>
 <li class="fragment"><em>Note</em>: the double hash/pound symbols “##” mean this is a level 2 header</li>
-<li class="fragment">You do use MS Word’s styles, don’t you?</li>
+<li class="fragment">You do use MS Word’s styles feature, don’t you?</li>
 </ul></li>
 <li class="fragment">Short-hand names for the references with the “@” symbol
 <ul>
@@ -683,11 +677,9 @@ The survey questions were adapted from those discussed in [@Krumrei-Mancuso2016-
 </section>
 <section class="slide level2">
 
-<pre><code>## Survey
+<pre><code>Direct link: &lt;https://forms.gle/kpwGFo2qpsKmNLya9&gt;
 
-Direct link: &lt;https://forms.gle/Szk1pLEu4ZLWtFjX7&gt;
-
-&lt;iframe src="https://docs.google.com/forms/d/e/1FAIpQLScp2GG_2TZ3_T6Yl1okn-sHJF93n9RZu_EmLWQtHP0rJcGM3w/viewform?embedded=true" width="640" height="6003" frameborder="0" marginheight="0" marginwidth="0"&gt;Loading…&lt;/iframe&gt;</code></pre>
+&lt;iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdvCvnemNhMyr0veX92ykxuCkHVrnqNWEGFXvbL6zYtggsepg/viewform?embedded=true" width="640" height="6027" frameborder="0" marginheight="0" marginwidth="0"&gt;Loading…&lt;/iframe&gt;</code></pre>
 <div>
 <ul>
 <li class="fragment">HTML links surrounded by “&lt;&gt;” become clickable in our output.</li>
@@ -700,19 +692,14 @@ Direct link: &lt;https://forms.gle/Szk1pLEu4ZLWtFjX7&gt;
 </section>
 <section class="slide level2">
 
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="fu">## Preparation</span></span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a>First, we load the external packages (groups of R commands) that we will be using.</span>
-<span id="cb6-4"><a></a></span>
-<span id="cb6-5"><a></a><span class="in">```{r}</span></span>
-<span id="cb6-6"><a></a><span class="in">library('tidyverse')</span></span>
-<span id="cb6-7"><a></a><span class="in">library('ggplot2')</span></span>
-<span id="cb6-8"><a></a><span class="in">library('dplyr')</span></span>
-<span id="cb6-9"><a></a><span class="in">library('tidyr')</span></span>
-<span id="cb6-10"><a></a><span class="in">library('stringr')</span></span>
-<span id="cb6-11"><a></a><span class="in">library('lubridate')</span></span>
-<span id="cb6-12"><a></a><span class="in">library('GGally')</span></span>
-<span id="cb6-13"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a><span class="fu">## Preparation</span></span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a>First, we load the external packages (groups of R commands) that we will be using.</span>
+<span id="cb4-4"><a></a></span>
+<span id="cb4-5"><a></a><span class="in">```{r}</span></span>
+<span id="cb4-6"><a></a><span class="in">library('ggplot2')</span></span>
+<span id="cb4-7"><a></a><span class="in">library('dplyr')</span></span>
+<span id="cb4-8"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div>
 <ul>
 <li class="fragment">Another level 2 header</li>
@@ -727,7 +714,7 @@ Direct link: &lt;https://forms.gle/Szk1pLEu4ZLWtFjX7&gt;
 <section id="enough-anatomy" class="slide level2">
 <h2>Enough anatomy</h2>
 <ul>
-<li><a href="../survey-01.html/#gathering">Gathering</a> (downloading data from Google)</li>
+<li><a href="../surveys/survey-01.html/#gathering">Gathering</a> (downloading data from Google)</li>
 <li>Cleaning</li>
 <li>Visualizing</li>
 <li>Making a <a href="https://en.wikipedia.org/wiki/Data_dictionary">data dictionary</a></li>
@@ -737,25 +724,170 @@ Direct link: &lt;https://forms.gle/Szk1pLEu4ZLWtFjX7&gt;
 <h2>Comparing this to other approaches…</h2>
 </section>
 <section id="lets-look-at-survey-02" class="slide level2">
-<h2>Let’s look at <a href="../survey-02.html">Survey-02</a></h2>
+<h2>Let’s look at <a href="../surveys/survey-02.html">Survey-02</a></h2>
 
 <img data-src="https://psu-psychology.github.io/psych-490-reproducibility-2023-fall/survey-02_files/figure-html/fig-boxplot-norm-counternorm-1.png" class="r-stretch quarto-figure-center"><p class="caption">Summary figure from <a href="../survey-02.html">Survey-02</a></p></section>
-<section id="what-data-pictures-would-you-like-to-make" class="slide level2">
-<h2>What data picture(s) would you like to make?</h2>
+<section id="what-other-data-pictures-would-you-like-to-make" class="slide level2">
+<h2>What other data picture(s) would you like to make?</h2>
 </section>
 <section id="what-analyses-would-you-like-to-try" class="slide level2">
 <h2>What analyses would you like to try?</h2>
-</section></section>
+</section>
+<section id="evaluate-predictions-about-mean-levels-across-participants-and-items" class="slide level2">
+<h2>Evaluate predictions about mean levels across participants and items?</h2>
+<ul>
+<li>Norms &gt; Counternorms</li>
+<li>Norms: Should do &gt; Actually do</li>
+<li>Counternorms: Should do &lt; Actually do</li>
+</ul>
+</section>
+<section id="prediction-table" class="slide level2">
+<h2>Prediction (table)</h2>
+<div id="tbl-norm-preds" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-norm-preds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Predictions made in-class on 2024-09-11
+</figcaption>
+<div aria-describedby="tbl-norm-preds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Should do</th>
+<th>Actually do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Norms</td>
+<td>4</td>
+<td>3.5</td>
+</tr>
+<tr class="even">
+<td>Counternorms</td>
+<td>3</td>
+<td>3.75</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="prediction-data-picture-setup" class="slide level2">
+<h2>Prediction data picture (setup)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(tidyverse) <span class="co"># loads `tibble` and `ggplot2` packages</span></span>
+<span id="cb5-2"><a></a>norm_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">rating =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="fl">3.5</span>, <span class="dv">3</span>, <span class="fl">3.75</span>), </span>
+<span id="cb5-3"><a></a>                          <span class="at">type =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"norm"</span>, <span class="st">"counter"</span>), <span class="at">each =</span> <span class="dv">2</span>),</span>
+<span id="cb5-4"><a></a>                          <span class="at">resp_frame =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"should"</span>, <span class="st">"actually"</span>), <span class="at">times =</span> <span class="dv">2</span>))</span>
+<span id="cb5-5"><a></a>norm_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+  rating type    resp_frame
+   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;     
+1   4    norm    should    
+2   3.5  norm    actually  
+3   3    counter should    
+4   3.75 counter actually  </code></pre>
+</div>
+</div>
+</section>
+<section id="prediction-data-picture-plot" class="slide level2">
+<h2>Prediction data picture (plot)</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>norm_df <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> type, <span class="at">y =</span> rating, <span class="at">fill =</span> resp_frame) <span class="sc">+</span></span>
+<span id="cb7-4"><a></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb7-5"><a></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(resp_frame)) <span class="sc">+</span></span>
+<span id="cb7-6"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb7-7"><a></a>  <span class="fu">ylim</span>(<span class="cn">NA</span>, <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb7-8"><a></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>(), <span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="fig/fig-kardash-2012-preds-barplot-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;1: Data picture of <a href="../surveys/survey-02.html">Survey 02</a> predictions in PSYCH 490.012 partial replication of <span class="citation" data-cites="Kardash2012-kq">(<a href="#/references" role="doc-biblioref" onclick="">Kardash &amp; Edwards, 2012</a>)</span>
+</p></section>
+<section id="vs.-observed-table" class="slide level2">
+<h2>vs.&nbsp;Observed (table)</h2>
+<table class="caption-top">
+<caption><a href="../surveys/survey-02.html#tbl-kardash-2012-all-items-observed">Survey-02</a> observations as of 2024-09-16.</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th>Should do</th>
+<th>Actually do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Norms</td>
+<td>3.71</td>
+<td>3.46</td>
+</tr>
+<tr class="even">
+<td>Counternorms</td>
+<td>3.73</td>
+<td>3.8</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vs.-observed-data-picture-plot" class="slide level2">
+<h2>vs.&nbsp;Observed data picture (plot)</h2>
+
+<img data-src="../surveys/fig/fig-kardash-2012-all-items-observed-1.png" class="r-stretch quarto-figure-center"><p class="caption">Observed responses to <a href="../surveys/survey-02.html">PSYCH 490.012 partial replication</a> of <span class="citation" data-cites="Kardash2012-kq">(<a href="#/references" role="doc-biblioref" onclick="">Kardash &amp; Edwards, 2012</a>)</span></p></section>
+<section id="did-predictions-observations" class="slide level2">
+<h2>Did predictions == observations?</h2>
+<ul>
+<li>Norms &gt; Counternorms:</li>
+<li>Norms: Should do &gt; Actually do:</li>
+<li>Counternorms: Should do &lt; Actually do:</li>
+</ul>
+</section>
+<section id="did-predictions-observations-1" class="slide level2">
+<h2>Did predictions == observations?</h2>
+<ul>
+<li>Norms &gt; Counternorms: <strong>NO</strong></li>
+<li>Norms: Should do &gt; Actually do: <strong>YES</strong></li>
+<li>Counternorms: Should do &lt; Actually do: <strong>NO</strong></li>
+</ul>
+</section>
+<section id="is-this-a-better-picture" class="slide level2">
+<h2>Is this a better picture?</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>norm_df <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb8-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> resp_frame, <span class="at">y =</span> rating, <span class="at">fill =</span> type) <span class="sc">+</span></span>
+<span id="cb8-4"><a></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb8-5"><a></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(type)) <span class="sc">+</span></span>
+<span id="cb8-6"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb8-7"><a></a>  <span class="fu">ylim</span>(<span class="cn">NA</span>, <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb8-8"><a></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>(), <span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="fig/fig-kardash-2012-preds-barplot-alt-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;2: Data picture of <a href="../surveys/survey-02.html">Survey 02</a> predictions in PSYCH 490.012 partial replication of <span class="citation" data-cites="Kardash2012-kq">(<a href="#/references" role="doc-biblioref" onclick="">Kardash &amp; Edwards, 2012</a>)</span>
+</p></section></section>
 <section id="next-time" class="title-slide slide level1 center">
 <h1>Next time</h1>
-<p><em>Replication in cancer biology</em></p>
+<p><em>Replication attempt: Priming effect</em></p>
 <ul>
 <li>Read
 <ul>
-<li><span class="citation" data-cites="Errington2021-dp">(<a href="#/references" role="doc-biblioref" onclick="">Errington, Denis, Perfito, Iorns, &amp; Nosek, 2021</a>)</span></li>
-<li>(skim) <span class="citation" data-cites="Errington2021-sy">(<a href="#/references" role="doc-biblioref" onclick="">Errington, Mathur, et al., 2021</a>)</span></li>
+<li><span class="citation" data-cites="Bargh1996-yv">(<a href="#/references" role="doc-biblioref" onclick="">Bargh et al., 1996</a>)</span>; <a href="https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170715">PDF on Canvas</a></li>
+<li><span class="citation" data-cites="Doyen2012-ib">(<a href="#/references" role="doc-biblioref" onclick="">Doyen et al., 2012</a>)</span></li>
 </ul></li>
-<li><a href="../notes/wk05-2023-09-18.qmd">Class notes</a></li>
 </ul>
 </section>
 
@@ -770,7 +902,7 @@ Direct link: &lt;https://forms.gle/Szk1pLEu4ZLWtFjX7&gt;
 <div class="quarto-auto-generated-content">
 <p><img src="https://brand.psu.edu/images/backgrounds/penn-state-shield.jpg" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="../index.html">PSYCH 490.009</a>: 2023-09-15 Friday</p>
+<p><a href="../index.html">PSYCH 490.012 • Fall 2024</a></p>
 </div>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
@@ -786,11 +918,8 @@ Doyen, S., Klein, O., Pichon, C.-L., &amp; Cleeremans, A. (2012). Behavioral pri
 <div id="ref-Earp2014-ek" class="csl-entry" role="listitem">
 Earp, B. D., Everett, J. A. C., Madva, E. N., &amp; Hamlin, J. K. (2014). Out, damned spot: Can the <span>“<span>M</span>acbeth effect”</span> be replicated? <em>Basic and Applied Social Psychology</em>, <em>36</em>(1), 91–98. <a href="https://doi.org/10.1080/01973533.2013.856792">https://doi.org/10.1080/01973533.2013.856792</a>
 </div>
-<div id="ref-Errington2021-dp" class="csl-entry" role="listitem">
-Errington, T. M., Denis, A., Perfito, N., Iorns, E., &amp; Nosek, B. A. (2021). Challenges for assessing replicability in preclinical cancer biology. <em>eLife</em>, <em>10</em>, e67995. <a href="https://doi.org/10.7554/eLife.67995">https://doi.org/10.7554/eLife.67995</a>
-</div>
-<div id="ref-Errington2021-sy" class="csl-entry" role="listitem">
-Errington, T. M., Mathur, M., Soderberg, C. K., Denis, A., Perfito, N., Iorns, E., &amp; Nosek, B. A. (2021). Investigating the replicability of preclinical cancer biology. <em>eLife</em>, <em>10</em>, e71601. <a href="https://doi.org/10.7554/eLife.71601">https://doi.org/10.7554/eLife.71601</a>
+<div id="ref-Kardash2012-kq" class="csl-entry" role="listitem">
+Kardash, C. M., &amp; Edwards, O. V. (2012). Thinking and behaving like scientists: Perceptions of undergraduate science interns and their faculty mentors. <em>Instructional Science</em>, <em>40</em>(6), 875–899. <a href="https://doi.org/10.1007/s11251-011-9195-0">https://doi.org/10.1007/s11251-011-9195-0</a>
 </div>
 <div id="ref-Krumrei-Mancuso2016-qm" class="csl-entry" role="listitem">
 Krumrei-Mancuso, E. J., &amp; Rouse, S. V. (2016). The development and validation of the comprehensive intellectual humility scale. <em>Journal of Personality Assessment</em>, <em>98</em>(2), 209–221. <a href="https://doi.org/10.1080/00223891.2015.1068174">https://doi.org/10.1080/00223891.2015.1068174</a>
@@ -1019,6 +1148,44 @@ Zhong, C.-B., &amp; Liljenquist, K. (2006). Washing away your sins: <span>T</spa
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

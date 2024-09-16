@@ -1,14 +1,6 @@
 ---
-title: "2023-09-15 Fri"
-subtitle: "Work session: Replication with R, R Markdown, & Quarto"
-author: "Rick Gilmore"
-format: revealjs
-bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
-csl: ../include/bib/apa.csl
-css: ../include/css/styles.css
-execute:
-  echo: true
-footer: "[PSYCH 490.009](../index.html): 2023-09-15 Friday"
+subtitle: "2024-09-20 Fri"
+title: "Work session: Replication with R, R Markdown, & Quarto"
 ---
 
 # Overview
@@ -28,19 +20,22 @@ footer: "[PSYCH 490.009](../index.html): 2023-09-15 Friday"
 
 ---
 
-*Work session: Reproducible workflows with R, R Markdown, & Quarto*
+*Work session: Replication with R, R Markdown, & Quarto*
 
 - Review
-  - [Survey 01 report](../survey-01.html)
-  - [Survey 02 report](../survey-02.html)
+  - [Survey 01 report](../surveys/survey-01.qmd)
+  - [Survey 02 report](../surveys/survey-02.qmd)
+- [Due]{.orange_due}
+    - [Exercise 02: Textbook Findings](exercises/ex02-textbook-findings.qmd)
+- [Class notes](wk04-2024-09-20-work-session-R.qmd)
   
-# Reproducible workflows with R, R Markdown, & Quarto
+# Replication with R, R Markdown, & Quarto
 
 ## Goals
 
 ::: {.incremental}
 - Capture details of the research workflow
-  - Not usually contained in journal articles, remember [@Artner2021-qg] comment from [last week](wk03-2023-09-08.html#artner-et-al-2021)?
+  - Not usually contained in journal articles, remember [@Artner2021-qg] comment discussed [earlier](../noteswk04-2024-09-16-replication-crisis.qmd)?
 - Make research notebooks that actually do work
   - Not just capture info passively
 - Do so efficiently, flexibly
@@ -72,27 +67,25 @@ Graph made using [Mermaid.js](http://mermaid.js.org)
 
 ## Survey-01
 
-- [Report](../survey-01.html)
+- [Report](../surveys/survey-01.html)
 - Goals
   - Measure trust in science and scientists
   - Measure individual characteristics that predict that trust
-  - Do PSYCH 490.009 students follow patterns found by others [@Krumrei-Mancuso2016-qm; @Nadelson2014-ym; @Plohl2023-yf]?
+  - Do PSYCH 490.012 students follow patterns found by others [@Krumrei-Mancuso2016-qm; @Nadelson2014-ym; @Plohl2023-yf]?
   
 ## Survey questions
 
 - Use [@Krumrei-Mancuso2016-qm; @Nadelson2014-ym; @Plohl2023-yf] questions.
-- Shared [Google Form](https://forms.gle/Szk1pLEu4ZLWtFjX7)
+- Shared [Google Form](https://forms.gle/471gpq6XXXq9iG9C8)
 
 ---
 
 ::: {.callout-important}
-
 **Q**: Why Google Form?
 
 **A**: Easier than Qualtrics to generate, extract information from. 
 
 Also, more broadly available (Google Forms is free to people with a Google account).
-
 :::
   
 ## Gather & Clean Data
@@ -113,11 +106,9 @@ Also, more broadly available (Google Forms is free to people with a Google accou
 ---
 
 ::: {.callout-important}
-
 Q: Why not MS Word or Google Doc?
 
 Q: Why not MS Excel or MS PowerPoint?
-
 :::
 
 ---
@@ -135,19 +126,24 @@ flowchart TD
   D --> F
 ```
 
-## Anatomy of a Quarto [document](https://github.com/psu-psychology/psych-490-reproducibility-2023-fall/blob/main/survey-01.qmd)
+## Anatomy of a Quarto [document](https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/blob/main/src/surveys/survey-01.qmd)
 
 ````
 ---
 title: "Survey 01"
+subtitle: "Trust in science and scientists"
 params:
-  update_data: FALSE
+  update_data: true
+  fn: "survey-01-openness-trust-2024-fall.csv"
+  make_plots: true
 ---
 ````
 
 :::{.incremental}
-- Document title
+- Document title & subtitle
 - A parameter that determines whether the document should update the data or not.
+- A parameter for the file name
+- A parameter to control whether to make the plots or not.
 :::
 
 ---
@@ -155,7 +151,7 @@ params:
 ````
 ## Purpose
 
-This page documents the data processing steps involved with Survey-01 in PSYCH 490.009 Fall 2023.
+This page documents the data processing steps involved with Survey-01 in PSYCH 490.012 Fall 2024.
 
 The survey questions were adapted from those discussed in [@Krumrei-Mancuso2016-qm; @Nadelson2014-ym; @Plohl2023-yf].
 ````
@@ -163,7 +159,7 @@ The survey questions were adapted from those discussed in [@Krumrei-Mancuso2016-
 ::: {.incremental}
 - First section with header title ("Purpose")
     - *Note*: the double hash/pound symbols "##" mean this is a level 2 header
-    - You do use MS Word's styles, don't you?
+    - You do use MS Word's styles feature, don't you?
 - Short-hand names for the references with the "@" symbol
     - Quarto generates in-text citations and a bibliography for us!
 :::
@@ -171,11 +167,9 @@ The survey questions were adapted from those discussed in [@Krumrei-Mancuso2016-
 ---
 
 ````
-## Survey
+Direct link: <https://forms.gle/kpwGFo2qpsKmNLya9>
 
-Direct link: <https://forms.gle/Szk1pLEu4ZLWtFjX7>
-
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScp2GG_2TZ3_T6Yl1okn-sHJF93n9RZu_EmLWQtHP0rJcGM3w/viewform?embedded=true" width="640" height="6003" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdvCvnemNhMyr0veX92ykxuCkHVrnqNWEGFXvbL6zYtggsepg/viewform?embedded=true" width="640" height="6027" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 ````
 
 ::: {.incremental}
@@ -192,13 +186,8 @@ Direct link: <https://forms.gle/Szk1pLEu4ZLWtFjX7>
 First, we load the external packages (groups of R commands) that we will be using.
 
 ```{{r}}
-library('tidyverse')
 library('ggplot2')
 library('dplyr')
-library('tidyr')
-library('stringr')
-library('lubridate')
-library('GGally')
 ```
 
 ````
@@ -212,29 +201,109 @@ library('GGally')
 
 ## Enough anatomy
 
-- [Gathering](../survey-01.html/#gathering) (downloading data from Google)
+- [Gathering](../surveys/survey-01.html/#gathering) (downloading data from Google)
 - Cleaning
 - Visualizing
 - Making a [data dictionary](https://en.wikipedia.org/wiki/Data_dictionary)
 
 ## Comparing this to other approaches...
 
-## Let's look at [Survey-02](../survey-02.html)
+## Let's look at [Survey-02](../surveys/survey-02.html)
 
 ![Summary figure from [Survey-02](../survey-02.html)](https://psu-psychology.github.io/psych-490-reproducibility-2023-fall/survey-02_files/figure-html/fig-boxplot-norm-counternorm-1.png){fig-align="center"}
 
-## What data picture(s) would you like to make?
+## What other data picture(s) would you like to make?
 
 ## What analyses would you like to try?
 
+## Evaluate predictions about mean levels across participants and items?
+
+- Norms > Counternorms
+- Norms: Should do > Actually do
+- Counternorms: Should do < Actually do
+
+## Prediction (table)
+
+|              | Should do | Actually do |
+|--------------|-----------|-------------|
+| Norms        |   4       |      3.5    |
+| Counternorms |   3       |      3.75   |
+
+: Predictions made in-class on 2024-09-11 {#tbl-norm-preds}
+
+## Prediction data picture (setup)
+
+```{r, echo=TRUE}
+#| label: set-up-barplot
+library(tidyverse) # loads `tibble` and `ggplot2` packages
+norm_df <- tibble(rating = c(4, 3.5, 3, 3.75), 
+                          type = rep(c("norm", "counter"), each = 2),
+                          resp_frame = rep(c("should", "actually"), times = 2))
+norm_df
+```
+
+## Prediction data picture (plot)
+
+```{r, echo=TRUE}
+#| label: fig-kardash-2012-preds-barplot
+#| fig-cap: "Data picture of [Survey 02](../surveys/survey-02.qmd) predictions in PSYCH 490.012 partial replication of [@Kardash2012-kq]"
+norm_df |>
+  ggplot() +
+  aes(x = type, y = rating, fill = resp_frame) +
+  geom_col() +
+  facet_grid(cols = vars(resp_frame)) +
+  xlab("") +
+  ylim(NA, 5) +
+  theme(legend.title = element_blank(), legend.position = "none")
+```
+
+## vs. Observed (table)
+
+|              | Should do | Actually do |
+|--------------|-----------|-------------|
+| Norms        |   3.71       |      3.46  |
+| Counternorms |   3.73       |      3.8   |
+
+: [Survey-02](../surveys/survey-02.html#tbl-kardash-2012-all-items-observed) observations as of 2024-09-16.
+
+## vs. Observed data picture (plot)
+
+![Observed responses to [PSYCH 490.012 partial replication](../surveys/survey-02.qmd) of [@Kardash2012-kq]](../surveys/fig/fig-kardash-2012-all-items-observed-1.png)
+
+## Did predictions == observations?
+
+- Norms > Counternorms:
+- Norms: Should do > Actually do: 
+- Counternorms: Should do < Actually do:
+
+## Did predictions == observations?
+
+- Norms > Counternorms: **NO**
+- Norms: Should do > Actually do: **YES**
+- Counternorms: Should do < Actually do: **NO**
+
+## Is this a better picture?
+
+```{r, echo=TRUE}
+#| label: fig-kardash-2012-preds-barplot-alt
+#| fig-cap: "Data picture of [Survey 02](../surveys/survey-02.qmd) predictions in PSYCH 490.012 partial replication of [@Kardash2012-kq]"
+norm_df |>
+  ggplot() +
+  aes(x = resp_frame, y = rating, fill = type) +
+  geom_col() +
+  facet_grid(cols = vars(type)) +
+  xlab("") +
+  ylim(NA, 5) +
+  theme(legend.title = element_blank(), legend.position = "none")
+```
+
 # Next time
 
-*Replication in cancer biology*
+*Replication attempt: Priming effect*
 
 - Read
-    - [@Errington2021-dp]
-    - (skim) [@Errington2021-sy]
-- [Class notes](../notes/wk05-2023-09-18.qmd)
+    - [@Bargh1996-yv]; [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170715)
+    - [@Doyen2012-ib]
 
 # Resources
 

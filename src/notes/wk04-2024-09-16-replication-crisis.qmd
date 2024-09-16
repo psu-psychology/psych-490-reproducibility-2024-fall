@@ -106,7 +106,7 @@ These questions could form the basis of a final project where a student or stude
 ---
 
 ::: {.callout-important}
-Do the [Survey-01](../surveys/survey-01.html) and [Survey-02](../surveys/survey-02.html) documents demonstrate *methods* reproducibility?
+Do the [Survey-01](../surveys/survey-01.html) and [Survey-02](../surveys/survey-02.html) documents demonstrate *methods* reproducibility? Why or why not?
 :::
 
 ## *Results* reproducibility
@@ -160,11 +160,9 @@ Do the [Survey-02](../surveys/survey-02.html) results show results similar to [@
 ---
 
 ::: {.callout-note}
-
 If [@Artner2021-qg] had to "deviate from the article's analytical description" for 18 claims, what does that mean?
 
 Should we reduce the "successfully reproduced" claims to $(163-18)/232 = 62.5%$%?
-
 :::
 
 ---

@@ -294,7 +294,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 12, 2024</p>
+      <p class="date-modified">September 16, 2024</p>
     </div>
   </div>
     
@@ -342,6 +342,8 @@ Tip
 </div>
 </div>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">'csv'</span>)) {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Creating missing `csv/`."</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(<span class="st">"csv"</span>)</span>
@@ -362,6 +364,7 @@ Tip
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using stored data."</span>)</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>The data file has been saved as a comma-separated value (CSV) format data file in a special directory called <code>csv/</code>.</p>
 <!-- Note that there are five types of callouts, including note, tip, warning, caution, and important. -->
@@ -383,16 +386,22 @@ Note
 <h2 class="unnumbered anchored" data-anchor-id="cleaning">Cleaning</h2>
 <p>Next we load the data file.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>survey_02_norms <span class="ot">&lt;-</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(<span class="st">"csv"</span>, params<span class="sc">$</span>fn), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
-<p>We have <em>n=</em>15 responses as of 2024-09-13 15:34:30.69207. <strong>Note</strong>: Two of these are “test” responses by Dr.&nbsp;Gilmore.</p>
+<p>We have <em>n=</em>15 responses as of 2024-09-16 09:22:52.919524. <strong>Note</strong>: Two of these are “test” responses by Dr.&nbsp;Gilmore.</p>
 <p>Here are the column “names”:</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Google Forms puts the full question in the top row of the data file.</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># We use the names() function to extract and print the original questions.</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>survey_02_norms_qs <span class="ot">&lt;-</span> <span class="fu">names</span>(survey_02_norms)</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>survey_02_norms_qs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Timestamp"                                                                                                                                                                                                                             
  [2] "Scientists are generally motivated by the desire for knowledge and discovery, and not by the possibility of personal gain....2"                                                                                                        
@@ -419,6 +428,8 @@ Note
 <h3 class="anchored" data-anchor-id="cleanshorten-names">Clean/shorten names</h3>
 <p>For plotting and analyses, it’s usually easier to shorten the questions by creating a short name that reflects the underlying idea or construct. We’ll use the <code>rename()</code> function from the <code>dplyr</code> package for this.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>new_names <span class="ot">&lt;-</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"timestamp"</span>,</span>
@@ -446,14 +457,20 @@ Note
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Swap out old (long) names for new (short) names</span></span>
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>long_names <span class="ot">&lt;-</span> <span class="fu">names</span>(survey_02_norms)</span>
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(survey_02_norms) <span class="ot">&lt;-</span> new_names</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Next, let’s drop Dr.&nbsp;Gilmore’s “test” responses.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>survey_02_norms <span class="ot">&lt;-</span> survey_02_norms <span class="sc">%&gt;%</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span>stringr<span class="sc">::</span><span class="fu">str_detect</span>(comments, <span class="st">"test"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Assign a unique code to each respondent’s responses:</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use stringr::str_pad() to 'pad' numbers so that all of them are 2 characters</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># wide.</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -461,16 +478,22 @@ Note
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">sub_id =</span> <span class="fu">paste0</span>(<span class="st">"s_"</span>, stringr<span class="sc">::</span><span class="fu">str_pad</span>(<span class="fu">seq_along</span>(comments), </span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>                                                       <span class="at">width =</span> <span class="dv">2</span>,</span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>                                                       <span class="at">pad =</span> <span class="dv">0</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Create a “longer” table with each row representing a single question rating from a single respondent.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>survey_02_norms_long <span class="ot">&lt;-</span> survey_02_norms <span class="sc">|&gt;</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="sc">!</span><span class="fu">c</span>(<span class="st">'timestamp'</span>, <span class="st">'comments'</span>, <span class="st">'sub_id'</span>),</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">names_to =</span> <span class="st">"norm_counternorm"</span>,</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">values_to =</span> <span class="st">"rating"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>We move the ’_should’ and ’_actually’ from the question to a separate variable called ‘resp_frame’ for response frame. Then we create a variable that indicates whether the statements are norms or counternorms.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>survey_02_norms_long <span class="ot">&lt;-</span> survey_02_norms_long <span class="sc">|&gt;</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">resp_frame =</span> stringr<span class="sc">::</span><span class="fu">str_extract</span>(norm_counternorm, <span class="st">"should|actually"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">norm_counternorm =</span> stringr<span class="sc">::</span><span class="fu">str_remove_all</span>(norm_counternorm, <span class="st">"_[a-z]+"</span>))</span>
@@ -485,12 +508,17 @@ Note
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Universalism"</span></span>
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    ),</span>
 <span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"norm"</span>,</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"counternorm"</span></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  )) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Changed to shorter 'counter' on 2024-09-16</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"counter"</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  )) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Now, let’s look at the names to confirm that they all got changed.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(survey_02_norms_long)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "timestamp"        "comments"         "sub_id"           "norm_counternorm"
 [5] "rating"           "resp_frame"       "type"            </code></pre>
@@ -501,6 +529,8 @@ Note
 <h3 class="unnumbered anchored" data-anchor-id="data-dictionary">Data dictionary</h3>
 <p>We’ll pause here to start building a <a href="https://en.wikipedia.org/wiki/Data_dictionary">data dictionary</a>, a file that explains the origin, format, and usage of our dataset.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Make new data frame with long and short names for reference</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>survey_02_norms_data_dictionary <span class="ot">&lt;-</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">q_long =</span> long_names, <span class="at">q_short =</span> new_names)</span>
@@ -511,7 +541,7 @@ Note
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>      q_short,</span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Disinterestedness|Skepticism|Communality|Universalism"</span>),</span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>      <span class="st">"norm"</span>,</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"counternorm"</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"counter"</span></span>
 <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">|&gt;</span></span>
 <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">resp_frame =</span> <span class="fu">if_else</span>(</span>
 <span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    stringr<span class="sc">::</span><span class="fu">str_detect</span>(</span>
@@ -526,6 +556,7 @@ Note
 <span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>survey_02_norms_data_dictionary<span class="sc">$</span>norm_type[<span class="dv">18</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
 <span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>survey_02_norms_data_dictionary<span class="sc">$</span>resp_frame [<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
 <span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>survey_02_norms_data_dictionary<span class="sc">$</span>resp_frame [<span class="dv">18</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>We’ll add other items to the data dictionary later.</p>
 </section>
@@ -533,6 +564,8 @@ Note
 <section id="visualizations" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="visualizations">Visualizations</h2>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>n_responses <span class="ot">&lt;-</span> <span class="fu">dim</span>(survey_02_norms)[<span class="dv">1</span>] <span class="co"># number of rows in original</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (n_responses <span class="sc">&lt;</span> <span class="dv">1</span>) {</span>
@@ -553,11 +586,12 @@ Note
 <span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>      <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
 <span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div id="fig-survey-02-timeseries" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-survey-02-timeseries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="survey-02_files/figure-html/fig-survey-02-timeseries-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Time series of responses to Survey-02"><img src="survey-02_files/figure-html/fig-survey-02-timeseries-1.png" class="img-fluid figure-img" width="672"></a>
+<a href="fig/fig-survey-02-timeseries-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Time series of responses to Survey-02"><img src="fig/fig-survey-02-timeseries-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-survey-02-timeseries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Time series of responses to Survey-02
@@ -575,31 +609,37 @@ Figure&nbsp;1: Time series of responses to Survey-02
 <section id="summary-dotplot" class="level3">
 <h3 class="anchored" data-anchor-id="summary-dotplot">Summary dotplot</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># label: fig-norms-counternorms</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># fig-cap: "Dotplot showing ratings of what scientists *should* do vs. *actually* do by norm type. PSYCH 490.012 Fall 2024."</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>survey_02_norms_long <span class="sc">|&gt;</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(rating, <span class="at">color =</span> type, <span class="at">fill =</span> type) <span class="sc">+</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_dotplot</span>(<span class="at">dotsize =</span> .<span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">1</span>, <span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.y =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.y =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(norm_counternorm),</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>             <span class="at">cols =</span> <span class="fu">vars</span>(resp_frame)) <span class="sc">+</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.text.y =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>)</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>survey_02_norms_long <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(rating, <span class="at">color =</span> type, <span class="at">fill =</span> type) <span class="sc">+</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_dotplot</span>(<span class="at">dotsize =</span> .<span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">1</span>, <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.title.y =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.y =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.ticks =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(norm_counternorm),</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>             <span class="at">cols =</span> <span class="fu">vars</span>(resp_frame)) <span class="sc">+</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.text.y =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">0</span>)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Bin width defaults to 1/30 of the range of the data. Pick better value with
 `binwidth`.</code></pre>
 </div>
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="survey-02_files/figure-html/unnamed-chunk-13-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="survey-02_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></a></p>
+<div id="fig-norms-counternorms" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-norms-counternorms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="fig/fig-norms-counternorms-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: Dotplot showing ratings of what scientists should do vs.&nbsp;actually do by norm type. PSYCH 490.012 Fall 2024."><img src="fig/fig-norms-counternorms-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-norms-counternorms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Dotplot showing ratings of what scientists <em>should</em> do vs.&nbsp;<em>actually</em> do by norm type. PSYCH 490.012 Fall 2024.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -608,6 +648,8 @@ Figure&nbsp;1: Time series of responses to Survey-02
 <section id="data-dictionary-1" class="level3">
 <h3 class="anchored" data-anchor-id="data-dictionary-1">Data dictionary</h3>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>survey_02_norms_data_dictionary <span class="sc">|&gt;</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(q_short <span class="sc">!=</span> <span class="st">"timestamp"</span>, q_short <span class="sc">!=</span> <span class="st">"comments"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">q_short =</span> stringr<span class="sc">::</span><span class="fu">str_remove_all</span>(q_short, <span class="st">"_should|_actually"</span>)) <span class="sc">|&gt;</span></span>
@@ -616,6 +658,7 @@ Figure&nbsp;1: Time series of responses to Survey-02
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="fu">desc</span>(norm_type)) <span class="sc">|&gt;</span></span>
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">"html"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <table class="lightable-classic caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
@@ -669,42 +712,42 @@ Figure&nbsp;1: Time series of responses to Survey-02
 <tr class="odd">
 <td style="text-align: left;">Particularism</td>
 <td style="text-align: left;">Scientists generally assess new knowledge and its applications based on the reputation and past productivity of the individual or research group</td>
-<td style="text-align: left;">counternorm</td>
+<td style="text-align: left;">counter</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Organized Dogmatism</td>
 <td style="text-align: left;">Scientists generally invest their careers in promoting their own most important findings, theories, or innovations</td>
-<td style="text-align: left;">counternorm</td>
+<td style="text-align: left;">counter</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Self-interestedness</td>
 <td style="text-align: left;">Scientists compete with others in the same field for funding and recognition of their achievements</td>
-<td style="text-align: left;">counternorm</td>
+<td style="text-align: left;">counter</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Solitariness</td>
 <td style="text-align: left;">Scientists emphasize the protection of their newest findings to ensure priority in publishing, patenting, or applications</td>
-<td style="text-align: left;">counternorm</td>
+<td style="text-align: left;">counter</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Particularism</td>
 <td style="text-align: left;">Scientists generally assess new knowledge and its applications based on the reputation and past productivity of the individual or research group</td>
-<td style="text-align: left;">counternorm</td>
+<td style="text-align: left;">counter</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Organized Dogmatism</td>
 <td style="text-align: left;">Scientists generally invest their careers in promoting their own most important findings, theories, or innovations</td>
-<td style="text-align: left;">counternorm</td>
+<td style="text-align: left;">counter</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Self-interestedness</td>
 <td style="text-align: left;">Scientists compete with others in the same field for funding and recognition of their achievements</td>
-<td style="text-align: left;">counternorm</td>
+<td style="text-align: left;">counter</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Solitariness</td>
 <td style="text-align: left;">Scientists emphasize the protection of their newest findings to ensure priority in publishing, patenting, or applications</td>
-<td style="text-align: left;">counternorm</td>
+<td style="text-align: left;">counter</td>
 </tr>
 </tbody>
 </table>
@@ -713,6 +756,8 @@ Figure&nbsp;1: Time series of responses to Survey-02
 </div>
 </div>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>survey_02_norms_long <span class="sc">|&gt;</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(norm_counternorm, rating) <span class="sc">+</span></span>
@@ -734,6 +779,7 @@ Figure&nbsp;1: Time series of responses to Survey-02
 <span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_blank</span>(),</span>
 <span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"top"</span></span>
 <span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Bin width defaults to 1/30 of the range of the data. Pick better value with
 `binwidth`.</code></pre>
@@ -742,10 +788,10 @@ Figure&nbsp;1: Time series of responses to Survey-02
 <div id="fig-boxplot-norm-counternorm" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-boxplot-norm-counternorm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="survey-02_files/figure-html/fig-boxplot-norm-counternorm-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;2: Adherence to norms and counternorms by what scientists should do vs.&nbsp;actually do. PSYCH 490.012 Fall 2024."><img src="survey-02_files/figure-html/fig-boxplot-norm-counternorm-1.png" class="img-fluid figure-img" width="672"></a>
+<a href="fig/fig-boxplot-norm-counternorm-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: Adherence to norms and counternorms by what scientists should do vs.&nbsp;actually do. PSYCH 490.012 Fall 2024."><img src="fig/fig-boxplot-norm-counternorm-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplot-norm-counternorm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Adherence to norms and counternorms by what scientists <em>should</em> do vs.&nbsp;<em>actually</em> do. PSYCH 490.012 Fall 2024.
+Figure&nbsp;3: Adherence to norms and counternorms by what scientists <em>should</em> do vs.&nbsp;<em>actually</em> do. PSYCH 490.012 Fall 2024.
 </figcaption>
 </figure>
 </div>
@@ -755,6 +801,8 @@ Figure&nbsp;2: Adherence to norms and counternorms by what scientists <em>should
 <section id="norms" class="level3">
 <h3 class="anchored" data-anchor-id="norms">Norms</h3>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>survey_02_norms_long <span class="sc">|&gt;</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(type <span class="sc">==</span> <span class="st">"norm"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
@@ -774,18 +822,19 @@ Figure&nbsp;2: Adherence to norms and counternorms by what scientists <em>should
 <span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
 <span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
 <span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 12 rows containing missing values or values outside the scale range
+<pre><code>Warning: Removed 4 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
 <div id="fig-indiv-ratings-by-norm" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-indiv-ratings-by-norm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="survey-02_files/figure-html/fig-indiv-ratings-by-norm-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;3: Individual ratings of each norm based on what respondents think scientists actually do (red) vs.&nbsp;should do (aqua)"><img src="survey-02_files/figure-html/fig-indiv-ratings-by-norm-1.png" class="img-fluid figure-img" width="672"></a>
+<a href="fig/fig-indiv-ratings-by-norm-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: Individual ratings of each norm based on what respondents think scientists actually do (red) vs.&nbsp;should do (aqua)"><img src="fig/fig-indiv-ratings-by-norm-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-indiv-ratings-by-norm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Individual ratings of each norm based on what respondents think scientists <em>actually</em> do (red) vs.&nbsp;<em>should</em> do (aqua)
+Figure&nbsp;4: Individual ratings of each norm based on what respondents think scientists <em>actually</em> do (red) vs.&nbsp;<em>should</em> do (aqua)
 </figcaption>
 </figure>
 </div>
@@ -795,8 +844,10 @@ Figure&nbsp;3: Individual ratings of each norm based on what respondents think s
 <section id="counter-norms" class="level3">
 <h3 class="anchored" data-anchor-id="counter-norms">Counter-norms</h3>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>survey_02_norms_long <span class="sc">|&gt;</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(type <span class="sc">==</span> <span class="st">"counternorm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(type <span class="sc">==</span> <span class="st">"counter"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> rating,</span>
@@ -814,18 +865,19 @@ Figure&nbsp;3: Individual ratings of each norm based on what respondents think s
 <span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
 <span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>)</span>
 <span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 8 rows containing missing values or values outside the scale range
+<pre><code>Warning: Removed 7 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
 <div id="fig-indiv-ratings-by-counternorm" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-indiv-ratings-by-counternorm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="survey-02_files/figure-html/fig-indiv-ratings-by-counternorm-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;4: Individual ratings of each counter-norm based on what respondents think scientists actually do (red) vs.&nbsp;should do (aqua)"><img src="survey-02_files/figure-html/fig-indiv-ratings-by-counternorm-1.png" class="img-fluid figure-img" width="672"></a>
+<a href="fig/fig-indiv-ratings-by-counternorm-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: Individual ratings of each counter-norm based on what respondents think scientists actually do (red) vs.&nbsp;should do (aqua)"><img src="fig/fig-indiv-ratings-by-counternorm-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-indiv-ratings-by-counternorm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Individual ratings of each counter-norm based on what respondents think scientists <em>actually</em> do (red) vs.&nbsp;<em>should</em> do (aqua)
+Figure&nbsp;5: Individual ratings of each counter-norm based on what respondents think scientists <em>actually</em> do (red) vs.&nbsp;<em>should</em> do (aqua)
 </figcaption>
 </figure>
 </div>
@@ -838,6 +890,8 @@ Figure&nbsp;4: Individual ratings of each counter-norm based on what respondents
 <section id="norms-vs.-counter-norms-aggregated" class="level4">
 <h4 class="anchored" data-anchor-id="norms-vs.-counter-norms-aggregated">Norms vs.&nbsp;counter-norms aggregated</h4>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>ratings_by_type <span class="ot">&lt;-</span> survey_02_norms_long <span class="sc">|&gt;</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(type) <span class="sc">|&gt;</span></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">mean_rating =</span> <span class="fu">mean</span>(rating, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
@@ -857,11 +911,14 @@ Figure&nbsp;4: Individual ratings of each counter-norm based on what respondents
 <span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="fu">position_dodge</span>(.<span class="dv">9</span>)</span>
 <span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="cn">NA</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
 <section id="normcounter-norm-by-shouldactually" class="level4">
 <h4 class="anchored" data-anchor-id="normcounter-norm-by-shouldactually">Norm/counter-norm by should/actually</h4>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>ratings_by_type_by_resp_frame <span class="ot">&lt;-</span> survey_02_norms_long <span class="sc">|&gt;</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(type, resp_frame) <span class="sc">|&gt;</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(</span>
@@ -890,11 +947,14 @@ Figure&nbsp;4: Individual ratings of each counter-norm based on what respondents
 <span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a>type_by_resp_frame <span class="sc">|&gt;</span></span>
 <span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format=</span><span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
 <span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
 <section id="norms-by-shouldactually" class="level4">
 <h4 class="anchored" data-anchor-id="norms-by-shouldactually">Norms by should/actually</h4>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>ratings_by_norm_by_resp_frame <span class="ot">&lt;-</span> survey_02_norms_long <span class="sc">|&gt;</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(norm_counternorm, resp_frame) <span class="sc">|&gt;</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(</span>
@@ -924,6 +984,116 @@ Figure&nbsp;4: Individual ratings of each counter-norm based on what respondents
 <span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a>ratings_by_norm_by_resp_frame <span class="sc">|&gt;</span></span>
 <span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format=</span><span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
 <span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="all-items-norms-by-shouldactually" class="level4">
+<h4 class="anchored" data-anchor-id="all-items-norms-by-shouldactually">All items: Norms by should/actually</h4>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>ratings_by_norm_by_resp_frame <span class="ot">&lt;-</span> survey_02_norms_long <span class="sc">|&gt;</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(resp_frame, type) <span class="sc">|&gt;</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_rating =</span> <span class="fu">mean</span>(rating, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">sd_rating =</span> <span class="fu">sd</span>(rating, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(resp_frame, type, mean_rating, sd_rating) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'resp_frame'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>ratings_by_norm_by_resp_frame <span class="sc">|&gt;</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> type,</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_rating,</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> resp_frame,</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> resp_frame,</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">ymin =</span> mean_rating <span class="sc">-</span> sd_rating, <span class="at">ymax =</span> mean_rating <span class="sc">+</span> sd_rating),</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> .<span class="dv">2</span>,</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="fu">position_dodge</span>(.<span class="dv">9</span>)</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(resp_frame)) <span class="sc">+</span></span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="cn">NA</span>, <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>(), <span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-kardash-2012-all-items-observed" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-kardash-2012-all-items-observed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="fig/fig-kardash-2012-all-items-observed-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: Mean responses (+SD) across items"><img src="fig/fig-kardash-2012-all-items-observed-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kardash-2012-all-items-observed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Mean responses (+SD) across items
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>ratings_by_norm_by_resp_frame <span class="sc">|&gt;</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format=</span><span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-kardash-2012-all-items-observed" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-kardash-2012-all-items-observed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Mean ratings across items
+</figcaption>
+<div aria-describedby="tbl-kardash-2012-all-items-observed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="lightable-classic do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">resp_frame</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">type</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean_rating</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sd_rating</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">actually</td>
+<td style="text-align: left;">counter</td>
+<td style="text-align: right;">3.826923</td>
+<td style="text-align: right;">0.6484114</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">actually</td>
+<td style="text-align: left;">norm</td>
+<td style="text-align: right;">3.461539</td>
+<td style="text-align: right;">0.8508713</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">should</td>
+<td style="text-align: left;">counter</td>
+<td style="text-align: right;">3.730769</td>
+<td style="text-align: right;">0.8192628</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">should</td>
+<td style="text-align: left;">norm</td>
+<td style="text-align: right;">3.711539</td>
+<td style="text-align: right;">0.9566391</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</figure>
+</div>
 </div>
 
 
@@ -1378,7 +1548,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

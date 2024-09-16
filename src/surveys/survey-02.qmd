@@ -194,7 +194,8 @@ survey_02_norms_long <- survey_02_norms_long |>
       "Universalism"
     ),
     "norm",
-    "counternorm"
+    # Changed to shorter 'counter' on 2024-09-16
+    "counter"
   )) 
 ```
 
@@ -219,7 +220,7 @@ survey_02_norms_data_dictionary <- survey_02_norms_data_dictionary |>
       q_short,
       "Disinterestedness|Skepticism|Communality|Universalism"),
       "norm",
-      "counternorm"
+      "counter"
   )) |>
   dplyr::mutate(resp_frame = if_else(
     stringr::str_detect(
@@ -271,8 +272,8 @@ if (n_responses < 1) {
 ### Summary dotplot
 
 ```{r eval=params$make_plots}
-# label: fig-norms-counternorms
-# fig-cap: "Dotplot showing ratings of what scientists *should* do vs. *actually* do by norm type. PSYCH 490.012 Fall 2024."
+#| label: fig-norms-counternorms
+#| fig-cap: "Dotplot showing ratings of what scientists *should* do vs. *actually* do by norm type. PSYCH 490.012 Fall 2024."
 survey_02_norms_long |>
   ggplot() +
   aes(rating, color = type, fill = type) +
@@ -364,7 +365,7 @@ survey_02_norms_long |>
 #| fig-cap: "Individual ratings of each counter-norm based on what respondents think scientists *actually* do (red) vs. *should* do (aqua)"
 
 survey_02_norms_long |>
-  dplyr::filter(type == "counternorm") |>
+  dplyr::filter(type == "counter") |>
   ggplot() +
   aes(
     x = rating,
@@ -479,3 +480,43 @@ ratings_by_norm_by_resp_frame |>
   kableExtra::kable_classic()
 ```
 
+#### All items: Norms by should/actually
+
+```{r}
+#| label: fig-kardash-2012-all-items-observed
+#| fig-cap: "Mean responses (+SD) across items"
+ratings_by_norm_by_resp_frame <- survey_02_norms_long |>
+  dplyr::group_by(resp_frame, type) |>
+  dplyr::summarise(
+    mean_rating = mean(rating, na.rm = TRUE),
+    sd_rating = sd(rating, na.rm = TRUE)
+  ) |>
+  dplyr::select(resp_frame, type, mean_rating, sd_rating) 
+
+ratings_by_norm_by_resp_frame |>
+  ggplot() +
+  aes(
+    x = type,
+    y = mean_rating,
+    color = resp_frame,
+    fill = resp_frame,
+  ) +
+  geom_col() +
+  geom_errorbar(
+    aes(ymin = mean_rating - sd_rating, ymax = mean_rating + sd_rating),
+    width = .2,
+    position = position_dodge(.9)
+  ) +
+  facet_grid(cols = vars(resp_frame)) +
+  xlab("") +
+  ylim(NA, 5) +
+  theme(legend.title = element_blank(), legend.position = "none")
+```
+
+```{r}
+#| label: tbl-kardash-2012-all-items-observed
+#| tbl-cap: "Mean ratings across items"
+ratings_by_norm_by_resp_frame |>
+  kableExtra::kable(format='html') |>
+  kableExtra::kable_classic()
+```

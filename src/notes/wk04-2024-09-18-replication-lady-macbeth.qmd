@@ -1,12 +1,6 @@
 ---
-title: "2023-09-11 Mon"
-subtitle: "Replication failure: The 'Lady Macbeth Effect'"
-author: "Rick Gilmore"
-format: revealjs
-bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
-csl: ../include/bib/apa.csl
-css: ../include/css/styles.css
-footer: "[PSYCH 490.009](../index.html): 2023-09-11 Monday"
+subtitle: "2024-09-18 Wed"
+title: "Replication failure: The 'Lady Macbeth Effect'"
 ---
 
 # Overview
@@ -19,7 +13,7 @@ footer: "[PSYCH 490.009](../index.html): 2023-09-11 Monday"
     - [@Zhong2006-nf].
     - [@Earp2014-ek].
     
-# Does the "Lady Macbeth Effect" [@Zhong2006-nf] replicate?
+# Does the "Lady Macbeth Effect" replicate?
     
 ---
 
@@ -49,8 +43,9 @@ Zhong, C.-B. & Liljenquist, K. (2006). Washing away your sins: Threatened morali
 [@Zhong2006-nf]
 </p>
 
-## From abstract [@Zhong2006-nf] 
+## From abstract 
 
+- [@Zhong2006-nf]
 - Who is audience?
 - What question was explored?
 
@@ -61,7 +56,7 @@ Zhong, C.-B. & Liljenquist, K. (2006). Washing away your sins: Threatened morali
     - Greater likelihood of taking antiseptic wipes
 :::
 
-## From methods section [@Zhong2006-nf] 
+## From methods section 
 
 - Not in main text!
 - Look in [Supplemental material](https://www.science.org/doi/suppl/10.1126/science.1130726/suppl_file/zhong.som.pdf)
@@ -105,13 +100,11 @@ Zhong, C.-B. & Liljenquist, K. (2006). Washing away your sins: Threatened morali
 ---
 
 ::: {.callout-important}
-
 What does an *F*-test test?
 
 >The hypothesis that the means of a given set of normally distributed populations, all having the same standard deviation, are equal. This is perhaps the best-known F-test, and plays an important role in the analysis of variance (ANOVA).
 
 Source: Wikipedia: <https://en.wikipedia.org/wiki/F-test>
-
 :::
 
 ## Study 2
@@ -157,9 +150,7 @@ Source: Wikipedia: <https://en.wikipedia.org/wiki/F-test>
 ---
 
 ::: {.callout-note}
-
 Look at the scale of the figure. What do you notice?
-
 :::
 
 ## Study 3
@@ -259,7 +250,6 @@ Earp, B. D., Everett, J. A. C., Madva, E. N. & Hamlin, J. K. (2014). Out, Damned
 ---
 
 ::: {.callout-important}
-
 What does a *t*-test measure?
 
 >A two-sample location test of the null hypothesis such that the means of two populations are equal.
@@ -271,7 +261,6 @@ Source: Wikipedia <https://en.wikipedia.org/wiki/Student%27s_t-test>
 What does the *95% CI* mean? The CI stands for [*confidence interval*](https://en.wikipedia.org/wiki/Confidence_interval). Does that help?
 
 "...There is only a 5% chance that the 95% CI excludes the mean of the population..." [@BMJ-oi].
-
 :::
 
 ---
@@ -289,11 +278,9 @@ What does the *95% CI* mean? The CI stands for [*confidence interval*](https://e
 ---
 
 ::: {.callout-note}
-
 This website tracks demographic characteristics of Mechanical Turk (MTurk) Workers:
 
 <https://demographics.mturk-tracker.com/>
-
 :::
 
 ---
@@ -372,11 +359,9 @@ This website tracks demographic characteristics of Mechanical Turk (MTurk) Worke
 ---
 
 ::: {.callout-note}
-
 Citations to Zhong et al.: <https://scholar.google.com/scholar?hl=en&as_sdt=0%2C39&q=Washing+Away+Your+Sins%3A+Threatened+Morality+and+Physical+Cleansing+Zhong&btnG=>
 
 Citations to Earp et al.: <https://scholar.google.com/scholar?hl=en&as_sdt=0%2C39&q=Out%2C+Damned+Spot%3A+Can+the+“Macbeth+Effect”+Be+Replicated%3F&btnG=>
-
 :::
 
 ## Open Science Thoughts
@@ -395,13 +380,10 @@ Citations to Earp et al.: <https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3
 ---
 
 ::: {.callout-note}
-
 It might be interesting to write up a case study that focuses on the history of a finding and its replications.
 
 See <https://forrt.org/reversals/>
-
 :::
-    
 
 # Next time
 
@@ -410,7 +392,7 @@ See <https://forrt.org/reversals/>
 - Read & discuss:
     - [@Bargh1996-yv]; [PDF on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=151876806)
     - [@Doyen2012-ib]
-- [Class notes](wk04-2023-09-13.qmd)
+- [Class notes](wk04-2024-09-23.qmd)
 
 # Resources
 
