@@ -6,9 +6,9 @@ format:
     fig-align: center
     logo: https://brand.psu.edu/images/backgrounds/penn-state-shield.jpg
     code-fold: true
-bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
-csl: ../include/bib/apa.csl
-css: ../include/css/styles.css
+    bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+    csl: ../include/bib/apa.csl
+    css: ../include/css/styles.css
 knitr:
   opts_chunk:
     fig.path: fig/

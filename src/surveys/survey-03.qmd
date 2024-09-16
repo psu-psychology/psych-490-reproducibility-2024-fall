@@ -2,6 +2,7 @@
 title: "Survey 03"
 params:
   update_data: TRUE
+  drop_test: TRUE
 ---
 
 ## Purpose
@@ -63,7 +64,7 @@ if (params$update_data) {
   googledrive::drive_auth()
   
   googledrive::drive_download(
-    "PSYCH 490.000 Fall 2023 Survey 03 (Responses)",
+    "PSYCH 490.012 Fall 2024 Survey 03 (Responses)",
     path = "csv/survey-03-crewell-et-al.csv",
     type = "csv",
     overwrite = TRUE
@@ -119,13 +120,22 @@ new_names <-
     "share_data_important",
     "collection_analysis_decisions_affect",
     "report_null_findings_important",
-    "counterintuitive_results_important"
+    "counterintuitive_results_important",
+    "comments"
   )
 
 # Swap out old (long) names for new (short) names
 long_names <- names(survey_03)
 names(survey_03) <- new_names
 ```
+
+### Drop "test" data
+
+```{r, eval=params$drop_test}
+survey_03 <- survey_03 |>
+  dplyr::filter(!stringr::str_detect(comments, "test"))
+```
+
 
 ### Data dictionary
 
@@ -197,7 +207,7 @@ Before we plot the data, let's remember what the scales look like:
 Now, we're ready to print histograms for all of the data.
 
 ```{r}
-my_vars <- names(survey_03)[2:dim(survey_03)[2]]
+my_vars <- names(survey_03)[2:(dim(survey_03)[2]-1)]
 
 purrr::map(my_vars, my_hist_q, survey_03)
 ```
@@ -249,20 +259,21 @@ return_plot <- function(data, var) {
 }
 
 return_section <- function(data, var) {
-  chunk_hdr <- knitr::knit_expand(text = c("### Responses for: `{{this_var}}`",
-                                           "\n"),
+  chunk_hdr <- knitr::knit_expand(text = c("### Responses for: `{{this_var}}`", "\n"),
                                   this_var = var)
   
   # Build fig.cap from ground up
   fig_name <- paste0("fig-dist-", var)
   fig_cap <- paste0("'Distribution of responses to ", var, "'")
   fig_caption <- paste0("fig.cap = ", fig_cap)
-
-  plot_chunk_hdr <- paste0("```{r ", fig_name, ", echo = FALSE, warning = FALSE, ", fig_caption, "}")
   
-  plot_chunk <- c(plot_chunk_hdr,
-                   "print(my_freq_plot(data, var))",
-                  "```")
+  plot_chunk_hdr <- paste0("```{r ",
+                           fig_name,
+                           ", echo = FALSE, warning = FALSE, ",
+                           fig_caption,
+                           "}")
+  
+  plot_chunk <- c(plot_chunk_hdr, "print(my_freq_plot(data, var))", "```")
   
   question_long <-
     paste0("\nQ: '", retrieve_long_q(var), "'")

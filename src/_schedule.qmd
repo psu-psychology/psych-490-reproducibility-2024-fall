@@ -291,7 +291,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd) write-up
 - [Assignment]{.green_assigned}
     - [Exercise 07: Replication](exercises/ex07-replication.qmd), [due Friday, November 8]{.orange_due}
-- (Extra credit) Complete [Survey 03]()
+- (Extra credit) Complete [Survey 03](https://forms.gle/BTqayMKnP7Xnyhst9)
 
 ### October 28 - November 1 {- #week-10}
 

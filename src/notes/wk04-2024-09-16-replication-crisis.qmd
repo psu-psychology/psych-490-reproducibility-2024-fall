@@ -3,6 +3,14 @@ subtitle: "2024-09-16 Mon"
 title: "A replication crisis (or not)"
 ---
 
+# Prelude
+
+---
+
+{{< video https://www.youtube.com/watch?v=_QwxTXGSLWQ width="100%" height="70%">}}
+
+[@Simon-Garfunkel-Topic2019-uf]
+
 # Overview
 
 ## Announcements
