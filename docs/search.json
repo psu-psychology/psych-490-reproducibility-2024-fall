@@ -1418,7 +1418,7 @@
     "href": "notes/wk04-2024-09-16-replication-crisis.html#announcements",
     "title": "A replication crisis (or not)",
     "section": "Announcements",
-    "text": "Announcements\n\nDue Friday, September 20\n\nExercise 02: Norms and counter-norms write-up | Canvas link"
+    "text": "Announcements\n\nDue Friday, September 20\n\nExercise 02: Norms and counter-norms write-up\n\ndue Friday, October 4\n\nExercise 03: Norms and counter-norms write-up"
   },
   {
     "objectID": "notes/wk04-2024-09-16-replication-crisis.html#today",
@@ -1453,7 +1453,7 @@
     "href": "notes/wk04-2024-09-16-replication-crisis.html#what-do-the-terms-mean",
     "title": "A replication crisis (or not)",
     "section": "What do the terms mean?",
-    "text": "What do the terms mean?\n\nReplication refers to testing the reliability of a prior finding with different data. Robustness refers to testing the reliability of a prior finding using the same data and a different analysis strategy….Reproducibility refers to testing the reliability of a prior finding using the same data and the same analysis strategy…\n\n\n(Nosek et al., 2022)"
+    "text": "What do the terms mean?\n\nReplication refers to testing the reliability of a prior finding with different data…\n\n\n(Nosek et al., 2022)"
   },
   {
     "objectID": "notes/wk04-2024-09-16-replication-crisis.html#methods-reproducibility",
@@ -1495,7 +1495,7 @@
     "href": "notes/wk04-2024-09-16-replication-crisis.html#artner-et-al.-2021",
     "title": "A replication crisis (or not)",
     "section": "Artner et al. 2021",
-    "text": "Artner et al. 2021\n\nWe investigated the reproducibility of the major statistical conclusions drawn in 46 articles published in 2012 in three APA journals. After having identified 232 key statistical claims, we tried to reproduce, for each claim, the test statistic, its degrees of freedom, and the corresponding p value, starting from the raw data that were provided by the authors and closely following the Method section in the article…\n\n\n(Artner et al., 2021)"
+    "text": "Artner et al. 2021\n\nWe investigated the reproducibility of the major statistical conclusions drawn in 46 articles published in 2012 in three APA journals. After having identified 232 key statistical claims, we tried to reproduce, for each claim, the test statistic, its degrees of freedom, and the corresponding p value…\n\n\n(Artner et al., 2021)"
   },
   {
     "objectID": "notes/wk04-2024-09-16-replication-crisis.html#framework-for-open-and-reproducible-research-training-forrt.org",
@@ -1516,14 +1516,14 @@
     "href": "notes/wk04-2024-09-16-replication-crisis.html#reproducibility-in-pre-clinical-cancer-biology",
     "title": "A replication crisis (or not)",
     "section": "Reproducibility in pre-clinical cancer biology",
-    "text": "Reproducibility in pre-clinical cancer biology\n\nReading: Begley & Ellis (2012)\nDiscuss replication in cancer biology on Monday, September 18, 2023."
+    "text": "Reproducibility in pre-clinical cancer biology\n\nReading: Begley & Ellis (2012)\nC. Glenn Begley bio"
   },
   {
     "objectID": "notes/wk04-2024-09-16-replication-crisis.html#background",
     "href": "notes/wk04-2024-09-16-replication-crisis.html#background",
     "title": "A replication crisis (or not)",
     "section": "Background",
-    "text": "Background\nC. Glenn Begley Bio\n\nThe scientific community assumes that the claims in a preclinical study can be taken at face value — that although there might be some errors in detail, the main message of the paper can be relied on and the data will, for the most part, stand the test of time. Unfortunately, this is not always the case.\n\n\n(Begley & Ellis, 2012)"
+    "text": "Background\n\nThe scientific community assumes that the claims in a preclinical study can be taken at face value — that although there might be some errors in detail, the main message of the paper can be relied on and the data will, for the most part, stand the test of time. Unfortunately, this is not always the case.\n\n\n(Begley & Ellis, 2012)"
   },
   {
     "objectID": "notes/wk04-2024-09-16-replication-crisis.html#findings",
@@ -1537,7 +1537,7 @@
     "href": "notes/wk04-2024-09-16-replication-crisis.html#sec-questions",
     "title": "A replication crisis (or not)",
     "section": "Questions to ponder",
-    "text": "Questions to ponder\n\nWhy do Begley & Ellis focus on a journal’s impact factor?\nWhy do Begley & Ellis focus on citations to reproduced vs. non-reproduced articles?\nWhy should non-scientists care?\nWhy should scientists (and students) in other fields (not cancer biology) care?"
+    "text": "Questions to ponder\n\nWhy do Begley & Ellis (2012) focus on a journal’s impact factor?\nWhy do Begley & Ellis (2012) focus on citations to reproduced vs. non-reproduced articles?\nWhy should non-scientists care?\nWhy should scientists (and students) in other fields (not cancer biology) care?"
   },
   {
     "objectID": "notes/wk04-2024-09-16-replication-crisis.html#learn-more",
@@ -1551,14 +1551,14 @@
     "href": "notes/wk04-2024-09-16-replication-crisis.html#talk-by-begley-crossfit2019-xq",
     "title": "A replication crisis (or not)",
     "section": "Talk by Begley (CrossFit, 2019)",
-    "text": "Talk by Begley (CrossFit, 2019)"
+    "text": "Talk by Begley (CrossFit, 2019)\n\n(CrossFit, 2019)"
   },
   {
     "objectID": "notes/wk04-2024-09-16-replication-crisis.html#references",
     "href": "notes/wk04-2024-09-16-replication-crisis.html#references",
     "title": "A replication crisis (or not)",
     "section": "References",
-    "text": "References\n\n\n\n\nPSYCH 490.012 • Fall 2024\n\n\n\n\nArtner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., & Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. Psychological Methods, 26(5), 527–546. https://doi.org/10.1037/met0000365\n\n\nBaker, M. (2016). 1,500 scientists lift the lid on reproducibility. Nature News, 533(7604), 452. https://doi.org/10.1038/533452a\n\n\nBegley, C. G., & Ellis, L. M. (2012). Drug development: Raise standards for preclinical cancer research. Nature, 483(7391), 531–533. https://doi.org/10.1038/483531a\n\n\nCrossFit. (2019, July). Dr. Glenn begley: Perverse incentives promote scientific laziness, exaggeration, and desperation. Youtube. Retrieved from https://www.youtube.com/watch?v=YJADzllTM9w\n\n\nEarp, B. D., Everett, J. A. C., Madva, E. N., & Hamlin, J. K. (2014). Out, damned spot: Can the “Macbeth effect” be replicated? Basic and Applied Social Psychology, 36(1), 91–98. https://doi.org/10.1080/01973533.2013.856792\n\n\nFreedman, L. P., Cockburn, I. M., & Simcoe, T. S. (2015). The economics of reproducibility in preclinical research. PLoS Biology, 13(6), e1002165. https://doi.org/10.1371/journal.pbio.1002165\n\n\nGilmore, R. O., Hillary, F., Lazar, N., & Wham, B. (2023). Penn state open science survey. https://penn-state-open-science.github.io/survey-fall-2022/index.html. Retrieved from https://penn-state-open-science.github.io/survey-fall-2022/index.html\n\n\nGoodman, S. N., Fanelli, D., & Ioannidis, J. P. A. (2016). What does research reproducibility mean? Science Translational Medicine, 8(341), 341ps12–341ps12. https://doi.org/10.1126/scitranslmed.aaf5027\n\n\nHarris, R. (2017). Rigor mortis: How sloppy science creates worthless cures, crushes hope, and wastes billions (1 edition). Basic Books.\n\n\nKardash, C. M., & Edwards, O. V. (2012). Thinking and behaving like scientists: Perceptions of undergraduate science interns and their faculty mentors. Instructional Science, 40(6), 875–899. https://doi.org/10.1007/s11251-011-9195-0\n\n\nNosek, B. A., Hardwicke, T. E., Moshontz, H., Allard, A., Corker, K. S., Dreber, A., … Vazire, S. (2022). Replicability, robustness, and reproducibility in psychological science. Annual Review of Psychology, 73(2022), 719–748. https://doi.org/10.1146/annurev-psych-020821-114157\n\n\nPrinz, F., Schlange, T., & Asadullah, K. (2011). Believe it or not: How much can we rely on published data on potential drug targets? Nature Reviews. Drug Discovery, 10(9), 712. https://doi.org/10.1038/nrd3439-c1\n\n\nRitchie, S. (2020). Science fictions: Exposing fraud, bias, negligence and hype in science (1st ed.). Penguin Random House. Retrieved from https://www.amazon.com/Science-Fictions/dp/1847925669\n\n\nZhong, C.-B., & Liljenquist, K. (2006). Washing away your sins: Threatened morality and physical cleansing. Science, 313(5792), 1451–1452. https://doi.org/10.1126/science.1130726"
+    "text": "References\n\n\n\n\nPSYCH 490.012 • Fall 2024\n\n\n\n\nArtner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., & Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. Psychological Methods, 26(5), 527–546. https://doi.org/10.1037/met0000365\n\n\nBaker, M. (2016). 1,500 scientists lift the lid on reproducibility. Nature News, 533(7604), 452. https://doi.org/10.1038/533452a\n\n\nBegley, C. G., & Ellis, L. M. (2012). Drug development: Raise standards for preclinical cancer research. Nature, 483(7391), 531–533. https://doi.org/10.1038/483531a\n\n\nCrossFit. (2019, July). Dr. Glenn begley: Perverse incentives promote scientific laziness, exaggeration, and desperation. Youtube. Retrieved from https://www.youtube.com/watch?v=YJADzllTM9w\n\n\nEarp, B. D., Everett, J. A. C., Madva, E. N., & Hamlin, J. K. (2014). Out, damned spot: Can the “Macbeth effect” be replicated? Basic and Applied Social Psychology, 36(1), 91–98. https://doi.org/10.1080/01973533.2013.856792\n\n\nErrington, T. M., Denis, A., Perfito, N., Iorns, E., & Nosek, B. A. (2021). Challenges for assessing replicability in preclinical cancer biology. eLife, 10, e67995. https://doi.org/10.7554/eLife.67995\n\n\nErrington, T. M., Mathur, M., Soderberg, C. K., Denis, A., Perfito, N., Iorns, E., & Nosek, B. A. (2021). Investigating the replicability of preclinical cancer biology. eLife, 10, e71601. https://doi.org/10.7554/eLife.71601\n\n\nFreedman, L. P., Cockburn, I. M., & Simcoe, T. S. (2015). The economics of reproducibility in preclinical research. PLoS Biology, 13(6), e1002165. https://doi.org/10.1371/journal.pbio.1002165\n\n\nGilmore, R. O., Hillary, F., Lazar, N., & Wham, B. (2023). Penn state open science survey. https://penn-state-open-science.github.io/survey-fall-2022/index.html. Retrieved from https://penn-state-open-science.github.io/survey-fall-2022/index.html\n\n\nGoodman, S. N., Fanelli, D., & Ioannidis, J. P. A. (2016). What does research reproducibility mean? Science Translational Medicine, 8(341), 341ps12–341ps12. https://doi.org/10.1126/scitranslmed.aaf5027\n\n\nHarris, R. (2017). Rigor mortis: How sloppy science creates worthless cures, crushes hope, and wastes billions (1 edition). Basic Books.\n\n\nKardash, C. M., & Edwards, O. V. (2012). Thinking and behaving like scientists: Perceptions of undergraduate science interns and their faculty mentors. Instructional Science, 40(6), 875–899. https://doi.org/10.1007/s11251-011-9195-0\n\n\nNosek, B. A., Hardwicke, T. E., Moshontz, H., Allard, A., Corker, K. S., Dreber, A., … Vazire, S. (2022). Replicability, robustness, and reproducibility in psychological science. Annual Review of Psychology, 73(2022), 719–748. https://doi.org/10.1146/annurev-psych-020821-114157\n\n\nPrinz, F., Schlange, T., & Asadullah, K. (2011). Believe it or not: How much can we rely on published data on potential drug targets? Nature Reviews. Drug Discovery, 10(9), 712. https://doi.org/10.1038/nrd3439-c1\n\n\nRitchie, S. (2020). Science fictions: Exposing fraud, bias, negligence and hype in science (1st ed.). Penguin Random House. Retrieved from https://www.amazon.com/Science-Fictions/dp/1847925669\n\n\nZhong, C.-B., & Liljenquist, K. (2006). Washing away your sins: Threatened morality and physical cleansing. Science, 313(5792), 1451–1452. https://doi.org/10.1126/science.1130726"
   },
   {
     "objectID": "notes/wk01-2024-08-28-no-foolin.html#announcements",
@@ -1986,5 +1986,26 @@
     "title": "Work session: Replication with R, R Markdown, & Quarto",
     "section": "Is this a better picture?",
     "text": "Is this a better picture?\n\n\nCode\nnorm_df |&gt;\n  ggplot() +\n  aes(x = resp_frame, y = rating, fill = type) +\n  geom_col() +\n  facet_grid(cols = vars(type)) +\n  xlab(\"\") +\n  ylim(NA, 5) +\n  theme(legend.title = element_blank(), legend.position = \"none\")\n\n\n\n\nFigure 2: Data picture of Survey 02 predictions in PSYCH 490.012 partial replication of (Kardash & Edwards, 2012)"
+  },
+  {
+    "objectID": "notes/wk04-2024-09-16-replication-crisis.html#last-time",
+    "href": "notes/wk04-2024-09-16-replication-crisis.html#last-time",
+    "title": "A replication crisis (or not)",
+    "section": "Last time…",
+    "text": "Last time…\n\nOur (partial) replication of (Kardash & Edwards, 2012) via Survey-02\nOur predictions:\n\nNorms vs. counternorms?\nShould do vs. actually do?\n\nAre ratings continuous or not?\nTables and figures: Which is better?"
+  },
+  {
+    "objectID": "notes/wk04-2024-09-16-replication-crisis.html#evaluating-reproducibility-across-psychological-science",
+    "href": "notes/wk04-2024-09-16-replication-crisis.html#evaluating-reproducibility-across-psychological-science",
+    "title": "A replication crisis (or not)",
+    "section": "Evaluating reproducibility across psychological science",
+    "text": "Evaluating reproducibility across psychological science\nOpen Science Collaboration. (2015). Estimating the reproducibility of psychological science. Science, 349(6251), aac4716–aac4716. https://doi.org/10.1126/science.aac4716"
+  },
+  {
+    "objectID": "notes/wk04-2024-09-16-replication-crisis.html#figure-from-prinz2011-vo",
+    "href": "notes/wk04-2024-09-16-replication-crisis.html#figure-from-prinz2011-vo",
+    "title": "A replication crisis (or not)",
+    "section": "Figure from Prinz et al. (2011)",
+    "text": "Figure from Prinz et al. (2011)"
   }
 ]
