@@ -35,7 +35,7 @@ title: "Work session: Replication with R, R Markdown, & Quarto"
 
 ::: {.incremental}
 - Capture details of the research workflow
-  - Not usually contained in journal articles, remember [@Artner2021-qg] comment discussed [earlier](../noteswk04-2024-09-16-replication-crisis.qmd)?
+  - Not usually contained in journal articles, remember [@Artner2021-qg] comment discussed [earlier](../notes/wk04-2024-09-16-replication-crisis.qmd)?
 - Make research notebooks that actually do work
   - Not just capture info passively
 - Do so efficiently, flexibly
@@ -49,6 +49,7 @@ title: "Work session: Replication with R, R Markdown, & Quarto"
   - More error-prone
 - Save history of changes (e.g., version control)
 - Make use of HTML and the web
+  - Widely available
 - Keep track of (& cite) resources
 :::
 
@@ -143,7 +144,7 @@ params:
 - Document title & subtitle
 - A parameter that determines whether the document should update the data or not.
 - A parameter for the file name
-- A parameter to control whether to make the plots or not.
+- A parameter to control whether or not to make the plots.
 :::
 
 ---
@@ -233,6 +234,8 @@ library('dplyr')
 
 ## Prediction data picture (setup)
 
+First, we need to make a data file with the right variable names and data values.
+
 ```{r, echo=TRUE}
 #| label: set-up-barplot
 library(tidyverse) # loads `tibble` and `ggplot2` packages
@@ -296,6 +299,33 @@ norm_df |>
   ylim(NA, 5) +
   theme(legend.title = element_blank(), legend.position = "none")
 ```
+
+## About `ggplot()`
+
+:::: {.columns}
+::: {.column width="50%"}
+- R Package (collection of commands/functions) written by @Wickham2016 that implements the grammar of graphics [@Wilkinson2005-do].
+- Figures contain multiple elements and layers
+- Map data $\rightarrow$ figure elements (aesthetics)
+:::
+::: {.column width="50%"}
+```r
+norm_df |>
+  ggplot() +
+  aes(x = type, 
+      y = rating, 
+      fill = resp_frame) +
+```
+
+- Add layers to the figure
+
+```r
+  geom_col() +
+  facet_grid(cols = vars(resp_frame)) +
+  xlab("") +
+```
+:::
+::::
 
 # Next time
 

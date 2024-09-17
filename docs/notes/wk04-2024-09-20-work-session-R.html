@@ -489,7 +489,7 @@ Rick Gilmore
 <ul>
 <li class="fragment">Capture details of the research workflow
 <ul>
-<li class="fragment">Not usually contained in journal articles, remember <span class="citation" data-cites="Artner2021-qg">(<a href="#/references" role="doc-biblioref" onclick="">Artner et al., 2021</a>)</span> comment discussed <a href="../noteswk04-2024-09-16-replication-crisis.qmd">earlier</a>?</li>
+<li class="fragment">Not usually contained in journal articles, remember <span class="citation" data-cites="Artner2021-qg">(<a href="#/references" role="doc-biblioref" onclick="">Artner et al., 2021</a>)</span> comment discussed <a href="../notes/wk04-2024-09-16-replication-crisis.html">earlier</a>?</li>
 </ul></li>
 <li class="fragment">Make research notebooks that actually do work
 <ul>
@@ -509,7 +509,10 @@ Rick Gilmore
 <li class="fragment">More error-prone</li>
 </ul></li>
 <li class="fragment">Save history of changes (e.g., version control)</li>
-<li class="fragment">Make use of HTML and the web</li>
+<li class="fragment">Make use of HTML and the web
+<ul>
+<li class="fragment">Widely available</li>
+</ul></li>
 <li class="fragment">Keep track of (&amp; cite) resources</li>
 </ul>
 </div>
@@ -650,7 +653,7 @@ params:
 <li class="fragment">Document title &amp; subtitle</li>
 <li class="fragment">A parameter that determines whether the document should update the data or not.</li>
 <li class="fragment">A parameter for the file name</li>
-<li class="fragment">A parameter to control whether to make the plots or not.</li>
+<li class="fragment">A parameter to control whether or not to make the plots.</li>
 </ul>
 </div>
 </section>
@@ -776,6 +779,7 @@ Table&nbsp;1: Predictions made in-class on 2024-09-11
 </section>
 <section id="prediction-data-picture-setup" class="slide level2">
 <h2>Prediction data picture (setup)</h2>
+<p>First, we need to make a data file with the right variable names and data values.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -878,7 +882,30 @@ Figure&nbsp;1: Data picture of <a href="../surveys/survey-02.html">Survey 02</a>
 </div>
 <img data-src="fig/fig-kardash-2012-preds-barplot-alt-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">
 Figure&nbsp;2: Data picture of <a href="../surveys/survey-02.html">Survey 02</a> predictions in PSYCH 490.012 partial replication of <span class="citation" data-cites="Kardash2012-kq">(<a href="#/references" role="doc-biblioref" onclick="">Kardash &amp; Edwards, 2012</a>)</span>
-</p></section></section>
+</p></section>
+<section id="about-ggplot" class="slide level2">
+<h2>About <code>ggplot()</code></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>R Package (collection of commands/functions) written by <span class="citation" data-cites="Wickham2016">Wickham (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span> that implements the grammar of graphics <span class="citation" data-cites="Wilkinson2005-do">(<a href="#/references" role="doc-biblioref" onclick="">Wilkinson, Wills, Rope, Norton, &amp; Dubbs, 2005</a>)</span>.</li>
+<li>Figures contain multiple elements and layers</li>
+<li>Map data <span class="math inline">\(\rightarrow\)</span> figure elements (aesthetics)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>norm_df <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb9-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> type, </span>
+<span id="cb9-4"><a></a>      <span class="at">y =</span> rating, </span>
+<span id="cb9-5"><a></a>      <span class="at">fill =</span> resp_frame) <span class="sc">+</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Add layers to the figure</li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb10-2"><a></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(resp_frame)) <span class="sc">+</span></span>
+<span id="cb10-3"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section></section>
 <section id="next-time" class="title-slide slide level1 center">
 <h1>Next time</h1>
 <p><em>Replication attempt: Priming effect</em></p>
@@ -932,6 +959,12 @@ Plohl, N., &amp; Musil, B. (2023). Assessing the incremental value of intellectu
 </div>
 <div id="ref-quarto-site-gw" class="csl-entry" role="listitem">
 Quarto. (n.d.). <a href="https://quarto.org/" class="uri">https://quarto.org/</a>. Retrieved from <a href="https://quarto.org/">https://quarto.org/</a>
+</div>
+<div id="ref-Wickham2016" class="csl-entry" role="listitem">
+Wickham, H. (2016). <em>ggplot2: Elegant graphics for data analysis</em>. Springer-Verlag New York. Retrieved from <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>
+</div>
+<div id="ref-Wilkinson2005-do" class="csl-entry" role="listitem">
+Wilkinson, L., Wills, D., Rope, D., Norton, A., &amp; Dubbs, R. (2005). <em>The grammar of graphics (statistics and computing)</em> (2nd edition). Springer. Retrieved from <a href="https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448">https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448</a>
 </div>
 <div id="ref-Zhong2006-nf" class="csl-entry" role="listitem">
 Zhong, C.-B., &amp; Liljenquist, K. (2006). Washing away your sins: <span>T</span>hreatened morality and physical cleansing. <em>Science</em>, <em>313</em>(5792), 1451–1452. <a href="https://doi.org/10.1126/science.1130726">https://doi.org/10.1126/science.1130726</a>
