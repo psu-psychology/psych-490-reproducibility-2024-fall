@@ -3,7 +3,19 @@ subtitle: "2024-09-18 Wed"
 title: "Replication failure: The 'Lady Macbeth Effect'"
 ---
 
+# Prelude
+
+---
+
+{{< video https://www.youtube.com/watch?v=RgDeGlr_pj0 width="100%" height="70%">}}
+
+[@Carter2022-hg]
+
 # Overview
+
+## Announcements
+
+![[@Lee2024-av]](img/lee-2024-q-collar-chronical-higher-ed.png)
 
 ## Today
 
@@ -51,10 +63,21 @@ Zhong, C.-B. & Liljenquist, K. (2006). Washing away your sins: Threatened morali
 
 :::{.incremental}
 - Need to cleanse
-    - Increased mental accessibility of cleansing-related products
-    - Greater desire for cleansing products
-    - Greater likelihood of taking antiseptic wipes
+    - "Increased mental accessibility of cleansing-related concepts"
+    - "Greater desire for cleansing products"
+    - "Greater likelihood of taking antiseptic wipes"
 :::
+
+---
+
+```{mermaid}
+flowchart TD    
+  A[threat] ---> B[perceived moral purity]
+  B ---> E[need to cleanse]
+  E ---> C[mental accessibility of cleansing-related concepts]
+  E ---> D[Greater desire for cleansing products]
+  E ---> F[Greater likelihood of taking antiseptic wipes]
+```
 
 ## From methods section 
 
@@ -82,6 +105,16 @@ Zhong, C.-B. & Liljenquist, K. (2006). Washing away your sins: Threatened morali
 ---
 
 >We summed the number of cleansing-related word fragments participants completed to form a composite measure of mental accessibility to cleansing-related concepts and submitted this measure to a one-way ANOVA. This measure and analysis have been used in many previous studies on mental accessibility (2, 3).
+
+---
+
+```{mermaid}
+flowchart TD
+  A[describe ethical/unethical deed] ---> B[perceived moral purity]
+  B ---> E[need to cleanse]
+  E ---> C[mental accessibility of cleansing-related concepts]
+  C ---> D[cleansing/unrelated word completion task]
+```
 
 ## Study 1 results
 
@@ -139,6 +172,16 @@ Source: Wikipedia: <https://en.wikipedia.org/wiki/F-test>
 
 >The desirability rating served as the dependent measure because participants who have a need for bodily cleansing should express greater desire towards cleansing related products. None of the participants suspected the link between the manipulation and the product rating task.
 
+---
+
+```{mermaid}
+flowchart TD
+  A[hand-copy ethical/unethical story] ---> B[perceived moral purity]
+  B ---> E[need to cleanse]
+  E ---> C[desire for cleansing products]
+  C ---> D[rate cleaning/unrelated product desirability]
+```
+
 ## Study 2 results
 
 >As expected, copying the unethical story increased the desirability of cleansing products as compared to copying the ethical story [F(1,25) = 6.99, P = 0.01], with no differences between conditions for the noncleansing products [F(1,25) = 0.02, P = 0.89] (Fig. 1).
@@ -168,6 +211,16 @@ Look at the scale of the figure. What do you notice?
 ---
 
 >The gifts were tested to make sure that they were equally desirable on an independent sample with 15 undergraduate students. These participants went through a similar but non-moral recall task (unrelated to ethics or cleanliness) and were then asked to choose between the wipes and pencils. Results confirmed equal desirability: 53% took the wipe and 47% took the pencil.
+
+---
+
+```{mermaid}
+flowchart TD
+  A(describe ethical/unethical deed) -->|+/-| B[perceived moral purity]
+  B -->|-/+| E[need to cleanse]
+  E -->|+/-| C[desire for cleansing products]
+  C -->|+/-| D(choose wipe or pencil)
+```
 
 ## Results Study 3
 
@@ -229,7 +282,11 @@ Earp, B. D., Everett, J. A. C., Madva, E. N. & Hamlin, J. K. (2014). Out, Damned
 
 ---
 
-> Participants were then told that they were taking part in research looking at consumer marketing and were asked to rate the desirability of various products from 1 (completely undesirable) to 7 (completely desirable) and to say how much they would be willing to pay (£) for each product. The 10 items used were the exact same original items from Zhong and Liljenquist's study, in their original order, with four items adapted slightly for a British sample by replacing unfamiliar American brands with equivalent British brands. 
+> Participants were then told that they were taking part in research looking at consumer marketing and were asked to rate the desirability of various products from 1 (completely undesirable) to 7 (completely desirable) and to say how much they would be willing to pay (£) for each product. 
+
+---
+
+>The 10 items used were the exact same original items from Zhong and Liljenquist's study, in their original order, with four items adapted slightly for a British sample by replacing unfamiliar American brands with equivalent British brands. 
 
 ---
 
@@ -241,7 +298,7 @@ Earp, B. D., Everett, J. A. C., Madva, E. N. & Hamlin, J. K. (2014). Out, Damned
 
 ## Study 1 results [@Earp2014-ek]
 
->Independent samples t tests revealed no significant difference of condition on desirability of consumer product, t(151) = .03, p = .97, 95% CI [–0.29, 0.30], with no significant difference in the mean desirability of the cleansing items between the moral condition (M = 3.09) and immoral condition (M = 3.08). 
+>Independent samples *t* tests revealed no significant difference of condition on desirability of consumer product, t(151) = .03, p = .97, 95% CI [–0.29, 0.30], with no significant difference in the mean desirability of the cleansing items between the moral condition (M = 3.09) and immoral condition (M = 3.08). 
 
 ---
 
@@ -257,6 +314,23 @@ What does a *t*-test measure?
 Source: Wikipedia <https://en.wikipedia.org/wiki/Student%27s_t-test>
 
 (Remember: The *null hypothesis* means we hypothesis that there is no difference between the groups.)
+:::
+
+---
+
+::: {.callout-important}
+Why use an "independent samples *t*-test"?
+
+Did the same people participate in both conditions? If so, then we could compare them directly using a paired samples *t*-test.
+
+If not, then the two samples are *independent* of one another.
+
+Which test is more sensitive (able to detect smaller differences) and why?
+:::
+
+---
+
+::: {.callout-important}
 
 What does the *95% CI* mean? The CI stands for [*confidence interval*](https://en.wikipedia.org/wiki/Confidence_interval). Does that help?
 
@@ -313,7 +387,7 @@ This website tracks demographic characteristics of Mechanical Turk (MTurk) Worke
 
 ## Study 2 results [@Earp2014-ek]
 
-> Independent samples t tests revealed no significant difference of condition on desirability of the cleansing items, t(146) = − .79, p = .43, 95% CI [–0.62, 0.27] with comparable means in both the ethical (M = 4.23) and unethical (M = 4.41) conditions. 
+> Independent samples *t* tests revealed no significant difference of condition on desirability of the cleansing items, t(146) = − .79, p = .43, 95% CI [–0.62, 0.27] with comparable means in both the ethical (M = 4.23) and unethical (M = 4.41) conditions. 
 
 ---
 
@@ -321,7 +395,11 @@ This website tracks demographic characteristics of Mechanical Turk (MTurk) Worke
 
 ---
 
-> Analyses were conducted on all individual cleansing items, and revealed no effect of condition on any individual item, with one exception: Consistent with predictions, a significant difference between conditions was found for how much participants were willing to pay for toothpaste, F(1, 146) = 4.76, p = .03, 95% CI [2.36, 3.03], with participants willing to pay more for the toothpaste in the unethical condition (M = 2.69) than in the ethical condition (M = 2.42).
+> Analyses were conducted on all individual cleansing items, and revealed no effect of condition on any individual item, with one exception: Consistent with predictions, a significant difference between conditions was found for how much participants were willing to pay for toothpaste, F(1, 146) = 4.76, p = .03, 95% CI [2.36, 3.03], 
+
+---
+
+>...with participants willing to pay more for the toothpaste in the unethical condition (M = 2.69) than in the ethical condition (M = 2.42).
 
 ## Study 3 method [@Earp2014-ek]
 
@@ -329,7 +407,11 @@ This website tracks demographic characteristics of Mechanical Turk (MTurk) Worke
 
 ---
 
-> Materials and procedure. The procedure was identical to that used in Study 2. Just as in Study 1, however, consumer product brand names had to be adjusted to accommodate a non-U.S. sample. In this case, brand names were replaced with generic descriptions of each product. Accordingly, participants were asked to rate their preferences concerning: sticky notes, shower soap, toothpaste, pressed fruit juice, batteries, CD cases, glass cleaner, countertop disinfectant, a candy bar, and laundry detergent.
+> Materials and procedure. The procedure was identical to that used in Study 2. Just as in Study 1, however, consumer product brand names had to be adjusted to accommodate a non-U.S. sample. In this case, brand names were replaced with generic descriptions of each product. 
+
+---
+
+>Accordingly, participants were asked to rate their preferences concerning: sticky notes, shower soap, toothpaste, pressed fruit juice, batteries, CD cases, glass cleaner, countertop disinfectant, a candy bar, and laundry detergent.
 
 ## Study 3 results [@Earp2014-ek]
 
@@ -387,12 +469,12 @@ See <https://forrt.org/reversals/>
 
 # Next time
 
-*Replication failure: Priming effect*
+*What R are we talking about?*
 
-- Read & discuss:
-    - [@Bargh1996-yv]; [PDF on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=151876806)
-    - [@Doyen2012-ib]
-- [Class notes](wk04-2024-09-23.qmd)
+- Read
+    - [@Fidler2021-xn], especially sections 1, 2, and 3.1-3.2.
+    - (Skim) [@Nosek2022-hv] or [@goodman_what_2016]
+- [Class notes](wk05-2024-09-25-what-r.qmd)
 
 # Resources
 
