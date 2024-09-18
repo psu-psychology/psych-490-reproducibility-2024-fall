@@ -17,6 +17,38 @@ title: "Replication failure: The 'Lady Macbeth Effect'"
 
 ![[@Lee2024-av]](img/lee-2024-q-collar-chronical-higher-ed.png)
 
+---
+
+::: {.callout-important}
+This could be an interesting topic for a final project.
+:::
+
+## Last time...
+
+- @baker_1500_2016 survey on reproducibility in science
+- According to @Nosek2022-hv
+  - "*Reproducibility* refers to testing the reliability of a prior finding using the _____ data and the _____ analysis strategy..."
+  - "_____ refers to testing the reliability of a prior finding with different data..."
+
+## Last time...
+
+- @baker_1500_2016 survey on reproducibility in science
+- According to @Nosek2022-hv
+  - "*Reproducibility* refers to testing the reliability of a prior finding using the *same* data and the *same* analysis strategy..."
+  - "*Replication* refers to testing the reliability of a prior finding with different data..."
+  
+---
+
+> In principle, **all reported evidence should be reproducible**. If someone applies the same analysis to the same data, the same result should occur...
+
+<p style="text-align:center;">
+[@Nosek2022-hv]
+</p>
+
+::: {.callout-important}
+Do you agree? Why or why not?
+:::
+
 ## Today
 
 *Replication failure: The "Lady Macbeth Effect"*
@@ -86,7 +118,7 @@ flowchart TD
 ::: {.callout-important}
 What do the arrows imply?
 
-Can we say more about what the authors think they imply?
+Can we say more about what we think they imply?
 
 What was *observed* and what was *inferred*? Or what were the *behaviors* and what were the *internal mental states*?
 :::
