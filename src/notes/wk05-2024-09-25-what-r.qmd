@@ -232,7 +232,7 @@ Is exact replication even *possible*?
 *Work session: Scientific integrity*
 
 - [Assignment]{.green_assigned}
-    - [Exercise 03: Violations of scientific integrity](ex03-scientific-integrity.qmd)
+    - [Exercise 03: Violations of scientific integrity](../exercises/ex04-scientific-integrity.qmd)
 
 # Resources
 

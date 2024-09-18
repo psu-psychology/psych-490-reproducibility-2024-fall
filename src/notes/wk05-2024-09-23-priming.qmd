@@ -23,7 +23,7 @@ title: "Replication failure: Priming effect"
 
 ---
 
-Bargh, J. A., Chen, M. & Burrows, L. (1996). Automaticity of social behavior: direct effects of trait construct and stereotype-activation on action. Journal of Personality and Social Psychology, 71(2), 230–244. <https://doi.org/10.1037//0022-3514.71.2.230>.
+Bargh, J. A., Chen, M. & Burrows, L. (1996). Automaticity of social behavior: Direct effects of trait construct and stereotype-activation on action. *Journal of Personality and Social Psychology*, *71*(2), 230–244. <https://doi.org/10.1037//0022-3514.71.2.230>.
 
 ---
 
@@ -374,7 +374,7 @@ knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?
 - Review
   - [Survey 01 report](../survey-01.html)
   - [Survey 02 report](../survey-02.html)
-- [Class notes](../notes/wk04-2023-09-15.qmd)
+- [Class notes](../notes/wk04-2024-09-20-work-session-R.qmd)
 
 # Resources
 
