@@ -5,18 +5,24 @@ title: "Work session: Replication with R, R Markdown, & Quarto"
 
 # Overview
 
-## Announcement
+## Announcements
 
-- Retraction Watch [database](https://retractionwatch.com/retraction-watch-database-user-guide/) now [available to anyone](https://retractionwatch.com/2023/09/12/the-retraction-watch-database-becomes-completely-open-and-rw-becomes-far-more-sustainable/) via [CrossRef](https://www.crossref.org/blog/news-crossref-and-retraction-watch/)
+- Please complete Student Educational Experience Questionnaire
+
+![](img/seeq-screenshot-2024-09-19.png)
+
 
 ## Last time...
 
-- Wrap-up on replication attempt of [@Zhong2006-nf] by [@Earp2014-ek]
-- Discuss replication attempt of [@Bargh1996-yv] by [@Doyen2012-ib]
+- Discuss [@Zhong2006-nf]
+  - What did @Zhong2006-nf manipulate?
+  - What did @Zhong2006-nf measure?
+  - What did @Zhong2006-nf infer from their manipulations and measurements?   
 
 ## Today
 
-- Wrap-up discussion of [@Bargh1996-yv] and [@Doyen2012-ib]; [Slides from Wed 9/13](wk04-2023-09-13.html)
+- Discuss replication attempt of [@Zhong2006-nf] by [@Earp2014-ek]
+- 2024-09-18 [notes](wk04-2024-09-18-replication-lady-macbeth.qmd#replication)
 
 ---
 
@@ -309,6 +315,7 @@ norm_df |>
 - Map data $\rightarrow$ figure elements (aesthetics)
 :::
 ::: {.column width="50%"}
+
 ```r
 norm_df |>
   ggplot() +
@@ -324,6 +331,7 @@ norm_df |>
   facet_grid(cols = vars(resp_frame)) +
   xlab("") +
 ```
+
 :::
 ::::
 
