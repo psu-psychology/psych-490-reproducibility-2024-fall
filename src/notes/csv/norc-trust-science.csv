@@ -1,22 +1,13 @@
-year,rating,n_respondents,proportion
-1998,No answer,35,0.02725856698
-1998,Don't know,42,0.03271028037
-1998,Strongly agree,106,0.08255451713
-1998,Agree,270,0.2102803738
-1998,Neither agree or disagree,329,0.2562305296
-1998,Disagree,347,0.2702492212
-1998,Strongly disagree,155,0.1207165109
-2008,No answer,7,0.005128205128
-2008,Don't know,26,0.01904761905
-2008,Strongly agree,100,0.07326007326
-2008,Agree,321,0.2351648352
-2008,Neither agree or disagree,343,0.2512820513
-2008,Disagree,406,0.2974358974
-2008,Strongly disagree,162,0.1186813187
-2018,No answer,12,0.01021276596
-2018,Don't know,18,0.01531914894
-2018,Strongly agree,127,0.1080851064
-2018,Agree,295,0.2510638298
-2018,Neither agree or disagree,357,0.3038297872
-2018,Disagree,221,0.1880851064
-2018,Strongly disagree,145,0.1234042553
+{
+  "error": {
+    "code": 403,
+    "message": "User rate limit exceeded.",
+    "errors": [
+      {
+        "message": "User rate limit exceeded.",
+        "domain": "usageLimits",
+        "reason": "userRateLimitExceeded"
+      }
+    ]
+  }
+}
