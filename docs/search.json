@@ -121,182 +121,182 @@
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#last-time",
     "href": "notes/wk04-2024-09-20-work-session-R.html#last-time",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Last time…",
     "text": "Last time…\n\nDiscuss (Zhong & Liljenquist, 2006)\n\nWhat did Zhong & Liljenquist (2006) manipulate?\nWhat did Zhong & Liljenquist (2006) measure?\nWhat did Zhong & Liljenquist (2006) infer from their manipulations and measurements?"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#today",
     "href": "notes/wk04-2024-09-20-work-session-R.html#today",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Today",
     "text": "Today\n\nDiscuss replication attempt of (Zhong & Liljenquist, 2006) by (Earp, Everett, Madva, & Hamlin, 2014)\n2024-09-18 notes"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#goals",
     "href": "notes/wk04-2024-09-20-work-session-R.html#goals",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Goals",
     "text": "Goals\n\n\nCapture details of the research workflow\n\nNot usually contained in journal articles, remember (Artner et al., 2021) comment discussed earlier?\n\nMake research notebooks that actually do work\n\nNot just capture info passively\n\nDo so efficiently, flexibly"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#more-goals",
     "href": "notes/wk04-2024-09-20-work-session-R.html#more-goals",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "More goals",
     "text": "More goals\n\n\nMake computer work harder\nReduce manual work\n\nMore error-prone\n\nSave history of changes (e.g., version control)\nMake use of HTML and the web\n\nWidely available\n\nKeep track of (& cite) resources"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#research-workflow",
     "href": "notes/wk04-2024-09-20-work-session-R.html#research-workflow",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Research workflow",
     "text": "Research workflow\n\n\n\n\n\nflowchart LR\n  A{Idea/Question} --&gt;|Develop|B{Plan}\n  B --&gt;|Create measures|C{Collect Info}\n  C --&gt;|Gather collected|D{Analyze Info}\n  D --&gt;|Visualize|E{Share findings}\n  E --&gt;|Evaluate|A\n\n\n\n\n\n\nGraph made using Mermaid.js"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#survey-01",
     "href": "notes/wk04-2024-09-20-work-session-R.html#survey-01",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Survey-01",
     "text": "Survey-01\n\nReport\nGoals\n\nMeasure trust in science and scientists\nMeasure individual characteristics that predict that trust\nDo PSYCH 490.012 students follow patterns found by others (Krumrei-Mancuso & Rouse, 2016; Nadelson et al., 2014; Plohl & Musil, 2023)?"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#survey-questions",
     "href": "notes/wk04-2024-09-20-work-session-R.html#survey-questions",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Survey questions",
     "text": "Survey questions\n\nUse (Krumrei-Mancuso & Rouse, 2016; Nadelson et al., 2014; Plohl & Musil, 2023) questions.\nShared Google Form"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#gather-clean-data",
     "href": "notes/wk04-2024-09-20-work-session-R.html#gather-clean-data",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Gather & Clean Data",
     "text": "Gather & Clean Data\n\nUse Quarto; (“Quarto,” n.d.).\nSuccessor to RStudio’s R Markdown"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#quarto-project",
     "href": "notes/wk04-2024-09-20-work-session-R.html#quarto-project",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Quarto project",
     "text": "Quarto project\n\nSet of text files that combine\n\nNotes\nCode (in the R programming language)\nWeb links\nFigures"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#anatomy-of-a-quarto-document",
     "href": "notes/wk04-2024-09-20-work-session-R.html#anatomy-of-a-quarto-document",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Anatomy of a Quarto document",
     "text": "Anatomy of a Quarto document\n---\ntitle: \"Survey 01\"\nsubtitle: \"Trust in science and scientists\"\nparams:\n  update_data: true\n  fn: \"survey-01-openness-trust-2024-fall.csv\"\n  make_plots: true\n---\n\n\nDocument title & subtitle\nA parameter that determines whether the document should update the data or not.\nA parameter for the file name\nA parameter to control whether or not to make the plots."
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#enough-anatomy",
     "href": "notes/wk04-2024-09-20-work-session-R.html#enough-anatomy",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Enough anatomy",
     "text": "Enough anatomy\n\nGathering (downloading data from Google)\nCleaning\nVisualizing\nMaking a data dictionary"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#comparing-this-to-other-approaches",
     "href": "notes/wk04-2024-09-20-work-session-R.html#comparing-this-to-other-approaches",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Comparing this to other approaches…",
     "text": "Comparing this to other approaches…"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#lets-look-at-survey-02",
     "href": "notes/wk04-2024-09-20-work-session-R.html#lets-look-at-survey-02",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Let’s look at Survey-02",
     "text": "Let’s look at Survey-02\n\nSummary figure from Survey-02"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#what-other-data-pictures-would-you-like-to-make",
     "href": "notes/wk04-2024-09-20-work-session-R.html#what-other-data-pictures-would-you-like-to-make",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "What other data picture(s) would you like to make?",
     "text": "What other data picture(s) would you like to make?"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#what-analyses-would-you-like-to-try",
     "href": "notes/wk04-2024-09-20-work-session-R.html#what-analyses-would-you-like-to-try",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "What analyses would you like to try?",
     "text": "What analyses would you like to try?"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#evaluate-predictions-about-mean-levels-across-participants-and-items",
     "href": "notes/wk04-2024-09-20-work-session-R.html#evaluate-predictions-about-mean-levels-across-participants-and-items",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Evaluate predictions about mean levels across participants and items?",
     "text": "Evaluate predictions about mean levels across participants and items?\n\nNorms &gt; Counternorms\nNorms: Should do &gt; Actually do\nCounternorms: Should do &lt; Actually do"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#prediction-table",
     "href": "notes/wk04-2024-09-20-work-session-R.html#prediction-table",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Prediction (table)",
     "text": "Prediction (table)\n\n\n\nTable 1: Predictions made in-class on 2024-09-11\n\n\n\n\n\n\nShould do\nActually do\n\n\n\n\nNorms\n4\n3.5\n\n\nCounternorms\n3\n3.75"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#prediction-data-picture-setup",
     "href": "notes/wk04-2024-09-20-work-session-R.html#prediction-data-picture-setup",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Prediction data picture (setup)",
     "text": "Prediction data picture (setup)\nFirst, we need to make a data file with the right variable names and data values.\n\n\nCode\nlibrary(tidyverse) # loads `tibble` and `ggplot2` packages\nnorm_df &lt;- tibble(rating = c(4, 3.5, 3, 3.75), \n                          type = rep(c(\"norm\", \"counter\"), each = 2),\n                          resp_frame = rep(c(\"should\", \"actually\"), times = 2))\nnorm_df\n\n\n# A tibble: 4 × 3\n  rating type    resp_frame\n   &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;     \n1   4    norm    should    \n2   3.5  norm    actually  \n3   3    counter should    \n4   3.75 counter actually"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#prediction-data-picture-plot",
     "href": "notes/wk04-2024-09-20-work-session-R.html#prediction-data-picture-plot",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Prediction data picture (plot)",
     "text": "Prediction data picture (plot)\n\n\nCode\nnorm_df |&gt;\n  ggplot() +\n  aes(x = type, y = rating, fill = resp_frame) +\n  geom_col() +\n  facet_grid(cols = vars(resp_frame)) +\n  xlab(\"\") +\n  ylim(NA, 5) +\n  theme(legend.title = element_blank(), legend.position = \"none\")\n\n\n\n\nFigure 1: Data picture of Survey 02 predictions in PSYCH 490.012 partial replication of (Kardash & Edwards, 2012)"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#vs.-observed-table",
     "href": "notes/wk04-2024-09-20-work-session-R.html#vs.-observed-table",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "vs. Observed (table)",
     "text": "vs. Observed (table)\n\nSurvey-02 observations as of 2024-09-16.\n\n\n\nShould do\nActually do\n\n\n\n\nNorms\n3.71\n3.46\n\n\nCounternorms\n3.73\n3.8"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#vs.-observed-data-picture-plot",
     "href": "notes/wk04-2024-09-20-work-session-R.html#vs.-observed-data-picture-plot",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "vs. Observed data picture (plot)",
     "text": "vs. Observed data picture (plot)\n\nObserved responses to PSYCH 490.012 partial replication of (Kardash & Edwards, 2012)"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#did-predictions-observations",
     "href": "notes/wk04-2024-09-20-work-session-R.html#did-predictions-observations",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Did predictions == observations?",
     "text": "Did predictions == observations?\n\nNorms &gt; Counternorms:\nNorms: Should do &gt; Actually do:\nCounternorms: Should do &lt; Actually do:"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#did-predictions-observations-1",
     "href": "notes/wk04-2024-09-20-work-session-R.html#did-predictions-observations-1",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Did predictions == observations?",
     "text": "Did predictions == observations?\n\nNorms &gt; Counternorms: NO\nNorms: Should do &gt; Actually do: YES\nCounternorms: Should do &lt; Actually do: NO"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#is-this-a-better-picture",
     "href": "notes/wk04-2024-09-20-work-session-R.html#is-this-a-better-picture",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Is this a better picture?",
     "text": "Is this a better picture?\n\n\nCode\nnorm_df |&gt;\n  ggplot() +\n  aes(x = resp_frame, y = rating, fill = type) +\n  geom_col() +\n  facet_grid(cols = vars(type)) +\n  xlab(\"\") +\n  ylim(NA, 5) +\n  theme(legend.title = element_blank(), legend.position = \"none\")\n\n\n\n\nFigure 2: Data picture of Survey 02 predictions in PSYCH 490.012 partial replication of (Kardash & Edwards, 2012)"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#about-ggplot",
     "href": "notes/wk04-2024-09-20-work-session-R.html#about-ggplot",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "About ggplot()",
     "text": "About ggplot()\n\n\n\nR Package (collection of commands/functions) written by Wickham (2016) that implements the grammar of graphics (Wilkinson, Wills, Rope, Norton, & Dubbs, 2005).\nFigures contain multiple elements and layers\nMap data \\(\\rightarrow\\) figure elements (aesthetics)\n\n\nnorm_df |&gt;\n  ggplot() +\n  aes(x = type, \n      y = rating, \n      fill = resp_frame) +\n\nAdd layers to the figure\n\n  geom_col() +\n  facet_grid(cols = vars(resp_frame)) +\n  xlab(\"\") +"
   },
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#references",
     "href": "notes/wk04-2024-09-20-work-session-R.html#references",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "References",
     "text": "References\n\n\n\n\nPSYCH 490.012 • Fall 2024\n\n\n\n\nArtner, R., Verliefde, T., Steegen, S., Gomes, S., Traets, F., Tuerlinckx, F., & Vanpaemel, W. (2021). The reproducibility of statistical results in psychological research: An investigation using unpublished raw data. Psychological Methods, 26(5), 527–546. https://doi.org/10.1037/met0000365\n\n\nBargh, J. A., Chen, M., & Burrows, L. (1996). Automaticity of social behavior: Direct effects of trait construct and stereotype-activation on action. Journal of Personality and Social Psychology, 71(2), 230–244. https://doi.org/10.1037//0022-3514.71.2.230\n\n\nDoyen, S., Klein, O., Pichon, C.-L., & Cleeremans, A. (2012). Behavioral priming: It’s all in the mind, but whose mind? PloS One, 7(1), e29081. https://doi.org/10.1371/journal.pone.0029081\n\n\nEarp, B. D., Everett, J. A. C., Madva, E. N., & Hamlin, J. K. (2014). Out, damned spot: Can the “Macbeth effect” be replicated? Basic and Applied Social Psychology, 36(1), 91–98. https://doi.org/10.1080/01973533.2013.856792\n\n\nKardash, C. M., & Edwards, O. V. (2012). Thinking and behaving like scientists: Perceptions of undergraduate science interns and their faculty mentors. Instructional Science, 40(6), 875–899. https://doi.org/10.1007/s11251-011-9195-0\n\n\nKrumrei-Mancuso, E. J., & Rouse, S. V. (2016). The development and validation of the comprehensive intellectual humility scale. Journal of Personality Assessment, 98(2), 209–221. https://doi.org/10.1080/00223891.2015.1068174\n\n\nNadelson, L., Jorcyk, C., Yang, D., Jarratt Smith, M., Matson, S., Cornell, K., & Husting, V. (2014). I just don’t trust them: The development and validation of an assessment instrument to measure trust in science and scientists. School Science and Mathematics, 114(2), 76–86. https://doi.org/10.1111/ssm.12051\n\n\nPlohl, N., & Musil, B. (2023). Assessing the incremental value of intellectual humility and cognitive reflection in predicting trust in science. Personality and Individual Differences, 214, 112340. https://doi.org/10.1016/j.paid.2023.112340\n\n\nQuarto. (n.d.). https://quarto.org/. Retrieved from https://quarto.org/\n\n\nWickham, H. (2016). ggplot2: Elegant graphics for data analysis. Springer-Verlag New York. Retrieved from https://ggplot2.tidyverse.org\n\n\nWilkinson, L., Wills, D., Rope, D., Norton, A., & Dubbs, R. (2005). The grammar of graphics (statistics and computing) (2nd edition). Springer. Retrieved from https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448\n\n\nZhong, C.-B., & Liljenquist, K. (2006). Washing away your sins: Threatened morality and physical cleansing. Science, 313(5792), 1451–1452. https://doi.org/10.1126/science.1130726"
   },
@@ -2363,7 +2363,7 @@
     "href": "notes/wk04-2024-09-18-replication-lady-macbeth.html#study-3-results-earp2014-ek",
     "title": "Replication failure: The ‘Lady Macbeth Effect’",
     "section": "Study 3 results (Earp et al., 2014)",
-    "text": "Study 3 results (Earp et al., 2014)\n\nIndependent samples t tests revealed no significant difference of condition on either desirability, t(260) = − 1.83, p = .07, 95% CI [–0.42, 0.02] or how much participants were willing to pay, t(260) = − .29, p = .78, 95% CI [–1.37, 1.02]."
+    "text": "Study 3 results (Earp et al., 2014)\n\nIndependent samples t tests revealed no significant difference of condition on either desirability, t(260) = − 1.83, p=.07, 95% CI [–0.42, 0.02] or how much participants were willing to pay, t(260) = − .29, p = .78, 95% CI [–1.37, 1.02]."
   },
   {
     "objectID": "notes/wk04-2024-09-18-replication-lady-macbeth.html#side-by-side-comparisons",
@@ -2376,15 +2376,15 @@
     "objectID": "notes/wk04-2024-09-18-replication-lady-macbeth.html#open-science-thoughts",
     "href": "notes/wk04-2024-09-18-replication-lady-macbeth.html#open-science-thoughts",
     "title": "Replication failure: The ‘Lady Macbeth Effect’",
-    "section": "Open Science Thoughts",
-    "text": "Open Science Thoughts\n\nNeither study shared the data.\nThe study with a figure (Zhong & Liljenquist, 2006) did not show individual participant values, just a mean value.\n(Earp et al., 2014) did not report standard errors of the mean (SEM) or standard deviations.\n(Zhong & Liljenquist, 2006) sample sizes in Experiment 2 were very small."
+    "section": "Open science thoughts",
+    "text": "Open science thoughts\n\nNeither study shared the raw data\nThe study with a figure (Zhong & Liljenquist, 2006) did not show individual participant values, just a mean value.\nEarp et al. (2014) did not report standard errors of the mean (SEM) or standard deviations\nZhong & Liljenquist (2006) sample sizes in Experiment 2 were very small."
   },
   {
     "objectID": "notes/wk04-2024-09-18-replication-lady-macbeth.html#references",
     "href": "notes/wk04-2024-09-18-replication-lady-macbeth.html#references",
     "title": "Replication failure: The ‘Lady Macbeth Effect’",
     "section": "References",
-    "text": "References\n\n\n\n\nPSYCH 490.012 • Fall 2024\n\n\n\n\nBaker, M. (2016). 1,500 scientists lift the lid on reproducibility. Nature News, 533(7604), 452. https://doi.org/10.1038/533452a\n\n\nBritish Medical Journal. (n.d.). 4. Statements of probability and confidence intervals. https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/4-statements-probability-and-confiden. Retrieved from https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/4-statements-probability-and-confiden\n\n\nCarter, N. (2022, March). By the pricking of my thumbs. Youtube. Retrieved from https://www.youtube.com/watch?v=RgDeGlr_pj0\n\n\nEarp, B. D., Everett, J. A. C., Madva, E. N., & Hamlin, J. K. (2014). Out, damned spot: Can the “Macbeth effect” be replicated? Basic and Applied Social Psychology, 36(1), 91–98. https://doi.org/10.1080/01973533.2013.856792\n\n\nFidler, F., & Wilcox, J. (2021). Reproducibility of scientific results. In E. N. Zalta (Ed.), The Stanford Encyclopedia of Philosophy (Summer 2021). Metaphysics Research Lab, Stanford University. Retrieved from https://plato.stanford.edu/archives/sum2021/entries/scientific-reproducibility/\n\n\nGoodman, S. N., Fanelli, D., & Ioannidis, J. P. A. (2016). What does research reproducibility mean? Science Translational Medicine, 8(341), 341ps12–341ps12. https://doi.org/10.1126/scitranslmed.aaf5027\n\n\nLee, S. M. (2024). This device is “proven” to protect athletes’ brains. The science is under fire. The Chronicle of Higher Education. Retrieved from https://www.chronicle.com/article/this-device-is-proven-to-protect-athletes-brains-the-science-is-under-fire\n\n\nNosek, B. A., Hardwicke, T. E., Moshontz, H., Allard, A., Corker, K. S., Dreber, A., … Vazire, S. (2022). Replicability, robustness, and reproducibility in psychological science. Annual Review of Psychology, 73(2022), 719–748. https://doi.org/10.1146/annurev-psych-020821-114157\n\n\nZhong, C.-B., & Liljenquist, K. (2006). Washing away your sins: Threatened morality and physical cleansing. Science, 313(5792), 1451–1452. https://doi.org/10.1126/science.1130726"
+    "text": "References\n\n\n\n\nPSYCH 490.012 • Fall 2024\n\n\n\n\nBaker, M. (2016). 1,500 scientists lift the lid on reproducibility. Nature News, 533(7604), 452. https://doi.org/10.1038/533452a\n\n\nBargh, J. A., Chen, M., & Burrows, L. (1996). Automaticity of social behavior: Direct effects of trait construct and stereotype-activation on action. Journal of Personality and Social Psychology, 71(2), 230–244. https://doi.org/10.1037//0022-3514.71.2.230\n\n\nBritish Medical Journal. (n.d.). 4. Statements of probability and confidence intervals. https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/4-statements-probability-and-confiden. Retrieved from https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/4-statements-probability-and-confiden\n\n\nCarter, N. (2022, March). By the pricking of my thumbs. Youtube. Retrieved from https://www.youtube.com/watch?v=RgDeGlr_pj0\n\n\nDoyen, S., Klein, O., Pichon, C.-L., & Cleeremans, A. (2012). Behavioral priming: It’s all in the mind, but whose mind? PloS One, 7(1), e29081. https://doi.org/10.1371/journal.pone.0029081\n\n\nEarp, B. D., Everett, J. A. C., Madva, E. N., & Hamlin, J. K. (2014). Out, damned spot: Can the “Macbeth effect” be replicated? Basic and Applied Social Psychology, 36(1), 91–98. https://doi.org/10.1080/01973533.2013.856792\n\n\nLee, S. M. (2024). This device is “proven” to protect athletes’ brains. The science is under fire. The Chronicle of Higher Education. Retrieved from https://www.chronicle.com/article/this-device-is-proven-to-protect-athletes-brains-the-science-is-under-fire\n\n\nNosek, B. A., Hardwicke, T. E., Moshontz, H., Allard, A., Corker, K. S., Dreber, A., … Vazire, S. (2022). Replicability, robustness, and reproducibility in psychological science. Annual Review of Psychology, 73(2022), 719–748. https://doi.org/10.1146/annurev-psych-020821-114157\n\n\nZhong, C.-B., & Liljenquist, K. (2006). Washing away your sins: Threatened morality and physical cleansing. Science, 313(5792), 1451–1452. https://doi.org/10.1126/science.1130726"
   },
   {
     "objectID": "surveys/survey-02.html",
@@ -2438,7 +2438,7 @@
   {
     "objectID": "notes/wk04-2024-09-20-work-session-R.html#announcements",
     "href": "notes/wk04-2024-09-20-work-session-R.html#announcements",
-    "title": "Work session: Replication with R, R Markdown, & Quarto",
+    "title": "Wrap up on ‘Macbeth effect’ replication",
     "section": "Announcements",
     "text": "Announcements\n\nPlease complete Student Educational Experience Questionnaire"
   }

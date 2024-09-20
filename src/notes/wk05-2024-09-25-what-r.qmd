@@ -7,17 +7,11 @@ title: "What R we talking about?"
 
 ## Announcements
 
-## Last time...
-
-- Did Errington et al. [-@Errington2021-sy] succeed in their replication attempt?
-- What barriers did Errington et al. [-@Errington2021-dp] encounter?
-- What do you suppose Begley and Ellis [-@Begley2012-cr] would say?
-
 ## Today
 
 *What R we talking about?*
 
-- Read & Discuss
+- Discuss
     - [@Fidler2021-xn]
     - (Skim) [@Nosek2022-hv] and [@goodman_what_2016]
 - Small group discussion and reports
@@ -26,7 +20,7 @@ title: "What R we talking about?"
     
 ---
 
-Fidler, F. & Wilcox, J. (2021). Reproducibility of Scientific Results. In E. N. Zalta (Ed.), The Stanford Encyclopedia of Philosophy (Summer 2021). Metaphysics Research Lab, Stanford University. <https://plato.stanford.edu/archives/sum2021/entries/scientific-reproducibility/>
+Fidler, F. & Wilcox, J. (2021). Reproducibility of scientific results. In E. N. Zalta (Ed.), *The Stanford Encyclopedia of Philosophy (Summer 2021)*. Metaphysics Research Lab, Stanford University. <https://plato.stanford.edu/archives/sum2021/entries/scientific-reproducibility/>
 
 ---
 
@@ -65,8 +59,8 @@ Goodman, S. N., Fanelli, D. & Ioannidis, J. P. A. (2016). What does research rep
 ---
 
 - Function 2. Controlling for artifacts (internal validity)—that is, ensuring that experimental results are a proper test of the hypothesis (i.e., have internal validity) and do not reflect unintended flaws in the study design (such as when a measurement result is, say, an artifact of a faulty thermometer rather than an actual change in a substance’s temperature)
-- Function 3. Controlling for fraud,
-- Function 4. Enabling generalizability,
+- Function 3. Controlling for fraud
+- Function 4. Enabling generalizability
 - Function 5. Enabling verification of the underlying hypothesis.
 
 ## What to manipulate to achieve these...
@@ -232,7 +226,11 @@ Is exact replication even *possible*?
 *Work session: Scientific integrity*
 
 - [Assignment]{.green_assigned}
-    - [Exercise 03: Violations of scientific integrity](../exercises/ex04-scientific-integrity.qmd)
+    - [Exercise 04: Violations of scientific integrity](exercises/ex04-scientific-integrity.qmd), [due Friday, October 4]{.orange_due}
+    - [Final project proposals](exercises/final-project.qmd), [due Friday, October 18]{.orange_due}.
+- [Due]{.orange_due}
+    - [Exercise 03: Norms and counter-norms write-up](exercises/ex03-norms-counternorms.qmd)
+- [Class notes](notes/wk05-2024-09-27-work-integrity.qmd)
 
 # Resources
 

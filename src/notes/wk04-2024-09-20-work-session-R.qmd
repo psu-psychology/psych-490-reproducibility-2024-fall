@@ -1,6 +1,6 @@
 ---
 subtitle: "2024-09-20 Fri"
-title: "Work session: Replication with R, R Markdown, & Quarto"
+title: "Wrap up on 'Macbeth effect' replication"
 ---
 
 # Overview
@@ -11,13 +11,12 @@ title: "Work session: Replication with R, R Markdown, & Quarto"
 
 ![](img/seeq-screenshot-2024-09-19.png)
 
-
 ## Last time...
 
 - Discuss [@Zhong2006-nf]
-  - What did @Zhong2006-nf manipulate?
-  - What did @Zhong2006-nf measure?
-  - What did @Zhong2006-nf infer from their manipulations and measurements?   
+  - What did @Zhong2006-nf *manipulate*?
+  - What did @Zhong2006-nf *measure*?
+  - What did @Zhong2006-nf *infer* from their manipulations and measurements?   
 
 ## Today
 
