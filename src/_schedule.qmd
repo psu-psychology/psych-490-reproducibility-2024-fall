@@ -128,6 +128,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 #### Friday, September 20 {-}
 
 ~~*Work session: Replication with R, R Markdown, & Quarto*~~
+
 *Wrap-up on 'Macbeth effect' replication*
 
 - ~~Review~~
