@@ -61,7 +61,7 @@ Bargh, J. A., Chen, M. & Burrows, L. (1996). Automaticity of social behavior: Di
 
 >Implications of this automatic behavior priming effect for self-fulfilling prophecies are discussed, as is whether social behavior is necessarily mediated by conscious choice processes.
 
-## Unpacking [@Bargh1996-yv]
+## Unpacking @Bargh1996-yv
 
 - Experiment 1
   - Participants: Who were they, how many, what characteristics?
