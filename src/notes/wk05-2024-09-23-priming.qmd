@@ -7,8 +7,8 @@ title: "Priming effect: Original study"
 
 ## Announcements
 
-- [due Friday, September 27]{.orange_due}
-    - [Exercise 03: Norms and counter-norms](../exercises/ex03-norms-counternorms.qmd), 
+- [Due Friday, September 27]{.orange_due}
+    - [Exercise 03: Norms and counter-norms](../exercises/ex03-norms-counternorms.qmd) 
 
 ## Last time...
 
