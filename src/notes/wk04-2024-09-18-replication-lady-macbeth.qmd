@@ -528,7 +528,7 @@ See <https://forrt.org/reversals/>
 - Read
     - [@Bargh1996-yv]; [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170715)
     - [@Doyen2012-ib]
-- [Class notes](notes/wk05-2024-09-23-priming.qmd)
+- [Class notes](wk05-2024-09-23-priming.qmd)
 
 # Resources
 

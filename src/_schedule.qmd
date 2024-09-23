@@ -127,13 +127,10 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 #### Friday, September 20 {-}
 
-~~*Work session: Replication with R, R Markdown, & Quarto*~~
-
 *Wrap-up on 'Macbeth effect' replication*
 
-- ~~Review~~
-  - ~~[Survey 01 report](surveys/survey-01.qmd)~~
-  - ~~[Survey 02 report](surveys/survey-02.qmd)~~
+- Read
+  - [@Earp2014-ek]
 - [Due]{.orange_due}
     - [Exercise 02: Textbook Findings](exercises/ex02-textbook-findings.qmd)
 - [Class notes](notes/wk04-2024-09-20-work-session-R.qmd)

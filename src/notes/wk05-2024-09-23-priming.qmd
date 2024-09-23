@@ -63,46 +63,28 @@ Bargh, J. A., Chen, M. & Burrows, L. (1996). Automaticity of social behavior: Di
 
 ## Unpacking [@Bargh1996-yv]
 
-::: {.incremental}
-- Empirical article
-- Key ideas
-    - Trait concepts and stereotypes
-    - Priming, automatic activation, automatic behavior effect
+- Experiment 1
+  - Participants: Who were they, how many, what characteristics?
+  - Materials & Procedure: What did participants do?
+  - Measure(s): What did researcher(s) measure?
+  - Prediction(s): What did researchers predict? What sort of data picture would that yield?
+  
+---
+
+- Experiment 2
+  - Participants: Who were they, how many, what characteristics?
+  - Materials & Procedure: What did participants do?
+  - Measure(s): What did researcher(s) measure?
+  - Prediction(s): What did researchers predict? What sort of data picture would that yield?
+  
+---
+
+::: {.callout-important}
+Work with students in your row to answer the questions.
+
+You have 15 mins.
 :::
-
----
-
-- Three studies
-    - Experiment 1: Prime rudeness/politeness, measure interruptions
-    - Experiment 2: Prime "elderly" stereotype, measure speed of walking
-    - Experiment 3: Prime stereotype of African Americans, measure "hostility"
-- Participants or characteristics?
-
-## Experiment 1 [@Bargh1996-yv]
-
-> A total of 34 students at New York University who were enrolled in the Introductory Psychology course participated in the experiment in partial fulfillment of a course research requirement. On their arrival at the laboratory waiting room they were randomly assigned to one of the three priming conditions.
-
----
-
-- ~ 11 students/priming group
-- Task: "Scrambled Sentence Test” (Srull & Wyer, 1979), presented to participants as a test of language ability.
-- 30 five-word sentences
-
->For each of 30 items, participants are to use the five words listed to construct a grammatically correct four-word sentence as quickly as possible. The five words presented in a given test item are in scrambled order, such as “he it hides finds instantly.”
-
----
-
-- 30 words, 15 were "critical priming stimuli":
-    - "Rude": aggressively, bold, rude, bother, disturb, intrude, annoyingly, interrupt, audaciously, brazen, impolitely, infringe, obnoxious, aggravating, and bluntly
-    - "Polite": respect, honor, considerate, appreciate, patiently, cordially, yield, polite, cautiously, courteous, graciously, sensitively, discreetly, behaved, and unobtrusively
-    - "Neutral": exercising, flawlessly, occasionally, rapidly, gleefully, practiced, optimistically, successfully, normally, send, watches, encourages, gives, clears, and prepares
-    
-## "Logic" of the manipulation and measures
-
-- Constructing sentences $\rightarrow$ primes polite/rude/neutral behavioral stereotypes
-- Stereotypes $\rightarrow$ influence time to interrupt/likelihood of interrupting
-- Influences on behavior are unconscious
-
+  
 ## [@Bargh1996-yv Experiment 1] results
 
 >A one-way analysis of variance (ANOVA) of these data, with priming condition as the single factor, revealed a significant main effect, *F*(2, 33) = 5.76, *p*=.008. Participants in the rude priming condition interrupted significantly faster (M = 326 s) than did participants in the neutral (M = 519 s) or polite (M = 558 s) priming conditions.
@@ -111,11 +93,12 @@ Bargh, J. A., Chen, M. & Burrows, L. (1996). Automaticity of social behavior: Di
 
 ```{r echo=FALSE}
 #| label: fig-bargh-ex1-rt
-#| fig-cap: "Visualization of Bargh @Bargh1996-yv Experiment 1 RT results; data from 13/34 participants who interrupted in 10 mins."
+#| fig-cap: "Visualization of @Bargh1996-yv Experiment 1 RT results. **Note**: This figure was not in the original paper."
 library(tidyverse) # load tidyverse packages, e.g., ggplot
 bargh_ex1_rt <- tibble::tibble(priming = c("polite", "neutral", "rude"), rt_mean = c(558, 519, 326))
 
 bargh_ex1_rt |>
+  dplyr::mutate(rt_min = rt_mean/60) |>
   ggplot() +
   aes(x = priming, y = rt_mean) +
   geom_col() +
@@ -138,7 +121,23 @@ The *F* test here evaluates whether all of the mean RTs are equal.
 
 ---
 
+::: {.callout-important}
+What do @Bargh1996-yv mean by 'severe ceiling effect'?
+
+What does that mean for how we interpret @fig-bargh-ex1-rt?
+:::
+
+---
+
 ![Figure 1 from [@Bargh1996-yv]](../include/img/bargh-etal-2006-fig-01.png){fig-align="center"}
+
+---
+
+::: {.callout-important}
+How long did the participants take to complete the scrambled-sentence task?
+
+Could there be any relationship between how long they took on the scrambled-sentence task and their subsequent behavior?
+:::
 
 ## Experiments 2a and 2b
 
@@ -165,7 +164,13 @@ The *F* test here evaluates whether all of the mean RTs are equal.
 
 ---
 
-![Figure 2 from [@Bargh1996-yv]](../include/img/bargh-2006-fig-02.png){fig-align="center" width=75%}
+![Figure 2 from @Bargh1996-yv.](../include/img/bargh-2006-fig-02.png){#fig-bargh-2006-fig-2 fig-align="center" width=75%}
+
+---
+
+::: {.div-warning}
+What do you notice about @fig-bargh-2006-fig-2?
+:::
 
 ## Awareness check study
 
