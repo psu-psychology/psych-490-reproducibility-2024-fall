@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.56">
 
   <meta name="author" content="Rick Gilmore">
-  <title>PSYCH 490 • Fall 2024 – Priming effect: Original study</title>
+  <title>PSYCH 490 • Fall 2024 – How science works (or should)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -352,14 +352,17 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Priming effect: Original study</h1>
-  <p class="subtitle">2024-09-23 Mon</p>
+  <h1 class="title">How science works (or should)</h1>
+  <p class="subtitle">2024-09-04 Wed</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -370,325 +373,402 @@ Rick Gilmore
 </div>
 
 </section>
+<section id="prelude" class="slide level2">
+<h2>Prelude</h2>
+<p style="text-align:center;">
+<!-- Thomas Dolby, She Blinded Me With Science 3:47 -->
+<iframe width="800" height="600" src="https://www.youtube.com/embed/V83JR2IoI8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</p>
+</section>
 <section>
 <section id="overview" class="title-slide slide level1 center">
 <h1>Overview</h1>
 
 </section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
-<ul>
-<li><span class="orange_due">due Friday, September 27</span>
-<ul>
-<li><a href="../exercises/ex03-norms-counternorms.html">Exercise 03: Norms and counter-norms</a>,</li>
-</ul></li>
-</ul>
-</section>
 <section id="last-time" class="slide level2">
 <h2>Last time…</h2>
 <ul>
-<li><span class="citation" data-cites="Earp2014-ek">Earp, Everett, Madva, &amp; Hamlin (<a href="#/references" role="doc-biblioref" onclick="">2014</a>)</span> replication attempt of Study 2 from <span class="citation" data-cites="Zhong2006-nf">Zhong &amp; Liljenquist (<a href="#/references" role="doc-biblioref" onclick="">2006</a>)</span></li>
+<li>Are the <a href="../notes/wk01-2024-08-30-how-to-read.html">tips</a> for reading a scientific paper helpful?</li>
+<li>What about acronyms and jargon?</li>
+<li>What to do if you’re really stuck?
+<ul>
+<li>Try making a diagram</li>
+</ul></li>
 </ul>
 </section>
-<section id="earp2014-ek" class="slide level2">
-<h2><span class="citation" data-cites="Earp2014-ek">Earp et al. (<a href="#/references" role="doc-biblioref" onclick="">2014</a>)</span></h2>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<blockquote>
+<p>The effect of television violence on boys’ aggression was investigated with consideration of teacher-rated characteristic aggressiveness, timing of frustration, and violence-related cues as moderators. Boys in Grades 2 and 3 (N=396) watched violent or nonviolent TV in groups of 6, and half the groups were later exposed to a cue associated with the violent TV program…</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>…They were frustrated either before or after TV viewing. Aggression was measured by naturalistic observation during a game of floor hockey. Groups containing more characteristically high-aggressive boys showed higher aggression following violent TV plus the cue than following violent TV alone, which in turn produced more aggression than did the nonviolent TV condition…</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>…There was evidence that both the violent content and the cue may have suppressed aggression among groups composed primarily of boys low in characteristic aggressiveness. Results were interpreted in terms of current information-processing theories of media effects on aggression.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Josephson1987-fr">(<a href="#/references" role="doc-biblioref" onclick="">Josephson, 1987</a>)</span>
+</p>
+</section>
+<section id="what-participants-did" class="slide level2">
+<h2>What participants did</h2>
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Watch TV segments] --&gt; C[Exposed to cue] --&gt; B[Play Hockey]
+  D[Watch TV segments] --&gt; B
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="what-experimenters-manipulated" class="slide level2">
+<h2>What experimenters manipulated</h2>
 <ul>
-<li>How did the authors <em>manipulate</em> participants’ “need to cleanse”?</li>
-<li>How did they <em>measure</em> participants’ “need to cleanse”?</li>
-<li>Which groups of participants showed behavioral differences between the ‘ethical’ and ‘unethical’ manipulation?</li>
-<li>What do the results mean about the claims made by <span class="citation" data-cites="Zhong2006-nf">Zhong &amp; Liljenquist (<a href="#/references" role="doc-biblioref" onclick="">2006</a>)</span>?</li>
+<li><strong>I</strong> control the <em>independent</em> variables
+<ul>
+<li>Boys (whose parents consented)</li>
+<li>Groups of boys</li>
+<li>Order of TV segments: violent_first/last</li>
+<li>Timing of “frustration”–cartoons with tech problems: before/after violent segment</li>
+<li>Pre-game presentation of violence “cue”: present/absent</li>
+</ul></li>
 </ul>
+</section>
+<section id="what-experimenters-measured" class="slide level2">
+<h2>What experimenters measured</h2>
+<ul>
+<li>The <em>dependent</em> (outcome) variables
+<ul>
+<li>Boys’ “characteristic aggressiveness” via teacher ratings</li>
+<li>Boys’ “observed aggression” (in hockey game)</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-would-you-predict" class="slide level2">
+<h2>What would <em>you</em> predict?</h2>
+</section>
+<section id="what-would-you-predict-1" class="slide level2">
+<h2>What would <em>you</em> predict?</h2>
+<ul>
+<li>“characteristic aggressiveness” <span class="math inline">\(\rightarrow\)</span> “observed aggression”</li>
+<li>Turning predictions into statistical/quantitative tests</li>
+<li><span class="math inline">\(aggrChar + vioTV + frustr + cue \rightarrow aggrObs\)</span>.</li>
+</ul>
+<p><span class="math inline">\(b_1*charAggr + b_2*vioTV +...  = aggrObs + err\)</span></p>
+<ul>
+<li>where the <span class="math inline">\(b_i\)</span> “weight” the predictors based on how well they predict <span class="math inline">\(aggrObs\)</span></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>…Groups containing more characteristically high-aggressive boys showed higher aggression following violent TV plus the cue than following violent TV alone…</p>
+</blockquote>
+<p><span class="math display">\[aggrChar + vioTV + cue &gt;\]</span></p>
+<p><span class="math display">\[aggrChar + vioTV + noCue\]</span></p>
 </section>
 <section id="today" class="slide level2">
 <h2>Today</h2>
-<p><em>Priming effect: Original study</em></p>
+<p><em>How science works (or should)</em></p>
 <ul>
 <li>Read
 <ul>
-<li><span class="citation" data-cites="Bargh1996-yv">(<a href="#/references" role="doc-biblioref" onclick="">Bargh, Chen, &amp; Burrows, 1996</a>)</span>; <a href="https://psu.instructure.com/courses/2280122/files/folder/readings?preview=151876806">PDF on Canvas</a></li>
+<li><span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020</a>)</span>, Chapter 1. <a href="https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170709">Alternate link to PDF on Canvas</a>.</li>
+<li><span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span>. <a href="https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170711">Alternate link to PDF on Canvas</a></li>
 </ul></li>
 </ul>
 </section></section>
 <section>
-<section id="bargh1996-yv" class="title-slide slide level1 center">
-<h1><span class="citation" data-cites="Bargh1996-yv">Bargh et al. (<a href="#/references" role="doc-biblioref" onclick="">1996</a>)</span></h1>
+<section id="how-science-works-or-should" class="title-slide slide level1 center">
+<h1>How science works (or should)</h1>
 
 </section>
-<section class="slide level2">
-
-<p>Bargh, J. A., Chen, M. &amp; Burrows, L. (1996). Automaticity of social behavior: Direct effects of trait construct and stereotype-activation on action. <em>Journal of Personality and Social Psychology</em>, <em>71</em>(2), 230–244. <a href="https://doi.org/10.1037//0022-3514.71.2.230" class="uri">https://doi.org/10.1037//0022-3514.71.2.230</a>.</p>
-</section>
-<section class="slide level2">
-
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
+<section id="discuss-ritchie2020-fm-chapter-1" class="slide level2">
+<h2>Discuss <span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020, Chapter 1</a>)</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li>Abstract-only publicly available, PDF $14.95.</li>
-<li>Web (HTML) and PDF versions available via PSU Libraries.</li>
+<li><a href="https://en.wikipedia.org/wiki/Stuart_J._Ritchie">Stuart J. Ritchie</a>
+<ul>
+<li>Scottish psychologist, Lecturer at King’s College London</li>
+<li>Works at <a href="https://en.wikipedia.org/wiki/Anthropic">Anthropic</a>, an A.I. company</li>
+</ul></li>
 </ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://jacobsfoundation.org/wp-content/uploads/2020/01/Ritchie_Stuart_300x300px.jpg%22" class="quarto-figure quarto-figure-center"></p>
+</figure>
 </div>
+</div></div>
+</section>
+<section id="chapter-1-how-science-works" class="slide level2">
+<h2>Chapter 1: How Science Works</h2>
+<ul>
+<li>“Science is a social construct.” <span class="citation" data-cites="Oreskes2017">(<a href="#/references" role="doc-biblioref" onclick="">Oreskes, 2019</a>)</span>
+<ul>
+<li>How so?</li>
+<li>What are the consequences?</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-is-the-process-of-science" class="slide level2">
+<h2>What is the “process” of science?</h2>
+
+<img data-src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-016-0021/MediaObjects/41562_2016_Article_BFs415620160021_Fig1_HTML.jpg?as=webp" class="r-stretch quarto-figure-center"><p class="caption">Figure 1 from <span class="citation" data-cites="munafo_manifesto_2017">(<a href="#/references" role="doc-biblioref" onclick="">Munafò et al., 2017</a>)</span></p></section>
+<section id="telling-factsfindings-and-showing" class="slide level2">
+<h2>Telling (facts/findings) AND <em>showing</em></h2>
+<blockquote>
+<p>…and it has to be shown why that other theory can or cannot be the true one: And until this is shown, and until we know how it is shown, we do not understand the grounds of our opinion.</p>
+</blockquote>
+<p style="text-align:center;">
+John Stuart Mill quoted in <span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020, p. 14</a>)</span>
+</p>
+</section>
+<section id="from-replication-to-trust" class="slide level2">
+<h2>From replication to trust</h2>
+<blockquote>
+<p>…Only when certain events recur in accordance with rules or regularities, as is the case with repeatable experiments, can our observations be tested–in principle–by anyone. We do not take even our own observations quite seriously, or accept them as scientific observations, until we have repeated and test them…</p>
+</blockquote>
+<p style="text-align:center;">
+Karl Popper quoted in <span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020, p. 23</a>)</span>
+</p>
+</section>
+<section id="from-replication-to-trust-1" class="slide level2">
+<h2>From replication to trust</h2>
+<blockquote>
+<p>…Only by such repetitions can we convince ourselves that we are not dealing with a mere isolated ‘coincidence’…</p>
+</blockquote>
+<p style="text-align:center;">
+Karl Popper quoted in <span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020, p. 23</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>In what <em>other</em> realm(s) do we <em>not</em> require someone stating an idea or finding to show us <em>how</em> they came to that idea or finding?</li>
+<li>Are scientific experiments <em>really</em> repeatable by anyone?</li>
+<li>In what <em>other</em> realm(s) do we not expect repetition or replication before trusting an idea?</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>Science’s social nature does come with weaknesses, however. Because scientists focus so much on trying to persuade their peers, which is the way they get those studies through peer review and oward to publication, it’s all too easy for them to disregard the real object of science: getting us closer to the truth.</p>
+</blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020, Chapter 1</a>, pp.&nbsp;14-15)</span>
+</p>
+</section>
+<section id="questions-about-ritchie" class="slide level2">
+<h2>Questions about Ritchie</h2>
+<ul>
+<li>Do you agree that a focus on “persuading their peers” can lead researchers to lose sight of the “real object of science”?
+<ul>
+<li>Are there other examples (outside of science), where a focus on persuading others can change a person’s focus from more important goals?</li>
+</ul></li>
+<li>What’s the alternative for scientists to trying to persuade their peers?</li>
+<li>What if scientific research serves multiple goals?</li>
+</ul>
+</section>
+<section id="discuss-nosek2012-al" class="slide level2">
+<h2>Discuss <span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Brian Nosek
+<ul>
+<li>Social Psychologist, Professor at University of Virginia</li>
+<li>Co-Founder, <a href="https://cos.io">Center for Open Science (COS)</a></li>
+<li>Founder, <a href="https://implicit.harvard.edu/implicit/">Project Implicit</a></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://www.cos.io/hubfs/Staff/staff-nosek-brian.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
 </div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><a href="https://en-social-sciences.tau.ac.il/profile/baranan">Yoav Bar-Anon</a>
+<ul>
+<li>Social Psychologist</li>
+<li>Professor at Tel Aviv University</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://en-social-sciences.tau.ac.il/sites/socsci-english.tau.ac.il/files/styles/research_teaser_image_180_x_180/public/Yoav%20Bar-anan.webp" class="quarto-figure quarto-figure-center" style="width:30.0%"></p>
+</figure>
 </div>
+</div></div>
 </section>
-<section id="abstract" class="slide level2">
-<h2>Abstract</h2>
+<section id="scientific-utopia-i.-opening-scientific-communication" class="slide level2">
+<h2>Scientific Utopia: I. Opening Scientific Communication</h2>
+<ul>
+<li>What’s <a href="https://en.wikipedia.org/wiki/Utopia?">Utopia</a></li>
+<li>Where’s Part II?
+<ul>
+<li><span class="citation" data-cites="Nosek2012-fm">(<a href="#/references" role="doc-biblioref" onclick="">Nosek, Spies, &amp; Motyl, 2012</a>)</span>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="aims-claims" class="slide level2">
+<h2>Aims &amp; Claims</h2>
 <blockquote>
-<p>Previous research has shown that trait concepts and stereotypes become active automatically in the presence of relevant behavior or stereotyped-group features. Through the use of the same priming procedures as in previous impression formation research,…</p>
+<p>Existing norms for scientific communication are rooted in anachronistic practices of bygone eras making them needlessly inefficient. We outline a path that moves away from the existing model of scientific communication to improve the efficiency in meeting the purpose of public science—knowledge accumulation.</p>
 </blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span>
+</p>
 </section>
 <section class="slide level2">
 
 <blockquote>
-<p>…Experiment 1 showed that participants whose concept of rudeness was primed interrupted the experimenter more quickly and frequently than did participants primed with polite-related stimuli.</p>
+<p>We call for six changes: (a) full embrace of digital communication; (b) open access to all published research; (c) disentangling publication from evaluation; (d) breaking the “one article, one journal” model with a grading system for evaluation and diversified dissemination outlets; (e) publishing peer review; and (f) allowing open, continuous peer review.</p>
 </blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span>
+</p>
 </section>
 <section class="slide level2">
 
 <blockquote>
-<p>…In Experiment 2, participants for whom an elderly stereotype was primed walked more slowly down the hallway when leaving the experiment than did control participants, consistent with the content of that stereotype.</p>
+<p>We address conceptual and practical barriers to change and provide examples showing how the suggested practices are being used already. The critical barriers to change are not technical or financial; they are social. Although scientists guard the status quo, they also have the power to change it.</p>
 </blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span>
+</p>
 </section>
-<section class="slide level2">
-
-<blockquote>
-<p>…In Experiment 3, participants for whom the African American stereotype was primed subliminally reacted with more hostility to a vexatious request of the experimenter.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>Implications of this automatic behavior priming effect for self-fulfilling prophecies are discussed, as is whether social behavior is necessarily mediated by conscious choice processes.</p>
-</blockquote>
-</section>
-<section id="unpacking-bargh1996-yv" class="slide level2">
-<h2>Unpacking <span class="citation" data-cites="Bargh1996-yv">(<a href="#/references" role="doc-biblioref" onclick="">Bargh et al., 1996</a>)</span></h2>
+<section id="inefficiencies-in-scientific-communication" class="slide level2">
+<h2>Inefficiencies in scientific communication</h2>
 <div>
 <ul>
-<li class="fragment">Empirical article</li>
-<li class="fragment">Key ideas
+<li class="fragment">No communication</li>
+<li class="fragment">Slow communication</li>
+<li class="fragment">Incomplete communication</li>
+<li class="fragment">Inaccurate communication</li>
+<li class="fragment">Unmodifiable communication</li>
+</ul>
+</div>
+<p style="text-align:center;">
+<span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>, , pp.&nbsp;25-26)</span>
+</p>
+</section>
+<section id="questions-about-nosek2012-al" class="slide level2">
+<h2>Questions about <span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span></h2>
+<div>
 <ul>
-<li class="fragment">Trait concepts and stereotypes</li>
-<li class="fragment">Priming, automatic activation, automatic behavior effect</li>
+<li class="fragment">What are the impacts of these factors?</li>
+<li class="fragment">Do you agree that scientific communication should be made more efficient? Why or why not?</li>
+</ul>
+</div>
+</section>
+<section id="questions-about-nosek2012-al-1" class="slide level2">
+<h2>Questions about <span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span></h2>
+<div>
+<ul>
+<li class="fragment">Do you think all research scholarship should be open access?
+<ul>
+<li class="fragment">Who should pay for the costs of publication, maintaining the data?</li>
+<li class="fragment">What’s wrong with enterprising people making a living by providing these services?</li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section class="slide level2">
-
+<section id="questions-about-nosek2012-al-2" class="slide level2">
+<h2>Questions about <span class="citation" data-cites="Nosek2012-al">(<a href="#/references" role="doc-biblioref" onclick="">Nosek &amp; Bar-Anan, 2012</a>)</span></h2>
+<div>
 <ul>
-<li>Three studies
+<li class="fragment">What about the idea of separating publication from evaluation?
 <ul>
-<li>Experiment 1: Prime rudeness/politeness, measure interruptions</li>
-<li>Experiment 2: Prime “elderly” stereotype, measure speed of walking</li>
-<li>Experiment 3: Prime stereotype of African Americans, measure “hostility”</li>
+<li class="fragment">How can scientists discern good science from bad?</li>
+<li class="fragment">How can the general public?</li>
 </ul></li>
-<li>Participants or characteristics?</li>
-</ul>
-</section>
-<section id="experiment-1-bargh1996-yv" class="slide level2">
-<h2>Experiment 1 <span class="citation" data-cites="Bargh1996-yv">(<a href="#/references" role="doc-biblioref" onclick="">Bargh et al., 1996</a>)</span></h2>
-<blockquote>
-<p>A total of 34 students at New York University who were enrolled in the Introductory Psychology course participated in the experiment in partial fulfillment of a course research requirement. On their arrival at the laboratory waiting room they were randomly assigned to one of the three priming conditions.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
+<li class="fragment">What do you think reviewers would say about publishing peer review?
 <ul>
-<li>~ 11 students/priming group</li>
-<li>Task: “Scrambled Sentence Test” (Srull &amp; Wyer, 1979), presented to participants as a test of language ability.</li>
-<li>30 five-word sentences</li>
-</ul>
-<blockquote>
-<p>For each of 30 items, participants are to use the five words listed to construct a grammatically correct four-word sentence as quickly as possible. The five words presented in a given test item are in scrambled order, such as “he it hides finds instantly.”</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>30 words, 15 were “critical priming stimuli”:
-<ul>
-<li>“Rude”: aggressively, bold, rude, bother, disturb, intrude, annoyingly, interrupt, audaciously, brazen, impolitely, infringe, obnoxious, aggravating, and bluntly</li>
-<li>“Polite”: respect, honor, considerate, appreciate, patiently, cordially, yield, polite, cautiously, courteous, graciously, sensitively, discreetly, behaved, and unobtrusively</li>
-<li>“Neutral”: exercising, flawlessly, occasionally, rapidly, gleefully, practiced, optimistically, successfully, normally, send, watches, encourages, gives, clears, and prepares</li>
+<li class="fragment">Some journals do this already, e.g.&nbsp;<em>Frontiers</em></li>
 </ul></li>
 </ul>
+</div>
 </section>
-<section id="logic-of-the-manipulation-and-measures" class="slide level2">
-<h2>“Logic” of the manipulation and measures</h2>
+<section id="common-themes-across-ritchie2020-fm-and-nosek2012-al" class="slide level2">
+<h2>Common themes across <span class="citation" data-cites="Ritchie2020-fm">Nosek &amp; Bar-Anan (<a href="#/references" role="doc-biblioref" onclick="">2012</a>)</span></h2>
 <ul>
-<li>Constructing sentences <span class="math inline">\(\rightarrow\)</span> primes polite/rude/neutral behavioral stereotypes</li>
-<li>Stereotypes <span class="math inline">\(\rightarrow\)</span> influence time to interrupt/likelihood of interrupting</li>
-<li>Influences on behavior are unconscious</li>
-</ul>
-</section>
-<section id="bargh1996-yv-experiment-1-results" class="slide level2">
-<h2><span class="citation" data-cites="Bargh1996-yv">(<a href="#/references" role="doc-biblioref" onclick="">Bargh et al., 1996</a> Experiment 1)</span> results</h2>
-<blockquote>
-<p>A one-way analysis of variance (ANOVA) of these data, with priming condition as the single factor, revealed a significant main effect, <em>F</em>(2, 33) = 5.76, <em>p</em>=.008. Participants in the rude priming condition interrupted significantly faster (M = 326 s) than did participants in the neutral (M = 519 s) or polite (M = 558 s) priming conditions.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-
-<img data-src="fig/fig-bargh-ex1-rt-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;1: Visualization of Bargh <span class="citation" data-cites="Bargh1996-yv">Bargh et al. (<a href="#/references" role="doc-biblioref" onclick="">1996</a>)</span> Experiment 1 RT results; data from 13/34 participants who interrupted in 10 mins.
-</p></section>
-<section class="slide level2">
-
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p>The <em>F</em> test here evaluates whether all of the mean RTs are equal.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>Within the significant main effect, simple <em>t</em> tests revealed that the rude prime condition mean was significantly shorter than each of the other two means (both <em>p</em>s &lt; .04), which were not reliably different from one another (<em>t</em> &lt; 1).</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>Although this result supports our hypothesis that social interaction behavior can be primed, the time-to-interruption distribution varied considerably from normality. Fully 21 of the 34 participants did not interrupt at all in the 10 min available to them, so that the time variable suffered from a severe ceiling effect. Thus, we reanalyzed the data in terms of the percentage of participants in each priming condition who interrupted at all during the 10-min period.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../include/img/bargh-etal-2006-fig-01.png" class="r-stretch quarto-figure-center"><p class="caption">Figure 1 from <span class="citation" data-cites="Bargh1996-yv">(<a href="#/references" role="doc-biblioref" onclick="">Bargh et al., 1996</a>)</span></p></section>
-<section id="experiments-2a-and-2b" class="slide level2">
-<h2>Experiments 2a and 2b</h2>
-<blockquote>
-<p>Participants were instructed to work on a scrambled-sentence task as part of a language proficiency experiment. The scrambled-sentence task contained words relevant to the elderly stereotype in the elderly priming condition, but all references to slowness, which is a quality stereotypically associated with elderly people, were excluded.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>Priming words
-<ul>
-<li>“Elderly” condition: worried, Florida, old, lonely, grey, selfishly, careful, sentimental, wise, stubborn, courteous, bingo, withdraw, forgetful, retired, wrinkle, rigid, traditional, bitter, obedient, conservative, knits, dependent, ancient, helpless, gullible, cautious, and alone</li>
-<li>Neutral condition: thirsty, clean, private, ..</li>
-</ul></li>
-<li>Experiments 2a and 2b had 30 participants/study.</li>
+<li>Goals and purposes of science</li>
+<li>Utopian, idealistic aims</li>
+<li>Efficiency in achieving those goals</li>
+<li>High quality versus low quality science</li>
 </ul>
 </section>
 <section class="slide level2">
 
-<blockquote>
-<p>Waiting until the participant had gathered all of his or her belongings, the experimenter told the participant that the elevator was down the hall and thanked him or her for participating.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>Using a hidden stopwatch, a confederate of the experimenter, who was sitting in a chair apparently waiting to talk to a professor in a nearby office, recorded the amount of time in seconds that the participant spent walking a length of the corridor starting from the doorway of the experimental room and ending at a broad strip of silver carpet tape on the floor 9.75 m away.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>Participants in the elderly priming condition (M = 8.28 s) had a slower walking speed compared to participants in the neutral priming condition (M = 7.30 s), t (28) = 2.86, p &lt; .01, as predicted.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../include/img/bargh-2006-fig-02.png" style="width:75.0%" class="r-stretch quarto-figure-center"><p class="caption">Figure 2 from <span class="citation" data-cites="Bargh1996-yv">(<a href="#/references" role="doc-biblioref" onclick="">Bargh et al., 1996</a>)</span></p></section>
-<section id="awareness-check-study" class="slide level2">
-<h2>Awareness check study</h2>
-<blockquote>
-<p>The crucial factor in concluding that these results show automatic effects on behavior derives from the perceiver’s lack of awareness of the influence of the words. Previous research (see review in Bargh, 1992) has indicated that it is not whether the primes are presented supraliminally or subliminally, but whether the individual is aware of the potential influence of the prime that is critical;…</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>diametrically opposite effects on judgments are obtained if the participant is aware versus not aware of a possible influence by the priming stimuli (see Lombardi, Higgins, &amp; Bargh, 1987; Strack &amp; Hannover, 1996). We conducted a subsequent study to explicitly test whether the participants were aware of the potential influence of the scrambled-sentence task.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>Our conclusions in terms of automatic social behavior depend on the participants’ not being aware of this influence.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>Method</p>
-<p>Nineteen male and female undergraduate students at New York University participated in the experiment to partially fulfill course credit. On arrival at the laboratory waiting room, participants were randomly assigned to either the elderly stereotype priming condition or the neutral priming condition.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>Participants took part in the experiment one at a time. They were informed that the purpose of the study was to investigate language proficiency and that they would complete a scrambled-sentence task. Participants were randomly administered either the version of the task containing words relevant to the elderly stereotype or the neutral version containing no stereotype-relevant words.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>Immediately after completion of the task, participants were asked to complete a version of the contingency awareness funnel debriefing, modeled after Page (1969). This contingency awareness debriefing contained items concerning the purpose of the study, whether the participant had suspected that the purpose of the experiment was different from what the experimenter had explained…</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>whether the words had any relation to each other, what possible ways the words could have influenced their behavior, whether the participants could predict the direction of an influence…</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>if the experimenter had intended one, what the words in the scrambled-sentence task could have related to (if anything), and if the participant had suspected or had noticed any relation between the scrambled-sentence task and the concept of age. Afterward, the experimenter explained the hypotheses to the participants and thanked them for their help.</p>
-</blockquote>
-</section>
-<section id="results-and-discussion-of-awareness-check-study" class="slide level2">
-<h2>Results and discussion of awareness check study</h2>
-<blockquote>
-<p>Inspection of the responses revealed that only 1 of the 19 participants showed any awareness of a relationship between the stimulus words and the elderly stereotype. However, even this participant could not predict in what form or direction their behavior might have been influenced had such an influence occurred.</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>Thus, it appears safe to conclude that the effect of the elderly priming manipulation on walking speed occurred nonconsciously.</p>
-</blockquote>
+<ul>
+<li>Ethics, scientific integrity</li>
+<li>Means of scientific communication</li>
+<li>Who has access, who should</li>
+<li>How are findings, articles, individuals evaluated</li>
+</ul>
 </section></section>
+<section>
 <section id="next-time" class="title-slide slide level1 center">
 <h1>Next time</h1>
-<p><em>Priming effect: Replication study</em></p>
-<ul>
-<li>Read
-<ul>
-<li><span class="citation" data-cites="Doyen2012-ib">(<a href="#/references" role="doc-biblioref" onclick="">Doyen, Klein, Pichon, &amp; Cleeremans, 2012</a>)</span></li>
-<li>review <span class="citation" data-cites="Bargh1996-yv">(<a href="#/references" role="doc-biblioref" onclick="">Bargh et al., 1996</a>)</span>; <a href="https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170715">PDF on Canvas</a></li>
-</ul></li>
-<li><a href="../notes/wk05-2024-09-25-priming-replication.html">Class notes</a></li>
-</ul>
-</section>
 
+</section>
+<section id="friday-september-06" class="slide level2">
+<h2>Friday, September 06</h2>
+<p><strong>Work Session: Reading a paper; Evaluating its claims</strong></p>
+<ul>
+<li><span class="orange_due">Due</span>
+<ul>
+<li><a href="../exercises/ex01-read-a-scientific-paper.html">Exercise 01: Reading a scientific paper</a></li>
+</ul></li>
+<li><span class="green_assigned">Assignment</span>
+<ul>
+<li><a href="../exercises/ex02-textbook-findings.html">Exercise 02: Textbook Findings</a></li>
+</ul></li>
+</ul>
+</section></section>
 <section>
 <section id="resources" class="title-slide slide level1 center">
 <h1>Resources</h1>
 
+</section>
+<section id="talk-by-brian-nosek-university_of_california_television_uctv2018-sf" class="slide level2">
+<h2>Talk by Brian Nosek, <span class="citation" data-cites="University_of_California_Television_UCTV2018-sf">(<a href="#/references" role="doc-biblioref" onclick="">University of California Television (UCTV), 2018</a>)</span></h2>
+<div class="callout-info">
+<p>Watching the talk by Nosek is not required. But he’s a very good speaker and an inspiring person.</p>
+</div>
+<p style="text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YEwqohAjfZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+</p>
+</section>
+<section class="slide level2">
+
+<p>This talk was produced using <a href="https://quarto.org">Quarto</a>, using the <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> Integrated Development Environment (IDE) version 2024.4.2.764.</p>
+<p>The source files are in R and R Markdown, then rendered to HTML using the <a href="https://revealjs.com">revealJS</a> framework.</p>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
@@ -700,17 +780,26 @@ Figure&nbsp;1: Visualization of Bargh <span class="citation" data-cites="Bargh19
 </div>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-Bargh1996-yv" class="csl-entry" role="listitem">
-Bargh, J. A., Chen, M., &amp; Burrows, L. (1996). Automaticity of social behavior: Direct effects of trait construct and stereotype-activation on action. <em>Journal of Personality and Social Psychology</em>, <em>71</em>(2), 230–244. <a href="https://doi.org/10.1037//0022-3514.71.2.230">https://doi.org/10.1037//0022-3514.71.2.230</a>
+<div id="ref-Josephson1987-fr" class="csl-entry" role="listitem">
+Josephson, W. L. (1987). Television violence and children’s aggression: Testing the priming, social script, and disinhibition predictions. <em>Journal of Personality and Social Psychology</em>, <em>53</em>(5), 882–890. <a href="https://doi.org/10.1037/0022-3514.53.5.882">https://doi.org/10.1037/0022-3514.53.5.882</a>
 </div>
-<div id="ref-Doyen2012-ib" class="csl-entry" role="listitem">
-Doyen, S., Klein, O., Pichon, C.-L., &amp; Cleeremans, A. (2012). Behavioral priming: It’s all in the mind, but whose mind? <em>PloS One</em>, <em>7</em>(1), e29081. <a href="https://doi.org/10.1371/journal.pone.0029081">https://doi.org/10.1371/journal.pone.0029081</a>
+<div id="ref-munafo_manifesto_2017" class="csl-entry" role="listitem">
+Munafò, M. R., Nosek, B. A., Bishop, D. V. M., Button, K. S., Chambers, C. D., Sert, N. P. du, … Ioannidis, J. P. A. (2017). A manifesto for reproducible science. <em>Nature Human Behaviour</em>, <em>1</em>, 0021. <a href="https://doi.org/10.1038/s41562-016-0021">https://doi.org/10.1038/s41562-016-0021</a>
 </div>
-<div id="ref-Earp2014-ek" class="csl-entry" role="listitem">
-Earp, B. D., Everett, J. A. C., Madva, E. N., &amp; Hamlin, J. K. (2014). Out, damned spot: Can the <span>“<span>M</span>acbeth effect”</span> be replicated? <em>Basic and Applied Social Psychology</em>, <em>36</em>(1), 91–98. <a href="https://doi.org/10.1080/01973533.2013.856792">https://doi.org/10.1080/01973533.2013.856792</a>
+<div id="ref-Nosek2012-al" class="csl-entry" role="listitem">
+Nosek, B. A., &amp; Bar-Anan, Y. (2012). Scientific utopia i: Opening scientific communication. <em>Psychological <span>I</span>nquiry</em>, <em>23</em>(3), 217–243. <a href="https://doi.org/10.1080/1047840X.2012.692215">https://doi.org/10.1080/1047840X.2012.692215</a>
 </div>
-<div id="ref-Zhong2006-nf" class="csl-entry" role="listitem">
-Zhong, C.-B., &amp; Liljenquist, K. (2006). Washing away your sins: <span>T</span>hreatened morality and physical cleansing. <em>Science</em>, <em>313</em>(5792), 1451–1452. <a href="https://doi.org/10.1126/science.1130726">https://doi.org/10.1126/science.1130726</a>
+<div id="ref-Nosek2012-fm" class="csl-entry" role="listitem">
+Nosek, B. A., Spies, J. R., &amp; Motyl, M. (2012). Scientific utopia <span>II</span>: Restructuring incentives and practices to promote truth over publishability. <em>Perspectives on Psychological Science: A Journal of the Association for Psychological Science</em>, <em>7</em>(6), 615–631. <a href="https://doi.org/10.1177/1745691612459058">https://doi.org/10.1177/1745691612459058</a>
+</div>
+<div id="ref-Oreskes2017" class="csl-entry" role="listitem">
+Oreskes, N. (2019). <em><span>W</span>hy <span>T</span>rust <span>S</span>cience</em>. Princeton University Press.
+</div>
+<div id="ref-Ritchie2020-fm" class="csl-entry" role="listitem">
+Ritchie, S. (2020). <em>Science fictions: Exposing fraud, bias, negligence and hype in science</em> (1st ed.). Penguin Random House. Retrieved from <a href="https://www.amazon.com/Science-Fictions/dp/1847925669">https://www.amazon.com/Science-Fictions/dp/1847925669</a>
+</div>
+<div id="ref-University_of_California_Television_UCTV2018-sf" class="csl-entry" role="listitem">
+University of California Television (UCTV). (2018, May). Improving openness and innovation in scholarly communication with brian nosek. Youtube. Retrieved from <a href="https://www.youtube.com/watch?v=YEwqohAjfZc">https://www.youtube.com/watch?v=YEwqohAjfZc</a>
 </div>
 </div>
 </section></section>
@@ -924,44 +1013,6 @@ Zhong, C.-B., &amp; Liljenquist, K. (2006). Washing away your sins: <span>T</spa
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

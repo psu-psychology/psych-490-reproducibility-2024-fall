@@ -1,25 +1,34 @@
 ---
 subtitle: "2024-09-23 Mon"
-title: "Replication failure: Priming effect"
+title: "Priming effect: Original study"
 ---
 
 # Overview
 
 ## Announcements
 
+- [due Friday, September 27]{.orange_due}
+    - [Exercise 03: Norms and counter-norms](../exercises/ex03-norms-counternorms.qmd), 
+
 ## Last time...
+
+- @Earp2014-ek replication attempt of Study 2 from @Zhong2006-nf
+
+## @Earp2014-ek
+
+- How did the authors *manipulate* participants' "need to cleanse"?
+- How did they *measure* participants' "need to cleanse"?
+- Which groups of participants showed behavioral differences between the 'ethical' and 'unethical' manipulation?
+- What do the results mean about the claims made by @Zhong2006-nf?
 
 ## Today
 
-*Replication failure: Priming effect*
+*Priming effect: Original study*
 
 - Read
     - [@Bargh1996-yv]; [PDF on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=151876806)
-    - [@Doyen2012-ib]
-    
-## Last time...
 
-# Replicating [@Bargh1996-yv]
+# @Bargh1996-yv
 
 ---
 
@@ -28,7 +37,7 @@ Bargh, J. A., Chen, M. & Burrows, L. (1996). Automaticity of social behavior: Di
 ---
 
 ::: {.callout-important}
-- Abstract-only publicly available, PDF $14.95
+- Abstract-only publicly available, PDF $14.95.
 - Web (HTML) and PDF versions available via PSU Libraries.
 :::
 
@@ -38,15 +47,15 @@ Bargh, J. A., Chen, M. & Burrows, L. (1996). Automaticity of social behavior: Di
 
 ---
 
->Experiment 1 showed that participants whose concept of rudeness was primed interrupted the experimenter more quickly and frequently than did participants primed with polite-related stimuli. 
+>...Experiment 1 showed that participants whose concept of rudeness was primed interrupted the experimenter more quickly and frequently than did participants primed with polite-related stimuli. 
 
 ---
 
->In Experiment 2, participants for whom an elderly stereotype was primed walked more slowly down the hallway when leaving the experiment than did control participants, consistent with the content of that stereotype. 
+>...In Experiment 2, participants for whom an elderly stereotype was primed walked more slowly down the hallway when leaving the experiment than did control participants, consistent with the content of that stereotype. 
 
 ---
 
->In Experiment 3, participants for whom the African American stereotype was primed subliminally reacted with more hostility to a vexatious request of the experimenter. 
+>...In Experiment 3, participants for whom the African American stereotype was primed subliminally reacted with more hostility to a vexatious request of the experimenter. 
 
 ---
 
@@ -64,7 +73,7 @@ Bargh, J. A., Chen, M. & Burrows, L. (1996). Automaticity of social behavior: Di
 ---
 
 - Three studies
-    - Experiment 1: "Prime" rudeness/politeness, measure interruptions
+    - Experiment 1: Prime rudeness/politeness, measure interruptions
     - Experiment 2: Prime "elderly" stereotype, measure speed of walking
     - Experiment 3: Prime stereotype of African Americans, measure "hostility"
 - Participants or characteristics?
@@ -76,7 +85,8 @@ Bargh, J. A., Chen, M. & Burrows, L. (1996). Automaticity of social behavior: Di
 ---
 
 - ~ 11 students/priming group
-- Task: "Scrambled Sentence Test” (Srull & Wyer, 1979), presented to participants as a test of language ability. 
+- Task: "Scrambled Sentence Test” (Srull & Wyer, 1979), presented to participants as a test of language ability.
+- 30 five-word sentences
 
 >For each of 30 items, participants are to use the five words listed to construct a grammatically correct four-word sentence as quickly as possible. The five words presented in a given test item are in scrambled order, such as “he it hides finds instantly.”
 
@@ -87,27 +97,40 @@ Bargh, J. A., Chen, M. & Burrows, L. (1996). Automaticity of social behavior: Di
     - "Polite": respect, honor, considerate, appreciate, patiently, cordially, yield, polite, cautiously, courteous, graciously, sensitively, discreetly, behaved, and unobtrusively
     - "Neutral": exercising, flawlessly, occasionally, rapidly, gleefully, practiced, optimistically, successfully, normally, send, watches, encourages, gives, clears, and prepares
     
----
+## "Logic" of the manipulation and measures
 
->Our dependent measure was the amount of time the participant would wait until interrupting the conversation between experimenter and confederate and ask to be given the next experimental task."
+- Constructing sentences $\rightarrow$ primes polite/rude/neutral behavioral stereotypes
+- Stereotypes $\rightarrow$ influence time to interrupt/likelihood of interrupting
+- Influences on behavior are unconscious
 
----
+## [@Bargh1996-yv Experiment 1] results
 
-- Post-survey:
-
->"On the survey were six questions concerning whether the experiment was interesting and whether it was considered a valid educational experience. The last three items concerned the experimenter, whether he or she was on time, whether he or she explained the study and answered questions, and the critical item: “Was the experimenter courteous and polite to you?” This the participant responded to on a −3 to +3 scale that ranged from −3 (not at all) to +3 (very much so). This item served as our check for a potential alternative interpretation of our results, to be discussed below."
-
----
-
-> Our primary dependent variable was the number of seconds the participants waited before interrupting the experimenter. 
-
-## Experiment 1 results [@Bargh1996-yv]
-
->A one-way analysis of variance (ANOVA) of these data, with priming condition as the single factor, revealed a significant main effect, F(2, 33) = 5.76, p = .008. Participants in the rude priming condition interrupted significantly faster (M = 326 s) than did participants in the neutral (M = 519 s) or polite (M = 558 s) priming conditions. 
+>A one-way analysis of variance (ANOVA) of these data, with priming condition as the single factor, revealed a significant main effect, *F*(2, 33) = 5.76, *p*=.008. Participants in the rude priming condition interrupted significantly faster (M = 326 s) than did participants in the neutral (M = 519 s) or polite (M = 558 s) priming conditions.
 
 ---
 
->Within the significant main effect, simple t tests revealed that the rude prime condition mean was significantly shorter than each of the other two means (both p s < .04), which were not reliably different from one another (t < 1).
+```{r echo=FALSE}
+#| label: fig-bargh-ex1-rt
+#| fig-cap: "Visualization of Bargh @Bargh1996-yv Experiment 1 RT results; data from 13/34 participants who interrupted in 10 mins."
+library(tidyverse) # load tidyverse packages, e.g., ggplot
+bargh_ex1_rt <- tibble::tibble(priming = c("polite", "neutral", "rude"), rt_mean = c(558, 519, 326))
+
+bargh_ex1_rt |>
+  ggplot() +
+  aes(x = priming, y = rt_mean) +
+  geom_col() +
+  ylab("Mean time (s) to interrupt")
+```
+
+---
+
+::: {.callout-important}
+The *F* test here evaluates whether all of the mean RTs are equal.
+:::
+
+---
+
+>Within the significant main effect, simple *t* tests revealed that the rude prime condition mean was significantly shorter than each of the other two means (both *p*s < .04), which were not reliably different from one another (*t* < 1).
 
 ---
 
@@ -186,197 +209,15 @@ Bargh, J. A., Chen, M. & Burrows, L. (1996). Automaticity of social behavior: Di
 
 >Thus, it appears safe to conclude that the effect of the elderly priming manipulation on walking speed occurred nonconsciously.
 
-## Experiment 3
-
-- Not the focus of replication by [@Doyen2012-ib], so we ignore here.
-
-## Replication
-
-Doyen, S., Klein, O., Pichon, C.-L. & Cleeremans, A. (2012). Behavioral priming: it’s all in the mind, but whose mind? *PloS One*, *7*(1), e29081. <https://doi.org/10.1371/journal.pone.0029081>
-
-## Access
-
-- Full (HTML/PDF) access available to public.
-
-## Abstract
-
-> The perspective that behavior is often driven by unconscious determinants has become widespread in social psychology. Bargh, Chen, and Burrows' (1996) famous study, in which participants unwittingly exposed to the stereotype of age walked slower when exiting the laboratory, was instrumental in defining this perspective. Here, we present two experiments aimed at replicating the original study. 
-
----
-
->Despite the use of automated timing methods and a larger sample, our first experiment failed to show priming. Our second experiment was aimed at manipulating the beliefs of the experimenters: Half were led to think that participants would walk slower when primed congruently, and the other half was led to expect the opposite. Strikingly, we obtained a walking speed effect, but only when experimenters believed participants would indeed walk slower. 
-
----
-
->This suggests that both priming and experimenters' expectations are instrumental in explaining the walking speed effect. Further, debriefing was suggestive of awareness of the primes. We conclude that unconscious behavioral priming is real, while real, involves mechanisms different from those typically assumed to cause the effect.
-
-
-## Experiment 1 Methods
-
-- Empirical replication of one study from [@Bargh1996-yv].
-- 120 undergrads in Brussels, Belgium
-- Two priming conditions
-    - Full list of words: <https://doi.org/10.1371/journal.pone.0029081.s001>
-    
----
-
-> Before reaching the exit, participants were called back by the experimenter who pretended that he/she had forgotten to administer a final task. The debriefing that followed relied on a funnel questionnaire [1], [18] assessing participants' awareness of the manipulation on three levels:
-
----
-
-> 1-Awareness of the prime was assessed by asking participants increasingly specific questions about the presence of primes in the scrambled sentences. One particular question was a four-alternative forced-choice task (4-AFC) in which participants were required to choose between four pictures representing four social categories that could have been used as primes (i.e.: athletic person, Arabic person, handicapped person and elderly).
-
----
-
-> 2-Awareness of the primed behavior was assessed by inviting participants to indicate how much they thought their walking speed had increased or decreased relative to their regular walking speed (responses were provided using an on-screen slider along a scale ranging from 0 to 100, with 50 representing their regular walking speed).
-
----
-
-> 3-Awareness of the link between the prime and the primed behavior was assessed directly by asking participants whether they had noticed any link between the scrambled sentences task and their walking speed as they had left the room.
-
----
-
-> The debriefing was also used to probe suspicion regarding the purpose of the experiment by asking increasingly accurate questions such as: “Do you think this experiment is related to any topic in particular?”, “Do you think this experiment could be related with manipulating behavior?”.
-
-## Experiment 1 Results
-
-> Walking speed: In this analysis, we used participants' walking speed as they entered the experiment room, (i.e., before priming) as a covariate. The results show no significant difference between the Prime (M=6.27 SD=2.15) and the No-Prime group (M=6.39 SD=1.11) in the time necessary to walk along the hallway after the priming manipulation (F (1, 119)<1, $\eta^2$=.01).
-
----
-
-> Awareness of the prime. No participant reported having noticed anything unusual about the scrambled sentences task. Four participants (6.66%) in the Prime condition reported that the sentences were related to the stereotype of old persons. 
-
----
-
->We tested the distribution of forced choices for both conditions using a two independent sample chi-squared test: the Prime group chose the picture of the old person above chance level whereas the No prime group was equally likely to choose all four pictures (χ2 (1)=5.43, p=0.023).
-
----
-
-::: {.callout-important}
-What does the chi-squared ($\chi^2$) test test?
-
-A: Deviations from chance for events that have a discrete outcome, e.g., flipping a coin.
-
-Is a coin that comes up tails 14 times out of 20 flips a fair coin?
-
-```{r}
-M <- as.table(rbind(c(14,6), c(6,14)))
-dimnames(M) <- list(side = c("Tails", "Heads"), result = c("Up", "Down"))
-chisq.test(M)
-```
-
-Hmmm, probably not, since $\chi^2(1,N=20)=4.9, p=0.03$, meaning that the observed result (14 tails/20 flips) is unlikely given a fair coin with $p(tails)=.5$.
-
-:::
-
----
-
-> Awareness of the effect. We computed the deviation of the slider from the initial position. No significant difference was found between the Prime (M=1.7) and the No-Prime (M=2.68) groups (t (1, 119)<1, d=0.022).
-
----
-
-::: {.callout-important}
-
-What does the $d$ mean?
-
-A: It is an effect size, here the observed difference between the means of the two conditions in standard deviation units so that we may compare across studies. A $d=.022$ is considered a very, very small effect. We will complete an [exercise](../ex05-apes.html) about effect sizes, sample sizes, and statistical power later in the course.
-
-:::
-
----
-
-> Awareness of the link. 96% of participants reported that they could not establish a link between the scrambled sentences task and their subsequent behavior.
-> No experimenter reported having entertained any specific expectation about participants' behavior.
-
----
-
-## Experiment 2 [@Doyen2012-ib]
-
-> ...experimenters' expectations could act as an amplifier of the effect of the prime and thus promote the primed behavior.
->
-> To test these possibilities, we conducted a second experiment in which we manipulated the experimenters' expectations about primed participants' behavior.
-
-- 50 new participants
-
----
-
-> Experimenters' expectations. Experimenters' expectations about primed participants' behavior were manipulated. One half of the experimenters were told that the primed participant would walk slower as result of the prime (i.e.: “Slow” condition), the other half were told that the participants would walk faster (i.e.: “Fast” condition). Each individual experimenter tested 5 participants randomly assigned to the Prime or the No-Prime condition. 
-
----
-
->Experimenters' expectations were shaped through a one hour briefing and persuasion session prior to the first participant's session. In addition, the first participant whom an experimenter tested was a confederate who had been covertly instructed to act in the manner expected expected by the experimenter. Crucially, participants' condition (i.e.: Prime or No-Prime) was made salient to the experimenter.
-
----
-
-```{r doyen-etal-2012-fig-01, fig.cap="Figure 1 from [@Doyen2012-ib]", out.width="80%"}
-knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0029081.g001")
-```
-
----
-
-```{r doyen-etal-2012-fig-02, fig.cap="Figure 2 from [@Doyen2012-ib]", out.width="80%"}
-knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0029081.g002")
-```
-
----
-
-```{r doyen-etal-2012-fig-03, fig.cap="Figure 3 from [@Doyen2012-ib]", out.width="80%"}
-knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0029081.g003")
-```
-
-## Discussion from [@Doyen2012-ib]
-
-> First, in Experiment 1, despite the use of a larger sample and an experimental procedure devoid of the limitations present in the original experiment, we were not able to replicate Bargh et al's [1] automatic effect of priming on walking speed. This led us to assume that crucial factors in this paradigm had remained unidentified. Experiment 2 was aimed at exploring such factors.
-
----
-
-> Second, in Experiment 2 we were indeed able to obtain the priming effect on walking speed for both subjective and objective timings. Crucially however, this was only possible by manipulating experimenters' expectations in such a way that they would expect primed participants to walk slower. 
-
----
-
->Our results, however, cannot be explained solely in terms of a pure self-fulfilling prophecy effect [14], as the primed participants did not walk faster when tested by an experimenter who believed they would walk faster. 
-
----
-
->Therefore it seems that the primes alone are not sufficient and must be in line with environmental cues such as the experimenters' behavior in order to elicit the effect on walking speed. This is also supported by the fact that contrary factors (i.e.: primes related to the concept of age in conjunction with an experimenter expecting to observer a faster walking speed) did not alter participants' walking speed.
-
----
-
-> Regarding the subjective timings, we obtained a reverse effect on walking speed (i.e.: participants walking faster). This effect can be explained by the error committed by the experimenters, most likely as a result of their induced expectations. If we had used only human-operated measurement devices, as in Bargh et al.'s [1] experiment 2a and 2b, we would thus have erroneously concluded in a reverse priming effect. 
-
----
-
->This very important point suggests that one must be cautious about (1) the type of measurement used in behavioral priming experiments as well as (2) the experimenters expectations. Subtle differences are particularly prone to external influences and potential biases.
-
----
-
-> Third, most of the participants primed with the scrambled sentences task were aware of the social category they had been primed with. This result shows that one must be cautious when using the scrambled sentences task as a priming method. 
-
----
-
->One must take into account that our participants were performing the experiment as part of a psychology course, which could have led to higher suspicion towards the scrambled sentences task resulting in a higher degree of awareness of the primes. 
-
----
-
->Additionally, those participants who actually exhibited a slower walking speed reported in good proportion being aware of that particular behavior. Whether automatic behavioral priming can occur without awareness thus remains unclear. As a matter of fact, participants' awareness of the prime and of the primed behavior could have led them to exert better conscious control over the latter and therefore impair its expression.
-
-## Open Science Notes
-
-- Neither study shared data
-- Plots could have shown individual participants' data
-- Videos of procedures would have been helpful
-- Both papers showed evidence of "digging" deeper
-
 # Next time
 
-*Work session: Replication with R, R Markdown, & Quarto*
+*Priming effect: Replication study*
 
-- Review
-  - [Survey 01 report](../survey-01.html)
-  - [Survey 02 report](../survey-02.html)
-- [Class notes](../notes/wk04-2024-09-20-work-session-R.qmd)
+- Read
+    - [@Doyen2012-ib]
+    - review [@Bargh1996-yv]; [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170715)
+- [Class notes](wk05-2024-09-25-priming-replication.qmd)
 
 # Resources
 
 ## References
-

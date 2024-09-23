@@ -7,18 +7,28 @@ title: "Work session: Scientific integrity & Final Projects"
 
 ## Announcements
 
+- [due today]{.orange_due}
+    - [Exercise 03: Norms and counter-norms](../exercises/ex03-norms-counternorms.qmd) 
+    
+## Last time...
+
 ## Today
 
 - [Assignment]{.green_assigned}
-    - [Exercise 04: Violations of scientific integrity](exercises/ex04-scientific-integrity.qmd), [due Friday, October 4]{.orange_due}
-    - [Final project proposals](exercises/final-project.qmd), [due Friday, October 18]{.orange_due}.
-- [Due]{.orange_due}
-    - [Exercise 03: Norms and counter-norms write-up](exercises/ex03-norms-counternorms.qmd)
-- [Class notes](notes/wk05-2024-09-27-work-integrity.qmd)
+    - [Exercise 04: Violations of scientific integrity](../exercises/ex04-scientific-integrity.qmd), [due Friday, October 4]{.orange_due}
+    - [Final project proposals](../exercises/final-project.qmd), [due Friday, October 18]{.orange_due}.
+- [Class notes](wk05-2024-09-27-work-integrity.qmd)
 
 # Next time
 
 *Students' Choice*
+
+## Options
+
+1. Read a *successful* replication study: [@Soto2019-cm]
+2. Deep dive into how the [Survey-01](../surveys/survey-01.qmd) and [Survey-02](../surveys/survey-02.qmd) code actually works.
+3. Explore some large-scale databases of replication studies in Psychology: [@Roseler2024-mw] and <https://forrt.org/reversals/>
+4. Discuss norms and counternorms in science vs. other fields
 
 # Resources
 

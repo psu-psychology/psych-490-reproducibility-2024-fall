@@ -142,21 +142,27 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 #### Monday, September 23 {-}
 
-*Replication attempt: Priming effect*
+*Priming effect: Original study*
 
 - Read
     - [@Bargh1996-yv]; [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170715)
-    - [@Doyen2012-ib]
 - [Class notes](notes/wk05-2024-09-23-priming.qmd)
 
 #### Wednesday, September 25 {-}
 
-*What R are we talking about?*
+*Priming effect: Replication study*
 
 - Read
-    - [@Fidler2021-xn], especially sections 1, 2, and 3.1-3.2.
-    - (Skim) [@Nosek2022-hv] or [@goodman_what_2016]
-- [Class notes](notes/wk05-2024-09-25-what-r.qmd)
+    - [@Doyen2012-ib]
+    - review [@Bargh1996-yv]; [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170715)
+- [Class notes](notes/wk05-2024-09-25-priming-replication.qmd)
+
+<!-- *What R are we talking about?* -->
+
+<!-- - Read -->
+<!--     - [@Fidler2021-xn], especially sections 1, 2, and 3.1-3.2. -->
+<!--     - (Skim) [@Nosek2022-hv] or [@goodman_what_2016] -->
+<!-- - [Class notes](notes/wk05-2024-09-25-what-r.qmd) -->
 
 #### Friday, September 27 {-}
 
