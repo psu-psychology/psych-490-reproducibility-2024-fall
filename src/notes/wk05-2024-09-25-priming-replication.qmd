@@ -13,8 +13,10 @@ title: "Priming effect: Replication study"
 ## Last time...
 
 - @Bargh1996-yv on priming and the automaticity of behavior
-
-## @Bargh1996-yv
+  - "Priming" refers to what?
+    - What was primed (e.g., *manipulated*) and how?
+  - "Automaticity of behavior" refers to what?
+    - What behavior was *measured* and how?
 
 ## Today
 
@@ -25,11 +27,11 @@ title: "Priming effect: Replication study"
 
 ## Replication
 
-Doyen, S., Klein, O., Pichon, C.-L. & Cleeremans, A. (2012). Behavioral priming: {I}t’s all in the mind, but whose mind? *PloS One*, *7*(1), e29081. <https://doi.org/10.1371/journal.pone.0029081>
+Doyen, S., Klein, O., Pichon, C.-L. & Cleeremans, A. (2012). Behavioral priming: {I}t’s all in the mind, but whose mind? *PLoS One*, *7*(1), e29081. <https://doi.org/10.1371/journal.pone.0029081>
 
 ## Access
 
-- Full (HTML/PDF) access available to public.
+- Full (HTML/PDF) access available to public ^[Authors [pay](https://plos.org/publish/fees/) to submit to *PLoS One*.].
 
 ## Abstract
 
@@ -43,11 +45,10 @@ Doyen, S., Klein, O., Pichon, C.-L. & Cleeremans, A. (2012). Behavioral priming:
 
 >This suggests that both priming and experimenters' expectations are instrumental in explaining the walking speed effect. Further, debriefing was suggestive of awareness of the primes. We conclude that unconscious behavioral priming is real, while real, involves mechanisms different from those typically assumed to cause the effect.
 
-
 ## Experiment 1 Methods
 
 - Empirical replication of one study from [@Bargh1996-yv].
-- 120 undergrads in Brussels, Belgium
+- 120 undergrads in Brussels, Belgium.
 - Two priming conditions
     - Full list of words: <https://doi.org/10.1371/journal.pone.0029081.s001>
     
@@ -74,6 +75,28 @@ Doyen, S., Klein, O., Pichon, C.-L. & Cleeremans, A. (2012). Behavioral priming:
 ## Experiment 1 Results
 
 > Walking speed: In this analysis, we used participants' walking speed as they entered the experiment room, (i.e., before priming) as a covariate. The results show no significant difference between the Prime (M=6.27 SD=2.15) and the No-Prime group (M=6.39 SD=1.11) in the time necessary to walk along the hallway after the priming manipulation (F (1, 119)<1, $\eta^2$=.01).
+
+---
+
+```{r}
+#| label: fig-doyen-2012-ex01
+#| fig-cap: Plot of data from Experiment 1 in @Doyen2012-ib. Not in original paper.
+
+library(tidyverse)
+
+doyen_2012_ex01 <- tibble::tibble(speed = c(6.27, 6.39), 
+                                  prime = c("prime", "no-prime"), 
+                                  speed_sd = c(2.15, 1.11))
+
+doyen_2012_ex01 |>
+  ggplot() +
+  aes(prime, speed) +
+  geom_col() +
+  geom_errorbar(aes(ymin = (speed - speed_sd), 
+                    ymax = (speed + speed_sd)), width=.2) +
+  ylab("Speed (s)") +
+  xlab("")
+```
 
 ---
 
@@ -113,6 +136,8 @@ Hmmm, probably not, since $\chi^2(1,N=20)=4.9, p=0.03$, meaning that the observe
 What does the $d$ mean?
 
 A: It is an effect size, here the observed difference between the means of the two conditions in standard deviation units so that we may compare across studies. A $d=.022$ is considered a very, very small effect. We will complete an [exercise](../exercises/ex06-apes.qmd) about effect sizes, sample sizes, and statistical power later in the course.
+
+*Note*: The $\eta^2$ (eta-squared) value mentioned earlier is also an effect size.
 
 :::
 

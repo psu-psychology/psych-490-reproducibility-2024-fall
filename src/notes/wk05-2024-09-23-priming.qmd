@@ -164,7 +164,7 @@ Could there be any relationship between how long they took on the scrambled-sent
 
 ---
 
-![Figure 2 from @Bargh1996-yv.](../include/img/bargh-2006-fig-02.png){#fig-bargh-2006-fig-2 fig-align="center" width=75%}
+![Figure 2 from @Bargh1996-yv](../include/img/bargh-2006-fig-02.png){#fig-bargh-2006-fig-2 fig-align="center" width=75%}
 
 ---
 
