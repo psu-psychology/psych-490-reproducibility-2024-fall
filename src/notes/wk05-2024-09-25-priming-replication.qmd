@@ -9,6 +9,13 @@ title: "Priming effect: Replication study"
 
 - [due this Friday, September 27]{.orange_due}
     - [Exercise 03: Norms and counter-norms](../exercises/ex03-norms-counternorms.qmd) 
+## Retraction in the news
+
+![@Lee2024-op](../include/img/chronicle-2024-09-25.png)
+
+---
+
+![@Protzko2023-ci](../include/img/protzko-retraction-2024-09-24.png)
 
 ## Last time...
 
@@ -229,7 +236,11 @@ knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?
 1. Read a *successful* replication study: [@Soto2019-cm]
 2. Deep dive into how the [Survey-01](../surveys/survey-01.qmd) and [Survey-02](../surveys/survey-02.qmd) code actually works.
 3. Explore some large-scale databases of replication studies in Psychology: [@Roseler2024-mw] and <https://forrt.org/reversals/>
-4. Discuss norms and counternorms in science vs. other fields
+
+---
+
+4. Discuss norms and counternorms in science vs. other fields based on your own responses to [Exercise 03](../exercises/ex03-norms-counternorms.qmd)
+5. Explore @Protzko2023-ci retraction.
 
 # Next time
 
