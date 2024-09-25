@@ -17,6 +17,7 @@ title: "Priming effect: Replication study"
 
 - [due this Friday, September 27]{.orange_due}
     - [Exercise 03: Norms and counter-norms](../exercises/ex03-norms-counternorms.qmd) 
+
 ## Retraction in the news
 
 ![@Lee2024-op](../include/img/chronicle-2024-09-25.png)
@@ -119,7 +120,7 @@ doyen_2012_ex01 |>
 
 ---
 
->We tested the distribution of forced choices for both conditions using a two independent sample chi-squared test: the Prime group chose the picture of the old person above chance level whereas the No prime group was equally likely to choose all four pictures (χ2 (1)=5.43, p=0.023).
+>We tested the distribution of forced choices for both conditions using a two independent sample chi-squared test: the Prime group chose the picture of the old person above chance level whereas the No prime group was equally likely to choose all four pictures ($\chi^2(1)=5.43$, $p=0.023$).
 
 ---
 
@@ -142,7 +143,7 @@ Hmmm, probably not, since $\chi^2(1,N=20)=4.9, p=0.03$, meaning that the observe
 
 ---
 
-> Awareness of the effect. We computed the deviation of the slider from the initial position. No significant difference was found between the Prime (M=1.7) and the No-Prime (M=2.68) groups (t (1, 119)<1, d=0.022).
+> Awareness of the effect. We computed the deviation of the slider from the initial position. No significant difference was found between the Prime (M=1.7) and the No-Prime (M=2.68) groups (t(1, 119)<1, d=0.022).
 
 ---
 
@@ -152,7 +153,7 @@ What does the $d$ mean?
 
 A: It is an effect size, here the observed difference between the means of the two conditions in standard deviation units so that we may compare across studies. A $d=.022$ is considered a very, very small effect. We will complete an [exercise](../exercises/ex06-apes.qmd) about effect sizes, sample sizes, and statistical power later in the course.
 
-*Note*: The $\eta^2$ (eta-squared) value mentioned earlier is also an effect size.
+*Note*: The $\eta^2$ (eta-squared) value mentioned [earlier](wk05-2024-09-25-priming-replication.qmd#experiment-1-results) is also an effect size.
 
 :::
 
@@ -181,23 +182,23 @@ A: It is an effect size, here the observed difference between the means of the t
 
 ---
 
-```{r doyen-etal-2012-fig-01, fig.cap="Figure 1 from [@Doyen2012-ib]", out.width="80%"}
+```{r doyen-etal-2012-fig-01, fig.cap="Figure 1 from @Doyen2012-ib", out.width="80%"}
 knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0029081.g001")
 ```
 
 ---
 
-```{r doyen-etal-2012-fig-02, fig.cap="Figure 2 from [@Doyen2012-ib]", out.width="80%"}
+```{r doyen-etal-2012-fig-02, fig.cap="Figure 2 from @Doyen2012-ib", out.width="80%"}
 knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0029081.g002")
 ```
 
 ---
 
-```{r doyen-etal-2012-fig-03, fig.cap="Figure 3 from [@Doyen2012-ib]", out.width="80%"}
+```{r doyen-etal-2012-fig-03, fig.cap="Figure 3 from @Doyen2012-ib", out.width="80%"}
 knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0029081.g003")
 ```
 
-## Discussion from [@Doyen2012-ib]
+## Discussion from @Doyen2012-ib
 
 > First, in Experiment 1, despite the use of a larger sample and an experimental procedure devoid of the limitations present in the original experiment, we were not able to replicate Bargh et al's [1] automatic effect of priming on walking speed. This led us to assume that crucial factors in this paradigm had remained unidentified. Experiment 2 was aimed at exploring such factors.
 
@@ -215,7 +216,7 @@ knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?
 
 ---
 
-> Regarding the subjective timings, we obtained a reverse effect on walking speed (i.e.: participants walking faster). This effect can be explained by the error committed by the experimenters, most likely as a result of their induced expectations. If we had used only human-operated measurement devices, as in Bargh et al.'s [1] experiment 2a and 2b, we would thus have erroneously concluded in a reverse priming effect. 
+>Regarding the subjective timings, we obtained a reverse effect on walking speed (i.e.: participants walking faster). This effect can be explained by the error committed by the experimenters, most likely as a result of their induced expectations. If we had used only human-operated measurement devices, as in Bargh et al.'s [1] experiment 2a and 2b, we would thus have erroneously concluded in a reverse priming effect. 
 
 ---
 
@@ -223,7 +224,7 @@ knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?
 
 ---
 
-> Third, most of the participants primed with the scrambled sentences task were aware of the social category they had been primed with. This result shows that one must be cautious when using the scrambled sentences task as a priming method. 
+>Third, most of the participants primed with the scrambled sentences task were aware of the social category they had been primed with. This result shows that one must be cautious when using the scrambled sentences task as a priming method. 
 
 ---
 
