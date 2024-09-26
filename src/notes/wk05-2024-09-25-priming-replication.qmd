@@ -208,15 +208,15 @@ knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?
 
 ---
 
->Our results, however, cannot be explained solely in terms of a pure self-fulfilling prophecy effect [14], as the primed participants did not walk faster when tested by an experimenter who believed they would walk faster. 
+> Our results, however, cannot be explained solely in terms of a pure self-fulfilling prophecy effect [14], as the primed participants did not walk faster when tested by an experimenter who believed they would walk faster. 
 
 ---
 
->Therefore it seems that the primes alone are not sufficient and must be in line with environmental cues such as the experimenters' behavior in order to elicit the effect on walking speed. This is also supported by the fact that contrary factors (i.e.: primes related to the concept of age in conjunction with an experimenter expecting to observer a faster walking speed) did not alter participants' walking speed.
+> Therefore it seems that the primes alone are not sufficient and must be in line with environmental cues such as the experimenters' behavior in order to elicit the effect on walking speed. This is also supported by the fact that contrary factors (i.e.: primes related to the concept of age in conjunction with an experimenter expecting to observer a faster walking speed) did not alter participants' walking speed.
 
 ---
 
->Regarding the subjective timings, we obtained a reverse effect on walking speed (i.e.: participants walking faster). This effect can be explained by the error committed by the experimenters, most likely as a result of their induced expectations. If we had used only human-operated measurement devices, as in Bargh et al.'s [1] experiment 2a and 2b, we would thus have erroneously concluded in a reverse priming effect. 
+> Regarding the subjective timings, we obtained a reverse effect on walking speed (i.e.: participants walking faster). This effect can be explained by the error committed by the experimenters, most likely as a result of their induced expectations. If we had used only human-operated measurement devices, as in Bargh et al.'s [1] experiment 2a and 2b, we would thus have erroneously concluded in a reverse priming effect. 
 
 ---
 

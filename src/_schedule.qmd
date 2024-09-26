@@ -163,7 +163,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 #### Friday, September 27 {-}
 
-*Work session: Scientific integrity & Final Project Proposals*
+*Work session: Scientific integrity & Final project proposals*
 
 - [Assignment]{.green_assigned}
     - [Exercise 04: Violations of scientific integrity](exercises/ex04-scientific-integrity.qmd), [due Friday, October 4]{.orange_due}
@@ -190,9 +190,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 #### Friday, October 04 {-}
 
-*Work session: P-hacking & Final Project Proposals*
-
-*P-hacking*
+*Work session: P-hacking & Final project proposals*
 
 - [Due]{.orange_due}
     - [Exercise 04: Violations of scientific integrity](exercises/ex04-scientific-integrity.qmd)

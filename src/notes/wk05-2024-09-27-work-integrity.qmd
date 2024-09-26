@@ -12,6 +12,116 @@ title: "Work session: Scientific integrity & Final Projects"
     
 ## Last time...
 
+- @Doyen2012-ib replication of Study 2 from @Bargh1996-yv
+
+---
+
+> First, in Experiment 1, despite the use of a larger sample and an experimental procedure devoid of the limitations present in the original experiment, we were not able to replicate Bargh et al's [1] automatic effect of priming on walking speed. 
+
+---
+
+```{r}
+#| label: fig-doyen-2012-ex01
+#| fig-cap: Plot of data from Experiment 1 in @Doyen2012-ib. Not in original paper.
+
+library(tidyverse)
+
+doyen_2012_ex01 <- tibble::tibble(speed = c(6.27, 6.39), 
+                                  prime = c("prime", "no-prime"), 
+                                  speed_sd = c(2.15, 1.11))
+
+doyen_2012_ex01 |>
+  ggplot() +
+  aes(prime, speed) +
+  geom_col() +
+  geom_errorbar(aes(ymin = (speed - speed_sd), 
+                    ymax = (speed + speed_sd)), width=.2) +
+  ylab("Speed (s)") +
+  xlab("")
+```
+
+---
+
+> Walking speed: In this analysis, we used participants' walking speed as they entered the experiment room, (i.e., before priming) as a covariate. The results show no significant difference between the Prime (M=6.27 SD=2.15) and the No-Prime group (M=6.39 SD=1.11) in the time necessary to walk along the hallway after the priming manipulation (*F*(1, 119) < 1, $\eta^2$=.01).
+
+---
+
+> ...in Experiment 2 we were indeed able to obtain the priming effect on walking speed for both subjective and objective timings. Crucially however, this was only possible by manipulating experimenters' expectations in such a way that they would expect primed participants to walk slower. 
+
+---
+
+```{r}
+#| label: doyen-etal-2012-fig-01
+#| fig-cap: "Figure 1 from @Doyen2012-ib"
+knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0029081.g001")
+```
+
+---
+
+>...participants in the Prime (M=7.25s SD=.33) condition walked significantly slower than those in the No-Prime (M=6.73s SD=.32) condition when tested by an experimenter expecting the primed participants to be slower (F(1, 24)=12,32, p=.002, $\eta^2$=.339). This result replicates Bargh et al. effect on walking speed. 
+
+---
+
+>Strikingly however, as indicated by the significant interaction between participants' condition X experimenters' condition (F(3, 46)=18.82, p<.001, η2=.295), the effect was reversed in the Fast experimenters condition, so that Primed participants (M=5.8s SD=.73) walked faster than No-Prime participants (M=6.43s SD=.4) (F(1, 24)=7,.5, p=.012, $\eta^2$=.274).
+
+---
+
+
+>In terms of objective timing (see Figure 2), we observed a difference between the Prime (M=6.95s SD=.36) and the No-Prime group (M=6.52s SD=.31) remains for the slow experimenter condition (F(1, 24)=7.07, p=.014, $\eta^2$=.228). Bargh et al's effect is thus replicated in this condition. 
+
+---
+
+```{r}
+#| label: doyen-etal-2012-fig-02
+#| fig-cap: "Figure 2 from @Doyen2012-ib"
+knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0029081.g002")
+```
+
+---
+
+>...There was no difference between the Prime (M=6.07s SD=.57) and the No-Prime (M=6.01s SD=.39) group (F(1, 24)=.231, p=.636, η2=.011) in the fast experimenter condition. 
+
+---
+
+>Finally, we also found a main effect of the experimenters' condition was found: participants tested by experimenters in the Slow condition (M=6.75s SD=.43) were slower than those tested by experimenters in the Fast condition (M=6.04s SD=.47) (F(1, 49)=30.44, p<.001, $\eta^2$=.404).
+
+## Open Science Notes
+
+- Neither @Bargh1996-yv or @Doyen2012-ib shared data
+- Plots could have shown individual participants' data
+- Videos of procedures would have been helpful
+
+## Comments Gilmore doesn't understand
+
+>Additionally, those participants who actually exhibited a slower walking speed reported in good proportion being aware of that particular behavior.
+
+---
+
+>...Thus, if our experiment had used subjective timings only, as in Bargh et al's original study, we would have erroneously concluded that experimenters' expectations was a critical factor for the priming effect to occur. But the objective timings show otherwise...
+
+---
+
+>...The reverse priming effect on walking speed observed on subjective timings stems from errors committed while operating the stopwatch: Experimenters in the fast condition were prone to commit more errors because they expected the need to capture a fast event and hence tended to be inaccurate in stopping the watch.
+
+---
+
+```{r}
+#| label: doyen-etal-2012-fig-03
+#| fig-cap: "Figure 3 from @Doyen2012-ib"
+knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0029081.g003")
+```
+
+---
+
+:::: {.columns}
+::: {.column width="50%"}
+!["Figure 1 from @Doyen2012-ib"](https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0029081.g001)
+:::
+::: {.column width="50%"}
+!["Figure 2 from @Doyen2012-ib"](https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0029081.g002)
+:::
+::::
+
 ## Today
 
 - [Assignment]{.green_assigned}
@@ -28,7 +138,12 @@ title: "Work session: Scientific integrity & Final Projects"
 1. Read a *successful* replication study: [@Soto2019-cm]
 2. Deep dive into how the [Survey-01](../surveys/survey-01.qmd) and [Survey-02](../surveys/survey-02.qmd) code actually works.
 3. Explore some large-scale databases of replication studies in Psychology: [@Roseler2024-mw] and <https://forrt.org/reversals/>
-4. Discuss norms and counternorms in science vs. other fields
+
+---
+
+4. Discuss norms and counternorms in science vs. other fields based on your own responses to [Exercise 03](../exercises/ex03-norms-counternorms.qmd)
+5. Explore @Protzko2023-ci retraction
+6. Understanding *p*-values
 
 # Resources
 
