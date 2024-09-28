@@ -3,20 +3,32 @@ subtitle: "2024-09-27 Fri"
 title: "Work session: Scientific integrity & Final Projects"
 ---
 
+<!-- # Prelude -->
+
+<!-- --- -->
+
+<!-- {{< video https://www.youtube.com/watch?v=nlaoR5m4L80 width="100%" height="70%">}} -->
+
+<!-- @tomtscotland2008-bo -->
+
 # Overview
 
 ## Announcements
 
 - [due today]{.orange_due}
-    - [Exercise 03: Norms and counter-norms](../exercises/ex03-norms-counternorms.qmd) 
-    
+    - [Exercise 03: Norms and counter-norms](../exercises/ex03-norms-counternorms.qmd)
+
+## In the news...
+
+![@Piller2024-oj](../include/img/retraction-watch-2024-09-27.png)
+
 ## Last time...
 
 - @Doyen2012-ib replication of Study 2 from @Bargh1996-yv
 
 ---
 
-> First, in Experiment 1, despite the use of a larger sample and an experimental procedure devoid of the limitations present in the original experiment, we were not able to replicate Bargh et al's [1] automatic effect of priming on walking speed. 
+> First, in Experiment 1, despite the use of a larger sample and an experimental procedure devoid of the limitations present in the original experiment, **we were not able to replicate Bargh et al's automatic effect of priming on walking speed**. 
 
 ---
 
@@ -62,12 +74,12 @@ knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?
 
 ---
 
->Strikingly however, as indicated by the significant interaction between participants' condition X experimenters' condition (F(3, 46)=18.82, p<.001, η2=.295), the effect was reversed in the Fast experimenters condition, so that Primed participants (M=5.8s SD=.73) walked faster than No-Prime participants (M=6.43s SD=.4) (F(1, 24)=7,.5, p=.012, $\eta^2$=.274).
+>Strikingly however, as indicated by the significant interaction between participants' condition X experimenters' condition (*F*(3, 46)=18.82, *p* <.001, $\eta^2$=.295), the effect was reversed in the Fast experimenters condition, so that Primed participants (M=5.8s SD=.73) walked faster than No-Prime participants (M=6.43s SD=.4) (*F*(1, 24)=7,.5, *p*=.012, $\eta^2$=.274).
 
 ---
 
 
->In terms of objective timing (see Figure 2), we observed a difference between the Prime (M=6.95s SD=.36) and the No-Prime group (M=6.52s SD=.31) remains for the slow experimenter condition (F(1, 24)=7.07, p=.014, $\eta^2$=.228). Bargh et al's effect is thus replicated in this condition. 
+>In terms of objective timing (see Figure 2), we observed a difference between the Prime (M=6.95s SD=.36) and the No-Prime group (M=6.52s SD=.31) remains for the slow experimenter condition (*F*(1, 24)=7.07, *p*=.014, $\eta^2$=.228). Bargh et al's effect is thus replicated in this condition.
 
 ---
 
@@ -79,7 +91,7 @@ knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?
 
 ---
 
->...There was no difference between the Prime (M=6.07s SD=.57) and the No-Prime (M=6.01s SD=.39) group (F(1, 24)=.231, p=.636, η2=.011) in the fast experimenter condition. 
+>...There was no difference between the Prime (M=6.07s SD=.57) and the No-Prime (M=6.01s SD=.39) group (*F*(1, 24)=.231, *p*=.636, $\eta^2$=.011) in the fast experimenter condition. 
 
 ---
 
@@ -142,8 +154,8 @@ knitr::include_graphics("https://journals.plos.org/plosone/article/figure/image?
 ---
 
 4. Discuss norms and counternorms in science vs. other fields based on your own responses to [Exercise 03](../exercises/ex03-norms-counternorms.qmd)
-5. Explore @Protzko2023-ci retraction
-6. Understanding *p*-values
+5. Explore @Protzko2023-ci retraction.
+6. Understanding *p*-values.
 
 # Resources
 

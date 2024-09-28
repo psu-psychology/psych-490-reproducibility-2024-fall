@@ -150,8 +150,8 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 *Priming effect: Replication study*
 
 - Read
-    - [@Doyen2012-ib]
-    - review [@Bargh1996-yv]; [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170715)
+    - @Doyen2012-ib
+    - review @Bargh1996-yv; [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170715)
 - [Class notes](notes/wk05-2024-09-25-priming-replication.qmd)
 
 <!-- *What R are we talking about?* -->
@@ -176,7 +176,10 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 #### Monday, September 30
 
-*Students' Choice*
+*Mind your p's*
+
+- Read
+  - @Denworth2019-uh
 
 #### Wednesday, October 02 {-}
 
