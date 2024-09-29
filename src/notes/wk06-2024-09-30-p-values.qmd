@@ -1,0 +1,143 @@
+---
+subtitle: "2024-09-30 Mon"
+title: "On *p* values"
+---
+
+# Overview
+
+## Announcements
+
+## Today
+
+*Mind your p's*
+
+- Read
+  - @Denworth2019-uh
+
+
+# @Denworth2019-uh
+
+## Goal
+
+- Detect differences that matter, are meaningful or significant
+
+> @Fisher1992-zq suggests that researchers might consider a p value of 0.05 as a handy guide: “It is convenient to take this point as a limit in judging whether a deviation ought to be considered significant or not.”
+
+@Denworth2019-uh
+
+---
+
+![@xkcd-p-values](https://imgs.xkcd.com/comics/p_values.png)
+
+---
+
+![https://mediaproxy.salon.com/width/1200/https://media2.salon.com/2017/04/holygrail.jpg](https://mediaproxy.salon.com/width/1200/https://media2.salon.com/2017/04/holygrail.jpg)
+
+---
+
+:::: {.columns}
+::: {.column width="60%"}
+>Ronald Wasserstein, the ASA’s executive director, puts it this way: “Statistical significance is supposed to be like a right swipe on Tinder. It indicates just a certain level of interest...”
+
+@Denworth2019-uh
+:::
+::: {.column width="40%"}
+![](https://magazine.amstat.org/wp-content/uploads/2020/12/Ron-Wasserstein2.jpg){width="70%"}
+
+![](https://filecache.mediaroom.com/mr5mr_tinder/180119/wordmark-R-tinder-pink-RGB-1000px.jpg)
+:::
+::::
+
+---
+
+:::: {.columns}
+::: {.column width="60%"}
+>...But unfortunately, that’s not what statistical significance has become. People say, ‘I’ve got 0.05, I’m good.’ The science stops.”
+
+@Denworth2019-uh
+:::
+::: {.column width="40%"}
+![](https://magazine.amstat.org/wp-content/uploads/2020/12/Ron-Wasserstein2.jpg){width="70%"}
+
+![](https://filecache.mediaroom.com/mr5mr_tinder/180119/wordmark-R-tinder-pink-RGB-1000px.jpg)
+:::
+::::
+
+---
+
+![@Wasserstein2016-kl](../include/img/wasserstein-lazar-2016.png)
+
+## Vocabulary
+
+- *p*-value: Probability of your observation if nothing is going on^[with a bunch of other assumptions].
+- *null hypothesis*: Nothing (meaningful, important) is going on.
+- *alpha* ($\alpha$): The *p* value we set in advance as our criterion for deciding when to *reject* the null hypothesis
+
+## Discuss @Denworth2019-uh figure {.scrollable}
+
+![@Denworth2019-uh](https://static.scientificamerican.com/sciam/assets/Image/2019/saw1019Denw31_d(1).png?w=1350){.lightbox}
+
+## Simulating p-values
+
+<https://rogilmore.shinyapps.io/PSYCH490-2023-APES/>
+
+## ASA Statement [@Wasserstein2016-kl]
+
+>1. P-values can indicate how incompatible the data are with a specified statistical model.
+
+>2. P-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.
+
+>3. Scientific conclusions and business or policy decisions should not be based only on whether a p-value passes a specific threshold.
+
+## @Wasserstein2016-kl
+
+>4. Proper inference requires full reporting and transparency
+
+>5. A p-value, or statistical significance, does not measure
+the size of an effect or the importance of a result.
+
+>6. By itself, a p-value does not provide a good measure of evidence regarding a model or hypothesis.
+
+## Other (better?) approaches
+
+> These include methods that emphasize estimation over testing, such as confidence,
+credibility, or prediction intervals; Bayesian methods; alternative measures of evidence, such as likelihood ratios or Bayes Factors; and other approaches such as decision-theoretic modeling and false discovery rates. 
+
+@Wasserstein2016-kl
+
+---
+
+>All these measures and approaches rely on further assumptions, but they may more directly address the size of an effect (and its associated uncertainty) or whether the hypothesis is correct.
+
+@Wasserstein2016-kl
+
+---
+
+- *confidence interval*: range of values that we think would contain our observation X% of the time if we did the study many times^[assuming a bunch of things]
+- Change alpha ($\alpha$), [@Benjamin2018-ff; @Lakens2017-sn] or eliminate it [@Amrhein2018-vp]
+
+---
+
+>Good statistical practice, as an essential component of good scientific practice, emphasizes principles of good study design and conduct, a variety of numerical and graphical summaries of data, understanding of the phenomenon under study, interpretation of results in context, complete reporting and proper logical and quantitative understanding of what data summaries mean. 
+
+@Wasserstein2016-kl
+
+---
+
+>No single index should substitute for scientific reasoning.
+
+@Wasserstein2016-kl
+
+# Next time
+
+*Fraud & misconduct*
+
+- Read
+    - [@Ritchie2020-fm], Chapter 3
+    - [@Bhattacharjee2013-rw], [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170718)
+    - (Skim) [@Levelt2012-ap]
+    - (Skim) [@Carpenter2012-qy]
+
+# Resources
+
+## References

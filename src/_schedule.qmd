@@ -180,6 +180,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 - Read
   - @Denworth2019-uh
+- [Class notes](notes/wk06-2024-09-30-p-values.qmd)
 
 #### Wednesday, October 02 {-}
 
