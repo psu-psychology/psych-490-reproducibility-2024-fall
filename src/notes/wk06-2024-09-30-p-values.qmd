@@ -127,6 +127,7 @@ credibility, or prediction intervals; Bayesian methods; alternative measures of 
 
 @Wasserstein2016-kl
 
+
 ---
 
 - *confidence interval*: range of values that we think would contain our observation X% of the time if we did the study many times^[assuming a bunch of things]
@@ -139,6 +140,8 @@ credibility, or prediction intervals; Bayesian methods; alternative measures of 
 >There is a solution to every problem: simple, quick, and wrong.
 
 >For every problem there is a solution that is simple, neat—and wrong.
+
+---
 
 >Every complex problem has a solution which is simple, direct, plausible—and wrong.
 
@@ -155,6 +158,9 @@ credibility, or prediction intervals; Bayesian methods; alternative measures of 
 ---
 
 ![@Tampio2022-tg](../include/img/scepticism.png){width="100%" height="70%"}
+---
+
+![](https://m.media-amazon.com/images/I/91lqu3hcqWL._SY522_.jpg)
 
 # Next time
 
