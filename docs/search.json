@@ -639,28 +639,28 @@
   {
     "objectID": "notes/wk06-2024-10-02-fraud-misconduct.html#announcements",
     "href": "notes/wk06-2024-10-02-fraud-misconduct.html#announcements",
-    "title": "Scientific integrity",
+    "title": "Fraud & misconduct",
     "section": "Announcements",
     "text": "Announcements\n\nDue Friday\n\nExercise 03: Violations of scientific integrity"
   },
   {
     "objectID": "notes/wk06-2024-10-02-fraud-misconduct.html#today",
     "href": "notes/wk06-2024-10-02-fraud-misconduct.html#today",
-    "title": "Scientific integrity",
+    "title": "Fraud & misconduct",
     "section": "Today",
     "text": "Today\nFraud & misconduct\n\nRead\n\n(Ritchie, 2020), Chapter 3\n(Bhattacharjee, 2013)\n(Skim) (Levelt, Drenth, & Noort, 2012)\n(Skim) (Carpenter, 2012)"
   },
   {
     "objectID": "notes/wk06-2024-10-02-fraud-misconduct.html#discuss",
     "href": "notes/wk06-2024-10-02-fraud-misconduct.html#discuss",
-    "title": "Scientific integrity",
+    "title": "Fraud & misconduct",
     "section": "Discuss",
     "text": "Discuss\n\nDo you sympathize with Stapel? Why or why not?\nHave you been in situations like Stapel describes where you have been asked to make a messy and complicated problem simpler?\nDo you think that academic science is becoming a business? Why or why not?\nWhy is “massaging of data” or selective reporting of experiments a problem?\nWere the punishments in these cases fair and just or unfair and unjust? Why or why not?"
   },
   {
     "objectID": "notes/wk06-2024-10-02-fraud-misconduct.html#references",
     "href": "notes/wk06-2024-10-02-fraud-misconduct.html#references",
-    "title": "Scientific integrity",
+    "title": "Fraud & misconduct",
     "section": "References",
     "text": "References\n\n\n\n\nPSYCH 490.012 • Fall 2024\n\n\n\n\nBhattacharjee, Y. (2013). The mind of a con man. The New York Times. Retrieved from https://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html\n\n\nCarpenter, S. (2012). Harvard psychology researcher committed fraud, US investigation concludes. Science, 6. Retrieved from https://www.science.org/content/article/harvard-psychology-researcher-committed-fraud-us-investigation-concludes\n\n\nLevelt, W. J. M., Drenth, P. J. D., & Noort, E. (2012). Flawed science: The fraudulent research practices of social psychologist diederik stapel. https://pure.mpg.de/rest/items/item_1569964/component/file_1569966/content; pure.mpg.de. Retrieved from https://pure.mpg.de/rest/items/item_1569964/component/file_1569966/content\n\n\nRitchie, S. (2020). Science fictions: Exposing fraud, bias, negligence and hype in science (1st ed.). Penguin Random House. Retrieved from https://www.amazon.com/Science-Fictions/dp/1847925669"
   },
@@ -2490,5 +2490,12 @@
     "title": "On p values",
     "section": "Wasserstein & Lazar (2016)",
     "text": "Wasserstein & Lazar (2016)\n\nProper inference requires full reporting and transparency\n\n\nA p-value, or statistical significance, does not measure the size of an effect or the importance of a result.\n\n\nBy itself, a p-value does not provide a good measure of evidence regarding a model or hypothesis."
+  },
+  {
+    "objectID": "notes/wk06-2024-10-02-fraud-misconduct.html#last-time",
+    "href": "notes/wk06-2024-10-02-fraud-misconduct.html#last-time",
+    "title": "Fraud & misconduct",
+    "section": "Last time…",
+    "text": "Last time…\n\nP-values can indicate how incompatible the data are with a specified statistical model."
   }
 ]

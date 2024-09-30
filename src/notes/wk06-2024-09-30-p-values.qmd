@@ -97,8 +97,7 @@ title: "On *p* values"
 
 >4. Proper inference requires full reporting and transparency
 
->5. A p-value, or statistical significance, does not measure
-the size of an effect or the importance of a result.
+>5. A p-value, or statistical significance, does not measure the size of an effect or the importance of a result.
 
 >6. By itself, a p-value does not provide a good measure of evidence regarding a model or hypothesis.
 

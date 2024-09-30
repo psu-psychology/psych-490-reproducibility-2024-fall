@@ -191,6 +191,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - [@Bhattacharjee2013-rw], [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170718)
     - (Skim) [@Levelt2012-ap]
     - (Skim) [@Carpenter2012-qy]
+- [Class notes](notes/wk06-2024-10-02-fraud-misconduct.qmd)
 
 #### Friday, October 04 {-}
 

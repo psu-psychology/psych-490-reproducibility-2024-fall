@@ -1,6 +1,6 @@
 ---
 subtitle: "2024-10-02 Wed"
-title: "Scientific integrity"
+title: "Fraud & misconduct"
 ---
 
 # Overview
@@ -9,6 +9,38 @@ title: "Scientific integrity"
 
 - [Due Friday]{.orange_due}
     - [Exercise 03: Violations of scientific integrity](../exercises/ex03-scientific-integrity.qmd)
+    
+## Last time...
+
+>P-values can indicate how incompatible the data are with a specified statistical model.
+
+---
+
+TRUE
+
+---
+
+>P-values measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.
+
+---
+
+FALSE
+
+---
+
+>A p-value, or statistical significance, does not measure the size of an effect or the importance of a result.
+
+---
+
+TRUE
+
+---
+
+>By itself, a p-value provides a good measure of evidence regarding a model or hypothesis.
+
+---
+
+FALSE
 
 ## Today
 
@@ -24,24 +56,23 @@ title: "Scientific integrity"
 
 ---
 
-```{r, fig.cap="Diedrik Stapel from [@Bhattacharjee2013-rw](https://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html)"}
-knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28stapel1/28stapel1-jumbo-v5.jpg?quality=75&auto=webp")
-```
+![Diedrik Stapel from @Bhattacharjee2013-rw](https://static01.nyt.com/images/2013/04/28/magazine/28stapel1/28stapel1-jumbo-v5.jpg?quality=75&auto=webp){width="70%" height="50%"}
 
 ---
 
->Stapel did not deny that his deceit was driven by ambition. But it was more complicated than that, he told me. He insisted that he loved social psychology but had been frustrated by the messiness of experimental data, which rarely led to clear conclusions.  
+>Stapel did not deny that his deceit was driven by ambition. But it was more complicated than that, he told me. He insisted that he loved social psychology but had been frustrated by the messiness of experimental data, which rarely led to clear conclusions. 
 
 <p style="text-align:center;">
-[@Bhattacharjee2013-rw]
+@Bhattacharjee2013-rw
 </p>
+
 
 ---
 
 >His lifelong obsession with elegance and order, he said, led him to concoct sexy results that journals found attractive. “It was a quest for aesthetics, for beauty — instead of the truth,” he said. He described his behavior as an addiction that drove him to carry out acts of increasingly daring fraud, like a junkie seeking a bigger and better high.
 
 <p style="text-align:center;">
-[@Bhattacharjee2013-rw]
+@Bhattacharjee2013-rw
 </p>
 
 ---
@@ -49,7 +80,7 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >In his early years of research — when he supposedly collected real experimental data — Stapel wrote papers laying out complicated and messy relationships between multiple variables. He soon realized that journal editors preferred simplicity. “They are actually telling you: ‘Leave out this stuff. Make it simpler,’ ” Stapel told me. 
 
 <p style="text-align:center;">
-[@Bhattacharjee2013-rw]
+@Bhattacharjee2013-rw
 </p>
 
 ---
@@ -57,7 +88,7 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >Before long, he was striving to write elegant articles.
 
 <p style="text-align:center;">
-[@Bhattacharjee2013-rw]
+@Bhattacharjee2013-rw
 </p>
 
 ---
@@ -65,7 +96,7 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >On a Sunday morning, as we drove to a village near Maastricht to see his parents, Stapel reflected on why his behavior had sparked such outrage in the Netherlands. “People think of scientists as monks in a monastery looking out for the truth,” he said. 
 
 <p style="text-align:center;">
-[@Bhattacharjee2013-rw]
+@Bhattacharjee2013-rw
 </p>
 
 ---
@@ -73,7 +104,7 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >“People have lost faith in the church, but they haven’t lost faith in science. My behavior shows that science is not holy.”
 
 <p style="text-align:center;">
-[@Bhattacharjee2013-rw]
+@Bhattacharjee2013-rw
 </p>
 
 ---
@@ -81,7 +112,7 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >What the public didn’t realize, he said, was that academic science, too, was becoming a business. “There are scarce resources, you need grants, you need money, there is competition,” he said. “Normal people go to the edge to get that money. Science is of course about discovery, about digging to discover the truth. 
 
 <p style="text-align:center;">
-[@Bhattacharjee2013-rw]
+@Bhattacharjee2013-rw
 </p>
 
 ---
@@ -89,7 +120,7 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >But it is also communication, persuasion, marketing. I am a salesman. I am on the road. People are on the road with their talk. With the same talk. It’s like a circus.” 
 
 <p style="text-align:center;">
-[@Bhattacharjee2013-rw]
+@Bhattacharjee2013-rw
 </p>
 
 ---
@@ -97,7 +128,7 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >He named two psychologists he admired — John Cacioppo and Daniel Gilbert — neither of whom has been accused of fraud. “They give a talk in Berlin, two days later they give the same talk in Amsterdam, then they go to London. They are traveling salesmen selling their story.”
 
 <p style="text-align:center;">
-[@Bhattacharjee2013-rw]
+@Bhattacharjee2013-rw
 </p>
 
 ---
@@ -105,7 +136,7 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >Fraud like Stapel’s — brazen and careless in hindsight — might represent a lesser threat to the integrity of science than the massaging of data and selective reporting of experiments. The young professor who backed the two student whistle-blowers told me that tweaking results — like stopping data collection once the results confirm a hypothesis — is a common practice. 
 
 <p style="text-align:center;">
-[@Bhattacharjee2013-rw]
+@Bhattacharjee2013-rw
 </p>
 
 ---
@@ -113,7 +144,7 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >“I could certainly see that if you do it in more subtle ways, it’s more difficult to detect,” Ap Dijksterhuis, one of the Netherlands’ best known psychologists, told me. He added that the field was making a sustained effort to remedy the problems that have been brought to light by Stapel’s fraud.
 
 <p style="text-align:center;">
-[@Bhattacharjee2013-rw]
+@Bhattacharjee2013-rw
 </p>
 
 ---
@@ -125,7 +156,7 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >The adjective “sloppy” seems charitable. Several psychologists I spoke to admitted that each of these more common practices was as deliberate as any of Stapel’s wholesale fabrications. 
 
 <p style="text-align:center;">
-[@Bhattacharjee2013-rw]
+@Bhattacharjee2013-rw
 </p>
 
 ---
@@ -137,7 +168,7 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >What may be most troubling about the research culture the committees describe in their report [@Levelt2012-ap] are the plentiful opportunities and incentives for fraud. “The cookie jar was on the table without a lid” is how Stapel put it to me once. Those who suspect a colleague of fraud may be inclined to keep mum because of the potential costs of whistle-blowing.
 
 <p style="text-align:center;">
-[@Bhattacharjee2013-rw]
+@Bhattacharjee2013-rw
 </p>
 
 # Hauser {-}
@@ -147,7 +178,7 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >Former Harvard University psychologist Marc Hauser fabricated and falsified data and made false statements about experimental methods in six federally funded studies, according to a report released yesterday by the U.S. Department of Health and Human Services's Office of Research Integrity (ORI). 
 
 <p style="text-align:center;">
-[@Carpenter2012-qy]
+@Carpenter2012-qy
 </p>
 
 ---
@@ -159,15 +190,16 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >He did not admit deliberate misconduct, however, and implied that his mistake was that he "tried to do too much" and "let important details get away from my control."
 
 <p style="text-align:center;">
-[@Carpenter2012-qy]
+@Carpenter2012-qy
 </p>
+
 
 ---
 
 >In the report released yesterday, ORI identified six instances in which Hauser engaged in research misconduct in research funded by the National Institutes of Health. Specifically:
 
 <p style="text-align:center;">
-[@Carpenter2012-qy]
+@Carpenter2012-qy
 </p>
 
 ---
@@ -195,7 +227,7 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 >In an experiment involving rhesus monkeys that was never written up for publication, Hauser falsely changed coding results such that the altered results fit the theoretical prediction.
 
 <p style="text-align:center;">
-[@Carpenter2012-qy]
+@Carpenter2012-qy
 </p>
 
 ---
@@ -218,11 +250,11 @@ knitr::include_graphics("https://static01.nyt.com/images/2013/04/28/magazine/28s
 *Work session: P-hacking & Final Project Proposals*
 
 - [Due]{.orange_due}
-    - [Exercise 04: Violations of scientific integrity](exercises/ex04-scientific-integrity.qmd)
+    - [Exercise 04: Violations of scientific integrity](../exercises/ex04-scientific-integrity.qmd)
 - [Assignment]{.green_assigned}
-    - [Exercise 05: P-hack your way to scientific glory](exercises/ex05-p-hacking.qmd) write-up.
+    - [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd) write-up.
 - Work session
-    - [Final project proposals](exercises/final-project.qmd), [due Friday, October 13]{.orange_due}.
+    - [Final project proposals](../exercises/final-project.qmd), [due Friday, October 13]{.orange_due}.
 
 # Resources
 
