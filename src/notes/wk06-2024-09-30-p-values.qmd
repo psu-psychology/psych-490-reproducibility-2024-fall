@@ -18,7 +18,6 @@ title: "On *p* values"
 - Read
   - @Denworth2019-uh
 
-
 # @Denworth2019-uh
 
 ## Goal

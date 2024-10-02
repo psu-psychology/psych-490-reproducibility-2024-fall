@@ -7,20 +7,26 @@ title: "2024-10-07 Mon"
 
 ## Announcements
 
+- **NO CLASS on Wednesday, 10/9**
+
 - [Due Friday]{.orange_due}
-    - [Exercise 04: P-hack your way to scientific glory](../exercises/ex04-p-hacking.qmd) write-up.
-- Discuss Friday [Exercise 04: P-hack your way to scientific glory](../exercises/ex04-p-hacking.qmd).
+    - [Exercise 04: Scientific integrity](../exercises/ex04-p-hacking.qmd) write-up.
+- Discuss Friday [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd).
 
 ## In the news {.scrollable}
 
-![Retraction Watch 2023-10-02](../include/img/retraction-watch-2023-10-02-v2.png){fig-align="center" height="50%"}
+![Retraction Watch 2024-09-30](../include/img/retraction-watch-2024-09-30.png){width="100%"}
+
+## Closer to home {.scrollable .lightbox}
+
+![@Joelving2024-co](../include/img/retraction-deborah-kelly-psu-2024-09-30.png){width="100%"}
 
 ## Today
 
 *Retraction and scientific integrity*
 
 - Read & Discuss
-    - [@Brainerd2018-iy]
+    - @Brainerd2018-iy
 
 ---
 
@@ -30,16 +36,14 @@ Brainerd, J. & You, J. (2018, 25. October). What a massive database of retracted
 
 - Study [methodology](https://www.science.org/content/article/about-these-data?adobe_mc=MCMID%3D47656180226673402683555563101738189823%7CMCORGID%3D242B6472541199F70A4C98A6%2540AdobeOrg%7CTS%3D1676298737&_ga=2.2514611.247686987.1676298736-1493408718.1676298736).
 
-```{r, fig.cap="[@Brainerd2018-iy](https://doi.org/10.1126/science.aav8384)", out.width="80%"}
-knitr::include_graphics("../include/img/brainerd-2018-fig.png")
-```
+![@Brainerd2018-iy](../include/img/brainerd-2018-fig.png)
 
 ---
 
 > Then, in 2009, the Committee on Publication Ethics (COPE), a nonprofit group in Eastleigh, U.K., that now advises more than 12,000 journal editors and publishers, released [a model policy](https://publicationethics.org/files/retraction%20guidelines_0.pdf) for how journals should handle retractions.
 
 <p style="text-align:center;">
-[@Brainerd2018-iy]
+@Brainerd2018-iy
 </p>
 
 ---
@@ -76,7 +80,7 @@ knitr::include_graphics("../include/img/brainerd-2018-fig-e.png")
 >Behaviors widely understood within science to be dishonest and unethical, but which fall outside the U.S. misconduct definition, seem to account for another 10%. Those behaviors include forged authorship, fake peer reviews, and failure to obtain approval from institutional review boards for research on human subjects or animals. 
 
 <p style="text-align:center;">
-[@Brainerd2018-iy]
+@Brainerd2018-iy
 </p>
 
 ---
@@ -84,7 +88,7 @@ knitr::include_graphics("../include/img/brainerd-2018-fig-e.png")
 >(Such retractions have increased as a share of all retractions, and some experts argue the United States should expand its definition of scientific misconduct to cover those behaviors.)
 
 <p style="text-align:center;">
-[@Brainerd2018-iy]
+@Brainerd2018-iy
 </p>
 
 ---
@@ -136,21 +140,17 @@ There are $n=$ `r dim(hijacked)[1]` journals that have been hijacked!
 ---
 
 ::: {.callout-note}
-
 Expanding on this data analysis and visualization could be a final project.
 
 You could be (PSYCH 490) famous!
-
 :::
 
 ---
 
 ::: {.callout-note}
-
 Students could consider updating the story of a retracted paper as a final project. For example, what happened to the author(s)?
 
-This would involve extending and elaborating on [Exercise 03](../exercises/ex04-p-hacking.qmd)
-
+This would involve extending and elaborating on [Exercise 04](../exercises/ex04-scientific-integrity.qmd)
 :::
 
 ## Discussion of Office of Research Integrity (ORI) <https://ori.hhs.gov/> {.scrollable}
@@ -185,14 +185,16 @@ A final project could involve a description and update about this Penn State pro
 
 # Next time
 
+### Friday, October 11 {-}
+
 *Questionable research practices*
 
 - Read
-    - [@simmons_false-positive_2011]
-    - (Skim) [@John2012-tk]
+    - @simmons_false-positive_2011
 - Watch
-    - [@Ngiam2020-ln]
-- [Class notes](wk07-2023-10-04.qmd)
+    - @Ngiam2020-ln
+- Bring
+    - Draft [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd) for discussion.
 
 # Resources
 
