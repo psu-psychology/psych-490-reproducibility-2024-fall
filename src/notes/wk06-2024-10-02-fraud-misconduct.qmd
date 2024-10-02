@@ -8,7 +8,7 @@ title: "Fraud & misconduct"
 ## Announcements
 
 - [Due Friday]{.orange_due}
-    - [Exercise 03: Violations of scientific integrity](../exercises/ex03-scientific-integrity.qmd)
+    - [Exercise 04: Violations of scientific integrity](../exercises/ex04-scientific-integrity.qmd)
     
 ## Last time...
 
