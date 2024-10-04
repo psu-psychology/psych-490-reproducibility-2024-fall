@@ -202,7 +202,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 - [Assignment]{.green_assigned}
     - [Exercise 05: P-hack your way to scientific glory](exercises/ex05-p-hacking.qmd) write-up.
 - Work session
-    - [Final project proposals](exercises/final-project.qmd), [due Friday, October 13]{.orange_due}.
+    - [Final project proposals](exercises/final-project.qmd), [due Friday, October 18]{.orange_due}.
 - [Class notes](notes/wk06-2024-10-04-work-session.qmd)
 
 ### October 7-11 {- #week-07}
