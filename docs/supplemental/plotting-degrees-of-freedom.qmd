@@ -1,0 +1,149 @@
+---
+title: "On plots & degrees of freedom"
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+---
+
+## Purpose
+
+This document discusses why it is a good idea to plot your data before you run descriptive or predictive statistical models.
+It also discusses degrees of freedom, and why the idea is important.
+
+```{r setup}
+library(ggplot2)
+library(datasauRus)
+library(dplyr)
+library(stats)
+library(graphics)
+```
+
+## Plot your data
+
+Here are a bunch of scatter plots.
+
+```{r}
+#| label: fig-datasaurus-dozen
+#| fig-cap: "DatasauRus figures from [@datasauRus-2022]"
+ggplot(datasaurus_dozen, aes(x = x, y = y, colour = dataset))+
+  geom_point() +
+  theme_void() +
+  theme(legend.position = "none")+
+  facet_wrap(~dataset, ncol = 3)
+```
+
+They look pretty different, don't they?
+
+Except that these all have roughly the same summary statistics.
+
+```{r}
+datasaurus_dozen %>%
+  group_by(dataset) %>%
+  summarize(
+    mean_x    = mean(x),
+    mean_y    = mean(y),
+    std_dev_x = sd(x),
+    std_dev_y = sd(y),
+    corr_x_y  = cor(x, y),
+    nxy       = length(x)
+  )
+```
+
+Think about that a minute.
+If we *didn't* plot the data and only had the means, standard deviations, and correlation values available from some table in a paper, we'd think these sets of variables were essentially the same, wouldn't we?
+
+These plots come from the `datasauRus` [@datasauRus-2022] package inspired by a paper by [@Matejka2017-kp].
+The [@Matejka2017-kp] is based on Anscombe's quartet [@Anscombe1973-ag], which is also available as the [`anscombe`](https://cran.r-project.org/package=anscombe) package. 
+Here are the originals from [@Anscombe1973-ag].
+
+::: {.callout-note}
+
+Below, I use the code that accompanies the `anscombe` package verbatim, slightly reordered to plot first.
+
+:::
+
+```{r anscombe-prep}
+ff <- y ~ x
+mods <- setNames(as.list(1:4), paste0("lm", 1:4))
+for(i in 1:4) {
+  ff[2:3] <- lapply(paste0(c("y","x"), i), as.name)
+  ## or   ff[[2]] <- as.name(paste0("y", i))
+  ##      ff[[3]] <- as.name(paste0("x", i))
+  mods[[i]] <- lmi <- lm(ff, data = anscombe)
+  #print(anova(lmi))
+}
+```
+
+```{r}
+ff <- y ~ x
+mods <- setNames(as.list(1:4), paste0("lm", 1:4))
+for(i in 1:4) {
+  ff[2:3] <- lapply(paste0(c("y","x"), i), as.name)
+  ## or   ff[[2]] <- as.name(paste0("y", i))
+  ##      ff[[3]] <- as.name(paste0("x", i))
+  mods[[i]] <- lmi <- lm(ff, data = anscombe)
+  # print(anova(lmi))
+}
+```
+
+```{r fig-anscombe-quartet, fig.cap="Data sets from [@Anscombe1973-ag]"}
+op <- par(mfrow = c(2, 2), mar = 0.1+c(4,4,1,1), oma =  c(0, 0, 2, 0))
+for(i in 1:4) {
+  ff[2:3] <- lapply(paste0(c("y","x"), i), as.name)
+  plot(ff, data = anscombe, col = "red", pch = 21, bg = "orange", cex = 1.2,
+       xlim = c(3, 19), ylim = c(3, 13))
+  abline(mods[[i]], col = "blue")
+}
+mtext("Anscombe's 4 Regression data sets", outer = TRUE, cex = 1.5)
+```
+
+Here are some summary statistics for these pairs.
+
+```{r}
+summary(anscombe)
+```
+
+::: {.callout-note}
+
+I don't remember my stats professor showing us Anscombe's datasets.
+The `datasauRus` came along much later.
+But I'm pretty sure this was what he had in mind when he exhorted the class to "plot your data!"
+It's excellent advice, and I try to follow it as an author and as a reviewer.
+
+:::
+
+## Degrees of freedom
+
+One way to think about what's going on here is that we analysts want an efficient way to summarize complex sets of data.
+Statistics like the mean or median, standard deviation, and correlation often do that.
+If a big set of data is well described by one of these statistics, then we've saved ourselves a lot of time and headache.
+If we think about a summary of some dataset as having $m$ degrees of freedom, what we mean is that we only need $m$ numbers for the summary.
+So, if we summarize a big dataset with the mean, then our summary (or model) has only one degree of freedom.
+If we include the standard deviation, then our summary has two degrees of freedom.
+If we use a linear regression to predict `y ~ x` then we usually have a slope estimate and an intercept estimate, or two degrees of freedom.
+
+If we're summarizing a raw dataset with $n=142$ points in `X` and $n=142$ datapoints in `Y` like the `datasauRus` sets above, being able to summarize with just a few numbers (degrees of freedom) is powerful and efficient.
+And in general, we analysts favor more parsimonious models of data--those with fewer degrees of freedom.
+
+The problem arises when our simple models with few degrees of freedom don't really capture important information about datasets, or when they persuade us to think (wrongly) that datasets with the same summary statistics are necessarily comparable.
+They might be, but they might not be.
+We have to look at the data--plot it--and confirm that we haven't lost information in simplifying a dataset with a small number of statistics.
+The `datasauRus` and `anscombe` plots show us perverse situations when the small degree of freedom summaries are deeply misleading.
+
+The converse is also true.
+We can describe a dataset increasingly precisely with a large number of degrees of freedom.
+For example, imagine that our model of one of the `datasauRus` sets has $2*n$ degrees of freedom, where $n=142$.
+If those 284 numbers are equal to the data points themselves, our summary has captured the data exactly.
+But we haven't really gained anything, have we?
+We've just redescribed the data without reducing it to a summary with fewer degrees of freedom than existed in the first place.
+So, the best summaries (models) of data are small (in the number of degrees of freedom), but not too small.
+
+## Researcher degrees of freedom
+
+When [@simmons_false-positive_2011] discuss 'researcher degrees of freedom', they extend these ideas in a new direction.
+How many steps (degrees of freedom) did the analysts take to reach their conclusions?
+Ideally, as few as possible, and certainly far less than the number of data points.
+
+So, how many researcher degrees of freedom are too many?
+That's a judgment call.
+But whatever you determine, justify your argument.
+And maybe see whether the authors plotted their data in a way that helps make a case one way or the other.

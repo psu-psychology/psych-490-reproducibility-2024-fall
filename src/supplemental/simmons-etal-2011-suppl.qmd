@@ -1,0 +1,124 @@
+---
+title: "Simmons et al. 2011"
+author: "Rick Gilmore"
+bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
+csl: ../include/bib/apa.csl
+---
+
+## Purpose
+
+This document simulates some data to illustrate Study 1 from [@simmons_false-positive_2011].
+We discussed this study on [2023-10-04](../notes/wk07-2023-10-04.qmd) and [2023-10-06](../notes/wk07-2023-10-06.qmd).
+
+## Generate data
+
+There are two song groups:
+
+```{r}
+song <- c("kid", "ctrl")
+song <- rep(song, each = 15)
+song
+```
+
+There is one covariate, father's age.
+Let's say that these are uniformly distributed between 40 and 70.
+
+```{r}
+father_age <- runif(n = 30, min = 40, max = 70)
+hist(father_age)
+```
+
+And there is one dependent (outcome) measure that is the focus, “How old do you feel right now?”, with five options: very young, young, neither young nor old, old, and very old.
+Let's give these ratings numbers between 1 and 5, and let's say that the average rating for the "kid" group was 3.75 and the average rating for the "ctrl" group was 3.
+We'll assume that each of the groups ratings are normally distributed around these two means.
+
+```{r}
+old_feeling <- c(rnorm(15, mean = 3.75, sd = 0.5), rnorm(15, mean = 3, sd = 0.5))
+hist(old_feeling)
+```
+
+But of course since respondents only give integer (1, 2, 3, 4, 5) ratings, we have to change the continuous scores to integer values.
+
+```{r}
+old_feeling <- round(old_feeling, 0)
+hist(old_feeling, main = "Rounded `old_feeling`", breaks = c(1, 2, 3, 4, 5))
+```
+
+## Visualize data
+
+To visualize the data, we'll make a data frame.
+This is a convenient 'rectangular' format for our data.
+
+```{r}
+false_pos_study_1 <- data.frame(sub_id = 1:30, song, father_age, old_feeling)
+str(false_pos_study_1)
+```
+Now, let's plot this to show how analysis of covariance (ANCOVA) might work.
+
+:::  {.callout-note}
+
+My graduate statistics professor, Dr. Mike Meyer, always exhorted us to "plot our data!"
+That is, he thought we should always plot first, then run our statistics later.
+I've taken that advice to heart in my own work.
+
+:::
+
+```{r fig-simmons-etal-2011-ancova, fig.cap="Illustration of a simulated ANCOVA based on [@simmons_false-positive_2011]"}
+library(tidyverse)
+
+false_pos_study_1 |>
+  ggplot() +
+  aes(x = father_age, y = old_feeling, color = song) +
+  geom_point() +
+  geom_smooth(method = lm) # linear fit
+```
+
+This plot adds two lines to the data, one for each song group.
+The ANCOVA will let us evaluate whether the `old_feeling` is predicted by a linear combination of `father_age` and `song`.
+
+In the code below, notice that we set `formula = old_feeling ~ song + father_age`. 
+This is how we tell the `aov()` command that the linear combination of `song` and `father_age` are the variables we want to use to predict `old_feeling`.
+
+```{r}
+glm_ancova <- aov(formula = old_feeling ~ song + father_age, data = false_pos_study_1)
+summary(glm_ancova)
+```
+Now, let's imagine that `father_age` wasn't entirely random for some reason.
+
+```{r}
+father_age <- (69:40) + rnorm(30, 0, 1)
+plot(1:30, father_age)
+hist(father_age)
+```
+
+```{r}
+false_pos_study_1a <- data.frame(sub_id = 1:30, song, father_age, old_feeling)
+
+false_pos_study_1a |>
+  ggplot() +
+  aes(x = father_age, y = old_feeling, color = song) +
+  geom_point() +
+  geom_smooth(method = lm) # linear fit
+
+glm_ancova <- aov(formula = old_feeling ~ song + father_age, data = false_pos_study_1a)
+summary(glm_ancova)
+```
+
+Or, maybe worse, that how old participants' felt related to their fathers' age.
+
+```{r}
+old_feeling <- (father_age-40)/(70-40) + rnorm(n=30, 0, 0.25)
+old_feeling <- round(old_feeling/(max(old_feeling)-min(old_feeling))*4 + 1, 0)
+
+false_pos_study_1b <- data.frame(sub_id = 1:30, song, father_age, old_feeling)
+
+false_pos_study_1b |>
+  ggplot() +
+  aes(x = father_age, y = old_feeling, color = song) +
+  geom_point() +
+  geom_smooth(method = lm) # linear fit
+
+glm_ancova <- aov(formula = old_feeling ~ song + father_age, data = false_pos_study_1b)
+summary(glm_ancova)
+```
+

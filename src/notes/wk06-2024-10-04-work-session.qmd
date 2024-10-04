@@ -1,0 +1,49 @@
+---
+subtitle: "2024-10-04 Fri"
+title: "Work session: Exercise 05 and Final Project proposals"
+---
+
+# Prelude
+
+## Plot your data!
+
+{{< video https://youtu.be/DbJyPELmhJc?si=8ZQhHTmpPzp-pi3Z width="100%" height="70%" >}}
+
+@Matejka2017-kp
+
+# Overview
+
+## Announcements
+
+- [Due]{.orange_due}
+    - [Exercise 04: Violations of scientific integrity](../exercises/ex04-scientific-integrity.qmd)
+
+## Discuss
+
+- Do you sympathize with Stapel? Why or why not?
+- Have you been in situations like Stapel describes where you have been asked to make a messy and complicated problem simpler?
+- Do you think that academic science is becoming a business? Why or why not?
+- Why is "massaging of data" or selective reporting of experiments a problem?
+- Were the punishments in these cases fair and just or unfair and unjust? Why or why not?
+
+## Today
+
+*Work session: P-hacking & Final project proposals*
+
+- [Assignment]{.green_assigned}
+    - [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd) write-up.
+- Work session
+    - [Final project proposals](../exercises/final-project.qmd), [due Friday, October 13]{.orange_due}.
+
+# Next time
+
+*Retraction and scientific integrity*
+
+*On Zoom*: <https://psu.zoom.us/my/rogilmore>. Check-in for attendance. Join from anywhere convenient to you.
+
+- Read
+    - @Brainerd2018-iy
+    
+# Resources
+
+## References

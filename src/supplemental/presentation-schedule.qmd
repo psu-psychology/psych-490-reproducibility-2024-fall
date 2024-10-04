@@ -1,0 +1,141 @@
+---
+title: "Presentations"
+---
+
+Tentative schedule as of `r Sys.time()`.
+
+## Background
+
+This page documents how the presentation schedule can be automatically generated from the student survey.
+
+## Download data
+
+```{r}
+googledrive::drive_auth(email = "rick.o.gilmore@gmail.com")
+```
+
+```{r}
+if (!dir.exists('csv')) {
+  dir.create('csv')
+}
+
+csv_fn <- "csv/psych-490-2023-fall-presentations.csv"
+
+googledrive::drive_download(file = 'PSYCH 490.009 Fall 2023 Project Info (Responses)', path = csv_fn, type = 'csv', overwrite = TRUE)
+```
+
+```{r}
+if (file.exists(csv_fn)) {
+  presentations_df <- readr::read_csv(csv_fn, show_col_types = FALSE)
+} else {
+  message("File not found: ", csv_fn)
+  presentations_df <- NULL
+}
+```
+
+## Clean the data
+
+```{r}
+new_names <-
+  c(
+    "Timestamp",
+    "Authors",
+    "Title",
+    "Format",
+    "Give_talk",
+    "Preferred_date"
+  )
+
+# Make new data frame with long and short names for reference
+presentation_qs <- tibble::tibble(q_long = names(presentations_df), q_short = new_names)
+
+# Swap out old (long) names for new (short) names
+names(presentations_df) <- new_names
+```
+
+## Select subsets by preferred date
+
+```{r}
+presentations_df <- presentations_df |>
+  dplyr::filter(!stringr::str_detect(Authors, "Gilmore"))
+
+fri_df <- presentations_df |>
+  dplyr::filter(stringr::str_detect(Preferred_date, "Fri December 1"),
+                Give_talk == "Yes")
+
+mon_df <- presentations_df |>
+  dplyr::filter(stringr::str_detect(Preferred_date, "Mon"),
+                Give_talk == "Yes")
+
+wed_df <- presentations_df |>
+  dplyr::filter(stringr::str_detect(Preferred_date, "Wed"),
+                Give_talk == "Yes")
+
+fri_8_df <- presentations_df |>
+  dplyr::filter(stringr::str_detect(Preferred_date, "Fri December 8"),
+                Give_talk == "Yes")
+
+no_pref <- presentations_df |>
+  dplyr::filter(stringr::str_detect(Preferred_date, "No preference"),
+                Give_talk == "Yes")
+
+times <- c("04:45", "05:00", "05:15")
+```
+
+## Day 1: Friday, December 1, 2023
+
+```{r}
+n_fri <- dim(fri_df)[1]
+n_no_pref <- dim(no_pref)[1]
+
+n_fri_slots_free <- length(times) - n_fri
+
+new_fri_df <- rbind(fri_df, no_pref[1:n_fri_slots_free,])
+new_fri_df$Time <- times
+
+new_fri_df |>
+  dplyr::filter(!is.na(Authors)) |>
+  dplyr::arrange(Time) |>
+  dplyr::select(Time, Authors, Title, Format) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_classic()
+```
+
+## Day 2: Monday, December 4, 2023
+
+```{r}
+mon_df$Time <- times[1:dim(mon_df)[1]]
+
+mon_df |>
+  dplyr::filter(!is.na(Authors)) |>
+  dplyr::arrange(Time) |>
+  dplyr::select(Time, Authors, Title, Format) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_classic()
+```
+
+## Day 3: Wednesday, December 6, 2023
+
+```{r}
+wed_df$Time <- times[1:dim(wed_df)[1]]
+
+wed_df |>
+  dplyr::filter(!is.na(Authors)) |>
+  dplyr::arrange(Time) |>
+  dplyr::select(Time, Authors, Title, Format) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_classic()
+```
+
+## Day 4: Friday, December 8, 2023
+
+```{r}
+fri_8_df$Time <- times[1:dim(fri_8_df)[1]]
+
+fri_8_df |>
+  dplyr::filter(!is.na(Authors)) |>
+  dplyr::arrange(Time) |>
+  dplyr::select(Time, Authors, Title, Format) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_classic()
+```

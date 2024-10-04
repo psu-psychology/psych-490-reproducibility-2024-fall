@@ -135,7 +135,7 @@ There are $n=$ `r dim(hijacked)[1]` journals that have been hijacked!
 
 ## Exploring the database
 
-- [Here](../surveys/retraction-watch.qmd) are the beginnings of an attempt to visualize the dataset
+- [Here](../supplemental/retraction-watch.qmd) are the beginnings of an attempt to visualize the dataset
 
 ---
 

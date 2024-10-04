@@ -41,6 +41,10 @@ website:
         menu:
           - href: "surveys/survey-01.qmd"
           - href: "surveys/survey-02.qmd"
+      - text: supplemental
+        menu:
+          - href: "supplemental/retraction-watch.qmd"
+          - href: "supplemental/plotting-degrees-of-freedom.qmd"
   repo-url: https://github.com/psu-psychology/psych-490-reproducibility-2024-fall
   repo-actions: [edit, issue]
   repo-subdir: src

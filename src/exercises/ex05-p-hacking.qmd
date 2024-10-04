@@ -5,7 +5,7 @@ subtitle: "*P*-hacking: The road to scientific glory"
 
 ## Dates
 
-Due: [Friday, October 6](../schedule.qmd#friday-october-06){.orange_due}.
+Due: [Monday, October 14](../schedule.qmd#monday-october-14){.orange_due}.
 
 ## Acknowledgment
 
