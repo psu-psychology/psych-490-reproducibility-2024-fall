@@ -72,8 +72,9 @@ title: "On *p* values"
 
 ## Vocabulary
 
-- *p*-value: Probability of your observation if nothing is going on^[with a bunch of other assumptions].
-- *null hypothesis*: Nothing (meaningful, important, 'significant') is going on.
+- *p*-value: Probability of your observation relative to some baseline (e.g., data are normally distributed with some specified mean and standard deviation).
+- *null hypothesis*: Observed data *don't differ* from your baseline comparison.
+- *rejecting the null (hypothesis)*: Observed data differ from the comparison.
 - *alpha* ($\alpha$): The *p* value we set in advance as our criterion for deciding when to *reject* the null hypothesis
 
 ## Discuss @Denworth2019-uh figure {.scrollable}

@@ -17,8 +17,16 @@ title: "Work session: Exercise 05 and Final Project proposals"
 
 - [Due]{.orange_due}
     - [Exercise 04: Violations of scientific integrity](../exercises/ex04-scientific-integrity.qmd)
+    
+## On *p*-values
 
-## Discuss
+>P-values can indicate how incompatible the data are with a specified statistical model. [@Wasserstein2016-kl]
+
+- (Improved) [vocabulary](wk06-2024-09-30-p-values.qmd#vocabulary)
+- We have to pick a statistical model (e.g., normal distribution or *t* distribution, or...) for our comparison
+- What if our data don't fit the model?
+
+## Last time...
 
 - Do you sympathize with Stapel? Why or why not?
 - Have you been in situations like Stapel describes where you have been asked to make a messy and complicated problem simpler?

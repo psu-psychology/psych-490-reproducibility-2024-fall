@@ -453,11 +453,12 @@ Rick Gilmore
 <section id="vocabulary" class="slide level2">
 <h2>Vocabulary</h2>
 <ul>
-<li><em>p</em>-value: Probability of your observation if nothing is going on<sup>1</sup>.</li>
-<li><em>null hypothesis</em>: Nothing (meaningful, important, ‘significant’) is going on.</li>
+<li><em>p</em>-value: Probability of your observation relative to some baseline (e.g., data are normally distributed with some specified mean and standard deviation).</li>
+<li><em>null hypothesis</em>: Observed data <em>don’t differ</em> from your baseline comparison.</li>
+<li><em>rejecting the null (hypothesis)</em>: Observed data differ from the comparison.</li>
 <li><em>alpha</em> (<span class="math inline">\(\alpha\)</span>): The <em>p</em> value we set in advance as our criterion for deciding when to <em>reject</em> the null hypothesis</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>with a bunch of other assumptions</p></li></ol></aside></section>
+</section>
 <section id="discuss-denworth2019-uh-figure" class="slide level2 scrollable">
 <h2>Discuss <span class="citation" data-cites="Denworth2019-uh">Denworth (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> figure</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -531,7 +532,7 @@ Rick Gilmore
 <li>Do the reference distributions (for the null) really fit the data?</li>
 <li>statistical ‘significance’ <span class="math inline">\(\neq\)</span> real-world importance</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>assuming a bunch of things</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>assuming a bunch of things</p></li></ol></aside></section>
 <section class="slide level2">
 
 <blockquote>
@@ -1042,7 +1043,7 @@ Wasserstein, R. L., &amp; Lazar, N. A. (2016). The <span>ASA</span>’s statemen
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});
+    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false});
     (function() {
       let previousOnload = window.onload;
       window.onload = () => {
