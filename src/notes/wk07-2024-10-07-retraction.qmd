@@ -9,8 +9,6 @@ title: "2024-10-07 Mon"
 
 - **NO CLASS on Wednesday, 10/9**
 
-- [Due Friday]{.orange_due}
-    - [Exercise 04: Scientific integrity](../exercises/ex04-p-hacking.qmd) write-up.
 - Discuss Friday [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd).
 
 ## In the news {.scrollable}
@@ -192,7 +190,7 @@ A final project could involve a description and update about this Penn State pro
 
 # Next time
 
-### Friday, October 11 {-}
+## Friday, October 11 {-}
 
 *Questionable research practices*
 
