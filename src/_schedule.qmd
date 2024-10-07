@@ -217,6 +217,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 - Read
     - @Brainerd2018-iy
+- [Class notes](notes/wk07-2024-10-07-retraction.qmd)
     
 #### Wednesday, October 09 {-}
 
