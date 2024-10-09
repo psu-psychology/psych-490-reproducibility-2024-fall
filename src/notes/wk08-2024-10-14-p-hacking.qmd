@@ -1,0 +1,72 @@
+---
+subtitle: "Work session on *p*-hacking"
+title: "2024-10-14 Mon"
+---
+
+# Overview
+
+## Announcements
+
+- [Due Friday]{.orange_due}
+    - [Final project](../exercises/final-project.qmd) proposal
+    
+## Last time...
+
+*Questionable research practices*
+
+## Today
+
+*Work Session: P-hacking and Final Project Proposals*
+
+- [Due]{.orange_due}
+    - [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd) write-up.
+- Work session
+    - [Final project proposals](../exercises/final-project.qmd), [due Friday, October 18]{.orange_due}.
+    
+# Evaluating *p*-hacking
+
+## Our results
+
+- Who got a "significant" result?
+- How many different analyses did you try?
+- Who changed their analysis after finding a significant result?
+- Did anyone try another analysis--after you got a significant result--and *keep* the non-significant result?
+- [Visualizations](../surveys/p-hacking-suppl.qmd) of the data
+
+---
+
+- Do we have good evidence about which party harms or helps the economy?
+- Why or why not?
+- What is *p*-hacking?
+- Did you *p*-hack? Did another classmate? Why do you think so?
+
+---
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+![Daniel Patrick Moynihan from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Patrick_Moynihan_1998.jpg/220px-Patrick_Moynihan_1998.jpg)
+
+:::
+
+::: {.column width="60%"}
+
+>You are entitled to your own opinion, but you are not entitled to your own facts.
+
+:::
+
+:::
+
+# Next time
+
+*Prevalence of QRPs*
+
+- Read
+    - @John2012-tk
+- (Optional) Enter your [Exercise 05](exercises/ex05-p-hacking.qmd) data into [this](https://docs.google.com/spreadsheets/d/1JI_Qih4wCzUrYTQYE3dpvVx2C7GdzfUZq0a3QhqQyeE/edit?usp=sharing) anonymous spreadsheet.
+- Discuss [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd).
+
+# Resources
+
+## References

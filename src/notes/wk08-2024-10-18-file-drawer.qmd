@@ -1,0 +1,373 @@
+---
+title: "File Drawer Effect"
+subtitle: "2024-10-18 Fri"
+---
+
+# Overview
+
+## Announcements
+
+- [Due today]{.orange_due}
+    - [Final project](exercises/final-project.qmd) proposal
+
+## Last time...
+
+- What is *p*-hacking?
+- How many different combinations of variables were there in [Exercise 05](../exercises/ex05-p-hacking.qmd)?
+- What would we need to do to determine which party and which measures of political power impact the economy one way or the other?
+
+## Today
+
+*File drawer effect*
+
+- Work on final project proposals
+- Discuss
+    - @Rosenthal1979-zi
+    - @Franco2014-yu
+   
+## File drawer effect
+
+![Source: <https://www.craigmarker.com/wp-content/uploads/2006/12/filedrawer1-1002x675.jpg>](https://www.craigmarker.com/wp-content/uploads/2006/12/filedrawer1-1002x675.jpg)
+
+---
+
+Related to the notion of 'negative data'.
+
+{{< video https://www.youtube.com/embed/9I1qR8PTr54 
+  height="70%"
+  width="100%"
+>}}
+
+<p style="text-align:center;">
+@Hypothesis2021-qc
+</p>
+
+## Simulating the file drawer effect
+
+- How many times out of $n$ experiments do we get...
+  - a significant result
+  - a non-significant result
+  
+Simulation app: <https://rogilmore.shinyapps.io/PSYCH490-2023-APES/>
+
+---
+
+![<https://rogilmore.shinyapps.io/PSYCH490-2023-APES/>](../include/img/apes-app-screen.png){fig-align="center"}
+
+## Your turn
+
+::: {.columns}
+
+::: {.column width=50%}
+
+- Pick samples of $n=30$ for `n_A` and `n_B` (green boxes).
+- Pick small effect size $d=0.30$ (magenta box).
+- Note (and keep track of) whether your significance test (Sig?) is TRUE (aqua box).
+
+:::
+
+::: {.column width=50%}
+
+![](../include/img/apes-app-screen-annotated.png){fig-align="center"}
+
+:::
+
+:::
+
+---
+
+::: {.columns}
+
+::: {.column width=50%}
+
+- Replicate the study multiple times by pressing the `Regenerate` button (dark blue box).
+- Record the number of successes and failures.
+
+:::
+
+::: {.column width=50%}
+
+![](../include/img/apes-app-screen-annotated.png){fig-align="center"}
+
+:::
+
+:::
+
+## Discussion
+
+- Is this a replication study? Why or why not?
+- Is there a true effect to find?
+- Did we find it reliably? Why or why not?
+
+## Discuss
+
+Rosenthal, R. (1979). The file drawer problem and tolerance for null results. *Psychological Bulletin*, *86*(3), 638–641. <https://doi.org/10.1037/0033-2909.86.3.638>
+
+## Abstract
+
+>For any given research area, one cannot tell how many studies have been conducted but never reported. The extreme view of the "file drawer problem" is that journals are filled with the 5% of the studies that show Type I errors, while the file drawers are filled with the 95% of the studies that show nonsignificant results. 
+
+<p style="text-align:center;">
+[@Rosenthal1979-zi]
+</p>
+
+---
+
+>Quantitative procedures for computing the tolerance for filed and future null results are reported and illustrated, and the implications are discussed.
+
+<p style="text-align:center;">
+[@Rosenthal1979-zi]
+</p>
+
+## Unpacking [@Rosenthal1979-zi]
+
+- Why might *journals* be filled with studies that have Type I (false positive) errors?
+  - If there are no effects at all, what would the false positive rate be?
+- Why might *file drawers* be filled with studies that have Type II (false negative) errors?
+  - If there really is an effect to be found for every study, what would the false negative rate be?
+  
+---
+
+- If *every* study conducted on question X were published or findable somehow, what impact would that have?
+
+## Visualization {.scrollable}
+
+Rosenthal's illustration relies on the *standard normal deviate* or $Z$, which is the value on a standard normal distribution (with mean $\mu=0$ and standard deviation $\sigma=1$) that one would need to observe for a given *p* value.
+
+---
+
+```{r, fig.cap="Illustration of $Z$ discussed in [@Rosenthal1979-zi]", out.width="100%"}
+library(tidyverse)
+
+n <- 1000
+p_val <- 0.05
+df <- tibble::tibble(x = rnorm(n, mean = 0, sd = 1))
+qt_05 <- qt(p_val, n, lower.tail = FALSE)
+
+ggplot(df) +
+  aes(x) +
+  geom_histogram(bins = 20) +
+  geom_vline(xintercept = qt_05) +
+  ggtitle(paste0(
+    "Z=",
+    format(qt_05, digits = 3, nsmall = 2),
+    " for p=",
+    format(p_val, digits = 3, nsmall = 2),
+    " and n=",
+    n
+  ))
+```
+
+
+## Findings
+
+>If the overall level of significance of the research review will be brought down to the level of just significant by the addition of just a few more null results, the finding is not resistant to the file drawer threat.
+
+<p style="text-align:center;">
+[@Rosenthal1979-zi]
+</p>
+
+- In other words, the finding is not robust.
+
+---
+
+>There is both a sobering and a cheering lesson to be learned from careful study of Equation 3. The sobering lesson is that small numbers of studies that are not very significant, even when their combined *p* is significant, may well be misleading in that only a few studies filed away could change the combined significant result to a nonsignificant one...
+
+<p style="text-align:center;">
+[@Rosenthal1979-zi]
+</p>
+
+---
+
+- In other words, small numbers of studies with weak evidence for a claim might be misleading if there are a large number of studies in "file drawers"
+
+---
+
+>The cheering lesson is that when the number of studies available grows large or the mean directional Z grows large, the file drawer hypothesis as a plausible rival hypothesis can be safely ruled out.
+
+<p style="text-align:center;">
+[@Rosenthal1979-zi]
+</p>
+
+---
+
+- In other words, larger numbers of studies for a claim bolster it.
+
+## Discuss
+
+Franco, A., Malhotra, N. & Simonovits, G. (2014). Social science. Publication bias in the social sciences: unlocking the file drawer. *Science*, *345*(6203), 1502–1505. <https://doi.org/10.1126/science.1255484>
+
+## Abstract
+
+>We studied publication bias in the social sciences by analyzing a known population of conducted studies—221 in total—in which there is a full accounting of what is published and unpublished. 
+
+<p style="text-align:center;">
+[@Franco2014-yu]
+</p>
+
+---
+
+>We leveraged Time-sharing Experiments in the Social Sciences (TESS), a National Science Foundation–sponsored program in which researchers propose survey-based experiments to be run on representative samples of American adults. 
+
+<p style="text-align:center;">
+[@Franco2014-yu]
+</p>
+
+---
+
+>Because TESS proposals undergo rigorous peer review, the studies in the sample all exceed a substantial quality threshold. Strong results are 40 percentage points more likely to be published than are null results and 60 percentage points more likely to be written up. 
+
+<p style="text-align:center;">
+[@Franco2014-yu]
+</p>
+
+---
+
+>We provide direct evidence of publication bias and identify the stage of research production at which publication bias occurs: Authors do not write up and submit null findings.
+
+<p style="text-align:center;">
+[@Franco2014-yu]
+</p>
+
+## Findings
+
+```{r, fig.cap="Table 3 from [@Franco2014-yu](http://dx.doi.org/10.1126/science.1255484)", out.width="100%"}
+knitr::include_graphics("../include/img/franco-etal-2014-table-03.png")
+```
+
+## Solutions
+
+>How can the social science community combat publication bias of this sort? On the basis of communications with the authors of many experiments that resulted in null findings, we found that **some researchers anticipate the rejection of such papers but also that many of them simply lose interest in “unsuccessful” projects**. 
+
+---
+
+>These findings show that a vital part of developing institutional solutions to improve scientific transparency would be to understand better the motivations of researchers who choose to pursue projects as a function of results.
+
+---
+
+>Few null findings ever make it to the review process. Hence, proposed solutions such as **two-stage review** (the first stage for the design and the second for the results), **pre-analysis plans** (41), and **requirements to preregister studies** (16) should be complemented by **incentives not to bury statistically insignificant results in file drawers**. **Creating high-status publication outlets for these studies** could provide such incentives. 
+
+---
+
+>The movement toward open-access journals may provide space for such articles. Further, the pre-analysis plans and registries themselves will increase researcher access to null results. Alternatively, funding agencies could **impose costs on investigators who do not write up the results of funded studies**. 
+
+---
+
+>Last, resources should be deployed for replications of published studies if they are unrepresentative of conducted studies and more likely to report large effects.
+
+<p style="text-align:center;">
+[@Franco2014-yu]
+</p>
+
+## Replication notes {.scrollable}
+
+- Paper was behind the standard *Science* paywall.
+- Data & code shared on Zenodo <https://doi.org/10.5281/zenodo.11300>
+- Let's try to run it...
+
+## [@Franco2014-jk] {.scrollable}
+
+```{r, include=TRUE}
+###############################################################################
+###############################################################################
+# Publication Bias in the Social Sciences: Unlocking the File Drawer
+# (Annie Franco, Neil Malhotra, Gabor Simonovits)
+###############################################################################
+###############################################################################
+# REPLICATION CODE (SUPPLEMENTARY MATERIAL)
+###############################################################################
+# Fig. S1. Sensitivity of Pearson chi-squared test of independence in Table 3 to
+# misclassification of TESS studies. 
+###############################################################################
+
+library(foreign)
+
+# load dataset
+pubbias <- read.dta("franco-etal-2014/filedrawer.dta") # ROG changed path to .dta file 2023-02-22
+names(pubbias)
+
+bounds <- as.matrix(table(pubbias$anyresults, pubbias$written))
+rownames(bounds)<-c("Null", "Significant")
+colnames(bounds)<-c("Unwritten", "Written")
+
+chisq.test(bounds)
+
+x <- seq(0,20,1)
+y <- seq(0,70,1)
+
+grid <- as.matrix(expand.grid(x, y))
+
+chisq_pval <- function(q) {
+  
+  a<-q[1]
+  b<-q[2]
+  x<- cbind(c(a,-a), c(-b,b))
+  chisq.test(bounds-x)$p.value
+  
+}
+
+pvalues <- apply(grid, 1, FUN = chisq_pval)
+
+sensitivity <- data.frame(unwritten = grid[,1], 
+                          written = grid[,2], 
+                          pvalue = pvalues)
+
+sensitivity$sig <- as.numeric(sensitivity$pvalue<0.05)
+
+# ROG Changed path in next line 2023-02-22
+pdf(file = "franco-etal-2014/bounds.pdf", width=6.8, height=4.2)
+par(mfrow=c(1,1), bg="white", mgp=c(2,.5,0), mar=c(4,4,2,2))
+with(sensitivity[sensitivity$pvalue<0.05,], 
+     plot(written, unwritten, 
+          xlim=c(0,70), 
+          cex=0.7,
+          ylim=c(0,20),
+          pch=16, 
+          col="black", 
+          axes=FALSE,
+          cex.axis=0.9,
+          cex.lab=1.1,
+          ylab="",
+          xlab="Written studies recoded as null (out of 159)"))
+title(ylab="Unwritten studies recoded\nas significant (out of 31)", 
+      line=1.5, cex.lab=1.1)
+axis(side=1, tick=T, at=seq(0,100,10), cex.axis=0.8)
+axis(side=2, tick=T, at=seq(0,100,10), cex.axis=0.8)
+with(sensitivity[sensitivity$pvalue>0.05,], 
+     points(written, unwritten, col="black", pch=1, cex=0.7))
+box()
+legend("topright", 
+       c("P-value < 0.05", "P-value > 0.05"),
+       pch=c(16,1), cex=0.95)
+dev.off()
+```
+
+---
+
+<iframe src="franco-etal-2014/bounds.pdf" width="800" height="450">
+</iframe>
+
+Figure generated from code in [@Franco2014-jk], shared as materials from [@Franco2014-yu].
+
+---
+
+- So, we can regenerate one of the figures (S1, p. 6) in the [Supplemental Material](https://www.science.org/doi/suppl/10.1126/science.1255484/suppl_file/franco.sm.pdf).
+
+::: {.callout-note}
+
+More could be done with these data. This could be a final project for someone.
+
+:::
+
+# Next time
+
+*Negligence*
+
+- Read
+    - @Ritchie2020-fm, Chapter 5
+    - @Nuijten2015-ul
+    - @Szucs2017-fc
+
+# Resources
+
+## References

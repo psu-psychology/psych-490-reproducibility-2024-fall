@@ -233,6 +233,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - @Ngiam2020-ln
 - Bring
     - Draft [Exercise 05: P-hack your way to scientific glory](exercises/ex05-p-hacking.qmd) for discussion.
+- [Class notes](notes/wk07-2024-10-11-qrps.qmd)
 
 ### October 14-18 {- #week-08}
 
@@ -244,7 +245,8 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - [Exercise 05: P-hack your way to scientific glory](exercises/ex05-p-hacking.qmd) write-up.
 - Work session
     - [Final project proposals](exercises/final-project.qmd), [due Friday, October 18]{.orange_due}.
- 
+- [Class notes](notes/wk08-2024-10-14-p-hacking.qmd)
+
 #### Wednesday, October 16 {-}
 
 *Prevalence of QRPs*
@@ -253,6 +255,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - @John2012-tk
 - (Optional) Enter your [Exercise 05](exercises/ex05-p-hacking.qmd) data into [this](https://docs.google.com/spreadsheets/d/1JI_Qih4wCzUrYTQYE3dpvVx2C7GdzfUZq0a3QhqQyeE/edit?usp=sharing) anonymous spreadsheet.
 - Discuss [Exercise 05: P-hack your way to scientific glory](exercises/ex05-p-hacking.qmd).
+- [Class notes](notes/wk08-2024-10-16-qrp-prevalence.qmd)
 
 #### Friday, October 18 {-}
 
@@ -265,6 +268,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd), [final version due Wednesday, October 30]{.orange_due}
 - [Due]{.orange_due}
     - [Final project](exercises/final-project.qmd) proposal
+- [Class notes](notes/wk08-2024-10-18-file-drawer.qmd)
 
 ### October 21-25 {- #week-09}
 

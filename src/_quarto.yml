@@ -47,6 +47,8 @@ website:
             text: "Retraction Watch database"
           - href: "supplemental/plotting-degrees-of-freedom.qmd"
             text: "Plot your data!"
+          - href: "supplemental/p-hacking-suppl.qmd"
+            text: "On *p*-hacking"
   repo-url: https://github.com/psu-psychology/psych-490-reproducibility-2024-fall
   repo-actions: [edit, issue]
   repo-subdir: src

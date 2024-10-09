@@ -7,14 +7,11 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.56">
 
   <meta name="author" content="Rick Gilmore">
-  <title>PSYCH 490 • Fall 2024 – On p values</title>
+  <title>PSYCH 490 • Fall 2024 – Questionable research practices</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -361,8 +358,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">On <em>p</em> values</h1>
-  <p class="subtitle">2024-09-30 Mon</p>
+  <h1 class="title">Questionable research practices</h1>
+  <p class="subtitle">2023-10-11 Fri</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -374,214 +371,557 @@ Rick Gilmore
 
 </section>
 <section>
+<section id="prelude" class="title-slide slide level1 center">
+<h1>Prelude</h1>
+
+</section>
+<section class="slide level2">
+
+<iframe data-external="1" src="https://www.youtube.com/embed/5Qk9o_ZeR7s?si=ClZyDaPrPpGWlnUv" width="100%" height="70%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p><span class="citation" data-cites="singalong2015-xf">singalong (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span></p>
+</section></section>
+<section>
 <section id="overview" class="title-slide slide level1 center">
 <h1>Overview</h1>
 
 </section>
+<section id="in-the-news" class="slide level2">
+<h2>In the news…</h2>
+
+<img data-src="../include/img/mills-nytimes-americans-losing-trust-in-sci.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="Anthony_Mills2023-ji">Anthony Mills (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></p></section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><span class="orange_due">Due this Friday</span>
+<li><span class="orange_due">Due Monday</span>
 <ul>
-<li><a href="../exercises/ex04-scientific-integrity.html">Exercise 04: Violations of scientific integrity</a></li>
+<li><a href="../exercises/ex05-p-hacking.html">Exercise 05: P-hack your way to scientific glory</a> write-up.</li>
+</ul></li>
+<li><span class="orange_due">Due next Friday</span>
+<ul>
+<li><a href="../exercises/final-project.html">Final project</a> proposal</li>
 </ul></li>
 </ul>
+</section>
+<section id="last-time" class="slide level2">
+<h2>Last time…</h2>
+<p><em>Retraction and scientific integrity</em></p>
 </section>
 <section id="today" class="slide level2">
 <h2>Today</h2>
-<p><em>Mind your p’s</em></p>
+<p><em>Questionable research practices</em></p>
 <ul>
 <li>Read
 <ul>
-<li><span class="citation" data-cites="Denworth2019-uh">Denworth (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></li>
+<li><span class="citation" data-cites="simmons_false-positive_2011">Simmons, Nelson, &amp; Simonsohn (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span></li>
 </ul></li>
+<li>Watch
+<ul>
+<li><span class="citation" data-cites="Ngiam2020-ln">Ngiam (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></li>
+</ul></li>
+<li>Bring
+<ul>
+<li>Draft <a href="../exercises/ex05-p-hacking.html">Exercise 05: P-hack your way to scientific glory</a> for discussion.</li>
+</ul></li>
+</ul>
+</section>
+<section id="set-up-for-next-wednesdays-work-session" class="slide level2">
+<h2>Set-up for next Wednesday’s work session…</h2>
+<ul>
+<li>Enter (anonymized) data into a spreadsheet</li>
+</ul>
+<p><a href="https://docs.google.com/spreadsheets/d/1NXcBrI_bMP_wFi1BurCS5WGppr9HWBiF5ulh7ch61MU/edit?usp=sharing" class="uri">https://docs.google.com/spreadsheets/d/1NXcBrI_bMP_wFi1BurCS5WGppr9HWBiF5ulh7ch61MU/edit?usp=sharing</a></p>
+<ul>
+<li>Choose a student_id (integer) for yourself (not your PSU ID or phone number)</li>
 </ul>
 </section></section>
 <section>
-<section id="denworth2019-uh" class="title-slide slide level1 center">
-<h1><span class="citation" data-cites="Denworth2019-uh">Denworth (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></h1>
+<section id="on-questionable-research-practices" class="title-slide slide level1 center">
+<h1>On questionable research practices</h1>
 
 </section>
-<section id="goal" class="slide level2">
-<h2>Goal</h2>
+<section class="slide level2">
+
+<p>Simmons, J. P., Nelson, L. D. &amp; Simonsohn, U. (2011). False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant. <em>Psychological Science</em>, <em>22</em>(11), 1359–1366. <a href="https://doi.org/10.1177/0956797611417632" class="uri">https://doi.org/10.1177/0956797611417632</a></p>
+</section>
+<section id="central-questions" class="slide level2">
+<h2>Central questions</h2>
 <ul>
-<li>Detect differences that matter, are meaningful or significant</li>
-</ul>
-<blockquote>
-<p><span class="citation" data-cites="Fisher1992-zq">Fisher (<a href="#/references" role="doc-biblioref" onclick="">1992</a>)</span> suggests that researchers might consider a p value of 0.05 as a handy guide: “It is convenient to take this point as a limit in judging whether a deviation ought to be considered significant or not.”</p>
-</blockquote>
-<p><span class="citation" data-cites="Denworth2019-uh">Denworth (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></p>
-</section>
-<section class="slide level2">
-
-
-<img data-src="https://imgs.xkcd.com/comics/p_values.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="xkcd-p-values">Monroe (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span></p></section>
-<section class="slide level2">
-
-
-<img data-src="https://mediaproxy.salon.com/width/1200/https://media2.salon.com/2017/04/holygrail.jpg" class="r-stretch quarto-figure-center"><p class="caption">https://mediaproxy.salon.com/width/1200/https://media2.salon.com/2017/04/holygrail.jpg</p></section>
-<section class="slide level2">
-
-<div class="columns">
-<div class="column" style="width:60%;">
-<blockquote>
-<p>Ronald Wasserstein, the ASA’s executive director, puts it this way: “Statistical significance is supposed to be like a right swipe on Tinder. It indicates just a certain level of interest…”</p>
-</blockquote>
-<p><span class="citation" data-cites="Denworth2019-uh">Denworth (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></p>
-</div><div class="column" style="width:40%;">
-<p><img data-src="https://magazine.amstat.org/wp-content/uploads/2020/12/Ron-Wasserstein2.jpg" style="width:70.0%"></p>
-<p><img data-src="https://filecache.mediaroom.com/mr5mr_tinder/180119/wordmark-R-tinder-pink-RGB-1000px.jpg"></p>
-</div></div>
-</section>
-<section class="slide level2">
-
-<div class="columns">
-<div class="column" style="width:60%;">
-<blockquote>
-<p>…But unfortunately, that’s not what statistical significance has become. People say, ‘I’ve got 0.05, I’m good.’ The science stops.”</p>
-</blockquote>
-<p><span class="citation" data-cites="Denworth2019-uh">Denworth (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></p>
-</div><div class="column" style="width:40%;">
-<p><img data-src="https://magazine.amstat.org/wp-content/uploads/2020/12/Ron-Wasserstein2.jpg" style="width:70.0%"></p>
-<p><img data-src="https://filecache.mediaroom.com/mr5mr_tinder/180119/wordmark-R-tinder-pink-RGB-1000px.jpg"></p>
-</div></div>
-</section>
-<section class="slide level2">
-
-
-<img data-src="../include/img/wasserstein-lazar-2016.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="Wasserstein2016-kl">Wasserstein &amp; Lazar (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span></p></section>
-<section id="vocabulary" class="slide level2">
-<h2>Vocabulary</h2>
-<ul>
-<li><em>p</em>-value: Probability of your observation relative to some baseline (e.g., data are normally distributed with some specified mean and standard deviation).</li>
-<li><em>null hypothesis</em>: Observed data <em>don’t differ</em> from your baseline comparison.</li>
-<li><em>rejecting the null (hypothesis)</em>: Observed data differ from the comparison.</li>
-<li><em>alpha</em> (<span class="math inline">\(\alpha\)</span>): The <em>p</em> value we set in advance as our criterion for deciding when to <em>reject</em> the null hypothesis</li>
+<li>What are researcher ‘degrees of freedom’?</li>
+<li>Why should we care about them?</li>
+<li>What are questionable research practices?</li>
+<li>Why should we care about them?</li>
 </ul>
 </section>
-<section id="discuss-denworth2019-uh-figure" class="slide level2 scrollable">
-<h2>Discuss <span class="citation" data-cites="Denworth2019-uh">Denworth (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> figure</h2>
+<section id="false-positives-vs.-false-negatives" class="slide level2">
+<h2>False positives vs.&nbsp;false negatives</h2>
+<ul>
+<li>Null hypothesis: There is no effect (or no difference between observation and reference)</li>
+<li>Positive: What’s actually true, a true fact</li>
+<li>Negative: What’s actually untrue, a false fact</li>
+<li>What does our evidence say?</li>
+</ul>
+</section>
+<section id="decision-matrix" class="slide level2">
+<h2>Decision matrix</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 28%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Evidence says</th>
+<th>True fact</th>
+<th>False fact</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>True</td>
+<td><span class="green_assigned">True positive</span></td>
+<td>False positive (Type I)</td>
+</tr>
+<tr class="even">
+<td>False</td>
+<td>False negative (Type II)</td>
+<td><span class="green_assigned">True negative</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="decision-matrix-1" class="slide level2">
+<h2>Decision matrix</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 28%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Evidence says</th>
+<th>True fact</th>
+<th>False fact</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>True</td>
+<td>True positive</td>
+<td><span class="orange_due">False positive (Type I)</span></td>
+</tr>
+<tr class="even">
+<td>False</td>
+<td><span class="orange_due">False negative (Type II)</span></td>
+<td>True negative</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="goals" class="slide level2">
+<h2>Goals</h2>
+<ul>
+<li>Minimize false positives (Type I errors) or maximize <em>specificity</em></li>
+<li>Minimize false negatives (Type II errors) or maximize <em>sensitivity</em></li>
+</ul>
+</section>
+<section id="what-we-do-and-dont-control" class="slide level2">
+<h2>What we do and don’t control</h2>
+<ul>
+<li>What we control
+<ul>
+<li>How to decide based on evidence</li>
+</ul></li>
+<li>What we don’t control
+<ul>
+<li>What’s true or false (<span class="math inline">\(p(True fact)\)</span>)</li>
+</ul></li>
+</ul>
+</section>
+<section id="biostatistics-version" class="slide level2">
+<h2>Biostatistics version</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="https://static.scientificamerican.com/sciam/assets/Image/2019/saw1019Denw31_d(1).png?w=1350" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="@Denworth2019-uh"><img data-src="https://static.scientificamerican.com/sciam/assets/Image/2019/saw1019Denw31_d(1).png?w=1350" alt="Denworth (2019)"></a></p>
-<figcaption><span class="citation" data-cites="Denworth2019-uh">Denworth (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></figcaption>
+<p><img data-src="https://www.scalestatistics.com/uploads/3/0/4/1/30413390/6343470_orig.jpg" style="height:75.0%"></p>
+<figcaption>https://www.scalestatistics.com/diagnostic-accuracy.html</figcaption>
 </figure>
 </div>
 </section>
-<section id="simulating-p-values" class="slide level2">
-<h2>Simulating p-values</h2>
-<p><a href="https://rogilmore.shinyapps.io/PSYCH490-2023-APES/" class="uri">https://rogilmore.shinyapps.io/PSYCH490-2023-APES/</a></p>
-</section>
-<section id="asa-statement-wasserstein2016-kl" class="slide level2">
-<h2>ASA Statement <span class="citation" data-cites="Wasserstein2016-kl">(<a href="#/references" role="doc-biblioref" onclick="">Wasserstein &amp; Lazar, 2016</a>)</span></h2>
-<ol type="1">
-<li class="fragment">P-values can indicate how incompatible the data are with a specified statistical model.</li>
-</ol>
-<ol start="2" type="1">
-<li class="fragment">P-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.</li>
-</ol>
-<ol start="3" type="1">
-<li class="fragment">Scientific conclusions and business or policy decisions should not be based only on whether a p-value passes a specific threshold.</li>
-</ol>
-</section>
-<section id="wasserstein2016-kl" class="slide level2">
-<h2><span class="citation" data-cites="Wasserstein2016-kl">Wasserstein &amp; Lazar (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span></h2>
-<ol start="4" type="1">
-<li class="fragment">Proper inference requires full reporting and transparency</li>
-</ol>
-<ol start="5" type="1">
-<li class="fragment">A p-value, or statistical significance, does not measure the size of an effect or the importance of a result.</li>
-</ol>
-<ol start="6" type="1">
-<li class="fragment">By itself, a p-value does not provide a good measure of evidence regarding a model or hypothesis.</li>
-</ol>
-</section>
-<section id="other-better-approaches" class="slide level2">
-<h2>Other (better?) approaches</h2>
-<blockquote>
-<p>These include methods that emphasize estimation over testing, such as confidence, credibility, or prediction intervals; Bayesian methods; alternative measures of evidence, such as likelihood ratios or Bayes Factors; and other approaches such as decision-theoretic modeling and false discovery rates.</p>
-</blockquote>
-<p><span class="citation" data-cites="Wasserstein2016-kl">Wasserstein &amp; Lazar (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span></p>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>All these measures and approaches rely on further assumptions, but they may more directly address the size of an effect (and its associated uncertainty) or whether the hypothesis is correct.</p>
-</blockquote>
-<p><span class="citation" data-cites="Wasserstein2016-kl">Wasserstein &amp; Lazar (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span></p>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>Good statistical practice, as an essential component of good scientific practice, emphasizes principles of good study design and conduct, a variety of numerical and graphical summaries of data, understanding of the phenomenon under study, interpretation of results in context, complete reporting and proper logical and quantitative understanding of what data summaries mean.</p>
-</blockquote>
-<p><span class="citation" data-cites="Wasserstein2016-kl">Wasserstein &amp; Lazar (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span></p>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>No single index should substitute for scientific reasoning.</p>
-</blockquote>
-<p><span class="citation" data-cites="Wasserstein2016-kl">Wasserstein &amp; Lazar (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span></p>
-</section>
-<section class="slide level2">
-
+<section id="practices" class="slide level2">
+<h2>Practices</h2>
 <ul>
-<li><em>confidence interval</em>: range of values that we think would contain our observation X% of the time if we did the study many times<sup>1</sup></li>
-<li>Change alpha (<span class="math inline">\(\alpha\)</span>), <span class="citation" data-cites="Benjamin2018-ff Lakens2017-sn">(<a href="#/references" role="doc-biblioref" onclick="">Benjamin et al., 2018</a>; <a href="#/references" role="doc-biblioref" onclick="">Lakens et al., 2017</a>)</span> or eliminate it <span class="citation" data-cites="Amrhein2018-vp">(<a href="#/references" role="doc-biblioref" onclick="">Amrhein &amp; Greenland, 2018</a>)</span></li>
-<li>Do the reference distributions (for the null) really fit the data?</li>
-<li>statistical ‘significance’ <span class="math inline">\(\neq\)</span> real-world importance</li>
+<li>Control alpha (<span class="math inline">\(\alpha\)</span>)
+<ul>
+<li>a probability or <em>p</em> value</li>
+<li>to make <em>false positive</em> decisions very rarely</li>
+</ul></li>
+<li>Control beta (<span class="math inline">\(\beta\)</span>)
+<ul>
+<li>to make <em>false negative</em> decisions very rarely</li>
+<li>statistical ‘power’ is <span class="math inline">\(1-\beta\)</span>.</li>
+</ul></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>assuming a bunch of things</p></li></ol></aside></section>
-<section class="slide level2">
-
-<blockquote>
-<p>There is a solution to every problem: simple, quick, and wrong.</p>
-</blockquote>
-<blockquote>
-<p>For every problem there is a solution that is simple, neat—and wrong.</p>
-</blockquote>
 </section>
 <section class="slide level2">
 
-<blockquote>
-<p>Every complex problem has a solution which is simple, direct, plausible—and wrong.</p>
-</blockquote>
-<blockquote>
-<p>There’s always an easy solution to every human problem—neat, plausible and wrong.</p>
-</blockquote>
-<p><span class="citation" data-cites="quote-investigator-fw"><span>“There is always a well-known solution to every human <span>Problem—Neat</span>, plausible, and wrong”</span> (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span></p>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>Explanations exist; they have existed for all time; there is always a well-known solution to every human problem—neat, plausible, and wrong.</p>
-</blockquote>
-<p><span class="citation" data-cites="Mencken2020-qm">Mencken (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p>
-</section>
-<section class="slide level2">
-
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../include/img/scepticism.png" style="width:100.0%;height:70.0%"></p>
-<figcaption><span class="citation" data-cites="Tampio2022-tg">Tampio (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></figcaption>
-</figure>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span>, <span class="math inline">\(\gamma\)</span>, <span class="math inline">\(\delta\)</span>…</p>
+<p>are letters from the Greek alphabet.</p>
+</div>
+</div>
 </div>
 </section>
 <section class="slide level2">
 
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Evidence says</th>
+<th>True fact</th>
+<th>False fact</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>True</td>
+<td><span class="math inline">\(1-\beta\)</span></td>
+<td><span class="math inline">\(\alpha\)</span></td>
+</tr>
+<tr class="even">
+<td>False</td>
+<td><span class="math inline">\(\beta\)</span></td>
+<td><span class="math inline">\(1-\alpha\)</span></td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment">If a fact is truly <em>true</em>, then our evidence should say so <span class="math inline">\(1-\beta\)</span> of the time.</li>
+<li class="fragment">If a fact is truly <em>false</em>, our evidence should say so <span class="math inline">\(1-\alpha\)</span> of the time.</li>
+</ul>
+</div>
+</section>
+<section id="questions-for-understanding" class="slide level2">
+<h2>Questions for understanding</h2>
+<ul>
+<li>Why do researchers’ prefer a small (<span class="math inline">\(&lt;0.05\)</span>) <span class="math inline">\(\alpha\)</span>?</li>
+<li>Why do researchers’ prefer a small <span class="math inline">\(\beta\)</span>?</li>
+</ul>
+</section>
+<section id="whats-a-defensible-choice-whats-a-questionable-practice" class="slide level2">
+<h2>What’s a defensible choice? What’s a questionable practice?</h2>
+<ul>
+<li>In a paper, failing to report all of a study’s dependent measures</li>
+<li>Deciding whether to collect more data after looking to see whether the results were significant</li>
+<li>In a paper, failing to report all of a study’s conditions</li>
+<li>Stopping collecting data earlier than planned because one found the result that one had been looking for</li>
+</ul>
+</section>
+<section class="slide level2">
 
-<img data-src="https://m.media-amazon.com/images/I/91lqu3hcqWL._SY522_.jpg" class="r-stretch"></section></section>
+<ul>
+<li>In a paper, “rounding off” a <em>p</em> value (e.g., reporting that a p value of .054 is less than .05)</li>
+<li>In a paper, selectively reporting studies that “worked”</li>
+<li>Deciding whether to exclude data after looking at the impact of doing so on the results</li>
+<li>In a paper, reporting an unexpected finding as having been predicted from the start</li>
+<li>In a paper, claiming that results are unaffected by demographic variables (e.g., gender) when one is actually unsure (or knows that they do)</li>
+<li>Falsifying data</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Why might a researcher do these things?</p>
+<p>Why might such choices be questionable?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="researcher-degrees-of-freedom" class="slide level2">
+<h2>Researcher ‘degrees of freedom’</h2>
+<blockquote>
+<p>The culprit is a construct we refer to as <strong>researcher degrees of freedom</strong>. In the course of collecting and analyzing data, researchers have many decisions to make: Should more data be collected? Should some observations be excluded? Which conditions should be combined and which ones compared? Which control variables should be considered? Should specific measures be combined or transformed or both?</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>What’s a ‘degree of freedom’?</p>
+<p>What does it mean in this context?</p>
+<p>See <a href="../supplemental/plotting-degrees-of-freedom.qmd">this supplemental page</a> for more info.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>It is rare, and sometimes impractical, for researchers to make all these decisions beforehand. Rather, it is common (and accepted practice) for researchers to explore various analytic alternatives, to search for a combination that yields “statistical significance,” and to then report only what “worked.”</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Why is it rare for researchers to make these decisions beforehand?</li>
+<li>Why is it impractical?</li>
+<li>What (relatively new) practice involves making many of these decisions in advance? <a href="../schedule.html#monday-november-11">Hint</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>The problem, of course, is that the likelihood of at least one (of many) analyses producing a falsely positive finding at the 5% level is necessarily greater than 5%.</p>
+</blockquote>
+<p style="text-align: center;">
+<span class="citation" data-cites="simmons_false-positive_2011">(<a href="#/references" role="doc-biblioref" onclick="">Simmons et al., 2011</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>This exploratory behavior is not the by-product of malicious intent, but rather the result of two factors: (a) ambiguity in how best to make these decisions and (b) the researcher’s desire to find a statistically significant result.</p>
+</blockquote>
+<p style="text-align: center;">
+<span class="citation" data-cites="simmons_false-positive_2011">(<a href="#/references" role="doc-biblioref" onclick="">Simmons et al., 2011</a>)</span>
+</p>
+</section>
+<section id="choices-to-be-made" class="slide level2">
+<h2>Choices to be made…</h2>
+<ul>
+<li>Choosing dependent measure or measures</li>
+<li>Choosing sample size
+<ul>
+<li>Stopping early</li>
+</ul></li>
+<li>Choosing covariates</li>
+<li>Reporting subsets of conditions
+<ul>
+<li>Trimming data (e.g., how to treat outliers)</li>
+</ul></li>
+</ul>
+</section>
+<section id="whats-too-fast-for-reaction-time" class="slide level2">
+<h2>What’s “too fast” for reaction time?</h2>
+<blockquote>
+<p>In a perusal of roughly 30 <em>Psychological Science</em> articles, we discovered considerable inconsistency in, and hence considerable ambiguity about, this decision. Most (but not all) researchers excluded some responses for being too fast, but what constituted “too fast” varied enormously: the fastest 2.5%, or faster than 2 standard deviations from the mean, or faster than 100 or 150 or 200 or 300 ms.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>Similarly, what constituted “too slow” varied enormously: the slowest 2.5% or 10%, or 2 or 2.5 or 3 standard deviations slower than the mean, or 1.5 standard deviations slower from that condition’s mean, or slower than 1,000 or 1,200 or 1,500 or 2,000 or 3,000 or 5,000 ms. None of these decisions is necessarily incorrect, but that fact makes any of them justifiable and hence potential fodder for self-serving justifications.</p>
+</blockquote>
+<p style="text-align: center;">
+<span class="citation" data-cites="simmons_false-positive_2011">(<a href="#/references" role="doc-biblioref" onclick="">Simmons et al., 2011</a>)</span>
+</p>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>When we “trim outliers” from our data what assumption(s) are we making?</p>
+<p>When are those assumptions justified and when might they not be?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="study-1-simmons_false-positive_2011" class="slide level2">
+<h2>Study 1: <span class="citation" data-cites="simmons_false-positive_2011">Simmons et al. (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span></h2>
+<blockquote>
+<p>we investigated whether listening to a children’s song induces an age contrast, making people feel older.</p>
+</blockquote>
+<ul>
+<li>Kalimba: <a href="https://youtu.be/tCO4i2t-Aso?si=OgGGCSc775qVNGbi" class="uri">https://youtu.be/tCO4i2t-Aso?si=OgGGCSc775qVNGbi</a></li>
+<li>Hot Potato: <a href="https://youtu.be/0v4-eAefurY?si=BZYzd42ti5sOKqca" class="uri">https://youtu.be/0v4-eAefurY?si=BZYzd42ti5sOKqca</a></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>In exchange for payment, 30 University of Pennsylvania undergraduates sat at computer terminals, donned headphones, and were randomly assigned to listen to either a control song (“Kalimba,” an instrumental song by Mr.&nbsp;Scruff that comes free with the Windows 7 operating system) or a children’s song (“Hot Potato,” performed by The Wiggles).</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>After listening to part of the song, participants completed an ostensibly unrelated survey: They answered the question “How old do you feel right now?” by choosing among five options (very young, young, neither young nor old, old, and very old). They also reported their father’s age, allowing us to control for variation in baseline age across participants.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>An analysis of covariance (ANCOVA) revealed the predicted effect: People felt older after listening to “Hot Potato” (adjusted M = 2.54 years) than after listening to the control song (adjusted M = 2.06 years), F(1, 27) = 5.06, p = .033.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>An analysis of covariance (ANCOVA) is a tool for asking whether there is some difference between groups (here the song listened to) when we account for a third variable, like their father’s age.</p>
+</div>
+</div>
+</div>
+<p>Link to supplemental <a href="../surveys/simmons-etal-2011-suppl.html">illustration of ANCOVA</a></p>
+</section>
+<section id="study-2" class="slide level2">
+<h2>Study 2</h2>
+<blockquote>
+<p>we sought to conceptually replicate and extend Study 1. Having demonstrated that listening to a children’s song makes people feel older, Study 2 investigated whether listening to a song about older age makes people actually younger.</p>
+</blockquote>
+<ul>
+<li>Kalimba: <a href="https://youtu.be/tCO4i2t-Aso?si=OgGGCSc775qVNGbi" class="uri">https://youtu.be/tCO4i2t-Aso?si=OgGGCSc775qVNGbi</a></li>
+<li>When I’m 64: <a href="https://youtu.be/HCTunqv1Xt4?si=urAP87RrwUCfjJNC" class="uri">https://youtu.be/HCTunqv1Xt4?si=urAP87RrwUCfjJNC</a></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>…we asked 20 University of Pennsylvania undergraduates to listen to either “When I’m Sixty-Four” by The Beatles or “Kalimba.” Then, in an ostensibly unrelated task, they indicated their birth date (mm/dd/yyyy) and their father’s age. We used father’s age to control for variation in baseline age across participants.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>…An ANCOVA revealed the predicted effect: According to their birth dates, people were nearly a year-and-a-half younger after listening to “When I’m Sixty-Four” (adjusted M = 20.1 years) rather than to “Kalimba” (adjusted M = 21.5 years), F(1, 17) = 4.92, p = .040.</p>
+</blockquote>
+</section>
+<section id="wait-a-minute" class="slide level2">
+<h2>Wait a minute…</h2>
+<ul>
+<li>What did they say?</li>
+<li>How is that even possible?</li>
+</ul>
+</section>
+<section id="illustration" class="slide level2 scrollable">
+<h2>Illustration</h2>
+
+<img data-src="../include/img/simmons-etal-2011-table-03.png" style="width:100.0%" class="r-stretch quarto-figure-center"><p class="caption">Table 3 from <a href="http://dx.doi.org/10.1177/0956797611417632"><span class="citation" data-cites="simmons_false-positive_2011">Simmons et al. (<span>2011</span>)</span></a></p><blockquote>
+<p>First, notice that in our original report, we redacted the many measures other than father’s age that we collected (including the dependent variable from Study 1: feelings of oldness). A reviewer would hence have been unable to assess the flexibility involved in selecting father’s age as a control. Second, by reporting only results that included the covariate, we made it impossible for readers to discover its critical role in achieving a significant result. Seeing the full list of variables now disclosed, reviewers would have an easy time asking for robustness checks, such as “Are the results from Study 1 replicated in Study 2?” They are not: People felt older rather than younger after listening to “When I’m Sixty-Four,” though not significantly so, F(1, 17) = 2.07, p = .168. Finally, notice that we did not determine the study’s termination rule in advance; instead, we monitored statistical significance approximately every 10 observations. Moreover, our sample size did not reach the 20-observation threshold set by our requirements.</p>
+<p>The redacted version of the study we reported in this article fully adheres to currently acceptable reporting standards and is, not coincidentally, deceptively persuasive. The requirement-compliant version reported in Table 3 would be—appropriately—all but impossible to publish.</p>
+</blockquote>
+<p style="text-align: center;">
+<span class="citation" data-cites="simmons_false-positive_2011">(<a href="#/references" role="doc-biblioref" onclick="">Simmons et al., 2011</a>)</span>
+</p>
+</section>
+<section id="simulations" class="slide level2">
+<h2>Simulations</h2>
+<blockquote>
+<p>These simulations assessed the impact of four common degrees of freedom: flexibility in (a) choosing among dependent variables, (b) choosing sample size, (c) using covariates, and (d) reporting subsets of experimental conditions. We also investigated various combinations of these degrees of freedom.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>We generated random samples with each observation independently drawn from a normal distribution, performed sets of analyses on each sample, and observed how often at least one of the resulting p values in each sample was below standard significance levels. For example, imagine a researcher who collects two dependent variables, say liking and willingness to pay. The researcher can test whether the manipulation affected liking, whether the manipulation affected willingness to pay, and whether the manipulation affected a combination of these two variables. The likelihood that one of these tests produces a significant result is at least somewhat higher than .05. We conducted 15,000 simulations of this scenario (and other scenarios) to estimate the size of “somewhat”.</p>
+</blockquote>
+<p style="text-align: center;">
+<span class="citation" data-cites="simmons_false-positive_2011">(<a href="#/references" role="doc-biblioref" onclick="">Simmons et al., 2011</a>)</span>
+</p>
+</section>
+<section id="findings" class="slide level2">
+<h2>Findings</h2>
+
+<img data-src="../include/img/simmons-etal-2011-table-01.png" style="width:80.0%" class="r-stretch quarto-figure-center"><p class="caption">Table 1 from <a href="http://dx.doi.org/10.1177/0956797611417632"><span class="citation" data-cites="simmons_false-positive_2011">Simmons et al. (<span>2011</span>)</span></a></p><ul>
+<li>Researcher choices inflate false positive rates.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../include/img/simmons-etal-2011-fig-01.png" style="width:80.0%" class="r-stretch quarto-figure-center"><p class="caption">Figure 1 from <a href="http://dx.doi.org/10.1177/0956797611417632"><span class="citation" data-cites="simmons_false-positive_2011">Simmons et al. (<span>2011</span>)</span></a></p><ul>
+<li>Collecting more data after analyzing a small initial sample inflates the false positive rate.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="../include/img/simmons-etal-2011-fig-02.png" style="width:80.0%" class="r-stretch quarto-figure-center"><p class="caption">Figure 2 from <a href="http://dx.doi.org/10.1177/0956797611417632"><span class="citation" data-cites="simmons_false-positive_2011">Simmons et al. (<span>2011</span>)</span></a></p><ul>
+<li>Just because a statistical test met the criterion threshold with a small sample doesn’t mean it will do so with larger samples.</li>
+</ul>
+</section>
+<section id="recommendations" class="slide level2">
+<h2>Recommendations</h2>
+
+<img data-src="../include/img/simmons-etal-2011-table-02.png" class="r-stretch quarto-figure-center"><p class="caption">Table 2 from <span class="citation" data-cites="simmons_false-positive_2011">Simmons et al. (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span></p><p style="text-align:center;">
+<span class="citation" data-cites="simmons_false-positive_2011">(<a href="#/references" role="doc-biblioref" onclick="">Simmons et al., 2011</a>)</span>
+</p>
+</section>
+<section id="your-thoughts" class="slide level2">
+<h2>Your thoughts?</h2>
+<ul>
+<li>Are these recommendations reasonable?</li>
+<li>Are they feasible?</li>
+<li>Do you think authors and reviewers will comply? Why or why not?</li>
+</ul>
+</section>
+<section id="reproducibility-notes-for-simmons_false-positive_2011" class="slide level2">
+<h2>Reproducibility notes for <span class="citation" data-cites="simmons_false-positive_2011">(<a href="#/references" role="doc-biblioref" onclick="">Simmons et al., 2011</a>)</span></h2>
+<ul>
+<li>does not appear to have shared data or any supplementary materials along with the article.</li>
+</ul>
+</section></section>
 <section id="next-time" class="title-slide slide level1 center">
 <h1>Next time</h1>
-<p><em>Fraud &amp; misconduct</em></p>
+<p><em>Work Session: P-hacking and Final Project Proposals</em></p>
 <ul>
-<li>Read
+<li><span class="orange_due">Due</span>
 <ul>
-<li><span class="citation" data-cites="Ritchie2020-fm">(<a href="#/references" role="doc-biblioref" onclick="">Ritchie, 2020</a>)</span>, Chapter 3</li>
-<li><span class="citation" data-cites="Bhattacharjee2013-rw">(<a href="#/references" role="doc-biblioref" onclick="">Bhattacharjee, 2013</a>)</span>, <a href="https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170718">PDF on Canvas</a></li>
-<li>(Skim) <span class="citation" data-cites="Levelt2012-ap">(<a href="#/references" role="doc-biblioref" onclick="">Levelt, Drenth, &amp; Noort, 2012</a>)</span></li>
-<li>(Skim) <span class="citation" data-cites="Carpenter2012-qy">(<a href="#/references" role="doc-biblioref" onclick="">Carpenter, 2012</a>)</span></li>
+<li><a href="../exercises/ex05-p-hacking.html">Exercise 05: P-hack your way to scientific glory</a> write-up.</li>
+</ul></li>
+<li>Work session
+<ul>
+<li><a href="../exercises/final-project.html">Final project proposals</a>, <span class="orange_due">due Friday, October 18</span>.</li>
 </ul></li>
 </ul>
 </section>
@@ -601,51 +941,20 @@ Rick Gilmore
 </div>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-Amrhein2018-vp" class="csl-entry" role="listitem">
-Amrhein, V., &amp; Greenland, S. (2018). Remove, rather than redefine, statistical significance. <em>Nature Human Behaviour</em>, <em>2</em>(1), 4. <a href="https://doi.org/10.1038/s41562-017-0224-0">https://doi.org/10.1038/s41562-017-0224-0</a>
+<div id="ref-Anthony_Mills2023-ji" class="csl-entry" role="listitem">
+Anthony Mills, M. (2023). Why so many americans are losing trust in science. <em>The New York Times</em>. Retrieved from <a href="https://www.nytimes.com/2023/10/03/opinion/science-americans-trust-covid.html">https://www.nytimes.com/2023/10/03/opinion/science-americans-trust-covid.html</a>
 </div>
-<div id="ref-Benjamin2018-ff" class="csl-entry" role="listitem">
-Benjamin, D. J., Berger, J. O., Johannesson, M., Nosek, B. A., Wagenmakers, E.-J., Berk, R., … Johnson, V. E. (2018). Redefine statistical significance. <em>Nature Human Behaviour</em>, <em>2</em>(1), 6–10. <a href="https://doi.org/10.1038/s41562-017-0189-z">https://doi.org/10.1038/s41562-017-0189-z</a>
+<div id="ref-Ngiam2020-ln" class="csl-entry" role="listitem">
+Ngiam, W. (2020, April). <span>ReproducibiliTea</span> | simmons, nelson and simonsohn (2011). <span>False-Positive</span> psychology. Youtube. Retrieved from <a href="https://www.youtube.com/watch?v=bf3GqyBRgzY">https://www.youtube.com/watch?v=bf3GqyBRgzY</a>
 </div>
-<div id="ref-Bhattacharjee2013-rw" class="csl-entry" role="listitem">
-Bhattacharjee, Y. (2013). The mind of a con man. <em>The New York Times</em>. Retrieved from <a href="https://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html">https://www.nytimes.com/2013/04/28/magazine/diederik-stapels-audacious-academic-fraud.html</a>
+<div id="ref-simmons_false-positive_2011" class="csl-entry" role="listitem">
+Simmons, J. P., Nelson, L. D., &amp; Simonsohn, U. (2011). False-positive psychology: <span>U</span>ndisclosed flexibility in data collection and analysis allows presenting anything as significant. <em>Psychological Science</em>, <em>22</em>(11), 1359–1366. <a href="https://doi.org/10.1177/0956797611417632">https://doi.org/10.1177/0956797611417632</a>
 </div>
-<div id="ref-Carpenter2012-qy" class="csl-entry" role="listitem">
-Carpenter, S. (2012). Harvard psychology researcher committed fraud, <span>US</span> investigation concludes. <em>Science</em>, <em>6</em>. Retrieved from <a href="https://www.science.org/content/article/harvard-psychology-researcher-committed-fraud-us-investigation-concludes">https://www.science.org/content/article/harvard-psychology-researcher-committed-fraud-us-investigation-concludes</a>
-</div>
-<div id="ref-Denworth2019-uh" class="csl-entry" role="listitem">
-Denworth, L. (2019, October). The significant problem of <span>P</span> values. <a href="https://www.scientificamerican.com/article/the-significant-problem-of-p-values/" class="uri">https://www.scientificamerican.com/article/the-significant-problem-of-p-values/</a>.
-</div>
-<div id="ref-Fisher1992-zq" class="csl-entry" role="listitem">
-Fisher, R. A. (1992). Statistical methods for research workers. In <em>Springer series in statistics</em> (pp. 66–70). New York, NY: Springer New York. <a href="https://doi.org/10.1007/978-1-4612-4380-9\_6">https://doi.org/10.1007/978-1-4612-4380-9\_6</a>
-</div>
-<div id="ref-Lakens2017-sn" class="csl-entry" role="listitem">
-Lakens, D., Adolfi, F., Albers, C., Anvari, F., Apps, M., Argamon, S., … Zwaan, R. (2017). Justify your alpha. <a href="https://doi.org/10.17605/OSF.IO/9S3Y6">https://doi.org/10.17605/OSF.IO/9S3Y6</a>
-</div>
-<div id="ref-Levelt2012-ap" class="csl-entry" role="listitem">
-Levelt, W. J. M., Drenth, P. J. D., &amp; Noort, E. (2012). Flawed science: The fraudulent research practices of social psychologist diederik stapel. <a href="https://pure.mpg.de/rest/items/item_1569964/component/file_1569966/content" class="uri">https://pure.mpg.de/rest/items/item_1569964/component/file_1569966/content</a>; pure.mpg.de. Retrieved from <a href="https://pure.mpg.de/rest/items/item_1569964/component/file_1569966/content">https://pure.mpg.de/rest/items/item_1569964/component/file_1569966/content</a>
-</div>
-<div id="ref-Mencken2020-qm" class="csl-entry" role="listitem">
-Mencken, H. L. (2020, February). Prejudices: First, second, &amp; third series. <a href="https://www.loa.org/books/331-prejudices-first-second-amp-third-series/" class="uri">https://www.loa.org/books/331-prejudices-first-second-amp-third-series/</a>.
-</div>
-<div id="ref-xkcd-p-values" class="csl-entry" role="listitem">
-Monroe, R. (n.d.). <span>P</span>-values. <a href="https://xkcd.com/1478/" class="uri">https://xkcd.com/1478/</a>.
-</div>
-<div id="ref-Ritchie2020-fm" class="csl-entry" role="listitem">
-Ritchie, S. (2020). <em>Science fictions: Exposing fraud, bias, negligence and hype in science</em> (1st ed.). Penguin Random House. Retrieved from <a href="https://www.amazon.com/Science-Fictions/dp/1847925669">https://www.amazon.com/Science-Fictions/dp/1847925669</a>
-</div>
-<div id="ref-Tampio2022-tg" class="csl-entry" role="listitem">
-Tampio, N. (2022, March). Scepticism is a way of life that allows democracy to flourish. <a href="https://aeon.co/essays/scepticism-is-a-way-of-life-that-allows-democracy-to-flourish" class="uri">https://aeon.co/essays/scepticism-is-a-way-of-life-that-allows-democracy-to-flourish</a>; Aeon Magazine.
-</div>
-<div id="ref-quote-investigator-fw" class="csl-entry" role="listitem">
-There is always a well-known solution to every human <span>Problem—Neat</span>, plausible, and wrong. (n.d.). <a href="https://quoteinvestigator.com/2016/07/17/solution/" class="uri">https://quoteinvestigator.com/2016/07/17/solution/</a>.
-</div>
-<div id="ref-Wasserstein2016-kl" class="csl-entry" role="listitem">
-Wasserstein, R. L., &amp; Lazar, N. A. (2016). The <span>ASA</span>’s statement on p-values: Context, process, and purpose. <em>The American Statistician</em>, <em>70</em>(2), 129–133. <a href="https://doi.org/10.1080/00031305.2016.1154108">https://doi.org/10.1080/00031305.2016.1154108</a>
+<div id="ref-singalong2015-xf" class="csl-entry" role="listitem">
+singalong. (2015, May). Ac-cent-tchu-ate the positive - bing crosby &amp; the andrews sisters (lyrics in description). Youtube. Retrieved from <a href="https://www.youtube.com/watch?v=5Qk9o_ZeR7s">https://www.youtube.com/watch?v=5Qk9o_ZeR7s</a>
 </div>
 </div>
 </section></section>
-
     </div>
   </div>
 
@@ -856,6 +1165,44 @@ Wasserstein, R. L., &amp; Lazar, N. A. (2016). The <span>ASA</span>’s statemen
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -1043,38 +1390,6 @@ Wasserstein, R. L., &amp; Lazar, N. A. (2016). The <span>ASA</span>’s statemen
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
-    (function() {
-      let previousOnload = window.onload;
-      window.onload = () => {
-        if (previousOnload) {
-          previousOnload();
-        }
-        lightboxQuarto.on('slide_before_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          const href = trigger.getAttribute('href');
-          if (href !== null) {
-            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-            if (imgEl !== null) {
-              const srcAttr = imgEl.getAttribute("src");
-              if (srcAttr && srcAttr.startsWith("data:")) {
-                slideConfig.href = srcAttr;
-              }
-            }
-          } 
-        });
-      
-        lightboxQuarto.on('slide_after_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(slideNode);
-          }
-        });
-      
-      };
-      
-    })();
-              </script>
     
 
 </body></html>
