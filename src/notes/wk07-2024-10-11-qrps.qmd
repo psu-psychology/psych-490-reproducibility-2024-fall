@@ -13,6 +13,35 @@ subtitle: "2023-10-11 Fri"
 
 # Overview
 
+## In the news...
+
+![@Flam2024-ik](../include/img/bloomberg-2024-10-09-trust-in-science.png)
+
+---
+
+::: {#fig-flam-2024 layout-ncol=2}
+
+![](../include/img/flam-2024-fig-2.png){#fig-surus}
+
+![](../include/img/flam-2024-fig-1.png){#fig-hanno}
+
+@Flam2024-ik
+:::
+
+---
+
+>Treat everyone with respect—even the doubters
+
+>Practice what you preach — and don’t preach what you can’t practice
+
+>Admit what you don't know
+
+>Recognize your mistakes
+
+<p style="text-align: center;">
+@Flam2024-ik
+</p>
+
 ## Announcements
 
 - [Due Monday]{.orange_due}
