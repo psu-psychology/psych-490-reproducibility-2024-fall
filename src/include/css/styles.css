@@ -6,13 +6,16 @@ p.caption {
   color: #777;
   margin-top: 10px;
 }
+
 p code {
   white-space: inherit;
 }
+
 pre {
   word-break: normal;
   word-wrap: normal;
 }
+
 pre code {
   white-space: inherit;
 }
@@ -26,10 +29,14 @@ pre code {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 figcaption {
   margin: auto;
+  text-align: center;
+}
+
+p.center_citation {
   text-align: center;
 }

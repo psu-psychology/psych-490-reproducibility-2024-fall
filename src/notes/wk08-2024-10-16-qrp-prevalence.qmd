@@ -17,7 +17,7 @@ title: "2024-10-16 Wed"
 - Read & Discuss
     - [@John2012-tk]
 - Discuss results from
-    - [Exercise 02: P-hack your way to scientific glory](../exercises/ex04-p-hacking.qmd).
+    - [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd).
     
 ---
 
@@ -144,7 +144,7 @@ knitr::include_url("http://pss.sagepub.com/content/by/supplemental-data", height
 - How many different analyses did you try?
 - Who changed their analysis after finding a significant result?
 - Did anyone try another analysis--after you got a significant result--and *keep* the non-significant result?
-- [Visualizations](../surveys/p-hacking-suppl.qmd) of the data
+- [Visualizations](../supplemental/p-hacking-suppl.qmd) of the data
 
 ---
 
@@ -179,9 +179,9 @@ knitr::include_url("http://pss.sagepub.com/content/by/supplemental-data", height
     - (Skim) [@Rosenthal1979-zi]. [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170719)
     - (Optional) [@Franco2014-yu]
 - [Assignment]{.green_assigned}
-    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd), [final version due Wednesday, October 30]{.orange_due}
+    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd), [final version due Wednesday, October 30]{.orange_due}
 - [Due]{.orange_due}
-    - [Final project](exercises/final-project.qmd) proposal
+    - [Final project](../exercises/final-project.qmd) proposal
 - [Class notes]()
 
 # Resources

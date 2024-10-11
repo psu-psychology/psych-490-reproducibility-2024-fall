@@ -13,15 +13,11 @@ subtitle: "2023-10-11 Fri"
 
 # Overview
 
-## In the news...
-
-![@Anthony_Mills2023-ji](../include/img/mills-nytimes-americans-losing-trust-in-sci.png){fig-align="center"}
-
 ## Announcements
 
 - [Due Monday]{.orange_due}
     - [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd) write-up.
-- [Due next Friday]{.orange_due}
+- [Due *next* Friday]{.orange_due}
     - [Final project](../exercises/final-project.qmd) proposal
 
 ## Last time...
@@ -32,14 +28,12 @@ subtitle: "2023-10-11 Fri"
 
 *Questionable research practices*
 
-- Read
+- Discuss
     - @simmons_false-positive_2011
-- Watch
-    - @Ngiam2020-ln
 - Bring
     - Draft [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd) for discussion.
 
-## Set-up for next Wednesday's work session...
+## Set-up for group discussion...
 
 - Enter (anonymized) data into a spreadsheet
 
@@ -97,6 +91,10 @@ Simmons, J. P., Nelson, L. D. & Simonsohn, U. (2011). False-positive psychology:
 
 ![https://www.scalestatistics.com/diagnostic-accuracy.html](https://www.scalestatistics.com/uploads/3/0/4/1/30413390/6343470_orig.jpg){fig-align="center" height="75%"}
 
+## Signal Detection Theory
+
+![<https://brain.mcmaster.ca/SDT/sdt2.html>](https://brain.mcmaster.ca/SDT/sdbox.jpg)
+
 ## Practices
   
 - Control alpha ($\alpha$)
@@ -132,8 +130,9 @@ are letters from the Greek alphabet.
 
 ## Questions for understanding
 
-- Why do researchers' prefer a small ($<0.05$) $\alpha$?
-- Why do researchers' prefer a small $\beta$?
+- Why do researchers prefer a small ($<0.05$) $\alpha$?
+- Why do researchers prefer a small $\beta$?
+  - Hint: Why do researchers call $1-\beta$ 'power'?
 
 ## What's a defensible choice? What's a questionable practice?
 
@@ -196,7 +195,7 @@ See [this supplemental page](../supplemental/plotting-degrees-of-freedom.qmd) fo
 >The problem, of course, is that the likelihood of at least one (of many) analyses producing a falsely positive finding at the 5% level is necessarily greater than 5%.
 
 <p style="text-align: center;">
-[@simmons_false-positive_2011]
+@simmons_false-positive_2011
 </p>
 
 ---
@@ -204,7 +203,7 @@ See [this supplemental page](../supplemental/plotting-degrees-of-freedom.qmd) fo
 >This exploratory behavior is not the by-product of malicious intent, but rather the result of two factors: (a) ambiguity in how best to make these decisions and (b) the researcher’s desire to find a statistically significant result.
 
 <p style="text-align: center;">
-[@simmons_false-positive_2011]
+@simmons_false-positive_2011
 </p>
 
 ## Choices to be made...
@@ -225,7 +224,7 @@ See [this supplemental page](../supplemental/plotting-degrees-of-freedom.qmd) fo
 >Similarly, what constituted “too slow” varied enormously: the slowest 2.5% or 10%, or 2 or 2.5 or 3 standard deviations slower than the mean, or 1.5 standard deviations slower from that condition’s mean, or slower than 1,000 or 1,200 or 1,500 or 2,000 or 3,000 or 5,000 ms. None of these decisions is necessarily incorrect, but that fact makes any of them justifiable and hence potential fodder for self-serving justifications.
 
 <p style="text-align: center;">
-[@simmons_false-positive_2011]
+@simmons_false-positive_2011
 </p>
 
 ---
@@ -262,11 +261,11 @@ When are those assumptions justified and when might they not be?
 
 ::: {.callout-note}
 
-An analysis of covariance (ANCOVA) is a tool for asking whether there is some difference between groups (here the song listened to) when we account for a third variable, like their father's age.
+An analysis of covariance (ANCOVA) is a tool for asking whether there is some difference between groups (here the song listened to) when we account for a third variable, like father's age.
 
 :::
 
-Link to supplemental [illustration of ANCOVA](../surveys/simmons-etal-2011-suppl.html) 
+Link to supplemental [illustration of ANCOVA](../supplemental/simmons-etal-2011-suppl.qmd) 
 
 ## Study 2
 
@@ -288,14 +287,24 @@ Link to supplemental [illustration of ANCOVA](../surveys/simmons-etal-2011-suppl
 - What did they say?
 - How is that even possible?
 
-## Illustration {.scrollable}
+## Illustration 
 
-```{r, fig.cap="Table 3 from [@simmons_false-positive_2011](http://dx.doi.org/10.1177/0956797611417632)", out.width="100%"}
-knitr::include_graphics("../include/img/simmons-etal-2011-table-03.png")
-```
+![Table 3 from @simmons_false-positive_2011](../include/img/simmons-etal-2011-table-03.png)
 
->First, notice that in our original report, we redacted the many measures other than father’s age that we collected (including the dependent variable from Study 1: feelings of oldness). A reviewer would hence have been unable to assess the flexibility involved in selecting father’s age as a control. Second, by reporting only results that included the covariate, we made it impossible for readers to discover its critical role in achieving a significant result. Seeing the full list of variables now disclosed, reviewers would have an easy time asking for robustness checks, such as “Are the results from Study 1 replicated in Study 2?” They are not: People felt older rather than younger after listening to “When I’m Sixty-Four,” though not significantly so, F(1, 17) = 2.07, p = .168. Finally, notice that we did not determine the study’s termination rule in advance; instead, we monitored statistical significance approximately every 10 observations. Moreover, our sample size did not reach the 20-observation threshold set by our requirements.
->
+---
+
+>First, notice that in our original report, we redacted the many measures other than father’s age that we collected (including the dependent variable from Study 1: feelings of oldness). A reviewer would hence have been unable to assess the flexibility involved in selecting father’s age as a control. 
+
+---
+
+>Second, by reporting only results that included the covariate, we made it impossible for readers to discover its critical role in achieving a significant result. Seeing the full list of variables now disclosed, reviewers would have an easy time asking for robustness checks, such as “Are the results from Study 1 replicated in Study 2?” They are not: People felt older rather than younger after listening to “When I’m Sixty-Four,” though not significantly so, *F*(1, 17) = 2.07, *p*=.168. 
+
+---
+
+>Finally, notice that we did not determine the study’s termination rule in advance; instead, we monitored statistical significance approximately every 10 observations. Moreover, our sample size did not reach the 20-observation threshold set by our requirements.
+
+---
+
 >The redacted version of the study we reported in this article fully adheres to currently acceptable reporting standards and is, not coincidentally, deceptively persuasive. The requirement-compliant version reported in Table 3 would be—appropriately—all but impossible to publish.
 
 <p style="text-align: center;">
@@ -316,25 +325,19 @@ knitr::include_graphics("../include/img/simmons-etal-2011-table-03.png")
 
 ## Findings
 
-```{r, fig.cap="Table 1 from [@simmons_false-positive_2011](http://dx.doi.org/10.1177/0956797611417632)", out.width="80%"}
-knitr::include_graphics("../include/img/simmons-etal-2011-table-01.png")
-```
+![Table 1 from @simmons_false-positive_2011](../include/img/simmons-etal-2011-table-01.png)
 
 - Researcher choices inflate false positive rates.
 
 ---
 
-```{r, out.width="80%", fig.cap="Figure 1 from [@simmons_false-positive_2011](http://dx.doi.org/10.1177/0956797611417632)"}
-knitr::include_graphics("../include/img/simmons-etal-2011-fig-01.png")
-```
+![Figure 1 from @simmons_false-positive_2011](../include/img/simmons-etal-2011-fig-01.png)
 
 - Collecting more data after analyzing a small initial sample inflates the false positive rate.
 
 ---
 
-```{r, out.width="80%", fig.cap="Figure 2 from [@simmons_false-positive_2011](http://dx.doi.org/10.1177/0956797611417632)"}
-knitr::include_graphics("../include/img/simmons-etal-2011-fig-02.png")
-```
+![Figure 2 from @simmons_false-positive_2011](../include/img/simmons-etal-2011-fig-02.png)
 
 - Just because a statistical test met the criterion threshold with a small sample doesn't mean it will do so with larger samples.
 
@@ -352,9 +355,13 @@ knitr::include_graphics("../include/img/simmons-etal-2011-fig-02.png")
 - Are they feasible?
 - Do you think authors and reviewers will comply? Why or why not?
 
-## Reproducibility notes for [@simmons_false-positive_2011]
+## Reproducibility notes 
 
-- does not appear to have shared data or any supplementary materials along with the article.
+- @simmons_false-positive_2011 do not appear to have shared data or any supplementary materials along with the article.
+
+<center>
+<iframe src="https://giphy.com/embed/JRhS6WoswF8FxE0g2R" width="240" height="149" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/CBSAllAccess-season-5-episode-23-i-love-lucy-JRhS6WoswF8FxE0g2R">via GIPHY</a></p>
+</center>
 
 # Next time
 
