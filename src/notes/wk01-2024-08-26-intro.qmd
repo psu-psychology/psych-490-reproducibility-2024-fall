@@ -27,7 +27,7 @@ author: "Rick Gilmore"
 
 - Introduction to the course
 - Why trust science?
-  - [@Oreskes2017]
+  - @Oreskes2017
 
 # Introduction to the course
 
@@ -145,7 +145,7 @@ Robert Merton
 ::: {.incremental}
 - a **stock of accumulated knowledge** (facts & findings)
 - a set of **characteristic methods** 
-- a **set of cultural values** [@Merton1973-vf, p. 268]
+- a **set of cultural values** @Merton1973-vf, p. 268
 :::
 
 :::
@@ -156,7 +156,7 @@ Robert Merton
 
 >"To say that a theory or hypothesis was accepted on the basis of objective methods does not entitle us to say it is true but rather that it reflects the critically achieved consensus of the scientific community. [And] it's not clear we should hope for anything better."
 
-## [@Oreskes2017]
+## @Oreskes2017
 
 ::: {.incremental}
 - "Sustained engagement with the world"
@@ -226,7 +226,7 @@ trust |>
 >The results showed that political conservatism, religiousness, conspiracy ideation, and openness to experience significantly contributed to trust in science, while education did not...
 
 <p style="text-align:center;">
-[@Plohl2023-yf]
+@Plohl2023-yf
 </p>
 
 ---
@@ -236,7 +236,7 @@ trust |>
 >...Furthermore, after controlling for these factors, an aspect of intellectual humility, openness to revising one's viewpoint, emerged as one of the key predictors of trust in science.
 
 <p style="text-align:center;">
-[@Plohl2023-yf]
+@Plohl2023-yf
 </p>
 
 ---
@@ -277,8 +277,8 @@ Russian Proverb, [Wikipedia](https://en.wikipedia.org/wiki/Trust,_but_verify)
 *Don't Fool Yourself*
 
 - Read
-    - [@Feynman1974-ld].
-    - [@sagan-1996-baloney], Chapter 12, The Fine Art of Baloney Detection. [PDF on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=151876796)
+    - @Feynman1974-ld.
+    - @sagan-1996-baloney, Chapter 12, The Fine Art of Baloney Detection. [PDF on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=151876796)
   
 # Resources
 

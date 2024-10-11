@@ -8,7 +8,7 @@ format:
     code-fold: true
     bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
     csl: ../include/bib/apa.csl
-    css: ../include/css/styles.css
+    css: css/gilmore-revealjs.css
 knitr:
   opts_chunk:
     fig.path: fig/

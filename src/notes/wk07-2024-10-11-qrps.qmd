@@ -17,6 +17,7 @@ subtitle: "2023-10-11 Fri"
 
 ![@Flam2024-ik](../include/img/bloomberg-2024-10-09-trust-in-science.png)
 
+
 ---
 
 ::: {#fig-flam-2024 layout-ncol=2}
