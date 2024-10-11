@@ -238,6 +238,10 @@ div.csl-indent {
     <a class="dropdown-item" href="../surveys/survey-02.html">
  <span class="dropdown-text">Survey 02</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../surveys/survey-03.html">
+ <span class="dropdown-text">Survey 03</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -246,15 +250,15 @@ div.csl-indent {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-supplemental">    
         <li>
-    <a class="dropdown-item" href="../supplemental/retraction-watch.qmd">
+    <a class="dropdown-item" href="../supplemental/retraction-watch.html">
  <span class="dropdown-text">Retraction Watch database</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../supplemental/plotting-degrees-of-freedom.qmd">
+    <a class="dropdown-item" href="../supplemental/plotting-degrees-of-freedom.html">
  <span class="dropdown-text">Plot your data!</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../supplemental/p-hacking-suppl.qmd">
+    <a class="dropdown-item" href="../supplemental/p-hacking-suppl.html">
  <span class="dropdown-text">On <em>p</em>-hacking</span></a>
   </li>  
     </ul>
@@ -411,7 +415,7 @@ Note
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(<span class="st">"csv"</span>, params<span class="sc">$</span>fn), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>We have <em>n=</em>15 responses as of 2024-10-11 08:38:10.659558. <strong>Note</strong>: Two of these are “test” responses by Dr.&nbsp;Gilmore.</p>
+<p>We have <em>n=</em>15 responses as of 2024-10-11 13:26:15.866418. <strong>Note</strong>: Two of these are “test” responses by Dr.&nbsp;Gilmore.</p>
 <p>Here are the column “names”:</p>
 <div class="cell">
 <details class="code-fold">
@@ -886,7 +890,7 @@ Figure&nbsp;4: Individual ratings of each norm based on what respondents think s
 <span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 8 rows containing missing values or values outside the scale range
+<pre><code>Warning: Removed 7 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
@@ -1567,7 +1571,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

@@ -4,6 +4,7 @@ project:
     - "./*.qmd"
     - "exercises/*.qmd"
     - "surveys/*.qmd"
+    - "supplemental/*.qmd"
     - "notes/*.qmd"
   output-dir: "../docs"
 
@@ -41,14 +42,15 @@ website:
         menu:
           - href: "surveys/survey-01.qmd"
           - href: "surveys/survey-02.qmd"
+          - href: "surveys/survey-03.qmd"
       - text: supplemental
         menu:
-          - href: "supplemental/retraction-watch.qmd"
-            text: "Retraction Watch database"
-          - href: "supplemental/plotting-degrees-of-freedom.qmd"
-            text: "Plot your data!"
-          - href: "supplemental/p-hacking-suppl.qmd"
-            text: "On *p*-hacking"
+          - text: "Retraction Watch database"
+            href: "supplemental/retraction-watch.qmd"
+          - text: "Plot your data!"
+            href: "supplemental/plotting-degrees-of-freedom.qmd"
+          - text: "On *p*-hacking"
+            href: "supplemental/p-hacking-suppl.qmd"
   repo-url: https://github.com/psu-psychology/psych-490-reproducibility-2024-fall
   repo-actions: [edit, issue]
   repo-subdir: src

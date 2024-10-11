@@ -163,21 +163,25 @@ are letters from the Greek alphabet.
 - Why do researchers prefer a small $\beta$?
   - Hint: Why do researchers call $1-\beta$ 'power'?
 
-## What's a defensible choice? What's a questionable practice?
+## Defensible choice or questionable practice?
 
+::: {.incremental}
 - In a paper, failing to report all of a study’s dependent measures
 - Deciding whether to collect more data after looking to see whether the results were significant
 - In a paper, failing to report all of a study’s conditions
 - Stopping collecting data earlier than planned because one found the result that one had been looking for
+:::
 
 ---
 
-- In a paper, “rounding off” a *p* value (e.g., reporting that a p value of .054 is less than .05)
+::: {.incremental}
+- In a paper, “rounding off” a *p* value (e.g., reporting that a *p* value of .054 is less than .05)
 - In a paper, selectively reporting studies that “worked”
 - Deciding whether to exclude data after looking at the impact of doing so on the results
 - In a paper, reporting an unexpected finding as having been predicted from the start
 - In a paper, claiming that results are unaffected by demographic variables (e.g., gender) when one is actually unsure (or knows that they do)
 - Falsifying data
+:::
 
 ---
 

@@ -8,7 +8,7 @@ params:
 ## Purpose
 
 This page documents the data processing steps involved with Survey 03 in PSYCH 490.012.
-The survey questions were adapted from those discussed in [@Chopik2018-wx].
+The survey questions were adapted from those discussed in @Chopik2018-wx on [Wednesday, November 20](../schedule.qmd#wednesday-november-20).
 
 The page also serves as a learning opportunity for exploring how to generate a set of plots using functional programming techniques.
 
@@ -23,18 +23,18 @@ The *long* URL that Google Forms provides can be shortened using the Google inte
 We use the shortened form to show the clickable link below.
 :::
 
-Link: <https://forms.gle/BTqayMKnP7Xnyhst9>
+Link: <https://forms.gle/gGAVmWjCHRVDekMo6>
 
 ### QR Code
 
 ```{r survey-qr}
-survey_03_qr <- qrcode::qr_code("https://forms.gle/BTqayMKnP7Xnyhst9")
+survey_03_qr <- qrcode::qr_code("https://forms.gle/gGAVmWjCHRVDekMo6")
 plot(survey_03_qr)
 ```
 
 ### Embedded survey
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZDLrv73wouyp6TegUcB5D2c9vykE7Q6j0q_MtpECxFIrwOQ/viewform?embedded=true" width="640" height="2564" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZDLrv73wouyp6TegUcB5D2c9vykE7Q6j0q_MtpECxFIrwOQ/viewform?embedded=true" width="640" height="2723" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 ## Preparation
 

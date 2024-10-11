@@ -238,6 +238,10 @@ div.csl-indent {
     <a class="dropdown-item" href="../surveys/survey-02.html">
  <span class="dropdown-text">Survey 02</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../surveys/survey-03.html">
+ <span class="dropdown-text">Survey 03</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -246,15 +250,15 @@ div.csl-indent {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-supplemental">    
         <li>
-    <a class="dropdown-item" href="../supplemental/retraction-watch.qmd">
+    <a class="dropdown-item" href="../supplemental/retraction-watch.html">
  <span class="dropdown-text">Retraction Watch database</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../supplemental/plotting-degrees-of-freedom.qmd">
+    <a class="dropdown-item" href="../supplemental/plotting-degrees-of-freedom.html">
  <span class="dropdown-text">Plot your data!</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../supplemental/p-hacking-suppl.qmd">
+    <a class="dropdown-item" href="../supplemental/p-hacking-suppl.html">
  <span class="dropdown-text">On <em>p</em>-hacking</span></a>
   </li>  
     </ul>
@@ -327,7 +331,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 16, 2024</p>
+      <p class="date-modified">October 11, 2024</p>
     </div>
   </div>
     
@@ -340,7 +344,7 @@ div.csl-indent {
 
 <section id="purpose" class="level2">
 <h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
-<p>This page documents the data processing steps involved with Survey 03 in PSYCH 490.012. The survey questions were adapted from those discussed in <span class="citation" data-cites="Chopik2018-wx">(<a href="#ref-Chopik2018-wx" role="doc-biblioref">Chopik, Bremner, Defever, &amp; Keller, 2018</a>)</span>.</p>
+<p>This page documents the data processing steps involved with Survey 03 in PSYCH 490.012. The survey questions were adapted from those discussed in <span class="citation" data-cites="Chopik2018-wx">Chopik, Bremner, Defever, &amp; Keller (<a href="#ref-Chopik2018-wx" role="doc-biblioref">2018</a>)</span> on <a href="../schedule.html#wednesday-november-20">Wednesday, November 20</a>.</p>
 <p>The page also serves as a learning opportunity for exploring how to generate a set of plots using functional programming techniques.</p>
 </section>
 <section id="our-survey" class="level2">
@@ -360,13 +364,13 @@ Note
 <p>The <em>long</em> URL that Google Forms provides can be shortened using the Google interface. We use the shortened form to show the clickable link below.</p>
 </div>
 </div>
-<p>Link: <a href="https://forms.gle/BTqayMKnP7Xnyhst9" class="uri">https://forms.gle/BTqayMKnP7Xnyhst9</a></p>
+<p>Link: <a href="https://forms.gle/gGAVmWjCHRVDekMo6" class="uri">https://forms.gle/gGAVmWjCHRVDekMo6</a></p>
 <section id="qr-code" class="level3">
 <h3 class="anchored" data-anchor-id="qr-code">QR Code</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>survey_03_qr <span class="ot">&lt;-</span> qrcode<span class="sc">::</span><span class="fu">qr_code</span>(<span class="st">"https://forms.gle/BTqayMKnP7Xnyhst9"</span>)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>survey_03_qr <span class="ot">&lt;-</span> qrcode<span class="sc">::</span><span class="fu">qr_code</span>(<span class="st">"https://forms.gle/gGAVmWjCHRVDekMo6"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(survey_03_qr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
@@ -380,7 +384,7 @@ Note
 </section>
 <section id="embedded-survey" class="level3">
 <h3 class="anchored" data-anchor-id="embedded-survey">Embedded survey</h3>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZDLrv73wouyp6TegUcB5D2c9vykE7Q6j0q_MtpECxFIrwOQ/viewform?embedded=true" width="640" height="2564" frameborder="0" marginheight="0" marginwidth="0">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZDLrv73wouyp6TegUcB5D2c9vykE7Q6j0q_MtpECxFIrwOQ/viewform?embedded=true" width="640" height="2723" frameborder="0" marginheight="0" marginwidth="0">
 Loading…
 </iframe>
 </section>
@@ -1549,7 +1553,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false});
+<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

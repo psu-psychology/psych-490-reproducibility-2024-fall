@@ -8,22 +8,23 @@ subtitle: "2024-10-18 Fri"
 ## Announcements
 
 - [Due today]{.orange_due}
-    - [Final project](exercises/final-project.qmd) proposal
+    - [Final project](../exercises/final-project.qmd) proposal
 
 ## Last time...
 
 - What is *p*-hacking?
 - How many different combinations of variables were there in [Exercise 05](../exercises/ex05-p-hacking.qmd)?
-- What would we need to do to determine which party and which measures of political power impact the economy one way or the other?
+  - *Hint*: See the [*p*-hacking supplement](../supplemental/p-hacking-suppl.qmd#how-many-different-combinations-of-variables)
+- What would we need to do to *conclusively* determine which party and which measures of political power impact the economy one way or the other?
 
 ## Today
 
 *File drawer effect*
 
-- Work on final project proposals
 - Discuss
     - @Rosenthal1979-zi
     - @Franco2014-yu
+- Work on final project proposals
    
 ## File drawer effect
 
