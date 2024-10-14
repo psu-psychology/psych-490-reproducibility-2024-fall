@@ -1,2 +1,5 @@
 student,analysis,party,prediction,power_president,power_governors,power_senators,power_reps,econ_employment,econ_inflation,econ_gdp,econ_stocks,factor_in_power,exclude_recessions,p_value,publishable
 1963,1,democrats,worse,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,0.06,no
+2002,1,republicans,better,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,0.01,yes
+2002,2,republicans,better,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,0.4,no
+2002,3,republicans,better,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,0.01,yes

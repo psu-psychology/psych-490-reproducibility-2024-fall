@@ -11,22 +11,51 @@ title: "2024-10-14 Mon"
 
 ## Announcements
 
-- [Due Friday]{.orange_due}
+- [Due today]{.orange_due}
+    - [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd) write-up.
+- [Due this Friday, October 18]{.orange_due}
     - [Final project](../exercises/final-project.qmd) proposal
     
 ## Last time...
 
 *Questionable research practices*
 
+## Defensible choice or questionable practice?
+
+- In a paper, failing to report all of a study’s dependent measures
+- Deciding whether to collect more data after looking to see whether the results were significant
+- In a paper, failing to report all of a study’s conditions
+- Stopping collecting data earlier than planned because one found the result that one had been looking for
+
+---
+
+- In a paper, “rounding off” a *p* value (e.g., reporting that a *p* value of .054 is less than .05)
+- In a paper, selectively reporting studies that “worked”
+- Deciding whether to exclude data after looking at the impact of doing so on the results
+- In a paper, reporting an unexpected finding as having been predicted from the start
+- In a paper, claiming that results are unaffected by demographic variables (e.g., gender) when one is actually unsure (or knows that they do)
+- Falsifying data
+
+## More on @simmons_false-positive_2011
+
+- [Study 1](https://psu-psychology.github.io/psych-490-reproducibility-2024-fall/notes/wk07-2024-10-11-qrps.html#/study-1-simmons_false-positive_2011)
+- [Degrees of Freedom](https://psu-psychology.github.io/psych-490-reproducibility-2024-fall/supplemental/plotting-degrees-of-freedom.html#degrees-of-freedom)
+
 ## Today
 
 *Work Session: P-hacking and Final Project Proposals*
 
-- [Due]{.orange_due}
-    - [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd) write-up.
-- Work session
-    - [Final project proposals](../exercises/final-project.qmd), [due Friday, October 18]{.orange_due}.
+- Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd) write-up.
+- Final project [proposals](../exercises/final-project.qmd) 
     
+## Set-up for group discussion...
+
+- Enter (anonymized) data into a spreadsheet
+
+<https://docs.google.com/spreadsheets/d/1NXcBrI_bMP_wFi1BurCS5WGppr9HWBiF5ulh7ch61MU/edit?usp=sharing>
+
+- Choose a student_id (integer) for yourself (not your PSU ID or phone number)
+
 # Evaluating *p*-hacking
 
 ## Our results
@@ -66,10 +95,8 @@ title: "2024-10-14 Mon"
 
 *Prevalence of QRPs*
 
-- Read
+- Discuss
     - @John2012-tk
-- (Optional) Enter your [Exercise 05](../exercises/ex05-p-hacking.qmd) data into [this](https://docs.google.com/spreadsheets/d/1NXcBrI_bMP_wFi1BurCS5WGppr9HWBiF5ulh7ch61MU/edit?usp=sharing) anonymous spreadsheet.
-- Discuss [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd).
 
 # Resources
 

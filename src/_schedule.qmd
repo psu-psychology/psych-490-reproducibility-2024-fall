@@ -253,8 +253,6 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 - Read
     - @John2012-tk
-- (Optional) Enter your [Exercise 05](exercises/ex05-p-hacking.qmd) data into [this](https://docs.google.com/spreadsheets/d/1JI_Qih4wCzUrYTQYE3dpvVx2C7GdzfUZq0a3QhqQyeE/edit?usp=sharing) anonymous spreadsheet.
-- Discuss [Exercise 05: P-hack your way to scientific glory](exercises/ex05-p-hacking.qmd).
 - [Class notes](notes/wk08-2024-10-16-qrp-prevalence.qmd)
 
 #### Friday, October 18 {-}

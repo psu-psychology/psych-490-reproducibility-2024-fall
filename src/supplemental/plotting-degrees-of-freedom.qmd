@@ -124,7 +124,7 @@ If we use a linear regression to predict `y ~ x` then we usually have a slope es
 If we're summarizing a raw dataset with $n=142$ points in `X` and $n=142$ datapoints in `Y` like the `datasauRus` sets above, being able to summarize with just a few numbers (degrees of freedom) is powerful and efficient.
 And in general, we analysts favor more parsimonious models of data--those with fewer degrees of freedom.
 
-The problem arises when our simple models with few degrees of freedom don't really capture important information about datasets, or when they persuade us to think (wrongly) that datasets with the same summary statistics are necessarily comparable.
+The problem arises when our simple models with few degrees of freedom don't really capture important information about data sets, or when they persuade us to think (wrongly) that data sets with the same summary statistics are necessarily comparable.
 They might be, but they might not be.
 We have to look at the data--plot it--and confirm that we haven't lost information in simplifying a dataset with a small number of statistics.
 The `datasauRus` and `anscombe` plots show us perverse situations when the small degree of freedom summaries are deeply misleading.
@@ -139,7 +139,7 @@ So, the best summaries (models) of data are small (in the number of degrees of f
 
 ## Researcher degrees of freedom
 
-When [@simmons_false-positive_2011] discuss 'researcher degrees of freedom', they extend these ideas in a new direction.
+When @simmons_false-positive_2011 discuss 'researcher degrees of freedom', they extend these ideas in a new direction.
 How many steps (degrees of freedom) did the analysts take to reach their conclusions?
 Ideally, as few as possible, and certainly far less than the number of data points.
 
