@@ -7,7 +7,10 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.56">
 
   <meta name="author" content="Rick Gilmore">
@@ -421,15 +424,25 @@ Rick Gilmore
 <section id="more-on-simmons_false-positive_2011" class="slide level2">
 <h2>More on <span class="citation" data-cites="simmons_false-positive_2011">Simmons, Nelson, &amp; Simonsohn (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span></h2>
 <ul>
-<li><a href="https://psu-psychology.github.io/psych-490-reproducibility-2024-fall/notes/wk07-2024-10-11-qrps.html#/study-1-simmons_false-positive_2011">Study 1</a></li>
-<li><a href="https://psu-psychology.github.io/psych-490-reproducibility-2024-fall/supplemental/plotting-degrees-of-freedom.html#degrees-of-freedom">Degrees of Freedom</a></li>
+<li>Researcher choices can inflate false positive rates</li>
+<li>Collecting more data after analyzing a small initial sample inflates the false positive rate</li>
+<li>Just because a statistical test met the criterion threshold (<span class="math inline">\(\alpha\)</span>) with a small sample doesn’t mean it will do so with larger samples</li>
 </ul>
+</section>
+<section id="recommendations" class="slide level2">
+<h2>Recommendations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../include/img/simmons-etal-2011-table-02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Table 2 from @simmons_false-positive_2011"><img data-src="../include/img/simmons-etal-2011-table-02.png" style="height:70.0%" alt="Table 2 from Simmons et al. (2011)"></a></p>
+<figcaption>Table 2 from <span class="citation" data-cites="simmons_false-positive_2011">Simmons et al. (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span></figcaption>
+</figure>
+</div>
 </section>
 <section id="today" class="slide level2">
 <h2>Today</h2>
 <p><em>Work Session: P-hacking and Final Project Proposals</em></p>
 <ul>
-<li>Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd) write-up.</li>
+<li><a href="../exercises/ex05-p-hacking.html">Exercise 05: P-hack your way to scientific glory</a> write-up.</li>
 <li>Final project <a href="../exercises/final-project.html">proposals</a></li>
 </ul>
 </section>
@@ -914,6 +927,38 @@ Simmons, J. P., Nelson, L. D., &amp; Simonsohn, U. (2011). False-positive psycho
       }
     });
     </script>
+    <script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>

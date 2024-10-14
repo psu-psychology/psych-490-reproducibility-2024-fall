@@ -38,14 +38,19 @@ title: "2024-10-14 Mon"
 
 ## More on @simmons_false-positive_2011
 
-- [Study 1](https://psu-psychology.github.io/psych-490-reproducibility-2024-fall/notes/wk07-2024-10-11-qrps.html#/study-1-simmons_false-positive_2011)
-- [Degrees of Freedom](https://psu-psychology.github.io/psych-490-reproducibility-2024-fall/supplemental/plotting-degrees-of-freedom.html#degrees-of-freedom)
+- Researcher choices can inflate false positive rates
+- Collecting more data after analyzing a small initial sample inflates the false positive rate
+- Just because a statistical test met the criterion threshold ($\alpha$) with a small sample doesn't mean it will do so with larger samples
+
+## Recommendations
+
+![Table 2 from @simmons_false-positive_2011](../include/img/simmons-etal-2011-table-02.png){height="70%" .lightbox}
 
 ## Today
 
 *Work Session: P-hacking and Final Project Proposals*
 
-- Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd) write-up.
+- [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd) write-up.
 - Final project [proposals](../exercises/final-project.qmd) 
     
 ## Set-up for group discussion...
