@@ -9,6 +9,15 @@ title: "2024-10-16 Wed"
 
 - [Due Friday]{.orange_due}
     - [Final project](../exercises/final-project.qmd) proposal
+    
+## How's it going?
+
+- <https://rateteaching.psu.edu>
+    
+## Last time...
+
+- Wrap-up on *p*-hacking
+- How'd [we do](../supplemental/p-hacking-suppl.qmd)?
 
 ## Today
 
@@ -19,16 +28,14 @@ title: "2024-10-16 Wed"
 - Discuss results from
     - [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd).
     
----
+# How prevalent are QRPs?
 
-John, L. K., Loewenstein, G. & Prelec, D. (2012). Measuring the prevalence of questionable research practices with incentives for truth telling. *Psychological Science*, *23*(5), 524–532. <https://doi.org/10.1177/0956797611430953>
-
----
+## @John2012-tk
 
 >Cases of clear scientific misconduct have received significant media attention recently, but less flagrantly questionable research practices may be more prevalent and, ultimately, more damaging to the academic enterprise. Using an anonymous elicitation format supplemented by incentives for honest reporting, we surveyed over 2,000 psychologists about their involvement in questionable research practices. 
 
 <p style="text-align:center;">
-[@John2012-tk]
+@John2012-tk
 </p>
 
 ---
@@ -36,17 +43,18 @@ John, L. K., Loewenstein, G. & Prelec, D. (2012). Measuring the prevalence of qu
 >The impact of truth-telling incentives on self-admissions of questionable research practices was positive, and this impact was greater for practices that respondents judged to be less defensible. Combining three different estimation methods, we found that the percentage of respondents who have engaged in questionable practices was surprisingly high. This finding suggests that some questionable practices may constitute the prevailing research norm.
 
 <p style="text-align:center;">
-[@John2012-tk]
+@John2012-tk
 </p>
+
 
 ## Accessibility/openness notes
 
 - Paper *not* openly accessible.
 - Paper was accessible via authenticated access to PSU library.
 
----
+## {.scrollable}
 
-![Table 1 from [@John2012-tk]](../include/img/john-2012-table-01.png)
+![Table 1 from @John2012-tk](../include/img/john-2012-table-01.png){.lightbox}
 
 ---
 
@@ -69,106 +77,74 @@ John, L. K., Loewenstein, G. & Prelec, D. (2012). Measuring the prevalence of qu
 >Respondents in the control condition were simply told that a charitable donation would be made on behalf of each respondent. (For details on the effect of the size of the incentive on response rates, see Participation Incentive Survey in the Supplemental Material.)
 
 <p style="text-align:center;">
-[@John2012-tk]
+@John2012-tk
 </p>
 
 ---
 
-```{r, echo=FALSE, fig.cap="Figure 1 from [@John2012-tk](http://dx.doi.org/10.1177/0956797611430953)", out.width="80%"}
-knitr::include_graphics("../include/img/john-2012-fig-01.png")
-```
+![Figure 1 from @John2012-tk](../include/img/john-2012-fig-01.png){.lightbox}
 
 ---
 
-```{r, echo=FALSE, fig.cap="Figure 2 from [@John2012-tk](http://dx.doi.org/10.1177/0956797611430953)", out.width="80%"}
-knitr::include_graphics("../include/img/john-2012-fig-02.png")
-```
-
+![Figure 2 from @John2012-tk](../include/img/john-2012-fig-02.png){.lightbox}
 ---
 
 ::: {.callout-note}
-
 What do you think about the "truth serum" manipulation?
 
 Do the data persuade you that it made respondents more honest?
-
 :::
 
-## Reproducibility notes for [@John2012-tk]
+## Reproducibility notes for @John2012-tk
 
 >Supplemental Material
+>
 >Additional supporting information may be found at http://pss.sagepub.com/content/by/supplemental-data
 
 <p style="text-align:center;">
-[@John2012-tk]
+@John2012-tk
 </p>
 
 ---
 
-- Visiting this URL (<http://pss.sagepub.com/content/by/supplemental-data>) takes one to the following:
-
-```{r}
-knitr::include_url("http://pss.sagepub.com/content/by/supplemental-data", height = 600)
-```
-
----
-
-- I went to the journal page and searched for the article title.
+- I visited this URL (<http://pss.sagepub.com/content/by/supplemental-data>.
+- Then, I went to the journal page and searched for the article title.
 - Since the article is behind a paywall, I wasn't able to access the supplemental materials that way.
 - After authenticating to the PSU library, I was able to find a PDF of the [supplementary material](https://psu.instructure.com/courses/2245007/files/folder/readings?preview=146306047). It and the [original paper](https://psu.instructure.com/courses/2245007/files/folder/readings?preview=146306050) are on Canvas.
 - I was unable to find the raw data, but I found the questions on p. 5 of the supplementary material.
 
 ---
 
-![Supplementary material for [@John2012-tk]](../include/img/john-etal-2012-items.png){fig-align="center"}
+![Supplementary material for @John2012-tk](../include/img/john-etal-2012-items.png){fig-align="center"}
 
 # More evidence about prevalance of QRPs
 
-## Survey of $n=3,247$ NIH-funded scientists
+## Survey of *n*=3,247 NIH-funded scientists {.scrollable .lightbox}
 
 ![Table 1 from @Martinson2005-fk](../include/img/martinson-etal-2005-table-1.png){fig-align="center" height="75%"}
 
-## Meta-analysis [@Xie2021-us]
+## @Xie2021-us
 
-![Self-reported prevalence; Figure 2 from @Xie2021-us](../include/img/xie-etal-2021-fig-2.png){fig-align="center"}
-
----
-
-![Observed prevalence; Figure 3 from @Xie2021-us](../include/img/xie-etal-2021-fig-3.png){fig-align="center"}
-
-# Evaluating *p*-hacking
-
-## Our results
-
-- Who got a "significant" result?
-- How many different analyses did you try?
-- Who changed their analysis after finding a significant result?
-- Did anyone try another analysis--after you got a significant result--and *keep* the non-significant result?
-- [Visualizations](../supplemental/p-hacking-suppl.qmd) of the data
+>Irresponsible research practices damaging the value of science has been an increasing concern among researchers, but previous work failed to estimate the prevalence of all forms of irresponsible research behavior. Additionally, these analyses have not included articles published in the last decade from 2011 to 2020. This meta-analysis provides an updated meta-analysis that calculates the pooled estimates of research misconduct (RM) and questionable research practices (QRPs). 
 
 ---
 
-- Do we have good evidence about which party harms or helps the economy?
-- Why or why not?
-- What is *p*-hacking?
-- Did you *p*-hack? Did another classmate? Why do you think so?
+>The estimates, committing RM concern at least 1 of FFP (falsification, fabrication, plagiarism) and (unspecified) QRPs concern 1 or more QRPs, were 2.9% (95% CI 2.1–3.8%) and 12.5% (95% CI 10.5–14.7%), respectively.
 
----
+## Self-reported prevalence
 
-::: {.columns}
+![Figure 2 from @Xie2021-us](../include/img/xie-etal-2021-fig-2.png){fig-align="center"}
 
-::: {.column width="40%"}
+## Observed prevalence
 
-![Daniel Patrick Moynihan from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Patrick_Moynihan_1998.jpg/220px-Patrick_Moynihan_1998.jpg)
+![Figure 3 from @Xie2021-us](../include/img/xie-etal-2021-fig-3.png){fig-align="center"}
 
-:::
+## Your thoughts?
 
-::: {.column width="60%"}
+::: {.callout-note}
+What should we make of the @Xie2021-us finding that observed prevalence of QRPs is greater than self-reported prevalence?
 
->You are entitled to your own opinion, but you are not entitled to your own facts.
-
-:::
-
+Are QRPs a problem? If so, how big a problem? If not, why not?
 :::
 
 # Next time

@@ -1,0 +1,37 @@
+---
+title: "Work session"
+subtitle: "2024-10-25 Fri"
+---
+
+# Overview
+
+## Announcements
+
+## In the news 
+
+- <https://www.nytimes.com/interactive/2023/10/16/us/census-race-ethnicity.html>
+
+## Today
+
+*Work session*
+
+- Watch & discuss
+    - [@Cuddy2012-zx](https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are)
+- [Discuss draft]{.orange_due}
+    - [Exercise 05: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd) write-up
+- [Assignment]{.green_assigned}
+    - [Exercise 06: Replication](../exercises/ex07-replication.qmd)
+
+# Next time
+
+*Solutions*
+
+- [Final due]{.orange_due}
+    - [Exercise 05: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd) write-up
+- Discuss
+    - [@munafo_manifesto_2017]
+    - [@Begley2013-vm]
+
+# Resources
+
+## References

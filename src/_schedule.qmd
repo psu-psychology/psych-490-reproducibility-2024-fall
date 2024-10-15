@@ -12,12 +12,10 @@
 - [Class notes](notes/wk01-2024-08-26-intro.qmd)
 
 ::: {.callout-tip}
-
 To earn 3 extra credit points for completing the survey, send the TA one of the following:
 
 1. The date and time you completed the survey in the following format: "7/30/2024 12:20:23"
 2. A special code or phrase that is likely to be unique to you but doesn't contain identifiable information.
-
 :::
 
 #### Wednesday, August 28 {-}
@@ -275,27 +273,25 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 *Negligence*
 
 - Read
-    - @Ritchie2020-fm, Chapter 5
     - @Nuijten2015-ul
-    - @Szucs2017-fc
+    - (skim) @Szucs2017-fc
+- [Class notes](notes/wk09-2024-10-21-negligence.qmd)
 
 #### Wednesday, October 23 {-}
 
 *Hype*
 
 - Read
-    - @Ritchie2020-fm, Chapter 6
     - @Carney2010-gq, [file on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170721)
     - (Optional) @Ranehill2015-dj, [file on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170720)
+- [Class notes](notes/wk09-2024-10-23-hype.qmd)
  
-#### Wednesday, October 23 {-}
+#### Friday, October 25 {-}
 
 *Hype, continued*
 
 - Watch & discuss
     - [@Cuddy2012-zx](https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are)
-
-#### Friday, October 25 {-}
 
 *Work session: Alpha, Power, Effect Sizes, & Sample Size & Replication*
 
@@ -304,6 +300,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 - [Assignment]{.green_assigned}
     - [Exercise 07: Replication](exercises/ex07-replication.qmd), [due Friday, November 8]{.orange_due}
 - (Extra credit) Complete [Survey 03](https://forms.gle/BTqayMKnP7Xnyhst9)
+- [Class notes](notes/wk10-2024-10-25-work-session.qmd)
 
 ### Week 10: October 28 - November 1 {- #week-10}
 
@@ -456,7 +453,9 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 #### Friday, December 13 {-}
 
-*The future of open, transparent, and reproducible scholarship*
+*Our open science future*
+
+- [Class notes](nowk15-2024-12-13-open-sci-future.qmd)
   
 ### December 16-20 {- #finals-week}
 

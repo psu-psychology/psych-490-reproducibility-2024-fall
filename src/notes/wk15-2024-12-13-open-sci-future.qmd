@@ -1,26 +1,17 @@
 ---
 title: "Our open science future"
-subtitle: "2023-12-08"
-author: "Rick Gilmore"
-format: 
-  revealjs:
-    mermaid-format: png
-bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
-csl: ../include/bib/apa.csl
-css: ../include/css/styles.css
-footer: "[PSYCH 490.009](../index.html): 2023-12-08 Fri"
+subtitle: "2024-12-13"
 ---
 
 # Overview
 
 ## Announcement
 
-- Final project write-ups [due next Wednesday, December 13, 2023]{.orange_due}.
+- Final project write-ups [due next Wednesday, December 18, 2024]{.orange_due}.
   - Write-up [details](../exercises/final-project.html#project-write-up)
   
 ## Today
 
-- Alyssa Williamson & Maria Piccolino: "Scientific Integrity and Deception"
 - Our open science future
 
 # Our open science future
@@ -78,7 +69,7 @@ footer: "[PSYCH 490.009](../index.html): 2023-12-08 Fri"
 :::
 ::::
 
-## And sometimes full of (f)laws
+## Sometimes full of (f)laws
 
 - Cognition is often [systematically biased](https://en.wikipedia.org/wiki/List_of_cognitive_biases).
 - Most current data are from WEIRD people [@Henrich2010-gf]
@@ -141,7 +132,7 @@ footer: "[PSYCH 490.009](../index.html): 2023-12-08 Fri"
 - a **stock of accumulated knowledge** (facts & findings)
 - a set of **characteristic methods**
 - a **set of cultural values** [@Merton1973-vf, p. 268]
-- an **essential** tool for solving problems
+- an **essential** tool for solving humanity's problems
 
 - that can and *should* be strengthened
 - through rigorous, thoughtful criticism

@@ -1,0 +1,189 @@
+---
+title: "Negligence"
+subtitle: "2024-10-21 Mon"
+---
+
+# Overview
+
+## Announcements
+
+- [Discuss draft Friday]{.orange_due}
+    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd) write-up
+    
+## Last time...
+
+*File drawer effect*
+
+---
+
+::: {.callout-important}
+
+Is the file drawer effect a problem? Why or why not?
+
+If it's a problem, what's the solution?
+:::
+
+## Today
+
+*Negligence*
+
+- Discuss
+    - [@Nuijten2015-ul]
+    - [@Szucs2017-fc]
+
+# Types of negligence {-}
+
+## Definitions  of {-}
+
+- [negligent](https://www.dictionary.com/browse/negligent)
+
+![*negligence* from Mac OS dictionary app](../include/img/negligence-dictionary.png)
+
+## Data mistakes {-}
+
+- e.g., Reinhart & Rogoff spreadsheet error @Alexander2013-cf.
+
+![@Alexander2013-cf](../include/img/alexander-2013.png)
+
+## Statistical reporting errors {-}
+
+>This study documents reporting errors in a sample of over 250,000 p-values reported in eight major psychology journals from 1985 until 2013, using the new R package “statcheck.” statcheck retrieved null-hypothesis significance testing (NHST) results from over half of the articles from this period. 
+
+<p style="text-align:center;">
+@Nuijten2015-ul
+</p>
+
+---
+
+>In line with earlier research, we found that **half of all published psychology papers that use NHST contained at least one p-value that was inconsistent with its test statistic and degrees of freedom**. 
+
+<p style="text-align:center;">
+@Nuijten2015-ul
+</p>
+
+---
+
+>One in eight papers contained a grossly inconsistent p-value that may have affected the statistical conclusion. In contrast to earlier findings, we found that the average prevalence of inconsistent p-values has been stable over the years or has declined. 
+
+<p style="text-align:center;">
+@Nuijten2015-ul
+</p>
+
+---
+
+>The prevalence of gross inconsistencies was higher in p-values reported as significant than in p-values reported as nonsignificant. This could indicate a systematic bias in favor of significant results.
+
+<p style="text-align:center;">
+@Nuijten2015-ul
+</p>
+
+---
+
+>Possible solutions for the high prevalence of reporting inconsistencies could be to encourage sharing data, to let co-authors check results in a so-called “co-pilot model,” and to use statcheck to flag possible inconsistencies in one’s own manuscript or during the review process.*"
+
+<p style="text-align:center;">
+@Nuijten2015-ul
+</p>
+
+## statcheck {-}
+
+<https://michelenuijten.shinyapps.io/statcheck-web/>
+
+```{r, out.width="100%"}
+knitr::include_url("https://michelenuijten.shinyapps.io/statcheck-web/", height="600px")
+```
+
+## Granularity-Releated Inconsistency of Means (GRIM) {-}
+
+>We present a simple mathematical technique that we call granularity-related inconsistency of means (GRIM) for verifying the summary statistics of research reports in psychology. 
+This technique evaluates whether the reported means of integer data such as Likert-type scales are consistent with the given sample size and number of items. 
+
+<p style="text-align:center;">
+@Brown2017-kh
+<p>
+
+---
+
+>We tested this technique with a sample of 260 recent empirical articles in leading journals. Of the articles that we could test with the GRIM technique (N = 71), around half (N = 36) appeared to contain at least one inconsistent mean, and more than 20% (N = 16) contained multiple such inconsistencies. 
+
+<p style="text-align:center;">
+@Brown2017-kh
+<p>
+
+---
+
+>We requested the data sets corresponding to 21 of these articles, receiving positive responses in 9 cases. We confirmed the presence of at least one reporting error in all cases, with three articles requiring extensive corrections. The implications for the reliability and replicability of empirical psychology are discussed.
+
+<p style="text-align:center;">
+@Brown2017-kh
+<p>
+
+---
+
+::: {.callout-note}
+
+What practices could researchers adopt to address the problems identified by [@Brown2017-kh] and [@Nuijten2015-ul]?
+
+:::
+
+## Non-random sampling, blinding and related issues {-}
+
+- e.g., @Carlisle2017-nc
+- but see @Kharasch2018-yx
+- and reply @Carlisle2018-zd
+
+## Inadequate power {-}
+
+- *Power*: If there *is* an effect, what's the probability my test/decision procedure *will* detect it (avoid a *false negative*).
+- If $\beta$ is $p$(false negative), then power is $1-\beta$.
+- Sample size and alpha ($\alpha$) or $p$(false positive) affect power, as does the actual (unknown in advance) effect size ($d$).
+- Conventions for categorizing effect sizes: small ($d$ = 0.2), medium ($d$ = 0.5), and large ($d$ = 0.8).
+
+---
+
+>We have empirically assessed the distribution of published effect sizes and estimated power by analyzing 26,841 statistical records from 3,801 cognitive neuroscience and psychology papers published recently. The reported median effect size was D = 0.93 (interquartile range: 0.64–1.46) for nominally statistically significant results and D = 0.24 (0.11–0.42) for nonsignificant results. 
+
+<p style="text-align:center;">
+@Szucs2017-fc
+</p>
+
+---
+
+>Median power to detect small, medium, and large effects was 0.12, 0.44, and 0.73, reflecting no improvement through the past half-century. This is so because sample sizes have remained small. Assuming similar true effect sizes in both disciplines, power was lower in cognitive neuroscience than in psychology. 
+
+<p style="text-align:center;">
+@Szucs2017-fc
+</p>
+
+---
+
+>Journal impact factors negatively correlated with power. **Assuming a realistic range of prior probabilities for null hypotheses, false report probability is likely to exceed 50% for the whole literature**. In light of our findings, the recently reported low replication success in psychology is realistic, and worse performance may be expected for cognitive neuroscience."
+
+<p style="text-align:center;">
+@Szucs2017-fc
+</p>
+
+---
+
+![Figure 3 from @Szucs2017-fc](https://journals.plos.org/plosbiology/article/figure/image?size=large&id=10.1371/journal.pbio.2000797.g003)
+
+---
+
+::: {.callout-note}
+
+- If power is low, what should researchers do going forward to increase it?
+- Why might increasing power be difficult?
+
+:::
+
+# Next time
+
+*Hype*
+
+- Read
+    - @Carney2010-gq, [file on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170721)
+    - (Optional) @Ranehill2015-dj, [file on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170720)
+
+# Resources
+
+## References
