@@ -1,6 +1,6 @@
 ---
-subtitle: "Prevalence of QRPs"
-title: "2024-10-16 Wed"
+title: "Prevalence of QRPs"
+subtitle: "2024-10-16 Wed"
 ---
 
 ## Thought questions
@@ -22,25 +22,27 @@ title: "2024-10-16 Wed"
 
 ![](../include/img/mseeqs-2024-10-15.png)
 
-## Don Ridgway
+## Don Ridgway 1928-2018
 
 ![https://colostudentmedia.com/featured-news/2018/08/19/father-of-scholastic-journalism-in-colorado-dies-at-age-90/](https://colostudentmedia.com/wp-content/uploads/2018/08/DRidgway-photo-1-300x460.jpeg)
 
 ---
 
-![](https://fitexsolutions.com/app/uploads/2018/08/Fitness-Equiptment-1000x750.jpg)
+![](https://fitexsolutions.com/app/uploads/2018/08/Fitness-Equiptment-1000x750.jpg){width=70% fig-align="center"}
+
+## What are you supposed to be learning?
 
 ## Last time...
 
 - Wrap-up on *p*-hacking
-- How'd [we do](../supplemental/p-hacking-suppl.qmd)?
+  - How'd [we do](../supplemental/p-hacking-suppl.qmd)?
 
 ## Today
 
 *Prevalence of QRPs*
 
 - Read & Discuss
-    - [@John2012-tk]
+    - @John2012-tk
 - Discuss results from
     - [Exercise 05: P-hack your way to scientific glory](../exercises/ex05-p-hacking.qmd).
     
@@ -82,7 +84,7 @@ title: "2024-10-16 Wed"
 
 ---
 
->Instead, respondents were told that we would make a donation to a charity of their choice, selected from five options, and that the size of this donation would depend on the truthfulness of their responses, as determined by the BTS scoring system. By inducing a (correct) belief that dishonesty would reduce donations, we hoped to amplify the moral stakes riding on each answer (for details on the donations, see Supplementary Results in the Supplemental Material). 
+>Instead, respondents were told that we would make a donation to a charity of their choice, selected from five options, and that the size of this donation would depend on the truthfulness of their responses, as determined by the BTS scoring system. By inducing a (correct) belief that dishonesty would reduce donations, **we hoped to amplify the moral stakes riding on each answer** (for details on the donations, see Supplementary Results in the Supplemental Material). 
 
 ---
 
