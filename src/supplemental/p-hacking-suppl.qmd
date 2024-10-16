@@ -6,7 +6,7 @@ params:
 
 ## Purpose
 
-This document summarizes an analyis of the *p*-hacking [exercise](../exercises/ex04-p-hacking.qmd).
+This document summarizes an analyis of the *p*-hacking [exercise](../exercises/ex05-p-hacking.qmd).
 In it, we gather data about what individual students did and try to make sense of it.
 
 ## Quantitative analysis
@@ -94,6 +94,15 @@ Data is a plural noun. So, (when we don't forget this) we say 'The data are...' 
 str(p_hacking_fa24)
 ```
 
+## Cleaning
+
+The first row (student = 1963) was test data. Let's remove it.
+
+```{r}
+p_hacking_fa24 <- p_hacking_fa24 |>
+  dplyr::filter(student != 1963)
+```
+
 ## Questions to explore
 
 - Most data analysts find that the process of exploring data is iterative.
@@ -102,18 +111,24 @@ str(p_hacking_fa24)
 - I like to start with thinking about "data pictures." If X was true, what would the data look like?
 
 ::: {.callout-note}
-
 So, what are our questions?
 
 What view of the data would help us answer them?
-
 :::
 
 ## Visualize
 
-### Party by prediction
+### How many students provided data?
 
-```{r fig-party-prediction-fall23, fig.cap="Party chosen by prediction: PSYCH 490 Fall 2023"}
+```{r}
+length(unique(p_hacking_fa24$student))
+```
+
+Checking Canvas, it appears that 9 students submitted write-ups. So `{r} round(100*4/9, 1)` % provided data.
+
+### What party did students predict and what prediction did they make?
+
+```{r fig-party-prediction-fall24, fig.cap="Party chosen by prediction: PSYCH 490 Fall 2024"}
 xtabs(formula = ~ party + prediction, data = p_hacking_fa24)
 
 p_hacking_fa24 |>
@@ -124,7 +139,7 @@ p_hacking_fa24 |>
   ylab("n respondents")
 ```
 
-```{r fig-hist-p-vals-fall23, fig.cap="Histogram of realized *p* values by party chosen: PSYCH 490 Fall 2023"}
+```{r fig-hist-p-vals-fall24, fig.cap="Histogram of realized *p* values by party chosen: PSYCH 490 Fall 2024"}
 p_hacking_fa24 |>
   ggplot() +
   aes(x = p_value, fill = party) +
@@ -132,17 +147,17 @@ p_hacking_fa24 |>
   facet_grid(~ prediction)
 ```
 
-```{r fig-p-vals-by-analysis-fall23, fig.cap="*p*-values by number of analyses: PSYCH 490 Fall 2023"}
+```{r fig-p-vals-by-analysis-fall24, fig.cap="*p*-values by number of analyses: PSYCH 490 Fall 2024"}
 p_hacking_fa24 |>
   ggplot() +
   aes(
     x = as.factor(analysis),
     y = p_value,
     color = as.factor(student),
-    shape = party,
+    shape = publishable,
     group = as.factor(student)
   ) +
-  geom_point() +
+  geom_jitter(width = 0.1) +
   geom_line() +
   xlab("Analysis number")
 ```
@@ -206,14 +221,33 @@ googledrive::drive_download(file = "PSYCH 490.009 2023 Fall P-hacking", path = "
 p_hacking_sp23 <- read_csv(file = "csv/p-hacking-sp23.csv", show_col_types = FALSE)
 p_hacking_fa23 <- read_csv(file = "csv/p-hacking-fa23.csv", show_col_types = FALSE)
 
-p_hacking_sp23$semester = "sp23"
-p_hacking_fa23$semester = "fa23"
-p_hacking_fa24$semester = "fa24"
+p_hacking_sp23 <- p_hacking_sp23 |>
+  dplyr::mutate(semester = "sp23") |>
+  dplyr::mutate(student = paste0(student, "_", semester))
+
+p_hacking_fa23 <- p_hacking_fa23 |>
+  dplyr::mutate(semester = "fa23") |>
+  dplyr::mutate(student = paste0(student, "_", semester))
+
+p_hacking_fa24 <- p_hacking_fa24 |>
+  dplyr::mutate(semester = "fa24") |>
+  dplyr::mutate(student = paste0(student, "_", semester))
 
 p_hacking_23_24 <- rbind(p_hacking_fa23, p_hacking_sp23, p_hacking_fa24)
 ```
 
 ## Combined data
+
+### How many students by semester?
+
+```{r}
+p_hacking_23_24 |>
+  dplyr::filter(analysis == 1) |>
+  dplyr::group_by(semester) |>
+  dplyr::summarise(n_students = n())
+```
+
+### Predictions by party
 
 ```{r hist-p-vals-sp-fa, out.width="80%"}
 p_hacking_23_24 |>
@@ -230,10 +264,10 @@ p_hacking_23_24 |>
     x = as.factor(analysis),
     y = p_value,
     color = as.factor(student),
-    shape = party,
+    shape = publishable,
     group = as.factor(student)
   ) +
-  geom_point() +
+  geom_jitter(width = 0.1) +
   geom_line() +
   xlab("Analysis number")
 ```

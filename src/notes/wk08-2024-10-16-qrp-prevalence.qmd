@@ -3,6 +3,12 @@ subtitle: "Prevalence of QRPs"
 title: "2024-10-16 Wed"
 ---
 
+## Thought questions
+
+- What are we learning in this course?
+- Who should care about the prevalence of questionable research practices?
+- Why should they care?
+
 # Overview
 
 ## Announcements
@@ -13,7 +19,17 @@ title: "2024-10-16 Wed"
 ## How's it going?
 
 - <https://rateteaching.psu.edu>
-    
+
+![](../include/img/mseeqs-2024-10-15.png)
+
+## Don Ridgway
+
+![https://colostudentmedia.com/featured-news/2018/08/19/father-of-scholastic-journalism-in-colorado-dies-at-age-90/](https://colostudentmedia.com/wp-content/uploads/2018/08/DRidgway-photo-1-300x460.jpeg)
+
+---
+
+![](https://fitexsolutions.com/app/uploads/2018/08/Fitness-Equiptment-1000x750.jpg)
+
 ## Last time...
 
 - Wrap-up on *p*-hacking
@@ -156,6 +172,9 @@ Are QRPs a problem? If so, how big a problem? If not, why not?
     - (Optional) [@Franco2014-yu]
 - [Assignment]{.green_assigned}
     - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd), [final version due Wednesday, October 30]{.orange_due}
+    
+---
+
 - [Due]{.orange_due}
     - [Final project](../exercises/final-project.qmd) proposal
 - [Class notes]()
