@@ -1,0 +1,36 @@
+---
+title: "Self-Test 01"
+---
+
+## About {-}
+
+This document provides students some opportunities to test their mastery of core concepts in the course.
+
+These questions cover material discussed in Weeks 1-7.
+
+## Questions {-}
+
+1. @Oreskes2017 says that we should trust science because of its 'sustained engagement with the world.' What does Oreskes mean? What does 'sustained engagement' in a topic have to do with trust?
+
+2. Why does @Feynman1974-ld say 'don't fool yourself'? What could scientists fool themselves about? How can scientists avoid fooling themselves?
+
+3. Explain how science is both a set of facts and findings AND a set of tools and techniques. Do these aspects get equal attention? Are they equally important?
+
+4. Who should care about whether or not the public trusts science or scientists? Why should they care?
+
+5. How did @Mitroff1974-pp change how we might think about @Merton1973-vf? 
+
+6. Does it matter whether scientific findings can be replicated by others? Why? Should scientists spend time to make their findings more easily replicable by others or put energy into making new discoveries?
+
+7. What should we conclude from @Earp2014-ek replication attempt of the @Zhong2006-nf study on the 'Macbeth Effect'? In other words, what's the 'bottom line'?
+
+8. Can doing a simple task that 'primes' stereotypes about old people make young people walk more slowly? Under what conditions?
+
+9. What does a *p*-value provide information about? Why do psychologists care about them? What's a common mistake many people make about *p*-values?
+
+10. What is *p*-hacking? Is it easy or hard to do? Is it a defensible or questionable?
+
+11. When is a retraction evidence of good/recommended scientific practices and when is it not?
+
+12. Is there consensus about what research practices are questionable? Is consensus important?
+

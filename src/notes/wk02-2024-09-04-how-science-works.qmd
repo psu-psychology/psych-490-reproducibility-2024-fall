@@ -109,14 +109,14 @@ $$aggrChar + vioTV + noCue$$
 
 ## What is the "process" of science?
 
-![Figure 1 from [@munafo_manifesto_2017]](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-016-0021/MediaObjects/41562_2016_Article_BFs415620160021_Fig1_HTML.jpg?as=webp)
+![Figure 1 from @munafo_manifesto_2017](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-016-0021/MediaObjects/41562_2016_Article_BFs415620160021_Fig1_HTML.jpg?as=webp)
 
 ## Telling (facts/findings) AND *showing*
 
 >...and it has to be shown why that other theory can or cannot be the true one: And until this is shown, and until we know how it is shown, we do not understand the grounds of our opinion.
 
 <p style="text-align:center;">
-John Stuart Mill quoted in [@Ritchie2020-fm, p. 14]
+John Stuart Mill quoted in @Ritchie2020-fm, p. 14
 </p>
 
 ## From replication to trust
@@ -124,7 +124,7 @@ John Stuart Mill quoted in [@Ritchie2020-fm, p. 14]
 >...Only when certain events recur in accordance with rules or regularities, as is the case with repeatable experiments, can our observations be tested--in principle--by anyone. We do not take even our own observations quite seriously, or accept them as scientific observations, until we have repeated and test them...
 
 <p style="text-align:center;">
-Karl Popper quoted in [@Ritchie2020-fm, p. 23]
+Karl Popper quoted in @Ritchie2020-fm, p. 23
 </p>
 
 ## From replication to trust
@@ -132,7 +132,7 @@ Karl Popper quoted in [@Ritchie2020-fm, p. 23]
 >...Only by such repetitions can we convince ourselves that we are not dealing with a mere isolated 'coincidence'...
 
 <p style="text-align:center;">
-Karl Popper quoted in [@Ritchie2020-fm, p. 23]
+Karl Popper quoted in @Ritchie2020-fm, p. 23
 </p>
 
 ---
@@ -146,7 +146,7 @@ Karl Popper quoted in [@Ritchie2020-fm, p. 23]
 > Science's social nature does come with weaknesses, however. Because scientists focus so much on trying to persuade their peers, which is the way they get those studies through peer review and oward to publication, it's all too easy for them to disregard the real object of science: getting us closer to the truth.
 
 <p style="text-align:center;">
-[@Ritchie2020-fm, Chapter 1, pp. 14-15]
+@Ritchie2020-fm, Chapter 1, pp. 14-15
 </p>
 
 ## Questions about Ritchie
@@ -156,7 +156,7 @@ Karl Popper quoted in [@Ritchie2020-fm, p. 23]
 - What's the alternative for scientists to trying to persuade their peers?
 - What if scientific research serves multiple goals?
 
-## Discuss [@Nosek2012-al]
+## Discuss @Nosek2012-al
 
 :::: {.columns}
 ::: {.column width=50%}
@@ -189,14 +189,14 @@ Karl Popper quoted in [@Ritchie2020-fm, p. 23]
 
 - What's [Utopia](https://en.wikipedia.org/wiki/Utopia?)
 - Where's Part II?
-    - [@Nosek2012-fm].
+    - @Nosek2012-fm.
 
 ## Aims & Claims
 
 > Existing norms for scientific communication are rooted in anachronistic practices of bygone eras making them needlessly inefficient. We outline a path that moves away from the existing model of scientific communication to improve the efficiency in meeting the purpose of public science—knowledge accumulation.
 
 <p style="text-align:center;">
-[@Nosek2012-al]
+@Nosek2012-al
 </p>
 
 ---
@@ -204,7 +204,7 @@ Karl Popper quoted in [@Ritchie2020-fm, p. 23]
 >We call for six changes: (a) full embrace of digital communication; (b) open access to all published research; (c) disentangling publication from evaluation; (d) breaking the “one article, one journal” model with a grading system for evaluation and diversified dissemination outlets; (e) publishing peer review; and (f) allowing open, continuous peer review.
 
 <p style="text-align:center;">
-[@Nosek2012-al]
+@Nosek2012-al
 </p>
 
 ---
@@ -212,7 +212,7 @@ Karl Popper quoted in [@Ritchie2020-fm, p. 23]
 >We address conceptual and practical barriers to change and provide examples showing how the suggested practices are being used already. The critical barriers to change are not technical or financial; they are social. Although scientists guard the status quo, they also have the power to change it.
 
 <p style="text-align:center;">
-[@Nosek2012-al]
+@Nosek2012-al
 </p>
 
 ## Inefficiencies in scientific communication
@@ -226,7 +226,7 @@ Karl Popper quoted in [@Ritchie2020-fm, p. 23]
 :::
 
 <p style="text-align:center;">
-[@Nosek2012-al, , pp. 25-26]
+@Nosek2012-al, , pp. 25-26
 </p>
 
 ## Questions about [@Nosek2012-al]
@@ -286,7 +286,6 @@ Karl Popper quoted in [@Ritchie2020-fm, p. 23]
 ## Talk by Brian Nosek, [@University_of_California_Television_UCTV2018-sf]
 
 ::: {.callout-info}
-
 Watching the talk by Nosek is not required. But he's a very good speaker and an inspiring person.
 :::
 

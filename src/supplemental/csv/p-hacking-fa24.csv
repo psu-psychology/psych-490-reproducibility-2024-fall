@@ -9,3 +9,6 @@ student,analysis,party,prediction,power_president,power_governors,power_senators
 2004,2,republicans,better,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,0.81,no
 2004,3,republicans,better,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,0.01,yes
 2004,4,republicans,better,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,0.54,no
+2005,1,democrats,better,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,0.01,yes
+2005,2,democrats,better,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,0.51,no
+2005,3,democrats,better,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,0.17,yes

@@ -249,6 +249,10 @@ window.Quarto = {
     <a class="dropdown-item" href="../exercises/final-project.html">
  <span class="dropdown-text">Final Project</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../exercises/st-01.html">
+ <span class="dropdown-text">Self-Test 01</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
@@ -496,23 +500,23 @@ Note
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(p_hacking_fa24)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>spc_tbl_ [10 × 16] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
- $ student           : num [1:10] 1963 2002 2002 2002 2003 ...
- $ analysis          : num [1:10] 1 1 2 3 1 1 1 2 3 4
- $ party             : chr [1:10] "democrats" "republicans" "republicans" "republicans" ...
- $ prediction        : chr [1:10] "worse" "better" "better" "better" ...
- $ power_president   : logi [1:10] FALSE TRUE FALSE FALSE TRUE TRUE ...
- $ power_governors   : logi [1:10] FALSE TRUE TRUE TRUE TRUE TRUE ...
- $ power_senators    : logi [1:10] TRUE TRUE TRUE TRUE FALSE TRUE ...
- $ power_reps        : logi [1:10] TRUE TRUE TRUE FALSE FALSE FALSE ...
- $ econ_employment   : logi [1:10] TRUE TRUE TRUE FALSE TRUE TRUE ...
- $ econ_inflation    : logi [1:10] FALSE TRUE TRUE FALSE TRUE TRUE ...
- $ econ_gdp          : logi [1:10] FALSE FALSE TRUE TRUE TRUE TRUE ...
- $ econ_stocks       : logi [1:10] TRUE TRUE FALSE FALSE FALSE FALSE ...
- $ factor_in_power   : logi [1:10] FALSE FALSE TRUE TRUE FALSE TRUE ...
- $ exclude_recessions: logi [1:10] FALSE FALSE FALSE TRUE FALSE FALSE ...
- $ p_value           : num [1:10] 0.06 0.01 0.4 0.01 0.75 0.24 0.01 0.81 0.01 0.54
- $ publishable       : chr [1:10] "no" "yes" "no" "yes" ...
+<pre><code>spc_tbl_ [13 × 16] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ student           : num [1:13] 1963 2002 2002 2002 2003 ...
+ $ analysis          : num [1:13] 1 1 2 3 1 1 1 2 3 4 ...
+ $ party             : chr [1:13] "democrats" "republicans" "republicans" "republicans" ...
+ $ prediction        : chr [1:13] "worse" "better" "better" "better" ...
+ $ power_president   : logi [1:13] FALSE TRUE FALSE FALSE TRUE TRUE ...
+ $ power_governors   : logi [1:13] FALSE TRUE TRUE TRUE TRUE TRUE ...
+ $ power_senators    : logi [1:13] TRUE TRUE TRUE TRUE FALSE TRUE ...
+ $ power_reps        : logi [1:13] TRUE TRUE TRUE FALSE FALSE FALSE ...
+ $ econ_employment   : logi [1:13] TRUE TRUE TRUE FALSE TRUE TRUE ...
+ $ econ_inflation    : logi [1:13] FALSE TRUE TRUE FALSE TRUE TRUE ...
+ $ econ_gdp          : logi [1:13] FALSE FALSE TRUE TRUE TRUE TRUE ...
+ $ econ_stocks       : logi [1:13] TRUE TRUE FALSE FALSE FALSE FALSE ...
+ $ factor_in_power   : logi [1:13] FALSE FALSE TRUE TRUE FALSE TRUE ...
+ $ exclude_recessions: logi [1:13] FALSE FALSE FALSE TRUE FALSE FALSE ...
+ $ p_value           : num [1:13] 0.06 0.01 0.4 0.01 0.75 0.24 0.01 0.81 0.01 0.54 ...
+ $ publishable       : chr [1:13] "no" "yes" "no" "yes" ...
  - attr(*, "spec")=
   .. cols(
   ..   student = col_double(),
@@ -574,7 +578,7 @@ Note
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(<span class="fu">unique</span>(p_hacking_fa24<span class="sc">$</span>student))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
+<pre><code>[1] 5</code></pre>
 </div>
 </div>
 <p>Checking Canvas, it appears that 9 students submitted write-ups. So 44.4 % provided data.</p>
@@ -586,7 +590,7 @@ Note
 <div class="cell-output cell-output-stdout">
 <pre><code>             prediction
 party         better
-  democrats        1
+  democrats        4
   republicans      8</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>p_hacking_fa24 <span class="sc">|&gt;</span></span>
@@ -763,7 +767,7 @@ Figure&nbsp;3: <em>p</em>-values by number of analyses: PSYCH 490 Fall 2024
   semester n_students
   &lt;chr&gt;         &lt;int&gt;
 1 fa23              9
-2 fa24              4
+2 fa24              5
 3 sp23              8</code></pre>
 </div>
 </div>
@@ -860,7 +864,21 @@ better
 president
 </td>
 <td style="text-align:right;">
-20
+23
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+democrats
+</td>
+<td style="text-align:left;">
+better
+</td>
+<td style="text-align:left;">
+governors
+</td>
+<td style="text-align:right;">
+15
 </td>
 </tr>
 <tr>
@@ -885,10 +903,24 @@ democrats
 better
 </td>
 <td style="text-align:left;">
-governors
+senators
 </td>
 <td style="text-align:right;">
 13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+democrats
+</td>
+<td style="text-align:left;">
+better
+</td>
+<td style="text-align:left;">
+reps
+</td>
+<td style="text-align:right;">
+12
 </td>
 </tr>
 <tr>
@@ -917,34 +949,6 @@ president
 </td>
 <td style="text-align:right;">
 11
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-democrats
-</td>
-<td style="text-align:left;">
-better
-</td>
-<td style="text-align:left;">
-reps
-</td>
-<td style="text-align:right;">
-10
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-democrats
-</td>
-<td style="text-align:left;">
-better
-</td>
-<td style="text-align:left;">
-senators
-</td>
-<td style="text-align:right;">
-10
 </td>
 </tr>
 <tr>
@@ -1137,7 +1141,7 @@ better
 employment
 </td>
 <td style="text-align:right;">
-19
+21
 </td>
 </tr>
 <tr>
@@ -1151,7 +1155,7 @@ better
 gdp
 </td>
 <td style="text-align:right;">
-17
+19
 </td>
 </tr>
 <tr>
@@ -1163,6 +1167,20 @@ better
 </td>
 <td style="text-align:left;">
 inflation
+</td>
+<td style="text-align:right;">
+13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+democrats
+</td>
+<td style="text-align:left;">
+better
+</td>
+<td style="text-align:left;">
+stocks
 </td>
 <td style="text-align:right;">
 11
@@ -1194,20 +1212,6 @@ inflation
 </td>
 <td style="text-align:right;">
 11
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-democrats
-</td>
-<td style="text-align:left;">
-better
-</td>
-<td style="text-align:left;">
-stocks
-</td>
-<td style="text-align:right;">
-9
 </td>
 </tr>
 <tr>

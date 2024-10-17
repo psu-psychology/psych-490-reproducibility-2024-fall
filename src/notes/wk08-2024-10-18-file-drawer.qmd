@@ -9,13 +9,12 @@ subtitle: "2024-10-18 Fri"
 
 - [Due today]{.orange_due}
     - [Final project](../exercises/final-project.qmd) proposal
+- [Self Test 01](exercises/st-01.qmd)
 
 ## Last time...
 
-- What is *p*-hacking?
-- How many different combinations of variables were there in [Exercise 05](../exercises/ex05-p-hacking.qmd)?
-  - *Hint*: See the [*p*-hacking supplement](../supplemental/p-hacking-suppl.qmd#how-many-different-combinations-of-variables)
-- What would we need to do to *conclusively* determine which party and which measures of political power impact the economy one way or the other?
+- Upshot from [Exercise 05](../exercises/ex05-p-hacking.qmd) on *p*-hacking: What would we need to do to *conclusively* determine which party and which measures of political power impact the economy one way or the other?
+- Respondents self-report having engaged in questionable research practices (more/less) than they report others engage in them? Why might that be so?
 
 ## Today
 
@@ -165,29 +164,35 @@ ggplot(df) +
 >If the overall level of significance of the research review will be brought down to the level of just significant by the addition of just a few more null results, the finding is not resistant to the file drawer threat.
 
 <p style="text-align:center;">
-[@Rosenthal1979-zi]
+@Rosenthal1979-zi
 </p>
 
 - In other words, the finding is not robust.
 
 ---
 
->There is both a sobering and a cheering lesson to be learned from careful study of Equation 3. The sobering lesson is that small numbers of studies that are not very significant, even when their combined *p* is significant, may well be misleading in that only a few studies filed away could change the combined significant result to a nonsignificant one...
+>There is both a sobering and a cheering lesson to be learned from careful study of Equation 3. **The sobering lesson is that small numbers of studies that are not very significant, even when their combined *p* is significant, may well be misleading in that only a few studies filed away could change the combined significant result to a nonsignificant one**...
 
 <p style="text-align:center;">
-[@Rosenthal1979-zi]
+@Rosenthal1979-zi
 </p>
 
 ---
 
 - In other words, small numbers of studies with weak evidence for a claim might be misleading if there are a large number of studies in "file drawers"
 
+::: {.callout-important}
+Do we know how many studies are in a file drawer?
+
+How could we know?
+:::
+
 ---
 
 >The cheering lesson is that when the number of studies available grows large or the mean directional Z grows large, the file drawer hypothesis as a plausible rival hypothesis can be safely ruled out.
 
 <p style="text-align:center;">
-[@Rosenthal1979-zi]
+@Rosenthal1979-zi
 </p>
 
 ---
@@ -203,7 +208,7 @@ Franco, A., Malhotra, N. & Simonovits, G. (2014). Social science. Publication bi
 >We studied publication bias in the social sciences by analyzing a known population of conducted studies—221 in total—in which there is a full accounting of what is published and unpublished. 
 
 <p style="text-align:center;">
-[@Franco2014-yu]
+@Franco2014-yu
 </p>
 
 ---
@@ -211,7 +216,7 @@ Franco, A., Malhotra, N. & Simonovits, G. (2014). Social science. Publication bi
 >We leveraged Time-sharing Experiments in the Social Sciences (TESS), a National Science Foundation–sponsored program in which researchers propose survey-based experiments to be run on representative samples of American adults. 
 
 <p style="text-align:center;">
-[@Franco2014-yu]
+@Franco2014-yu
 </p>
 
 ---
@@ -219,7 +224,7 @@ Franco, A., Malhotra, N. & Simonovits, G. (2014). Social science. Publication bi
 >Because TESS proposals undergo rigorous peer review, the studies in the sample all exceed a substantial quality threshold. Strong results are 40 percentage points more likely to be published than are null results and 60 percentage points more likely to be written up. 
 
 <p style="text-align:center;">
-[@Franco2014-yu]
+@Franco2014-yu
 </p>
 
 ---
@@ -227,14 +232,12 @@ Franco, A., Malhotra, N. & Simonovits, G. (2014). Social science. Publication bi
 >We provide direct evidence of publication bias and identify the stage of research production at which publication bias occurs: Authors do not write up and submit null findings.
 
 <p style="text-align:center;">
-[@Franco2014-yu]
+@Franco2014-yu
 </p>
 
 ## Findings
 
-```{r, fig.cap="Table 3 from [@Franco2014-yu](http://dx.doi.org/10.1126/science.1255484)", out.width="100%"}
-knitr::include_graphics("../include/img/franco-etal-2014-table-03.png")
-```
+![Table 3 from @Franco2014-yu](../include/img/franco-etal-2014-table-03.png)
 
 ## Solutions
 
@@ -257,7 +260,7 @@ knitr::include_graphics("../include/img/franco-etal-2014-table-03.png")
 >Last, resources should be deployed for replications of published studies if they are unrepresentative of conducted studies and more likely to report large effects.
 
 <p style="text-align:center;">
-[@Franco2014-yu]
+@Franco2014-yu
 </p>
 
 ## Replication notes {.scrollable}
@@ -348,16 +351,14 @@ dev.off()
 <iframe src="franco-etal-2014/bounds.pdf" width="800" height="450">
 </iframe>
 
-Figure generated from code in [@Franco2014-jk], shared as materials from [@Franco2014-yu].
+Figure generated from code in @Franco2014-jk, shared as materials from @Franco2014-yu.
 
 ---
 
 - So, we can regenerate one of the figures (S1, p. 6) in the [Supplemental Material](https://www.science.org/doi/suppl/10.1126/science.1255484/suppl_file/franco.sm.pdf).
 
 ::: {.callout-note}
-
 More could be done with these data. This could be a final project for someone.
-
 :::
 
 # Next time
@@ -365,7 +366,6 @@ More could be done with these data. This could be a final project for someone.
 *Negligence*
 
 - Read
-    - @Ritchie2020-fm, Chapter 5
     - @Nuijten2015-ul
     - @Szucs2017-fc
 

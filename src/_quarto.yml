@@ -38,6 +38,7 @@ website:
           - href: "exercises/ex07-replication.qmd"
           - href: "exercises/ex08-sharing.qmd"
           - href: "exercises/final-project.qmd"
+          - href: "exercises/st-01.qmd"
       - text: surveys
         menu:
           - href: "surveys/survey-01.qmd"

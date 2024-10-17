@@ -8,7 +8,7 @@ subtitle: "2024-10-21 Mon"
 ## Announcements
 
 - [Discuss draft Friday]{.orange_due}
-    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd) write-up
+    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd) write-up
     
 ## Last time...
 

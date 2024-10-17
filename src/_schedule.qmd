@@ -88,10 +88,10 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 - Read
     - @Kardash2012-kq
-    - @Macfarlane2008-tc.
+    - @Macfarlane2008-tc
 <!-- - Skim -->
-<!--     - [@Anderson2010-rl](http://dx.doi.org/10.1353/jhe.0.0095). -->
-<!--     - [@Kim2018-tr](https://doi.org/10.1177/0971721817744438). -->
+<!--     - @Anderson2010-rl. -->
+<!--     - @Kim2018-tr]. -->
 - [Class notes](notes/wk03-2024-09-11-adherence-to-norms.qmd)
 
 #### Friday, September 13 {-}
@@ -110,8 +110,8 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 *A replication crisis (or not)*
 
 - Read
-    - [@Ritchie2020-fm], Chapter 2. [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170706).
-    - [@Begley2012-cr].
+    - @Ritchie2020-fm, Chapter 2. [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170706).
+    - @Begley2012-cr.
 - [Class notes](notes/wk04-2024-09-16-replication-crisis.qmd)
 
 #### Wednesday, September 18 {-}
@@ -140,7 +140,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 *Priming effect: Original study*
 
 - Read
-    - [@Bargh1996-yv]; [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170715)
+    - @Bargh1996-yv; [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170715)
 - [Class notes](notes/wk05-2024-09-23-priming.qmd)
 
 #### Wednesday, September 25 {-}
@@ -185,7 +185,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 *Fraud & misconduct*
 
 - Read
-    - @Ritchie2020-fm], Chapter 3
+    - @Ritchie2020-fm, Chapter 3
     - @Bhattacharjee2013-rw, [PDF on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170718)
     - (Skim) @Levelt2012-ap
     - (Skim) @Carpenter2012-qy
@@ -265,6 +265,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 - [Due]{.orange_due}
     - [Final project](exercises/final-project.qmd) proposal
 - [Class notes](notes/wk08-2024-10-18-file-drawer.qmd)
+- [Self Test 01](exercises/st-01.qmd)
 
 ### Week 9: October 21-25 {- #week-09}
 
