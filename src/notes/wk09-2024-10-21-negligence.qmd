@@ -20,7 +20,7 @@ subtitle: "2024-10-21 Mon"
 
 Is the file drawer effect a problem? Why or why not?
 
-If it's a problem, what's the solution?
+If it's a problem, what's a solution?
 :::
 
 ## Today
@@ -28,8 +28,8 @@ If it's a problem, what's the solution?
 *Negligence*
 
 - Discuss
-    - [@Nuijten2015-ul]
-    - [@Szucs2017-fc]
+    - @Nuijten2015-ul
+    - @Szucs2017-fc
 
 # Types of negligence {-}
 
@@ -41,7 +41,7 @@ If it's a problem, what's the solution?
 
 ## Data mistakes {-}
 
-- e.g., Reinhart & Rogoff spreadsheet error @Alexander2013-cf.
+- e.g., Reinhart & Rogoff spreadsheet error [@Alexander2013-cf].
 
 ![@Alexander2013-cf](../include/img/alexander-2013.png)
 
@@ -102,6 +102,12 @@ This technique evaluates whether the reported means of integer data such as Like
 @Brown2017-kh
 <p>
 
+## How it works
+
+- *n*=10 people fill out a Likert scale survey question with permissible values of 1, 2, or 3.
+- Is a mean score of 2.10 possible?
+- How about 2.15? Why?
+
 ---
 
 >We tested this technique with a sample of 260 recent empirical articles in leading journals. Of the articles that we could test with the GRIM technique (N = 71), around half (N = 36) appeared to contain at least one inconsistent mean, and more than 20% (N = 16) contained multiple such inconsistencies. 
@@ -121,14 +127,15 @@ This technique evaluates whether the reported means of integer data such as Like
 ---
 
 ::: {.callout-note}
+How do these kinds of errors arise?
 
-What practices could researchers adopt to address the problems identified by [@Brown2017-kh] and [@Nuijten2015-ul]?
-
+What practices could researchers adopt to address the problems identified by @Brown2017-kh and @Nuijten2015-ul?
 :::
 
 ## Non-random sampling, blinding and related issues {-}
 
 - e.g., @Carlisle2017-nc
+  - "Fraud, unintentional error, correlation, stratified allocation and poor methodology might have contributed to the excess of randomised, controlled trials with similar or dissimilar means, a pattern that was common to all the surveyed journals."
 - but see @Kharasch2018-yx
 - and reply @Carlisle2018-zd
 
@@ -155,6 +162,18 @@ What practices could researchers adopt to address the problems identified by [@B
 @Szucs2017-fc
 </p>
 
+## *d* vs. observed power [@Szucs2017-fc]
+
+| Effect size | *d* | Median observed power | $\beta$
+|-------------|---|----------------|---------|
+| Small       | 0.2 | 0.12 | 0.88 |
+| Medium      | 0.5 | 0.44 | 0.56 |
+| Large      | 0.8 | 0.73 | 0.27 |
+
+::: {.callout-important}
+Remember $\beta$: p(false negative)
+:::
+
 ---
 
 >Journal impact factors negatively correlated with power. **Assuming a realistic range of prior probabilities for null hypotheses, false report probability is likely to exceed 50% for the whole literature**. In light of our findings, the recently reported low replication success in psychology is realistic, and worse performance may be expected for cognitive neuroscience."
@@ -167,21 +186,33 @@ What practices could researchers adopt to address the problems identified by [@B
 
 ![Figure 3 from @Szucs2017-fc](https://journals.plos.org/plosbiology/article/figure/image?size=large&id=10.1371/journal.pbio.2000797.g003)
 
+## Reading [Figure 3 from @Szucs2017-fc]
+
+- Horizontal axis: Fraction of studies, so *median* can be found at 0.5 (half above/half below).
+- Vertical axis: A. Degrees of freedom (~ sample size); B. Power (1-$\beta$)
+
 ---
 
 ::: {.callout-note}
+Why do so many studies have such low power?
 
-- If power is low, what should researchers do going forward to increase it?
-- Why might increasing power be difficult?
-
+If power is low, what should researchers do going forward to increase it?
+Why might increasing power be difficult?
 :::
+
+## A new mantra
+
+- *Plan* your study (to have adequate power)!
+- *Plot* your data!
+- *Script* your analyses!
+- *Publish* your results, especially null findings!
 
 # Next time
 
 *Hype*
 
 - Read
-    - @Carney2010-gq, [file on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170721)
+    - @Carney2010-gq, [file on Canvas]([Figure 3 from @Szucs2017-fc])
     - (Optional) @Ranehill2015-dj, [file on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170720)
 
 # Resources

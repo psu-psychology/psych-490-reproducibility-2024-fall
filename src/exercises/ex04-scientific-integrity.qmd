@@ -14,8 +14,8 @@ In this exercise, we will explore some of the mechanisms by which violations of 
 
 ## Assignment {-}
 
-Choose a case where violations of scientific integrity have been alleged.
-Use at least two of the following sources.
+Choose one (1) case where violations of scientific integrity have been alleged.
+Use at least two (2) of the following sources.
 
 - A case study relating to a violation of scientific integrity as reported to the U.S. National Institutes of Health (NIH) Office of Research Integrity ([ORI](https://ori.hhs.gov/)).
 - A report about a violation of scientific integrity from the [Retraction Watch](https://retractionwatch.com/) database.
@@ -24,7 +24,7 @@ Use at least two of the following sources.
 
 Describe the allegations, focusing on answering the following questions:
 
-1. What specific violation or violations were alleged?
+1. What specific violation(s) were alleged?
 2. Why are the alleged behavior(s) considered a violation of scientific integrity?
 3. What are/were the consequences to the people involved?
 4. What could be done to reduce the likelihood that similar alleged violations of scientific integrity occur in the future?
