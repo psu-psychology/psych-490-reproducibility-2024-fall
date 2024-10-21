@@ -3,12 +3,34 @@ title: "Negligence"
 subtitle: "2024-10-21 Mon"
 ---
 
+# Prelude
+
+---
+
+![https://www.outsideonline.com/culture/love-humor/excellent-advice-for-living-kevin-kelly/](https://cdn.outsideonline.com/wp-content/uploads/2024/10/semi-rad-advice-detours_h.jpg?crop=16:9&width=960&enable=upscale&quality=100)
+
+---
+
+![Tend to the small things. More people are defeated by blisters than by mountains.](https://cdn.outsideonline.com/wp-content/uploads/2024/10/semi-rad-advice-small-things.jpg?width=768)
+
+---
+
+>You choose to be lucky by believing that any setbacks are just temporary.
+
+@Kelly2023-yd, reviewed in 
+
+<https://www.outsideonline.com/culture/love-humor/excellent-advice-for-living-kevin-kelly/>
+
+
 # Overview
 
 ## Announcements
 
-- [Discuss draft Friday]{.orange_due}
+- [Discuss draft Friday, October 25]{.orange_due}
     - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd) write-up
+- [Final version due Wednesday, October 30]{.orange_due}
+    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd) write-up
+
     
 ## Last time...
 
@@ -17,6 +39,7 @@ subtitle: "2024-10-21 Mon"
 ---
 
 ::: {.callout-important}
+What is the file drawer effect?
 
 Is the file drawer effect a problem? Why or why not?
 
