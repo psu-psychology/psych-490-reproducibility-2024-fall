@@ -5,6 +5,10 @@ subtitle: "2024-10-21 Mon"
 
 # Prelude
 
+## Thought question
+
+- What would happen to the 'file drawer effect' if we simulated a *large* effect size with the same small sample size (*n*)?
+
 ---
 
 ![https://www.outsideonline.com/culture/love-humor/excellent-advice-for-living-kevin-kelly/](https://cdn.outsideonline.com/wp-content/uploads/2024/10/semi-rad-advice-detours_h.jpg?crop=16:9&width=960&enable=upscale&quality=100)

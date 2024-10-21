@@ -3624,5 +3624,12 @@
     "title": "Negligence",
     "section": "How it works",
     "text": "How it works\n\nn=10 people fill out a Likert scale survey question with permissible values of 1, 2, or 3.\nIs a mean score of 2.10 possible?\nHow about 2.15? Why?"
+  },
+  {
+    "objectID": "notes/wk09-2024-10-21-negligence.html#thought-question",
+    "href": "notes/wk09-2024-10-21-negligence.html#thought-question",
+    "title": "Negligence",
+    "section": "Thought question",
+    "text": "Thought question\n\nWhat would happen to the ‘file drawer effect’ if we simulated a large effect size with the same small sample size (n)?"
   }
 ]
