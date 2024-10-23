@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Final Project – PSYCH 490 • Fall 2024</title>
+<title>Self-Test 02 – PSYCH 490 • Fall 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -78,6 +78,35 @@ ul.task-list li input[type="checkbox"] {
   });
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../include/css/styles.css">
 </head>
@@ -228,25 +257,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#topics" id="toc-topics" class="nav-link" data-scroll-target="#topics">Topics</a></li>
-  <li><a href="#formats" id="toc-formats" class="nav-link" data-scroll-target="#formats">Formats</a></li>
-  <li><a href="#components" id="toc-components" class="nav-link" data-scroll-target="#components">Components</a>
-  <ul class="collapse">
-  <li><a href="#project-proposal" id="toc-project-proposal" class="nav-link" data-scroll-target="#project-proposal">Project proposal</a></li>
-  <li><a href="#project-presentation" id="toc-project-presentation" class="nav-link" data-scroll-target="#project-presentation">Project presentation</a></li>
-  <li><a href="#project-write-up" id="toc-project-write-up" class="nav-link" data-scroll-target="#project-write-up">Project write-up</a></li>
-  </ul></li>
-  <li><a href="#survey" id="toc-survey" class="nav-link" data-scroll-target="#survey">Survey</a></li>
+  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/edit/main/src/exercises/final-project.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/edit/main/src/exercises/st-02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Final Project</h1>
+<h1 class="title">Self-Test 02</h1>
 </div>
 
 
@@ -269,79 +290,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="background" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="background">Background</h2>
-<p>Your final project is an opportunity for you to produce a product that shows-off some of what you have learned in the course.</p>
-<p>You may work alone or with up to two other students in the class. If you work with others, you will need to complete a statement about who did what, and all of the members of your team will get the same grade.</p>
+<section id="about" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="about">About</h2>
+<p>This document provides students some opportunities to test their mastery of core concepts in the course.</p>
+<p>These questions cover material discussed in Weeks 8-15.</p>
 </section>
-<section id="topics" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="topics">Topics</h2>
-<p>You may choose any of a wide range of topics for your final project:</p>
-<ul>
-<li>A tool or resource you find especially useful.</li>
-<li>A paper or papers that do or do not replicate.</li>
-<li>Independent research on some topic related to open science.</li>
-</ul>
-<p>Here are some topics students chose in Spring 2023:</p>
-<p><a href="https://psu-psychology.github.io/psych-490-reproducibility-2023-spring-notes/presentations.html#presentations-day-1" class="uri">https://psu-psychology.github.io/psych-490-reproducibility-2023-spring-notes/presentations.html#presentations-day-1</a></p>
-<p>And here are some topics students chose in Fall 2023:</p>
-<p><a href="https://psu-psychology.github.io/psych-490-reproducibility-2023-fall/surveys/presentation-schedule.html#day-1-friday-december-1-2023" class="uri">https://psu-psychology.github.io/psych-490-reproducibility-2023-fall/surveys/presentation-schedule.html#day-1-friday-december-1-2023</a></p>
-</section>
-<section id="formats" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="formats">Formats</h2>
-<p>There are multiple formats for your final project.</p>
-<ul>
-<li>Short (5-10 min) in-class talk</li>
-<li>Poster</li>
-<li>Lesson plan/exercise</li>
-<li>Tutorial</li>
-<li>Research project (&amp; write-up)</li>
-<li>Opinion piece</li>
-</ul>
-</section>
-<section id="components" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="components">Components</h2>
-<section id="project-proposal" class="level3">
-<h3 class="anchored" data-anchor-id="project-proposal">Project proposal</h3>
-<ul>
-<li>Every student or team must submit a one-page <em>single-spaced</em> project proposal. Your proposal should state the aim or objective of your project, the format, and a include a brief description of how you intend to go about achieving your objectives.</li>
-<li>If the proposal is submitted on-time (<span class="orange_due">by Friday, October 18</span>), the student or team gets 5 extra credit points. If the proposal is submitted late, there is no penalty, but also no extra points. If a student or team does not submit a proposal at all by Friday, November 1, there will be a five point penalty.</li>
-</ul>
-</section>
-<section id="project-presentation" class="level3">
-<h3 class="anchored" data-anchor-id="project-presentation">Project presentation</h3>
-<ul>
-<li>Every student or team may make an <em>optional</em> presentation to the class about their project. Please indicate whether you are willing to make a presentation when you complete the <a href="../exercises/final-project.html#survey">survey</a> below.</li>
-<li><strong>Note</strong>: Giving a presentation is worth 5 extra credit points.</li>
-<li>The presentations will occur during class on December 6, 9, and 11.</li>
-<li>If you wish to have your presentation made available publicly on the course website, please let me know. This is also completely optional.</li>
-</ul>
-</section>
-<section id="project-write-up" class="level3">
-<h3 class="anchored" data-anchor-id="project-write-up">Project write-up</h3>
-<ul>
-<li>Every student or team must submit a write-up, <span class="orange_due">due on Wednesday, December 18, 2024</span>.</li>
-<li>Depending on the format of the project (talk, poster, paper), different written materials may be submitted (slides, poster, etc.).</li>
-<li>For an in-class talk, submit a separate document with your talk text or notes and your slides. You may also submit slides that include presenter notes embedded within them.</li>
-<li>For a poster, submit a PowerPoint or PDF of your poster along with any talking points.
-<ul>
-<li><em>Rubic</em>: An example of potential grading template we may use: <a href="https://commons.erau.edu/db-srs/poster-scoring-rubric.pdf" class="uri">https://commons.erau.edu/db-srs/poster-scoring-rubric.pdf</a></li>
-<li><em>Article</em>: How to make a good scientific poster <a href="https://www.nature.com/articles/nj7614-115a" class="uri">https://www.nature.com/articles/nj7614-115a</a></li>
-<li><em>Tutorial video</em>: how to make a poster <a href="https://www.youtube.com/watch?v=EL5YwkiqBho&amp;ab_channel=SamHertig" class="uri">https://www.youtube.com/watch?v=EL5YwkiqBho&amp;ab_channel=SamHertig</a></li>
-<li><em>Other basics</em>: <a href="https://guides.libraries.psu.edu/posters" class="uri">https://guides.libraries.psu.edu/posters</a></li>
-</ul></li>
-<li>For research paper, please submit an APA-formatted manuscript 1,500-2,000 words in length.</li>
-<li>For an opinion piece, please submit a document up to 1,500 words in length.</li>
-<li>For an interactive website or presentation, please submit a complete set of files needed to evaluate your website or presentation.</li>
-<li>For a lesson plan, please submit a document up up to 1,500 words in length.</li>
-</ul>
-</section>
-</section>
-<section id="survey" class="level2">
-<h2 class="anchored" data-anchor-id="survey">Survey</h2>
-<ul>
-<li>Please provide information about your project via this Google Form: <a href="https://forms.gle/Ra42dniutHJUmF2A6" class="uri">https://forms.gle/Ra42dniutHJUmF2A6</a></li>
-</ul>
+<section id="questions" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="questions">Questions</h2>
+<ol type="1">
+<li><p>What happened when we simulated multiple experiments with a small sample size (<em>n</em>=30 in each group) and a small effect size (<span class="math inline">\(d=0.30\)</span>)?</p></li>
+<li><p>Why does the file drawer effect occur?</p></li>
+</ol>
 
 
 </section>
@@ -775,7 +734,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/edit/main/src/exercises/final-project.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/edit/main/src/exercises/st-02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

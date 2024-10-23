@@ -1,12 +1,6 @@
 ---
 title: "Preregistration"
-subtitle: "2023-11-06 Mon"
-author: "Rick Gilmore"
-format: revealjs
-bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
-csl: ../include/bib/apa.csl
-css: ../include/css/styles.css
-footer: "[PSYCH 490.009](../index.html): 2023-11-06 Mon"
+subtitle: "2024-11-11 Mon"
 ---
 
 # Overview
@@ -14,9 +8,9 @@ footer: "[PSYCH 490.009](../index.html): 2023-11-06 Mon"
 ## Announcement
 
 - Clarification of "opinion piece"
-  - [@Goldin-Meadow2016-mc]
-  - [@Mischel2011-br]
-  - [@Adolph2016-pg]
+  - @Goldin-Meadow2016-mc
+  - @Mischel2011-br
+  - @Adolph2016-pg
 
 ## Last time...
 
@@ -27,9 +21,9 @@ footer: "[PSYCH 490.009](../index.html): 2023-11-06 Mon"
 *Preregistration*
 
 - Read
-    - [@Nosek2018-jk]
-    - [@Ledgerwood2018-sn] or [@Goldin-Meadow2016-mc]
-    - (Optional) [@Claesen2021-ae]
+    - @Nosek2018-jk
+    - @Ledgerwood2018-sn or @Goldin-Meadow2016-mc
+    - (Optional) @Claesen2021-ae
 - Explore
     - [clinicaltrials.gov](https://clinicaltrials.gov/)
 
@@ -37,7 +31,7 @@ footer: "[PSYCH 490.009](../index.html): 2023-11-06 Mon"
 
 ---
 
-Nosek, B. A., Ebersole, C. R., DeHaven, A. C. & Mellor, D. T. (2018). The preregistration revolution. Proceedings of the National Academy of Sciences of the United States of America, 115(11), 2600–2606. <https://doi.org/10.1073/pnas.1708274114>
+Nosek, B. A., Ebersole, C. R., DeHaven, A. C. & Mellor, D. T. (2018). The preregistration revolution. *Proceedings of the National Academy of Sciences of the United States of America*, 115(11), 2600–2606. <https://doi.org/10.1073/pnas.1708274114>
 
 ---
 
@@ -46,7 +40,7 @@ Nosek, B. A., Ebersole, C. R., DeHaven, A. C. & Mellor, D. T. (2018). The prereg
 >Progress in science relies in part on generating hypotheses with existing observations and testing hypotheses with new observations. This distinction between postdiction and prediction is appreciated conceptually but is not respected in practice. Mistaking generation of postdictions with testing of predictions reduces the credibility of research findings... 
 
 <p style="text-align:center;">
-[@Nosek2018-jk]
+@Nosek2018-jk
 </p>
 
 ---
@@ -55,7 +49,7 @@ Nosek, B. A., Ebersole, C. R., DeHaven, A. C. & Mellor, D. T. (2018). The prereg
 However, ordinary biases in human reasoning, such as hindsight bias, make it hard to avoid this mistake. An effective solution is to define the research questions and analysis plan before observing the research outcomes—a process called preregistration...
 
 <p style="text-align:center;">
-[@Nosek2018-jk]
+@Nosek2018-jk
 </p>
 
 ---
@@ -63,7 +57,7 @@ However, ordinary biases in human reasoning, such as hindsight bias, make it har
 >Preregistration distinguishes analyses and outcomes that result from predictions from those that result from postdictions. A variety of practical strategies are available to make the best possible use of preregistration in circumstances that fall short of the ideal application, such as when the data are preexisting.
 
 <p style="text-align:center;">
-[@Nosek2018-jk]
+@Nosek2018-jk
 </p>
 
 ---
@@ -71,7 +65,7 @@ However, ordinary biases in human reasoning, such as hindsight bias, make it har
 >Services are now available for preregistration across all disciplines, facilitating a rapid increase in the practice. Widespread adoption of preregistration will increase distinctiveness between hypothesis generation and hypothesis testing and will improve the credibility of research findings.
 
 <p style="text-align:center;">
-[@Nosek2018-jk]
+@Nosek2018-jk
 </p>
 
 ## Types
@@ -85,7 +79,7 @@ However, ordinary biases in human reasoning, such as hindsight bias, make it har
 
 - [@Ledgerwood2018-sn]
     - Preregistering theoretical predictions $\neq$ preregistering analysis plans
-- [@Goldin-Meadow2016-mc]
+- @Goldin-Meadow2016-mc
     - Could stifle discovery
     - Not applicable to all kinds of research
 
@@ -148,10 +142,10 @@ However, ordinary biases in human reasoning, such as hindsight bias, make it har
 *Data sharing*
 
 - Read
-    - [@Houtkoop2018-tl]
-    - [@Tenopir2020-mq]
-    - (Optional) [@GilmoreAdolph2017]
-    - (Optional) [@Meyer2018-vk]
+    - @Houtkoop2018-tl
+    - @Tenopir2020-mq
+    - (Optional) @GilmoreAdolph2017
+    - (Optional) @Meyer2018-vk
     - (Optional) [@National_Institutes_of_Health_undated-it](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html)
 - [Class notes](wk12-2023-11-08.qmd)
 

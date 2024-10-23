@@ -1,0 +1,136 @@
+# Spaghetti Plots & Causal Models
+
+## About
+
+This page provides some additional material related to the discussion of @Cuddy2012-zx, @Carney2010-gq, and @Ranehill2015-dj.
+
+## Presentation comments
+
+Gilmore prefers plots that show both individual data and group trends.
+
+```{r, fig.cap="Example of 'spaghetti' plot."}
+measure <- c(1, .8, 1.2, 1.1, .7, .75, 1.1, 1, 1.15, 1.05, .75, .8)
+time <- c(1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2)
+group <- c('a', 'a', 'a', 'b', 'b', 'b', 'a', 'a', 'a', 'b', 'b', 'b')
+sub_id <- c(1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6)
+df <- data.frame(sub_id = sub_id, measure = measure, time = time, test_group = group)
+
+library(ggplot2)
+df |>
+  ggplot() +
+  aes(x = as.factor(time), y = measure, group = sub_id, color = test_group) +
+  geom_point() +
+  geom_line() +
+  facet_grid(~ test_group) +
+  xlab("Test occasion") +
+  ylim(0, 1.5)
+```
+
+
+## Exploring logical/causal diagrams
+
+Causal diagrams are one tool to reveal an authors' claims and assumptions.
+
+```{mermaid}
+flowchart LR
+  A[Behaviors] -->B(Feelings)
+  A -->C((Physiology))
+```
+
+## Causal diagram for @Carney2010-gq
+
+```{mermaid}
+flowchart TD
+  A[Posing] -->B(Testosterone)
+  A -->C(Cortisol)
+  A -->D{Powerful feelings}
+  A -->E[Risk tolerance]
+```
+
+---
+
+A folk psychology view might hold that feelings cause behaviors.
+
+```{mermaid}
+flowchart TD
+  D{Powerful feelings} -->A[Posing]
+  D -->E[Risk tolerance]
+  D -->|??|C(Cortisol)
+  D -->|??|B(Testosterone)
+```
+
+Here, the role of feelings on endocrine measures might not be known or clear.
+
+---
+
+Neuroscientists would argue that feelings are the *outcome* of physiological processes like hormone levels and nervous system activity.
+
+```{mermaid}
+flowchart TD
+  C(Cortisol) -->D{Powerful feelings}
+  B(Testosterone) -->D
+  F(Nervous system) -->D
+  F --> A[Posing]
+  F --> E[Risk tolerance]
+```
+
+---
+
+And that physiological processes (hormones & nervous system activity) influence one another.
+
+```{mermaid}
+flowchart TD
+  C(Cortisol) -->D{Powerful feelings}
+  B(Testosterone) -->D
+  F(Nervous system) -->D
+  F --> A[Posing]
+  F --> E[Risk tolerance]
+  C <--> F
+  B <--> F
+```
+
+---
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+@Carney2010-gq
+
+```{mermaid}
+flowchart TD
+  A[Posing] -->B(Testosterone)
+  A -->C(Cortisol)
+  A -->D{Powerful feelings}
+  A -->E[Risk tolerance]
+```
+
+:::
+
+::: {.column width="50%"}
+
+@Ranehill2015-dj
+
+```{mermaid}
+flowchart TD
+  A[Posing] -.-> B(Testosterone)
+  A -.-> C(Cortisol)
+  A ==> D{Powerful feelings}
+  A -.-> E[Risk tolerance]
+```
+
+:::
+
+::::
+
+---
+
+If the neuroscientific view is correct, there must be a route for behaviors (like posing) to influence feelings through physiology. 
+
+```{mermaid}
+flowchart TD
+  A[Posing] --> B(Nervous system) --> D{Feelings}
+  B --> A
+```
+
+---

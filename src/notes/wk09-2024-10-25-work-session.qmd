@@ -17,6 +17,13 @@ subtitle: "2024-10-25 Fri"
     - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd) write-up
 - [Assignment]{.green_assigned}
     - [Exercise 07: Replication](../exercises/ex07-replication.qmd)
+    
+## Questions
+
+- What claims did Dr. Cuddy make in the talk?
+- What claims are well-supported by the empirical evidence in @Carney2010-gq and @Ranehill2015-dj?
+- What claims are less well-supported?
+- Is the TED talk an example of hype? Why or why not?
 
 # Next time
 

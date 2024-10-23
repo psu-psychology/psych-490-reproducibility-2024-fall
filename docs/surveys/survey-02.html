@@ -265,6 +265,10 @@ div.csl-indent {
     <a class="dropdown-item" href="../supplemental/p-hacking-suppl.html">
  <span class="dropdown-text">On <em>p</em>-hacking</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../supplemental/causal-models.html">
+ <span class="dropdown-text">On spaghetti plots and causal models</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -419,7 +423,7 @@ Note
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(<span class="st">"csv"</span>, params<span class="sc">$</span>fn), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>We have <em>n=</em>15 responses as of 2024-10-17 11:04:35.183305. <strong>Note</strong>: Two of these are “test” responses by Dr.&nbsp;Gilmore.</p>
+<p>We have <em>n=</em>15 responses as of 2024-10-23 14:46:39.486069. <strong>Note</strong>: Two of these are “test” responses by Dr.&nbsp;Gilmore.</p>
 <p>Here are the column “names”:</p>
 <div class="cell">
 <details class="code-fold">
@@ -851,7 +855,7 @@ Figure&nbsp;3: Adherence to norms and counternorms by what scientists <em>should
 <span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 9 rows containing missing values or values outside the scale range
+<pre><code>Warning: Removed 13 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
@@ -894,7 +898,7 @@ Figure&nbsp;4: Individual ratings of each norm based on what respondents think s
 <span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 10 rows containing missing values or values outside the scale range
+<pre><code>Warning: Removed 8 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
@@ -1575,7 +1579,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
