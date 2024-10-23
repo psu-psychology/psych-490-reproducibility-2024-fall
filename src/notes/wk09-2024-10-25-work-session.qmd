@@ -7,12 +7,12 @@ subtitle: "2024-10-25 Fri"
 
 ## Announcements
 
+- (Extra credit) Complete [Survey 03](https://forms.gle/BTqayMKnP7Xnyhst9)
+
 ## Today
 
 *Work session*
 
-- Watch & discuss
-    - [@Cuddy2012-zx](https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are)
 - [Discuss draft]{.orange_due}
     - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd) write-up
 - [Assignment]{.green_assigned}
@@ -24,6 +24,8 @@ subtitle: "2024-10-25 Fri"
 - What claims are well-supported by the empirical evidence in @Carney2010-gq and @Ranehill2015-dj?
 - What claims are less well-supported?
 - Is the TED talk an example of hype? Why or why not?
+
+*Hint*: [This supplemental document](../supplemental/causal-models.qmd) may help you think about what claims were made and which were supported.
 
 # Next time
 
