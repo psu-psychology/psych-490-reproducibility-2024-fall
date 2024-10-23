@@ -8,28 +8,26 @@ subtitle: "2024-10-23 Wed"
 ## Announcements
 
 - [Discuss draft on Friday]{.orange_due}
-    - [Exercise 05: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex05-apes.qmd) write-up
+    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd) write-up
     
 ## Last time
 
-- [@Qian2022-yp] [analysis](https://gilmore-lab.github.io/sex-differences-project/analysis/qian-berenbaum-gilmore.html).
-- When [@Nuijten2015-ul] examined 250,000+ statistics in psychology papers published from 1985-2013, what did they find?
-- [@Szucs2017-fc] found that "Median power to detect small, medium, and large effects was 0.12, 0.44, and 0.73..." Can you restate this in less formal or technical terms?
+- When @Nuijten2015-ul examined 250,000+ statistics in psychology papers published from 1985-2013, what did they find?
+- @Szucs2017-fc found that "Median power to detect small, medium, and large effects was 0.12, 0.44, and 0.73..." Can you restate this in less formal or technical terms?
 
 ## Today
 
 *Hype*
 
 - Discuss
-    - [@Ritchie2020-fm], Chapter 6
-    - [@Carney2010-gq], [file on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=155192209)
-    - (Optional) [@Ranehill2015-dj], [file on Canvas](https://psu.instructure.com/courses/2280122/files/folder/readings?preview=155192230)
+    - @Carney2010-gq, [file on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170721)
+    - (Optional) @Ranehill2015-dj, [file on Canvas](https://psu.instructure.com/courses/2350148/files/folder/readings?preview=165170720)
 
 ---
 
 ::: {.callout-note}
 
-The *New York Times* published an article by  [@Dominus2017-th](https://www.nytimes.com/2017/10/18/magazine/when-the-revolution-came-for-amy-cuddy.html) on the controversy surrounding Dr. Cuddy's work called "When the Revolution Came for Amy Cuddy."
+The *New York Times* published an article by  @Dominus2017-th on the controversy surrounding Dr. Cuddy's work called "When the Revolution Came for Amy Cuddy."
 
 I considered reading this and discussing it, but I was more interested in the substantive claims made in the papers and in the talk.
 
@@ -37,7 +35,11 @@ Reading the Times' story and discussing the controversy would make a great final
 
 :::
 
-## Chapter 6 from [@Ritchie2020-fm] 
+---
+
+![](../include/img/hype-definition.png)
+
+## Chapter 6 from @Ritchie2020-fm 
 
 - Problems with scientific press releases
     - Not written by scientists
@@ -55,6 +57,23 @@ Reading the Times' story and discussing the controversy would make a great final
 
 # Power-posing
 
+## @Cuddy2012-zx
+
+```{r, out.width="100%", fig.cap="Amy Cuddy's TED talk: https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are"}
+knitr::include_graphics("../include/img/cuddy-ted.png")
+```
+
+## Citation data
+
+Talk viewed ~69.5 million times according to TED web page on 2023-10-16.
+
+## Questions
+
+- What claims did Dr. Cuddy make in the talk?
+- Which claims are well-supported by the empirical evidence in @Carney2010-gq and @Ranehill2015-dj?
+- Which claims are less well-supported?
+- Is the TED talk an example of hype? Why or why not?
+
 ---
 
 Carney, D. R., Cuddy, A. J. C. & Yap, A. J. (2010). Power posing: Brief nonverbal displays affect neuroendocrine levels and risk tolerance. *Psychological Science*, 21(10), 1363–1368. <https://doi.org/10.1177/0956797610383437>
@@ -64,7 +83,7 @@ Carney, D. R., Cuddy, A. J. C. & Yap, A. J. (2010). Power posing: Brief nonverba
 >Humans and other animals express power through open, expansive postures, and they express powerlessness through contractive postures. But can these postures actually cause power? 
 
 <p style="text-align:center;">
-[@Carney2010-gq]
+@Carney2010-gq
 </p>
 
 ---
@@ -72,7 +91,7 @@ Carney, D. R., Cuddy, A. J. C. & Yap, A. J. (2010). Power posing: Brief nonverba
 >The results of this study confirmed our prediction that posing in high-power nonverbal displays (as opposed to low-power nonverbal displays) would cause neuroendocrine behavioral changes for both male and female participants: High-power posers experienced elevations in testosterone, decreases in cortisol, and increased feelings of power and tolerance for risk; low-power posers exhibited the opposite pattern. 
 
 <p style="text-align:center;">
-[@Carney2010-gq]
+@Carney2010-gq
 </p>
 
 ---
@@ -80,7 +99,7 @@ Carney, D. R., Cuddy, A. J. C. & Yap, A. J. (2010). Power posing: Brief nonverba
 >In short, posing in displays of power caused advantaged and adaptive psychological, physiological, and behavioral changes, and findings suggest that embodiment extends beyond mere thinking and feeling, to physiology and subsequent behavioral choices. That a person can, by assuming two simple 1-min poses, embody power and instantly become more powerful has real-actionable implications.
 
 <p style="text-align:center;">
-[@Carney2010-gq]
+@Carney2010-gq
 </p>
 
 ## Methods
@@ -125,11 +144,11 @@ knitr::include_graphics("../include/img/carney-etal-fig03.png")
 
 ## Citation data
 
-Paper cited ~1,590 times:
+Paper cited ~1,700 times:
 
 <https://scholar.google.com/scholar?hl=en&as_sdt=0%2C39&q=Power+posing%3A+brief+nonverbal+displays+affect+neuroendocrine+levels+and+risk+tolerance&btnG=>
 
-according to Google Scholar on 2023-10-16.
+according to Google Scholar as of 2024-10-23.
 
 ## Reproducibility notes
 
@@ -141,15 +160,6 @@ according to Google Scholar on 2023-10-16.
 
 - Gilmore prefers graphs that show individual participant data points (see below)
 
-## [@Cuddy2012-zx](https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are) 
-
-```{r, out.width="100%", fig.cap="Amy Cuddy's TED talk: https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are"}
-knitr::include_graphics("../include/img/cuddy-ted.png")
-```
-
-## Citation data
-
-Talk viewed ~69.5 million times according to TED web page on 2023-10-16.
 
 ## A replication attempt
 
@@ -160,7 +170,7 @@ Ranehill, E., Dreber, A., Johannesson, M., Leiberg, S., Sul, S. & Weber, R. A. (
 >We conducted a conceptual replication study task with a similar methodology as that employed by Carney et al. but using a substantially larger sample (N=200) and a design in which the experimenter was blind to condition. 
 
 <p style="text-align:center;"> 
-[@Ranehill2015-dj]
+@Ranehill2015-dj
 </p>
 
 ---
@@ -168,7 +178,7 @@ Ranehill, E., Dreber, A., Johannesson, M., Leiberg, S., Sul, S. & Weber, R. A. (
 >Our statistical power to detect an effect of the magnitude reported by Carney et al. was more than 95% (see the Supplemental Material available online). In addition to the three outcome measures that Carney et al. used, we  also studied two more behavioral tasks (risk taking in the loss domain and willingness to compete).
 
 <p style="text-align:center;"> 
-[@Ranehill2015-dj]
+@Ranehill2015-dj
 </p>
 
 ---
@@ -176,7 +186,7 @@ Ranehill, E., Dreber, A., Johannesson, M., Leiberg, S., Sul, S. & Weber, R. A. (
 >Consistent with the findings of Carney et al., our results showed a significant effect of power posing on self-reported feelings of power. However, we found no significant effect of power posing on hormonal levels in any of the three behavioral tasks.
 
 <p style="text-align:center;"> 
-[@Ranehill2015-dj]
+@Ranehill2015-dj
 </p>
 
 ## Methods
@@ -200,11 +210,11 @@ knitr::include_graphics("../include/img/ranehill-etal-2015-fig01.png")
 
 ## Citation data
 
-Paper cited ~340 times:
+Paper cited ~360 times:
 
 <https://scholar.google.com/scholar?hl=en&as_sdt=0%2C39&q=Assessing+the+robustness+of+power+posing%3A+no+effect+on+hormones+and+risk+tolerance+in+a+large+sample+of+men+and+women+%5BReview+of+Assessing+the+robustness+of+power+posing%3A+no+effect+on+hormones+and+risk+tolerance+in+a+large+sample+of+men+and+women%5D&btnG=>
 
-according to Google Scholar on 2023-10-16.
+according to Google Scholar on 2024-10-23.
 
 ## Reproducibility notes
 
@@ -219,7 +229,7 @@ according to Google Scholar on 2023-10-16.
     - The OSF site includes very helpful details about the experiments.
     - The data and code were shared, but I don't have access to the statistical program used (Stata) to rerun the analysis. The data had a `.dta` file extension. This appears to be a plain text, 'tidy' data file format that could be used by another program.
 
-## Presentation comments
+## Presentation comments {.scrollable}
 
 ```{r, fig.cap="Example of 'spaghetti' plot."}
 measure <- c(1, .8, 1.2, 1.1, .7, .75, 1.1, 1, 1.15, 1.05, .75, .8)
@@ -245,132 +255,130 @@ df |>
   - Shows individual data
   - Group trends
 
-## Exploring logical/causal diagrams
+<!-- ## Exploring logical/causal diagrams -->
 
-Causal diagrams are one tool to reveal an authors' claims and assumptions.
+<!-- Causal diagrams are one tool to reveal an authors' claims and assumptions. -->
 
-```{mermaid}
-flowchart LR
-  A[Behaviors] -->B(Feelings)
-  A -->C((Physiology))
-```
+<!-- ```{mermaid} -->
+<!-- flowchart LR -->
+<!--   A[Behaviors] -->B(Feelings) -->
+<!--   A -->C((Physiology)) -->
+<!-- ``` -->
 
-## Causal diagram for [-@Carney2010-gq]
+<!-- ## Causal diagram for [-@Carney2010-gq] -->
 
-```{mermaid}
-flowchart TD
-  A[Posing] -->B(Testosterone)
-  A -->C(Cortisol)
-  A -->D{Powerful feelings}
-  A -->E[Risk tolerance]
-```
+<!-- ```{mermaid} -->
+<!-- flowchart TD -->
+<!--   A[Posing] -->B(Testosterone) -->
+<!--   A -->C(Cortisol) -->
+<!--   A -->D{Powerful feelings} -->
+<!--   A -->E[Risk tolerance] -->
+<!-- ``` -->
 
----
+<!-- --- -->
 
-A folk psychology view might hold that feelings cause behaviors.
+<!-- A folk psychology view might hold that feelings cause behaviors. -->
 
-```{mermaid}
-flowchart TD
-  D{Powerful feelings} -->A[Posing]
-  D -->E[Risk tolerance]
-  D -->|??|C(Cortisol)
-  D -->|??|B(Testosterone)
-```
+<!-- ```{mermaid} -->
+<!-- flowchart TD -->
+<!--   D{Powerful feelings} -->A[Posing] -->
+<!--   D -->E[Risk tolerance] -->
+<!--   D -->|??|C(Cortisol) -->
+<!--   D -->|??|B(Testosterone) -->
+<!-- ``` -->
 
-Here, the role of feelings on endocrine measures might not be known or clear.
+<!-- Here, the role of feelings on endocrine measures might not be known or clear. -->
 
----
+<!-- --- -->
 
-Neuroscientists would argue that feelings are the *outcome* of physiological processes like hormone levels and nervous system activity.
+<!-- Neuroscientists would argue that feelings are the *outcome* of physiological processes like hormone levels and nervous system activity. -->
 
-```{mermaid}
-flowchart TD
-  C(Cortisol) -->D{Powerful feelings}
-  B(Testosterone) -->D
-  F(Nervous system) -->D
-  F --> A[Posing]
-  F --> E[Risk tolerance]
-```
+<!-- ```{mermaid} -->
+<!-- flowchart TD -->
+<!--   C(Cortisol) -->D{Powerful feelings} -->
+<!--   B(Testosterone) -->D -->
+<!--   F(Nervous system) -->D -->
+<!--   F --> A[Posing] -->
+<!--   F --> E[Risk tolerance] -->
+<!-- ``` -->
 
----
+<!-- --- -->
 
-And that physiological processes (hormones & nervous system activity) influence one another.
+<!-- And that physiological processes (hormones & nervous system activity) influence one another. -->
 
-```{mermaid}
-flowchart TD
-  C(Cortisol) -->D{Powerful feelings}
-  B(Testosterone) -->D
-  F(Nervous system) -->D
-  F --> A[Posing]
-  F --> E[Risk tolerance]
-  C <--> F
-  B <--> F
-```
+<!-- ```{mermaid} -->
+<!-- flowchart TD -->
+<!--   C(Cortisol) -->D{Powerful feelings} -->
+<!--   B(Testosterone) -->D -->
+<!--   F(Nervous system) -->D -->
+<!--   F --> A[Posing] -->
+<!--   F --> E[Risk tolerance] -->
+<!--   C <--> F -->
+<!--   B <--> F -->
+<!-- ``` -->
 
----
+<!-- --- -->
 
-:::: {.columns}
+<!-- :::: {.columns} -->
 
-::: {.column width="50%"}
+<!-- ::: {.column width="50%"} -->
 
-[@Carney2010-gq]
+<!-- [@Carney2010-gq] -->
 
-```{mermaid}
-flowchart TD
-  A[Posing] -->B(Testosterone)
-  A -->C(Cortisol)
-  A -->D{Powerful feelings}
-  A -->E[Risk tolerance]
-```
+<!-- ```{mermaid} -->
+<!-- flowchart TD -->
+<!--   A[Posing] -->B(Testosterone) -->
+<!--   A -->C(Cortisol) -->
+<!--   A -->D{Powerful feelings} -->
+<!--   A -->E[Risk tolerance] -->
+<!-- ``` -->
 
-:::
+<!-- ::: -->
 
-::: {.column width="50%"}
+<!-- ::: {.column width="50%"} -->
 
-[@Ranehill2015-dj]
+<!-- [@Ranehill2015-dj] -->
 
-```{mermaid}
-flowchart TD
-  A[Posing] -.-> B(Testosterone)
-  A -.-> C(Cortisol)
-  A ==> D{Powerful feelings}
-  A -.-> E[Risk tolerance]
-```
+<!-- ```{mermaid} -->
+<!-- flowchart TD -->
+<!--   A[Posing] -.-> B(Testosterone) -->
+<!--   A -.-> C(Cortisol) -->
+<!--   A ==> D{Powerful feelings} -->
+<!--   A -.-> E[Risk tolerance] -->
+<!-- ``` -->
 
-:::
+<!-- ::: -->
 
-::::
+<!-- :::: -->
 
----
+<!-- --- -->
 
-If the neuroscientific view is correct, there must be a route for behaviors (like posing) to influence feelings through physiology. 
+<!-- If the neuroscientific view is correct, there must be a route for behaviors (like posing) to influence feelings through physiology.  -->
 
-```{mermaid}
-flowchart TD
-  A[Posing] --> B(Nervous system) --> D{Feelings}
-  B --> A
-```
+<!-- ```{mermaid} -->
+<!-- flowchart TD -->
+<!--   A[Posing] --> B(Nervous system) --> D{Feelings} -->
+<!--   B --> A -->
+<!-- ``` -->
 
----
+<!-- --- -->
 
-::: {.callout-note}
+<!-- ::: {.callout-note} -->
 
-Sometimes it can be illuminating to sketch an author's implicit causal model if that model is not stated explicitly.
+<!-- Sometimes it can be illuminating to sketch an author's implicit causal model if that model is not stated explicitly. -->
 
-:::
+<!-- ::: -->
 
-::: {.callout-note}
+<!-- ::: {.callout-note} -->
 
-Gilmore thinks that this interconnected network of plausible causal pathways is another reason why the behavioral and biological sciences are so challenging.
+<!-- Gilmore thinks that this interconnected network of plausible causal pathways is another reason why the behavioral and biological sciences are so challenging. -->
 
-:::
+<!-- ::: -->
 
 # Next time
 
 - [Discuss draft]{.orange_due}
-    - [Exercise 05: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex05-apes.qmd) write-up
-- [Assignment]{.green_assigned}
-    - [Exercise 06: Replication](exercises/ex06-replication.qmd)
+    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd) write-up
 
 # Resources
 

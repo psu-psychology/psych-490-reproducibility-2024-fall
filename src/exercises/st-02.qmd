@@ -1,0 +1,15 @@
+---
+title: "Self-Test 02"
+---
+
+## About {-}
+
+This document provides students some opportunities to test their mastery of core concepts in the course.
+
+These questions cover material discussed in Weeks 8-15.
+
+## Questions {-}
+
+1. What happened when we simulated multiple experiments with a small sample size (*n*=30 in each group) and a small effect size ($d=0.30$)? 
+
+2. Why does the file drawer effect occur?
