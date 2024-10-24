@@ -302,7 +302,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 - [Assignment]{.green_assigned}
     - [Exercise 07: Replication](exercises/ex07-replication.qmd), [due Friday, November 8]{.orange_due}
 - (Extra credit) Complete [Survey 03](https://forms.gle/BTqayMKnP7Xnyhst9)
-- [Class notes](notes/wk10-2024-10-25-work-session.qmd)
+- [Class notes](notes/wk09-2024-10-25-work-session.qmd)
 
 ### Week 10: October 28 - November 1 {- #week-10}
 
@@ -459,7 +459,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 - [Class notes](nowk15-2024-12-13-open-sci-future.qmd)
   
-### December 16-20 {- #finals-week}
+### Finals Week: December 16-20 {- #finals-week}
 
 #### Wednesday, December 18 {-}
 
