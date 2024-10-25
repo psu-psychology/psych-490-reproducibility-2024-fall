@@ -12,4 +12,8 @@ These questions cover material discussed in Weeks 8-15.
 
 1. What happened when we simulated multiple experiments with a small sample size (*n*=30 in each group) and a small effect size ($d=0.30$)? 
 
-2. Why does the file drawer effect occur?
+2. Why does the file drawer effect occur? If the file drawer effect is large, what impact does this have?
+
+3. What kinds of errors did @Nuijten2015-ul and @Brown2017-kh find in the statistics reported in psychology papers? What did @Szucs2017-fc find about sample sizes?
+
+4. Answer the questions in [Survey 03](https://forms.gle/BTqayMKnP7Xnyhst9) that are based on @Chopik2018-wx. Why did you answer the way that you did?

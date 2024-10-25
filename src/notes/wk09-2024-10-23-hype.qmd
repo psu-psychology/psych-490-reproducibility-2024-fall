@@ -54,7 +54,7 @@ subtitle: "2024-10-23 Wed"
 
 ## Questions
 
-- What claims did Dr. Cuddy make in @Cuddy2012-zx?
+- What claims did  @Cuddy2012-zx make about the effects of power posing on feelings, hormones, and behaviors?
 - What claims are well-supported by the empirical evidence in @Carney2010-gq and @Ranehill2015-dj?
 - What claims are less well-supported?
 - Is the @Cuddy2012-zx talk an example of research hype? Why or why not?
@@ -66,13 +66,6 @@ subtitle: "2024-10-23 Wed"
 ## Citation data
 
 Talk viewed ~69.5 million times according to TED web page on 2023-10-16.
-
-## Questions
-
-- What claims did Dr. Cuddy make in @Cuddy2012-zx?
-- Which of these claims are well-supported by the empirical evidence in @Carney2010-gq and @Ranehill2015-dj?
-- Which claims are less well-supported?
-- Is the TED talk an example of hype? Why or why not?
 
 ---
 
@@ -112,15 +105,11 @@ Carney, D. R., Cuddy, A. J. C. & Yap, A. J. (2010). Power posing: Brief nonverba
 
 ---
 
-```{r, out.width="100%", fig.cap="High power poses. Figure 1 from [@Carney2010-gq]"}
-knitr::include_graphics("../include/img/carney-etal-fig01.png")
-```
+![Figure 1 from @Carney2010-gq](../include/img/carney-etal-fig01.png)
 
 ---
 
-```{r, out.width="100%", fig.cap="Low power poses. Figure 2 from [@Carney2010-gq]"}
-knitr::include_graphics("../include/img/carney-etal-fig02.png")
-```
+![Low power poses. Figure 2 from @Carney2010-gq](../include/img/carney-etal-fig02.png)
 
 ---
 
@@ -132,15 +121,11 @@ knitr::include_graphics("../include/img/carney-etal-fig02.png")
     
 ## Results
 
-```{r, out.width="100%", fig.cap="[@Carney2010-gq](http://dx.doi.org/10.1177/0956797610383437)"}
-knitr::include_graphics("../include/img/carney-etal-2010-results.png")
-```
+![@Carney2010-gq](../include/img/carney-etal-2010-results.png)
 
 ---
 
-```{r, out.width="100%", fig.cap="Figure 3 from [@Carney2010-gq](http://dx.doi.org/10.1177/0956797610383437)"}
-knitr::include_graphics("../include/img/carney-etal-fig03.png")
-```
+![Figure 3 from @Carney2010-gq](../include/img/carney-etal-fig03.png)
 
 ## Citation data
 
@@ -198,15 +183,11 @@ Ranehill, E., Dreber, A., Johannesson, M., Leiberg, S., Sul, S. & Weber, R. A. (
 
 ## Results
 
-```{r, out.width="100%", fig.cap="Results excerpt from @Ranehill2015-dj"}
-knitr::include_graphics("../include/img/ranehill-etal-2015-results.png")
-```
+![@Ranehill2015-dj](../include/img/ranehill-etal-2015-results.png)
 
 ---
 
-```{r, out.width="100%", fig.cap="Figure 1 from @Ranehill2015-dj"}
-knitr::include_graphics("../include/img/ranehill-etal-2015-fig01.png")
-```
+![Figure 1 from @Ranehill2015-dj](../include/img/ranehill-etal-2015-fig01.png)
 
 ## Citation data
 

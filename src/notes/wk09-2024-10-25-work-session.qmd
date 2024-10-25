@@ -7,9 +7,16 @@ subtitle: "2024-10-25 Fri"
 
 ## Announcements
 
-- (Extra credit) Complete [Survey 03](https://forms.gle/BTqayMKnP7Xnyhst9)
+- [Final version due]{.orange_due}
+    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd) write-up
 
 ## Today
+
+*Hype, continued*
+
+- Discuss @Cuddy2012-zx, @Carney2010-gq, and @Ranehill2015-dj
+
+---
 
 *Work session*
 
@@ -20,10 +27,10 @@ subtitle: "2024-10-25 Fri"
     
 ## Questions
 
-- What claims did Dr. Cuddy make in the talk?
+- What claims did  @Cuddy2012-zx make about the effects of power posing on feelings, hormones, and behaviors?
 - What claims are well-supported by the empirical evidence in @Carney2010-gq and @Ranehill2015-dj?
 - What claims are less well-supported?
-- Is the TED talk an example of hype? Why or why not?
+- Is the @Cuddy2012-zx talk an example of research hype? Why or why not?
 
 *Hint*: [This supplemental document](../supplemental/causal-models.qmd) may help you think about what claims were made and which were supported.
 
@@ -31,9 +38,7 @@ subtitle: "2024-10-25 Fri"
 
 *Solutions*
 
-- [Final version due]{.orange_due}
-    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd) write-up
-- Discuss
+- Read
     - @munafo_manifesto_2017
     - @Begley2013-vm
 
