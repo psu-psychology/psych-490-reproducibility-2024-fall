@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -279,7 +299,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 21, 2024</p>
+      <p class="date-modified">October 25, 2024</p>
     </div>
   </div>
     
@@ -299,13 +319,29 @@ window.Quarto = {
 <h2 class="unnumbered anchored" data-anchor-id="questions">Questions</h2>
 <ol type="1">
 <li><p>What happened when we simulated multiple experiments with a small sample size (<em>n</em>=30 in each group) and a small effect size (<span class="math inline">\(d=0.30\)</span>)?</p></li>
-<li><p>Why does the file drawer effect occur?</p></li>
+<li><p>Why does the file drawer effect occur? If the file drawer effect is large, what impact does this have?</p></li>
+<li><p>What kinds of errors did <span class="citation" data-cites="Nuijten2015-ul">Nuijten, Hartgerink, Assen, Epskamp, &amp; Wicherts (<a href="#ref-Nuijten2015-ul" role="doc-biblioref">2015</a>)</span> and <span class="citation" data-cites="Brown2017-kh">Brown &amp; Heathers (<a href="#ref-Brown2017-kh" role="doc-biblioref">2017</a>)</span> find in the statistics reported in psychology papers? What did <span class="citation" data-cites="Szucs2017-fc">Szucs &amp; Ioannidis (<a href="#ref-Szucs2017-fc" role="doc-biblioref">2017</a>)</span> find about sample sizes?</p></li>
+<li><p>Answer the questions in <a href="https://forms.gle/BTqayMKnP7Xnyhst9">Survey 03</a> that are based on <span class="citation" data-cites="Chopik2018-wx">Chopik, Bremner, Defever, &amp; Keller (<a href="#ref-Chopik2018-wx" role="doc-biblioref">2018</a>)</span>. Why did you answer the way that you did?</p></li>
 </ol>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Brown2017-kh" class="csl-entry" role="listitem">
+Brown, N. J. L., &amp; Heathers, J. A. J. (2017). The <span>GRIM</span> test: A simple technique detects numerous anomalies in the reporting of results in psychology. <em>Social Psychological and Personality Science</em>, <em>8</em>(4), 363–369. <a href="https://doi.org/10.1177/1948550616673876">https://doi.org/10.1177/1948550616673876</a>
+</div>
+<div id="ref-Chopik2018-wx" class="csl-entry" role="listitem">
+Chopik, W. J., Bremner, R. H., Defever, A. M., &amp; Keller, V. N. (2018). How (and whether) to teach undergraduates about the replication crisis in psychological science. <em>Teaching of <span>P</span>sychology</em>, <em>45</em>(2), 158–163. <a href="https://doi.org/10.1177/0098628318762900">https://doi.org/10.1177/0098628318762900</a>
+</div>
+<div id="ref-Nuijten2015-ul" class="csl-entry" role="listitem">
+Nuijten, M. B., Hartgerink, C. H. J., Assen, M. A. L. M. van, Epskamp, S., &amp; Wicherts, J. M. (2015). The prevalence of statistical reporting errors in psychology (1985–2013). <em>Behavior Research Methods</em>, 1–22. <a href="https://doi.org/10.3758/s13428-015-0664-2">https://doi.org/10.3758/s13428-015-0664-2</a>
+</div>
+<div id="ref-Szucs2017-fc" class="csl-entry" role="listitem">
+Szucs, D., &amp; Ioannidis, J. P. A. (2017). Empirical assessment of published effect sizes and power in the recent cognitive neuroscience and psychology literature. <em>PLoS Biology</em>, <em>15</em>(3), e2000797. <a href="https://doi.org/10.1371/journal.pbio.2000797">https://doi.org/10.1371/journal.pbio.2000797</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
