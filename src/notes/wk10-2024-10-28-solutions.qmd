@@ -7,12 +7,14 @@ subtitle: "2024-10-28 Mon"
 
 ## Announcements
 
+- [Final version due]{.orange_due}
+    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd) write-up
 - [Due Friday, November 8]{.orange_due}
     - [Exercise 07: Replication](../exercises/ex07-replication.qmd)
 
 ## Last time...
 
-- What did we learn from watching the TED Talk about power posing?
+- How can scientists balance the need to disseminate results to broader audiences with the risks of over-simplifying or conveying misleading information?
 
 ## Today
 
@@ -150,6 +152,8 @@ Begley, C. G. (2013). Six red flags for suspect work. *Nature*, *497*(7450), 433
 
 *Changing journal policies*
 
+- [Final version due]{.orange_due}
+    - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](../exercises/ex06-apes.qmd) write-up
 - Read
     - @nosek_promoting_2015
     - @Gilmore2020-sl

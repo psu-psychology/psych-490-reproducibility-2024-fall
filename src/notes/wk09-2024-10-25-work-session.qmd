@@ -5,6 +5,10 @@ subtitle: "2024-10-25 Fri"
 
 # Overview
 
+## In the news
+
+![@McCook2024-kf](../include/img/inquirer-deb-kelly-2024-10-24.png)
+
 ## Announcements
 
 - [Final version due]{.orange_due}
