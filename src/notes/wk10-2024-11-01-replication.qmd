@@ -1,9 +1,11 @@
 ---
 title: "Large-scale replication"
-subtitle: "2023-11-04 Mon"
+subtitle: "2023-11-01 Fri"
 ---
 
 # Overview
+
+
 
 ## Announcements
 
@@ -12,9 +14,9 @@ subtitle: "2023-11-04 Mon"
 *Large-scale replication studies*
 
 - Discuss
-    - [@collaboration_estimating_2015]
+    - @collaboration_estimating_2015
 
-# [@collaboration_estimating_2015]
+# @collaboration_estimating_2015
 
 ---
 
@@ -25,7 +27,7 @@ Open Science Collaboration. (2015). Estimating the reproducibility of psychologi
 >Reproducibility is a defining feature of science, but the extent to which it characterizes current research is unknown. We conducted replications of 100 experimental and correlational studies published in three psychology journals using high-powered designs and original materials when available. 
 
 <p style="text-align:center;">
-[@collaboration_estimating_2015]
+@collaboration_estimating_2015
 </p>
 
 ---
@@ -33,7 +35,7 @@ Open Science Collaboration. (2015). Estimating the reproducibility of psychologi
 >Replication effects were half the magnitude of original effects, representing a substantial decline. Ninety-seven percent of original studies had statistically significant results. Thirty-six percent of replications had statistically significant results; 47% of original effect sizes were in the 95% confidence interval of the replication effect size; 
 
 <p style="text-align:center;">
-[@collaboration_estimating_2015]
+@collaboration_estimating_2015
 </p>
 
 ---
@@ -41,7 +43,7 @@ Open Science Collaboration. (2015). Estimating the reproducibility of psychologi
 >39% of effects were subjectively rated to have replicated the original result; and if no bias in original results is assumed, combining original and replication results left 68% with statistically significant effects. Correlational tests suggest that replication success was better predicted by the strength of original evidence than by characteristics of the original and replication teams.
 
 <p style="text-align:center;">
-[@collaboration_estimating_2015]
+@collaboration_estimating_2015
 </p>
 
 ## Results {.scrollable}
@@ -50,7 +52,7 @@ Open Science Collaboration. (2015). Estimating the reproducibility of psychologi
 >
 
 <p style="text-align:center;">
-[@collaboration_estimating_2015]
+@collaboration_estimating_2015
 </p>
 
 ## Conclusion {.scrollable}
@@ -60,20 +62,16 @@ Open Science Collaboration. (2015). Estimating the reproducibility of psychologi
 >Reproducibility is not well understood because the incentives for individual scientists prioritize novelty over replication. Innovation is the engine of discovery and is vital for a productive, effective scientific enterprise. However, innovative ideas become old news fast. Journal reviewers and editors may dismiss a new test of a published idea as unoriginal. The claim that “we already know this” belies the uncertainty of scientific evidence. Innovation points out paths that are possible; replication points out paths that are likely; progress relies on both. Replication can increase certainty when findings are reproduced and promote innovation when they are not. This project provides accumulating evidence for many findings in psychological research and suggests that there is still more work to do to verify whether we know what we think we know.
 
 <p style="text-align:center;">
-[@collaboration_estimating_2015]
+@collaboration_estimating_2015
 </p>
 
 ## Results
 
-```{r, out.width="100%", fig.cap="Table 1 from [@collaboration_estimating_2015](https://doi.org/10.1126/science.aac4716). Summary of reproducibility rates and effect sizes for original and replication studies overall and by journal/discipline."}
-knitr::include_graphics("../include/img/collaboration-2015-table-01.png")
-```
+![Table 1 from @collaboration_estimating_2015](../include/img/collaboration-2015-table-01.png)
 
 ---
 
-```{r, out.width="100%", fig.cap="Figure 1 from [@collaboration_estimating_2015](https://doi.org/10.1126/science.aac4716); Density plots of original and replication P values and effect sizes. (A) P values. (B) Effect sizes (correlation coefficients). Lowest quantiles for P values are not visible because they are clustered near zero."}
-knitr::include_graphics("../include/img/collaboration-2015-fig-01.JPEG")
-```
+![Figure 1 from @collaboration_estimating_2015; Density plots of original and replication P values and effect sizes. (A) P values. (B) Effect sizes (correlation coefficients). Lowest quantiles for P values are not visible because they are clustered near zero.](../include/img/collaboration-2015-fig-01.JPEG)
 
 ## Deciding whether an effect replicates or not
 
@@ -83,9 +81,7 @@ knitr::include_graphics("../include/img/collaboration-2015-fig-01.JPEG")
 
 ---
 
-```{r, out.width="100%", fig.cap="[@collaboration_estimating_2015](https://doi.org/10.1126/science.aac4716)"}
-knitr::include_graphics("https://www.science.org/cms/10.1126/science.aac4716/asset/82f22975-91c8-4779-865b-6ed0650601cd/assets/graphic/349_aac4716_fa.jpeg")
-```
+![@collaboration_estimating_2015](https://www.science.org/cms/10.1126/science.aac4716/asset/82f22975-91c8-4779-865b-6ed0650601cd/assets/graphic/349_aac4716_fa.jpeg)
 
 - Subjective yes/no judgments
 
@@ -115,7 +111,7 @@ knitr::include_graphics("https://www.science.org/cms/10.1126/science.aac4716/ass
 >If nothing else, this project demonstrates that it is possible to conduct a large-scale examination of reproducibility despite the incentive barriers.
 
 <p style="text-align:center;">
-[@collaboration_estimating_2015]
+@collaboration_estimating_2015
 </p>
 
 ## Notes
@@ -125,14 +121,21 @@ knitr::include_graphics("https://www.science.org/cms/10.1126/science.aac4716/ass
 - Extensive materials shared via OSF: [@Anderson2012-iv](http://dx.doi.org/10.17605/OSF.IO/EZCUJ).
 - Details about independent reviews of analysis plans and related issues shared via OSF: <https://osf.io/xtine>; <https://osf.io/fkmwg>; <https://osf.io/a2eyg>. 
 
+## In the news...
+
+![@Enserink2024-kj](../include/img/enserink-science-retraction.png)
+
+## @Protzko2023-ci {.scrollable}
+
+>Failures to replicate evidence of new discoveries have forced scientists to ask whether this unreliability is due to suboptimal implementation of methods or whether presumptively optimal methods are not, in fact, optimal. This paper reports an investigation by four coordinated laboratories of the prospective replicability of 16 novel experimental findings using rigour-enhancing practices: confirmatory tests, large sample sizes, preregistration and methodological transparency. In contrast to past systematic replication efforts that reported replication rates averaging 50%, replication attempts here produced the expected effects with significance testing (P < 0.05) in 86% of attempts, slightly exceeding the maximum expected replicability based on observed effect sizes and sample sizes. When one lab attempted to replicate an effect discovered by another lab, the effect size in the replications was 97% that in the original study. This high replication rate justifies confidence in rigour-enhancing methods to increase the replicability of new discoveries.
+
 # Next time
 
-*Meta-analysis & many analysts*
+*Meta-analysis*
 
 - Read
-    - [@Wilson2014-ol]
-    - [@Silberzahn2018-st]
-- [Class notes](notes/wk11-2023-11-01.qmd)
+    - @Wilson2014-ol
+- [Class notes](wk11-2024-11-04-meta-analysis.qmd)
 
 # Resources
 

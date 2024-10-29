@@ -7,7 +7,7 @@ subtitle: "2024-10-30 Wed"
 
 ## Announcements
 
-- [Due Friday, November 8]{.orange_due}
+- [Due next Friday, November 8]{.orange_due}
     - [Exercise 07: Replication](../exercises/ex06-replication.qmd)
 
 ## Today
@@ -100,7 +100,11 @@ N.B. -- SRCD's *Child Development* has a TOP Factor score of 7.
 
 # Next time
 
-*Catch-up day*
+*Large-scale replication studies*
+
+- Read
+    - @collaboration_estimating_2015
+- [Class notes](wk10-2024-11-01-replication.qmd)
 
 # Resources
 

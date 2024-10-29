@@ -1,0 +1,121 @@
+---
+subtitle: "2024-11-04 Mon"
+title: "Meta-analysis"
+---
+
+# Overview
+
+## Today
+
+*Meta-analysis*
+
+- Discuss
+    - @Wilson2014-ol
+    
+# Meta-analysis
+
+- Multiple studies, ideally published and unpublished (why unpublished, too?)
+- Question: What is the distribution of effect sizes?
+- Related to [Cochrane Systematic Reviews](https://www.cochranelibrary.com/about/about-cochrane-reviews)
+
+## Example
+
+van Agteren, J., Iasiello, M., Lo, L., Bartholomaeus, J., Kopsaftis, Z., Carey, M. & Kyrios, M. (2021). A systematic review and meta-analysis of psychological interventions to improve mental wellbeing. *Nature Human Behaviour*. <https://doi.org/10.1038/s41562-021-01093-w>.
+
+---
+
+>Our current understanding of the efficacy of psychological interventions in improving mental states of wellbeing is incomplete. This study aimed to overcome limitations of previous reviews by examining the efficacy of distinct types of psychological interventions, irrespective of their theoretical underpinning, and the impact of various moderators, in a unified systematic review and meta-analysis. 
+
+<p style="text-align:center;">
+@Van_Agteren2021-al
+</p>
+
+---
+
+>Four-hundred-and-nineteen randomized controlled trials from clinical and non-clinical populations (*n* = 53,288) were identified for inclusion. Mindfulness-based and multi-component positive psychological interventions demonstrated the greatest efficacy in both clinical and non-clinical populations. 
+
+<p style="text-align:center;">
+@Van_Agteren2021-al
+</p>
+
+---
+
+>Meta-analyses also found that singular positive psychological interventions, cognitive and behavioural therapy-based, acceptance and commitment therapy-based, and reminiscence interventions were impactful. 
+
+<p style="text-align:center;">
+@Van_Agteren2021-al
+</p>
+
+---
+
+>Effect sizes were moderate at best, but differed according to target population and moderator, most notably intervention intensity. The evidence quality was generally low to moderate. While the evidence requires further advancement, the review provides insight into how psychological interventions can be designed to improve mental wellbeing.
+
+<p style="text-align:center;">
+@Van_Agteren2021-al
+</p>
+
+---
+
+![Figure 2 from @Van_Agteren2021-al](../include/img/vanagteren-2021-fig-02.png)
+
+---
+
+![Figure 3 from @Van_Agteren2021-al](../include/img/vanagteren-2021-fig-03.png)
+
+## Flaws with meta-analysis
+
+- Garbage-in, garbage-out?
+
+> The evidence quality was generally low to moderate... [@Van_Agteren2021-al]
+
+- See @UnknownUnknown-bk for one scheme for rating study quality.
+
+- What about publication bias?
+
+---
+
+>**Policy Points**:
+>
+>- Currently, there is massive production of unnecessary, misleading, and conflicted systematic reviews and meta-analyses. Instead of promoting evidence-based medicine and health care, these instruments often serve mostly as easily produced publishable units or marketing tools.
+>- Suboptimal systematic reviews and meta-analyses can be harmful given the major prestige and influence these types of studies have acquired.
+>
+
+<p style="text-align:center;">
+@Ioannidis2016-mf
+</p>
+
+---
+
+![Figure 1 from @Ioannidis2016-mf. Number of PubMed-Indexed Articles Published Each Year Between 1986 and 2014 That Carry the Tag “Systematic Review” or “Meta-analysis” for Type of Publication](../include/img/ioannidis-2016-milq12210-fig-0001-m.webp)
+
+---
+
+>**Conclusions**
+>
+>The production of systematic reviews and meta-analyses has reached epidemic proportions. Possibly, the large majority of produced systematic reviews and meta-analyses are unnecessary, misleading, and/or conflicted.
+
+<p style="text-align:center;">
+@Ioannidis2016-mf
+</p>
+
+---
+
+>Publication bias poses a challenge for accurately synthesizing research findings using meta-analysis. A number of statistical methods have been developed to combat this problem by adjusting the meta-analytic estimates...
+
+<p style="text-align:center;">
+@Sladekova2023-ns
+</p>
+
+# Next time
+
+*Many-Analysts*
+
+- Read
+    - @Silberzahn2018-st
+- [Optional Extra Credit Assignment]{.orange_due}
+    - For 5 extra credit points, write a paragraph that summarizes the main findings of @Camerer2018-tr.
+- [Class notes](wk11-2024-11-06-many-analysts.qmd)
+
+# Resources
+
+## References

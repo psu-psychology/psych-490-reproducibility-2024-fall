@@ -328,24 +328,29 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 #### Friday, November 01 {-}
 
-*Catch-up day*
+*Large-scale replication studies*
+
+- Read
+    - @collaboration_estimating_2015
+- [Class notes](wk10-2024-11-01-replication.qmd)
 
 ### Week 11: November 4-8 {- #week-11}
 
 #### Monday, November 04 {-}
 
-*Large-scale replication studies*
-
-- Read
-    - @collaboration_estimating_2015
-
-#### Wednesday, November 06 {-}
-
-*Meta-analysis & many analysts*
+*Meta-analysis*
 
 - Read
     - @Wilson2014-ol
+- [Class notes](wk11-2024-11-04-meta-analysis.qmd)
+
+#### Wednesday, November 06 {-}
+
+*Many analysts*
+
+- Read
     - @Silberzahn2018-st
+- [Class notes](wk11-2024-11-04-many-analysts.qmd)
 
 #### Friday, November 08 {-}
 
