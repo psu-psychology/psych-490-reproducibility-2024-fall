@@ -322,7 +322,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - @nosek_promoting_2015
     - @Gilmore2020-sl
     - @Srcd2019-hg
-- [Class notes](wk10-2024-10-30-journal-practices.qmd)
+- [Class notes](notes/wk10-2024-10-30-journal-practices.qmd)
 - [Final version due]{.orange_due}
     - [Exercise 06: Alpha, Power, Effect Sizes, & Sample Size](exercises/ex06-apes.qmd) write-up
 

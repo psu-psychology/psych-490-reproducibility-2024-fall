@@ -64,29 +64,29 @@ Link: <https://www.nature.com/articles/s41562-016-0021/tables/1>
 
 >Protecting against cognitive biases.
 
->Improving methodological training
+>Improving methodological training.
 
->Implementing independent methodological support
+>Implementing independent methodological support.
 
->Encouraging collaboration and team science
+>Encouraging collaboration and team science.
 
 ## Improving reporting and dissemination
 
->Promoting study pre-registration
+>Promoting study pre-registration.
 
->Improving the quality of reporting
+>Improving the quality of reporting.
 
 ## Improving reproducibility
 
->Promoting transparency and open science
+>Promoting transparency and open science.
 
 ## Improving evaluation
 
->Diversifying peer review
+>Diversifying peer review.
 
 ## Changing incentives
 
->Rewarding open and reproducible practices
+>Rewarding open and reproducible practices.
 
 ---
 

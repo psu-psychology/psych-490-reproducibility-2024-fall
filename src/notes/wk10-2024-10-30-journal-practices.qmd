@@ -8,15 +8,16 @@ subtitle: "2024-10-30 Wed"
 ## Announcements
 
 - [Due next Friday, November 8]{.orange_due}
-    - [Exercise 07: Replication](../exercises/ex06-replication.qmd)
-
-## Today
+    - [Exercise 07: Replication](../exercises/ex07-replication.qmd)
+    
+## Last time...
 
 *Solutions*
 
-- Finish discussion of @munafo_manifesto_2017
+- Discussion of @munafo_manifesto_2017
+- [Solutions notes](wk10-2024-10-28-solutions.qmd#table-1)
 
----
+## Today
 
 *Changing journal policies*
 
@@ -24,54 +25,19 @@ subtitle: "2024-10-30 Wed"
     - @nosek_promoting_2015
     - @Gilmore2020-sl and @Srcd2019-hg
     
-# @munafo_manifesto_2017
-
-## Table 1
-
-Link: <https://www.nature.com/articles/s41562-016-0021/tables/1>
-
----
-
-::: {.callout-note}
-
-Which of the practices recommended in [Table 1 from @munafo_manifesto_2017](https://www.nature.com/articles/s41562-016-0021/tables/1) recommended practices would be at the *top* of your to-do list if you were a journal editor/publisher, funder, institution (college or university), or regulator (e.g., government entity)? Why?
-
-Which would be at the *bottom* of your list? Why?
-
-What's missing from the list?
-
-What can students, who aren't yet editors, funders, institutions, or regulators do?
-
-:::
-
 # @nosek_promoting_2015
     
 ---
 
 Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., Buck, S., Chambers, C. D., Chin, G., Christensen, G., Contestabile, M., Dafoe, A., Eich, E., Freese, J., Glennerster, R., Goroff, D., Green, D. P., Hesse, B., Humphreys, M., … Yarkoni, T. (2015). Promoting an open research culture. *Science*, 348(6242), 1422–1425. <https://doi.org/10.1126/science.aab2374>
 
-## Transparency and Openness Promotion (TOP) [guidelines](https://cos.io/top)
-
-![Figure from @nosek_promoting_2015](https://www.science.org/cms/10.1126/science.aab2374/asset/2679c1cf-6388-48d7-9268-ca28a95a4d5c/assets/graphic/348_1422_f2.jpeg){fig-align="center"}
-
-## [TOP Factor](https://topfactor.org/journals) database
-
 ---
 
-```{r fig.cap="TOP Factors for journals Rick Gilmore has published in recently as of October 2023"}
-journal <- c("Scientific Reports", "Symmetry", "Journal of Speech, Language, and Hearing Research", "Journal of eScience Librarianship", "Infant and Child Development", "Developmental Psychology", "Computers in Electronics and Agriculture", "Journal of Motor Behavior", "Journal of Experimental Child Psychology", "Child Development Perspectives", "Advances in Intelligent Systems and Computing", "Neuropsychologia", "Advances in Methods and Practices in Psychological Science", "Nature Human Behavior", "Annals of the New York Academy of Sciences")
-top_factor <-c(10, 0, 8, 0, 13, 12, 0, 0, 1, 0, 0, 1, 25, 18, 0)
+![](https://newageleadership.com/wp-content/uploads/2020/11/Culture-eats-strategy-for-breakfast-1.png)
 
-gilmore_top <- tibble::tibble(journal, top_factor)
+## Transparency and Openness Promotion (TOP) [guidelines](https://cos.io/top){.scrollable}
 
-gilmore_top |>
-  ggplot2::ggplot() +
-  ggplot2::aes(top_factor) +
-  ggplot2::geom_histogram(bins = 5)
-  #ggtitle("TOP Factors for Journals Rick Gilmore has published in recently")
-```
-
-- There are many factors that influence where an author publishes a paper.
+![Figure from @nosek_promoting_2015](https://www.science.org/cms/10.1126/science.aab2374/asset/2679c1cf-6388-48d7-9268-ca28a95a4d5c/assets/graphic/348_1422_f2.jpeg){.lightbox}
 
 ## Notes
 
