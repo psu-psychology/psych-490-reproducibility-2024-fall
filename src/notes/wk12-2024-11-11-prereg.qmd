@@ -147,7 +147,7 @@ However, ordinary biases in human reasoning, such as hindsight bias, make it har
     - (Optional) @GilmoreAdolph2017
     - (Optional) @Meyer2018-vk
     - (Optional) [@National_Institutes_of_Health_undated-it](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html)
-- [Class notes](wk12-2023-11-08.qmd)
+- [Class notes](wk12-2024-11-13-data-sharing.qmd)
 
 # Resources
 

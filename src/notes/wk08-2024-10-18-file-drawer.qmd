@@ -9,7 +9,7 @@ subtitle: "2024-10-18 Fri"
 
 - [Due today]{.orange_due}
     - [Final project](../exercises/final-project.qmd) proposal
-- [Self Test 01](exercises/st-01.qmd)
+- [Self Test 01](../exercises/st-01.qmd)
 
 ## Last time...
 

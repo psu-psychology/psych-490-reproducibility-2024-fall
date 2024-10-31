@@ -68,7 +68,7 @@ There are no right or wrong answers.
 ## Your analysis
 
 1. When you first open the app, note that it simulates an analysis of groups A (red) and B, and that we get to control a number of parameters, including $n$, $d$, and $\alpha$. Note the statistics in the first gray box. It reports on the results of a $t$ test, comparing the difference between the means of the two groups. 
-    - Interpret the results of the *t*-test. What does it mean? What is the number in the brackets? What does it mean?
+    - Interpret the results of the *t*-test. What does it mean? What is the number in the brackets? What does it mean? *Hint*: <https://www.geeksforgeeks.org/understanding-the-t-distribution-in-r/>
     - "CI" means confidence interval. The CI has a minimum (leftmost) and maximum (rightmost) value.
 The actual difference in the *observed* means of A and B should fall inside the interval.
 In your own words, explain what the confidence interval means.

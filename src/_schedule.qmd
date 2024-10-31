@@ -333,7 +333,8 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 - Read
     - @collaboration_estimating_2015
 - [Class notes](notes/wk10-2024-11-01-replication.qmd)
-
+- Complete (extra credit)
+    - [Questionnaire](https://forms.gle/gGAVmWjCHRVDekMo6) based on @Chopik2018-wx. 
 *Work Session: Final Projects*
 
 ### Week 11: November 4-8 {- #week-11}
@@ -352,7 +353,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 - Read
     - @Silberzahn2018-st
-- [Class notes](notes/wk11-2024-11-04-many-analysts.qmd)
+- [Class notes](notes/wk11-2024-11-06-many-analysts.qmd)
 
 #### Friday, November 08 {-}
 
@@ -373,6 +374,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - (Optional) @Claesen2021-ae
 - Explore
     - [clinicaltrials.gov](https://clinicaltrials.gov/)
+- [Class notes](notes/wk12-2024-11-11-prereg.qmd)
 
 #### Wednesday, November 13 {-}
 
@@ -384,6 +386,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - (Optional) @GilmoreAdolph2017
     - (Optional) @Meyer2018-vk
     - (Optional) [@National_Institutes_of_Health_undated-it](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html)
+- [Class notes](notes/wk12-2024-11-13-data-sharing.qmd)
 
 #### Friday, November 15 {-}
 
@@ -404,7 +407,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 - Explore
     - [protocols.io](https://www.protocols.io/)
     - [Journal of Visualized Experiments (JOVE)](https://www.jove.com/)
-- [Class notes]()
+- [Class notes](notes/wk13-2024-11-18-materials-sharing.qmd)
 
 #### Wednesday, November 20 {-}
 
@@ -418,6 +421,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - @FORRT_undated-pl
 - Complete (optional)
     - [Questionnaire](https://forms.gle/gGAVmWjCHRVDekMo6) based on @Chopik2018-wx. Results are [here](surveys/survey-03.qmd).
+- [Class notes](nowk13-2024-11-20-open-sci-tools.qmd)
 
 #### Friday, November 22 {-}
 
@@ -465,7 +469,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 *Our open science future*
 
-- [Class notes](nowk15-2024-12-13-open-sci-future.qmd)
+- [Class notes](notes/wk15-2024-12-13-open-sci-future.qmd)
   
 ### Finals Week: December 16-20 {- #finals-week}
 
