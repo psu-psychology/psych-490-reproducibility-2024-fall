@@ -33,9 +33,11 @@ title: "Meta-analysis"
     
 ## Meta-analysis
 
-- Multiple studies, ideally published and unpublished (why unpublished, too?)
+- Multiple studies, ideally published and unpublished
+  - Why unpublished, too?
 - Question: What is the distribution of effect sizes?
-- Related to [Cochrane Systematic Reviews](https://www.cochranelibrary.com/about/about-cochrane-reviews)
+  - Why effect sizes?
+- Related to [Cochrane Systematic Reviews](https://www.cochranelibrary.com/about/about-cochrane-reviews).
 
 ## Example
 
@@ -85,6 +87,10 @@ van Agteren, J., Iasiello, M., Lo, L., Bartholomaeus, J., Kopsaftis, Z., Carey, 
 
 [Link to simulation page](../supplemental/metaanalysis-simulation.qmd)
 
+---
+
+![Crislip2012-jq](../include/img/crislip-2012.png)
+
 ## Flaws with meta-analysis
 
 - Garbage-in, garbage-out?
@@ -92,6 +98,16 @@ van Agteren, J., Iasiello, M., Lo, L., Bartholomaeus, J., Kopsaftis, Z., Carey, 
 > The evidence quality was generally low to moderate... [@Van_Agteren2021-al]
 
 - See @UnknownUnknown-bk for one scheme for rating study quality.
+
+---
+
+![@Jefferson2023-uo](../include/img/cochrane-2023-viruses.png)
+---
+
+![@Jefferson2023-uo](../include/img/cochrane-2023-viruses-limitations.png)
+
+## Flaws with meta-analysis (continued)
+
 - What about publication bias?
 
 ---
