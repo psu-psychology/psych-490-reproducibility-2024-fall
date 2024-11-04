@@ -105,7 +105,7 @@ Richardson, M., Abraham, C., & Bond, R. (2012). Psychological correlates of univ
 
 ---
 
-![Crislip2012-jq](../include/img/crislip-2012.png)
+![@Crislip2012-jq](../include/img/crislip-2012.png)
 ---
 
 >“I never met a man I didn't like” is a quote attributed to Will Rogers. The full quote is “I joked about every prominent man in my lifetime, but I never met one I didn't like”. Rogers considered this line as an epitaph for his tombstone, but the shortened version is what appears on his gravestone in Claremore, Oklahoma.

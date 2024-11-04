@@ -12,7 +12,7 @@ This page provides supporting information for an in-class simulation of a meta-a
 
 ## Simulating studies
 
-1. Open the APES [simulation app]() we used for [Exercise 06](../exercises/ex06-apes.qmd).
+1. Open the APES [simulation app](https://rogilmore.shinyapps.io/PSYCH490-2023-APES/) we used for [Exercise 06](../exercises/ex06-apes.qmd).
 
 2. Set the effect size (*d*) to 0.3.
 
@@ -112,7 +112,7 @@ names(meta_analysis) <- new_names
 meta_analysis |>
   dplyr::arrange(desc(effect)) |>
   ggplot() +
-  aes(x = effect, y = study_id, size = n/max(n)) +
+  aes(x = effect, y = study_id) +
   geom_point() +
   geom_pointrange(aes(x = effect, xmin=ci_low, xmax=ci_high)) +
   xlim(-.5, 1) +
@@ -133,7 +133,7 @@ meta_analysis |>
   dplyr::filter(ci_low > 0) |>
   dplyr::arrange(desc(effect)) |>
   ggplot() +
-  aes(x = effect, y = study_id, size = n/max(n)) +
+  aes(x = effect, y = study_id) +
   geom_point() +
   geom_pointrange(aes(x = effect, xmin=ci_low, xmax=ci_high)) +
   xlim(-.5, 1) +
