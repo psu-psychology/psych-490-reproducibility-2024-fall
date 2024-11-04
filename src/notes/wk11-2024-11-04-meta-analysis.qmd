@@ -3,6 +3,20 @@ subtitle: "2024-11-04 Mon"
 title: "Meta-analysis"
 ---
 
+# Prelude
+
+---
+
+{{< video https://youtu.be/ioBEQLYzeB8?si=3lIU3kYDD2OS5UVZ width="100%" height="70%">}}
+
+@McCutcheon-bn
+
+---
+
+{{< video https://youtu.be/GwTvIlXnKxo?si=nSXdAX-QSVxEEprC width="100%" height="70%">}}
+
+@McCutcheon-id
+
 # Overview
 
 ## Announcements
