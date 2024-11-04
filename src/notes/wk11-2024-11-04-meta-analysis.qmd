@@ -5,6 +5,11 @@ title: "Meta-analysis"
 
 # Overview
 
+## Announcements
+
+- [Due Friday]{.orange_due}
+    - [Exercise 07: Replication](../exercises/ex07-replication.qmd)
+
 ## Today
 
 *Meta-analysis*
@@ -12,7 +17,7 @@ title: "Meta-analysis"
 - Discuss
     - @Wilson2014-ol
     
-# Meta-analysis
+## Meta-analysis
 
 - Multiple studies, ideally published and unpublished (why unpublished, too?)
 - Question: What is the distribution of effect sizes?
@@ -62,6 +67,10 @@ van Agteren, J., Iasiello, M., Lo, L., Bartholomaeus, J., Kopsaftis, Z., Carey, 
 
 ![Figure 3 from @Van_Agteren2021-al](../include/img/vanagteren-2021-fig-03.png)
 
+## Let's simulate one
+
+[Link to simulation page](../supplemental/metaanalysis-simulation.qmd)
+
 ## Flaws with meta-analysis
 
 - Garbage-in, garbage-out?
@@ -69,7 +78,6 @@ van Agteren, J., Iasiello, M., Lo, L., Bartholomaeus, J., Kopsaftis, Z., Carey, 
 > The evidence quality was generally low to moderate... [@Van_Agteren2021-al]
 
 - See @UnknownUnknown-bk for one scheme for rating study quality.
-
 - What about publication bias?
 
 ---
@@ -112,8 +120,6 @@ van Agteren, J., Iasiello, M., Lo, L., Bartholomaeus, J., Kopsaftis, Z., Carey, 
 
 - Read
     - @Silberzahn2018-st
-- [Optional Extra Credit Assignment]{.orange_due}
-    - For 5 extra credit points, write a paragraph that summarizes the main findings of @Camerer2018-tr.
 - [Class notes](wk11-2024-11-06-many-analysts.qmd)
 
 # Resources

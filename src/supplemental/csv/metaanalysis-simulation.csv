@@ -1,0 +1,4 @@
+Timestamp,Sample size,Mean diff (B-A),CI Low,CI High,Study-ID
+11/4/2024 8:45:41,75,0.239,-0.06,0.54,gilmore-01
+11/4/2024 8:46:33,40,0.493,0.03,0.95,gilmore-02
+11/4/2024 8:47:22,30,0.152,-0.37,0.68,gilmore-03

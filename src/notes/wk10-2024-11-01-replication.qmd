@@ -7,8 +7,8 @@ subtitle: "2023-11-01 Fri"
 
 ## Announcements
 
-- [Due]{.orange_due}
-    - [Exercise 07: Replication](exercises/ex07-replication.qmd)
+- [Due today]{.orange_due}
+    - [Exercise 07: Replication](../exercises/ex07-replication.qmd)
 
 ## Today
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>On plots &amp; degrees of freedom – PSYCH 490 • Fall 2024</title>
+<title>Meta-analysis simulation – PSYCH 490 • Fall 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,27 +54,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -132,35 +112,6 @@ div.csl-indent {
   });
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../include/css/styles.css">
 </head>
@@ -295,7 +246,7 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="../supplemental/metaanalysis-simulation.html">
- <span class="dropdown-text">Meta-analysis Simulation</span></a>
+ <span class="dropdown-text">Meta-analysis simulation</span></a>
   </li>  
     </ul>
   </li>
@@ -315,19 +266,22 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a></li>
-  <li><a href="#plot-your-data" id="toc-plot-your-data" class="nav-link" data-scroll-target="#plot-your-data">Plot your data</a></li>
-  <li><a href="#degrees-of-freedom" id="toc-degrees-of-freedom" class="nav-link" data-scroll-target="#degrees-of-freedom">Degrees of freedom</a></li>
-  <li><a href="#researcher-degrees-of-freedom" id="toc-researcher-degrees-of-freedom" class="nav-link" data-scroll-target="#researcher-degrees-of-freedom">Researcher degrees of freedom</a></li>
+  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
+  <li><a href="#simulating-studies" id="toc-simulating-studies" class="nav-link" data-scroll-target="#simulating-studies">Simulating studies</a></li>
+  <li><a href="#set-up" id="toc-set-up" class="nav-link" data-scroll-target="#set-up">Set-up</a></li>
+  <li><a href="#import-data" id="toc-import-data" class="nav-link" data-scroll-target="#import-data">Import data</a></li>
+  <li><a href="#cleaning" id="toc-cleaning" class="nav-link" data-scroll-target="#cleaning">Cleaning</a></li>
+  <li><a href="#plotting" id="toc-plotting" class="nav-link" data-scroll-target="#plotting">Plotting</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/edit/main/src/supplemental/plotting-degrees-of-freedom.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/edit/main/src/supplemental/metaanalysis-simulation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">On plots &amp; degrees of freedom</h1>
+<h1 class="title">Meta-analysis simulation</h1>
+<p class="subtitle lead">Supplement to <a href="../notes/wk11-2024-11-04-meta-analysis.html">2024-11-04 class notes</a></p>
 </div>
 
 
@@ -339,7 +293,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 14, 2024</p>
+      <p class="date-modified">November 4, 2024</p>
     </div>
   </div>
     
@@ -350,13 +304,48 @@ window.Quarto = {
 </header>
 
 
-<section id="purpose" class="level2">
-<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
-<p>This document discusses why it is a good idea to plot your data before you run descriptive or predictive statistical models. It also discusses degrees of freedom, and why the idea is important.</p>
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">About</h2>
+<p>This page provides supporting information for an in-class simulation of a meta-analysis using the APES simulation tool.</p>
+</section>
+<section id="simulating-studies" class="level2">
+<h2 class="anchored" data-anchor-id="simulating-studies">Simulating studies</h2>
+<ol type="1">
+<li><p>Open the APES <a href="">simulation app</a> we used for <a href="../exercises/ex06-apes.html">Exercise 06</a>.</p></li>
+<li><p>Set the effect size (<em>d</em>) to 0.3.</p></li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Remember, the simulation allows us to do something we can’t do in real life: Determine in advance the size of some effect we want to <em>measure</em> using an experiment. Doing this is useful because we can see what can happen if the world is <em>exactly</em> the way we think it is. The world is rarely if ever this way, but having this kind of control is a great check on our assumptions.</p>
+<p>Here, we want to simulate a small effect size to see what a meta-analysis might yield in a situation where there is really an effect, but it’s small.</p>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Open a separate browser window with a Google Form we will use to enter our data: <a href="https://forms.gle/ce9C7BLDi4nSdoH69" class="uri">https://forms.gle/ce9C7BLDi4nSdoH69</a></li>
+</ol>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeNfYo-XjT7KiFqk7X0SzuKTAM44tcv1gJsOKCOZNhho6uTfg/viewform?embedded=true" width="640" height="999" frameborder="0" marginheight="0" marginwidth="0">
+Loading…
+</iframe>
+<ol start="4" type="1">
+<li><p>Enter data for the Sample size, Mean difference between A and B, the low and high values for your confidence interval (CI), and a study identifier you choose. I just used ‘gilmore-01’ for my first simulation.</p></li>
+<li><p>Change the sample size to another value (not the default <em>n</em>=75). Report your data and change your study identifier.</p></li>
+<li><p>Either keep the same sample size and hit the ‘regenerate’ button or change the sample size. When you change the sample size, the simulation will automatically regenerate new data. Report those data in the Google Form.</p></li>
+</ol>
+</section>
+<section id="set-up" class="level2">
+<h2 class="anchored" data-anchor-id="set-up">Set-up</h2>
+<p>We load the packages we will use.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datasauRus)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'ggplot2'</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'dplyr'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'dplyr'</code></pre>
@@ -371,187 +360,124 @@ Attaching package: 'dplyr'</code></pre>
 
     intersect, setdiff, setequal, union</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stats)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(graphics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'tidyr'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'stringr'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="plot-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="plot-your-data">Plot your data</h2>
-<p>Here are a bunch of scatter plots.</p>
+<section id="import-data" class="level2">
+<h2 class="anchored" data-anchor-id="import-data">Import data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datasaurus_dozen, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">colour =</span> dataset))<span class="sc">+</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)<span class="sc">+</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>dataset, <span class="at">ncol =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div id="fig-datasaurus-dozen" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-datasaurus-dozen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="plotting-degrees-of-freedom_files/figure-html/fig-datasaurus-dozen-1.png" class="img-fluid figure-img" width="672">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">'csv'</span>)) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Creating missing `csv/`."</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(<span class="st">"csv"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (params<span class="sc">$</span>update_data) {</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> <span class="fu">Sys.getenv</span>(<span class="st">"GMAIL_SURVEY"</span>))</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  googledrive<span class="sc">::</span><span class="fu">drive_download</span>(</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PSY 490.012 Fall 2024 Meta-analysis simulation (Responses)"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">path =</span> <span class="fu">file.path</span>(<span class="st">"csv"</span>, params<span class="sc">$</span>fn),</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">"csv"</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">overwrite =</span> <span class="cn">TRUE</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Data updated."</span>)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using stored data."</span>)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-datasaurus-dozen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: DatasauRus figures from <span class="citation" data-cites="datasauRus-2022">(<a href="#ref-datasauRus-2022" role="doc-biblioref">Davies, Locke, &amp; D’Agostino McGowan, 2022</a>)</span>
+</section>
+<section id="cleaning" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="cleaning">Cleaning</h2>
+<p>Next we load the data file.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>meta_analysis <span class="ot">&lt;-</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(<span class="st">"csv"</span>, params<span class="sc">$</span>fn), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We view the variable names.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(meta_analysis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Timestamp"       "Sample size"     "Mean diff (B-A)" "CI Low"         
+[5] "CI High"         "Study-ID"       </code></pre>
+</div>
+</div>
+<p>Let’s clean the variable names to make them more “script-friendly”.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>new_names <span class="ot">&lt;-</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"timestamp"</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"n"</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"effect"</span>,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ci_low"</span>,</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ci_high"</span>,</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"study_id"</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(meta_analysis) <span class="ot">&lt;-</span> new_names</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="plotting" class="level2">
+<h2 class="anchored" data-anchor-id="plotting">Plotting</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>meta_analysis <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="fu">desc</span>(effect)) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> effect, <span class="at">y =</span> study_id, <span class="at">size =</span> n<span class="sc">/</span><span class="fu">max</span>(n)) <span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>(<span class="fu">aes</span>(<span class="at">x =</span> effect, <span class="at">xmin=</span>ci_low, <span class="at">xmax=</span>ci_high)) <span class="sc">+</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="sc">-</span>.<span class="dv">5</span>, <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dotted"</span>, <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-simulating-meta-analysis" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-simulating-meta-analysis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="metaanalysis-simulation_files/figure-html/fig-simulating-meta-analysis-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-simulating-meta-analysis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Simulating a meta-analysis of an experiment with <em>d</em>=0.3. The size of the dots is proportional to the sample size (<em>n</em>).
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>They look pretty different, don’t they?</p>
-<p>Except that these all have roughly the same summary statistics.</p>
+<p>Can we simulate what this would look like if there was a big file drawer effect?</p>
+<p>Let’s eliminate all of the examples where the CI included zero.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>datasaurus_dozen <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(dataset) <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_x    =</span> <span class="fu">mean</span>(x),</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_y    =</span> <span class="fu">mean</span>(y),</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">std_dev_x =</span> <span class="fu">sd</span>(x),</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">std_dev_y =</span> <span class="fu">sd</span>(y),</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">corr_x_y  =</span> <span class="fu">cor</span>(x, y),</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">nxy       =</span> <span class="fu">length</span>(x)</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 13 × 7
-   dataset    mean_x mean_y std_dev_x std_dev_y corr_x_y   nxy
-   &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;int&gt;
- 1 away         54.3   47.8      16.8      26.9  -0.0641   142
- 2 bullseye     54.3   47.8      16.8      26.9  -0.0686   142
- 3 circle       54.3   47.8      16.8      26.9  -0.0683   142
- 4 dino         54.3   47.8      16.8      26.9  -0.0645   142
- 5 dots         54.3   47.8      16.8      26.9  -0.0603   142
- 6 h_lines      54.3   47.8      16.8      26.9  -0.0617   142
- 7 high_lines   54.3   47.8      16.8      26.9  -0.0685   142
- 8 slant_down   54.3   47.8      16.8      26.9  -0.0690   142
- 9 slant_up     54.3   47.8      16.8      26.9  -0.0686   142
-10 star         54.3   47.8      16.8      26.9  -0.0630   142
-11 v_lines      54.3   47.8      16.8      26.9  -0.0694   142
-12 wide_lines   54.3   47.8      16.8      26.9  -0.0666   142
-13 x_shape      54.3   47.8      16.8      26.9  -0.0656   142</code></pre>
-</div>
-</div>
-<p>Think about that a minute. If we <em>didn’t</em> plot the data and only had the means, standard deviations, and correlation values available from some table in a paper, we’d think these sets of variables were essentially the same, wouldn’t we?</p>
-<p>These plots come from the <code>datasauRus</code> <span class="citation" data-cites="datasauRus-2022">(<a href="#ref-datasauRus-2022" role="doc-biblioref">Davies et al., 2022</a>)</span> package inspired by a paper by <span class="citation" data-cites="Matejka2017-kp">(<a href="#ref-Matejka2017-kp" role="doc-biblioref">Matejka &amp; Fitzmaurice, 2017</a>)</span>. The <span class="citation" data-cites="Matejka2017-kp">(<a href="#ref-Matejka2017-kp" role="doc-biblioref">Matejka &amp; Fitzmaurice, 2017</a>)</span> is based on Anscombe’s quartet <span class="citation" data-cites="Anscombe1973-ag">(<a href="#ref-Anscombe1973-ag" role="doc-biblioref">Anscombe, 1973</a>)</span>, which is also available as the <a href="https://cran.r-project.org/package=anscombe"><code>anscombe</code></a> package. Here are the originals from <span class="citation" data-cites="Anscombe1973-ag">(<a href="#ref-Anscombe1973-ag" role="doc-biblioref">Anscombe, 1973</a>)</span>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Below, I use the code that accompanies the <code>anscombe</code> package verbatim, slightly reordered to plot first.</p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ff <span class="ot">&lt;-</span> y <span class="sc">~</span> x</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>mods <span class="ot">&lt;-</span> <span class="fu">setNames</span>(<span class="fu">as.list</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="fu">paste0</span>(<span class="st">"lm"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>))</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>) {</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  ff[<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">paste0</span>(<span class="fu">c</span>(<span class="st">"y"</span>,<span class="st">"x"</span>), i), as.name)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="do">## or   ff[[2]] &lt;- as.name(paste0("y", i))</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="do">##      ff[[3]] &lt;- as.name(paste0("x", i))</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  mods[[i]] <span class="ot">&lt;-</span> lmi <span class="ot">&lt;-</span> <span class="fu">lm</span>(ff, <span class="at">data =</span> anscombe)</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#print(anova(lmi))</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ff <span class="ot">&lt;-</span> y <span class="sc">~</span> x</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>mods <span class="ot">&lt;-</span> <span class="fu">setNames</span>(<span class="fu">as.list</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="fu">paste0</span>(<span class="st">"lm"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>))</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>) {</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  ff[<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">paste0</span>(<span class="fu">c</span>(<span class="st">"y"</span>,<span class="st">"x"</span>), i), as.name)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="do">## or   ff[[2]] &lt;- as.name(paste0("y", i))</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="do">##      ff[[3]] &lt;- as.name(paste0("x", i))</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  mods[[i]] <span class="ot">&lt;-</span> lmi <span class="ot">&lt;-</span> <span class="fu">lm</span>(ff, <span class="at">data =</span> anscombe)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># print(anova(lmi))</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>op <span class="ot">&lt;-</span> <span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>), <span class="at">mar =</span> <span class="fl">0.1</span><span class="sc">+</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="at">oma =</span>  <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">0</span>))</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>) {</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  ff[<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">paste0</span>(<span class="fu">c</span>(<span class="st">"y"</span>,<span class="st">"x"</span>), i), as.name)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(ff, <span class="at">data =</span> anscombe, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">pch =</span> <span class="dv">21</span>, <span class="at">bg =</span> <span class="st">"orange"</span>, <span class="at">cex =</span> <span class="fl">1.2</span>,</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">19</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">13</span>))</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(mods[[i]], <span class="at">col =</span> <span class="st">"blue"</span>)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="st">"Anscombe's 4 Regression data sets"</span>, <span class="at">outer =</span> <span class="cn">TRUE</span>, <span class="at">cex =</span> <span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>meta_analysis <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># filter (remove) all entries where `ci_low` is less than zero.</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(ci_low <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(<span class="fu">desc</span>(effect)) <span class="sc">|&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> effect, <span class="at">y =</span> study_id, <span class="at">size =</span> n<span class="sc">/</span><span class="fu">max</span>(n)) <span class="sc">+</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>(<span class="fu">aes</span>(<span class="at">x =</span> effect, <span class="at">xmin=</span>ci_low, <span class="at">xmax=</span>ci_high)) <span class="sc">+</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="sc">-</span>.<span class="dv">5</span>, <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dotted"</span>, <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-anscombe-quartet" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-simulating-meta-analysis-file-drawer" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-anscombe-quartet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="plotting-degrees-of-freedom_files/figure-html/fig-anscombe-quartet-1.png" class="img-fluid figure-img" width="672">
+<div aria-describedby="fig-simulating-meta-analysis-file-drawer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="metaanalysis-simulation_files/figure-html/fig-simulating-meta-analysis-file-drawer-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anscombe-quartet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Data sets from <span class="citation" data-cites="Anscombe1973-ag">(<a href="#ref-Anscombe1973-ag" role="doc-biblioref">Anscombe, 1973</a>)</span>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-simulating-meta-analysis-file-drawer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Simulating a meta-analysis of an experiment with <em>d</em>=0.3. The size of the dots is proportional to the sample size (<em>n</em>). We remove studies whose CI’s include 0.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Here are some summary statistics for these pairs.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anscombe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       x1             x2             x3             x4           y1        
- Min.   : 4.0   Min.   : 4.0   Min.   : 4.0   Min.   : 8   Min.   : 4.260  
- 1st Qu.: 6.5   1st Qu.: 6.5   1st Qu.: 6.5   1st Qu.: 8   1st Qu.: 6.315  
- Median : 9.0   Median : 9.0   Median : 9.0   Median : 8   Median : 7.580  
- Mean   : 9.0   Mean   : 9.0   Mean   : 9.0   Mean   : 9   Mean   : 7.501  
- 3rd Qu.:11.5   3rd Qu.:11.5   3rd Qu.:11.5   3rd Qu.: 8   3rd Qu.: 8.570  
- Max.   :14.0   Max.   :14.0   Max.   :14.0   Max.   :19   Max.   :10.840  
-       y2              y3              y4        
- Min.   :3.100   Min.   : 5.39   Min.   : 5.250  
- 1st Qu.:6.695   1st Qu.: 6.25   1st Qu.: 6.170  
- Median :8.140   Median : 7.11   Median : 7.040  
- Mean   :7.501   Mean   : 7.50   Mean   : 7.501  
- 3rd Qu.:8.950   3rd Qu.: 7.98   3rd Qu.: 8.190  
- Max.   :9.260   Max.   :12.74   Max.   :12.500  </code></pre>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>I don’t remember my stats professor showing us Anscombe’s datasets. The <code>datasauRus</code> came along much later. But I’m pretty sure this was what he had in mind when he exhorted the class to “plot your data!” It’s excellent advice, and I try to follow it as an author and as a reviewer.</p>
-</div>
-</div>
-</section>
-<section id="degrees-of-freedom" class="level2">
-<h2 class="anchored" data-anchor-id="degrees-of-freedom">Degrees of freedom</h2>
-<p>One way to think about what’s going on here is that we analysts want an efficient way to summarize complex sets of data. Statistics like the mean or median, standard deviation, and correlation often do that. If a big set of data is well described by one of these statistics, then we’ve saved ourselves a lot of time and headache. If we think about a summary of some dataset as having <span class="math inline">\(m\)</span> degrees of freedom, what we mean is that we only need <span class="math inline">\(m\)</span> numbers for the summary. So, if we summarize a big dataset with the mean, then our summary (or model) has only one degree of freedom. If we include the standard deviation, then our summary has two degrees of freedom. If we use a linear regression to predict <code>y ~ x</code> then we usually have a slope estimate and an intercept estimate, or two degrees of freedom.</p>
-<p>If we’re summarizing a raw dataset with <span class="math inline">\(n=142\)</span> points in <code>X</code> and <span class="math inline">\(n=142\)</span> datapoints in <code>Y</code> like the <code>datasauRus</code> sets above, being able to summarize with just a few numbers (degrees of freedom) is powerful and efficient. And in general, we analysts favor more parsimonious models of data–those with fewer degrees of freedom.</p>
-<p>The problem arises when our simple models with few degrees of freedom don’t really capture important information about data sets, or when they persuade us to think (wrongly) that data sets with the same summary statistics are necessarily comparable. They might be, but they might not be. We have to look at the data–plot it–and confirm that we haven’t lost information in simplifying a dataset with a small number of statistics. The <code>datasauRus</code> and <code>anscombe</code> plots show us perverse situations when the small degree of freedom summaries are deeply misleading.</p>
-<p>The converse is also true. We can describe a dataset increasingly precisely with a large number of degrees of freedom. For example, imagine that our model of one of the <code>datasauRus</code> sets has <span class="math inline">\(2*n\)</span> degrees of freedom, where <span class="math inline">\(n=142\)</span>. If those 284 numbers are equal to the data points themselves, our summary has captured the data exactly. But we haven’t really gained anything, have we? We’ve just redescribed the data without reducing it to a summary with fewer degrees of freedom than existed in the first place. So, the best summaries (models) of data are small (in the number of degrees of freedom), but not too small.</p>
-</section>
-<section id="researcher-degrees-of-freedom" class="level2">
-<h2 class="anchored" data-anchor-id="researcher-degrees-of-freedom">Researcher degrees of freedom</h2>
-<p>When <span class="citation" data-cites="simmons_false-positive_2011">Simmons, Nelson, &amp; Simonsohn (<a href="#ref-simmons_false-positive_2011" role="doc-biblioref">2011</a>)</span> discuss ‘researcher degrees of freedom’, they extend these ideas in a new direction. How many steps (degrees of freedom) did the analysts take to reach their conclusions? Ideally, as few as possible, and certainly far less than the number of data points.</p>
-<p>So, how many researcher degrees of freedom are too many? That’s a judgment call. But whatever you determine, justify your argument. And maybe see whether the authors plotted their data in a way that helps make a case one way or the other.</p>
-
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-Anscombe1973-ag" class="csl-entry" role="listitem">
-Anscombe, F. J. (1973). Graphs in statistical analysis. <em>The American Statistician</em>, <em>27</em>(1), 17–21. Retrieved from <a href="https://www.sjsu.edu/faculty/gerstman/StatPrimer/anscombe1973.pdf">https://www.sjsu.edu/faculty/gerstman/StatPrimer/anscombe1973.pdf</a>
-</div>
-<div id="ref-datasauRus-2022" class="csl-entry" role="listitem">
-Davies, R., Locke, S., &amp; D’Agostino McGowan, L. (2022). <em>datasauRus: Datasets from the datasaurus dozen</em>. Retrieved from <a href="https://CRAN.R-project.org/package=datasauRus">https://CRAN.R-project.org/package=datasauRus</a>
-</div>
-<div id="ref-Matejka2017-kp" class="csl-entry" role="listitem">
-Matejka, J., &amp; Fitzmaurice, G. (2017). Same stats, different graphs: Generating datasets with varied appearance and identical statistics through simulated annealing. In <em>Proceedings of the 2017 <span>CHI</span> conference on human factors in computing systems</em> (pp. 1290–1294). New York, NY, USA: Association for Computing Machinery. <a href="https://doi.org/10.1145/3025453.3025912">https://doi.org/10.1145/3025453.3025912</a>
-</div>
-<div id="ref-simmons_false-positive_2011" class="csl-entry" role="listitem">
-Simmons, J. P., Nelson, L. D., &amp; Simonsohn, U. (2011). False-positive psychology: <span>U</span>ndisclosed flexibility in data collection and analysis allows presenting anything as significant. <em>Psychological Science</em>, <em>22</em>(11), 1359–1366. <a href="https://doi.org/10.1177/0956797611417632">https://doi.org/10.1177/0956797611417632</a>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -980,7 +906,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/edit/main/src/supplemental/plotting-degrees-of-freedom.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/edit/main/src/supplemental/metaanalysis-simulation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-reproducibility-2024-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

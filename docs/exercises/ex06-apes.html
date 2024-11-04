@@ -239,6 +239,10 @@ window.Quarto = {
     <a class="dropdown-item" href="../supplemental/causal-models.html">
  <span class="dropdown-text">On spaghetti plots and causal models</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../supplemental/metaanalysis-simulation.html">
+ <span class="dropdown-text">Meta-analysis Simulation</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -289,7 +293,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">August 29, 2024</p>
+      <p class="date-modified">October 31, 2024</p>
     </div>
   </div>
     
@@ -335,7 +339,7 @@ window.Quarto = {
 <ol type="1">
 <li><p>When you first open the app, note that it simulates an analysis of groups A (red) and B, and that we get to control a number of parameters, including <span class="math inline">\(n\)</span>, <span class="math inline">\(d\)</span>, and <span class="math inline">\(\alpha\)</span>. Note the statistics in the first gray box. It reports on the results of a <span class="math inline">\(t\)</span> test, comparing the difference between the means of the two groups.</p>
 <ul>
-<li>Interpret the results of the <em>t</em>-test. What does it mean? What is the number in the brackets? What does it mean?</li>
+<li>Interpret the results of the <em>t</em>-test. What does it mean? What is the number in the brackets? What does it mean? <em>Hint</em>: <a href="https://www.geeksforgeeks.org/understanding-the-t-distribution-in-r/" class="uri">https://www.geeksforgeeks.org/understanding-the-t-distribution-in-r/</a></li>
 <li>“CI” means confidence interval. The CI has a minimum (leftmost) and maximum (rightmost) value. The actual difference in the <em>observed</em> means of A and B should fall inside the interval. In your own words, explain what the confidence interval means.</li>
 </ul></li>
 <li><p>Let’s see what happens when we generate different samples of A and B with the <strong>same</strong> underlying statistics–the same <span class="math inline">\(n\)</span>, same mean (<span class="math inline">\(\mu\)</span>), same standard deviation (<span class="math inline">\(\sigma\)</span>), same effect size (<span class="math inline">\(d\)</span>), and same criterion (<span class="math inline">\(\alpha\)</span>) or false positive rate.</p>

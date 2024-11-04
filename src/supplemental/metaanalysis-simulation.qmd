@@ -1,0 +1,144 @@
+---
+title: "Meta-analysis simulation"
+subtitle: "Supplement to [2024-11-04 class notes](../notes/wk11-2024-11-04-meta-analysis.qmd)"
+params:
+  update_data: true
+  fn: "metaanalysis-simulation.csv"
+---
+
+## About
+
+This page provides supporting information for an in-class simulation of a meta-analysis using the APES simulation tool.
+
+## Simulating studies
+
+1. Open the APES [simulation app]() we used for [Exercise 06](../exercises/ex06-apes.qmd).
+
+2. Set the effect size (*d*) to 0.3.
+
+::: {.callout-important}
+
+Remember, the simulation allows us to do something we can't do in real life: Determine in advance the size of some effect we want to *measure* using an experiment.
+Doing this is useful because we can see what can happen if the world is *exactly* the way we think it is.
+The world is rarely if ever this way, but having this kind of control is a great check on our assumptions.
+
+Here, we want to simulate a small effect size to see what a meta-analysis might yield in a situation where there is really an effect, but it's small.
+
+:::
+
+3. Open a separate browser window with a Google Form we will use to enter our data:  <https://forms.gle/ce9C7BLDi4nSdoH69>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeNfYo-XjT7KiFqk7X0SzuKTAM44tcv1gJsOKCOZNhho6uTfg/viewform?embedded=true" width="640" height="999" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+4. Enter data for the Sample size, Mean difference between A and B, the low and high values for your confidence interval (CI), and a study identifier you choose. I just used 'gilmore-01' for my first simulation.
+
+5. Change the sample size to another value (not the default *n*=75). Report your data and change your study identifier.
+
+6. Either keep the same sample size and hit the 'regenerate' button or change the sample size. When you change the sample size, the simulation will automatically regenerate new data. Report those data in the Google Form.
+
+## Set-up
+
+We load the packages we will use.
+
+```{r}
+library('ggplot2')
+library('dplyr')
+library('tidyr')
+library('stringr')
+```
+
+
+## Import data
+
+```{r, message=FALSE, echo=TRUE, eval=params$update_data}
+if (!dir.exists('csv')) {
+  message("Creating missing `csv/`.")
+  dir.create("csv")
+}
+
+if (params$update_data) {
+  options(gargle_oauth_email = Sys.getenv("GMAIL_SURVEY"))
+  googledrive::drive_auth()
+  
+  googledrive::drive_download(
+    "PSY 490.012 Fall 2024 Meta-analysis simulation (Responses)",
+    path = file.path("csv", params$fn),
+    type = "csv",
+    overwrite = TRUE
+  )
+  
+  message("Data updated.")
+} else {
+  message("Using stored data.")
+}
+```
+
+## Cleaning {-}
+
+Next we load the data file.
+
+```{r}
+meta_analysis <-
+  readr::read_csv(file.path("csv", params$fn), show_col_types = FALSE)
+```
+
+We view the variable names.
+
+```{r}
+names(meta_analysis)
+```
+
+Let's clean the variable names to make them more "script-friendly".
+
+```{r}
+new_names <-
+  c(
+    "timestamp",
+    "n",
+    "effect",
+    "ci_low",
+    "ci_high",
+    "study_id"
+  )
+
+names(meta_analysis) <- new_names
+```
+
+## Plotting
+
+```{r}
+#| label: fig-simulating-meta-analysis
+#| fig-cap: "Simulating a meta-analysis of an experiment with *d*=0.3. The size of the dots is proportional to the sample size (*n*)."
+meta_analysis |>
+  dplyr::arrange(desc(effect)) |>
+  ggplot() +
+  aes(x = effect, y = study_id, size = n/max(n)) +
+  geom_point() +
+  geom_pointrange(aes(x = effect, xmin=ci_low, xmax=ci_high)) +
+  xlim(-.5, 1) +
+  theme_classic() +
+  theme(legend.position = "none") +
+  geom_vline(xintercept = 0, linetype = "dotted", color = "red")
+```
+
+Can we simulate what this would look like if there was a big file drawer effect?
+
+Let's eliminate all of the examples where the CI included zero.
+
+```{r}
+#| label: fig-simulating-meta-analysis-file-drawer
+#| fig-cap: "Simulating a meta-analysis of an experiment with *d*=0.3. The size of the dots is proportional to the sample size (*n*). We remove studies whose CI's include 0."
+meta_analysis |>
+  # filter (remove) all entries where `ci_low` is less than zero.
+  dplyr::filter(ci_low > 0) |>
+  dplyr::arrange(desc(effect)) |>
+  ggplot() +
+  aes(x = effect, y = study_id, size = n/max(n)) +
+  geom_point() +
+  geom_pointrange(aes(x = effect, xmin=ci_low, xmax=ci_high)) +
+  xlim(-.5, 1) +
+  theme_classic() +
+  theme(legend.position = "none") +
+  geom_vline(xintercept = 0, linetype = "dotted", color = "red")
+```
+
