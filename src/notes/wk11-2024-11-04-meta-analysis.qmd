@@ -33,11 +33,17 @@ title: "Meta-analysis"
     
 ## Meta-analysis
 
-- Multiple studies, ideally published and unpublished
+- Imagine lots of replications
+- Combining multiple studies, ideally published and unpublished
   - Why unpublished, too?
 - Question: What is the distribution of effect sizes?
   - Why effect sizes?
-- Related to [Cochrane Systematic Reviews](https://www.cochranelibrary.com/about/about-cochrane-reviews).
+- Question: What is the quality of the evidence?
+- Related to [Cochrane Systematic Reviews](https://www.cochranelibrary.com/about/about-cochrane-reviews)
+
+## Let's simulate one
+
+[Link to simulation page](../supplemental/metaanalysis-simulation.qmd)
 
 ## Example
 
@@ -83,13 +89,28 @@ van Agteren, J., Iasiello, M., Lo, L., Bartholomaeus, J., Kopsaftis, Z., Carey, 
 
 ![Figure 3 from @Van_Agteren2021-al](../include/img/vanagteren-2021-fig-03.png)
 
-## Let's simulate one
+## Example 2
 
-[Link to simulation page](../supplemental/metaanalysis-simulation.qmd)
+Richardson, M., Abraham, C., & Bond, R. (2012). Psychological correlates of university students’ academic performance: A systematic review and meta-analysis. *Psychological Bulletin*, *138*(2), 353–387. https://doi.org/10.1037/a0026838
+
+## {.scrollable}
+
+![@Richardson2012-tt. Figure 1: Results of the primary meta-analyses for the non-intellective correlates of GPA: r + and 95% confidence intervals.](../include/img/richardson-2012-fig-1.jpg)
+
+---
+
+>"When challenges are familiar, students can draw upon past experiences to formulate expectations about specific performances. This has been referred to as *performance self-efficacy*..."
+
+@Richardson2012-tt
 
 ---
 
 ![Crislip2012-jq](../include/img/crislip-2012.png)
+---
+
+>“I never met a man I didn't like” is a quote attributed to Will Rogers. The full quote is “I joked about every prominent man in my lifetime, but I never met one I didn't like”. Rogers considered this line as an epitaph for his tombstone, but the shortened version is what appears on his gravestone in Claremore, Oklahoma.
+
+Google AI
 
 ## Flaws with meta-analysis
 
