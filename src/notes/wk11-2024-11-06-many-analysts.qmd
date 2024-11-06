@@ -11,6 +11,18 @@ subtitle: "Many analysts"
 
 @Hd2024-bp
 
+## Announcements
+
+- [Due this Friday]{.orange_due}
+    - [Exercise 07: Replication](../exercises/ex07-replication.qmd)
+
+## Last time...
+
+- Revisiting the [meta-analysis simulation](../supplemental/metaanalysis-simulation.qmd)
+  - How was this like a meta-analysis?
+- What are the pros of meta-analysis?
+- What are some cons?
+
 ## Today
 
 *Many analysts*
@@ -18,6 +30,47 @@ subtitle: "Many analysts"
 - Discuss
     - @Silberzahn2018-st
     
+## Comparing approaches
+
+```{mermaid}
+%%| label: fig-meta-analysis
+%%| fig-cap: "Illustration of meta-analysis."
+flowchart LR
+  A[Question] --> B[Study_1]
+  A --> C[Study_2]
+  A --> D[Study_3]
+  B --> E[Meta-analysis]
+  C --> E
+  D --> E
+```
+
+---
+
+```{mermaid}
+%%| label: fig-multiverse
+%%| fig-cap: "Illustration of 'multiverse' analysis [@Steegen2016-qv]."
+flowchart LR
+  A[Dataset] --> B[Question]
+  B --> C[Analysis_1]
+  B --> D[Analysis_2]
+  B --> E[Analysis_3]
+  C --> F[Multiverse]
+  D --> F
+  E --> F
+```
+
+---
+
+>Empirical research inevitably includes constructing a data set by processing raw data into a form ready for statistical analysis. Data processing often involves choices among several reasonable options for excluding, transforming, and coding data. We suggest that instead of performing only one analysis, researchers could perform a multiverse analysis, which involves performing all analyses across the whole set of alternatively processed data sets corresponding to a large set of reasonable scenarios.
+
+@Steegen2016-qv
+
+---
+
+>Using an example focusing on the effect of fertility on religiosity and political attitudes, we show that analyzing a single data set can be misleading and propose a multiverse analysis as an alternative practice. A multiverse analysis offers an idea of how much the conclusions change because of arbitrary choices in data construction and gives pointers as to which choices are most consequential in the fragility of the result.
+
+@Steegen2016-qv
+
 # Many-analysts
 
 ---
@@ -88,22 +141,6 @@ Odds ratios (OR) [@Szumilas2010-uj]:
 
 ---
 
-![Figure 3 from @Silberzahn2018-st](../include/img/silberzahn-2018-fig-03.jpg)
-
----
-
->Point estimates (clustered by analytic approach) and 95% confidence intervals for the effect of soccer players’ skin tone on the number of red cards awarded by referees. Reported results, along with the analytic approach taken, are shown for each of the 29 analytic teams...
-
-<p style="text-align:center;">
-@Silberzahn2018-st
-</p>
-
----
-
->...The teams are clustered according to the distribution used in their analyses; within each cluster, the teams are listed in order of the magnitude of the reported effect size, from smallest at the top to largest at the bottom. The asterisks indicate upper bounds that have been truncated to increase the interpretability of the plot (see Fig. 2). OLS = ordinary least squares; WLS = weighted least squares; Misc = miscellaneous.
-
----
-
 ![Figure 4 from @Silberzahn2018-st](https://journals.sagepub.com/cms/10.1177/2515245917747646/asset/images/large/10.1177_2515245917747646-fig4.jpeg)
 
 ---
@@ -132,11 +169,22 @@ Odds ratios (OR) [@Szumilas2010-uj]:
 
 ---
 
->Neither analysts’ prior beliefs about the effect of interest nor their level of expertise readily explained the variation in the outcomes of the analyses. Peer ratings of the quality of the analyses also did not account for the variability. 
+```{r}
+# label: fig-silberzahn-2018-table-5
+# fig-cap: "Table 5 from @Silberzahn2018-st in figure form. Mean ratings +/- 1 SD"
+library(ggplot2)
 
-<p style="text-align:center;">
-@Silberzahn2018-st
-</p>
+many_fig5 <- tibble::tibble(conclusion = c("refereee bias", "unobserved vars", "cause unknown", "outlier influence", "other vars", "little evidence", "no relationship", "negative relationship"), mean = c(3.37, 4.21, 5.32, 3.18, 3.84, 3.17, 2.49, 1.64), sd = c(1.65, 1.37, 1.47, 1.31, 1.33, 1.66, 1.28, 0.80))
+
+many_fig5 |>
+  dplyr::mutate(conclude = forcats::fct_reorder(conclusion, mean)) |>
+  ggplot() +
+  aes(x = mean, y = conclude) +
+  geom_point() +
+  geom_pointrange(aes(xmin= mean - sd, xmax= mean + sd)) +
+  scale_x_continuous("Ratings", breaks = c(1,7), labels = c("strongly disagree", "strongly agree")) +
+  theme(axis.text.x = element_text(angle = 90))
+```
 
 ---
 
@@ -146,16 +194,33 @@ Odds ratios (OR) [@Szumilas2010-uj]:
 @Silberzahn2018-st
 </p>
 
+## Why the inconsistency?
+
+>Our conjecture is that it was the unclear research question given to the teams. 
+
+>Recall the research task that was set in the CSI: to find out whether players with dark skin tone are more likely to receive red cards than players with light skin tone. How would you interpret this research task? In our opinion, this verbal statement of the research question is quite diffuse.
+
+[@Auspurg2021-um]
+
+## What's your question? What's your model?
+
+![Figure 1 from @Auspurg2021-um. ](https://journals.sagepub.com/cms/10.1177/23780231211024421/asset/images/large/10.1177_23780231211024421-fig1.jpeg)
+
 ## Your turn
 
-::: {.callout-note title = "Your thoughts?"}
+::: {.callout-note}
+## Your thoughts?
 
 - So, are soccer referees more likely to give red cards to dark-skin-toned players?
 - How is this approach related to *p*-hacking?
 - How does the many analysts approach conflict with current practice?
 - When does this approach make sense and when doesn't it make sense?
-
+- What about visualizing the data? Gilmore failed to see the effect, despite [trying](../supplemental/many-viz.qmd).
 :::
+
+## Conclusion from @Auspurg2021-um
+
+>Applying sensitivity analyses to the result obtained with the CSI data, we demonstrated that the result of a modest racial bias in the likelihood of receiving a red card is quite sensitive to unobserved mediators. This indicates that this estimate, although consistent across many different model specifications, is probably not a true causal effect in itself.
 
 ## Other examples of "many-analysts" or "multiverse" approaches
 
@@ -164,7 +229,13 @@ Odds ratios (OR) [@Szumilas2010-uj]:
 
 ---
 
-![Figure from @Gould2023-vu](https://egouldo.github.io/ManyAnalysts/#fig-forest-plots-Zr-1)
+![Figure 3.1 from @Gould2023-vu](https://egouldo.github.io/ManyAnalysts/index_files/figure-html/fig-forest-plots-Zr-1.png)
+
+---
+
+>analyses with results that were far from the mean were no more or less likely to have dissimilar variable sets, use random effects in their models, or receive poor peer reviews than those analyses that found results that were close to the mean. The existence of substantial variability among analysis outcomes raises important questions about how ecologists and evolutionary biologists should interpret published results, and how they should conduct analyses in the future.
+
+@Gould2023-vu
 
 ---
 
@@ -192,10 +263,10 @@ Odds ratios (OR) [@Szumilas2010-uj]:
 
 # Next time
 
-*Final project work day*
+*Work Session: Final Projects*
 
-- [Optional Extra Credit Assignment]{.orange_due}
-    - For 5 extra credit points, write a paragraph that summarizes the main findings of @Camerer2018-tr.
+- [Due]{.orange_due}
+    - [Exercise 07: Replication](../exercises/ex07-replication.qmd)
 
 # Resources
 

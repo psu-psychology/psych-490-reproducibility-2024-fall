@@ -3350,7 +3350,7 @@
     "href": "notes/wk11-2024-11-06-many-analysts.html#your-turn",
     "title": "2024-11-06 Wed",
     "section": "Your turn",
-    "text": "Your turn\n::: {.callout-note title = “Your thoughts?”}\n\nSo, are soccer referees more likely to give red cards to dark-skin-toned players?\nHow is this approach related to p-hacking?\nHow does the many analysts approach conflict with current practice?\nWhen does this approach make sense and when doesn’t it make sense?\n\n:::"
+    "text": "Your turn\n\n\n\n\n\n\nYour thoughts?\n\n\n\nSo, are soccer referees more likely to give red cards to dark-skin-toned players?\nHow is this approach related to p-hacking?\nHow does the many analysts approach conflict with current practice?\nWhen does this approach make sense and when doesn’t it make sense?\nWhat about visualizing the data? Gilmore failed to see the effect, despite trying."
   },
   {
     "objectID": "notes/wk11-2024-11-06-many-analysts.html#other-examples-of-many-analysts-or-multiverse-approaches",
@@ -3364,7 +3364,7 @@
     "href": "notes/wk11-2024-11-06-many-analysts.html#references",
     "title": "2024-11-06 Wed",
     "section": "References",
-    "text": "References\n\n\n\n\nPSYCH 490.012 • Fall 2024\n\n\n\n\nBotvinik-Nezer, R., Holzmeister, F., Camerer, C. F., Dreber, A., Huber, J., Johannesson, M., … Schonberg, T. (2020). Variability in the analysis of a single neuroimaging dataset by many teams. Nature, 582(7810), 84–88. https://doi.org/10.1038/s41586-020-2314-9\n\n\nCamerer, C. F., Dreber, A., Holzmeister, F., Ho, T.-H., Huber, J., Johannesson, M., … Wu, H. (2018). Evaluating the replicability of social science experiments in Nature and Science between 2010 and 2015. Nature Human Behaviour, 1. https://doi.org/10.1038/s41562-018-0399-z\n\n\nGould, E., Fraser, H. S., Parker, T. H., Nakagawa, S., Griffith, S. C., Vesk, P. A., … Zitomer, R. A. (2023). Same data, different analysts: Variation in effect sizes due to analytical decisions in ecology and evolutionary biology. Retrieved from https://ecoevorxiv.org/repository/view/6000/\n\n\nHd, S. D. (2024, May). Legendary red cards in football #5. Youtube. Retrieved from https://www.youtube.com/watch?v=pyVWelaMF88\n\n\nSilberzahn, R., Uhlmann, E. L., Martin, D. P., Anselmi, P., Aust, F., Awtrey, E., … Nosek, B. A. (2018). Many analysts, one data set: Making transparent how variations in analytic choices affect results. Advances in Methods and Practices in Psychological Science, 1(3), 337–356. https://doi.org/10.1177/2515245917747646\n\n\nSzumilas, M. (2010). Explaining odds ratios. Journal of the Canadian Academy of Child and Adolescent Psychiatry = Journal de l’Academie Canadienne de Psychiatrie de l’enfant Et de l’adolescent, 19(3), 227–229. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/20842279"
+    "text": "References\n\n\n\n\nPSYCH 490.012 • Fall 2024\n\n\n\n\nAuspurg, K., & Brüderl, J. (2021). Has the credibility of the social sciences been credibly destroyed? Reanalyzing the “many analysts, one data set” project. Socius : Sociological Research for a Dynamic World, 7, 237802312110244. https://doi.org/10.1177/23780231211024421\n\n\nBotvinik-Nezer, R., Holzmeister, F., Camerer, C. F., Dreber, A., Huber, J., Johannesson, M., … Schonberg, T. (2020). Variability in the analysis of a single neuroimaging dataset by many teams. Nature, 582(7810), 84–88. https://doi.org/10.1038/s41586-020-2314-9\n\n\nGould, E., Fraser, H. S., Parker, T. H., Nakagawa, S., Griffith, S. C., Vesk, P. A., … Zitomer, R. A. (2023). Same data, different analysts: Variation in effect sizes due to analytical decisions in ecology and evolutionary biology. Retrieved from https://ecoevorxiv.org/repository/view/6000/\n\n\nHd, S. D. (2024, May). Legendary red cards in football #5. Youtube. Retrieved from https://www.youtube.com/watch?v=pyVWelaMF88\n\n\nSilberzahn, R., Uhlmann, E. L., Martin, D. P., Anselmi, P., Aust, F., Awtrey, E., … Nosek, B. A. (2018). Many analysts, one data set: Making transparent how variations in analytic choices affect results. Advances in Methods and Practices in Psychological Science, 1(3), 337–356. https://doi.org/10.1177/2515245917747646\n\n\nSteegen, S., Tuerlinckx, F., Gelman, A., & Vanpaemel, W. (2016). Increasing transparency through a multiverse analysis. Perspectives on Psychological Science: A Journal of the Association for Psychological Science, 11(5), 702–712. https://doi.org/10.1177/1745691616658637\n\n\nSzumilas, M. (2010). Explaining odds ratios. Journal of the Canadian Academy of Child and Adolescent Psychiatry = Journal de l’Academie Canadienne de Psychiatrie de l’enfant Et de l’adolescent, 19(3), 227–229. Retrieved from https://www.ncbi.nlm.nih.gov/pubmed/20842279"
   },
   {
     "objectID": "notes/wk01-2024-08-28-no-foolin.html#announcements",
@@ -4310,5 +4310,47 @@
     "title": "Meta-analysis",
     "section": "",
     "text": "Richardson, Abraham, & Bond (2012). Figure 1: Results of the primary meta-analyses for the non-intellective correlates of GPA: r + and 95% confidence intervals."
+  },
+  {
+    "objectID": "notes/wk11-2024-11-06-many-analysts.html#announcements",
+    "href": "notes/wk11-2024-11-06-many-analysts.html#announcements",
+    "title": "2024-11-06 Wed",
+    "section": "Announcements",
+    "text": "Announcements\n\nDue this Friday\n\nExercise 07: Replication"
+  },
+  {
+    "objectID": "notes/wk11-2024-11-06-many-analysts.html#last-time",
+    "href": "notes/wk11-2024-11-06-many-analysts.html#last-time",
+    "title": "2024-11-06 Wed",
+    "section": "Last time…",
+    "text": "Last time…\n\nRevisiting the meta-analysis simulation\n\nHow was this like a meta-analysis?\n\nWhat are the pros of meta-analysis?\nWhat are some cons?"
+  },
+  {
+    "objectID": "notes/wk11-2024-11-06-many-analysts.html#comparing-approaches",
+    "href": "notes/wk11-2024-11-06-many-analysts.html#comparing-approaches",
+    "title": "2024-11-06 Wed",
+    "section": "Comparing approaches",
+    "text": "Comparing approaches\n\n\n\n\n\n\nflowchart LR\n  A[Question] --&gt; B[Study_1]\n  A --&gt; C[Study_2]\n  A --&gt; D[Study_3]\n  B --&gt; E[Meta-analysis]\n  C --&gt; E\n  D --&gt; E\n\n\n\n\nFigure 1: Illustration of meta-analysis."
+  },
+  {
+    "objectID": "notes/wk11-2024-11-06-many-analysts.html#why-the-inconsistency",
+    "href": "notes/wk11-2024-11-06-many-analysts.html#why-the-inconsistency",
+    "title": "2024-11-06 Wed",
+    "section": "Why the inconsistency?",
+    "text": "Why the inconsistency?\n\nOur conjecture is that it was the unclear research question given to the teams.\n\n\nRecall the research task that was set in the CSI: to find out whether players with dark skin tone are more likely to receive red cards than players with light skin tone. How would you interpret this research task? In our opinion, this verbal statement of the research question is quite diffuse.\n\n(Auspurg & Brüderl, 2021)"
+  },
+  {
+    "objectID": "notes/wk11-2024-11-06-many-analysts.html#whats-your-question-whats-your-model",
+    "href": "notes/wk11-2024-11-06-many-analysts.html#whats-your-question-whats-your-model",
+    "title": "2024-11-06 Wed",
+    "section": "What’s your question? What’s your model?",
+    "text": "What’s your question? What’s your model?\n\nFigure 1 from Auspurg & Brüderl (2021)."
+  },
+  {
+    "objectID": "notes/wk11-2024-11-06-many-analysts.html#conclusion-from-auspurg2021-um",
+    "href": "notes/wk11-2024-11-06-many-analysts.html#conclusion-from-auspurg2021-um",
+    "title": "2024-11-06 Wed",
+    "section": "Conclusion from Auspurg & Brüderl (2021)",
+    "text": "Conclusion from Auspurg & Brüderl (2021)\n\nApplying sensitivity analyses to the result obtained with the CSI data, we demonstrated that the result of a modest racial bias in the likelihood of receiving a red card is quite sensitive to unobserved mediators. This indicates that this estimate, although consistent across many different model specifications, is probably not a true causal effect in itself."
   }
 ]
