@@ -7,6 +7,12 @@ subtitle: "Many analysts"
 
 ## Prelude
 
+{{< video https://youtu.be/vwSRqaZGsPw?si=UqWKxhU6RImGLk0c height="70%" width="100%" >}}
+
+@Records2013-zk
+
+---
+
 {{< video https://youtu.be/pyVWelaMF88?si=0ekYSYUhDOfujj_w height="70%" width="100%" >}}
 
 @Hd2024-bp
