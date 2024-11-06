@@ -7,14 +7,10 @@ subtitle: "2024-11-11 Mon"
 
 ## Announcement
 
-- Clarification of "opinion piece"
+- Clarification about "opinion piece"
   - @Goldin-Meadow2016-mc
   - @Mischel2011-br
   - @Adolph2016-pg
-
-## Last time...
-
-- [Many visualizations](../surveys/many-viz.html)
 
 ## Today
 
@@ -71,31 +67,31 @@ However, ordinary biases in human reasoning, such as hindsight bias, make it har
 ## Types
 
 - Preregistration (of analysis plans)
-- Registered reports, [@Chambers_undated-ax](https://royalsociety.org/blog/2016/11/registered-reports-what-are-they-and-why-are-they-important/); [@Center_for_Open_Science_undated-yg](https://www.cos.io/initiatives/registered-reports)
+- Registered reports, [@Chambers_undated-ax](https://royalsociety.org/blog/2016/11/registered-reports-what-are-they-and-why-are-they-important/); @Center_for_Open_Science_undated-yg(https://www.cos.io/initiatives/registered-reports)
 
-![Illustration about registered reports from [@Center_for_Open_Science_undated-yg]](https://cdn.cos.io/media/images/registered_reports.width-800.png)
+![Illustration about registered reports from @Center_for_Open_Science_undated-yg](https://cdn.cos.io/media/images/registered_reports.width-800.png)
 
 ## Commentary about
 
-- [@Ledgerwood2018-sn]
+- @Ledgerwood2018-sn
     - Preregistering theoretical predictions $\neq$ preregistering analysis plans
 - @Goldin-Meadow2016-mc
     - Could stifle discovery
     - Not applicable to all kinds of research
 
-# Is it working [@Claesen2021-ae]
+# Is it working @Claesen2021-ae
 
 ---
 
-![Figure 1 from [@Claesen2021-ae]. Flowchart of assessment of preregistered studies.](https://royalsocietypublishing.org/cms/asset/1157ecd0-f1e7-4dbe-a0d2-986d65d0e44a/rsos211037f01.jpg)
+![Figure 1 from @Claesen2021-ae. Flowchart of assessment of preregistered studies.](https://royalsocietypublishing.org/cms/asset/1157ecd0-f1e7-4dbe-a0d2-986d65d0e44a/rsos211037f01.jpg)
 
 ---
 
-![Figure 2 from [@Claesen2021-ae]. Tile plot of the assessment of each methodological aspect per preregistration plan. Only the 27 studies that were accessible and included the minimal number of methodological details required for our adherence assessment are shown.](https://royalsocietypublishing.org/cms/asset/59614a09-5481-49c2-bba0-5aad6fd85439/rsos211037f02.jpg)
+![Figure 2 from @Claesen2021-ae. Tile plot of the assessment of each methodological aspect per preregistration plan. Only the 27 studies that were accessible and included the minimal number of methodological details required for our adherence assessment are shown.](https://royalsocietypublishing.org/cms/asset/59614a09-5481-49c2-bba0-5aad6fd85439/rsos211037f02.jpg)
 
 ---
 
-![Figure 3 from [@Claesen2021-ae]. An overview of adherence per methodological aspect.](https://royalsocietypublishing.org/cms/asset/24ad7980-7d06-4335-9a07-d62bbb8d907e/rsos211037f03.jpg)
+![Figure 3 from @Claesen2021-ae. An overview of adherence per methodological aspect.](https://royalsocietypublishing.org/cms/asset/24ad7980-7d06-4335-9a07-d62bbb8d907e/rsos211037f03.jpg)
 
 ## Author-reported reasons for deviations
 
@@ -117,7 +113,7 @@ However, ordinary biases in human reasoning, such as hindsight bias, make it har
 >The process of preregistering and reporting in accordance with the preregistration is tricky, and we realize that, given its relatively young status in psychology, the field collectively needs to go through a learning phase.
 
 <p style="text-align:center;">
-[@Claesen2021-ae]
+@Claesen2021-ae
 </p>
 
 ---
@@ -133,8 +129,8 @@ However, ordinary biases in human reasoning, such as hindsight bias, make it har
 
 ## My experience
 
-- Paper: [@Qian2022-yp]; preregistration [@Qian_2021_prereg].
-- Published R Markdown document (in HTML) with entire workflow [@Qian_undated-cl].
+- Paper: @Qian2022-yp; preregistration @Qian_2021_prereg.
+- Published R Markdown document (in HTML) with entire workflow @Qian_undated-cl.
     - Separate sections for [preregistered](https://gilmore-lab.github.io/sex-differences-project/analysis/qian-berenbaum-gilmore.html#Preregistered_analyses) and [exploratory](https://gilmore-lab.github.io/sex-differences-project/analysis/qian-berenbaum-gilmore.html#Non-pregistered_analyses) ones.
 
 # Next time

@@ -3,24 +3,21 @@ title: "Data sharing"
 subtitle: "2023-11-08 Wed"
 ---
 
-# In the news...
+# Prelude
 
-## [@Massey2023-ts]
+## On data sharing...
 
-Massey, W. (2023, 6. November). Penn State denied students access to campus crime data. A student wants a federal investigation. *Centre Daily Times*. <https://www.centredaily.com/news/local/education/penn-state/article281487803.html>
+![Wikipedia: <https://en.wikipedia.org/wiki/Data_sharing>](https://upload.wikimedia.org/wikipedia/commons/6/65/To_deposit_or_not_to_deposit%2C_that_is_the_question_-_journal.pbio.1001779.g001.png){width=70%}
 
----
-
-![Wikipedia: <https://en.wikipedia.org/wiki/Data_sharing>](https://upload.wikimedia.org/wikipedia/commons/6/65/To_deposit_or_not_to_deposit%2C_that_is_the_question_-_journal.pbio.1001779.g001.png)
 ## Today
 
 *Data sharing*
 
 - Read
-    - [@Houtkoop2018-tl]
-    - [@Tenopir2020-mq]
-    - (Optional) [@GilmoreAdolph2017]
-    - (Optional) [@Meyer2018-vk]
+    - @Houtkoop2018-tl
+    - @Tenopir2020-mq
+    - (Optional) @GilmoreAdolph2017
+    - (Optional) @Meyer2018-vk
     
 # Barriers to data sharing
 
@@ -30,21 +27,21 @@ Houtkoop, B. L., Chambers, C., Macleod, M., Bishop, D. V. M., Nichols, T. E. & W
 
 ---
 
-```{r, fig.cap="Figure 1 from [@Houtkoop2018-tl]."}
+```{r, fig.cap="Figure 1 from @Houtkoop2018-tl."}
 knitr::include_graphics("../include/img/houktoop-2018-fig-01.png")
 ```
 
 ---
 
-![Figure 2 from [@Houtkoop2018-tl]](../include/img/houtkoop-2018-fig-02.png)
+![Figure 2 from @Houtkoop2018-tl](../include/img/houtkoop-2018-fig-02.png)
 
 ---
 
-![Figure 3 from [@Houtkoop2018-tl]](../include/img/houtkoop-2018-fig.03.png)
+![Figure 3 from @Houtkoop2018-tl](../include/img/houtkoop-2018-fig.03.png)
 
 ---
 
-![Figure 4 from [@Houtkoop2018-tl]](../include/img/houtkoop-2018-fig-04.png)
+![Figure 4 from @Houtkoop2018-tl](../include/img/houtkoop-2018-fig-04.png)
 
 ## Conclusions
 
@@ -72,7 +69,7 @@ knitr::include_graphics("../include/img/houktoop-2018-fig-01.png")
 >•	Mandatory data sharing (enforced by institutions, journals, or funders) and financial encouragement (i.e., increased grant amounts) are measures that would apparently be highly effective in increasing researchers’ willingness to share their data.
 
 <p style="text-align:center;">
-[@Houtkoop2018-tl]
+@Houtkoop2018-tl
 </p>
 
 ## Transparency & reproducibility notes
@@ -84,7 +81,7 @@ knitr::include_graphics("../include/img/houktoop-2018-fig-01.png")
 
 ::: {.callout-note title="Your turn"}
 
-- How would you characterize the "climate" around data sharing within the psychology community sampled by [@Houtkoop2018-tl]
+- How would you characterize the "climate" around data sharing within the psychology community sampled by @Houtkoop2018-tl
 - Do the "fear-related barriers" make sense to you? Why or why not?
 - How might these be addressed or overcome?
 - Are mandates the best or only solution?
@@ -101,39 +98,40 @@ Gilmore, R. O., Hillary, F., Lazar, N. & Wham, B. (2023). Penn State Open Scienc
 
 - Survey of faculty, staff, students and administrators ($n=100$) in late 2022, early 2023
 - GitHub repo: <https://github.com/penn-state-open-science/survey-fall-2022>
-- HTML protocol (IRB & data analysis): [@Gilmore_undated-gj]
+- HTML protocol (IRB & data analysis): @Gilmore_undated-gj
 
 ## Sharing with collaborators
 
-![Figure 22.10 from [@Gilmore_undated-gj]](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-import-share-collab-1.png)
+![Figure 22.10 from @Gilmore_undated-gj](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-import-share-collab-1.png)
 
 ## [Barriers to sharing](https://penn-state-open-science.github.io/survey-fall-2022/data-visualization.html#barriers-to-sharing-with-research-collaborators) {background-iframe="https://penn-state-open-science.github.io/survey-fall-2022/data-visualization.html#barriers-to-sharing-with-research-collaborators"}
 
 ## Where store data
 
-![Figure 22.9 from [@Gilmore_undated-gj]](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-data-storage-places-1.png)
+![Figure 22.9 from @Gilmore_undated-gj](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-data-storage-places-1.png)
 
 ---
 
 ## Where shared
 
-![Figure 22.15 from [@Gilmore_undated-gj]](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-where-data-shared-1.png)
+![Figure 22.15 from @Gilmore_undated-gj](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-where-data-shared-1.png)
 
 ## Importance of sharing
 
-![Figure 22.11 from [@Gilmore_undated-gj]](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-import-share-community-1.png)
+![Figure 22.11 from @Gilmore_undated-gj](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-import-share-community-1.png)
 
 ## Obstacles to sharing
 
-![Figure 22.12 from [@Gilmore_undated-gj]](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-obstacles-to-sharing-w-comm-1.png)
+![Figure 22.12 from @Gilmore_undated-gj](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-obstacles-to-sharing-w-comm-1.png)
 
 ## Where data are shared
 
-![Figure 22.15 from [@Gilmore_undated-gj]](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-where-data-shared-1.png)
+![Figure 22.15 from @Gilmore_undated-gj](https://penn-state-open-science.github.io/survey-fall-2022/include/img/fig-where-data-shared-1.png)
 
 ## Your turn
 
-::: {.callout-note title="Your turn"}
+::: {.callout-note}
+## Your turn
 
 - How would you characterize the "climate" around data sharing at Penn State?
 - What advice would you give faculty, staff, and students interested in fostering open science here?
@@ -148,29 +146,36 @@ Tenopir, C., Rice, N. M., Allard, S., Baird, L., Borycz, J., Christian, L., Gran
 
 ## Fields
 
-![Table 1 from [@Tenopir2020-mq]](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229003.t001&type=large)
+![Table 1 from @Tenopir2020-mq](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229003.t001&type=large)
 
 ## Where data are stored
 
-![Table 2 from [@Tenopir2020-mq]](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229003.t002&type=large)
+![Table 2 from @Tenopir2020-mq](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229003.t002&type=large)
 
 ## Practices, perceptions, & barriers
 
-![Table 7 from [@Tenopir2020-mq]](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229003.t007&type=large)
+![Table 7 from @Tenopir2020-mq](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229003.t007&type=large)
 
 ---
 
-![Table 8 from [@Tenopir2020-mq]](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229003.t008&type=large)
+![Table 8 from @Tenopir2020-mq](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229003.t008&type=large)
+
+---
+
+::: {.callout-note}
+## Your turn
+
+- Should researchers share data and analysis code? 
+- Why or why not?
+
+:::
 
 # Next time
 
-*Work session: Data sharing*
+*Work Session: Final Projects*
 
-- Wrap-up on data sharing
-- [Assignment distributed]{.green_assigned}
-    - [Exercise 07: Data and materials sharing](exercises/ex07-sharing.qmd)
 - [Final project survey]{.green_assigned}
-    - Please complete the [final project survey](https://forms.gle/L92wWFSpcdyLT4MR9).
+    - Please complete the [final project survey](https://forms.gle/vtdJ82Y7AjgU15VA9) by [Friday, November 15]{.orange_due}
 
 # Resources
 
