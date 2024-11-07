@@ -1,0 +1,43 @@
+---
+title: "Work session"
+subtitle: "2024-11-08 Fri"
+---
+
+# Prelude
+
+---
+
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1020673533?h=90dbce6066" width="100%" height="70%" frameborder="0"    allowfullscreen></iframe>
+
+@MarkovUnknown-ue
+
+# Overview
+
+## In the news
+
+![@Cobey2024-re](https://penn-state-open-science.github.io/include/img/journal.pbio.3002870.g001.PNG)
+
+## Announcements
+
+- [Due today]{.orange_due}
+    - [Exercise 07: Replication](../exercises/ex07-replication.qmd)
+
+## Today
+
+*Work Session: Final Projects*
+
+# Next time
+
+*Preregistration*
+
+- Read
+    - @Nosek2018-jk
+    - @Ledgerwood2018-sn or @Goldin-Meadow2016-mc
+    - (Optional) @Claesen2021-ae
+- Explore
+    - [clinicaltrials.gov](https://clinicaltrials.gov/)
+- [Class notes](wk12-2024-11-11-prereg.qmd)
+
+# Resources
+
+## References
