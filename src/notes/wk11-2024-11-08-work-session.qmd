@@ -23,6 +23,16 @@ subtitle: "2024-11-08 Fri"
 
 @Unknown2024-xv
 
+---
+
+![@UnknownUnknown-mj](../include/img/djia-1970-2024.png)
+
+---
+
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1zDnG&width=950&height=400" scrolling="no" frameborder="0" style="overflow:hidden; width:950px; height:400px;" allowTransparency="true" loading="lazy"></iframe>
+
+@Unknown2024-ax
+
 ## Facts are stubborn things - 2
 
 ![@Lindsey2024-ob](https://www.climate.gov/sites/default/files/styles/full_width_620_original_image/public/2023-05/CO2_emissions_vs_concentrations_1751-2022.png?itok=uaha91YU)
@@ -42,7 +52,23 @@ subtitle: "2024-11-08 Fri"
 
 ![@Moslimani2024-wj](https://www.pewresearch.org/wp-content/uploads/sites/20/2024/07/SR_24.07.22_immigrant-facts_7.png)
 
-## Bottom line
+---
+
+<script id="ers_chart_widget"
+src="https://www.ers.usda.gov/scripts/widget_charts_of_note.js?key=TknpuugSQuvFfwlxPm7dnZN0QWV6RaDBjrrvYIeH&desc=yes&cId=63466"
+type="text/javascript">
+</script> 
+<div id="ers_widget_container"></div>
+
+@UnknownUnknown-hc
+
+## Facts are stubborn things - 4
+
+<iframe src="https://ourworldindata.org/grapher/united-states-rates-of-covid-19-deaths-by-vaccination-status" width=900px height=500px></iframe>
+
+@owid-covid-deaths-by-vaccination
+
+## Opinion vs fact
 
 :::: {.columns}
 ::: {.column width="40%"}
