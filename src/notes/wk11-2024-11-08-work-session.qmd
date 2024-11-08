@@ -13,6 +13,10 @@ subtitle: "2024-11-08 Fri"
 
 # Overview
 
+## Facts are stubborn things
+
+![@AdamsUnknown-gz](../include/img/facts-are-stubborn-john-adams.png)
+
 ## Facts are stubborn things - 1 {.scrollable}
 
 <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1zyfb&width=950&height=4400" scrolling="no" frameborder="0" style="overflow:hidden; width:950px; height:400px;" allowTransparency="true" loading="lazy"></iframe>
