@@ -362,6 +362,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 - [Due]{.orange_due}
     - [Exercise 07: Replication](exercises/ex07-replication.qmd)
+- [Class notes](notes/wk11-2024-11-08-work-session.qmd)
 
 ### Week 12: November 11-15 {- #week-12}
 

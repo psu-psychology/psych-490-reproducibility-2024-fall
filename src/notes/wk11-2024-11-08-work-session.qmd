@@ -13,6 +13,47 @@ subtitle: "2024-11-08 Fri"
 
 # Overview
 
+## Facts are stubborn things - 1 {.scrollable}
+
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1zyfb&width=950&height=4400" scrolling="no" frameborder="0" style="overflow:hidden; width:950px; height:400px;" allowTransparency="true" loading="lazy"></iframe>
+
+@Unknown2024-xv
+
+## Facts are stubborn things - 2
+
+![@Lindsey2024-ob](https://www.climate.gov/sites/default/files/styles/full_width_620_original_image/public/2023-05/CO2_emissions_vs_concentrations_1751-2022.png?itok=uaha91YU)
+
+---
+
+![@Lindsey2024-ob](https://www.climate.gov/sites/default/files/styles/full_width_620_original_image/public/2024-04/ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20240405-1400px.png?itok=-g_Qgndc)
+
+## Facts are stubborn things - 3
+
+![@Moslimani2024-lt](https://www.pewresearch.org/wp-content/uploads/sites/20/2024/09/SR_24.09.26_immigrantupdate_4.png)
+---
+
+![@Moslimani2024-ex](https://www.pewresearch.org/wp-content/uploads/sites/20/2024/07/SR_24.07.22_immigrant-facts_5.png)
+
+---
+
+![@Moslimani2024-wj](https://www.pewresearch.org/wp-content/uploads/sites/20/2024/07/SR_24.07.22_immigrant-facts_7.png)
+
+## Bottom line
+
+:::: {.columns}
+::: {.column width="40%"}
+
+![Daniel Patrick Moynihan from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Patrick_Moynihan_1998.jpg/220px-Patrick_Moynihan_1998.jpg)
+
+:::
+
+::: {.column width="60%"}
+
+>You are entitled to your own opinion, but you are not entitled to your own facts.
+
+:::
+::::
+
 ## In the news
 
 ![@Cobey2024-re](https://penn-state-open-science.github.io/include/img/journal.pbio.3002870.g001.PNG)
@@ -36,7 +77,6 @@ subtitle: "2024-11-08 Fri"
     - (Optional) @Claesen2021-ae
 - Explore
     - [clinicaltrials.gov](https://clinicaltrials.gov/)
-- [Class notes](wk12-2024-11-11-prereg.qmd)
 
 # Resources
 
