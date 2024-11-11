@@ -3,6 +3,14 @@ title: "Preregistration"
 subtitle: "2024-11-11 Mon"
 ---
 
+# Prelude
+
+---
+
+{{< video https://youtu.be/mYjIkxD5u0w?si=0yFsmpgje7qMv80U width=100% height=70% >}}
+
+@McCutcheon-2019-yl
+
 # Overview
 
 ## Announcement
