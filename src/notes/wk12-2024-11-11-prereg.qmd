@@ -7,7 +7,7 @@ subtitle: "2024-11-11 Mon"
 
 ## Announcement
 
-- Clarification about "opinion piece"
+- Clarification about "opinion piece" option for [final project](../exercises/final-project.qmd).
   - @Goldin-Meadow2016-mc
   - @Mischel2011-br
   - @Adolph2016-pg
@@ -29,6 +29,10 @@ subtitle: "2024-11-11 Mon"
 
 Nosek, B. A., Ebersole, C. R., DeHaven, A. C. & Mellor, D. T. (2018). The preregistration revolution. *Proceedings of the National Academy of Sciences of the United States of America*, 115(11), 2600–2606. <https://doi.org/10.1073/pnas.1708274114>
 
+## Remember HARKing?
+
+![Figure 1 from @munafo_manifesto_2017](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41562-016-0021/MediaObjects/41562_2016_Article_BFs415620160021_Fig1_HTML.jpg?as=webp){fig-align="center"}
+
 ---
 
 >*Abstract*
@@ -41,8 +45,7 @@ Nosek, B. A., Ebersole, C. R., DeHaven, A. C. & Mellor, D. T. (2018). The prereg
 
 ---
 
->
-However, ordinary biases in human reasoning, such as hindsight bias, make it hard to avoid this mistake. An effective solution is to define the research questions and analysis plan before observing the research outcomes—a process called preregistration...
+>However, ordinary biases in human reasoning, such as hindsight bias, make it hard to avoid this mistake. An effective solution is to define the research questions and analysis plan before observing the research outcomes—a process called preregistration...
 
 <p style="text-align:center;">
 @Nosek2018-jk
@@ -64,6 +67,11 @@ However, ordinary biases in human reasoning, such as hindsight bias, make it har
 @Nosek2018-jk
 </p>
 
+## Key ideas
+
+- *Pre*-diction vs. *post*-diction
+- Confirmatory vs. Exploratory
+
 ## Types
 
 - Preregistration (of analysis plans)
@@ -78,8 +86,13 @@ However, ordinary biases in human reasoning, such as hindsight bias, make it har
 - @Goldin-Meadow2016-mc
     - Could stifle discovery
     - Not applicable to all kinds of research
+- @Rubin2022-bu
+    
+## Exists on a continuum
 
-# Is it working @Claesen2021-ae
+![Figure 2 from @Hardwicke2023-kj](../include/img/hardwicke-2023-fig-02.png)
+
+## Is it working? 
 
 ---
 
@@ -119,19 +132,35 @@ However, ordinary biases in human reasoning, such as hindsight bias, make it har
 ---
 
 ::: {.callout-note title="Your thoughts?"}
-
 - Are you surprised that studies differ from their preregistered plans? Why or why not?
-- Does preregistration make you nervous?
+- Does preregistration make *you* nervous?
 - How do thesis/dissertation/grant proposals differ from preregistration?
 - What practice(s) would reduce *deviations* or alleviate skeptics' concerns?
-
 :::
+
+## How popular and common? {.scrollable}
+
+![Figure 1 from @Ferguson2023-es](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-023-41111-1/MediaObjects/41467_2023_41111_Fig1_HTML.png?as=webp){.lightbox}
+
+## Changes across time {.scrollable}
+
+![Figure 7 from @Ferguson2023-es](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-023-41111-1/MediaObjects/41467_2023_41111_Fig7_HTML.png?as=webp){.lightbox}
 
 ## My experience
 
 - Paper: @Qian2022-yp; preregistration @Qian_2021_prereg.
 - Published R Markdown document (in HTML) with entire workflow @Qian_undated-cl.
     - Separate sections for [preregistered](https://gilmore-lab.github.io/sex-differences-project/analysis/qian-berenbaum-gilmore.html#Preregistered_analyses) and [exploratory](https://gilmore-lab.github.io/sex-differences-project/analysis/qian-berenbaum-gilmore.html#Non-pregistered_analyses) ones.
+    
+## Cautionary tale
+
+![@Enserink2024-kj](../include/img/enserink-science-retraction.png)
+
+---
+
+>“The concerns relate to lack of transparency and misstatement of the hypotheses and predictions the reported metastudy was designed to test; **lack of preregistration for measures and analyses supporting the titular claim** (against statements asserting preregistration in the published article); selection of outcome measures and analyses with knowledge of the data; and incomplete reporting of data and analyses.”
+
+@Protzko2024-hb
 
 # Next time
 
