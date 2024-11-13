@@ -395,7 +395,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 *Work Session: Final Projects*
 
 - [Final project survey]{.green_assigned}
-    - Please complete the [final project survey](https://forms.gle/vtdJ82Y7AjgU15VA9) by [Friday, November 15]{.orange_due}
+    - Please complete the [final project survey](https://forms.gle/vtdJ82Y7AjgU15VA9) by [Friday, November 22]{.orange_due}
 
 ### Week 13: November 18-22 {- #week-13}
 
@@ -449,7 +449,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 *Project presentations*
 
-- [Schedule]()
+- [Schedule](surveys/presentation-schedule.qmd#day-1-friday-december-6-2024)
 - [Assignment Due]{.orange_due}
     - [Exercise 08: Data and materials sharing](exercises/ex08-sharing.qmd)
 
@@ -459,13 +459,13 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 *Project presentations*
 
-- [Schedule]()
+- [Schedule](surveys/presentation-schedule.qmd#day-2-monday-december-9-2024)
 
 #### Wednesday, December 11 {-}
 
 *Project presentations*
 
-- [Schedule]()
+- [Schedule](surveys/presentation-schedule.qmd#day-3-wednesday-december-11-2024)
 
 #### Friday, December 13 {-}
 
