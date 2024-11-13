@@ -7,7 +7,10 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.56">
 
   <meta name="author" content="Rick Gilmore">
@@ -379,6 +382,14 @@ Rick Gilmore
 <h2>On data sharing…</h2>
 
 <img data-src="https://upload.wikimedia.org/wikipedia/commons/6/65/To_deposit_or_not_to_deposit%2C_that_is_the_question_-_journal.pbio.1001779.g001.png" style="width:70.0%" class="r-stretch quarto-figure-center"><p class="caption">Wikipedia: <a href="https://en.wikipedia.org/wiki/Data_sharing" class="uri">https://en.wikipedia.org/wiki/Data_sharing</a></p></section>
+<section id="last-time" class="slide level2">
+<h2>Last time…</h2>
+<ul>
+<li>What is preregistration aiming to achieve?</li>
+<li>How well does preregistration “work” according to <span class="citation" data-cites="Claesen2021-ae">Claesen, Gomes, Tuerlinckx, &amp; Vanpaemel (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>?</li>
+<li>Should most studies adopt preregistration? Why or why not?</li>
+</ul>
+</section>
 <section id="today" class="slide level2">
 <h2>Today</h2>
 <p><em>Data sharing</em></p>
@@ -423,18 +434,27 @@ Rick Gilmore
 <p>• Public data sharing is not a common practice among research psychologists.</p>
 <p>• Respondents considered data sharing to be both desirable and profitable for their particular research fields, but somewhat less desirable and profitable in the case of their own current research projects.</p>
 </blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Houtkoop2018-tl">Houtkoop et al. (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>
+</p>
 </section>
 <section class="slide level2">
 
 <blockquote>
 <p>• The non-fear-related barriers to data sharing most frequently reported by respondents were that (a) sharing is not a common practice in their field, (b) they prefer to share their data only upon request, (c) they consider preparing data for sharing to be excessively time-consuming, and (d) they have never learned to share data online.</p>
 </blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Houtkoop2018-tl">Houtkoop et al. (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>
+</p>
 </section>
 <section class="slide level2">
 
 <blockquote>
 <p>• Respondents believed that the largest fear-related obstacles preventing other researchers from sharing their data are the fear that alternative analyses might expose invalid conclusions and the fear of loss of control.</p>
 </blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Houtkoop2018-tl">Houtkoop et al. (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>
+</p>
 </section>
 <section class="slide level2">
 
@@ -442,6 +462,9 @@ Rick Gilmore
 <p>• Respondents reported that their greatest fears about sharing their own data are that the data might be misinterpreted and they might be scooped.</p>
 <p>• In general, respondents felt that fear-related barriers affected other researchers more strongly than themselves.</p>
 </blockquote>
+<p style="text-align:center;">
+<span class="citation" data-cites="Houtkoop2018-tl">Houtkoop et al. (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>
+</p>
 </section>
 <section class="slide level2">
 
@@ -570,24 +593,44 @@ Rick Gilmore
 
 
 <img data-src="https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0229003.t008&amp;type=large" class="r-stretch quarto-figure-center"><p class="caption">Table 8 from <span class="citation" data-cites="Tenopir2020-mq">Tenopir et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></section>
-<section class="slide level2">
+<section id="changes-across-time" class="slide level2 scrollable">
+<h2>Changes across time</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-023-41111-1/MediaObjects/41467_2023_41111_Fig7_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure 7 from @Ferguson2023-es"><img data-src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-023-41111-1/MediaObjects/41467_2023_41111_Fig7_HTML.png?as=webp" alt="Figure 7 from Ferguson et al. (2023)"></a></p>
+<figcaption>Figure 7 from <span class="citation" data-cites="Ferguson2023-es">Ferguson et al. (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></figcaption>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="funder-requirements" class="title-slide slide level1 center">
+<h1>Funder requirements</h1>
 
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Your turn</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li>Should researchers share data and analysis code?</li>
-<li>Why or why not?</li>
-</ul>
-</div>
-</div>
-</div>
+</section>
+<section id="national-science-foundation-nsf" class="slide level2">
+<h2>National Science Foundation (NSF)</h2>
+<blockquote>
+<p>NSF-funded investigators are expected to share with other researchers, at no more than incremental cost and within a reasonable time, the primary data, samples, physical collections and other supporting materials created or gathered in the course of work under NSF awards.</p>
+</blockquote>
+<p><span class="citation" data-cites="NSF-data-sharing-am">NSF (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span></p>
+</section>
+<section id="national-institute-for-mental-health-nimh" class="slide level2">
+<h2>National Institute for Mental Health (NIMH)</h2>
+<blockquote>
+<p>Widespread data sharing by the research community adds significant value to research and accelerates the pace of discovery….research funded by the NIMH are required to deposit all raw and analyzed data (including, but not limited to, clinical, genomic, imaging, and phenotypic data) from studies involving human subjects into the NIMH Data Archive (NDA).</p>
+</blockquote>
+<p><span class="citation" data-cites="NIMH-data-sharing-dq">NIMH (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></p>
+</section></section>
+<section>
+<section id="your-turn-3" class="title-slide slide level1 center">
+<h1>Your turn</h1>
+
+</section>
+<section id="should-researchers-share-data-and-analysis-code" class="slide level2">
+<h2>Should researchers share data and analysis code?</h2>
+</section>
+<section id="should-researchers-be-required-to-share-data-and-analysis-code" class="slide level2">
+<h2>Should researchers be <em>required</em> to share data and analysis code?</h2>
 </section></section>
 <section id="next-time" class="title-slide slide level1 center">
 <h1>Next time</h1>
@@ -615,6 +658,12 @@ Rick Gilmore
 </div>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Claesen2021-ae" class="csl-entry" role="listitem">
+Claesen, A., Gomes, S., Tuerlinckx, F., &amp; Vanpaemel, W. (2021). Comparing dream to reality: An assessment of adherence of the first generation of preregistered studies. <em>Royal Society Open Science</em>, <em>8</em>(211037). <a href="https://doi.org/10.1098/rsos.211037">https://doi.org/10.1098/rsos.211037</a>
+</div>
+<div id="ref-Ferguson2023-es" class="csl-entry" role="listitem">
+Ferguson, J., Littman, R., Christensen, G., Paluck, E. L., Swanson, N., Wang, Z., … Pezzuto, J.-H. (2023). Survey of open science practices and attitudes in the social sciences. <em>Nature Communications</em>, <em>14</em>(1), 5401. <a href="https://doi.org/10.1038/s41467-023-41111-1">https://doi.org/10.1038/s41467-023-41111-1</a>
+</div>
 <div id="ref-GilmoreAdolph2017" class="csl-entry" role="listitem">
 Gilmore, R. O., &amp; Adolph, K. E. (2017). Video can make behavioural research more reproducible. <em>Nature Human Behavior</em>, <em>1</em>. <a href="https://doi.org/10.1038/s41562-017-0128">https://doi.org/10.1038/s41562-017-0128</a>
 </div>
@@ -626,6 +675,12 @@ Houtkoop, B. L., Chambers, C., Macleod, M., Bishop, D. V. M., Nichols, T. E., &a
 </div>
 <div id="ref-Meyer2018-vk" class="csl-entry" role="listitem">
 Meyer, M. N. (2018). Practical tips for ethical data sharing. <em>Advances in Methods and Practices in Psychological Science</em>, 2515245917747656. <a href="https://doi.org/10.1177/2515245917747656">https://doi.org/10.1177/2515245917747656</a>
+</div>
+<div id="ref-NIMH-data-sharing-dq" class="csl-entry" role="listitem">
+NIMH, National Institute of Mental Health. (2023). <span>NOT</span>-<span>MH</span>-23-100: Notice of data sharing policy for the national institute of mental health. <a href="https://grants.nih.gov/grants/guide/notice-files/NOT-MH-23-100.html" class="uri">https://grants.nih.gov/grants/guide/notice-files/NOT-MH-23-100.html</a>.
+</div>
+<div id="ref-NSF-data-sharing-am" class="csl-entry" role="listitem">
+NSF, National Science Foundation. (n.d.). Preparing your data management and sharing plan. <a href="https://new.nsf.gov/funding/data-management-plan" class="uri">https://new.nsf.gov/funding/data-management-plan</a>.
 </div>
 <div id="ref-Tenopir2020-mq" class="csl-entry" role="listitem">
 Tenopir, C., Rice, N. M., Allard, S., Baird, L., Borycz, J., Christian, L., … Sandusky, R. J. (2020). Data sharing, management, use, and reuse: Practices and perceptions of scientists worldwide. <em>PloS One</em>, <em>15</em>(3), e0229003. <a href="https://doi.org/10.1371/journal.pone.0229003">https://doi.org/10.1371/journal.pone.0229003</a>
@@ -1067,6 +1122,38 @@ Tenopir, C., Rice, N. M., Allard, S., Baird, L., Borycz, J., Christian, L., … 
       }
     });
     </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>

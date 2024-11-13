@@ -9,6 +9,12 @@ subtitle: "2023-11-08 Wed"
 
 ![Wikipedia: <https://en.wikipedia.org/wiki/Data_sharing>](https://upload.wikimedia.org/wikipedia/commons/6/65/To_deposit_or_not_to_deposit%2C_that_is_the_question_-_journal.pbio.1001779.g001.png){width=70%}
 
+## Last time...
+
+- What is preregistration aiming to achieve?
+- How well does preregistration "work" according to @Claesen2021-ae?
+- Should most studies adopt preregistration? Why or why not?
+
 ## Today
 
 *Data sharing*
@@ -49,19 +55,35 @@ knitr::include_graphics("../include/img/houktoop-2018-fig-01.png")
 >
 >•	Respondents considered data sharing to be both desirable and profitable for their particular research fields, but somewhat less desirable and profitable in the case of their own current research projects.
 
+<p style="text-align:center;">
+@Houtkoop2018-tl
+</p>
+
 ---
 
 >•	The non-fear-related barriers to data sharing most frequently reported by respondents were that (a) sharing is not a common practice in their field, (b) they prefer to share their data only upon request, (c) they consider preparing data for sharing to be excessively time-consuming, and (d) they have never learned to share data online.
 
+<p style="text-align:center;">
+@Houtkoop2018-tl
+</p>
+
 ---
 
 >•	Respondents believed that the largest fear-related obstacles preventing other researchers from sharing their data are the fear that alternative analyses might expose invalid conclusions and the fear of loss of control.
+
+<p style="text-align:center;">
+@Houtkoop2018-tl
+</p>
 
 ---
 
 >•	Respondents reported that their greatest fears about sharing their own data are that the data might be misinterpreted and they might be scooped.
 >
 >•	In general, respondents felt that fear-related barriers affected other researchers more strongly than themselves.
+
+<p style="text-align:center;">
+@Houtkoop2018-tl
+</p>
 
 ---
 
@@ -80,12 +102,10 @@ knitr::include_graphics("../include/img/houktoop-2018-fig-01.png")
 ## Your turn
 
 ::: {.callout-note title="Your turn"}
-
 - How would you characterize the "climate" around data sharing within the psychology community sampled by @Houtkoop2018-tl
 - Do the "fear-related barriers" make sense to you? Why or why not?
 - How might these be addressed or overcome?
 - Are mandates the best or only solution?
-
 :::
 
 # Data sharing at Penn State
@@ -132,10 +152,8 @@ Gilmore, R. O., Hillary, F., Lazar, N. & Wham, B. (2023). Penn State Open Scienc
 
 ::: {.callout-note}
 ## Your turn
-
 - How would you characterize the "climate" around data sharing at Penn State?
 - What advice would you give faculty, staff, and students interested in fostering open science here?
-
 :::
 
 # A global perspective
@@ -162,13 +180,29 @@ Tenopir, C., Rice, N. M., Allard, S., Baird, L., Borycz, J., Christian, L., Gran
 
 ---
 
-::: {.callout-note}
-## Your turn
+## Changes across time {.scrollable}
 
-- Should researchers share data and analysis code? 
-- Why or why not?
+![Figure 7 from @Ferguson2023-es](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-023-41111-1/MediaObjects/41467_2023_41111_Fig7_HTML.png?as=webp){.lightbox}
 
-:::
+# Funder requirements
+
+## National Science Foundation (NSF)
+
+>NSF-funded investigators are expected to share with other researchers, at no more than incremental cost and within a reasonable time, the primary data, samples, physical collections and other supporting materials created or gathered in the course of work under NSF awards.
+
+@NSF-data-sharing-am
+
+## National Institute for Mental Health (NIMH)
+
+>Widespread data sharing by the research community adds significant value to research and accelerates the pace of discovery....research funded by the NIMH are required to deposit all raw and analyzed data (including, but not limited to, clinical, genomic, imaging, and phenotypic data) from studies involving human subjects into the NIMH Data Archive (NDA).
+
+@NIMH-data-sharing-dq
+
+# Your turn
+
+## Should researchers share data and analysis code?
+
+## Should researchers be *required* to share data and analysis code?
 
 # Next time
 

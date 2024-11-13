@@ -132,8 +132,11 @@ names(survey_03) <- new_names
 ### Drop "test" data
 
 ```{r, eval=params$drop_test}
-survey_03 <- survey_03 |>
-  dplyr::filter(!stringr::str_detect(comments, "test"))
+survey_03_no_test <- survey_03 |>
+  dplyr::mutate(comments = case_match(comments,
+                                      NA ~ "none",
+                                      .default = comments)) |>
+  dplyr::filter(!(stringr::str_detect(comments, "test")))
 ```
 
 
@@ -144,7 +147,10 @@ We'll pause here to start building a [data dictionary](https://en.wikipedia.org/
 ```{r}
 # Make new data frame with long and short names for reference
 survey_03_data_dictionary <-
-  tibble::tibble(q_long = long_names, q_short = new_names)
+  tibble::tibble(q_long = long_names, q_short = new_names,
+                 q_type = c("none", "agree", "agree", "agree", "agree",
+                            "agree", "important", "important", "important",
+                            "important", "important", "important", "none"))
 
 survey_03_data_dictionary |>
   knitr::kable(format = 'html') |>
@@ -169,26 +175,44 @@ retrieve_long_q <- function(this_q_short, data_dict = survey_03_data_dictionary)
     as.character()
 }
 
+retrieve_q_type <- function(this_q_short, data_dict = survey_03_data_dictionary) {
+  assertthat::is.string(this_q_short)
+  data_dict |>
+    filter(q_short == this_q_short) |>
+    select(q_type) |>
+    as.character()
+}
+
 retrieve_long_q("psych_problems_replicating")
+retrieve_q_type("psych_problems_replicating")
 ```
 
 Then, I can create my own histogram function that can pull the specific data for a variable from the data frame.
 And I wrap this in a second function that retrieves the long question name.
 
 ```{r}
-my_hist <- function(data, var, q_long = "test") {
+my_hist <- function(data, var, q_long = "test", q_type = "none") {
+  
+  axis_label <- "Rating"
+  if (q_type == "agree") {
+    axis_label <- c("Strongly disagree <--> Strongly agree")    
+  } else if (q_type == "important") {
+    axis_label <- c("Not at all important <--> Very imporant")
+  }
+
   data |>
     ggplot() +
     aes(x = {{var}}) +
     geom_histogram() +
     xlim(c(.5,5.5)) +
     ggtitle(q_long) +
-    xlab("Rating")
+    xlab(axis_label)
 }
 
 my_hist_q <- function(var, data) {
   this_q <- retrieve_long_q(var)
-  my_hist(data, .data[[var]], this_q)
+  this_type <- retrieve_q_type(var) 
+  my_hist(data, .data[[var]], this_q, this_type)
 }
 
 my_hist_q(var = "replication_problem_psych_only", data = survey_03)
@@ -233,7 +257,15 @@ Here, we try plotting the histograms again using principles we learned from meta
 Define the functions.
 
 ```{r, warning=FALSE}
-my_freq_plot <- function(data = survey_03, var) {
+my_freq_plot <- function(data = survey_03, var, q_type = "important") {
+
+  axis_label <- "Rating"
+  if (q_type == "agree") {
+    axis_label <- c("Strongly disagree <--> Strongly agree")    
+  } else if (q_type == "important") {
+    axis_label <- c("Not at all important <--> Very imporant")
+  }
+
   data |>
     ggplot() +
     aes(.data[[var]]) +
@@ -241,7 +273,7 @@ my_freq_plot <- function(data = survey_03, var) {
                   show.legend = FALSE,
                   bins = 30) +
     xlim(c(.5, 5.5)) +
-    xlab("Rating")
+    xlab(axis_label)
 }
 
 return_plot <- function(data, var) {

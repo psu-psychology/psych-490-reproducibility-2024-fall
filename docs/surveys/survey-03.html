@@ -271,7 +271,7 @@ div.csl-indent {
   </li>  
         <li>
     <a class="dropdown-item" href="../supplemental/metaanalysis-simulation.html">
- <span class="dropdown-text">Meta-analysis Simulation</span></a>
+ <span class="dropdown-text">Meta-analysis simulation</span></a>
   </li>  
     </ul>
   </li>
@@ -343,7 +343,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 11, 2024</p>
+      <p class="date-modified">November 13, 2024</p>
     </div>
   </div>
     
@@ -513,8 +513,11 @@ Note
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>survey_03 <span class="ot">&lt;-</span> survey_03 <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span>stringr<span class="sc">::</span><span class="fu">str_detect</span>(comments, <span class="st">"test"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>survey_03_no_test <span class="ot">&lt;-</span> survey_03 <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">comments =</span> <span class="fu">case_match</span>(comments,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                                      <span class="cn">NA</span> <span class="sc">~</span> <span class="st">"none"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">.default =</span> comments)) <span class="sc">|&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span>(stringr<span class="sc">::</span><span class="fu">str_detect</span>(comments, <span class="st">"test"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -526,11 +529,14 @@ Note
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Make new data frame with long and short names for reference</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>survey_03_data_dictionary <span class="ot">&lt;-</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">q_long =</span> long_names, <span class="at">q_short =</span> new_names)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>survey_03_data_dictionary <span class="sc">|&gt;</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">q_long =</span> long_names, <span class="at">q_short =</span> new_names,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">q_type =</span> <span class="fu">c</span>(<span class="st">"none"</span>, <span class="st">"agree"</span>, <span class="st">"agree"</span>, <span class="st">"agree"</span>, <span class="st">"agree"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>                            <span class="st">"agree"</span>, <span class="st">"important"</span>, <span class="st">"important"</span>, <span class="st">"important"</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>                            <span class="st">"important"</span>, <span class="st">"important"</span>, <span class="st">"important"</span>, <span class="st">"none"</span>))</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>survey_03_data_dictionary <span class="sc">|&gt;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table class="lightable-classic caption-top table table-sm table-striped small" data-quarto-postprocess="true">
@@ -538,60 +544,74 @@ Note
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">q_long</th>
 <th style="text-align: left;" data-quarto-table-cell-role="th">q_short</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">q_type</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Timestamp</td>
 <td style="text-align: left;">timestamp</td>
+<td style="text-align: left;">none</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The field of psychology has problems replicating results</td>
 <td style="text-align: left;">psych_problems_replicating</td>
+<td style="text-align: left;">agree</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Replication of research is only a problem in the field of psychology</td>
 <td style="text-align: left;">replication_problem_psych_only</td>
+<td style="text-align: left;">agree</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The incentive structure in psychological research can undermine the broader goals of science</td>
 <td style="text-align: left;">incentives_undermine</td>
+<td style="text-align: left;">agree</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">The results from studies with low statistical power are by definition incorrect</td>
 <td style="text-align: left;">low_power_incorrect</td>
+<td style="text-align: left;">agree</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Researchers who perform replication studies are not qualified to conduct psychological research</td>
 <td style="text-align: left;">replicators_unqualified</td>
+<td style="text-align: left;">agree</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">It is important for a researcher to report all measures and experimental conditions that were included in a study</td>
 <td style="text-align: left;">report_all_measures_important</td>
+<td style="text-align: left;">important</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">For a researcher, how important is choosing a sample size before running a study?</td>
 <td style="text-align: left;">decide_n_before_important</td>
+<td style="text-align: left;">important</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">How important is it to make data publicly available so that results can be verified by other researchers?</td>
 <td style="text-align: left;">share_data_important</td>
+<td style="text-align: left;">important</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">How important are decisions in data collection, analysis, and reporting in affecting how likely a researcher will find a significant effect?</td>
 <td style="text-align: left;">collection_analysis_decisions_affect</td>
+<td style="text-align: left;">important</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">How important is it to report studies that “don’t work out?”</td>
 <td style="text-align: left;">report_null_findings_important</td>
+<td style="text-align: left;">important</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">How important is it that results from a psychology study are counterintuitive (e.g., different from what you would expect)?</td>
 <td style="text-align: left;">counterintuitive_results_important</td>
+<td style="text-align: left;">important</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Any comments?</td>
 <td style="text-align: left;">comments</td>
+<td style="text-align: left;">none</td>
 </tr>
 </tbody>
 </table>
@@ -619,32 +639,56 @@ Note
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.character</span>()</span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">retrieve_long_q</span>(<span class="st">"psych_problems_replicating"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>retrieve_q_type <span class="ot">&lt;-</span> <span class="cf">function</span>(this_q_short, <span class="at">data_dict =</span> survey_03_data_dictionary) {</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  assertthat<span class="sc">::</span><span class="fu">is.string</span>(this_q_short)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  data_dict <span class="sc">|&gt;</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(q_short <span class="sc">==</span> this_q_short) <span class="sc">|&gt;</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(q_type) <span class="sc">|&gt;</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.character</span>()</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="fu">retrieve_long_q</span>(<span class="st">"psych_problems_replicating"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "The field of psychology has problems replicating results"</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">retrieve_q_type</span>(<span class="st">"psych_problems_replicating"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "agree"</code></pre>
 </div>
 </div>
 <p>Then, I can create my own histogram function that can pull the specific data for a variable from the data frame. And I wrap this in a second function that retrieves the long question name.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>my_hist <span class="ot">&lt;-</span> <span class="cf">function</span>(data, var, <span class="at">q_long =</span> <span class="st">"test"</span>) {</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> {{var}}) <span class="sc">+</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlim</span>(<span class="fu">c</span>(.<span class="dv">5</span>,<span class="fl">5.5</span>)) <span class="sc">+</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggtitle</span>(q_long) <span class="sc">+</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Rating"</span>)</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>my_hist_q <span class="ot">&lt;-</span> <span class="cf">function</span>(var, data) {</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  this_q <span class="ot">&lt;-</span> <span class="fu">retrieve_long_q</span>(var)</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">my_hist</span>(data, .data[[var]], this_q)</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="fu">my_hist_q</span>(<span class="at">var =</span> <span class="st">"replication_problem_psych_only"</span>, <span class="at">data =</span> survey_03)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>my_hist <span class="ot">&lt;-</span> <span class="cf">function</span>(data, var, <span class="at">q_long =</span> <span class="st">"test"</span>, <span class="at">q_type =</span> <span class="st">"none"</span>) {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  axis_label <span class="ot">&lt;-</span> <span class="st">"Rating"</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (q_type <span class="sc">==</span> <span class="st">"agree"</span>) {</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    axis_label <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Strongly disagree &lt;--&gt; Strongly agree"</span>)    </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (q_type <span class="sc">==</span> <span class="st">"important"</span>) {</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    axis_label <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Not at all important &lt;--&gt; Very imporant"</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x =</span> {{var}}) <span class="sc">+</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlim</span>(<span class="fu">c</span>(.<span class="dv">5</span>,<span class="fl">5.5</span>)) <span class="sc">+</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggtitle</span>(q_long) <span class="sc">+</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(axis_label)</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>my_hist_q <span class="ot">&lt;-</span> <span class="cf">function</span>(var, data) {</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>  this_q <span class="ot">&lt;-</span> <span class="fu">retrieve_long_q</span>(var)</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>  this_type <span class="ot">&lt;-</span> <span class="fu">retrieve_q_type</span>(var) </span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">my_hist</span>(data, .data[[var]], this_q, this_type)</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="fu">my_hist_q</span>(<span class="at">var =</span> <span class="st">"replication_problem_psych_only"</span>, <span class="at">data =</span> survey_03)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
@@ -689,9 +733,9 @@ Figure&nbsp;1: Response options for some questions in Survey 03
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>my_vars <span class="ot">&lt;-</span> <span class="fu">names</span>(survey_03)[<span class="dv">2</span><span class="sc">:</span>(<span class="fu">dim</span>(survey_03)[<span class="dv">2</span>]<span class="sc">-</span><span class="dv">1</span>)]</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>purrr<span class="sc">::</span><span class="fu">map</span>(my_vars, my_hist_q, survey_03)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>my_vars <span class="ot">&lt;-</span> <span class="fu">names</span>(survey_03)[<span class="dv">2</span><span class="sc">:</span>(<span class="fu">dim</span>(survey_03)[<span class="dv">2</span>]<span class="sc">-</span><span class="dv">1</span>)]</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>purrr<span class="sc">::</span><span class="fu">map</span>(my_vars, my_hist_q, survey_03)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]</code></pre>
@@ -893,7 +937,7 @@ Figure&nbsp;1: Response options for some questions in Survey 03
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>purrr<span class="sc">::</span><span class="fu">map</span>(my_vars, my_hist_q, survey_03)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>purrr<span class="sc">::</span><span class="fu">map</span>(my_vars, my_hist_q, survey_03)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <p>[[1]]</p>
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
@@ -964,66 +1008,74 @@ To do
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>my_freq_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">data =</span> survey_03, var) {</span>
-<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span></span>
-<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(.data[[var]]) <span class="sc">+</span></span>
-<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_freqpoly</span>(<span class="at">na.rm =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a>                  <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a>                  <span class="at">bins =</span> <span class="dv">30</span>) <span class="sc">+</span></span>
-<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlim</span>(<span class="fu">c</span>(.<span class="dv">5</span>, <span class="fl">5.5</span>)) <span class="sc">+</span></span>
-<span id="cb70-9"><a href="#cb70-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Rating"</span>)</span>
-<span id="cb70-10"><a href="#cb70-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb70-11"><a href="#cb70-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-12"><a href="#cb70-12" aria-hidden="true" tabindex="-1"></a>return_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(data, var) {</span>
-<span id="cb70-13"><a href="#cb70-13" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">knit_child</span>(</span>
-<span id="cb70-14"><a href="#cb70-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">c</span>(</span>
-<span id="cb70-15"><a href="#cb70-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"### Histogram for: `{var}`"</span>,</span>
-<span id="cb70-16"><a href="#cb70-16" aria-hidden="true" tabindex="-1"></a>      <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>,</span>
-<span id="cb70-17"><a href="#cb70-17" aria-hidden="true" tabindex="-1"></a>      <span class="st">"```{r, echo = F}"</span>,</span>
-<span id="cb70-18"><a href="#cb70-18" aria-hidden="true" tabindex="-1"></a>      <span class="st">"print(my_freq_plot(data, var))"</span>,</span>
-<span id="cb70-19"><a href="#cb70-19" aria-hidden="true" tabindex="-1"></a>      <span class="st">"```"</span></span>
-<span id="cb70-20"><a href="#cb70-20" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb70-21"><a href="#cb70-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">envir =</span> <span class="fu">environment</span>(),</span>
-<span id="cb70-22"><a href="#cb70-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">quiet =</span> <span class="cn">TRUE</span></span>
-<span id="cb70-23"><a href="#cb70-23" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb70-24"><a href="#cb70-24" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb70-25"><a href="#cb70-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb70-26"><a href="#cb70-26" aria-hidden="true" tabindex="-1"></a>return_section <span class="ot">&lt;-</span> <span class="cf">function</span>(data, var) {</span>
-<span id="cb70-27"><a href="#cb70-27" aria-hidden="true" tabindex="-1"></a>  chunk_hdr <span class="ot">&lt;-</span> knitr<span class="sc">::</span><span class="fu">knit_expand</span>(<span class="at">text =</span> <span class="fu">c</span>(<span class="st">"### Responses for: `{this_var}`"</span>, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>),</span>
-<span id="cb70-28"><a href="#cb70-28" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">this_var =</span> var)</span>
-<span id="cb70-29"><a href="#cb70-29" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb70-30"><a href="#cb70-30" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Build fig.cap from ground up</span></span>
-<span id="cb70-31"><a href="#cb70-31" aria-hidden="true" tabindex="-1"></a>  fig_name <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"fig-dist-"</span>, var)</span>
-<span id="cb70-32"><a href="#cb70-32" aria-hidden="true" tabindex="-1"></a>  fig_cap <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"'Distribution of responses to "</span>, var, <span class="st">"'"</span>)</span>
-<span id="cb70-33"><a href="#cb70-33" aria-hidden="true" tabindex="-1"></a>  fig_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"fig.cap = "</span>, fig_cap)</span>
-<span id="cb70-34"><a href="#cb70-34" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb70-35"><a href="#cb70-35" aria-hidden="true" tabindex="-1"></a>  plot_chunk_hdr <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"```{r "</span>,</span>
-<span id="cb70-36"><a href="#cb70-36" aria-hidden="true" tabindex="-1"></a>                           fig_name,</span>
-<span id="cb70-37"><a href="#cb70-37" aria-hidden="true" tabindex="-1"></a>                           <span class="st">", echo = FALSE, warning = FALSE, "</span>,</span>
-<span id="cb70-38"><a href="#cb70-38" aria-hidden="true" tabindex="-1"></a>                           fig_caption,</span>
-<span id="cb70-39"><a href="#cb70-39" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"}"</span>)</span>
-<span id="cb70-40"><a href="#cb70-40" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb70-41"><a href="#cb70-41" aria-hidden="true" tabindex="-1"></a>  plot_chunk <span class="ot">&lt;-</span> <span class="fu">c</span>(plot_chunk_hdr, <span class="st">"print(my_freq_plot(data, var))"</span>, <span class="st">"```"</span>)</span>
-<span id="cb70-42"><a href="#cb70-42" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb70-43"><a href="#cb70-43" aria-hidden="true" tabindex="-1"></a>  question_long <span class="ot">&lt;-</span></span>
-<span id="cb70-44"><a href="#cb70-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste0</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">Q: '"</span>, <span class="fu">retrieve_long_q</span>(var), <span class="st">"'"</span>)</span>
-<span id="cb70-45"><a href="#cb70-45" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb70-46"><a href="#cb70-46" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">knit_child</span>(</span>
-<span id="cb70-47"><a href="#cb70-47" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">c</span>(chunk_hdr, plot_chunk, question_long),</span>
-<span id="cb70-48"><a href="#cb70-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">envir =</span> <span class="fu">environment</span>(),</span>
-<span id="cb70-49"><a href="#cb70-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">quiet =</span> <span class="cn">TRUE</span></span>
-<span id="cb70-50"><a href="#cb70-50" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb70-51"><a href="#cb70-51" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>my_freq_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">data =</span> survey_03, var, <span class="at">q_type =</span> <span class="st">"important"</span>) {</span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>  axis_label <span class="ot">&lt;-</span> <span class="st">"Rating"</span></span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (q_type <span class="sc">==</span> <span class="st">"agree"</span>) {</span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>    axis_label <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Strongly disagree &lt;--&gt; Strongly agree"</span>)    </span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (q_type <span class="sc">==</span> <span class="st">"important"</span>) {</span>
+<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a>    axis_label <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Not at all important &lt;--&gt; Very imporant"</span>)</span>
+<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb72-9"><a href="#cb72-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-10"><a href="#cb72-10" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span></span>
+<span id="cb72-11"><a href="#cb72-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb72-12"><a href="#cb72-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(.data[[var]]) <span class="sc">+</span></span>
+<span id="cb72-13"><a href="#cb72-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_freqpoly</span>(<span class="at">na.rm =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb72-14"><a href="#cb72-14" aria-hidden="true" tabindex="-1"></a>                  <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb72-15"><a href="#cb72-15" aria-hidden="true" tabindex="-1"></a>                  <span class="at">bins =</span> <span class="dv">30</span>) <span class="sc">+</span></span>
+<span id="cb72-16"><a href="#cb72-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlim</span>(<span class="fu">c</span>(.<span class="dv">5</span>, <span class="fl">5.5</span>)) <span class="sc">+</span></span>
+<span id="cb72-17"><a href="#cb72-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(axis_label)</span>
+<span id="cb72-18"><a href="#cb72-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb72-19"><a href="#cb72-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-20"><a href="#cb72-20" aria-hidden="true" tabindex="-1"></a>return_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(data, var) {</span>
+<span id="cb72-21"><a href="#cb72-21" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">knit_child</span>(</span>
+<span id="cb72-22"><a href="#cb72-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">c</span>(</span>
+<span id="cb72-23"><a href="#cb72-23" aria-hidden="true" tabindex="-1"></a>      <span class="st">"### Histogram for: `{var}`"</span>,</span>
+<span id="cb72-24"><a href="#cb72-24" aria-hidden="true" tabindex="-1"></a>      <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb72-25"><a href="#cb72-25" aria-hidden="true" tabindex="-1"></a>      <span class="st">"```{r, echo = F}"</span>,</span>
+<span id="cb72-26"><a href="#cb72-26" aria-hidden="true" tabindex="-1"></a>      <span class="st">"print(my_freq_plot(data, var))"</span>,</span>
+<span id="cb72-27"><a href="#cb72-27" aria-hidden="true" tabindex="-1"></a>      <span class="st">"```"</span></span>
+<span id="cb72-28"><a href="#cb72-28" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb72-29"><a href="#cb72-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">envir =</span> <span class="fu">environment</span>(),</span>
+<span id="cb72-30"><a href="#cb72-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">quiet =</span> <span class="cn">TRUE</span></span>
+<span id="cb72-31"><a href="#cb72-31" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb72-32"><a href="#cb72-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb72-33"><a href="#cb72-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-34"><a href="#cb72-34" aria-hidden="true" tabindex="-1"></a>return_section <span class="ot">&lt;-</span> <span class="cf">function</span>(data, var) {</span>
+<span id="cb72-35"><a href="#cb72-35" aria-hidden="true" tabindex="-1"></a>  chunk_hdr <span class="ot">&lt;-</span> knitr<span class="sc">::</span><span class="fu">knit_expand</span>(<span class="at">text =</span> <span class="fu">c</span>(<span class="st">"### Responses for: `{this_var}`"</span>, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>),</span>
+<span id="cb72-36"><a href="#cb72-36" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">this_var =</span> var)</span>
+<span id="cb72-37"><a href="#cb72-37" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb72-38"><a href="#cb72-38" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Build fig.cap from ground up</span></span>
+<span id="cb72-39"><a href="#cb72-39" aria-hidden="true" tabindex="-1"></a>  fig_name <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"fig-dist-"</span>, var)</span>
+<span id="cb72-40"><a href="#cb72-40" aria-hidden="true" tabindex="-1"></a>  fig_cap <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"'Distribution of responses to "</span>, var, <span class="st">"'"</span>)</span>
+<span id="cb72-41"><a href="#cb72-41" aria-hidden="true" tabindex="-1"></a>  fig_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"fig.cap = "</span>, fig_cap)</span>
+<span id="cb72-42"><a href="#cb72-42" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb72-43"><a href="#cb72-43" aria-hidden="true" tabindex="-1"></a>  plot_chunk_hdr <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"```{r "</span>,</span>
+<span id="cb72-44"><a href="#cb72-44" aria-hidden="true" tabindex="-1"></a>                           fig_name,</span>
+<span id="cb72-45"><a href="#cb72-45" aria-hidden="true" tabindex="-1"></a>                           <span class="st">", echo = FALSE, warning = FALSE, "</span>,</span>
+<span id="cb72-46"><a href="#cb72-46" aria-hidden="true" tabindex="-1"></a>                           fig_caption,</span>
+<span id="cb72-47"><a href="#cb72-47" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"}"</span>)</span>
+<span id="cb72-48"><a href="#cb72-48" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb72-49"><a href="#cb72-49" aria-hidden="true" tabindex="-1"></a>  plot_chunk <span class="ot">&lt;-</span> <span class="fu">c</span>(plot_chunk_hdr, <span class="st">"print(my_freq_plot(data, var))"</span>, <span class="st">"```"</span>)</span>
+<span id="cb72-50"><a href="#cb72-50" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb72-51"><a href="#cb72-51" aria-hidden="true" tabindex="-1"></a>  question_long <span class="ot">&lt;-</span></span>
+<span id="cb72-52"><a href="#cb72-52" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste0</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">Q: '"</span>, <span class="fu">retrieve_long_q</span>(var), <span class="st">"'"</span>)</span>
+<span id="cb72-53"><a href="#cb72-53" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb72-54"><a href="#cb72-54" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">knit_child</span>(</span>
+<span id="cb72-55"><a href="#cb72-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">c</span>(chunk_hdr, plot_chunk, question_long),</span>
+<span id="cb72-56"><a href="#cb72-56" aria-hidden="true" tabindex="-1"></a>    <span class="at">envir =</span> <span class="fu">environment</span>(),</span>
+<span id="cb72-57"><a href="#cb72-57" aria-hidden="true" tabindex="-1"></a>    <span class="at">quiet =</span> <span class="cn">TRUE</span></span>
+<span id="cb72-58"><a href="#cb72-58" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb72-59"><a href="#cb72-59" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Run using <code>lapply()</code>.</p>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>these_vars <span class="ot">&lt;-</span> <span class="fu">names</span>(survey_03)[<span class="dv">2</span><span class="sc">:</span><span class="dv">12</span>]</span>
-<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">invisible</span>(<span class="fu">lapply</span>(these_vars, return_section, <span class="at">data =</span> survey_03))</span>
-<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">unlist</span>(res), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>these_vars <span class="ot">&lt;-</span> <span class="fu">names</span>(survey_03)[<span class="dv">2</span><span class="sc">:</span><span class="dv">12</span>]</span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">invisible</span>(<span class="fu">lapply</span>(these_vars, return_section, <span class="at">data =</span> survey_03))</span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">unlist</span>(res), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <section id="responses-for-psych_problems_replicating" class="level3">
 <h3 class="anchored" data-anchor-id="responses-for-psych_problems_replicating">Responses for: <code>psych_problems_replicating</code></h3>
@@ -1693,7 +1745,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
