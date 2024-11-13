@@ -5,7 +5,13 @@ subtitle: "2023-11-08 Wed"
 
 # Prelude
 
-## On data sharing...
+---
+
+{{< video https://www.youtube.com/watch?v=YkgkThdzX-8 width="100%" height="70%" >}}
+
+@johnlennon2016-wr
+
+---
 
 ![Wikipedia: <https://en.wikipedia.org/wiki/Data_sharing>](https://upload.wikimedia.org/wikipedia/commons/6/65/To_deposit_or_not_to_deposit%2C_that_is_the_question_-_journal.pbio.1001779.g001.png){width=70%}
 
@@ -25,6 +31,12 @@ subtitle: "2023-11-08 Wed"
     - (Optional) @GilmoreAdolph2017
     - (Optional) @Meyer2018-vk
     
+## Imagine...
+
+- Pre-registration is the norm
+- All protocols, tasks, analysis code are shared
+- All data are shared (with explicit participant permission)
+    
 # Barriers to data sharing
 
 ---
@@ -33,15 +45,13 @@ Houtkoop, B. L., Chambers, C., Macleod, M., Bishop, D. V. M., Nichols, T. E. & W
 
 ---
 
-```{r, fig.cap="Figure 1 from @Houtkoop2018-tl."}
-knitr::include_graphics("../include/img/houktoop-2018-fig-01.png")
-```
+![Figure 1 from @Houtkoop2018-tl.](../include/img/houktoop-2018-fig-01.png)
 
 ---
 
 ![Figure 2 from @Houtkoop2018-tl](../include/img/houtkoop-2018-fig-02.png)
 
----
+## {.scrollable}
 
 ![Figure 3 from @Houtkoop2018-tl](../include/img/houtkoop-2018-fig.03.png)
 

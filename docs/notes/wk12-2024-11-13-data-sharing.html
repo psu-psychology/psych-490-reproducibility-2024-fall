@@ -378,8 +378,13 @@ Rick Gilmore
 <h1>Prelude</h1>
 
 </section>
-<section id="on-data-sharing" class="slide level2">
-<h2>On data sharing…</h2>
+<section class="slide level2">
+
+<iframe data-external="1" src="https://www.youtube.com/embed/YkgkThdzX-8" width="100%" height="70%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p><span class="citation" data-cites="johnlennon2016-wr">johnlennon (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span></p>
+</section>
+<section class="slide level2">
+
 
 <img data-src="https://upload.wikimedia.org/wikipedia/commons/6/65/To_deposit_or_not_to_deposit%2C_that_is_the_question_-_journal.pbio.1001779.g001.png" style="width:70.0%" class="r-stretch quarto-figure-center"><p class="caption">Wikipedia: <a href="https://en.wikipedia.org/wiki/Data_sharing" class="uri">https://en.wikipedia.org/wiki/Data_sharing</a></p></section>
 <section id="last-time" class="slide level2">
@@ -402,6 +407,14 @@ Rick Gilmore
 <li>(Optional) <span class="citation" data-cites="Meyer2018-vk">Meyer (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span></li>
 </ul></li>
 </ul>
+</section>
+<section id="imagine" class="slide level2">
+<h2>Imagine…</h2>
+<ul>
+<li>Pre-registration is the norm</li>
+<li>All protocols, tasks, analysis code are shared</li>
+<li>All data are shared (with explicit participant permission)</li>
+</ul>
 </section></section>
 <section>
 <section id="barriers-to-data-sharing" class="title-slide slide level1 center">
@@ -420,8 +433,8 @@ Rick Gilmore
 
 
 <img data-src="../include/img/houtkoop-2018-fig-02.png" class="r-stretch quarto-figure-center"><p class="caption">Figure 2 from <span class="citation" data-cites="Houtkoop2018-tl">Houtkoop et al. (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span></p></section>
-<section class="slide level2">
-
+<section id="section" class="slide level2 scrollable">
+<h2></h2>
 
 <img data-src="../include/img/houtkoop-2018-fig.03.png" class="r-stretch quarto-figure-center"><p class="caption">Figure 3 from <span class="citation" data-cites="Houtkoop2018-tl">Houtkoop et al. (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span></p></section>
 <section class="slide level2">
@@ -673,6 +686,9 @@ Gilmore, R. O., Hillary, F., Lazar, N., &amp; Wham, B. (2023). Penn state open s
 <div id="ref-Houtkoop2018-tl" class="csl-entry" role="listitem">
 Houtkoop, B. L., Chambers, C., Macleod, M., Bishop, D. V. M., Nichols, T. E., &amp; Wagenmakers, E.-J. (2018). Data sharing in psychology: A survey on barriers and preconditions. <em>Advances in Methods and Practices in Psychological Science</em>, 2515245917751886. <a href="https://doi.org/10.1177/2515245917751886">https://doi.org/10.1177/2515245917751886</a>
 </div>
+<div id="ref-johnlennon2016-wr" class="csl-entry" role="listitem">
+johnlennon. (2016, December). <span>IMAGINE</span>. (Ultimate mix, 2020) - john lennon &amp; the plastic ono band (with the flux fiddlers) <span>HD</span>. Youtube. Retrieved from <a href="https://www.youtube.com/watch?v=YkgkThdzX-8">https://www.youtube.com/watch?v=YkgkThdzX-8</a>
+</div>
 <div id="ref-Meyer2018-vk" class="csl-entry" role="listitem">
 Meyer, M. N. (2018). Practical tips for ethical data sharing. <em>Advances in Methods and Practices in Psychological Science</em>, 2515245917747656. <a href="https://doi.org/10.1177/2515245917747656">https://doi.org/10.1177/2515245917747656</a>
 </div>
@@ -897,44 +913,6 @@ Tenopir, C., Rice, N. M., Allard, S., Baird, L., Borycz, J., Christian, L., … 
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -1122,7 +1100,7 @@ Tenopir, C., Rice, N. M., Allard, S., Baird, L., Borycz, J., Christian, L., … 
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox"});
+    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
     (function() {
       let previousOnload = window.onload;
       window.onload = () => {
