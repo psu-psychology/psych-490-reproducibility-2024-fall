@@ -21,6 +21,14 @@ subtitle: "2024-15-08 Fri"
 
 # Overview
 
+## In the news
+
+![@Stolberg2024-lf](../include/img/nyt-2024-11-14-rfk-jr.png)
+
+---
+
+![@Oransky2011-wp](../include/img/retraction-watch-rfk.png)
+
 ## Announcements
 
 - [Final project survey]{.green_assigned}
