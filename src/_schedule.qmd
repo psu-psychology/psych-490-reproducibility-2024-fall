@@ -396,6 +396,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 - [Final project survey]{.green_assigned}
     - Please complete the [final project survey](https://forms.gle/vtdJ82Y7AjgU15VA9) by [Friday, November 22]{.orange_due}
+- [Class notes](notes/wk12-2024-11-15-work-session.qmd)
 
 ### Week 13: November 18-22 {- #week-13}
 
@@ -423,7 +424,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
     - @FORRT_undated-pl
 - Complete (optional)
     - [Questionnaire](https://forms.gle/gGAVmWjCHRVDekMo6) based on @Chopik2018-wx. Results are [here](surveys/survey-03.qmd).
-- [Class notes](nowk13-2024-11-20-open-sci-tools.qmd)
+- [Class notes](notes/wk13-2024-11-20-open-sci-tools.qmd)
 
 #### Friday, November 22 {-}
 

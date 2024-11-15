@@ -44,6 +44,7 @@ website:
           - href: "surveys/survey-01.qmd"
           - href: "surveys/survey-02.qmd"
           - href: "surveys/survey-03.qmd"
+          - href: "surveys/presentation-schedule.qmd"
       - text: supplemental
         menu:
           - text: "Retraction Watch database"

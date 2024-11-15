@@ -81,6 +81,7 @@ times <- c("04:45", "05:00", "05:15")
 ## Day 1: Friday, December 6, 2024
 
 ```{r}
+#| label: tbl-fri-dec-06-2024
 n_fri <- dim(fri_df)[1]
 n_no_pref <- dim(no_pref)[1]
 
@@ -100,6 +101,7 @@ new_fri_df |>
 ## Day 2: Monday, December 9, 2024
 
 ```{r}
+#| label: tbl-mon-dec-09-2024
 mon_df$Time <- times[1:dim(mon_df)[1]]
 
 mon_df |>
@@ -113,6 +115,7 @@ mon_df |>
 ## Day 3: Wednesday, December 11, 2024
 
 ```{r}
+#| label: tbl-wed-dec-11-2024
 wed_df$Time <- times[1:dim(wed_df)[1]]
 
 wed_df |>

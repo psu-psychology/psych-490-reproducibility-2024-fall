@@ -1,0 +1,48 @@
+---
+title: "Work session"
+subtitle: "2024-15-08 Fri"
+---
+
+# Prelude
+
+## Can most people be trusted?
+
+---
+
+![](https://ourworldindata.org/images/published/interpersonal-trust-varies-widely-across-countries-desktop_1350.png)
+@MathieuUnknown-ff
+
+---
+
+<iframe src="https://ourworldindata.org/grapher/self-reported-trust-attitudes?tab=map" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+
+# Overview
+
+## Announcements
+
+- [Final project survey]{.green_assigned}
+    - Please complete the [final project survey](https://forms.gle/vtdJ82Y7AjgU15VA9) by [Friday, November 22]{.orange_due}
+    
+## Last time...
+
+- What problems with scientific reproducibility would be reduced or eliminated if data sharing were the norm?
+
+## Today
+
+*Work Session: Final Projects*
+
+# Next time
+
+*Materials, code, & protocol sharing*
+
+- Read
+    - @Soska2021-mh
+    - @Gilroy2019-bf
+- Explore
+    - [protocols.io](https://www.protocols.io/)
+    - [Journal of Visualized Experiments (JOVE)](https://www.jove.com/)
+- [Class notes](wk13-2024-11-18-materials-sharing.qmd)
+
+# Resources
+
+## References
