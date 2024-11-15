@@ -5,12 +5,15 @@ subtitle: "2024-15-08 Fri"
 
 # Prelude
 
-## Can most people be trusted?
+---
+
+>Generally speaking, would you say that most people can be trusted or that you need to be very careful in dealing with people?
+
+@MathieuUnknown-ff
 
 ---
 
-![](https://ourworldindata.org/images/published/interpersonal-trust-varies-widely-across-countries-desktop_1350.png)
-@MathieuUnknown-ff
+![@MathieuUnknown-ff](https://ourworldindata.org/images/published/interpersonal-trust-varies-widely-across-countries-desktop_1350.png){width="80%"}
 
 ---
 
