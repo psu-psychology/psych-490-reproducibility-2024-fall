@@ -428,7 +428,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 #### Friday, November 22 {-}
 
-*Work session: Data sharing*
+*Work session: Data sharing & Final Projects*
 
 - [Assignment distributed]{.green_assigned}
     - [Exercise 08: Data and materials sharing](exercises/ex08-sharing.qmd)
