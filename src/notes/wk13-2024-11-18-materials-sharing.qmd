@@ -1,30 +1,24 @@
 ---
 title: "Materials, code, & protocol sharing"
-subtitle: "2023-11-13 Mon"
-author: "Rick Gilmore"
-format: revealjs
-bibliography: [../include/bib/packages.bib, ../include/bib/psu-repro.bib]
-csl: ../include/bib/apa.csl
-css: ../include/css/styles.css
-footer: "[PSYCH 490.009](../index.html): 2023-11-13 Mon"
+subtitle: "2024-11-18 Mon"
 ---
 
 # Overview
 
 ## Announcements
 
-- [Friday, November 17]{.orange_due}
-    - [Final project survey](https://forms.gle/L92wWFSpcdyLT4MR9) 
-- [Due Friday, November 17]{.orange_due}
-    - [Exercise 07: Data and materials sharing](../exercises/ex07-sharing.qmd)
+- Complete (optional)
+    - [Questionnaire](https://forms.gle/gGAVmWjCHRVDekMo6) based on @Chopik2018-wx. Results are [here](../surveys/survey-03.qmd).
+- [Friday, November 22]{.orange_due}
+    - [Final project survey](https://forms.gle/vtdJ82Y7AjgU15VA9) 
 
 ## Today
 
 *Materials, code, & protocol sharing*
 
 - Discuss
-    - [@Soska2021-mh]
-    - (optional) [@Gilroy2019-bf]
+    - @Soska2021-mh
+    - (optional) @Gilroy2019-bf
 - Explore
     - [protocols.io](https://www.protocols.io/)
     - [Journal of Visualized Experiments (JOVE)](https://www.jove.com/)
@@ -56,7 +50,7 @@ footer: "[PSYCH 490.009](../index.html): 2023-11-13 Mon"
 - Supplemental methods associate with research articles
 - Examples examples:
   - [PLAY Project](https://play-project.org)
-    - Especially video, see [@Gilmore2017-wd].
+    - Especially video, see @Gilmore2017-wd.
     - Survey [workflow](https://PLAY-behaviorome.github.io/KoBoToolbox)
   - Penn State Open Science Survey [@Gilmore_undated-gj]
 - <https://protocols.io>
@@ -78,11 +72,11 @@ footer: "[PSYCH 490.009](../index.html): 2023-11-13 Mon"
 - <https://databrary.org>
 - Open (not public) sharing, but restricted to authorized researchers
 - Specialized for storing and sharing video
-- [@GilmoreAdolph2017](https://doi.org/10.1038/s41562-017-0128)
+- @GilmoreAdolph2017
 
 ---
 
-![Growth in Databrary investigators and Institutions from <https://databrary.github.io/analytics>](https://databrary.github.io/analytics/include/img/fig-databrary-inst-invest-timeseries-1.png)
+![Growth in Databrary investigators and Institutions from <https://databrary.github.io/analytics>](https://databrary.github.io/analytics/weekly_files/figure-html/fig-databrary-inst-invest-timeseries-1.png)
 # When/how to share
 
 ## Play & Learning Across a Year (PLAY) Project
@@ -90,31 +84,25 @@ footer: "[PSYCH 490.009](../index.html): 2023-11-13 Mon"
 - PLAY Project: <https://play-project.org>
 - Survey data via [KoBoToolbox](https://kobotoolbox.org): <https://PLAY-behaviorome.github.io/KoBoToolbox>
 
-## [@Soska2021-mh](http://dx.doi.org/10.7191/jeslib.2021.1208)
+## @Soska2021-mh
 
-```{r, out.width="100%", fig.cap="Figure 2 from [@Soska2021-mh](http://dx.doi.org/10.7191/jeslib.2021.1208)"}
-knitr::include_graphics("../include/img/soska-etal-fig-02.png")
-```
+![Figure 2 from @Soska2021-mh](../include/img/soska-etal-fig-02.png)
 
----
+## {.scrollable}
 
-```{r, out.width="100%", fig.cap="Figure 1 from [@Soska2021-mh](http://dx.doi.org/10.7191/jeslib.2021.1208)"}
-knitr::include_graphics("../include/img/soska-etal-fig-01.png")
-```
+![Figure 1 from @Soska2021-mh](../include/img/soska-etal-fig-01.png)
 
----
+## {.scrollable}
 
-```{r, out.width="100%", fig.cap="Table 1 from [@Soska2021-mh](http://dx.doi.org/10.7191/jeslib.2021.1208)"}
-knitr::include_graphics("../include/img/soska-etal-table-01.png")
-```
+![Table 1 from @Soska2021-mh](../include/img/soska-etal-table-01.png)
 
 ---
 
-::: {.callout-note title="Your turn"}
+::: {.callout-note}
+## Your turn
 
 - What do students want researchers to share?
 - What are the pros and cons of active vs. *post hoc* data curation?
-
 :::
 
 # Next time
@@ -122,11 +110,17 @@ knitr::include_graphics("../include/img/soska-etal-table-01.png")
 *Open science tools*
 
 - Read
-    - [@Kathawalla2021-tk]
-    - [@Cruwell2019-nz]
+    - @Kathawalla2021-tk
+    - @Chopik2018-wx
+    - (Optional) @Cruwell2019-nz
 - Explore
-    - [@FORRT_undated-pl]
-- [Class notes](wk13-2023-11-15.qmd)
+    - @FORRT_undated-pl
+    
+---
+
+- Complete (optional)
+    - [Questionnaire](https://forms.gle/gGAVmWjCHRVDekMo6) based on @Chopik2018-wx. Results are [here](../surveys/survey-03.qmd).
+- [Class notes](wk13-2024-11-20-open-sci-tools.qmd)
 
 # Resources
 
