@@ -3756,7 +3756,7 @@
     "href": "notes/wk13-2024-11-20-open-sci-tools.html#today",
     "title": "Open science tools",
     "section": "Today",
-    "text": "Today\nOpen science tools\n\nRead\n\nKathawalla, Silverstein, & Syed (2021)\nChopik, Bremner, Defever, & Keller (2018)\n(Optional) Crüwell et al. (2019)\n\nExplore\n\n“FORRT - framework for open and reproducible research training” (n.d.)\n\nComplete (optional)\n\nQuestionnaire based on Chopik et al. (2018). Results are here"
+    "text": "Today\nOpen science tools\n\nRead\n\nKathawalla, Silverstein, & Syed (2021)\nChopik, Bremner, Defever, & Keller (2018)\n(Optional) Crüwell et al. (2019)"
   },
   {
     "objectID": "notes/wk13-2024-11-20-open-sci-tools.html#survey-questions-from-chopik2018-wx",
@@ -3777,7 +3777,7 @@
     "href": "notes/wk13-2024-11-20-open-sci-tools.html#references",
     "title": "Open science tools",
     "section": "References",
-    "text": "References\n\n\n\n\nPSYCH 490.012 • Fall 2024\n\n\n\n\nChopik, W. J., Bremner, R. H., Defever, A. M., & Keller, V. N. (2018). How (and whether) to teach undergraduates about the replication crisis in psychological science. Teaching of Psychology, 45(2), 158–163. https://doi.org/10.1177/0098628318762900\n\n\nCrüwell, S., Doorn, J. van, Etz, A., Makel, M. C., Moshontz, H., Niebaum, J. C., … Schulte-Mecklenbeck, M. (2019). Seven easy steps to open science. Zeitschrift für Psychologie, 227(4), 237–248. https://doi.org/10.1027/2151-2604/a000387\n\n\nDefever, A. M., Chopik, W. J., Keller, V. N., & Bremner, R. (2016, August). Best practices pedagogy. Center For Open Science. Retrieved from https://osf.io/mh9pe/\n\n\nFORRT - framework for open and reproducible research training. (n.d.). https://forrt.org/. Retrieved from https://forrt.org/\n\n\nKathawalla, U.-K., Silverstein, P., & Syed, M. (2021). Easing into open science: A guide for graduate students and their advisors. Collabra. Psychology, 7(1). https://doi.org/10.1525/collabra.18684"
+    "text": "References\n\n\n\n\nPSYCH 490.012 • Fall 2024\n\n\n\n\nChopik, W. J., Bremner, R. H., Defever, A. M., & Keller, V. N. (2018). How (and whether) to teach undergraduates about the replication crisis in psychological science. Teaching of Psychology, 45(2), 158–163. https://doi.org/10.1177/0098628318762900\n\n\nCrüwell, S., Doorn, J. van, Etz, A., Makel, M. C., Moshontz, H., Niebaum, J. C., … Schulte-Mecklenbeck, M. (2019). Seven easy steps to open science. Zeitschrift für Psychologie, 227(4), 237–248. https://doi.org/10.1027/2151-2604/a000387\n\n\nDefever, A. M., Chopik, W. J., Keller, V. N., & Bremner, R. (2016, August). Best practices pedagogy. Center For Open Science. Retrieved from https://osf.io/mh9pe/\n\n\nFORRT - framework for open and reproducible research training. (n.d.). https://forrt.org/. Retrieved from https://forrt.org/\n\n\nKathawalla, U.-K., Silverstein, P., & Syed, M. (2021). Easing into open science: A guide for graduate students and their advisors. Collabra. Psychology, 7(1). https://doi.org/10.1525/collabra.18684\n\n\nTyson, A. (2024, November). Public trust in scientists and views on their role in policymaking. https://www.pewresearch.org/science/2024/11/14/public-trust-in-scientists-and-views-on-their-role-in-policymaking/."
   },
   {
     "objectID": "evaluation.html",
@@ -4639,5 +4639,12 @@
     "title": "Materials, code, & protocol sharing",
     "section": "In the news",
     "text": "In the news\n\nhttps://award.einsteinfoundation.de/award-winners-finalists/recipients-2024"
+  },
+  {
+    "objectID": "notes/wk13-2024-11-20-open-sci-tools.html#in-the-news",
+    "href": "notes/wk13-2024-11-20-open-sci-tools.html#in-the-news",
+    "title": "Open science tools",
+    "section": "In the news",
+    "text": "In the news\n\nTyson (2024)"
   }
 ]

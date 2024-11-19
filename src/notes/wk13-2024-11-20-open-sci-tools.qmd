@@ -5,6 +5,18 @@ subtitle: "2024-11-20 Wed"
 
 # Overview
 
+## In the news
+
+![@Tyson2024-sk](https://www.pewresearch.org/wp-content/uploads/sites/20/2024/11/PS_2024.11.14_trust-in-science_00-01.png)
+
+---
+
+![@Tyson2024-sk](https://www.pewresearch.org/wp-content/uploads/sites/20/2024/11/PS_2024.11.14_trust-in-science_00-06.png)
+
+---
+
+![@Tyson2024-sk](https://www.pewresearch.org/wp-content/uploads/sites/20/2024/11/PS_2024.11.14_trust-in-science_00-03.png)
+
 ## Announcements
 
 - [Friday, November 22]{.orange_due}
@@ -14,7 +26,7 @@ subtitle: "2024-11-20 Wed"
 
 ::: {.callout-note}
 ## Your turn
-- What do students want researchers to share?
+- What do *students* want researchers to share?
 - What are the pros and cons of active vs. *post hoc* data curation?
 :::
 
