@@ -1,0 +1,38 @@
+---
+title: "Work session"
+subtitle: "2024-11-22 Fri"
+---
+
+# Prelude
+
+# Overview
+
+## In the news {.scrollable}
+
+::: {#fig-fed-budget layout-ncol=2}
+
+![FY24 spending by agency](../include/img/federal-spending-fy24-agency.png){#fig-fy24-by-agency}
+
+![FY24 spending by category](../include/img/federal-spending-fy24-category.png){#fig-fy24-by-category}
+
+Fiscal Year (FY) 2024 U.S. Federal Spending: [@US-DEPARTMENT-OF-THE-TREASURYUnknown-uz]
+:::
+
+## Last time...
+
+## Announcements
+
+- [Final project survey due]{.orange_due}
+    - Please complete the [final project survey](https://forms.gle/vtdJ82Y7AjgU15VA9) by
+    
+## Last time...
+
+## Today
+
+*Work Session: Final Projects*
+
+# Next time
+
+# Resources
+
+## References
