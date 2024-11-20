@@ -159,7 +159,7 @@ survey_03_data_dictionary |>
 
 We'll add other items to the data dictionary later.
 
-## Visualizations
+## Visualizations 1.0
 
 ### Develop and test helper functions
 
@@ -199,7 +199,7 @@ my_hist <- function(data, var, q_long = "test", q_type = "none") {
   } else if (q_type == "important") {
     axis_label <- c("Not at all important <--> Very imporant")
   }
-
+  
   data |>
     ggplot() +
     aes(x = {{var}}) +
@@ -258,7 +258,29 @@ Here, we try plotting the histograms again using principles we learned from meta
 Define the functions.
 
 ```{r, warning=FALSE}
-my_freq_plot <- function(data = survey_03, var, q_type = "important") {
+# my_freq_plot <- function(data = survey_03, var, q_type = "important") {
+#   axis_label <- "Rating"
+#   if (q_type == "agree") {
+#     axis_label <- c("Strongly disagree <--> Strongly agree")
+#   } else if (q_type == "important") {
+#     axis_label <- c("Not at all important <--> Very imporant")
+#   }
+#   
+#   data |>
+#     ggplot() +
+#     aes(.data[[var]]) +
+#     geom_freqpoly(na.rm = TRUE,
+#                   show.legend = FALSE,
+#                   bins = 30) +
+#     xlim(c(.5, 5.5)) +
+#     xlab(axis_label)
+# }
+
+my_freq_plot <- function(var = "psych_problems_replicating", data = survey_03) {
+  
+  q_type <- "none"
+  q_type <- retrieve_q_type(var)
+  
   axis_label <- "Rating"
   if (q_type == "agree") {
     axis_label <- c("Strongly disagree <--> Strongly agree")
@@ -276,22 +298,56 @@ my_freq_plot <- function(data = survey_03, var, q_type = "important") {
     xlab(axis_label)
 }
 
-return_plot <- function(data, var) {
-  knitr::knit_child(
-    text = c(
-      "### Histogram for: `{{var}}`",
-      "\n",
-      "```{r, echo = F}",
-      "print(my_freq_plot(var, data))",
-      "```"
-    ),
-    envir = environment(),
-    quiet = TRUE
-  )
-}
+# my_freq_plot_q <- function(var = "psych_problems_replicating", data = survey_03) {
+#   #this_q <- retrieve_long_q(var)
+#   this_type <- retrieve_q_type(var)
+#   data %>%
+#     my_freq_plot(.data[[var]], this_type)
+# }
+
+# return_plot <- function(data, var) {
+#   knitr::knit_child(
+#     text = c(
+#       "### Histogram for: `{{var}}`",
+#       "\n",
+#       "```{r, echo = F}",
+#       "print(my_freq_plot(var, data))",
+#       "```"
+#     ),
+#     envir = environment(),
+#     quiet = TRUE
+#   )
+# }
+
+# return_section <- function(data, var) {
+#   chunk_hdr <- knitr::knit_expand(text = c("### Responses for: `{{this_var}}`", "\n"),
+#                                   this_var = var)
+#   
+#   # Build fig.cap from ground up
+#   fig_name <- paste0("#fig-dist-", var)
+#   fig_cap <- paste0("'Distribution of responses to ", var, "'")
+#   fig_caption <- paste0("fig.cap = ", fig_cap)
+#   
+#   plot_chunk_hdr <- paste0("```{r ",
+#                            fig_name,
+#                            ", echo = FALSE, warning = FALSE, ",
+#                            fig_caption,
+#                            "}")
+#   
+#   plot_chunk <- c(plot_chunk_hdr, "print(my_hist_q(var, data))", "```")
+#   
+#   question_long <-
+#     paste0("\nQ: '", retrieve_long_q(var), "'")
+#   
+#   knitr::knit_child(
+#     text = c(chunk_hdr, plot_chunk, question_long),
+#     envir = environment(),
+#     quiet = TRUE
+#   )
+# }
 
 return_section <- function(data, var) {
-  chunk_hdr <- knitr::knit_expand(text = c("### Responses for: `{{this_var}}`", "\n"),
+  chunk_hdr <- knitr::knit_expand(text = c("### Responses for: '{{this_var}}'", "\n"),
                                   this_var = var)
   
   # Build fig.cap from ground up
@@ -305,7 +361,7 @@ return_section <- function(data, var) {
                            fig_caption,
                            "}")
   
-  plot_chunk <- c(plot_chunk_hdr, "print(my_hist_q(var, data))", "```")
+  plot_chunk <- c(plot_chunk_hdr, "print(my_freq_plot(var, data))", "```")
   
   question_long <-
     paste0("\nQ: '", retrieve_long_q(var), "'")
