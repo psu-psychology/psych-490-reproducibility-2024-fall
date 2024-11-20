@@ -203,8 +203,9 @@ my_hist <- function(data, var, q_long = "test", q_type = "none") {
   data |>
     ggplot() +
     aes(x = {{var}}) +
-    geom_histogram() +
+    geom_histogram(bins = 9) +
     xlim(c(.5,5.5)) +
+    ylim(c(0, 10)) +
     ggtitle(q_long) +
     xlab(axis_label)
 }
@@ -258,14 +259,13 @@ Define the functions.
 
 ```{r, warning=FALSE}
 my_freq_plot <- function(data = survey_03, var, q_type = "important") {
-
   axis_label <- "Rating"
   if (q_type == "agree") {
-    axis_label <- c("Strongly disagree <--> Strongly agree")    
+    axis_label <- c("Strongly disagree <--> Strongly agree")
   } else if (q_type == "important") {
     axis_label <- c("Not at all important <--> Very imporant")
   }
-
+  
   data |>
     ggplot() +
     aes(.data[[var]]) +
@@ -282,7 +282,7 @@ return_plot <- function(data, var) {
       "### Histogram for: `{{var}}`",
       "\n",
       "```{r, echo = F}",
-      "print(my_freq_plot(data, var))",
+      "print(my_freq_plot(var, data))",
       "```"
     ),
     envir = environment(),
@@ -295,7 +295,7 @@ return_section <- function(data, var) {
                                   this_var = var)
   
   # Build fig.cap from ground up
-  fig_name <- paste0("fig-dist-", var)
+  fig_name <- paste0("#fig-dist-", var)
   fig_cap <- paste0("'Distribution of responses to ", var, "'")
   fig_caption <- paste0("fig.cap = ", fig_cap)
   
@@ -305,7 +305,7 @@ return_section <- function(data, var) {
                            fig_caption,
                            "}")
   
-  plot_chunk <- c(plot_chunk_hdr, "print(my_freq_plot(data, var))", "```")
+  plot_chunk <- c(plot_chunk_hdr, "print(my_hist_q(var, data))", "```")
   
   question_long <-
     paste0("\nQ: '", retrieve_long_q(var), "'")

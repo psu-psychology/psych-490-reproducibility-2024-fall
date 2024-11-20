@@ -23,9 +23,13 @@ subtitle: "2024-11-20 Wed"
 - Shared [methodology](https://www.pewresearch.org/science/2024/11/14/trust-in-science-2024-methodology/)
 - Survey [questions](https://www.pewresearch.org/wp-content/uploads/sites/20/2024/11/PS_2024.11.14_trust-in-science_questionnaire.pdf)
 
+---
+
+![@Engber2024-se](../include/img/engber-2024-atlantic.png)
+
 ## Announcements
 
-- [Friday, November 22]{.orange_due}
+- [This Friday, November 22]{.orange_due}
     - [Final project survey](https://forms.gle/gGAVmWjCHRVDekMo6) 
     
 ## Last time...
@@ -58,13 +62,25 @@ subtitle: "2024-11-20 Wed"
 
 >This article provides a roadmap to assist graduate students and their advisors to engage in open science practices. We suggest eight open science practices that novice graduate students could begin adopting today. The topics we cover include journal clubs, project workflow, preprints, reproducible code, data sharing, transparent writing, preregistration, and registered reports. 
 
+<p style="text-align:center;">
+@Kathawalla2021-tk
+</p>
+
 ---
 
 >To address concerns about not knowing how to engage in open science practices, we provide a difficulty rating of each behavior (easy, medium, difficult), present them in order of suggested adoption, and follow the format of what, why, how, and worries. 
 
+<p style="text-align:center;">
+@Kathawalla2021-tk
+</p>
+
 ---
 
 >We give graduate students ideas on how to approach conversations with their advisors/collaborators, ideas on how to integrate open science practices within the graduate school framework, and specific resources on how to engage with each behavior. 
+
+<p style="text-align:center;">
+@Kathawalla2021-tk
+</p>
 
 ---
 
@@ -89,9 +105,17 @@ subtitle: "2024-11-20 Wed"
 
 >Over the past 10 years, crises surrounding replication, fraud, and best practices in research methods have dominated discussions in the field of psychology. However, no research exists examining how to communicate these issues to undergraduates and what effect this has on their attitudes toward the field. 
 
+<p style="text-align:center;">
+@Chopik2018-wx
+</p>
+
 ---
 
 >We developed and validated a 1-hr lecture communicating issues surrounding the replication crisis and current recommendations to increase reproducibility. Pre- and post-lecture surveys suggest that the lecture serves as an excellent pedagogical tool. 
+
+<p style="text-align:center;">
+@Chopik2018-wx
+</p>
 
 ---
 
@@ -111,6 +135,10 @@ subtitle: "2024-11-20 Wed"
 - Survey questions in article
 - OSF project for materials: @Defever2016-ki
 - Data shared, but not in an easily reproducible form
+
+## What do *you* think?
+
+- Survey-03 [results](../surveys/survey-03.html#visualizations-2.0)
 
 # Next time
 
