@@ -3749,7 +3749,7 @@
     "href": "notes/wk13-2024-11-20-open-sci-tools.html#last-time",
     "title": "Open science tools",
     "section": "Last time…",
-    "text": "Last time…\n\n\n\n\n\n\nYour turn\n\n\n\nWhat do students want researchers to share?\nWhat are the pros and cons of active vs. post hoc data curation?"
+    "text": "Last time…\n\nActive curation\n\nOrganize data so it is ready for sharing during the data collection process\nRelated to continuous integration/continuous delivery (CI/CD) in software engineering"
   },
   {
     "objectID": "notes/wk13-2024-11-20-open-sci-tools.html#today",
@@ -3777,7 +3777,7 @@
     "href": "notes/wk13-2024-11-20-open-sci-tools.html#references",
     "title": "Open science tools",
     "section": "References",
-    "text": "References\n\n\n\n\nPSYCH 490.012 • Fall 2024\n\n\n\n\nChopik, W. J., Bremner, R. H., Defever, A. M., & Keller, V. N. (2018). How (and whether) to teach undergraduates about the replication crisis in psychological science. Teaching of Psychology, 45(2), 158–163. https://doi.org/10.1177/0098628318762900\n\n\nCrüwell, S., Doorn, J. van, Etz, A., Makel, M. C., Moshontz, H., Niebaum, J. C., … Schulte-Mecklenbeck, M. (2019). Seven easy steps to open science. Zeitschrift für Psychologie, 227(4), 237–248. https://doi.org/10.1027/2151-2604/a000387\n\n\nDefever, A. M., Chopik, W. J., Keller, V. N., & Bremner, R. (2016, August). Best practices pedagogy. Center For Open Science. Retrieved from https://osf.io/mh9pe/\n\n\nEngber, D. (2024, November). The business-school scandal that just keeps getting bigger. https://www.theatlantic.com/magazine/archive/2025/01/business-school-fraud-research/680669/.\n\n\nFORRT - framework for open and reproducible research training. (n.d.). https://forrt.org/. Retrieved from https://forrt.org/\n\n\nKathawalla, U.-K., Silverstein, P., & Syed, M. (2021). Easing into open science: A guide for graduate students and their advisors. Collabra. Psychology, 7(1). https://doi.org/10.1525/collabra.18684\n\n\nTyson, A. (2024, November). Public trust in scientists and views on their role in policymaking. https://www.pewresearch.org/science/2024/11/14/public-trust-in-scientists-and-views-on-their-role-in-policymaking/."
+    "text": "References\n\n\n\n\nPSYCH 490.012 • Fall 2024\n\n\n\n\nChopik, W. J., Bremner, R. H., Defever, A. M., & Keller, V. N. (2018). How (and whether) to teach undergraduates about the replication crisis in psychological science. Teaching of Psychology, 45(2), 158–163. https://doi.org/10.1177/0098628318762900\n\n\nCrüwell, S., Doorn, J. van, Etz, A., Makel, M. C., Moshontz, H., Niebaum, J. C., … Schulte-Mecklenbeck, M. (2019). Seven easy steps to open science. Zeitschrift für Psychologie, 227(4), 237–248. https://doi.org/10.1027/2151-2604/a000387\n\n\nDefever, A. M., Chopik, W. J., Keller, V. N., & Bremner, R. (2016, August). Best practices pedagogy. Center For Open Science. Retrieved from https://osf.io/mh9pe/\n\n\nEngber, D. (2024, November). The business-school scandal that just keeps getting bigger. https://www.theatlantic.com/magazine/archive/2025/01/business-school-fraud-research/680669/.\n\n\nFORRT - framework for open and reproducible research training. (n.d.). https://forrt.org/. Retrieved from https://forrt.org/\n\n\nIoannidis, J. P. (2024). Transparency, bias, and reproducibility across science: A meta-research view. The Journal of Clinical Investigation, 134(22). https://doi.org/10.1172/JCI181923\n\n\nKathawalla, U.-K., Silverstein, P., & Syed, M. (2021). Easing into open science: A guide for graduate students and their advisors. Collabra. Psychology, 7(1). https://doi.org/10.1525/collabra.18684\n\n\nTyson, A. (2024, November). Public trust in scientists and views on their role in policymaking. https://www.pewresearch.org/science/2024/11/14/public-trust-in-scientists-and-views-on-their-role-in-policymaking/."
   },
   {
     "objectID": "evaluation.html",
@@ -4702,5 +4702,12 @@
     "title": "Open science tools",
     "section": "What do you think?",
     "text": "What do you think?\n\nSurvey-03 results"
+  },
+  {
+    "objectID": "notes/wk13-2024-11-20-open-sci-tools.html#ioannidis",
+    "href": "notes/wk13-2024-11-20-open-sci-tools.html#ioannidis",
+    "title": "Open science tools",
+    "section": "Ioannidis",
+    "text": "Ioannidis\n\n…Let me start with disclosures. My main conflict of interest is that I try to be a scientist. This means I am probably biased and often wrong, but hopefully not totally resistant to the possibility of getting corrected.\n\n\nIoannidis (2024)"
   }
 ]

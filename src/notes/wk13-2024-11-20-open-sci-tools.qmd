@@ -27,12 +27,42 @@ subtitle: "2024-11-20 Wed"
 
 ![@Engber2024-se](../include/img/engber-2024-atlantic.png)
 
+## Ioannidis {.scrollable}
+
+>...Let me start with disclosures. My main conflict of interest is that I try to be a scientist. This means I am probably biased and often wrong, but hopefully not totally resistant to the possibility of getting corrected. 
+
+<p style="text-align:center;">
+@Ioannidis2024-he
+</p>
+
+---
+
+>Let me also make some preemptive comments. First and foremost, science is the best thing that can happen to humans, and research should be supported with heightened commitments. You have probably heard this too many times, but it is worth repeating. 
+
+<p style="text-align:center;">
+@Ioannidis2024-he
+</p>
+
+---
+
+>However, most research done to date has used nonreproducible, nontransparent, and suboptimal research practices. Science is becoming more massive and more complex. Scientific publications...are mostly advertisements (“trust me, this research was done”); raw data and experimental materials and algorithms are not usually shared. Moreover, our reward systems in academia and science are aligned with nonreproducible, nontransparent, and suboptimal research practices. Can we do better?
+
+<p style="text-align:center;">
+@Ioannidis2024-he
+</p>
+
 ## Announcements
 
 - [This Friday, November 22]{.orange_due}
     - [Final project survey](https://forms.gle/gGAVmWjCHRVDekMo6) 
     
 ## Last time...
+
+- *Active curation*
+  - Organize data so it is ready for sharing during the data collection process
+  - Related to [continuous integration/continuous delivery (CI/CD)](https://www.redhat.com/en/topics/devops/what-is-ci-cd) in software engineering
+  
+---
 
 ::: {.callout-note}
 ## Your turn
