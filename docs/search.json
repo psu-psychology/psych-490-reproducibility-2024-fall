@@ -3741,22 +3741,22 @@
     "objectID": "notes/wk13-2024-11-20-open-sci-tools.html#announcements",
     "href": "notes/wk13-2024-11-20-open-sci-tools.html#announcements",
     "title": "Open science tools",
-    "section": "",
-    "text": "This Friday, November 22\n\nFinal project survey"
+    "section": "Announcements",
+    "text": "Announcements\n\nThis Friday, November 22\n\nFinal project survey"
   },
   {
     "objectID": "notes/wk13-2024-11-20-open-sci-tools.html#last-time",
     "href": "notes/wk13-2024-11-20-open-sci-tools.html#last-time",
     "title": "Open science tools",
-    "section": "",
-    "text": "Active curation\n\nOrganize data so it is ready for sharing during the data collection process\nRelated to continuous integration/continuous delivery (CI/CD) in software engineering\n\n\n\n\n\n\n\n\n\nYour turn\n\n\n\n\nWhat do students want researchers to share?\nWhat are the pros and cons of active vs. post hoc data curation?"
+    "section": "Last time…",
+    "text": "Last time…\n\nActive curation\n\nOrganize data so it is ready for sharing during the data collection process\nRelated to continuous integration/continuous delivery (CI/CD) in software engineering"
   },
   {
     "objectID": "notes/wk13-2024-11-20-open-sci-tools.html#today",
     "href": "notes/wk13-2024-11-20-open-sci-tools.html#today",
     "title": "Open science tools",
-    "section": "",
-    "text": "Open science tools\n\nRead\n\nKathawalla, Silverstein, & Syed (2021)\nChopik, Bremner, Defever, & Keller (2018)\n(Optional) Crüwell et al. (2019)\n\n\n\n\nExplore\n\n“FORRT - Framework for Open and Reproducible Research Training” (n.d.)\n\nComplete (optional)\n\nQuestionnaire based on Chopik et al. (2018). Results are here"
+    "section": "Today",
+    "text": "Today\nOpen science tools\n\nRead\n\nKathawalla, Silverstein, & Syed (2021)\nChopik, Bremner, Defever, & Keller (2018)\n(Optional) Crüwell et al. (2019)"
   },
   {
     "objectID": "notes/wk13-2024-11-20-open-sci-tools.html#survey-questions-from-chopik2018-wx",
@@ -4644,15 +4644,15 @@
     "objectID": "notes/wk13-2024-11-20-open-sci-tools.html#in-the-news",
     "href": "notes/wk13-2024-11-20-open-sci-tools.html#in-the-news",
     "title": "Open science tools",
-    "section": "",
-    "text": "Tyson (2024)\n\n\n\n\n\n\nTyson (2024)\n\n\n\n\n\n\nTyson (2024)"
+    "section": "In the news",
+    "text": "In the news\n\nTyson (2024)"
   },
   {
     "objectID": "notes/wk13-2024-11-20-open-sci-tools.html#open-science-perspective",
     "href": "notes/wk13-2024-11-20-open-sci-tools.html#open-science-perspective",
     "title": "Open science tools",
-    "section": "",
-    "text": "No raw data, but…\nShared methodology\nSurvey questions\n\n\n\n\n\nEngber (2024)"
+    "section": "Open science perspective",
+    "text": "Open science perspective\n\nNo raw data, but…\nShared methodology\nSurvey questions"
   },
   {
     "objectID": "notes/wk13-2024-11-22-work-session.html#in-the-news",
@@ -4707,8 +4707,8 @@
     "objectID": "notes/wk13-2024-11-20-open-sci-tools.html#ioannidis",
     "href": "notes/wk13-2024-11-20-open-sci-tools.html#ioannidis",
     "title": "Open science tools",
-    "section": "",
-    "text": "John Ioannidis, MD, DSc\n\n\n\n\n…Let me start with disclosures. My main conflict of interest is that I try to be a scientist. This means I am probably biased and often wrong, but hopefully not totally resistant to the possibility of getting corrected.\n\n\nIoannidis (2024)\n\n\n\n\n\nLet me also make some preemptive comments. First and foremost, science is the best thing that can happen to humans, and research should be supported with heightened commitments. You have probably heard this too many times, but it is worth repeating.\n\n\nIoannidis (2024)\n\n\n\nHowever, most research done to date has used nonreproducible, nontransparent, and suboptimal research practices. Science is becoming more massive and more complex. Scientific publications…are mostly advertisements (“trust me, this research was done”); raw data and experimental materials and algorithms are not usually shared. Moreover, our reward systems in academia and science are aligned with nonreproducible, nontransparent, and suboptimal research practices. Can we do better?\n\n\nIoannidis (2024)"
+    "section": "Ioannidis",
+    "text": "Ioannidis\n\n\n\n\n\nJohn Ioannidis, MD, DSc\n\n\n\n\n…Let me start with disclosures. My main conflict of interest is that I try to be a scientist. This means I am probably biased and often wrong, but hopefully not totally resistant to the possibility of getting corrected.\n\n\nIoannidis (2024)"
   },
   {
     "objectID": "surveys/survey-03.html#visualizations-1.0",

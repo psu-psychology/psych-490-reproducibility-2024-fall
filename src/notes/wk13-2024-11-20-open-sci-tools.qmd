@@ -76,7 +76,7 @@ subtitle: "2024-11-20 Wed"
 ## Your turn
 - What do *students* want researchers to share?
 - What are the pros and cons of active vs. *post hoc* data curation?
-:::
+::: 
 
 ## Today
 
