@@ -29,11 +29,19 @@ subtitle: "2024-11-20 Wed"
 
 ## Ioannidis {.scrollable}
 
+:::: {.columns}
+
+::: {.column width="40%"}
+![John Ioannidis, MD, DSc](https://med.stanford.edu/services/api/cap/profiles/photocache.18745.jpg)
+:::
+::: {.column width="60%"}
 >...Let me start with disclosures. My main conflict of interest is that I try to be a scientist. This means I am probably biased and often wrong, but hopefully not totally resistant to the possibility of getting corrected. 
 
 <p style="text-align:center;">
 @Ioannidis2024-he
 </p>
+:::
+::::
 
 ---
 
