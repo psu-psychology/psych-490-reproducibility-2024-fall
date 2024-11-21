@@ -430,6 +430,8 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 *Work session: Data sharing & Final Projects*
 
+- **Hybrid session**: In-person and on Zoom (<https://psu.zoom.us/my/rogilmore>)
+
 - [Assignment distributed]{.green_assigned}
     - [Exercise 08: Data and materials sharing](exercises/ex08-sharing.qmd)
 - [[Final project survey](https://forms.gle/vtdJ82Y7AjgU15VA9)]{.orange_due}
