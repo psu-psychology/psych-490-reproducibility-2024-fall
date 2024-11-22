@@ -7,16 +7,20 @@ subtitle: "2024-11-22 Fri"
 
 # Overview
 
-## In the news {.scrollable}
+## In the news
 
-::: {#fig-fed-budget layout-ncol=2}
+![@Dugatkin2024-bf](../include/img/guardian-calhoun-mouse-utopia.png)
 
-![FY24 spending by agency](../include/img/federal-spending-fy24-agency.png){#fig-fy24-by-agency}
+<!-- ## In the news {.scrollable} -->
 
-![FY24 spending by category](../include/img/federal-spending-fy24-category.png){#fig-fy24-by-category}
+<!-- ::: {#fig-fed-budget layout-ncol=2} -->
 
-Fiscal Year (FY) 2024 U.S. Federal Spending: [@US-DEPARTMENT-OF-THE-TREASURYUnknown-uz]
-:::
+<!-- ![FY24 spending by agency](../include/img/federal-spending-fy24-agency.png){#fig-fy24-by-agency} -->
+
+<!-- ![FY24 spending by category](../include/img/federal-spending-fy24-category.png){#fig-fy24-by-category} -->
+
+<!-- Fiscal Year (FY) 2024 U.S. Federal Spending: [@US-DEPARTMENT-OF-THE-TREASURYUnknown-uz] -->
+<!-- ::: -->
 
 ## Last time...
 
