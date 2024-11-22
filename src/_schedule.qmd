@@ -435,6 +435,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 - [Assignment distributed]{.green_assigned}
     - [Exercise 08: Data and materials sharing](exercises/ex08-sharing.qmd)
 - [[Final project survey](https://forms.gle/vtdJ82Y7AjgU15VA9)]{.orange_due}
+- [Class notes](notes/wk13-2024-11-22-work-session.qmd)
 
 ### November 25-29 *Thanksgiving Break*
 
