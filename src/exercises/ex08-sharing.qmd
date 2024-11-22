@@ -5,7 +5,7 @@ subtitle: "Data & materials sharing"
 
 ## Dates {-}
 
-Due: [Friday, November 17, 2023](../schedule.qmd#friday-november-17){.orange_due}
+Due: [Friday, December 6, 2024](../schedule.qmd#friday-december-06){.orange_due}
 
 ## Assignment {-}
 
