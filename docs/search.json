@@ -165,7 +165,7 @@
     "href": "surveys/presentation-schedule.html",
     "title": "Presentations",
     "section": "",
-    "text": "Tentative schedule as of 2024-12-02 09:42:58.695961."
+    "text": "Tentative schedule as of 2024-12-02 16:12:25.399213."
   },
   {
     "objectID": "surveys/presentation-schedule.html#background",
@@ -193,28 +193,28 @@
     "href": "surveys/presentation-schedule.html#select-subsets-by-preferred-date",
     "title": "Presentations",
     "section": "Select subsets by preferred date",
-    "text": "Select subsets by preferred date\n\n\nCode\nfri_df &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Fri December 6\"),\n                Give_talk == \"Yes\")\n\nmon_df &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Mon\"),\n                Give_talk == \"Yes\")\n\nwed_df &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Wed\"),\n                Give_talk == \"Yes\")\n\nno_pref &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"No preference\"),\n                Give_talk == \"Yes\")\n\ntimes &lt;- c(\"04:45\", \"05:00\", \"05:15\")"
+    "text": "Select subsets by preferred date\n\n\nCode\nfri_df &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Fri December 6\"),\n                Give_talk == \"Yes\")\n\nmon_df &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Mon\"),\n                Give_talk == \"Yes\")\n\nwed_df &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Wed\"),\n                Give_talk == \"Yes\")\n\nno_pref &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"No preference\"),\n                Give_talk == \"Yes\")\n\ntimes &lt;- c(\"04:40\", \"04:55\", \"05:10\")"
   },
   {
     "objectID": "surveys/presentation-schedule.html#day-1-friday-december-6-2024",
     "href": "surveys/presentation-schedule.html#day-1-friday-december-6-2024",
     "title": "Presentations",
     "section": "Day 1: Friday, December 6, 2024",
-    "text": "Day 1: Friday, December 6, 2024\n\n\nCode\nn_fri &lt;- dim(fri_df)[1]\nn_no_pref &lt;- dim(no_pref)[1]\n\nn_fri_slots_free &lt;- length(times) - n_fri\n\nnew_fri_df &lt;- rbind(fri_df, no_pref[1:n_fri_slots_free,])\nnew_fri_df$Time &lt;- times\n\nnew_fri_df |&gt;\n  dplyr::filter(!is.na(Authors)) |&gt;\n  dplyr::arrange(Time) |&gt;\n  dplyr::select(Time, Authors, Title, Format) |&gt;\n  kableExtra::kable(format = 'html') |&gt;\n  kableExtra::kable_classic()\n\n\n\n\n\nTime\nAuthors\nTitle\nFormat\n\n\n\n\n04:45\nHaley Curnow\nReplication in Educational Research\nLesson plan/class exercise\n\n\n05:00\nDesiree Milosh\nReplications in the Criminal Justice System\nIn-class talk\n\n\n05:15\nEvan Butler & Jacob Cerneskie\nResearch in the Media\nIn-class talk"
+    "text": "Day 1: Friday, December 6, 2024\n\n\nCode\nn_fri &lt;- dim(fri_df)[1]\nn_no_pref &lt;- dim(no_pref)[1]\n\nn_fri_slots_free &lt;- length(times) - n_fri\n\nnew_fri_df &lt;- rbind(fri_df, no_pref[1:n_fri_slots_free,])\nnew_fri_df$Time &lt;- times\n\nnew_fri_df |&gt;\n  dplyr::filter(!is.na(Authors)) |&gt;\n  dplyr::arrange(Time) |&gt;\n  dplyr::select(Time, Authors, Title, Format) |&gt;\n  kableExtra::kable(format = 'html') |&gt;\n  kableExtra::kable_classic()\n\n\n\n\n\nTime\nAuthors\nTitle\nFormat\n\n\n\n\n04:40\nHaley Curnow\nReplication in Educational Research\nLesson plan/class exercise\n\n\n04:55\nDesiree Milosh\nReplications in the Criminal Justice System\nIn-class talk\n\n\n05:10\nEvan Butler & Jacob Cerneskie\nResearch in the Media\nIn-class talk"
   },
   {
     "objectID": "surveys/presentation-schedule.html#day-2-monday-december-9-2024",
     "href": "surveys/presentation-schedule.html#day-2-monday-december-9-2024",
     "title": "Presentations",
     "section": "Day 2: Monday, December 9, 2024",
-    "text": "Day 2: Monday, December 9, 2024\n\n\nCode\nmon_df$Time &lt;- times[1:dim(mon_df)[1]]\n\nmon_df |&gt;\n  dplyr::filter(!is.na(Authors)) |&gt;\n  dplyr::arrange(Time) |&gt;\n  dplyr::select(Time, Authors, Title, Format) |&gt;\n  kableExtra::kable(format = 'html') |&gt;\n  kableExtra::kable_classic()\n\n\n\n\n\nTime\nAuthors\nTitle\nFormat\n\n\n\n\n04:45\nRylee Cox\nEfficacy and Reproducibility of Guardian Caps to Prevent Concussions in the National Football League (most likely will change title)\nIn-class talk\n\n\n05:00\nSage Park\nAphantasia and Open Science\nResearch project (& write-up)"
+    "text": "Day 2: Monday, December 9, 2024\n\n\nCode\nmon_df$Time &lt;- times[1:dim(mon_df)[1]]\n\nmon_df |&gt;\n  dplyr::filter(!is.na(Authors)) |&gt;\n  dplyr::arrange(Time) |&gt;\n  dplyr::select(Time, Authors, Title, Format) |&gt;\n  kableExtra::kable(format = 'html') |&gt;\n  kableExtra::kable_classic()\n\n\n\n\n\nTime\nAuthors\nTitle\nFormat\n\n\n\n\n04:40\nRylee Cox\nEfficacy and Reproducibility of Guardian Caps to Prevent Concussions in the National Football League (most likely will change title)\nIn-class talk\n\n\n04:55\nSage Park\nAphantasia and Open Science\nResearch project (& write-up)\n\n\n05:10\nEmily Acosta, Manny Winikur, Sean Haroutunian\nImportance of Norms and Counternorms in the Field of Scientific Experimentations\nOpinion piece"
   },
   {
     "objectID": "surveys/presentation-schedule.html#day-3-wednesday-december-11-2024",
     "href": "surveys/presentation-schedule.html#day-3-wednesday-december-11-2024",
     "title": "Presentations",
     "section": "Day 3: Wednesday, December 11, 2024",
-    "text": "Day 3: Wednesday, December 11, 2024\n\n\nCode\nwed_df$Time &lt;- times[1:dim(wed_df)[1]]\n\nwed_df |&gt;\n  dplyr::filter(!is.na(Authors)) |&gt;\n  dplyr::arrange(Time) |&gt;\n  dplyr::select(Time, Authors, Title, Format) |&gt;\n  kableExtra::kable(format = 'html') |&gt;\n  kableExtra::kable_classic()\n\n\n\n\n\nTime\nAuthors\nTitle\nFormat\n\n\n\n\n04:45\nSamuel Casimir\nRind report\nOpinion piece\n\n\n05:00\nGabriel Lehman\nAggression in Video Games and Replicating Research\nResearch project (& write-up)\n\n\n05:15\nNoé Sitbon-Taylor\nHistory of p-value\nIn-class talk\n\n\nNA\nNathan Fasenmyer\nReplication Discrepancies in Neuroscience\nIn-class talk"
+    "text": "Day 3: Wednesday, December 11, 2024\n\n\nCode\nwed_df$Time &lt;- times[1:dim(wed_df)[1]]\n\nwed_df |&gt;\n  dplyr::filter(!is.na(Authors)) |&gt;\n  dplyr::arrange(Time) |&gt;\n  dplyr::select(Time, Authors, Title, Format) |&gt;\n  kableExtra::kable(format = 'html') |&gt;\n  kableExtra::kable_classic()\n\n\n\n\n\nTime\nAuthors\nTitle\nFormat\n\n\n\n\n04:40\nSamuel Casimir\nRind report\nOpinion piece\n\n\n04:55\nGabriel Lehman\nAggression in Video Games and Replicating Research\nResearch project (& write-up)\n\n\n05:10\nNoé Sitbon-Taylor\nHistory of p-value\nIn-class talk\n\n\nNA\nNathan Fasenmyer\nReplication Discrepancies in Neuroscience\nIn-class talk"
   },
   {
     "objectID": "supplemental/simmons-etal-2011-suppl.html",
@@ -4701,7 +4701,7 @@
     "href": "surveys/presentation-schedule.html#summary-statistics",
     "title": "Presentations",
     "section": "Summary statistics",
-    "text": "Summary statistics\n\n\nCode\npresentations_df &lt;- presentations_df |&gt;\n  dplyr::filter(!stringr::str_detect(Authors, \"Gilmore\"))\n\npresentations_df |&gt;\n  dplyr::select(Give_talk, Format) |&gt;\n  dplyr::count(Format, Give_talk) |&gt;\n  kableExtra::kable(format = \"html\") |&gt;\n  kableExtra::kable_classic()\n\n\n\n\n\nFormat\nGive_talk\nn\n\n\n\n\nIn-class talk\nYes\n5\n\n\nLesson plan/class exercise\nYes\n1\n\n\nOpinion piece\nNo\n2\n\n\nOpinion piece\nYes\n1\n\n\nResearch project (& write-up)\nNo\n4\n\n\nResearch project (& write-up)\nYes\n2\n\n\n\n\n\n\n\nA total of n= 15 presenters have completed the survey as of 2024-12-02 09:43:00.317583."
+    "text": "Summary statistics\n\n\nCode\npresentations_df &lt;- presentations_df |&gt;\n  dplyr::filter(!stringr::str_detect(Authors, \"Gilmore\"))\n\npresentations_df |&gt;\n  dplyr::select(Give_talk, Format) |&gt;\n  dplyr::count(Format, Give_talk) |&gt;\n  kableExtra::kable(format = \"html\") |&gt;\n  kableExtra::kable_classic()\n\n\n\n\n\nFormat\nGive_talk\nn\n\n\n\n\nIn-class talk\nYes\n5\n\n\nLesson plan/class exercise\nYes\n1\n\n\nOpinion piece\nNo\n2\n\n\nOpinion piece\nYes\n2\n\n\nResearch project (& write-up)\nNo\n4\n\n\nResearch project (& write-up)\nYes\n2\n\n\n\n\n\n\n\nA total of n= 16 presenters have completed the survey as of 2024-12-02 16:12:26.950942."
   },
   {
     "objectID": "notes/wk14-2024-12-02-work-session.html#in-the-news",
