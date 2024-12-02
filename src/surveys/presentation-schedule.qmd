@@ -53,12 +53,24 @@ presentation_qs <- tibble::tibble(q_long = names(presentations_df), q_short = ne
 names(presentations_df) <- new_names
 ```
 
-## Select subsets by preferred date
+## Summary statistics
 
 ```{r}
 presentations_df <- presentations_df |>
   dplyr::filter(!stringr::str_detect(Authors, "Gilmore"))
 
+presentations_df |>
+  dplyr::select(Give_talk, Format) |>
+  dplyr::count(Format, Give_talk) |>
+  kableExtra::kable(format = "html") |>
+  kableExtra::kable_classic()
+```
+
+A total of *n*= `{r} dim(presentations_df)[1]` presenters have completed the survey as of `{r} Sys.time()`.
+
+## Select subsets by preferred date
+
+```{r}
 fri_df <- presentations_df |>
   dplyr::filter(stringr::str_detect(Preferred_date, "Fri December 6"),
                 Give_talk == "Yes")
