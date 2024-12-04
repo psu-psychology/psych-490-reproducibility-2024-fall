@@ -87,7 +87,7 @@ no_pref <- presentations_df |>
   dplyr::filter(stringr::str_detect(Preferred_date, "No preference"),
                 Give_talk == "Yes")
 
-times <- c("04:40", "04:55", "05:10")
+times <- c("03:40", "03:55", "04:10")
 ```
 
 ## Day 1: Friday, December 6, 2024
