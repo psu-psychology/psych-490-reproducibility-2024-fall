@@ -451,6 +451,8 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 *In-class final project work day*
 
+- [Class notes](notes/wk14-2024-12-04-work-session.qmd)
+
 #### Friday, December 6 {-}
 
 *Project presentations*

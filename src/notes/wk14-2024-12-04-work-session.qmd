@@ -1,0 +1,68 @@
+---
+title: "Work session"
+subtitle: "2024-12-04 Wed"
+---
+
+# Prelude
+
+---
+
+{{< video https://www.youtube.com/watch?v=RCyYuLQ7_Ws width=100% height=70% >}}
+
+@GamblingKenny2012-kw
+
+# Overview
+
+## In the news
+
+>In study 1, we found that seeing scientists as higher in intellectual humility was associated with greater perceived trustworthiness of scientists and support for science-based beliefs.
+
+@Koetke2024-zg
+
+---
+
+![Figure 1 from @Koetke2024-zg](../include/img/koetke-etal-2024-fig-01.png)
+
+---
+
+>We then demonstrated that describing a scientist as high (versus low) in intellectual humility increased perceived trustworthiness of the scientist (studies 2–4), belief in their research (studies 2–4), intentions to follow their research-based recommendations (study 3) and information-seeking behaviour (study 4).
+
+@Koetke2024-zg
+
+---
+
+>These studies reveal the benefits of seeing scientists as intellectually humble across medical, psychological and climate science topics.
+
+@Koetke2024-zg
+
+## Announcements
+
+- [Assignment Due Friday]{.orange_due}
+    - [Exercise 08: Data and materials sharing](../exercises/ex08-sharing.qmd)
+- Course [(SEEQ) evaluations](https://seeq-student.k8s.psu.edu/SEEQ) ready; due by December 8.
+
+## Guidance
+
+- Talks should be no longer than 10 min
+- Practice a couple of times beforehand
+- Email me your slides (`*.pptx` or `*.pdf`) or a URL to your [Google Slides](https://slides.google.com) by **noon** the day of your presentation
+- If you are comfortable with posting them...
+
+---
+
+- More figures, fewer words
+- Okay (recommended) to write out what you want to say
+
+## Today
+
+*Work Session: Final Projects*
+
+## Next time...
+
+*Student Presentations*
+
+- [Schedule](../surveys/presentation-schedule.qmd#day-1-friday-december-6-2024)
+
+# Resources
+
+## References

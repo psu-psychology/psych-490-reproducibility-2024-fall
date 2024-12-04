@@ -23,7 +23,7 @@ subtitle: "2024-12-02 Mon"
 
 ## Announcements
 
-- [Assignment Due]{.orange_due}
+- [Assignment Due Friday]{.orange_due}
     - [Exercise 08: Data and materials sharing](exercises/ex08-sharing.qmd)
 - Course [(SEEQ) evaluations](https://seeq-student.k8s.psu.edu/SEEQ) ready; due by December 8.
 
