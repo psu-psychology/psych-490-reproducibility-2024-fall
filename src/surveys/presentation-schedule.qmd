@@ -83,6 +83,9 @@ wed_df <- presentations_df |>
   dplyr::filter(stringr::str_detect(Preferred_date, "Wed"),
                 Give_talk == "Yes")
 
+fri13_df <- presentations_df |>
+  dplyr::filter(stringr::str_detect(Authors, "Fasenmyer"))
+
 no_pref <- presentations_df |>
   dplyr::filter(stringr::str_detect(Preferred_date, "No preference"),
                 Give_talk == "Yes")
@@ -131,6 +134,20 @@ mon_df |>
 wed_df$Time <- times[1:dim(wed_df)[1]]
 
 wed_df |>
+  dplyr::filter(!is.na(Authors)) |>
+  dplyr::arrange(Time) |>
+  dplyr::select(Time, Authors, Title, Format) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_classic()
+```
+
+## Day 4: Friday, December 13, 2024
+
+```{r}
+#| label: tbl-fri-dec-13-2024
+fri13_df$Time <- times[1:dim(fri13_df)[1]]
+
+fri13_df |>
   dplyr::filter(!is.na(Authors)) |>
   dplyr::arrange(Time) |>
   dplyr::select(Time, Authors, Title, Format) |>

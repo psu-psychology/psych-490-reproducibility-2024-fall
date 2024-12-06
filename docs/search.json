@@ -165,7 +165,7 @@
     "href": "surveys/presentation-schedule.html",
     "title": "Presentations",
     "section": "",
-    "text": "Tentative schedule as of 2024-12-06 14:41:15.491757."
+    "text": "Tentative schedule as of 2024-12-06 16:11:42.956734."
   },
   {
     "objectID": "surveys/presentation-schedule.html#background",
@@ -179,7 +179,7 @@
     "href": "surveys/presentation-schedule.html#download-data",
     "title": "Presentations",
     "section": "Download data",
-    "text": "Download data\n\n\nCode\ngoogledrive::drive_auth(email = \"rick.o.gilmore@gmail.com\")\n\n\n\n\nCode\nif (!dir.exists('csv')) {\n  dir.create('csv')\n}\n\ncsv_fn &lt;- \"csv/psych-490-2024-fall-presentations.csv\"\n\ngoogledrive::drive_download(file = 'PSYCH 490.012 Fall 2024 Project Info (Responses)', path = csv_fn, type = 'csv', overwrite = TRUE)\n\n\nAuto-refreshing stale OAuth token.\n\n\nFile downloaded:\n\n\n• 'PSYCH 490.012 Fall 2024 Project Info (Responses)'\n  &lt;id: 1MOnBaLxUGoYzOnfja_mj_VHW0Y52EYM0Zud9nAQ5Jsk&gt;\n\n\nSaved locally as:\n\n\n• 'csv/psych-490-2024-fall-presentations.csv'\n\n\n\n\nCode\nif (file.exists(csv_fn)) {\n  presentations_df &lt;- readr::read_csv(csv_fn, show_col_types = FALSE)\n} else {\n  message(\"File not found: \", csv_fn)\n  presentations_df &lt;- NULL\n}"
+    "text": "Download data\n\n\nCode\ngoogledrive::drive_auth(email = \"rick.o.gilmore@gmail.com\")\n\n\n\n\nCode\nif (!dir.exists('csv')) {\n  dir.create('csv')\n}\n\ncsv_fn &lt;- \"csv/psych-490-2024-fall-presentations.csv\"\n\ngoogledrive::drive_download(file = 'PSYCH 490.012 Fall 2024 Project Info (Responses)', path = csv_fn, type = 'csv', overwrite = TRUE)\n\n\nFile downloaded:\n\n\n• 'PSYCH 490.012 Fall 2024 Project Info (Responses)'\n  &lt;id: 1MOnBaLxUGoYzOnfja_mj_VHW0Y52EYM0Zud9nAQ5Jsk&gt;\n\n\nSaved locally as:\n\n\n• 'csv/psych-490-2024-fall-presentations.csv'\n\n\n\n\nCode\nif (file.exists(csv_fn)) {\n  presentations_df &lt;- readr::read_csv(csv_fn, show_col_types = FALSE)\n} else {\n  message(\"File not found: \", csv_fn)\n  presentations_df &lt;- NULL\n}"
   },
   {
     "objectID": "surveys/presentation-schedule.html#clean-the-data",
@@ -193,7 +193,7 @@
     "href": "surveys/presentation-schedule.html#select-subsets-by-preferred-date",
     "title": "Presentations",
     "section": "Select subsets by preferred date",
-    "text": "Select subsets by preferred date\n\n\nCode\nfri_df &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Fri December 6\"),\n                Give_talk == \"Yes\")\n\nmon_df &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Mon\"),\n                Give_talk == \"Yes\")\n\nwed_df &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Wed\"),\n                Give_talk == \"Yes\")\n\nno_pref &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"No preference\"),\n                Give_talk == \"Yes\")\n\ntimes &lt;- c(\"03:40\", \"03:55\", \"04:10\")"
+    "text": "Select subsets by preferred date\n\n\nCode\nfri_df &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Fri December 6\"),\n                Give_talk == \"Yes\")\n\nmon_df &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Mon\"),\n                Give_talk == \"Yes\")\n\nwed_df &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Wed\"),\n                Give_talk == \"Yes\")\n\nfri13_df &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Authors, \"Fasenmyer\"))\n\nno_pref &lt;- presentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"No preference\"),\n                Give_talk == \"Yes\")\n\ntimes &lt;- c(\"03:40\", \"03:55\", \"04:10\")"
   },
   {
     "objectID": "surveys/presentation-schedule.html#day-1-friday-december-6-2024",
@@ -4701,7 +4701,7 @@
     "href": "surveys/presentation-schedule.html#summary-statistics",
     "title": "Presentations",
     "section": "Summary statistics",
-    "text": "Summary statistics\n\n\nCode\npresentations_df &lt;- presentations_df |&gt;\n  dplyr::filter(!stringr::str_detect(Authors, \"Gilmore\"))\n\npresentations_df |&gt;\n  dplyr::select(Give_talk, Format) |&gt;\n  dplyr::count(Format, Give_talk) |&gt;\n  kableExtra::kable(format = \"html\") |&gt;\n  kableExtra::kable_classic()\n\n\n\n\n\nFormat\nGive_talk\nn\n\n\n\n\nIn-class talk\nYes\n5\n\n\nLesson plan/class exercise\nYes\n1\n\n\nOpinion piece\nNo\n2\n\n\nOpinion piece\nYes\n2\n\n\nResearch project (& write-up)\nNo\n4\n\n\nResearch project (& write-up)\nYes\n2\n\n\n\n\n\n\n\nA total of n= 16 presenters have completed the survey as of 2024-12-06 14:41:19.282344."
+    "text": "Summary statistics\n\n\nCode\npresentations_df &lt;- presentations_df |&gt;\n  dplyr::filter(!stringr::str_detect(Authors, \"Gilmore\"))\n\npresentations_df |&gt;\n  dplyr::select(Give_talk, Format) |&gt;\n  dplyr::count(Format, Give_talk) |&gt;\n  kableExtra::kable(format = \"html\") |&gt;\n  kableExtra::kable_classic()\n\n\n\n\n\nFormat\nGive_talk\nn\n\n\n\n\nIn-class talk\nYes\n5\n\n\nLesson plan/class exercise\nYes\n1\n\n\nOpinion piece\nNo\n2\n\n\nOpinion piece\nYes\n2\n\n\nResearch project (& write-up)\nNo\n4\n\n\nResearch project (& write-up)\nYes\n2\n\n\n\n\n\n\n\nA total of n= 16 presenters have completed the survey as of 2024-12-06 16:11:44.979185."
   },
   {
     "objectID": "notes/wk14-2024-12-02-work-session.html#in-the-news",
@@ -4828,5 +4828,19 @@
     "title": "Presentations•Day 1",
     "section": "In the news",
     "text": "In the news\n\nSmialek (2024)"
+  },
+  {
+    "objectID": "surveys/presentation-schedule.html#day-4-wednesday-december-11-2024",
+    "href": "surveys/presentation-schedule.html#day-4-wednesday-december-11-2024",
+    "title": "Presentations",
+    "section": "Day 4: Wednesday, December 11, 2024",
+    "text": "Day 4: Wednesday, December 11, 2024\n\n\nCode\nfri13_df$Time &lt;- times[1:dim(fri13_df)[1]]\n\nfri13_df |&gt;\n  dplyr::filter(!is.na(Authors)) |&gt;\n  dplyr::arrange(Time) |&gt;\n  dplyr::select(Time, Authors, Title, Format) |&gt;\n  kableExtra::kable(format = 'html') |&gt;\n  kableExtra::kable_classic()\n\n\n\n\n\nTime\nAuthors\nTitle\nFormat\n\n\n\n\n03:40\nNathan Fasenmyer\nReplication Discrepancies in Neuroscience\nIn-class talk"
+  },
+  {
+    "objectID": "surveys/presentation-schedule.html#day-4-friday-december-13-2024",
+    "href": "surveys/presentation-schedule.html#day-4-friday-december-13-2024",
+    "title": "Presentations",
+    "section": "Day 4: Friday, December 13, 2024",
+    "text": "Day 4: Friday, December 13, 2024\n\n\nCode\nfri13_df$Time &lt;- times[1:dim(fri13_df)[1]]\n\nfri13_df |&gt;\n  dplyr::filter(!is.na(Authors)) |&gt;\n  dplyr::arrange(Time) |&gt;\n  dplyr::select(Time, Authors, Title, Format) |&gt;\n  kableExtra::kable(format = 'html') |&gt;\n  kableExtra::kable_classic()\n\n\n\n\n\nTime\nAuthors\nTitle\nFormat\n\n\n\n\n03:40\nNathan Fasenmyer\nReplication Discrepancies in Neuroscience\nIn-class talk"
   }
 ]
