@@ -5,6 +5,11 @@ subtitle: "2024-12-06 Fri"
 
 # Overview
 
+## In the news
+
+![@Smialek2024-pa](../include/img/nytimes-fred-data.png)
+
+
 ## Announcements
 
 - [Assignment Due toda]{.orange_due}
