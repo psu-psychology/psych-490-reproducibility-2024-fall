@@ -460,6 +460,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 - [Schedule](surveys/presentation-schedule.qmd#day-1-friday-december-6-2024)
 - [Assignment Due]{.orange_due}
     - [Exercise 08: Data and materials sharing](exercises/ex08-sharing.qmd)
+- [Class notes](notes/wk14-2024-12-06-presentations.qmd)
 
 ### Week 15: December 9-13 {- #week-15}
 

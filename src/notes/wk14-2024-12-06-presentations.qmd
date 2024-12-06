@@ -1,0 +1,34 @@
+---
+title: "Presentations•Day 1"
+subtitle: "2024-12-06 Fri"
+---
+
+# Overview
+
+## Announcements
+
+- [Assignment Due toda]{.orange_due}
+    - [Exercise 08: Data and materials sharing](../exercises/ex08-sharing.qmd)
+- Course [(SEEQ) evaluations](https://seeq-student.k8s.psu.edu/SEEQ) ready; due by December 8.
+
+## Today
+
+*Student Presentations*
+
+## Schedule
+
+03:40 pm: Haley Curnow, "Replication studies in education research"
+
+03:55 pm: Desiree Milosh, "Replications in the Criminal Justice System"
+
+04:10 pm: Evan Butler & Jacob Cerneskie, "Research in the Media"
+
+## Next time...
+
+*Student Presentations*
+
+- [Schedule](../surveys/presentation-schedule.qmd#day-2-monday-december-9-2024)
+
+# Resources
+
+## References
