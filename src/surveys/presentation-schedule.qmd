@@ -77,7 +77,8 @@ fri_df <- presentations_df |>
 
 mon_df <- presentations_df |>
   dplyr::filter(stringr::str_detect(Preferred_date, "Mon"),
-                Give_talk == "Yes")
+                Give_talk == "Yes") |>
+    dplyr::filter(!stringr::str_detect(Authors, "Sage"))
 
 wed_df <- presentations_df |>
   dplyr::filter(stringr::str_detect(Preferred_date, "Wed"),
@@ -85,7 +86,7 @@ wed_df <- presentations_df |>
   dplyr::filter(!stringr::str_detect(Authors, "Fasenmyer"))
 
 fri13_df <- presentations_df |>
-  dplyr::filter(stringr::str_detect(Authors, "Fasenmyer"))
+  dplyr::filter(stringr::str_detect(Authors, "Fasenmyer|Sage")) 
 
 no_pref <- presentations_df |>
   dplyr::filter(stringr::str_detect(Preferred_date, "No preference"),

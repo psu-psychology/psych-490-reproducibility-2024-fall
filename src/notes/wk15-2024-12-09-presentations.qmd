@@ -32,9 +32,9 @@ subtitle: "2024-12-09 Mon"
 
 03:40, Rylee Cox, "Efficacy and Reproducibility of Guardian Caps to Prevent Concussions in the National Football League"
 </br></br>
-03:55,	Sage Park, "Aphantasia and Open Science"
-</br></br>
-04:10, Emily Acosta, Manny Winikur, Sean Haroutunian, "Importance of Norms and Counternorms in the Field of Scientific Experimentations"
+<!-- 03:55,	Sage Park, "Aphantasia and Open Science" -->
+<!-- </br></br> -->
+03:55, Emily Acosta, Manny Winikur, Sean Haroutunian, "Importance of Norms and Counternorms in the Field of Scientific Experimentations"
 
 ## Next time...
 
