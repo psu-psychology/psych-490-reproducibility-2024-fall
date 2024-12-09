@@ -312,7 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Tentative schedule as of 2024-12-09 14:01:50.562791.</p>
+<p>Tentative schedule as of 2024-12-09 16:10:30.260068.</p>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>This page documents how the presentation schedule can be automatically generated from the student survey.</p>
@@ -448,7 +448,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </div>
 </div>
-<p>A total of <em>n</em>= 16 presenters have completed the survey as of 2024-12-09 14:01:54.407495.</p>
+<p>A total of <em>n</em>= 16 presenters have completed the survey as of 2024-12-09 16:10:34.42439.</p>
 </section>
 <section id="select-subsets-by-preferred-date" class="level2">
 <h2 class="anchored" data-anchor-id="select-subsets-by-preferred-date">Select subsets by preferred date</h2>
@@ -467,10 +467,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>wed_df <span class="ot">&lt;-</span> presentations_df <span class="sc">|&gt;</span></span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(stringr<span class="sc">::</span><span class="fu">str_detect</span>(Preferred_date, <span class="st">"Wed"</span>),</span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>                Give_talk <span class="sc">==</span> <span class="st">"Yes"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span>stringr<span class="sc">::</span><span class="fu">str_detect</span>(Authors, <span class="st">"Fasenmyer"</span>))</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span>stringr<span class="sc">::</span><span class="fu">str_detect</span>(Authors, <span class="st">"Fasenmyer|Lehman"</span>))</span>
 <span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>fri13_df <span class="ot">&lt;-</span> presentations_df <span class="sc">|&gt;</span></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(stringr<span class="sc">::</span><span class="fu">str_detect</span>(Authors, <span class="st">"Fasenmyer|Sage"</span>)) </span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(stringr<span class="sc">::</span><span class="fu">str_detect</span>(Authors, <span class="st">"Fasenmyer|Sage|Lehman"</span>)) </span>
 <span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>no_pref <span class="ot">&lt;-</span> presentations_df <span class="sc">|&gt;</span></span>
 <span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(stringr<span class="sc">::</span><span class="fu">str_detect</span>(Preferred_date, <span class="st">"No preference"</span>),</span>
@@ -613,12 +613,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td style="text-align: left;">03:55</td>
-<td style="text-align: left;">Gabriel Lehman</td>
-<td style="text-align: left;">Aggression in Video Games and Replicating Research</td>
-<td style="text-align: left;">Research project (&amp; write-up)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">04:10</td>
 <td style="text-align: left;">Noé Sitbon-Taylor</td>
 <td style="text-align: left;">History of p-value</td>
 <td style="text-align: left;">In-class talk</td>
@@ -657,12 +651,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">03:40</td>
-<td style="text-align: left;">Sage Park</td>
-<td style="text-align: left;">Aphantasia and Open Science</td>
+<td style="text-align: left;">Gabriel Lehman</td>
+<td style="text-align: left;">Aggression in Video Games and Replicating Research</td>
 <td style="text-align: left;">Research project (&amp; write-up)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">03:55</td>
+<td style="text-align: left;">Sage Park</td>
+<td style="text-align: left;">Aphantasia and Open Science</td>
+<td style="text-align: left;">Research project (&amp; write-up)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">04:10</td>
 <td style="text-align: left;">Nathan Fasenmyer</td>
 <td style="text-align: left;">Replication Discrepancies in Neuroscience</td>
 <td style="text-align: left;">In-class talk</td>
