@@ -1,0 +1,47 @@
+---
+title: "Presentations • Day 2"
+subtitle: "2024-12-09 Mon"
+---
+
+# Overview
+
+## In the news
+
+<iframe src="https://ourworldindata.org/grapher/life-expectancy-vs-health-expenditure?tab=chart" loading="lazy" style="width: 100%; height: 70%; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+
+@ourworldindata2022ab
+
+---
+
+![https://close.city/?x=-77.84965&y=40.79747&z=13&r=0&l=1111111&tt_30=1&tt_43=3](../include/img/walkability-state-college.png)
+
+---
+
+![@Tully2024-iv](../include/img/tully-nytimes-nj-police-2024.png)
+
+## Announcements
+
+- [Due, Wednesday, December 18]{.orange_due}
+  - [Final project](exercises/final-project.qmd) write-ups due 5:00 PM.
+
+## Today
+
+*Student Presentations*
+
+## Schedule
+
+03:40, Rylee Cox, "Efficacy and Reproducibility of Guardian Caps to Prevent Concussions in the National Football League"
+</br></br>
+03:55,	Sage Park, "Aphantasia and Open Science"
+</br></br>
+04:10, Emily Acosta, Manny Winikur, Sean Haroutunian, "Importance of Norms and Counternorms in the Field of Scientific Experimentations"
+
+## Next time...
+
+*Student Presentations*
+
+- [Schedule](../surveys/presentation-schedule.qmd#day-3-wednesday-december-11-2024)
+
+# Resources
+
+## References

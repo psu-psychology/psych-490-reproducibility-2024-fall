@@ -81,7 +81,8 @@ mon_df <- presentations_df |>
 
 wed_df <- presentations_df |>
   dplyr::filter(stringr::str_detect(Preferred_date, "Wed"),
-                Give_talk == "Yes")
+                Give_talk == "Yes") |>
+  dplyr::filter(!stringr::str_detect(Authors, "Fasenmyer"))
 
 fri13_df <- presentations_df |>
   dplyr::filter(stringr::str_detect(Authors, "Fasenmyer"))
