@@ -1,0 +1,39 @@
+---
+title: "Presentations • Day 3"
+subtitle: "2024-12-11 Wed"
+---
+
+# Overview
+
+## In the news
+
+![@Belkin2024-te](../include/img/belkin-wsj-2024-12-10.png)
+
+---
+
+![@NCES2024-gm](../include/img/nces-piaa-2024.png)
+
+## Announcements
+
+- [Due, Wednesday, December 18]{.orange_due}
+  - [Final project](../exercises/final-project.qmd) write-ups due 5:00 PM.
+
+## Today
+
+*Student Presentations*
+
+## Schedule
+
+03:40, Samuel Casimir
+</br></br>
+03:55, Noé Sitbon-Taylor, History of p-value
+
+## Next time...
+
+*Student Presentations*
+
+- [Schedule](../surveys/presentation-schedule.qmd#day-4-friday-december-13-2024)
+
+# Resources
+
+## References

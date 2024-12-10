@@ -22,7 +22,7 @@ subtitle: "2024-12-09 Mon"
 ## Announcements
 
 - [Due, Wednesday, December 18]{.orange_due}
-  - [Final project](exercises/final-project.qmd) write-ups due 5:00 PM.
+  - [Final project](../exercises/final-project.qmd) write-ups due 5:00 PM.
 
 ## Today
 
