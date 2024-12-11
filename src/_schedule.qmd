@@ -476,6 +476,7 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 *Project presentations*
 
 - [Schedule](surveys/presentation-schedule.qmd#day-3-wednesday-december-11-2024)
+- [Class notes](notes/wk15-2024-12-11-presentations.qmd)
 
 #### Friday, December 13 {-}
 
