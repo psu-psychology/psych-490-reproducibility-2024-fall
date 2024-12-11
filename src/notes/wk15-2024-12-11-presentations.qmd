@@ -13,6 +13,10 @@ subtitle: "2024-12-11 Wed"
 
 ![@NCES2024-gm](../include/img/nces-piaa-2024.png)
 
+---
+
+![@Kwon2024-qu](../include/img/kwon-nature-ai-publishers-2024-12-11.png)
+
 ## Announcements
 
 - [Due, Wednesday, December 18]{.orange_due}
@@ -20,19 +24,16 @@ subtitle: "2024-12-11 Wed"
 
 ## Today
 
-*Student Presentations*
-
-## Schedule
-
-03:40, Samuel Casimir
-</br></br>
-03:55, Noé Sitbon-Taylor, History of p-value
+- Student [Presentations](../surveys/presentation-schedule.qmd#day-3-wednesday-december-11-2024)
+  - 03:40, Samuel Casimir
+  - 03:55, Noé Sitbon-Taylor
+- And, if time...
+  - *Our open science future*, [notes](wk15-2024-12-13-open-sci-future.qmd)
 
 ## Next time...
 
-*Student Presentations*
-
-- [Schedule](../surveys/presentation-schedule.qmd#day-4-friday-december-13-2024)
+- Student Presentations
+  - [Schedule](../surveys/presentation-schedule.qmd#day-4-friday-december-13-2024)
 
 # Resources
 
