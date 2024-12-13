@@ -1,0 +1,100 @@
+---
+title: "Presentations • Day 4"
+subtitle: "2024-12-13 Wed"
+---
+
+# Overview
+
+## Prelude
+
+---
+
+{{< video https://www.youtube.com/watch?v=zqiblXFlZuk width=100% height=70% >}}
+
+@Al2007-jp
+
+## In the news
+
+![@Roser2024-ir](../include/img/US-airline-travel-v2.png)
+
+## Announcements
+
+- [Due, Wednesday, December 18]{.orange_due}
+  - [Final project](../exercises/final-project.qmd) write-ups due 5:00 PM.
+  
+## Today
+
+- Student [Presentations](../surveys/presentation-schedule.qmd#day-4-friday-december-13-2024)
+  - 03:40, Gabriel Lehman
+  - 03:55, Sage Park
+  - 04:10, Nathan Fasenmyer
+  
+## Rigorous, robust, reproducible science...
+
+::: {.incremental}
+- Has been essential to the improvement of human health and well-being in the past
+- Will be increasingly important to these improvements in the 21st century and beyond
+- Can be strengthened
+- And must be
+:::
+
+## Advocate for science as
+
+::: {.incremental}
+- a **stock of accumulated knowledge** (facts & findings)
+- a set of **characteristic methods**
+- a **set of cultural values** [@Merton1973-vf, p. 268]
+- an **essential** tool for solving humanity's problems
+
+- that can and *should* be strengthened
+- through rigorous, thoughtful criticism
+:::
+
+## As a producer...
+
+- Commit to openly sharing your
+  - data, protocols, code
+  - from the very beginning
+- Carry through on your commitment
+- Encourage, help others
+- Strive to get better
+
+## As a consumer...
+
+- Keep your skepticism sharp
+- Ask how do we know that? Why do they think that?
+- Data + reasoning
+- Support policies, outlets, leaders who encourage openness, transparency
+
+---
+
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*hn9nGSNnalnFrSDlGHNctQ.png){fig-align="center"}
+
+---
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Richard Feynmann
+
+![](https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Richard_Feynman_Nobel.jpg/220px-Richard_Feynman_Nobel.jpg)
+
+:::
+
+::: {.column width="60%"}
+
+> The first principle is that **you must not fool yourself—and you are the easiest person to fool**.
+
+<p style="text-align:center;">
+[@Feynman1974-ld]
+</p>
+
+:::
+
+::::
+
+## Good luck!
+
+# Resources
+
+## References

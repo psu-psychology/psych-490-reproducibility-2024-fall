@@ -480,10 +480,10 @@ To earn 3 extra credit points for completing the survey, send the TA one of the 
 
 #### Friday, December 13 {-}
 
-*Our open science future*
+*Project presentations*
 
-- [Class notes](notes/wk15-2024-12-13-open-sci-future.qmd)
-  
+- [Class notes](notes/wk15-2024-12-13-presentations.qmd)
+ 
 ### Finals Week: December 16-20 {- #finals-week}
 
 #### Wednesday, December 18 {-}

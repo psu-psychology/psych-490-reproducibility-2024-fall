@@ -56,6 +56,8 @@ website:
           - text: "On spaghetti plots and causal models"
             href: "supplemental/causal-models.qmd"
           - href: "supplemental/metaanalysis-simulation.qmd"
+      - href: meta.qmd
+        text: meta
   repo-url: https://github.com/psu-psychology/psych-490-reproducibility-2024-fall
   repo-actions: [edit, issue]
   repo-subdir: src
@@ -76,7 +78,7 @@ format:
     citations-hover: true
     footnotes-hover: true
     date-modified: last-modified
-    bibliography: [include/bib/packages.bib, include/bib/psu-repro.bib]
+    bibliography: [include/bib/softbib.bib, include/bib/psu-repro.bib]
     csl: include/bib/apa.csl
     html-math-method: mathjax
 

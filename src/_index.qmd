@@ -1,5 +1,10 @@
 ## The reproducibility crisis in science {-}
 
+
+```{r include=FALSE}
+softbib::softbib(output = "include/bib/softbib.bib")
+```
+
 ::: {.content-visible when-format="html"}
 ::: {#fig-repro-books layout-ncol=3 layout-nrow=2}
 
