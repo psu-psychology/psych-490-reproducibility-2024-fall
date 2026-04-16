@@ -147,7 +147,7 @@ Odds ratios (OR) [@Szumilas2010-uj]:
 
 ---
 
-![Figure 4 from @Silberzahn2018-st](https://journals.sagepub.com/cms/10.1177/2515245917747646/asset/images/large/10.1177_2515245917747646-fig4.jpeg)
+![Figure 4 from @Silberzahn2018-st](../include/img/silberzahn-2018-fig-04.jpg)
 
 ---
 
@@ -210,7 +210,7 @@ many_fig5 |>
 
 ## What's your question? What's your model?
 
-![Figure 1 from @Auspurg2021-um. ](https://journals.sagepub.com/cms/10.1177/23780231211024421/asset/images/large/10.1177_23780231211024421-fig1.jpeg)
+![Figure 1 from @Auspurg2021-um. ](../include/img/ausperg-2021-fig-01.jpg)
 
 ## Your turn
 

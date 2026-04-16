@@ -15,7 +15,7 @@ The rendered site may be viewed at:
 
 ## Rendering the site
 
-1. Clone the repository.
-2. From the repository root directory, install all dependencies required by `renv`.
+1. Clone the repository. If you are using RStudio, I recommend creating a new project.
+2. From the repository/project root directory, install all dependencies required by `renv`.
 3. From a terminal, run `quarto render src`.
 4. View the rendered website in `docs/`.
